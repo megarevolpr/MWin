@@ -14,7 +14,7 @@ public:
                             int r, int col, QString val, QString title, QString text);
     ~Specification();
 
-    void add_Specifition();
+    void add_Specification();
 
 private slots:
     void explain_btn_clicked();

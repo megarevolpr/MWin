@@ -25,15 +25,10 @@ MyWidget::MyWidget(QWidget *parent) :
     ui->setupUi(this);
 //    setFixedSize(800,562);//固定窗口大小
     ui->UI_stackedWidget->setCurrentWidget(ui->UI_page);
-    ui->stackedWidget->setCurrentWidget(ui->Host_page);
-
+    ui->stackedWidget->setCurrentWidget(ui->Host_page); //执行程序后，自动进入到主页
 
     MemoryAllocation(); //初始化内存空间
     UIPageInit();       //初始化界面
-
-
-    m_menu = new Menu(this);
-    connect(m_menu, SIGNAL(Sent(int)), this, SLOT(My_menuAction(int)));
 
 }
 
@@ -50,6 +45,7 @@ MyWidget::~MyWidget()
 *********************************************************/
 void MyWidget::MemoryAllocation()
 {
+    m_menu = new Menu(this);
     /************************实时数据******************************/
     //变流器
     MPS_vol_AB_explain      = new QPushButton;
@@ -332,6 +328,8 @@ void MyWidget::FirstPage()
 //函数关联
 void MyWidget::LinkRelationship()
 {
+    connect(m_menu, SIGNAL(Sent(int)), this, SLOT(My_menuAction(int)));
+
     connect(ui->Bypass_Batt_btn, SIGNAL(clicked()), this, SLOT(on_Batt_btn_released()));    //主页电池按钮跳转电池信息
     connect(ui->Bypass_Running_btn, SIGNAL(clicked()), this, SLOT(on_Running_btn_clicked()));   //主页变流器按钮跳转变流器实时数据
     connect(ui->Bypass_Grid_btn, SIGNAL(clicked()), this, SLOT(on_Grid_clicked()));    //主页电网按钮跳转电网实时数据
@@ -389,17 +387,19 @@ void MyWidget::MPS_Data_Tab()
     Converter_TabList << tr("Inverter") << tr("Value") << tr("DC") << tr("Value");
     ui->RT_Machine_tableWidget->setHorizontalHeaderLabels(Converter_TabList);
     ui->RT_Machine_tableWidget->setColumnWidth(0,200);
-    ui->RT_Machine_tableWidget->setColumnWidth(1,100);
+    ui->RT_Machine_tableWidget->setColumnWidth(1,200);
     ui->RT_Machine_tableWidget->setColumnWidth(2,200);
     ui->RT_Machine_tableWidget->horizontalHeader()->setStretchLastSection(3);
     ui->RT_Machine_tableWidget->verticalHeader()->setVisible(false);//设置垂直头不可见
     for(int i = 0; i < Converter_Tablist1.size(); i++)
     {
         ui->RT_Machine_tableWidget->setItem(i, 0, new QTableWidgetItem(Converter_Tablist1.at(i)));
+        ui->RT_Machine_tableWidget->item(i, 0)->setTextAlignment(Qt::AlignCenter);
     }
     for(int i = 0; i < Converter_Tablist2.size(); i++)
     {
         ui->RT_Machine_tableWidget->setItem(i, 2, new QTableWidgetItem(Converter_Tablist2.at(i)));
+        ui->RT_Machine_tableWidget->item(i, 2)->setTextAlignment(Qt::AlignCenter);
     }
     /***************************************************************************************************/
 
@@ -1373,73 +1373,73 @@ void MyWidget::MPS_Data(QTableWidget *myTable)
     MPS_vol_AB = new Specification(this,MPS_vol_AB_explain, myTable, line++, column, \
                                             "0V", "voltage(AB)", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    MPS_vol_AB->add_Specifition();
+    MPS_vol_AB->add_Specification();
     MPS_vol_BC = new Specification(this,MPS_vol_BC_explain, myTable, line++, column, \
                                             "0V", "voltage(BC)", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    MPS_vol_BC->add_Specifition();
+                                            "这是从变流器获取的当前MPS的B相和C相之间的电压\nThis is the voltage between the B and C phases of the current PCS obtained from the converter.");
+    MPS_vol_BC->add_Specification();
     MPS_vol_CA = new Specification(this,MPS_vol_CA_explain, myTable, line++, column, \
-                                            "0V", "voltage(AB)", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    MPS_vol_CA->add_Specifition();
+                                            "0V", "voltage(AC)", \
+                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and C phases of the current PCS obtained from the converter.");
+    MPS_vol_CA->add_Specification();
     MPS_cur_A = new Specification(this,MPS_cur_A_explain, myTable, line++, column, \
                                             "0A", "current(A)", \
                                             "这是从变流器获取的当前MPS的A相电流\nThis is the A-phase current of the current PCS obtained from the converter.");
-    MPS_cur_A->add_Specifition();
+    MPS_cur_A->add_Specification();
     MPS_cur_B = new Specification(this,MPS_cur_B_explain, myTable, line++, column, \
                                             "0A", "current(B)", \
                                             "这是从变流器获取的当前MPS的B相电流\nThis is the B-phase current of the current PCS obtained from the converter.");
-    MPS_cur_B->add_Specifition();
+    MPS_cur_B->add_Specification();
     MPS_cur_C = new Specification(this,MPS_cur_C_explain, myTable, line++, column, \
                                             "0A", "current(C)", \
                                             "这是从变流器获取的当前MPS的C相电流\nThis is the C-phase current of the current PCS obtained from the converter.");
-    MPS_cur_C->add_Specifition();
+    MPS_cur_C->add_Specification();
     MPS_IGBT_T = new Specification(this,MPS_IGBT_T_explain, myTable, line++, column, \
                                             "0℃", "IGBT temperature", \
-                                            "这是从变流器获取的当前IGBT温度，IGBT温度是指半导体芯片内的最高工作温度\nThis is the current IGBT temperature obtained from the converter. IGBT temperature is the highest operating temperature inside the semiconductor chip.");
-    MPS_IGBT_T->add_Specifition();
+                                            "这是从变流器获取的当前IGBT温度，IGBT温度是指当前半导体芯片的最高温度\nThis is the current IGBT temperature obtained from the converter. IGBT temperature is the highest temperature of the current semiconductor chip.");
+    MPS_IGBT_T->add_Specification();
     MPS_Env_T = new Specification(this,MPS_Env_T_explain, myTable, line++, column, \
                                             "0℃", "Environment temperature", \
                                             "这是从变流器获取的当前环境温度\nThis is the current ambient temperature obtained from the converter.");
-    MPS_Env_T->add_Specifition();
+    MPS_Env_T->add_Specification();
     MPS_Leakage_cur = new Specification(this,MPS_Leakage_cur_explain, myTable, line++, column, \
                                             "0mA", "Leakage current", \
-                                            "\n.");
-    MPS_Leakage_cur->add_Specifition();
+                                            "这是漏电流\nThis is the leakage current.");
+    MPS_Leakage_cur->add_Specification();
     line=0;
     column=3;
     PV_vol = new Specification(this,PV_vol_explain, myTable, line++, column, \
                                             "0V", "PV voltage", \
-                                            "\n.");
-    PV_vol->add_Specifition();
+                                            "这是变流器采集的当前PV侧的电压\nThis is the current PV side voltage collected by the converter.");
+    PV_vol->add_Specification();
     PV_cur = new Specification(this,PV_cur_explain, myTable, line++, column, \
                                             "0A", "PV current", \
-                                            "\n.");
-    PV_cur->add_Specifition();
+                                            "这是变流器采集的当前PV侧的电流\nThis is the current on the PV side collected by the converter.");
+    PV_cur->add_Specification();
     PV_power = new Specification(this,PV_power_explain, myTable, line++, column, \
                                             "0kW", "PV power", \
-                                            "\n.");
-    PV_power->add_Specifition();
+                                            "这是变流器采集的当前PV侧的功率\nThis is the current PV power collected by the converter.");
+    PV_power->add_Specification();
     Batter_vol = new Specification(this,Batter_vol_explain, myTable, line++, column, \
                                             "0V", "Battery voltage", \
-                                            "\n.");
-    Batter_vol->add_Specifition();
+                                            "这是变流器采集的当前电池的总压\nThis is the total voltage of the current battery collected by the converter.");
+    Batter_vol->add_Specification();
     Batter_cur = new Specification(this,Batter_cur_explain, myTable, line++, column, \
                                             "0A", "Battery current", \
-                                            "\n.");
-    Batter_cur->add_Specifition();
+                                            "这是变流器采集的当前电池的电流\nThis is the current of the battery collected by the converter.");
+    Batter_cur->add_Specification();
     Batter_power = new Specification(this,Batter_power_explain, myTable, line++, column, \
                                             "0kW", "Battery power", \
-                                            "\n.");
-    Batter_power->add_Specifition();
+                                            "这是变流器采集的当前电池的功率\nThis is the current battery power collected by the converter.");
+    Batter_power->add_Specification();
     Bus_vol = new Specification(this,Bus_vol_explain, myTable, line++, column, \
                                             "0V", "Bus voltage", \
-                                            "\n.");
-    Bus_vol->add_Specifition();
+                                            "这是变流器采集的当前的母线电压\nThis is the current bus voltage collected by the converter.");
+    Bus_vol->add_Specification();
     Bus_cur = new Specification(this,Bus_cur_explain, myTable, line++, column, \
                                             "0V", "Bus current", \
-                                            "\n.");
-    Bus_cur->add_Specifition();
+                                            "这是变流器采集的当前的母线电流\nThis is the current busbar current collected by the converter.");
+    Bus_cur->add_Specification();
 }
 //PV数据 绘制button
 void MyWidget::PV_Data(QTableWidget *myTable)
@@ -1448,77 +1448,77 @@ void MyWidget::PV_Data(QTableWidget *myTable)
     PV_vol_H = new Specification(this,PV_vol_H_explain, myTable, line++, column, \
                                             "0V", "Voltage H", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    PV_vol_H->add_Specifition();
+    PV_vol_H->add_Specification();
     PV_cur_H = new Specification(this,PV_cur_H_explain, myTable, line++, column, \
                                             "0A", "Current H", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    PV_cur_H->add_Specifition();
+    PV_cur_H->add_Specification();
     PV_power_H = new Specification(this,PV_power_H_explain, myTable,line++, column, \
                                             "0kW", "Power H", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    PV_power_H->add_Specifition();
+    PV_power_H->add_Specification();
     PV_vol_L = new Specification(this,PV_vol_L_explain, myTable, line++, column, \
                                             "0V", "Voltage L", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    PV_vol_L->add_Specifition();
+    PV_vol_L->add_Specification();
     PV_cur_L = new Specification(this,PV_cur_L_explain, myTable,line++, column, \
                                             "0A", "Current L", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    PV_cur_L->add_Specifition();
+    PV_cur_L->add_Specification();
     PV_power_L = new Specification(this,PV_power_L_explain, myTable, line++, column, \
                                             "0kW", "Power L", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    PV_power_L->add_Specifition();
+    PV_power_L->add_Specification();
     PositiveInuslation = new Specification(this,PositiveInuslation_explain, myTable, line++, column, \
                                             "0kΩ", "PositiveInuslation", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    PositiveInuslation->add_Specifition();
+    PositiveInuslation->add_Specification();
     PV_1 = new Specification(this,PV_1_explain, myTable, line++, column, \
                                             "0", "-", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    PV_1->add_Specifition();
+    PV_1->add_Specification();
     PV_2 = new Specification(this,PV_2_explain, myTable, line++, column, \
                                             "0", "-", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    PV_2->add_Specifition();
+    PV_2->add_Specification();
     line=0;
     column=3;
     Bus_H_vol_add = new Specification(this,Bus_H_vol_add_explain, myTable, line++, column, \
                                             "0V", "Bus_H_vol(+)", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Bus_H_vol_add->add_Specifition();
+    Bus_H_vol_add->add_Specification();
     Bus_H_vol_reduce = new Specification(this,Bus_H_vol_reduce_explain, myTable, line++, column, \
                                             "0V", "Bus_H_vol(-)", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Bus_H_vol_reduce->add_Specifition();
+    Bus_H_vol_reduce->add_Specification();
     Bus_L_vol_add = new Specification(this,Bus_L_vol_add_explain, myTable, line++, column, \
                                             "0V", "Bus_L_vol(+)", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Bus_L_vol_add->add_Specifition();
+    Bus_L_vol_add->add_Specification();
     Bus_L_vol_reduce = new Specification(this,Bus_L_vol_reduce_explain, myTable, line++, column, \
                                             "0V", "Bus_L_vol(-)", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Bus_L_vol_reduce->add_Specifition();
+    Bus_L_vol_reduce->add_Specification();
     PV_IGBT_T = new Specification(this,PV_IGBT_T_explain, myTable, line++, column, \
                                             "0℃", "IGBT Temp.", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    PV_IGBT_T->add_Specifition();
+    PV_IGBT_T->add_Specification();
     NegativeInuslation = new Specification(this,NegativeInuslation_explain, myTable, line++, column, \
                                             "0kΩ", "NegativeInuslation", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    NegativeInuslation->add_Specifition();
+    NegativeInuslation->add_Specification();
     Leakage_cur = new Specification(this,Leakage_cur_explain, myTable, line++, column, \
                                             "0mA", "Leakage_cur", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Leakage_cur->add_Specifition();
+    Leakage_cur->add_Specification();
     PV_3 = new Specification(this,PV_3_explain, myTable, line++, column, \
                                             "0", "-", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    PV_3->add_Specifition();
+    PV_3->add_Specification();
     PV_4 = new Specification(this,PV_4_explain, myTable, line++, column, \
                                             "0", " ", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    PV_4->add_Specifition();
+    PV_4->add_Specification();
 }
 //电网数据 绘制button
 void MyWidget::Grid_Data(QTableWidget *myTable)
@@ -1527,61 +1527,61 @@ void MyWidget::Grid_Data(QTableWidget *myTable)
     Grid_vol_AB = new Specification(this,Grid_vol_AB_explain, myTable, line++, column, \
                                             "0V", "Voltage(AB)", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Grid_vol_AB->add_Specifition();
+    Grid_vol_AB->add_Specification();
     Grid_vol_BC = new Specification(this,Grid_vol_BC_explain, myTable, line++, column, \
                                             "0V", "Voltage(BC)", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Grid_vol_BC->add_Specifition();
+    Grid_vol_BC->add_Specification();
     Grid_vol_CA = new Specification(this,Grid_vol_CA_explain, myTable,line++, column, \
                                             "0V", "Voltage(CA)", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Grid_vol_CA->add_Specifition();
+    Grid_vol_CA->add_Specification();
     Grid_cur_A = new Specification(this,Grid_cur_A_explain, myTable, line++, column, \
                                             "0A", "Current(A)", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Grid_cur_A->add_Specifition();
+    Grid_cur_A->add_Specification();
     Grid_cur_B = new Specification(this,Grid_cur_B_explain, myTable, line++, column, \
                                             "0A", "Current(B)", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Grid_cur_B->add_Specifition();
+    Grid_cur_B->add_Specification();
     Grid_cur_C = new Specification(this,Grid_cur_C_explain, myTable, line++, column, \
                                             "0A", "Current(C)", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Grid_cur_C->add_Specifition();
+    Grid_cur_C->add_Specification();
     Grid_1 = new Specification(this,Grid_1_explain, myTable, line++, column, \
                                             "0", "-", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Grid_1->add_Specifition();
+    Grid_1->add_Specification();
     line=0;
     column=3;
     Grid_active_power = new Specification(this,Grid_active_power_explain, myTable, line++, column, \
                                             "0kW", "Active power", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Grid_active_power->add_Specifition();
+    Grid_active_power->add_Specification();
     Grid_reactive_power = new Specification(this,Grid_reactive_power_explain, myTable, line++, column, \
                                             "0Kvar", "Reactive power", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Grid_reactive_power->add_Specifition();
+    Grid_reactive_power->add_Specification();
     Grid_apparent_power = new Specification(this,Grid_apparent_power_explain, myTable, line++, column, \
                                             "0kVA", "Apparent power", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Grid_apparent_power->add_Specifition();
+    Grid_apparent_power->add_Specification();
     Grid_power_factor = new Specification(this,Grid_power_factor_explain, myTable, line++, column, \
                                             "0", "Power factor", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Grid_power_factor->add_Specifition();
+    Grid_power_factor->add_Specification();
     Grid_Frequency = new Specification(this,Grid_Frequency_explain, myTable, line++, column, \
                                             "0Hz", "Frequency", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Grid_Frequency->add_Specifition();
+    Grid_Frequency->add_Specification();
     Grid_2 = new Specification(this,Grid_2_explain, myTable, line++, column, \
                                             "0", "-", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Grid_2->add_Specifition();
+    Grid_2->add_Specification();
     Grid_3 = new Specification(this,Grid_3_explain, myTable, line++, column, \
                                             "0", "-", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Grid_3->add_Specifition();
+    Grid_3->add_Specification();
 
 }
 //负载数据 绘制button
@@ -1591,61 +1591,61 @@ void MyWidget::Load_Data(QTableWidget *myTable)
     Load_vol_AB = new Specification(this,Load_vol_AB_explain, myTable, line++, column, \
                                             "0V", "Voltage(AB)", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Load_vol_AB->add_Specifition();
+    Load_vol_AB->add_Specification();
     Load_vol_BC = new Specification(this,Load_vol_BC_explain, myTable, line++, column, \
                                             "0V", "Voltage(BC)", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Load_vol_BC->add_Specifition();
+    Load_vol_BC->add_Specification();
     Load_vol_CA = new Specification(this,Load_vol_CA_explain, myTable, line++, column, \
                                             "0V", "Voltage(CA)", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Load_vol_CA->add_Specifition();
+    Load_vol_CA->add_Specification();
     Load_cur_A = new Specification(this,Load_cur_A_explain, myTable, line++, column, \
                                             "0A", "Current(A)", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Load_cur_A->add_Specifition();
+    Load_cur_A->add_Specification();
     Load_cur_B = new Specification(this,Load_cur_B_explain, myTable, line++, column, \
                                             "0A", "Current(B)", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Load_cur_B->add_Specifition();
+    Load_cur_B->add_Specification();
     Load_cur_C = new Specification(this,Load_cur_C_explain, myTable, line++, column, \
                                             "0A", "Current(C)", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Load_cur_C->add_Specifition();
+    Load_cur_C->add_Specification();
     Load_1 = new Specification(this,Load_1_explain, myTable, line++, column, \
                                             "0", "-", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Load_1->add_Specifition();
+    Load_1->add_Specification();
     line=0;
     column=3;
     Load_active_power = new Specification(this,Load_active_power_explain, myTable, line++, column, \
                                             "0kW", "Active power", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Load_active_power->add_Specifition();
+    Load_active_power->add_Specification();
     Load_reactive_power = new Specification(this,Load_reactive_power_explain, myTable, line++, column, \
                                             "0Kvar", "Reactive power", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Load_reactive_power->add_Specifition();
+    Load_reactive_power->add_Specification();
     Load_apparent_power = new Specification(this,Load_apparent_power_explain, myTable, line++, column, \
                                             "0kVA", "Apparent power", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Load_apparent_power->add_Specifition();
+    Load_apparent_power->add_Specification();
     Load_power_factor = new Specification(this,Load_power_factor_explain, myTable, line++, column, \
                                             "0", "Power factor", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Load_power_factor->add_Specifition();
+    Load_power_factor->add_Specification();
     Load_Frequency = new Specification(this,Load_Frequency_explain, myTable, line++, column, \
                                             "0Hz", "Frequency", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Load_Frequency->add_Specifition();
+    Load_Frequency->add_Specification();
     Load_2 = new Specification(this,Load_2_explain, myTable, line++, column, \
                                             "0", "-", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Load_2->add_Specifition();
+    Load_2->add_Specification();
     Load_3 = new Specification(this,Load_3_explain, myTable, line++, column, \
                                             "0", "-", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Load_3->add_Specifition();
+    Load_3->add_Specification();
 }
 //MPS状态 绘制button
 void MyWidget::MPSState(QTableWidget *myTable)
@@ -1654,155 +1654,155 @@ void MyWidget::MPSState(QTableWidget *myTable)
     DC_input_Bre = new Specification(this,DC_input_Bre_explain, myTable, line++, column, \
                                             "Close", "DC input breaker", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    DC_input_Bre->add_Specifition();
+    DC_input_Bre->add_Specification();
     DC_Con = new Specification(this,DC_Con_explain, myTable, line++, column, \
                                             "Close", "DC contactor", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    DC_Con->add_Specifition();
+    DC_Con->add_Specification();
     M_Bypass_Bre = new Specification(this,M_Bypass_Bre_explain, myTable, line++, column, \
                                             "Close", "Maintenance Bypass breaker", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    M_Bypass_Bre->add_Specifition();
+    M_Bypass_Bre->add_Specification();
     Output_Bre = new Specification(this,Output_Bre_explain, myTable, line++, column, \
                                             "Close", "Output breaker", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Output_Bre->add_Specifition();
+    Output_Bre->add_Specification();
     Output_Con = new Specification(this,Output_Con_explain, myTable, line++, column, \
                                             "Close", "Output contactor", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Output_Con->add_Specifition();
+    Output_Con->add_Specification();
     Grid_Bre = new Specification(this,Grid_Bre_explain, myTable, line++, column, \
                                             "Close", "Grid breaker", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Grid_Bre->add_Specifition();
+    Grid_Bre->add_Specification();
     DO1 = new Specification(this,DO1_explain, myTable, line++, column, \
                                             "Disable", "DO1", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    DO1->add_Specifition();
+    DO1->add_Specification();
     DO2 = new Specification(this,DO2_explain, myTable,line++, column, \
                                             "Disable", "DO2", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    DO2->add_Specifition();
+    DO2->add_Specification();
     DO3 = new Specification(this,DO3_explain, myTable, line++, column, \
                                             "Disable", "DO3", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    DO3->add_Specifition();
+    DO3->add_Specification();
     state1 = new Specification(this,state1_explain, myTable, line++, column, \
                                             "", "-", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    state1->add_Specifition();
+    state1->add_Specification();
     state2 = new Specification(this,state2_explain, myTable, line++, column, \
                                             "", "-", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    state2->add_Specifition();
+    state2->add_Specification();
     state3 = new Specification(this,state3_explain, myTable, line++, column, \
                                             "", "state3", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    state3->add_Specifition();
+    state3->add_Specification();
     line=0;
     column=3;
     DCAC_Conver_avail = new Specification(this,DCAC_Conver_avail_explain, myTable, line++, column, \
                                             "Enable", "DCAC Converter available", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    DCAC_Conver_avail->add_Specifition();
+    DCAC_Conver_avail->add_Specification();
     DC_Soft_Start = new Specification(this,DC_Soft_Start_explain, myTable, line++, column, \
                                             "Not starting", "DC Soft start", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    DC_Soft_Start->add_Specifition();
+    DC_Soft_Start->add_Specification();
     Converter_Status = new Specification(this,Converter_Status_explain, myTable, line++, column, \
                                             "OFF", "Converter Status", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Converter_Status->add_Specifition();
+    Converter_Status->add_Specification();
     Reactive_P_Reg = new Specification(this,Reactive_P_Reg_explain, myTable, line++, column, \
                                             "SVG", "Reactive power Regulation", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Reactive_P_Reg->add_Specifition();
+    Reactive_P_Reg->add_Specification();
     Sleep_mode = new Specification(this,Sleep_mode_explain, myTable, line++, column, \
                                             "Dromant", "Sleep_mode", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Sleep_mode->add_Specifition();
+    Sleep_mode->add_Specification();
     LVRT = new Specification(this,LVRT_explain, myTable, line++, column, \
                                             "LVRT", "LVRT", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    LVRT->add_Specifition();
+    LVRT->add_Specification();
     DI1 = new Specification(this,DI1_explain, myTable, line++, column, \
                                             "Disable", "DI1", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    DI1->add_Specifition();
+    DI1->add_Specification();
     DI2 = new Specification(this,DI2_explain, myTable, line++, column, \
                                             "Disable", "DI2", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    DI2->add_Specifition();
+    DI2->add_Specification();
     DI3 = new Specification(this,DI3_explain, myTable, line++, column, \
                                             "Disable", "DI3", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    DI3->add_Specifition();
+    DI3->add_Specification();
     DI4 = new Specification(this,DI4_explain, myTable, line++, column, \
                                             "Disable", "DI4", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    DI4->add_Specifition();
+    DI4->add_Specification();
     DI5 = new Specification(this,DI5_explain, myTable, line++, column, \
                                             "Disable", "DI5", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    DI5->add_Specifition();
+    DI5->add_Specification();
     DI6 = new Specification(this,DI6_explain, myTable, line++, column, \
                                             "Disable", "DI6", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    DI6->add_Specifition();
+    DI6->add_Specification();
     line=0;
     column=5;
     Breaker1_Sta_Boost = new Specification(this,Breaker1_Sta_Boost_explain, myTable, line++, column, \
                                             "0", "Breaker1 Status Boost", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Breaker1_Sta_Boost->add_Specifition();
+    Breaker1_Sta_Boost->add_Specification();
     Breaker2_Sta_Boost = new Specification(this,Breaker2_Sta_Boost_explain, myTable, line++, column, \
                                             "0", "Breaker2 Status Boost", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Breaker2_Sta_Boost->add_Specifition();
+    Breaker2_Sta_Boost->add_Specification();
     Contator_Sta_Boost = new Specification(this,Contator_Sta_Boost_explain, myTable, line++, column, \
                                             "0", "Contator Status Boost", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Contator_Sta_Boost->add_Specifition();
+    Contator_Sta_Boost->add_Specification();
     Breaker1_Sta_Buck = new Specification(this,Breaker1_Sta_Buck_explain, myTable, line++, column, \
                                             "0", "Breaker1 Status Buck", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Breaker1_Sta_Buck->add_Specifition();
+    Breaker1_Sta_Buck->add_Specification();
     Breaker2_Sta_Buck = new Specification(this,Breaker2_Sta_Buck_explain, myTable, line++, column, \
                                             "0", "Breaker2 Status Buck", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Breaker2_Sta_Buck->add_Specifition();
+    Breaker2_Sta_Buck->add_Specification();
     Contator_Sta_Buck = new Specification(this,Contator_Sta_Buck_explain, myTable, line++, column, \
                                             "0", "Contator Status Buck", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Contator_Sta_Buck->add_Specifition();
+    Contator_Sta_Buck->add_Specification();
     Run_mode = new Specification(this,Run_mode_explain, myTable, line++, column, \
                                             "0", "Run mode", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Run_mode->add_Specifition();
+    Run_mode->add_Specification();
     DCDC_Converter_ava = new Specification(this,DCDC_Converter_ava_explain, myTable, line++, column, \
                                             "0", "DCDC Converter available", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    DCDC_Converter_ava->add_Specifition();
+    DCDC_Converter_ava->add_Specification();
     Soft_Start_Sta_Boost = new Specification(this,Soft_Start_Sta_Boost_explain, myTable, line++, column, \
                                             "0", "Soft Start Status Boost", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Soft_Start_Sta_Boost->add_Specifition();
+    Soft_Start_Sta_Boost->add_Specification();
     Soft_Start_Sta_Buck = new Specification(this,Soft_Start_Sta_Buck_explain, myTable, line++, column, \
                                             "0", "Soft Start Status Buck", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Soft_Start_Sta_Buck->add_Specifition();
+    Soft_Start_Sta_Buck->add_Specification();
     Converter_Status_V = new Specification(this,Converter_Status_V_explain, myTable, line++, column, \
                                             "0", "Converter Status", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    Converter_Status_V->add_Specifition();
+    Converter_Status_V->add_Specification();
     ModeLock = new Specification(this,ModeLock_explain, myTable, line++, column, \
                                             "0", "ModeLock", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    ModeLock->add_Specifition();
+    ModeLock->add_Specification();
     state4 = new Specification(this,state4_explain, myTable, line++, column, \
                                             "0", "-", \
                                             "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    state4->add_Specifition();
+    state4->add_Specification();
 
 }
 //自动运行 绘制button
@@ -1867,23 +1867,23 @@ void MyWidget::AutoOperation(QTableWidget *myTable)
             temp[i] = new Specification(this,temp2[i], myTable, i, 0, \
                                                 "", temp3, \
                                                 "这是'使能'，选择后将在指定的时间以指定的功率开启指定的状态，并在指定的时间结束\nThis is' Enable ', which will enable the specified state at the specified time with the specified power, and end at the specified time.");
-        temp[i]->add_Specifition();
+        temp[i]->add_Specification();
         temp4[i] = new Specification(this,temp5[i], myTable, i, 1, \
                                                 temp16, temp6, \
                                                 "这是开始时间，将在此时间开始以指定的功率进入指定的状态\nThis is the start time at which the specified state will begin to be entered with the specified power.");
-        temp4[i]->add_Specifition();
+        temp4[i]->add_Specification();
         temp7[i] = new Specification(this,temp8[i], myTable, i, 2, \
                                                 temp17, temp9, \
                                                 "这是结束时间，将在此时间结束由'开始时间'开始的状态\nThis is the end time at which the state started with the 'start time' will end.");
-        temp7[i]->add_Specifition();
+        temp7[i]->add_Specification();
         temp10[i] = new Specification(this,temp11[i], myTable, i, 3, \
                                                     "System for self-use", temp12, \
                                                     "这是状态，将在工作时间执行此状态，有三种可供选择，分别为充电(charge)、放电(discharge)、自动(Automatic)\nThis is the state, which will be executed during working hours.  There are three options: charge（charge）, discharge（discharge）, and Automatic（Automatic）.");
         temp13[i] = new Specification(this,temp14[i], myTable, i, 4, \
                                                     "10", temp15, \
                                                     "这是工作功率，此状态下工作时根据工作状态执行此功率，正数为放电，负数为充电\nThis is the working power, which is executed according to the working state when working in this state, the positive number is discharging, and the negative number is charging.");
-        temp10[i]->add_Specifition();
-        temp13[i]->add_Specifition();
+        temp10[i]->add_Specification();
+        temp13[i]->add_Specification();
     }
 
 }
@@ -1894,35 +1894,35 @@ void MyWidget::SystemMessages(QTableWidget *myTable)
     MonitoringVersion = new Specification(this,MonitoringVersion_explain, myTable, line++, column, \
                                      "V103B500D004", "Monitoring software version", \
                                      "这是监控版本\nThis is the name of the manufacturer.");
-    MonitoringVersion->add_Specifition();
+    MonitoringVersion->add_Specification();
     DCAC_SysProtocol_Version = new Specification(this,DCAC_SysProtocol_Version_explain, myTable, line++, column, \
                                      "V001B001D001", "Manufacturer name", \
                                      "这是协议版本号\nThis is the name of the manufacturer.");
-    DCAC_SysProtocol_Version->add_Specifition();
+    DCAC_SysProtocol_Version->add_Specification();
     DCAC_ConverterVersion = new Specification(this,DCAC_ConverterVersion_explain, myTable, line++, column, \
                                      "V105B500D008", "Manufacturer name", \
                                      "这是变流器软件版本\nThis is the name of the manufacturer.");
-    DCAC_ConverterVersion->add_Specifition();
+    DCAC_ConverterVersion->add_Specification();
     DCAC_CPLD_Version = new Specification(this,DCAC_CPLD_Version_explain, myTable, line++, column, \
                                      "V001B001D000", "Manufacturer name", \
                                      "这是CPLD软件版本\nThis is the name of the manufacturer.");
-    DCAC_CPLD_Version->add_Specifition();
+    DCAC_CPLD_Version->add_Specification();
     DCDC_SysProtocol_Version = new Specification(this,DCDC_SysProtocol_Version_explain, myTable, line++, column, \
                                      "V001B001D001", "Manufacturer name", \
                                      "这是协议版本号\nThis is the name of the manufacturer.");
-    DCDC_SysProtocol_Version->add_Specifition();
+    DCDC_SysProtocol_Version->add_Specification();
     DCDC_ConverterVersion = new Specification(this,DCDC_ConverterVersion_explain, myTable, line++, column, \
                                      "V105B500D008", "Manufacturer name", \
                                      "这是变流器软件版本\nThis is the name of the manufacturer.");
-    DCDC_ConverterVersion->add_Specifition();
+    DCDC_ConverterVersion->add_Specification();
     DCDC_CPLD_Version = new Specification(this,DCDC_CPLD_Version_explain, myTable, line++, column, \
                                      "V001B001D000", "Manufacturer name", \
                                      "这是CPLD软件版本\nThis is the name of the manufacturer.");
-    DCDC_CPLD_Version->add_Specifition();
+    DCDC_CPLD_Version->add_Specification();
     SN = new Specification(this,SN_explain, myTable, line++, column, \
                                      "F12200000001", "Manufacturer name", \
                                      "这是SN,即产品序列号\nThis is the name of the manufacturer.");
-    SN->add_Specifition();
+    SN->add_Specification();
 }
 
 //历史记录   绘制button
@@ -1932,137 +1932,137 @@ void MyWidget::HistoryRecord(QTableWidget *myTable)
     Grade = new Specification(this,Grade_explain, myTable, line++, column, \
                                                     "0", "Level", \
                                                     "这是事件告警等级，当事件告警等级为0时标红，表示这是故障信息\nThis is the event alarm level. When the event alarm level is 0, it is marked red, indicating that this is the fault information.");
-    Grade->add_Specifition();
+    Grade->add_Specification();
     Grade2 = new Specification(this,Grade2_explain, myTable, line++, column, \
                                                     "0", "Level", \
                                                     "这是事件告警等级，当事件告警等级为0时标红，表示这是故障信息\nThis is the event alarm level. When the event alarm level is 0, it is marked red, indicating that this is the fault information.");
-    Grade2->add_Specifition();
+    Grade2->add_Specification();
     Grade3 = new Specification(this,Grade3_explain, myTable, line++, column, \
                                                     "0", "Level", \
                                                     "这是事件告警等级，当事件告警等级为0时标红，表示这是故障信息\nThis is the event alarm level. When the event alarm level is 0, it is marked red, indicating that this is the fault information.");
-    Grade3->add_Specifition();
+    Grade3->add_Specification();
     Grade4 = new Specification(this,Grade4_explain, myTable, line++, column, \
                                                     "0", "Level", \
                                                     "这是事件告警等级，当事件告警等级为0时标红，表示这是故障信息\nThis is the event alarm level. When the event alarm level is 0, it is marked red, indicating that this is the fault information.");
-    Grade4->add_Specifition();
+    Grade4->add_Specification();
     Grade5 = new Specification(this,Grade5_explain, myTable, line++, column, \
                                                     "0", "Level", \
                                                     "这是事件告警等级，当事件告警等级为0时标红，表示这是故障信息\nThis is the event alarm level. When the event alarm level is 0, it is marked red, indicating that this is the fault information.");
-    Grade5->add_Specifition();
+    Grade5->add_Specification();
     Grade6 = new Specification(this,Grade6_explain, myTable, line++, column, \
                                                     "0", "Level", \
                                                     "这是事件告警等级，当事件告警等级为0时标红，表示这是故障信息\nThis is the event alarm level. When the event alarm level is 0, it is marked red, indicating that this is the fault information.");
-    Grade6->add_Specifition();
+    Grade6->add_Specification();
     Grade7 = new Specification(this,Grade7_explain, myTable, line++, column, \
                                                     "0", "Level", \
                                                     "这是事件告警等级，当事件告警等级为0时标红，表示这是故障信息\nThis is the event alarm level. When the event alarm level is 0, it is marked red, indicating that this is the fault information.");
-    Grade7->add_Specifition();
+    Grade7->add_Specification();
     Grade8 = new Specification(this,Grade8_explain, myTable, line++, column, \
                                                     "0", "Level", \
                                                     "这是事件告警等级，当事件告警等级为0时标红，表示这是故障信息\nThis is the event alarm level. When the event alarm level is 0, it is marked red, indicating that this is the fault information.");
-    Grade8->add_Specifition();
+    Grade8->add_Specification();
     line=0;
     column=1;
     StartTime = new Specification(this,StartTime_explain, myTable, line++, column, \
                                                     "2023.5.6 15:49:50", "Start Time", \
                                                     "这是事件开始时间，表示这条记录从这个时间开始出现\nThis is the event start time, which means that the record started appearing at this time.");
-    StartTime->add_Specifition();
+    StartTime->add_Specification();
     StartTime2 = new Specification(this,StartTime2_explain, myTable, line++, column, \
                                                     "2023.5.6 15:48:18", "Start Time", \
                                                     "这是事件开始时间，表示这条记录从这个时间开始出现\nThis is the event start time, which means that the record started appearing at this time.");
-    StartTime2->add_Specifition();
+    StartTime2->add_Specification();
     StartTime3 = new Specification(this,StartTime3_explain, myTable, line++, column, \
                                                     "2023.5.6 15:39:3", "Start Time", \
                                                     "这是事件开始时间，表示这条记录从这个时间开始出现\nThis is the event start time, which means that the record started appearing at this time.");
-    StartTime3->add_Specifition();
+    StartTime3->add_Specification();
     StartTime4 = new Specification(this,StartTime4_explain, myTable, line++, column, \
                                                     "2023.5.6 15:39:3", "Start Time", \
                                                     "这是事件开始时间，表示这条记录从这个时间开始出现\nThis is the event start time, which means that the record started appearing at this time.");
-    StartTime4->add_Specifition();
+    StartTime4->add_Specification();
     StartTime5 = new Specification(this,StartTime5_explain, myTable, line++, column, \
                                                     "2023.5.6 15:39:3", "Start Time", \
                                                     "这是事件开始时间，表示这条记录从这个时间开始出现\nThis is the event start time, which means that the record started appearing at this time.");
-    StartTime5->add_Specifition();
+    StartTime5->add_Specification();
     StartTime6 = new Specification(this,StartTime6_explain, myTable, line++, column, \
                                                     "2023.5.6 15:21:56", "Start Time", \
                                                     "这是事件开始时间，表示这条记录从这个时间开始出现\nThis is the event start time, which means that the record started appearing at this time.");
-    StartTime6->add_Specifition();
+    StartTime6->add_Specification();
     StartTime7 = new Specification(this,StartTime7_explain, myTable, line++, column, \
                                                     "2023.5.6 15:21:38", "Start Time", \
                                                     "这是事件开始时间，表示这条记录从这个时间开始出现\nThis is the event start time, which means that the record started appearing at this time.");
-    StartTime7->add_Specifition();
+    StartTime7->add_Specification();
     StartTime8 = new Specification(this,StartTime8_explain, myTable, line++, column, \
                                                     "2023.5.6 15:21:38", "Start Time", \
                                                     "这是事件开始时间，表示这条记录从这个时间开始出现\nThis is the event start time, which means that the record started appearing at this time.");
-    StartTime8->add_Specifition();
+    StartTime8->add_Specification();
     line=0;
     column=2;
     EndTime = new Specification(this,EndTime_explain, myTable, line++, column, \
                                                     "-", "End Time", \
                                                     "这是事件结束时间，表示这条记录的结束时间,'...'表示无结束时间\nThis is the event end time, which means the end time of this record,'... 'means no end time.");
-    EndTime->add_Specifition();
+    EndTime->add_Specification();
     EndTime2 = new Specification(this,EndTime2_explain, myTable, line++, column, \
                                                     "-", "End Time", \
                                                     "这是事件结束时间，表示这条记录的结束时间,'...'表示无结束时间\nThis is the event end time, which means the end time of this record,'... 'means no end time.");
-    EndTime2->add_Specifition();
+    EndTime2->add_Specification();
     EndTime3 = new Specification(this,EndTime3_explain, myTable, line++, column, \
                                                     "...", "End Time", \
                                                     "这是事件结束时间，表示这条记录的结束时间,'...'表示无结束时间\nThis is the event end time, which means the end time of this record,'... 'means no end time.");
-    EndTime3->add_Specifition();
+    EndTime3->add_Specification();
     EndTime4 = new Specification(this,EndTime4_explain, myTable, line++, column, \
                                                     "-", "End Time", \
                                                     "这是事件结束时间，表示这条记录的结束时间,'...'表示无结束时间\nThis is the event end time, which means the end time of this record,'... 'means no end time.");
-    EndTime4->add_Specifition();
+    EndTime4->add_Specification();
     EndTime5 = new Specification(this,EndTime5_explain, myTable, line++, column, \
                                                     "...", "End Time", \
                                                     "这是事件结束时间，表示这条记录的结束时间,'...'表示无结束时间\nThis is the event end time, which means the end time of this record,'... 'means no end time.");
-    EndTime5->add_Specifition();
+    EndTime5->add_Specification();
     EndTime6 = new Specification(this,EndTime6_explain, myTable, line++, column, \
                                                     "-", "End Time", \
                                                     "这是事件结束时间，表示这条记录的结束时间,'...'表示无结束时间\nThis is the event end time, which means the end time of this record,'... 'means no end time.");
-    EndTime6->add_Specifition();
+    EndTime6->add_Specification();
     EndTime7 = new Specification(this,EndTime7_explain, myTable, line++, column, \
                                                     "-", "End Time", \
                                                     "这是事件结束时间，表示这条记录的结束时间,'...'表示无结束时间\nThis is the event end time, which means the end time of this record,'... 'means no end time.");
-    EndTime7->add_Specifition();
+    EndTime7->add_Specification();
     EndTime8 = new Specification(this,EndTime8_explain, myTable, line++, column, \
                                                     "-", "End Time", \
                                                     "这是事件结束时间，表示这条记录的结束时间,'...'表示无结束时间\nThis is the event end time, which means the end time of this record,'... 'means no end time.");
-    EndTime8->add_Specifition();
+    EndTime8->add_Specification();
     line=0;
     column=3;
     Describe = new Specification(this,Describe_explain, myTable, line++, column, \
                                                     "CAN communication failure", "Description", \
                                                     "这是事件描述，当有告警信息时，会将告警信息记录在这里\nThis is the event description, when there is an alarm information, the alarm information will be recorded here.");
-    Describe->add_Specifition();
+    Describe->add_Specification();
     Describe2 = new Specification(this,Describe2_explain, myTable, line++, column, \
                                                     "CAN communication failure", "Description", \
                                                     "这是事件描述，当有告警信息时，会将告警信息记录在这里\nThis is the event description, when there is an alarm information, the alarm information will be recorded here.");
-    Describe2->add_Specifition();
+    Describe2->add_Specification();
     Describe3 = new Specification(this,Describe3_explain, myTable, line++, column, \
                                                     "Fire alarm (High temp. alarm)", "Description", \
                                                     "这是事件描述，当有告警信息时，会将告警信息记录在这里\nThis is the event description, when there is an alarm information, the alarm information will be recorded here.");
-    Describe3->add_Specifition();
+    Describe3->add_Specification();
     Describe4 = new Specification(this,Describe4_explain, myTable, line++, column, \
                                                     "CAN communication failure", "Description", \
                                                     "这是事件描述，当有告警信息时，会将告警信息记录在这里\nThis is the event description, when there is an alarm information, the alarm information will be recorded here.");
-    Describe4->add_Specifition();
+    Describe4->add_Specification();
     Describe5 = new Specification(this,Describe5_explain, myTable, line++, column, \
                                                     "PowerMeter Comm fualttLead-acid abnormal", "Description", \
                                                     "这是事件描述，当有告警信息时，会将告警信息记录在这里\nThis is the event description, when there is an alarm information, the alarm information will be recorded here.");
-    Describe5->add_Specifition();
+    Describe5->add_Specification();
     Describe6 = new Specification(this,Describe6_explain, myTable, line++, column, \
                                                     "CAN communication failure", "Description", \
                                                     "这是事件描述，当有告警信息时，会将告警信息记录在这里\nThis is the event description, when there is an alarm information, the alarm information will be recorded here.");
-    Describe6->add_Specifition();
+    Describe6->add_Specification();
     Describe7 = new Specification(this,Describe7_explain, myTable, line++, column, \
                                                     "Fire alarm (High temp. alarm)", "Description", \
                                                     "这是事件描述，当有告警信息时，会将告警信息记录在这里\nThis is the event description, when there is an alarm information, the alarm information will be recorded here.");
-    Describe7->add_Specifition();
+    Describe7->add_Specification();
     Describe8 = new Specification(this,Describe8_explain, myTable, line++, column, \
                                                     "PowerMeter Comm fualttLead-acid abnormal", "Description", \
                                                     "这是事件描述，当有告警信息时，会将告警信息记录在这里\nThis is the event description, when there is an alarm information, the alarm information will be recorded here.");
-    Describe8->add_Specifition();
+    Describe8->add_Specification();
 }
 
 //操作日志 绘制button
@@ -2072,101 +2072,101 @@ void MyWidget::OperationLog_tab(QTableWidget *myTable)
     ModificationTime = new Specification(this,ModificationTime_explain, myTable, line++, column, \
                                                     "2023-05-12 11:32:45", "ModificationTime", \
                                                     "系统设置修改时的时间\nTime when the system Settings are modified");
-    ModificationTime->add_Specifition();
+    ModificationTime->add_Specification();
     ModificationTime2 = new Specification(this,ModificationTime2_explain, myTable, line++, column, \
                                                     "2023-05-12 11:32:33", "ModificationTime", \
                                                     "系统设置修改时的时间\nTime when the system Settings are modified");
-    ModificationTime2->add_Specifition();
+    ModificationTime2->add_Specification();
     ModificationTime3 = new Specification(this,ModificationTime3_explain, myTable, line++, column, \
                                                     "2023-05-11 19:29:24", "ModificationTime", \
                                                     "系统设置修改时的时间\nTime when the system Settings are modified");
-    ModificationTime3->add_Specifition();
+    ModificationTime3->add_Specification();
     ModificationTime4 = new Specification(this,ModificationTime4_explain, myTable, line++, column, \
                                                     "2023-05-11 19:29:21", "ModificationTime", \
                                                     "系统设置修改时的时间\nTime when the system Settings are modified");
-    ModificationTime4->add_Specifition();
+    ModificationTime4->add_Specification();
     ModificationTime5 = new Specification(this,ModificationTime5_explain, myTable, line++, column, \
                                                     "2023-05-11 19:29:10", "ModificationTime", \
                                                     "系统设置修改时的时间\nTime when the system Settings are modified");
-    ModificationTime5->add_Specifition();
+    ModificationTime5->add_Specification();
     ModificationTime6 = new Specification(this,ModificationTime6_explain, myTable, line++, column, \
                                                     "2023-05-11 19:29:07", "ModificationTime", \
                                                     "系统设置修改时的时间\nTime when the system Settings are modified");
-    ModificationTime6->add_Specifition();
+    ModificationTime6->add_Specification();
     ModificationTime7 = new Specification(this,ModificationTime7_explain, myTable, line++,column, \
                                                     "2023-05-11 17:21:16", "ModificationTime", \
                                                     "系统设置修改时的时间\nTime when the system Settings are modified");
-    ModificationTime7->add_Specifition();
+    ModificationTime7->add_Specification();
     ModificationTime8 = new Specification(this,ModificationTime8_explain, myTable, line++, column, \
                                                     "2023-05-11 11:21:02", "ModificationTime", \
                                                     "系统设置修改时的时间\nTime when the system Settings are modified");
-    ModificationTime8->add_Specifition();
+    ModificationTime8->add_Specification();
     ModificationTime9 = new Specification(this,ModificationTime9_explain, myTable, line++, column, \
                                                     "2023-05-11 11:20:58", "ModificationTime", \
                                                     "系统设置修改时的时间\nTime when the system Settings are modified");
-    ModificationTime9->add_Specifition();
+    ModificationTime9->add_Specification();
     ModificationTime10 = new Specification(this,ModificationTime10_explain, myTable, line++, column, \
                                                     "2023-05-11 11:02:22", "ModificationTime", \
                                                     "系统设置修改时的时间\nTime when the system Settings are modified");
-    ModificationTime10->add_Specifition();
+    ModificationTime10->add_Specification();
     ModificationTime11 = new Specification(this,ModificationTime11_explain, myTable, line++, column, \
                                                     "2023-05-11 11:02:18", "ModificationTime", \
                                                     "系统设置修改时的时间\nTime when the system Settings are modified");
-    ModificationTime11->add_Specifition();
+    ModificationTime11->add_Specification();
     ModificationTime12 = new Specification(this,ModificationTime12_explain, myTable, line++, column, \
                                                     "2023-05-11 11:02:14", "ModificationTime", \
                                                     "系统设置修改时的时间\nTime when the system Settings are modified");
-    ModificationTime12->add_Specifition();
+    ModificationTime12->add_Specification();
     line=0;
     column=1;
     EventRecord = new Specification(this,EventRecord_explain, myTable, line++, column, \
                                                     "Power control type：CP_P->CP_N&&P", "RecordEvent", \
                                                     "这里是对系统设置进行修改时的操作记录\nHere is a record of the operation when a change is made to the system Settings.");
-    EventRecord->add_Specifition();
+    EventRecord->add_Specification();
     EventRecord2 = new Specification(this,EventRecord2_explain, myTable, line++, column, \
                                                     "Power control type：CP_N&&P->CP_P", "RecordEvent", \
                                                     "这里是对系统设置进行修改时的操作记录\nHere is a record of the operation when a change is made to the system Settings.");
-    EventRecord2->add_Specifition();
+    EventRecord2->add_Specification();
     EventRecord3 = new Specification(this,EventRecord3_explain, myTable,line++, column, \
                                                     "Grid Fre Upper limit：0.2->3", "RecordEvent", \
                                                     "这里是对系统设置进行修改时的操作记录\nHere is a record of the operation when a change is made to the system Settings.");
-    EventRecord3->add_Specifition();
+    EventRecord3->add_Specification();
     EventRecord4 = new Specification(this,EventRecord4_explain, myTable, line++, column, \
                                                     "Grid Fre Upper limit：3->0.2", "RecordEvent", \
                                                     "这里是对系统设置进行修改时的操作记录\nHere is a record of the operation when a change is made to the system Settings.");
-    EventRecord4->add_Specifition();
+    EventRecord4->add_Specification();
     EventRecord5 = new Specification(this,EventRecord5_explain, myTable, line++, 1, \
                                                     "Voltage protection Lower limit：-10->-15", "RecordEvent", \
                                                     "这里是对系统设置进行修改时的操作记录\nHere is a record of the operation when a change is made to the system Settings.");
-    EventRecord5->add_Specifition();
+    EventRecord5->add_Specification();
     EventRecord6 = new Specification(this,EventRecord6_explain, myTable, line++, column, \
                                                     "Voltage protection Lower limit：-15->-10", "RecordEvent", \
                                                     "这里是对系统设置进行修改时的操作记录\nHere is a record of the operation when a change is made to the system Settings.");
-    EventRecord6->add_Specifition();
+    EventRecord6->add_Specification();
     EventRecord7 = new Specification(this,EventRecord7_explain, myTable, line++, column, \
                                                     "Operation mode：Prevent countercurrnet->Peak valley", "RecordEvent", \
                                                     "这里是对系统设置进行修改时的操作记录\nHere is a record of the operation when a change is made to the system Settings.");
-    EventRecord7->add_Specifition();
+    EventRecord7->add_Specification();
     EventRecord8 = new Specification(this,EventRecord8_explain, myTable, line++, column, \
                                                     "Operation mode：UPS->Prevent countercurrnet", "RecordEvent", \
                                                     "这里是对系统设置进行修改时的操作记录\nHere is a record of the operation when a change is made to the system Settings.");
-    EventRecord8->add_Specifition();
+    EventRecord8->add_Specification();
     EventRecord9 = new Specification(this,EventRecord9_explain, myTable, line++, column, \
                                                     "Operation mode：Manual->UPS", "RecordEvent", \
                                                     "这里是对系统设置进行修改时的操作记录\nHere is a record of the operation when a change is made to the system Settings.");
-    EventRecord9->add_Specifition();
+    EventRecord9->add_Specification();
     EventRecord10 = new Specification(this,EventRecord10_explain, myTable, line++, column, \
                                                     "Operation mode：Peak valley->Manual", "RecordEvent", \
                                                     "这里是对系统设置进行修改时的操作记录\nHere is a record of the operation when a change is made to the system Settings.");
-    EventRecord10->add_Specifition();
+    EventRecord10->add_Specification();
     EventRecord11 = new Specification(this,EventRecord11_explain, myTable, line++, column, \
                                                     "Inv ON/Off-Grid：Off->automatic", "RecordEvent", \
                                                     "这里是对系统设置进行修改时的操作记录\nHere is a record of the operation when a change is made to the system Settings.");
-    EventRecord11->add_Specifition();
+    EventRecord11->add_Specification();
     EventRecord12 = new Specification(this,EventRecord12_explain, myTable, line++, column, \
                                                     "Inv ON/Off-Grid：automatic->Off", "RecordEvent", \
                                                     "这里是对系统设置进行修改时的操作记录\nHere is a record of the operation when a change is made to the system Settings.");
-    EventRecord12->add_Specifition();
+    EventRecord12->add_Specification();
 }
 
 

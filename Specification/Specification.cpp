@@ -23,7 +23,7 @@ Specification::~Specification()
     disconnect(tab.explain_btn,SIGNAL(clicked(bool)), this, SLOT(explain_btn_clicked()));
 }
 
-void Specification::add_Specifition()
+void Specification::add_Specification()
 {
     tab.explain_btn->setText(tab.value);
     tab.target_tab->setCellWidget(tab.row, tab.column, (QWidget *)tab.explain_btn);

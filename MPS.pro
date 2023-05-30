@@ -17,10 +17,9 @@ TEMPLATE = app
 
 
 include         ($$PWD/UI_Menu/UI_Menu.pri)
-#include         ($$PWD/Specification/Specification.pri)
+include         ($$PWD/Specification/Specification.pri)
 
-
-#INCLUDEPATH     +=$$PWD/Specification/
+INCLUDEPATH     +=$$PWD/Specification/
 INCLUDEPATH     +=$$PWD/UI_Menu/
 
 
@@ -29,25 +28,13 @@ CONFIG += c++11
 SOURCES +=\
         mywidget.cpp \
     MainThread.cpp \
-    Specification/Specification.cpp
-
-
 
 HEADERS  += mywidget.h \
-    Specification/database.h \
-    Specification/Specification.h \
-    Specification/Specification.h.autosave
 
 FORMS    += mywidget.ui
 
-
-
-
-
 RESOURCES += image.qrc
 
-DISTFILES += \
-    Specification/Specification.pri
 
 
 
