@@ -502,6 +502,8 @@ private slots:
 
     void on_Running_btn_clicked();//跳转变流器实时数据
     void on_Grid_clicked();//跳转电网实时数据
+    void on_RTD_module_1_clicked();
+
     void on_Load_clicked();//跳转负载实时数据
     void on_PV_clicked();//跳转PV实时数据
     void on_Batt_btn_released();//跳转到电池信息
@@ -513,6 +515,8 @@ private slots:
     void on_RTD_Grid_clicked();
 
     void on_RTD_Load_clicked();
+
+    void on_RTD_module_2_clicked();
 
 private:
     Ui::MyWidget *ui;

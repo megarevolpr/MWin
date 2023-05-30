@@ -417,17 +417,19 @@ void MyWidget::MPS_Data_Tab()
     PV_TabList << tr("Name") << tr("Value") << tr("Name") << tr("Value");
     ui->RT_DCDC_tableWidget->setHorizontalHeaderLabels(PV_TabList);
     ui->RT_DCDC_tableWidget->setColumnWidth(0,200);
-    ui->RT_DCDC_tableWidget->setColumnWidth(1,100);
+    ui->RT_DCDC_tableWidget->setColumnWidth(1,200);
     ui->RT_DCDC_tableWidget->setColumnWidth(2,200);
     ui->RT_DCDC_tableWidget->horizontalHeader()->setStretchLastSection(3);
     ui->RT_DCDC_tableWidget->verticalHeader()->setVisible(false);//设置垂直头不可见
     for(int i = 0; i < PV_Tablist1.size(); i++)
     {
         ui->RT_DCDC_tableWidget->setItem(i, 0, new QTableWidgetItem(PV_Tablist1.at(i)));
+        ui->RT_DCDC_tableWidget->item(i, 0)->setTextAlignment(Qt::AlignCenter);
     }
     for(int i = 0; i < PV_Tablist2.size(); i++)
     {
         ui->RT_DCDC_tableWidget->setItem(i, 2, new QTableWidgetItem(PV_Tablist2.at(i)));
+        ui->RT_DCDC_tableWidget->item(i, 2)->setTextAlignment(Qt::AlignCenter);
     }
     /***************************************************************************************************/
     QStringList RT_Grid_Tablist1;
@@ -1444,80 +1446,92 @@ void MyWidget::MPS_Data(QTableWidget *myTable)
 //PV数据 绘制button
 void MyWidget::PV_Data(QTableWidget *myTable)
 {
+    //只让选择1,2两个模块
+    ui->RTD_module_3->setEnabled(false);
+    ui->RTD_module_4->setEnabled(false);
+    ui->RTD_module_5->setEnabled(false);
+    ui->RTD_module_6->setEnabled(false);
+    ui->RTD_module_7->setEnabled(false);
+    ui->RTD_module_8->setEnabled(false);
+    ui->RTD_module_9->setEnabled(false);
+    ui->RTD_module_10->setEnabled(false);
+    ui->RTD_module_11->setEnabled(false);
+    ui->RTD_module_12->setEnabled(false);
+
     int line=0;int column = 1;//当前解释的button行和列
     PV_vol_H = new Specification(this,PV_vol_H_explain, myTable, line++, column, \
                                             "0V", "Voltage H", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是当前DC模块的高压侧电压\nThis is the high voltage side voltage of the current DC module.");
     PV_vol_H->add_Specification();
     PV_cur_H = new Specification(this,PV_cur_H_explain, myTable, line++, column, \
                                             "0A", "Current H", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是当前DC模块的高压侧电流\nThis is the current high voltage side current of the DC module.");
     PV_cur_H->add_Specification();
     PV_power_H = new Specification(this,PV_power_H_explain, myTable,line++, column, \
                                             "0kW", "Power H", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是当前DC模块的高压侧功率\nThis is the high voltage side power of the current DC module.");
     PV_power_H->add_Specification();
     PV_vol_L = new Specification(this,PV_vol_L_explain, myTable, line++, column, \
                                             "0V", "Voltage L", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是当前DC模块的低压侧电压\nThis is the low voltage side voltage of the current DC module.");
     PV_vol_L->add_Specification();
     PV_cur_L = new Specification(this,PV_cur_L_explain, myTable,line++, column, \
                                             "0A", "Current L", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是当前DC模块的低压侧电流\nThis is the current low voltage side current of the DC module.");
     PV_cur_L->add_Specification();
     PV_power_L = new Specification(this,PV_power_L_explain, myTable, line++, column, \
                                             "0kW", "Power L", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是当前DC模块的低压侧功率\nThis is the low voltage side power of the current DC module.");
     PV_power_L->add_Specification();
     PositiveInuslation = new Specification(this,PositiveInuslation_explain, myTable, line++, column, \
                                             "0kΩ", "PositiveInuslation", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是当前DC模块的正绝缘阻抗\nThis is the positive insulation impedance of the current DC module.");
     PositiveInuslation->add_Specification();
     PV_1 = new Specification(this,PV_1_explain, myTable, line++, column, \
                                             "0", "-", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "未知，待评审确认\n.");
     PV_1->add_Specification();
     PV_2 = new Specification(this,PV_2_explain, myTable, line++, column, \
                                             "0", "-", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "未知，待评审确认\n.");
     PV_2->add_Specification();
     line=0;
     column=3;
     Bus_H_vol_add = new Specification(this,Bus_H_vol_add_explain, myTable, line++, column, \
                                             "0V", "Bus_H_vol(+)", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是当前DC模块的高压侧正母线电压\nThis is the current positive bus voltage of the high voltage side of the DC module.");
     Bus_H_vol_add->add_Specification();
     Bus_H_vol_reduce = new Specification(this,Bus_H_vol_reduce_explain, myTable, line++, column, \
                                             "0V", "Bus_H_vol(-)", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是当前DC模块的高压侧负母线电压\nThis is the negative bus voltage of the high voltage side of the current DC module.");
     Bus_H_vol_reduce->add_Specification();
     Bus_L_vol_add = new Specification(this,Bus_L_vol_add_explain, myTable, line++, column, \
                                             "0V", "Bus_L_vol(+)", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是当前DC模块的低压侧正母线电压\nThis is the positive bus voltage of the low voltage side of the current DC module.");
     Bus_L_vol_add->add_Specification();
     Bus_L_vol_reduce = new Specification(this,Bus_L_vol_reduce_explain, myTable, line++, column, \
                                             "0V", "Bus_L_vol(-)", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是当前DC模块的低压侧负母线电压\nThis is the negative bus voltage of the low voltage side of the current DC module.");
     Bus_L_vol_reduce->add_Specification();
     PV_IGBT_T = new Specification(this,PV_IGBT_T_explain, myTable, line++, column, \
-                                            "0℃", "IGBT Temp.", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "0℃", "IGBT Temperature", \
+                                            "这是当前DC模块内部的IGBT温度\nThis is the current IGBT temperature inside the DC module.");
     PV_IGBT_T->add_Specification();
     NegativeInuslation = new Specification(this,NegativeInuslation_explain, myTable, line++, column, \
                                             "0kΩ", "NegativeInuslation", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是当前DC模块的负绝缘阻抗\nThis is the negative insulation impedance of the current DC module.");
     NegativeInuslation->add_Specification();
     Leakage_cur = new Specification(this,Leakage_cur_explain, myTable, line++, column, \
                                             "0mA", "Leakage_cur", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是当前模块的漏电流\nThis is the leakage current of the current module.");
     Leakage_cur->add_Specification();
     PV_3 = new Specification(this,PV_3_explain, myTable, line++, column, \
                                             "0", "-", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "未知，待评审确认\n.");
     PV_3->add_Specification();
     PV_4 = new Specification(this,PV_4_explain, myTable, line++, column, \
                                             "0", " ", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "未知，待评审确认\n.");
     PV_4->add_Specification();
 }
 //电网数据 绘制button
@@ -2170,3 +2184,14 @@ void MyWidget::OperationLog_tab(QTableWidget *myTable)
 }
 
 
+/*********选中第一个模块*********/
+void MyWidget::on_RTD_module_1_clicked()
+{
+    QMessageBox::question(this , "1", "选中第一个模块，查看第一个模块的实时数据\nChoose the first module to view the real-time data of the first module", "OK");
+}
+
+/*********选中第二个模块*********/
+void MyWidget::on_RTD_module_2_clicked()
+{
+    QMessageBox::question(this , "2", "选中第二个模块，查看第二个模块的实时数据\nChoose the second module to view the real-time data of the second module", "OK");
+}
