@@ -445,17 +445,19 @@ void MyWidget::MPS_Data_Tab()
     Grid_TabList << tr("Name") << tr("Value") << tr("Name") << tr("Value");
     ui->RT_Grid_tableWidget->setHorizontalHeaderLabels(Grid_TabList);
     ui->RT_Grid_tableWidget->setColumnWidth(0,200);
-    ui->RT_Grid_tableWidget->setColumnWidth(1,100);
+    ui->RT_Grid_tableWidget->setColumnWidth(1,200);
     ui->RT_Grid_tableWidget->setColumnWidth(2,200);
     ui->RT_Grid_tableWidget->horizontalHeader()->setStretchLastSection(3);
     ui->RT_Grid_tableWidget->verticalHeader()->setVisible(false);//设置垂直头不可见
     for(int i = 0; i < RT_Grid_Tablist1.size(); i++)
     {
         ui->RT_Grid_tableWidget->setItem(i, 0, new QTableWidgetItem(RT_Grid_Tablist1.at(i)));
+        ui->RT_Grid_tableWidget->item(i, 0)->setTextAlignment(Qt::AlignCenter);
     }
     for(int i = 0; i < RT_Grid_Tablist2.size(); i++)
     {
         ui->RT_Grid_tableWidget->setItem(i, 2, new QTableWidgetItem(RT_Grid_Tablist2.at(i)));
+        ui->RT_Grid_tableWidget->item(i, 2)->setTextAlignment(Qt::AlignCenter);
     }
     /***************************************************************************************************/
 
@@ -472,17 +474,19 @@ void MyWidget::MPS_Data_Tab()
     Load_Tablist << tr("Name") << tr("Value") << tr("Name") << tr("Value");
     ui->RT_Load_tableWidget->setHorizontalHeaderLabels(Load_Tablist);
     ui->RT_Load_tableWidget->setColumnWidth(0,200);
-    ui->RT_Load_tableWidget->setColumnWidth(1,100);
+    ui->RT_Load_tableWidget->setColumnWidth(1,200);
     ui->RT_Load_tableWidget->setColumnWidth(2,200);
     ui->RT_Load_tableWidget->horizontalHeader()->setStretchLastSection(3);
     ui->RT_Load_tableWidget->verticalHeader()->setVisible(false);//设置垂直头不可见
     for(int i = 0; i < Load_Tablist1.size(); i++)
     {
         ui->RT_Load_tableWidget->setItem(i, 0, new QTableWidgetItem(Load_Tablist1.at(i)));
+        ui->RT_Load_tableWidget->item(i, 0)->setTextAlignment(Qt::AlignCenter);
     }
     for(int i = 0; i < Load_Tablist2.size(); i++)
     {
         ui->RT_Load_tableWidget->setItem(i, 2, new QTableWidgetItem(Load_Tablist2.at(i)));
+        ui->RT_Load_tableWidget->item(i, 2)->setTextAlignment(Qt::AlignCenter);
     }
     MPS_Data(ui->RT_Machine_tableWidget);
     PV_Data(ui->RT_DCDC_tableWidget);
@@ -1540,61 +1544,61 @@ void MyWidget::Grid_Data(QTableWidget *myTable)
     int line=0;int column=1;
     Grid_vol_AB = new Specification(this,Grid_vol_AB_explain, myTable, line++, column, \
                                             "0V", "Voltage(AB)", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是变流器采集的当前电网的A相和B相之间的电压\nThis is the voltage between phase A and phase B of the current grid collected by the converter.");
     Grid_vol_AB->add_Specification();
     Grid_vol_BC = new Specification(this,Grid_vol_BC_explain, myTable, line++, column, \
                                             "0V", "Voltage(BC)", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是变流器采集的当前电网的B相和C相之间的电压\nThis is the voltage between phase B and phase C of the current grid collected by the converter.");
     Grid_vol_BC->add_Specification();
     Grid_vol_CA = new Specification(this,Grid_vol_CA_explain, myTable,line++, column, \
                                             "0V", "Voltage(CA)", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是变流器采集的当前电网的A相和C相之间的电压\nThis is the voltage between phase A and phase C of the current grid collected by the converter.");
     Grid_vol_CA->add_Specification();
     Grid_cur_A = new Specification(this,Grid_cur_A_explain, myTable, line++, column, \
                                             "0A", "Current(A)", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是变流器采集的当前电网的A相的电流\nThis is the A-phase current of the current grid collected by the converter.");
     Grid_cur_A->add_Specification();
     Grid_cur_B = new Specification(this,Grid_cur_B_explain, myTable, line++, column, \
                                             "0A", "Current(B)", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是变流器采集的当前电网的B相的电流\nThis is the B-phase current of the current grid collected by the converter.");
     Grid_cur_B->add_Specification();
     Grid_cur_C = new Specification(this,Grid_cur_C_explain, myTable, line++, column, \
                                             "0A", "Current(C)", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是变流器采集的当前电网的C相的电流\nThis is the C phase current of the current grid collected by the converter.");
     Grid_cur_C->add_Specification();
     Grid_1 = new Specification(this,Grid_1_explain, myTable, line++, column, \
                                             "0", "-", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "未知，待评审确认\n.");
     Grid_1->add_Specification();
     line=0;
     column=3;
     Grid_active_power = new Specification(this,Grid_active_power_explain, myTable, line++, column, \
                                             "0kW", "Active power", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是变流器采集的当前电网的有功功率\nThis is the active power of the current grid collected by the converter.");
     Grid_active_power->add_Specification();
     Grid_reactive_power = new Specification(this,Grid_reactive_power_explain, myTable, line++, column, \
                                             "0Kvar", "Reactive power", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是变流器采集的当前电网的无功功率\nThis is the reactive power of the current grid collected by the converter.");
     Grid_reactive_power->add_Specification();
     Grid_apparent_power = new Specification(this,Grid_apparent_power_explain, myTable, line++, column, \
                                             "0kVA", "Apparent power", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是变流器采集的当前电网的视在功率\nThis is the current apparent power of the grid collected by the converter.");
     Grid_apparent_power->add_Specification();
     Grid_power_factor = new Specification(this,Grid_power_factor_explain, myTable, line++, column, \
                                             "0", "Power factor", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是变流器采集的当前电网的功率因素\nThis is the power factor of the current grid collected by the converter.");
     Grid_power_factor->add_Specification();
     Grid_Frequency = new Specification(this,Grid_Frequency_explain, myTable, line++, column, \
                                             "0Hz", "Frequency", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是变流器采集的当前电网的频率\nThis is the frequency of the current grid collected by the converter.");
     Grid_Frequency->add_Specification();
     Grid_2 = new Specification(this,Grid_2_explain, myTable, line++, column, \
                                             "0", "-", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "未知，待评审确认\n.");
     Grid_2->add_Specification();
     Grid_3 = new Specification(this,Grid_3_explain, myTable, line++, column, \
                                             "0", "-", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "未知，待评审确认\n.");
     Grid_3->add_Specification();
 
 }
@@ -1604,61 +1608,61 @@ void MyWidget::Load_Data(QTableWidget *myTable)
     int line=0;int column=1;
     Load_vol_AB = new Specification(this,Load_vol_AB_explain, myTable, line++, column, \
                                             "0V", "Voltage(AB)", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是变流器采集的当前负载的A相和B相之间的电压\nThis is the voltage between phase A and phase B of the current load collected by the converter.");
     Load_vol_AB->add_Specification();
     Load_vol_BC = new Specification(this,Load_vol_BC_explain, myTable, line++, column, \
                                             "0V", "Voltage(BC)", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是变流器采集的当前负载的B相和C相之间的电压\nThis is the voltage between the B and C phases of the current load collected by the converter.");
     Load_vol_BC->add_Specification();
     Load_vol_CA = new Specification(this,Load_vol_CA_explain, myTable, line++, column, \
                                             "0V", "Voltage(CA)", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是变流器采集的当前负载的A相和C相之间的电压\nThis is the voltage between phase A and phase C of the current load collected by the converter.");
     Load_vol_CA->add_Specification();
     Load_cur_A = new Specification(this,Load_cur_A_explain, myTable, line++, column, \
                                             "0A", "Current(A)", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是变流器采集的当前负载的A相的电流\nThis is the A-phase current of the current load collected by the converter.");
     Load_cur_A->add_Specification();
     Load_cur_B = new Specification(this,Load_cur_B_explain, myTable, line++, column, \
                                             "0A", "Current(B)", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是变流器采集的当前负载的B相的电流\nThis is the B-phase current of the current load collected by the converter.");
     Load_cur_B->add_Specification();
     Load_cur_C = new Specification(this,Load_cur_C_explain, myTable, line++, column, \
                                             "0A", "Current(C)", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是变流器采集的当前负载的C相的电流\nThis is the C phase current of the current load collected by the converter.");
     Load_cur_C->add_Specification();
     Load_1 = new Specification(this,Load_1_explain, myTable, line++, column, \
                                             "0", "-", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "未知，待评审确认\n.");
     Load_1->add_Specification();
     line=0;
     column=3;
     Load_active_power = new Specification(this,Load_active_power_explain, myTable, line++, column, \
                                             "0kW", "Active power", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是变流器采集的当前负载的有功功率\nThis is the active power of the current load collected by the converter.");
     Load_active_power->add_Specification();
     Load_reactive_power = new Specification(this,Load_reactive_power_explain, myTable, line++, column, \
                                             "0Kvar", "Reactive power", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是变流器采集的当前负载的无功功率\nThis is the reactive power of the current load collected by the converter.");
     Load_reactive_power->add_Specification();
     Load_apparent_power = new Specification(this,Load_apparent_power_explain, myTable, line++, column, \
                                             "0kVA", "Apparent power", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是变流器采集的当前负载的视在功率\nThis is the apparent power of the current load collected by the converter.");
     Load_apparent_power->add_Specification();
     Load_power_factor = new Specification(this,Load_power_factor_explain, myTable, line++, column, \
                                             "0", "Power factor", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是变流器采集的当前负载的功率因素\nThis is the power factor of the current load collected by the converter.");
     Load_power_factor->add_Specification();
     Load_Frequency = new Specification(this,Load_Frequency_explain, myTable, line++, column, \
                                             "0Hz", "Frequency", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是变流器采集的当前负载的频率\nThis is the frequency of the current load collected by the converter.");
     Load_Frequency->add_Specification();
     Load_2 = new Specification(this,Load_2_explain, myTable, line++, column, \
                                             "0", "-", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "未知，待评审确认\n.");
     Load_2->add_Specification();
     Load_3 = new Specification(this,Load_3_explain, myTable, line++, column, \
                                             "0", "-", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "未知，待评审确认\n.");
     Load_3->add_Specification();
 }
 //MPS状态 绘制button
