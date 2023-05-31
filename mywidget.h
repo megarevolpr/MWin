@@ -43,6 +43,7 @@
 #include <QAction>
 #include <QObject>
 #include <QMessageBox>
+#include <QTimer>
 
 #include "Menu.h"
 #include "Specification/Specification.h"
@@ -463,6 +464,7 @@ private:
     void FirstPage();           //触摸点击
     void RunStatePage();        //运行状态页
     void SystemSettingPage();   //系统设置界面初始化
+    void LCDSetting();          //LCD标签初始化和定时器设置
     void RecordPage();          //记录页面初始化
     void LinkRelationship();    //函数关联
 
@@ -492,6 +494,8 @@ private:
 
 private slots:
     void on_UI_MenuBtn_clicked();//转到槽
+
+    void onTimerOut();  //时间显示
     void My_menuAction(int Index);
 
     void on_RTD_Converter_clicked();
@@ -522,7 +526,8 @@ private:
     Ui::MyWidget *ui;
     QButtonGroup *pButton_BatteryData;
 
-
+    QTimer *timer;
+    QTimer *Update_RTData_timer;
 
 };
 #endif // MYWIDGET_H

@@ -304,6 +304,7 @@ void MyWidget::UIPageInit()
     FirstPage();  //主页点击
     RunStatePage();//实时数据
     SystemSettingPage();//系统设置
+    LCDSetting();   //实时刷新时间
     RecordPage();//记录页面
     LinkRelationship();//函数关联
 }
@@ -328,6 +329,8 @@ void MyWidget::FirstPage()
 //函数关联
 void MyWidget::LinkRelationship()
 {
+    connect(timer, SIGNAL(timeout()), this, SLOT(onTimerOut()));
+
     connect(m_menu, SIGNAL(Sent(int)), this, SLOT(My_menuAction(int)));
 
     connect(ui->Bypass_Batt_btn, SIGNAL(clicked()), this, SLOT(on_Batt_btn_released()));    //主页电池按钮跳转电池信息
@@ -359,6 +362,30 @@ void MyWidget::SystemSettingPage()
 //    History_tab();/*记录-历史记录、操作日志设置表*/
 
     Information_tbnt_released();/*系统-系统消息*/
+}
+/***************************************************************
+ * LCD标签初始化和定时器设置
+ ***************************************************************/
+void MyWidget::LCDSetting()
+{
+    ui->TimeSeting_btn->setFlat(true);//设置时间显示控件无边框
+    ui->TimeSeting_btn->setFocusPolicy(Qt::NoFocus); //设置无虚线
+    timer = new QTimer();
+    timer->setInterval(1000);//一秒刷新一次时间
+    timer->start();
+
+
+    Update_RTData_timer = new QTimer();
+    Update_RTData_timer->setInterval(500);//设置数据实时显示刷新时间
+    Update_RTData_timer->start();
+
+#if 0
+    current_time = QTime::currentTime();   //获取当前时间
+    int hour = current_time->hour();     //当前的小时
+    int minute = current_time->minute(); //当前的分
+    int second = current_time->second(); //当前的秒
+    int msec = current_time->msec();     //当前的毫秒
+#endif
 }
 
 //记录页面初始化
@@ -1155,6 +1182,13 @@ void MyWidget::on_UI_MenuBtn_clicked()
     {
         m_menu->hide();
     }
+}
+/***********时间显示**********/
+void MyWidget::onTimerOut()
+{
+    QDateTime time = QDateTime::currentDateTime();
+    QString str = time.toString("yyyy-MM-dd HH:mm:ss");
+    ui->TimeSeting_btn->setText(str);
 }
 
 /***************************************************************
