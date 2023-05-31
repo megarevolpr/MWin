@@ -335,6 +335,57 @@ public:
     Specification *DCDC_CPLD_Version;
     Specification *SN;
 
+    /***********************数据报表************************/
+    QPushButton *PV_power_generation_Day_explain;
+    QPushButton *PV_power_generation_Month_explain;
+    QPushButton *PV_power_generation_Year_explain;
+    QPushButton *PV_power_generation_Total_explain;
+    QPushButton *Load_Discharge_Day_explain;
+    QPushButton *Load_Discharge_Month_explain;
+    QPushButton *Load_Discharge_Year_explain;
+    QPushButton *Load_Discharge_Total_explain;
+    QPushButton *Battery_Charge_Day_explain;
+    QPushButton *Battery_Charge_Month_explain;
+    QPushButton *Battery_Charge_Year_explain;
+    QPushButton *Battery_Charge_Total_explain;
+    QPushButton *Battery_Discharge_Day_explain;
+    QPushButton *Battery_Discharge_Month_explain;
+    QPushButton *Battery_Discharge_Year_explain;
+    QPushButton *Battery_Discharge_Total_explain;
+    QPushButton *Grid_Charge_Day_explain;
+    QPushButton *Grid_Charge_Month_explain;
+    QPushButton *Grid_Charge_Year_explain;
+    QPushButton *Grid_Charge_Total_explain;
+    QPushButton *Grid_Discharge_Day_explain;
+    QPushButton *Grid_Discharge_Month_explain;
+    QPushButton *Grid_Discharge_Year_explain;
+    QPushButton *Grid_Discharge_Total_explain;
+
+    Specification *PV_power_generation_Day;
+    Specification *PV_power_generation_Month;
+    Specification *PV_power_generation_Year;
+    Specification *PV_power_generation_Total;
+    Specification *Load_Discharge_Day;
+    Specification *Load_Discharge_Month;
+    Specification *Load_Discharge_Year;
+    Specification *Load_Discharge_Total;
+    Specification *Battery_Charge_Day;
+    Specification *Battery_Charge_Month;
+    Specification *Battery_Charge_Year;
+    Specification *Battery_Charge_Total;
+    Specification *Battery_Discharge_Day;
+    Specification *Battery_Discharge_Month;
+    Specification *Battery_Discharge_Year;
+    Specification *Battery_Discharge_Total;
+    Specification *Grid_Charge_Day;
+    Specification *Grid_Charge_Month;
+    Specification *Grid_Charge_Year;
+    Specification *Grid_Charge_Total;
+    Specification *Grid_Discharge_Day;
+    Specification *Grid_Discharge_Month;
+    Specification *Grid_Discharge_Year;
+    Specification *Grid_Discharge_Total;
+
     /**********************历史记录*************************/
     QPushButton *Grade_explain;
     QPushButton *Grade2_explain;
@@ -489,6 +540,7 @@ private:
     void PCS_Alarm_information_table();  //PCS故障信息表 绘制
     void AutoOperation(QTableWidget *myTable);//自动运行 绘制button
     void SystemMessages(QTableWidget *myTable);//系统信息 绘制button
+    void DataReportMessages(QTableWidget *myTable);//数据报表 绘制button
     void HistoryRecord(QTableWidget *myTable); //历史记录   绘制button
     void OperationLog_tab(QTableWidget *myTable);//操作日志 绘制button
 
@@ -521,6 +573,18 @@ private slots:
     void on_RTD_Load_clicked();
 
     void on_RTD_module_2_clicked();
+
+    void on_Subtract_Y_clicked();
+
+    void on_Add_Y_clicked();
+
+    void on_Subtract_M_clicked();
+
+    void on_Add_M_clicked();
+
+    void on_Subtract_D_clicked();
+
+    void on_Add_D_clicked();
 
 private:
     Ui::MyWidget *ui;
