@@ -3638,7 +3638,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                 <string notr="true"/>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>3</number>
                </property>
                <widget class="QWidget" name="RT_Data_page">
                 <attribute name="title">
@@ -5041,6 +5041,12 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                            </property>
                            <item>
                             <widget class="QLabel" name="BATName1_2">
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>42</height>
+                              </size>
+                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>
@@ -5062,9 +5068,15 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                            </item>
                            <item>
                             <widget class="QLabel" name="BatAnalog_9">
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>42</height>
+                              </size>
+                             </property>
                              <property name="font">
                               <font>
-                               <pointsize>14</pointsize>
+                               <pointsize>12</pointsize>
                               </font>
                              </property>
                              <property name="cursor">
@@ -5080,9 +5092,15 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                            </item>
                            <item>
                             <widget class="QLabel" name="BatAnalog_10">
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>42</height>
+                              </size>
+                             </property>
                              <property name="font">
                               <font>
-                               <pointsize>14</pointsize>
+                               <pointsize>11</pointsize>
                               </font>
                              </property>
                              <property name="cursor">
@@ -5098,6 +5116,12 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                            </item>
                            <item>
                             <widget class="QLabel" name="BatAnalog_11">
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>42</height>
+                              </size>
+                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>
@@ -5116,6 +5140,12 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                            </item>
                            <item>
                             <widget class="QLabel" name="BatAnalog_12">
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>42</height>
+                              </size>
+                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>
@@ -5134,6 +5164,12 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                            </item>
                            <item>
                             <widget class="QLabel" name="BatAnalog_13">
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>42</height>
+                              </size>
+                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>
@@ -5152,6 +5188,12 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                            </item>
                            <item>
                             <widget class="QLabel" name="BatAnalog_14">
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>42</height>
+                              </size>
+                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>
@@ -5170,6 +5212,12 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                            </item>
                            <item>
                             <widget class="QLabel" name="BatAnalog_15">
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>42</height>
+                              </size>
+                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>
@@ -5188,6 +5236,12 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                            </item>
                            <item>
                             <widget class="QLabel" name="BatAnalog_16">
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>42</height>
+                              </size>
+                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>
@@ -5251,13 +5305,13 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                              </property>
                              <property name="minimumSize">
                               <size>
-                               <width>75</width>
+                               <width>70</width>
                                <height>42</height>
                               </size>
                              </property>
                              <property name="maximumSize">
                               <size>
-                               <width>75</width>
+                               <width>70</width>
                                <height>42</height>
                               </size>
                              </property>
@@ -5270,13 +5324,13 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                             <widget class="QPushButton" name="pushButton_10">
                              <property name="minimumSize">
                               <size>
-                               <width>0</width>
+                               <width>70</width>
                                <height>42</height>
                               </size>
                              </property>
                              <property name="maximumSize">
                               <size>
-                               <width>16777215</width>
+                               <width>70</width>
                                <height>42</height>
                               </size>
                              </property>
@@ -5295,7 +5349,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                              </property>
                              <property name="maximumSize">
                               <size>
-                               <width>16777215</width>
+                               <width>70</width>
                                <height>42</height>
                               </size>
                              </property>
@@ -5314,7 +5368,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                              </property>
                              <property name="maximumSize">
                               <size>
-                               <width>16777215</width>
+                               <width>70</width>
                                <height>42</height>
                               </size>
                              </property>
@@ -5333,12 +5387,12 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                              </property>
                              <property name="maximumSize">
                               <size>
-                               <width>16777215</width>
+                               <width>70</width>
                                <height>42</height>
                               </size>
                              </property>
                              <property name="text">
-                              <string/>
+                              <string>0</string>
                              </property>
                             </widget>
                            </item>
@@ -5352,6 +5406,19 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                              </property>
                              <property name="maximumSize">
                               <size>
+                               <width>70</width>
+                               <height>42</height>
+                              </size>
+                             </property>
+                             <property name="text">
+                              <string>0</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLabel" name="label">
+                             <property name="maximumSize">
+                              <size>
                                <width>16777215</width>
                                <height>42</height>
                               </size>
@@ -5362,14 +5429,13 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                             </widget>
                            </item>
                            <item>
-                            <widget class="QLabel" name="label">
-                             <property name="text">
-                              <string/>
-                             </property>
-                            </widget>
-                           </item>
-                           <item>
                             <widget class="QLabel" name="label_18">
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>42</height>
+                              </size>
+                             </property>
                              <property name="text">
                               <string/>
                              </property>
@@ -5384,6 +5450,12 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                            </property>
                            <item>
                             <widget class="QLabel" name="BatUnit1_2">
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>42</height>
+                              </size>
+                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>
@@ -5405,6 +5477,12 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                            </item>
                            <item>
                             <widget class="QLabel" name="BatUnit_9">
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>42</height>
+                              </size>
+                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>
@@ -5423,6 +5501,12 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                            </item>
                            <item>
                             <widget class="QLabel" name="BatUnit_10">
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>42</height>
+                              </size>
+                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>
@@ -5441,6 +5525,12 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                            </item>
                            <item>
                             <widget class="QLabel" name="BatUnit_11">
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>42</height>
+                              </size>
+                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>
@@ -5459,6 +5549,12 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                            </item>
                            <item>
                             <widget class="QLabel" name="BatUnit_12">
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>42</height>
+                              </size>
+                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>
@@ -5477,6 +5573,12 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                            </item>
                            <item>
                             <widget class="QLabel" name="BatUnit_13">
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>42</height>
+                              </size>
+                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>
@@ -5495,6 +5597,12 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                            </item>
                            <item>
                             <widget class="QLabel" name="BatUnit_14">
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>42</height>
+                              </size>
+                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>
@@ -5513,6 +5621,12 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                            </item>
                            <item>
                             <widget class="QLabel" name="BatUnit_15">
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>42</height>
+                              </size>
+                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>
@@ -5531,6 +5645,12 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                            </item>
                            <item>
                             <widget class="QLabel" name="BatUnit_16">
+                             <property name="maximumSize">
+                              <size>
+                               <width>16777215</width>
+                               <height>42</height>
+                              </size>
+                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>

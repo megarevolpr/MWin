@@ -1286,11 +1286,11 @@ void MyWidget::BatteryData_clicked(int nid)
         break;
     case 17:
         QMessageBox::question(this, "Warning3"\
-                              ,"这是三级告警时的颜色--红色，当告警等级(Alarm level)中的颜色与此颜色一致时为三级告警\nThis color is red for a level 3 Alarm. If the color in the Alarm level(Alarm level) is the same as this color, it is a Level 3 alarm.", "OK");
+                              ,"这是三级告警时的颜色--红色，当告警等级(Alarm level)中的颜色与此颜色一致时为三级告警\nThis is the color of a level 3 Alarm: red. If the color in the Alarm level(Alarm level) is the same as this color, it is a Level 3 alarm.", "OK");
         break;
     case 18:
         QMessageBox::question(this, "Alarm level"\
-                              ,"这是告警等级图示，会根据BMS上传的告警等级改变颜色，此处可以通过颜色判断告警等级，正常为绿色、告警1为黄色、告警2为橙色、告警3为红色\nThis is the alarm severity icon. The color of the alarm is changed according to the alarm severity uploaded by the BMS. You can judge the alarm severity by the color.", "OK");
+                              ,"这是告警等级图示，会根据BMS上传的告警等级改变颜色，此处可以通过颜色判断告警等级，正常为绿色、告警1为黄色、告警2为橙色、告警3为红色\nThis is an alarm level diagram that will change color based on the alarm level uploaded by BMS. Here, the alarm level can be determined by color, which is green for normal, yellow for alarm 1, orange for alarm 2, and red for alarm 3.", "OK");
         break;
     case 19:
         QMessageBox::question(this, "Charge enable"\
