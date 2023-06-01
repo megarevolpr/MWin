@@ -167,6 +167,20 @@ void MyWidget::MemoryAllocation()
     pButton_BatteryData->addButton(ui->pushButton_20,19);
     pButton_BatteryData->addButton(ui->pushButton_21,20);
 
+    /***************************DC/AC参数**********************************/
+
+    Grid_connected_mode_explain = new QPushButton;      //PCS并离网方式说明
+    Constant_power_explain  = new QPushButton;           //恒功率说明
+    Charging_and_discharging_explain = new QPushButton; //充放电说明status
+    Work_mode_explain = new QPushButton;                //工作模式说明
+    Output_power_factor_explain = new QPushButton;      //输出功率因素说明
+    Output_reactive_power_explain = new QPushButton;    //输出无功功率说明
+    Constant_current_explain = new QPushButton;         //恒流说明
+    Constant_voltage_explain = new QPushButton;         //恒压说明
+    Control_mode_explain = new QPushButton;             //控制模式说明
+    Machine_number_explain = new QPushButton;           //设备号说明
+    Parallel_explain = new QPushButton;                 //并机说明
+    Unbalance_power_enable_explain = new QPushButton;   //功率不平衡使能说明
 
     /*******************************自动运行*******************************/
 
@@ -913,6 +927,8 @@ void MyWidget::UserParam_tab()
 
     AdvancedSetup_btn->setText(tr("Advance setting"));
     ui->System_Tab->setCellWidget(7,5, (QWidget *)AdvancedSetup_btn);          //高级设置
+
+    DC_AC_Parameter_tab(ui->System_Tab);
 }
 
 //展示PCS故障信息表
@@ -1917,6 +1933,70 @@ void MyWidget::MPSState(QTableWidget *myTable)
                                             "OFF", "ModeLock", \
                                             "这是当前'DC'模块的模块锁状态，有闭合(ON)、断开(OFF)两种状态\nThis is the lock status of the current 'DC' module, with two states: ON and OFF.");
     ModeLock->add_Specification();
+
+}
+
+void MyWidget::DC_AC_Parameter_tab(QTableWidget *myTable)
+{
+    Grid_connected_mode = new Specification(this,Grid_connected_mode_explain, myTable, 0, 1, \
+                                            "automatic", "Grid connected mode of PCS", \
+                                            "这是PCS并网方式，一共有三项可选：自动(automatic)，并网(On)，离网(Off),选择'自动'时将自动识别当前的并网方式\n并网:与相邻电力系统发送电气连接，并进行功率交换(如与电网连接)\n离网：不依赖电网而独立运行(不接电网)\nThis is the PCS grid connection mode, there are three options: automatic(automatic), On(On), Off(Off), select 'automatic' will automatically identify the current grid connection mode \n grid connection: send electrical connection with the adjacent power system, and carry out power exchange (such as connection with the grid)\n off-grid: To operate independently of the grid (not connected to the grid).");
+    Grid_connected_mode->add_Specification();
+
+    Constant_power = new Specification(this,Constant_power_explain, myTable, 1, 1, \
+                                       "0", "Constant power(AC)", \
+                                       "这是恒功率，可以通过修改这项数值来设置机器的功率,当控制功率方式选择正负功率(CP_N&P)时,正数表示放电，负数表示充电\nThis is constant power, and the power of the machine can be set by modifying this value. When the power control mode is positive and negative (CP_N&P), the positive number means discharge and the negative number means charge.");
+    Constant_power->add_Specification();
+
+    Charging_and_discharging = new Specification(this,Charging_and_discharging_explain, myTable, 2, 1, \
+                                                 "Charge", "Charging and discharging", \
+                                                 "这是充放电，一共有两项可选：充电(Charge)，放电(Discharge)，根据此处选择决定是充电还是放电，当控制功率方式选择恒功率(CP_P)时，此项可调\nThis is Charge and Discharge, and there are two options: charge(Charge) and discharge(Discharge). Charge or discharge can be determined according to the choice here. When the power control mode is Constant power(CP_P), this option can be adjusted.");
+    Charging_and_discharging->add_Specification();
+
+    Work_mode = new Specification(this,Work_mode_explain, myTable, 3, 1, \
+                                  "Manual", "Operational mode", \
+                                  "这是工作模式，有三项可选：自发自用(System for self-use)，电池优先(Battery priority)，削峰填谷(Peak shaving)\n选择自发自用模式时，优先给负载供电\n选择电池优先模式时，优先给电池充电\n削峰填谷模式时，用电高峰时优先使用电池给负载供电，用电低谷时优先给电池充电\nThis is the working mode with three options: System for self use, Battery priority, and Peak shaving; When selecting the self use mode, priority is given to supplying power to the load; When selecting battery priority mode, priority is given to charging the battery; During peak shaving and valley filling mode, priority is given to using batteries to supply power to the load during peak electricity usage, and to charging batteries during low electricity usage.");
+    Work_mode->add_Specification();
+
+    Output_power_factor = new Specification(this,Output_power_factor_explain, myTable, 4, 1, \
+                                            "1", "Output power factor", \
+                                            "这是输出功率因数，是用来衡量电气设备输出效率高低的一个系数，不可调\nThis is the output power factor, which is a coefficient used to measure the output efficiency of electrical equipment and cannot be adjusted.");
+    Output_power_factor->add_Specification();
+
+    Output_reactive_power = new Specification(this,Output_reactive_power_explain, myTable, 5, 1, \
+                                              "1", "Output reactive power", \
+                                              "这是输出无功功率，它表达了输出交流电源能量与磁场或电场能量交换的最大速率，不可调\nThis is the output reactive power, which expresses the maximum rate at which the output AC power source energy is exchanged with the magnetic or electric field energy and is not adjustable.");
+    Output_reactive_power->add_Specification();
+
+    Constant_current = new Specification(this,Constant_current_explain, myTable, 6, 1, \
+                                         "100", "Constant current", \
+                                         "这是恒流值，当控制功率方式选择恒流(CC)时，此项可调，电流值稳定为此值\nThis is the constant current value, when the control power mode selects constant current (CC), this can be adjusted, the current value is stable for this value.");
+    Constant_current->add_Specification();
+
+    Constant_voltage = new Specification(this,Constant_voltage_explain, myTable, 7, 1, \
+                                         "600", "Constant voltage", \
+                                         "这是恒压值，当控制功率方式选择恒压(CV)时，此项可调，电压值稳定为此值\nThis is the constant voltage value, when the control power mode selects constant voltage (CV), this can be adjusted, the voltage value is stable for this value.");
+    Constant_voltage->add_Specification();
+
+    Control_mode = new Specification(this,Control_mode_explain, myTable, 0, 4, \
+                                     "Local", "Control mode", \
+                                     "这是工作模式，有两项可选：本地(Local)，远程(Remote)，选择'本地'时，可在本地修改系统参数，选择'远程'时，可通过EMS、485等进行远程修改参数\nThis is the working mode, there are two options: Local (Local), Remote (Remote), select 'local', you can modify the system parameters locally, select 'remote', you can modify the parameters remotely through EMS, 485, etc.");
+    Control_mode->add_Specification();
+
+    Machine_number = new Specification(this,Machine_number_explain, myTable, 1, 4, \
+                                       "Master_00", "Machine number", \
+                                       "这是设备号，可以选择主机(Master)或者从机(Slave)，其中主机为Master_00，其余八项Slave_01~Slave_08均为从机\nThis is the device number, and you can choose host(Master) or slave(Slave), where master is Master_00 and Slave_01 to Slave_08 are slaves.");
+    Machine_number->add_Specification();
+
+    Parallel = new Specification(this,Parallel_explain, myTable, 2, 4, \
+                                 "Disable", "Parallel", \
+                                 "这是并机模式，有两项可选：使能(Enable)，禁止(Disable)，开启并机时，可将多台设备联合到一起为负载供电\nThis is the parallel mode, with two options: enabled(Enable), disabled(Disable), and when enabled, multiple devices can be combined to power the load.");
+    Parallel->add_Specification();
+
+    Unbalance_power_enable = new Specification(this,Unbalance_power_enable_explain, myTable, 3, 4, \
+                                               "Disable", "Run time enable", \
+                                               "这是运行时段使能，有两项可选：使能(Enable)，禁止(Disable)\nThis is to Enable the run time function. Two options are available: Enable and Disable.");
+    Unbalance_power_enable->add_Specification();
 
 }
 //自动运行 绘制button

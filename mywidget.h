@@ -254,6 +254,43 @@ public:
     Specification *ModeLock;
     Specification *state4;
 
+    /***************************DC/AC参数****************************/
+    QPushButton *Grid_connected_mode_explain;//并网方式说明
+    Specification *Grid_connected_mode;
+
+    QPushButton *Constant_power_explain;     //功率说明
+    Specification *Constant_power;
+
+    QPushButton *Charging_and_discharging_explain;  //充放电说明
+    Specification *Charging_and_discharging;
+
+    QPushButton *Work_mode_explain;  //工作模式说明
+    Specification *Work_mode;
+
+    QPushButton *Output_power_factor_explain;    //输出功率因素说明
+    Specification *Output_power_factor;
+
+    QPushButton *Output_reactive_power_explain;  //输出无功功率说明
+    Specification *Output_reactive_power;
+
+    QPushButton *Constant_current_explain;  //恒流说明
+    Specification *Constant_current;
+
+    QPushButton *Constant_voltage_explain; //恒压说明
+    Specification *Constant_voltage;
+
+    QPushButton *Control_mode_explain;  //控制模式说明
+    Specification *Control_mode;
+
+    QPushButton *Machine_number_explain;    //设备号说明
+    Specification *Machine_number;
+
+    QPushButton *Parallel_explain;  //并机说明
+    Specification *Parallel;
+
+    QPushButton *Unbalance_power_enable_explain;    //功率不平衡使能说明
+    Specification *Unbalance_power_enable;
+
     /***************************自动运行**************************/
     //选择
     QPushButton *Check1_explain,*Check2_explain,*Check3_explain,*Check4_explain,*Check5_explain;
@@ -514,6 +551,7 @@ private:
     void Grid_Data(QTableWidget *myTable);//电网数据 绘制button
     void Load_Data(QTableWidget *myTable);//负载数据 绘制button
     void MPSState(QTableWidget *myTable);  //MPS状态 绘制button
+    void DC_AC_Parameter_tab(QTableWidget *myTable);    //DC/AC参数页说明
     void PCS_Alarm_information_table();  //PCS故障信息表 绘制
     void AutoOperation(QTableWidget *myTable);//自动运行 绘制button
     void SystemMessages(QTableWidget *myTable);//系统信息 绘制button

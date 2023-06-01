@@ -59,7 +59,7 @@
    <item row="0" column="0">
     <widget class="QStackedWidget" name="UI_stackedWidget">
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="BasicSet_page">
       <layout class="QGridLayout" name="gridLayout_6">
@@ -2526,7 +2526,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
              <property name="geometry">
               <rect>
                <x>720</x>
-               <y>290</y>
+               <y>310</y>
                <width>121</width>
                <height>111</height>
               </rect>
@@ -2588,7 +2588,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
              <property name="geometry">
               <rect>
                <x>170</x>
-               <y>270</y>
+               <y>315</y>
                <width>101</width>
                <height>111</height>
               </rect>
@@ -3252,9 +3252,9 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <widget class="QLabel" name="Grid_bar_1">
              <property name="geometry">
               <rect>
-               <x>530</x>
+               <x>520</x>
                <y>370</y>
-               <width>181</width>
+               <width>190</width>
                <height>16</height>
               </rect>
              </property>
