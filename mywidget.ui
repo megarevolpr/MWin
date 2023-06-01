@@ -2519,14 +2519,14 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <enum>QFrame::Raised</enum>
            </property>
            <property name="currentIndex">
-            <number>1</number>
+            <number>0</number>
            </property>
            <widget class="QWidget" name="Host_page">
             <widget class="QPushButton" name="Bypass_Grid_btn">
              <property name="geometry">
               <rect>
-               <x>650</x>
-               <y>280</y>
+               <x>720</x>
+               <y>290</y>
                <width>121</width>
                <height>111</height>
               </rect>
@@ -2556,8 +2556,8 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <widget class="QPushButton" name="Bypass_Running_btn">
              <property name="geometry">
               <rect>
-               <x>310</x>
-               <y>120</y>
+               <x>380</x>
+               <y>130</y>
                <width>151</width>
                <height>131</height>
               </rect>
@@ -2587,8 +2587,8 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <widget class="QPushButton" name="Bypass_Batt_btn">
              <property name="geometry">
               <rect>
-               <x>100</x>
-               <y>260</y>
+               <x>170</x>
+               <y>270</y>
                <width>101</width>
                <height>111</height>
               </rect>
@@ -2630,8 +2630,8 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <widget class="QLabel" name="PV_bar_2">
              <property name="geometry">
               <rect>
-               <x>330</x>
-               <y>40</y>
+               <x>400</x>
+               <y>50</y>
                <width>16</width>
                <height>80</height>
               </rect>
@@ -2649,8 +2649,8 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <widget class="QPushButton" name="Bypass_Load_Btn">
              <property name="geometry">
               <rect>
-               <x>640</x>
-               <y>10</y>
+               <x>710</x>
+               <y>20</y>
                <width>151</width>
                <height>91</height>
               </rect>
@@ -2668,8 +2668,8 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <widget class="QLabel" name="PV_bar_1">
              <property name="geometry">
               <rect>
-               <x>210</x>
-               <y>40</y>
+               <x>280</x>
+               <y>50</y>
                <width>121</width>
                <height>16</height>
               </rect>
@@ -2690,8 +2690,8 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <widget class="QLabel" name="Load_bar_1">
              <property name="geometry">
               <rect>
-               <x>446</x>
-               <y>40</y>
+               <x>516</x>
+               <y>50</y>
                <width>191</width>
                <height>16</height>
               </rect>
@@ -2712,8 +2712,8 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <widget class="QLabel" name="Load_bar_2">
              <property name="geometry">
               <rect>
-               <x>430</x>
-               <y>40</y>
+               <x>500</x>
+               <y>50</y>
                <width>16</width>
                <height>80</height>
               </rect>
@@ -2731,8 +2731,8 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <widget class="QPushButton" name="PV_btn">
              <property name="geometry">
               <rect>
-               <x>90</x>
-               <y>20</y>
+               <x>160</x>
+               <y>30</y>
                <width>121</width>
                <height>101</height>
               </rect>
@@ -2774,8 +2774,8 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <widget class="QWidget" name="layoutWidget_2">
              <property name="geometry">
               <rect>
-               <x>220</x>
-               <y>50</y>
+               <x>290</x>
+               <y>70</y>
                <width>91</width>
                <height>84</height>
               </rect>
@@ -2808,7 +2808,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
 </string>
                 </property>
                 <property name="text">
-                 <string>650.5V</string>
+                 <string>0V</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
@@ -2842,7 +2842,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
 </string>
                 </property>
                 <property name="text">
-                 <string>100A</string>
+                 <string>0A</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
@@ -2864,8 +2864,8 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <widget class="QWidget" name="layoutWidget_3">
              <property name="geometry">
               <rect>
-               <x>470</x>
-               <y>220</y>
+               <x>540</x>
+               <y>230</y>
                <width>186</width>
                <height>124</height>
               </rect>
@@ -2897,7 +2897,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                  <string notr="true">border-image:url();</string>
                 </property>
                 <property name="text">
-                 <string>50.5 A </string>
+                 <string>0A</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
@@ -2930,7 +2930,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                  <string notr="true">border-image:url();</string>
                 </property>
                 <property name="text">
-                 <string>50.5 A </string>
+                 <string>0A</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
@@ -2963,7 +2963,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                  <string notr="true">border-image:url();</string>
                 </property>
                 <property name="text">
-                 <string>399.5 v </string>
+                 <string>0V</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
@@ -2996,7 +2996,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                  <string notr="true">border-image:url();</string>
                 </property>
                 <property name="text">
-                 <string>399.5 v </string>
+                 <string>0V</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
@@ -3029,7 +3029,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                  <string notr="true">border-image:url();</string>
                 </property>
                 <property name="text">
-                 <string>399.5 v </string>
+                 <string>0V</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
@@ -3062,7 +3062,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                  <string notr="true">border-image:url();</string>
                 </property>
                 <property name="text">
-                 <string>50.5 A </string>
+                 <string>0A</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
@@ -3074,8 +3074,8 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <widget class="QWidget" name="layoutWidget_4">
              <property name="geometry">
               <rect>
-               <x>450</x>
-               <y>60</y>
+               <x>530</x>
+               <y>70</y>
                <width>192</width>
                <height>92</height>
               </rect>
@@ -3089,7 +3089,10 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                  </font>
                 </property>
                 <property name="text">
-                 <string>399.5 v </string>
+                 <string>0V</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
                 </property>
                </widget>
               </item>
@@ -3119,7 +3122,10 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                  <string notr="true">border-image:url();</string>
                 </property>
                 <property name="text">
-                 <string>50.5 A </string>
+                 <string>0A </string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
                 </property>
                </widget>
               </item>
@@ -3131,7 +3137,10 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                  </font>
                 </property>
                 <property name="text">
-                 <string>399.5 v </string>
+                 <string>0V</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
                 </property>
                </widget>
               </item>
@@ -3161,7 +3170,10 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                  <string notr="true">border-image:url();</string>
                 </property>
                 <property name="text">
-                 <string>50.5 A </string>
+                 <string>0A </string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
                 </property>
                </widget>
               </item>
@@ -3173,7 +3185,10 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                  </font>
                 </property>
                 <property name="text">
-                 <string>399.5 v </string>
+                 <string>0V</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
                 </property>
                </widget>
               </item>
@@ -3203,7 +3218,10 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                  <string notr="true">border-image:url();</string>
                 </property>
                 <property name="text">
-                 <string>50.5 A </string>
+                 <string>0A </string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
                 </property>
                </widget>
               </item>
@@ -3212,8 +3230,8 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <widget class="QLabel" name="Bat_bar_1">
              <property name="geometry">
               <rect>
-               <x>210</x>
-               <y>330</y>
+               <x>280</x>
+               <y>370</y>
                <width>121</width>
                <height>16</height>
               </rect>
@@ -3234,8 +3252,8 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <widget class="QLabel" name="Grid_bar_1">
              <property name="geometry">
               <rect>
-               <x>460</x>
-               <y>350</y>
+               <x>530</x>
+               <y>370</y>
                <width>181</width>
                <height>16</height>
               </rect>
@@ -3256,11 +3274,17 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <widget class="QLabel" name="Grid_bar_2">
              <property name="geometry">
               <rect>
-               <x>435</x>
-               <y>250</y>
-               <width>21</width>
+               <x>506</x>
+               <y>260</y>
+               <width>16</width>
                <height>121</height>
               </rect>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16</width>
+               <height>16777215</height>
+              </size>
              </property>
              <property name="cursor">
               <cursorShape>ArrowCursor</cursorShape>
@@ -3275,10 +3299,10 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <widget class="QLabel" name="Bat_bar_2">
              <property name="geometry">
               <rect>
-               <x>330</x>
-               <y>250</y>
+               <x>400</x>
+               <y>260</y>
                <width>16</width>
-               <height>101</height>
+               <height>121</height>
               </rect>
              </property>
              <property name="cursor">
@@ -3294,13 +3318,16 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <widget class="QWidget" name="layoutWidget_5">
              <property name="geometry">
               <rect>
-               <x>200</x>
-               <y>230</y>
+               <x>270</x>
+               <y>240</y>
                <width>91</width>
                <height>89</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_2">
+              <property name="spacing">
+               <number>7</number>
+              </property>
               <item>
                <widget class="QLabel" name="BattVolt_label">
                 <property name="sizePolicy">
@@ -3328,7 +3355,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
 </string>
                 </property>
                 <property name="text">
-                 <string>700.4V</string>
+                 <string>0V</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
@@ -3374,8 +3401,8 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <widget class="QLabel" name="CurrentMode_lb">
              <property name="geometry">
               <rect>
-               <x>357</x>
-               <y>250</y>
+               <x>427</x>
+               <y>260</y>
                <width>81</width>
                <height>48</height>
               </rect>
@@ -3395,8 +3422,8 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <widget class="QLabel" name="label_4">
              <property name="geometry">
               <rect>
-               <x>30</x>
-               <y>140</y>
+               <x>80</x>
+               <y>160</y>
                <width>151</width>
                <height>20</height>
               </rect>
@@ -3408,8 +3435,8 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <widget class="QLabel" name="label_5">
              <property name="geometry">
               <rect>
-               <x>30</x>
-               <y>170</y>
+               <x>80</x>
+               <y>190</y>
                <width>141</width>
                <height>20</height>
               </rect>
@@ -3421,8 +3448,8 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <widget class="QLabel" name="label_6">
              <property name="geometry">
               <rect>
-               <x>30</x>
-               <y>200</y>
+               <x>80</x>
+               <y>220</y>
                <width>151</width>
                <height>20</height>
               </rect>
@@ -3434,8 +3461,8 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <widget class="QLabel" name="Host_BAT_Dis_lb">
              <property name="geometry">
               <rect>
-               <x>190</x>
-               <y>200</y>
+               <x>240</x>
+               <y>220</y>
                <width>91</width>
                <height>17</height>
               </rect>
@@ -3447,8 +3474,8 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <widget class="QLabel" name="Host_BAT_Cha_lb">
              <property name="geometry">
               <rect>
-               <x>190</x>
-               <y>167</y>
+               <x>240</x>
+               <y>187</y>
                <width>91</width>
                <height>20</height>
               </rect>
@@ -3460,8 +3487,8 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <widget class="QLabel" name="Host_PV_Gen_lb">
              <property name="geometry">
               <rect>
-               <x>190</x>
-               <y>140</y>
+               <x>240</x>
+               <y>160</y>
                <width>91</width>
                <height>17</height>
               </rect>
@@ -3473,8 +3500,8 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <widget class="QLabel" name="Host_Grid_Dis_lb">
              <property name="geometry">
               <rect>
-               <x>730</x>
-               <y>190</y>
+               <x>800</x>
+               <y>200</y>
                <width>101</width>
                <height>17</height>
               </rect>
@@ -3486,8 +3513,8 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <widget class="QLabel" name="label_13">
              <property name="geometry">
               <rect>
-               <x>590</x>
-               <y>160</y>
+               <x>660</x>
+               <y>170</y>
                <width>121</width>
                <height>20</height>
               </rect>
@@ -3499,8 +3526,8 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <widget class="QLabel" name="label_14">
              <property name="geometry">
               <rect>
-               <x>650</x>
-               <y>130</y>
+               <x>720</x>
+               <y>140</y>
                <width>67</width>
                <height>17</height>
               </rect>
@@ -3515,8 +3542,8 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <widget class="QLabel" name="Host_Grid_Cha_lb">
              <property name="geometry">
               <rect>
-               <x>730</x>
-               <y>160</y>
+               <x>800</x>
+               <y>170</y>
                <width>101</width>
                <height>17</height>
               </rect>
@@ -3528,8 +3555,8 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <widget class="QLabel" name="label_22">
              <property name="geometry">
               <rect>
-               <x>590</x>
-               <y>190</y>
+               <x>660</x>
+               <y>200</y>
                <width>121</width>
                <height>20</height>
               </rect>
@@ -3541,8 +3568,8 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <widget class="QLabel" name="Host_Load_Gen_lb">
              <property name="geometry">
               <rect>
-               <x>730</x>
-               <y>130</y>
+               <x>800</x>
+               <y>140</y>
                <width>101</width>
                <height>17</height>
               </rect>
@@ -3554,8 +3581,8 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <widget class="QWidget" name="layoutWidget_6">
              <property name="geometry">
               <rect>
-               <x>500</x>
-               <y>370</y>
+               <x>570</x>
+               <y>390</y>
                <width>134</width>
                <height>30</height>
               </rect>
@@ -3580,8 +3607,8 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <widget class="QWidget" name="layoutWidget">
              <property name="geometry">
               <rect>
-               <x>200</x>
-               <y>350</y>
+               <x>270</x>
+               <y>330</y>
                <width>89</width>
                <height>23</height>
               </rect>
@@ -3590,7 +3617,10 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
               <item>
                <widget class="QLabel" name="SOC_text_bypass">
                 <property name="text">
-                 <string/>
+                 <string>SOC:</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
                 </property>
                </widget>
               </item>
@@ -8643,7 +8673,7 @@ p, li { white-space: pre-wrap; }
                  <string notr="true">color: rgb(255, 255, 255);</string>
                 </property>
                 <property name="text">
-                 <string/>
+                 <string>Master_00 Converter turn off</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
