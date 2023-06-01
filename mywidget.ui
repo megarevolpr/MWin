@@ -3638,7 +3638,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                 <string notr="true"/>
                </property>
                <property name="currentIndex">
-                <number>1</number>
+                <number>0</number>
                </property>
                <widget class="QWidget" name="RT_Data_page">
                 <attribute name="title">
@@ -3692,7 +3692,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                         <enum>Qt::TabFocus</enum>
                        </property>
                        <property name="currentIndex">
-                        <number>1</number>
+                        <number>3</number>
                        </property>
                        <widget class="QWidget" name="Machine_page">
                         <property name="focusPolicy">
@@ -4002,6 +4002,18 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                        </widget>
                        <widget class="QWidget" name="Grid_page">
                         <layout class="QGridLayout" name="gridLayout_19">
+                         <property name="leftMargin">
+                          <number>0</number>
+                         </property>
+                         <property name="topMargin">
+                          <number>0</number>
+                         </property>
+                         <property name="rightMargin">
+                          <number>0</number>
+                         </property>
+                         <property name="bottomMargin">
+                          <number>0</number>
+                         </property>
                          <item row="0" column="0">
                           <widget class="QTableWidget" name="RT_Grid_tableWidget">
                            <property name="font">
@@ -4018,6 +4030,15 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                        </widget>
                        <widget class="QWidget" name="Load_page">
                         <layout class="QGridLayout" name="gridLayout_33">
+                         <property name="leftMargin">
+                          <number>0</number>
+                         </property>
+                         <property name="topMargin">
+                          <number>0</number>
+                         </property>
+                         <property name="rightMargin">
+                          <number>0</number>
+                         </property>
                          <item row="0" column="0">
                           <widget class="QTableWidget" name="RT_Load_tableWidget">
                            <property name="font">

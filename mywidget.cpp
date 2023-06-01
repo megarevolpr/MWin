@@ -73,8 +73,6 @@ void MyWidget::MemoryAllocation()
     PV_cur_L_explain            = new QPushButton;
     PV_power_L_explain          = new QPushButton;
     PositiveInuslation_explain  = new QPushButton;
-    PV_1_explain                = new QPushButton;
-    PV_2_explain                = new QPushButton;
     Bus_H_vol_add_explain       = new QPushButton;
     Bus_H_vol_reduce_explain    = new QPushButton;
     Bus_L_vol_add_explain       = new QPushButton;
@@ -82,8 +80,6 @@ void MyWidget::MemoryAllocation()
     PV_IGBT_T_explain           = new QPushButton;
     NegativeInuslation_explain  = new QPushButton;
     Leakage_cur_explain         = new QPushButton;
-    PV_3_explain                = new QPushButton;
-    PV_4_explain                = new QPushButton;
     //电网
     Grid_vol_AB_explain         = new QPushButton;
     Grid_vol_BC_explain         = new QPushButton;
@@ -91,14 +87,11 @@ void MyWidget::MemoryAllocation()
     Grid_cur_A_explain          = new QPushButton;
     Grid_cur_B_explain          = new QPushButton;
     Grid_cur_C_explain          = new QPushButton;
-    Grid_1_explain              = new QPushButton;
     Grid_active_power_explain   = new QPushButton;
     Grid_reactive_power_explain = new QPushButton;
     Grid_apparent_power_explain = new QPushButton;
     Grid_power_factor_explain   = new QPushButton;
     Grid_Frequency_explain      = new QPushButton;
-    Grid_2_explain              = new QPushButton;
-    Grid_3_explain              = new QPushButton;
     //负载
     Load_vol_AB_explain         = new QPushButton;
     Load_vol_BC_explain         = new QPushButton;
@@ -106,14 +99,11 @@ void MyWidget::MemoryAllocation()
     Load_cur_A_explain          = new QPushButton;
     Load_cur_B_explain          = new QPushButton;
     Load_cur_C_explain          = new QPushButton;
-    Load_1_explain              = new QPushButton;
     Load_active_power_explain   = new QPushButton;
     Load_reactive_power_explain = new QPushButton;
     Load_apparent_power_explain = new QPushButton;
     Load_power_factor_explain   = new QPushButton;
     Load_Frequency_explain      = new QPushButton;
-    Load_2_explain              = new QPushButton;
-    Load_3_explain              = new QPushButton;
 
     /*******************MPS状态***************************/
 
@@ -431,6 +421,13 @@ void MyWidget::MPS_Data_Tab()
 
     ui->RT_Machine_tableWidget->setColumnCount(4);
     ui->RT_Machine_tableWidget->setRowCount(Converter_Tablist1.size());
+    ui->RT_Machine_tableWidget->horizontalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
+    ui->RT_Machine_tableWidget->verticalHeader()->setVisible(false);//设置垂直头不可见
+    ui->RT_Machine_tableWidget->setFrameShape(QFrame::NoFrame);//设置无边框
+    ui->RT_Machine_tableWidget->setShowGrid(true);//设置显示格子
+    ui->RT_Machine_tableWidget->setSelectionBehavior(QAbstractItemView::SelectItems);//每次选择一行
+    ui->RT_Machine_tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);//设置不可编辑
+    ui->RT_Machine_tableWidget->setStyleSheet("selection-background-color:lightblue;");
 
     QStringList Converter_TabList;
     Converter_TabList << tr("Inverter") << tr("Value") << tr("DC") << tr("Value");
@@ -454,13 +451,19 @@ void MyWidget::MPS_Data_Tab()
 
     QStringList PV_Tablist1;
     PV_Tablist1  << tr("Voltage_H") << tr("Current_H") << tr("Power_H")
-                        << tr("CVoltage_L") << tr("Current_L")<< tr("Power_L")<< tr("PositiveInuslation")
-                        << tr("-") << tr("-");
+                        << tr("CVoltage_L") << tr("Current_L")<< tr("Power_L")<< tr("PositiveInuslation");
     QStringList PV_Tablist2;
     PV_Tablist2  << tr("Bus_H_Vol(+)") << tr("Bus_H_Vol(-)") << tr("Bus_L_Vol(+)")<< tr("Bus_L_Vol(-)")
-                 << tr("IGBT Temp.")<< tr("NegativeInuslation")<< tr("Leakage current")<< tr("-");
+                 << tr("IGBT Temp.")<< tr("NegativeInuslation")<< tr("Leakage current");
     ui->RT_DCDC_tableWidget->setColumnCount(4);
     ui->RT_DCDC_tableWidget->setRowCount(PV_Tablist1.size());
+    ui->RT_DCDC_tableWidget->horizontalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
+    ui->RT_DCDC_tableWidget->verticalHeader()->setVisible(false);//设置垂直头不可见
+    ui->RT_DCDC_tableWidget->setFrameShape(QFrame::NoFrame);//设置无边框
+    ui->RT_DCDC_tableWidget->setShowGrid(true);//设置显示格子
+    ui->RT_DCDC_tableWidget->setSelectionBehavior(QAbstractItemView::SelectItems);//每次选择一行
+    ui->RT_DCDC_tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);//设置不可编辑
+    ui->RT_DCDC_tableWidget->setStyleSheet("selection-background-color:lightblue;");
 
     QStringList PV_TabList;
     PV_TabList << tr("Name") << tr("Value") << tr("Name") << tr("Value");
@@ -483,12 +486,19 @@ void MyWidget::MPS_Data_Tab()
     /***************************************************************************************************/
     QStringList RT_Grid_Tablist1;
     RT_Grid_Tablist1  << tr("Voltage(AB)") << tr("Voltage(BC)") << tr("Voltage(CA)")
-                        << tr("Current(A)") << tr("Current(B)")<< tr("Current(C)")<< tr("-");
+                        << tr("Current(A)") << tr("Current(B)")<< tr("Current(C)");
     QStringList RT_Grid_Tablist2;
     RT_Grid_Tablist2  << tr("Active power") << tr("Reactive power") << tr("Apparent power")<< tr("Power factor")
-                        << tr("Frequency")<< tr("-")<< tr("-");
+                        << tr("Frequency");
     ui->RT_Grid_tableWidget->setColumnCount(4);
     ui->RT_Grid_tableWidget->setRowCount(RT_Grid_Tablist1.size());
+    ui->RT_Grid_tableWidget->horizontalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
+    ui->RT_Grid_tableWidget->verticalHeader()->setVisible(false);//设置垂直头不可见
+    ui->RT_Grid_tableWidget->setFrameShape(QFrame::NoFrame);//设置无边框
+    ui->RT_Grid_tableWidget->setShowGrid(true);//设置显示格子
+    ui->RT_Grid_tableWidget->setSelectionBehavior(QAbstractItemView::SelectItems);//每次选择一行
+    ui->RT_Grid_tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);//设置不可编辑
+    ui->RT_Grid_tableWidget->setStyleSheet("selection-background-color:lightblue;");
 
     QStringList Grid_TabList;
     Grid_TabList << tr("Name") << tr("Value") << tr("Name") << tr("Value");
@@ -512,12 +522,19 @@ void MyWidget::MPS_Data_Tab()
 
     QStringList Load_Tablist1;
     Load_Tablist1  << tr("Voltage(AB)") << tr("Voltage(BC)") << tr("Voltage(CA)")
-                   << tr("Current(A)") << tr("Current(B)")<< tr("Current(C)")<< tr("-");
+                   << tr("Current(A)") << tr("Current(B)")<< tr("Current(C)");
     QStringList Load_Tablist2;
     Load_Tablist2  << tr("Active power") << tr("Reactive power") << tr("Apparent power")<< tr("Power factor")
-                   << tr("Frequency")<< tr("-")<< tr("-");
+                   << tr("Frequency");
     ui->RT_Load_tableWidget->setColumnCount(4);
     ui->RT_Load_tableWidget->setRowCount(Load_Tablist1.size());
+    ui->RT_Load_tableWidget->horizontalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
+    ui->RT_Load_tableWidget->verticalHeader()->setVisible(false);//设置垂直头不可见
+    ui->RT_Load_tableWidget->setFrameShape(QFrame::NoFrame);//设置无边框
+    ui->RT_Load_tableWidget->setShowGrid(true);//设置显示格子
+    ui->RT_Load_tableWidget->setSelectionBehavior(QAbstractItemView::SelectItems);//每次选择一行
+    ui->RT_Load_tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);//设置不可编辑
+    ui->RT_Load_tableWidget->setStyleSheet("selection-background-color:lightblue;");
 
     QStringList Load_Tablist;
     Load_Tablist << tr("Name") << tr("Value") << tr("Name") << tr("Value");
@@ -1561,14 +1578,6 @@ void MyWidget::PV_Data(QTableWidget *myTable)
                                             "0kΩ", "PositiveInuslation", \
                                             "这是当前DC模块的正绝缘阻抗\nThis is the positive insulation impedance of the current DC module.");
     PositiveInuslation->add_Specification();
-    PV_1 = new Specification(this,PV_1_explain, myTable, line++, column, \
-                                            "0", "-", \
-                                            "未知，待评审确认\n.");
-    PV_1->add_Specification();
-    PV_2 = new Specification(this,PV_2_explain, myTable, line++, column, \
-                                            "0", "-", \
-                                            "未知，待评审确认\n.");
-    PV_2->add_Specification();
     line=0;
     column=3;
     Bus_H_vol_add = new Specification(this,Bus_H_vol_add_explain, myTable, line++, column, \
@@ -1599,14 +1608,6 @@ void MyWidget::PV_Data(QTableWidget *myTable)
                                             "0mA", "Leakage_cur", \
                                             "这是当前模块的漏电流\nThis is the leakage current of the current module.");
     Leakage_cur->add_Specification();
-    PV_3 = new Specification(this,PV_3_explain, myTable, line++, column, \
-                                            "0", "-", \
-                                            "未知，待评审确认\n.");
-    PV_3->add_Specification();
-    PV_4 = new Specification(this,PV_4_explain, myTable, line++, column, \
-                                            "0", " ", \
-                                            "未知，待评审确认\n.");
-    PV_4->add_Specification();
 }
 //电网数据 绘制button
 void MyWidget::Grid_Data(QTableWidget *myTable)
@@ -1636,10 +1637,6 @@ void MyWidget::Grid_Data(QTableWidget *myTable)
                                             "0A", "Current(C)", \
                                             "这是变流器采集的当前电网的C相的电流\nThis is the C phase current of the current grid collected by the converter.");
     Grid_cur_C->add_Specification();
-    Grid_1 = new Specification(this,Grid_1_explain, myTable, line++, column, \
-                                            "0", "-", \
-                                            "未知，待评审确认\n.");
-    Grid_1->add_Specification();
     line=0;
     column=3;
     Grid_active_power = new Specification(this,Grid_active_power_explain, myTable, line++, column, \
@@ -1662,14 +1659,6 @@ void MyWidget::Grid_Data(QTableWidget *myTable)
                                             "0Hz", "Frequency", \
                                             "这是变流器采集的当前电网的频率\nThis is the frequency of the current grid collected by the converter.");
     Grid_Frequency->add_Specification();
-    Grid_2 = new Specification(this,Grid_2_explain, myTable, line++, column, \
-                                            "0", "-", \
-                                            "未知，待评审确认\n.");
-    Grid_2->add_Specification();
-    Grid_3 = new Specification(this,Grid_3_explain, myTable, line++, column, \
-                                            "0", "-", \
-                                            "未知，待评审确认\n.");
-    Grid_3->add_Specification();
 
 }
 //负载数据 绘制button
@@ -1700,10 +1689,6 @@ void MyWidget::Load_Data(QTableWidget *myTable)
                                             "0A", "Current(C)", \
                                             "这是变流器采集的当前负载的C相的电流\nThis is the C phase current of the current load collected by the converter.");
     Load_cur_C->add_Specification();
-    Load_1 = new Specification(this,Load_1_explain, myTable, line++, column, \
-                                            "0", "-", \
-                                            "未知，待评审确认\n.");
-    Load_1->add_Specification();
     line=0;
     column=3;
     Load_active_power = new Specification(this,Load_active_power_explain, myTable, line++, column, \
@@ -1726,14 +1711,6 @@ void MyWidget::Load_Data(QTableWidget *myTable)
                                             "0Hz", "Frequency", \
                                             "这是变流器采集的当前负载的频率\nThis is the frequency of the current load collected by the converter.");
     Load_Frequency->add_Specification();
-    Load_2 = new Specification(this,Load_2_explain, myTable, line++, column, \
-                                            "0", "-", \
-                                            "未知，待评审确认\n.");
-    Load_2->add_Specification();
-    Load_3 = new Specification(this,Load_3_explain, myTable, line++, column, \
-                                            "0", "-", \
-                                            "未知，待评审确认\n.");
-    Load_3->add_Specification();
 }
 //MPS状态 绘制button
 void MyWidget::MPSState(QTableWidget *myTable)

@@ -88,8 +88,6 @@ public:
     QPushButton *PV_cur_L_explain;
     QPushButton *PV_power_L_explain;
     QPushButton *PositiveInuslation_explain;
-    QPushButton *PV_1_explain;
-    QPushButton *PV_2_explain;
     QPushButton *Bus_H_vol_add_explain;
     QPushButton *Bus_H_vol_reduce_explain;
     QPushButton *Bus_L_vol_add_explain;
@@ -97,8 +95,6 @@ public:
     QPushButton *PV_IGBT_T_explain;
     QPushButton *NegativeInuslation_explain;
     QPushButton *Leakage_cur_explain;
-    QPushButton *PV_3_explain;
-    QPushButton *PV_4_explain;
     //电网
     QPushButton *Grid_vol_AB_explain;
     QPushButton *Grid_vol_BC_explain;
@@ -106,14 +102,11 @@ public:
     QPushButton *Grid_cur_A_explain;
     QPushButton *Grid_cur_B_explain;
     QPushButton *Grid_cur_C_explain;
-    QPushButton *Grid_1_explain;
     QPushButton *Grid_active_power_explain;
     QPushButton *Grid_reactive_power_explain;
     QPushButton *Grid_apparent_power_explain;
     QPushButton *Grid_power_factor_explain;
     QPushButton *Grid_Frequency_explain;
-    QPushButton *Grid_2_explain;
-    QPushButton *Grid_3_explain;
     //负载
     QPushButton *Load_vol_AB_explain;
     QPushButton *Load_vol_BC_explain;
@@ -121,14 +114,11 @@ public:
     QPushButton *Load_cur_A_explain;
     QPushButton *Load_cur_B_explain;
     QPushButton *Load_cur_C_explain;
-    QPushButton *Load_1_explain;
     QPushButton *Load_active_power_explain;
     QPushButton *Load_reactive_power_explain;
     QPushButton *Load_apparent_power_explain;
     QPushButton *Load_power_factor_explain;
     QPushButton *Load_Frequency_explain;
-    QPushButton *Load_2_explain;
-    QPushButton *Load_3_explain;
 
     Specification *MPS_vol_AB;
     Specification *MPS_vol_BC;
@@ -155,8 +145,6 @@ public:
     Specification *PV_cur_L;
     Specification *PV_power_L;
     Specification *PositiveInuslation;
-    Specification *PV_1;
-    Specification *PV_2;
     Specification *Bus_H_vol_add;
     Specification *Bus_H_vol_reduce;
     Specification *Bus_L_vol_add;
@@ -164,8 +152,6 @@ public:
     Specification *PV_IGBT_T;
     Specification *NegativeInuslation;
     Specification *Leakage_cur;
-    Specification *PV_3;
-    Specification *PV_4;
 
     Specification *Grid_vol_AB;
     Specification *Grid_vol_BC;
@@ -173,14 +159,11 @@ public:
     Specification *Grid_cur_A;
     Specification *Grid_cur_B;
     Specification *Grid_cur_C;
-    Specification *Grid_1;
     Specification *Grid_active_power;
     Specification *Grid_reactive_power;
     Specification *Grid_apparent_power;
     Specification *Grid_power_factor;
     Specification *Grid_Frequency;
-    Specification *Grid_2;
-    Specification *Grid_3;
 
     Specification *Load_vol_AB;
     Specification *Load_vol_BC;
@@ -188,14 +171,11 @@ public:
     Specification *Load_cur_A;
     Specification *Load_cur_B;
     Specification *Load_cur_C;
-    Specification *Load_1;
     Specification *Load_active_power;
     Specification *Load_reactive_power;
     Specification *Load_apparent_power;
     Specification *Load_power_factor;
     Specification *Load_Frequency;
-    Specification *Load_2;
-    Specification *Load_3;
     /******************************MPS状态**********************************/
     QPushButton *DC_input_Bre_explain;
     QPushButton *DC_Con_explain;
