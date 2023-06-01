@@ -6106,7 +6106,7 @@ enable</string>
              <item row="0" column="0">
               <widget class="QTabWidget" name="Record_tabWidget">
                <property name="currentIndex">
-                <number>0</number>
+                <number>1</number>
                </property>
                <widget class="QWidget" name="DataReport_page">
                 <attribute name="title">
@@ -6373,7 +6373,7 @@ QTabBar#tabBar::tab:selected {
                 <widget class="QWidget" name="layoutWidget_7">
                  <property name="geometry">
                   <rect>
-                   <x>170</x>
+                   <x>240</x>
                    <y>20</y>
                    <width>457</width>
                    <height>311</height>

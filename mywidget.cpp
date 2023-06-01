@@ -2416,3 +2416,27 @@ void MyWidget::on_Add_D_clicked()
     QMessageBox::question(this, "D+"\
                           ,"查看下一日的数据，点击后将显示当前日的下一日的数据\nTo view the data of the next day. Click to display the data of the next day of the current day.", "OK");
 }
+
+void MyWidget::on_OutPut_historyFailuer_clicked()
+{
+    QMessageBox::question(this, "HistoricalFailure"\
+                          ,"导出历史记录，点击此处将会导出历史记录到U盘里\nTo export history, click here to export history to U disk", "OK");
+}
+
+void MyWidget::on_Output_OperationLog_clicked()
+{
+    QMessageBox::question(this, "OperationLog"\
+                          ,"导出操作日志，点击此处将会导出操作日志到U盘里\nExport operation log. Click here to export operation log to U disk.", "OK");
+}
+
+void MyWidget::on_CoulombmeterReport_btn_clicked()
+{
+    QMessageBox::question(this, "Coulombmeter report"\
+                          ,"导出电量统计表，点击此处将会导出电量统计表到U盘里\nExport the battery statistics. Click here to export the battery statistics to the U disk.", "OK");
+}
+
+void MyWidget::on_Eject_btn_clicked()
+{
+    QMessageBox::question(this, "Eject Udisk"\
+                          ,"退出U盘，将挂载到显控的U盘取消挂载，以保证U盘数据不会损坏\nExit the U disk and unmount the U disk mounted to the display control to ensure that the data in the U disk will not be damaged.", "OK");
+}

@@ -586,6 +586,14 @@ private slots:
 
     void on_Add_D_clicked();
 
+    void on_OutPut_historyFailuer_clicked();
+
+    void on_Output_OperationLog_clicked();
+
+    void on_CoulombmeterReport_btn_clicked();
+
+    void on_Eject_btn_clicked();
+
 private:
     Ui::MyWidget *ui;
     QButtonGroup *pButton_BatteryData;
