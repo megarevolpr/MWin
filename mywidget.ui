@@ -59,7 +59,7 @@
    <item row="0" column="0">
     <widget class="QStackedWidget" name="UI_stackedWidget">
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="BasicSet_page">
       <layout class="QGridLayout" name="gridLayout_6">
@@ -2519,7 +2519,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <enum>QFrame::Raised</enum>
            </property>
            <property name="currentIndex">
-            <number>0</number>
+            <number>3</number>
            </property>
            <widget class="QWidget" name="Host_page">
             <widget class="QPushButton" name="Bypass_Grid_btn">
@@ -6967,7 +6967,7 @@ background-color: rgb(255, 0, 0);</string>
                 <bool>false</bool>
                </property>
                <property name="currentIndex">
-                <number>4</number>
+                <number>0</number>
                </property>
                <widget class="QWidget" name="DCACParameterSet_page">
                 <attribute name="title">
@@ -8105,8 +8105,8 @@ B1 - A1 ≥ 30 %
                           <rect>
                            <x>0</x>
                            <y>0</y>
-                           <width>16</width>
-                           <height>16</height>
+                           <width>374</width>
+                           <height>344</height>
                           </rect>
                          </property>
                          <property name="cursor">

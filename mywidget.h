@@ -61,6 +61,7 @@ public:
     ~MyWidget();
 
     Menu *m_menu;
+    QPushButton *AdvancedSetup_btn;//高级设置入口
     /************************实时数据******************************/
     //变流器
     QPushButton *MPS_vol_AB_explain;
@@ -499,7 +500,7 @@ private:
     void MPS_Data_Tab();        //MPS数据表初始化
     void ModuleState_Tab();     //MPS状态表初始化
     void RTAlarm();             //告警信息绘表
-    void DCAC_tab();            //DCAC表初始化
+    void UserParam_tab();       //一般设置表初始化
     void DCDC_tab();            //DCDC表初始化
     void RunTimeSet_tab();      //自动运行时间表初始化
     void Information_tbnt_released();//系统信息槽
@@ -530,7 +531,7 @@ private slots:
 
     void BatteryData_clicked(int nid);//电池数据
 
-
+    void SystemParam_tbnt_released();
 
     void on_Running_btn_clicked();//跳转变流器实时数据
     void on_Grid_clicked();//跳转电网实时数据
@@ -540,6 +541,7 @@ private slots:
     void on_PV_clicked();//跳转PV实时数据
     void on_Batt_btn_released();//跳转到电池信息
     void on_Alarm_btn_clicker();//跳转实时告警页面
+    void AdvancedSetup_btn_clicked();//跳转到高级设置
 
 
     void on_RTD_DC_clicked();
@@ -574,12 +576,15 @@ private slots:
 
     void on_RTS_module_2_clicked();
 
+    void on_UI_Complete_Btn_clicked();
+
 private:
     Ui::MyWidget *ui;
     QButtonGroup *pButton_BatteryData;
 
     QTimer *timer;
     QTimer *Update_RTData_timer;
+    bool ASKey;//高级设置钥匙
 
 };
 #endif // MYWIDGET_H

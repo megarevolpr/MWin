@@ -221,6 +221,10 @@ void MyWidget::MemoryAllocation()
     DCDC_CPLD_Version_explain       = new QPushButton;
     SN_explain                      = new QPushButton;
 
+    /***************************高级设置**********************************/
+    AdvancedSetup_btn = new QPushButton;                //高级设置
+
+
     /***********************数据报表************************/
     PV_power_generation_Day_explain = new QPushButton;
     PV_power_generation_Month_explain = new QPushButton;
@@ -338,12 +342,26 @@ void MyWidget::FirstPage()
     ui->Bypass_Batt_btn->setFlat(true);
     ui->Bypass_Batt_btn->setFocusPolicy(Qt::NoFocus);
 }
+/***************************************************************
+ *高级设置按钮点击功能
+ ***************************************************************/
+void MyWidget::AdvancedSetup_btn_clicked()
+{
+    ui->UI_stackedWidget->setCurrentWidget(ui->BasicSet_page);
+    if(ASKey)//保证只执行一次这句话，否则多次进出高级设置，会多次绘制页面，点击一次button，出现个消息对话框
+    {
+        ASKey = false;
+        SystemParam_tbnt_released();
+    }
+}
 //函数关联
 void MyWidget::LinkRelationship()
 {
     connect(timer, SIGNAL(timeout()), this, SLOT(onTimerOut()));
 
     connect(m_menu, SIGNAL(Sent(int)), this, SLOT(My_menuAction(int)));
+
+    connect(AdvancedSetup_btn,SIGNAL(clicked(bool)), this, SLOT(AdvancedSetup_btn_clicked()));//高级设置
 
     connect(ui->Bypass_Batt_btn, SIGNAL(clicked()), this, SLOT(on_Batt_btn_released()));    //主页电池按钮跳转电池信息
     connect(ui->Bypass_Running_btn, SIGNAL(clicked()), this, SLOT(on_Running_btn_clicked()));   //主页变流器按钮跳转变流器实时数据
@@ -365,7 +383,7 @@ void MyWidget::RunStatePage()
 //系统设置
 void MyWidget::SystemSettingPage()
 {
-    DCAC_tab();/*系统-DCAC设置表*/
+    UserParam_tab();/*系统-设置表*/
     DCDC_tab();/*系统-DCDC设置表*/
 //    BatterySet_tab();/*系统-电池设置表*/
 
@@ -612,11 +630,6 @@ void MyWidget::ModuleState_Tab()
         ui->State_tableWidget->item(i, 4)->setTextAlignment(Qt::AlignCenter);
     }
     MPSState(ui->State_tableWidget); //MPS状态说明
-}
-//DCAC设置
-void MyWidget::DCAC_tab()
-{
-
 }
 //DCDC设置
 void MyWidget::DCDC_tab()
@@ -866,6 +879,40 @@ void MyWidget::RTAlarm()
     ui->RTAlarm_Data_page->setHorizontalHeaderLabels(RTAlarm_Title);
 
     PCS_Alarm_information_table();  //展示PCS故障信息表
+}
+
+void MyWidget::UserParam_tab()
+{
+    ui->System_Tab->setColumnCount(6);
+    ui->System_Tab->setRowCount(8);
+    ui->System_Tab->horizontalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
+    ui->System_Tab->verticalHeader()->setVisible(false);//设置垂直头不可见
+    ui->System_Tab->setFrameShape(QFrame::NoFrame);//设置无边框
+    ui->System_Tab->setShowGrid(true);//设置显示格子
+    ui->System_Tab->setSelectionBehavior(QAbstractItemView::SelectItems);//每次选择一行
+    ui->System_Tab->setEditTriggers(QAbstractItemView::NoEditTriggers);//设置不可编辑
+    ui->System_Tab->setEditTriggers(QAbstractItemView::SelectedClicked);//单机修改
+
+    QStringList List5;
+    List5 << tr("Name") << tr("Value") << tr("Unit")<< tr("Name") << tr("Value") << tr("Unit");
+    ui->System_Tab->setHorizontalHeaderLabels(List5);
+    ui->System_Tab->setColumnWidth(0,160);
+    ui->System_Tab->setColumnWidth(1,160);
+    ui->System_Tab->setColumnWidth(2,160);
+    ui->System_Tab->setColumnWidth(3,160);
+    ui->System_Tab->setColumnWidth(4,160);
+    ui->System_Tab->setColumnWidth(5,160);
+    ui->System_Tab->setRowHeight(0, 47);
+    ui->System_Tab->setRowHeight(1, 47);
+    ui->System_Tab->setRowHeight(2, 47);
+    ui->System_Tab->setRowHeight(3, 47);
+    ui->System_Tab->setRowHeight(4, 47);
+    ui->System_Tab->setRowHeight(5, 47);
+    ui->System_Tab->setRowHeight(6, 47);
+    ui->System_Tab->setRowHeight(7, 47);
+
+    AdvancedSetup_btn->setText(tr("Advance setting"));
+    ui->System_Tab->setCellWidget(7,5, (QWidget *)AdvancedSetup_btn);          //高级设置
 }
 
 //展示PCS故障信息表
@@ -1390,6 +1437,11 @@ void MyWidget::BatteryData_clicked(int nid)
     default:
         break;
     }
+}
+
+void MyWidget::SystemParam_tbnt_released()
+{
+
 }
 
 void MyWidget::on_Running_btn_clicked()  //显示变流器实时数据
@@ -2429,4 +2481,9 @@ void MyWidget::on_RTS_module_1_clicked()
 void MyWidget::on_RTS_module_2_clicked()
 {
     QMessageBox::question(this , "2", "选中第二个模块，查看第二个模块的实时状态\nChoose the second module to view the real-time status of the second module", "OK");
+}
+
+void MyWidget::on_UI_Complete_Btn_clicked()//退出高级设置
+{
+    ui->UI_stackedWidget->setCurrentWidget(ui->UI_page);
 }
