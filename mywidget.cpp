@@ -126,9 +126,6 @@ void MyWidget::MemoryAllocation()
     DO1_explain         = new QPushButton;
     DO2_explain         = new QPushButton;
     DO3_explain         = new QPushButton;
-    state1_explain      = new QPushButton;
-    state2_explain      = new QPushButton;
-    state3_explain      = new QPushButton;
 
     DCAC_Conver_avail_explain= new QPushButton;
     DC_Soft_Start_explain    = new QPushButton;
@@ -155,7 +152,6 @@ void MyWidget::MemoryAllocation()
     Soft_Start_Sta_Buck_explain = new QPushButton;
     Converter_Status_V_explain  = new QPushButton;
     ModeLock_explain            = new QPushButton;
-    state4_explain              = new QPushButton;
 
     /**********************电池数据***************************/
     pButton_BatteryData  = new QButtonGroup();
@@ -553,42 +549,52 @@ void MyWidget::ModuleState_Tab()
     QStringList State_Tablist1;
     State_Tablist1  << tr("DC input breaker") << tr("DC contactor") << tr("Maintenance Bypass breaker")
                    << tr("COutput breaker") << tr("Output contactor")<< tr("Grid breaker")
-                   << tr("DO1")<< tr("DO2")<< tr("DO3")<< tr("-")<< tr("-")<< tr("-");
+                   << tr("DO1")<< tr("DO2")<< tr("DO3");
     QStringList State_Tablist2;
     State_Tablist2  << tr("DCAC Converter available") << tr("DC Soft start") << tr("Converter status")<< tr("Reactive power Regulation")
                    << tr("Sleep mode")<< tr("LVRT")<< tr("DI1")<< tr("DI2")<< tr("DI3")<< tr("DI4")<< tr("DI5")<< tr("DI6");
     QStringList State_Tablist3;
     State_Tablist3  << tr("Breaker1 status boost") << tr("Breaker2 status boost") << tr("Contactor status boost")<< tr("Breaker1 status buck")
                    << tr("Breaker2 status buck")<< tr("Contactor status buck")<< tr("Run mode")<< tr("DCDC Converter available")<< tr("Soft start status boost")
-                      << tr("Soft start status buck")<< tr("Converter status")<< tr("ModeLock")<< tr("-");
+                      << tr("Soft start status buck")<< tr("Converter status")<< tr("ModeLock");
+
     ui->State_tableWidget->setColumnCount(6);
     ui->State_tableWidget->setRowCount(State_Tablist3.size());
+    ui->State_tableWidget->horizontalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
+    ui->State_tableWidget->verticalHeader()->setVisible(false);//设置垂直头不可见
+    ui->State_tableWidget->setFrameShape(QFrame::NoFrame);//设置无边框
+    ui->State_tableWidget->setShowGrid(true);//设置显示格子
+    ui->State_tableWidget->setSelectionBehavior(QAbstractItemView::SelectItems);//每次选择一行
+    ui->State_tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);//设置不可编辑
+    ui->State_tableWidget->setStyleSheet("selection-background-color:lightblue;");
 
     QStringList State_Tablist;
     State_Tablist << tr("Name") << tr("Value") << tr("Name") << tr("Value")<< tr("Name") << tr("Value");
     ui->State_tableWidget->setHorizontalHeaderLabels(State_Tablist);
-    ui->State_tableWidget->setColumnWidth(0,190);
-    ui->State_tableWidget->setColumnWidth(1,80);
-    ui->State_tableWidget->setColumnWidth(2,180);
-    ui->State_tableWidget->setColumnWidth(3,80);
-    ui->State_tableWidget->setColumnWidth(4,210);
-    ui->State_tableWidget->horizontalHeader()->setStretchLastSection(5);
+    ui->State_tableWidget->horizontalHeader()->setVisible(true);    //设置竖直标题可见
+    ui->State_tableWidget->setColumnWidth(0,220);
+    ui->State_tableWidget->setColumnWidth(1,90);
+    ui->State_tableWidget->setColumnWidth(2,220);
+    ui->State_tableWidget->setColumnWidth(3,100);
+    ui->State_tableWidget->setColumnWidth(4,220);
+    ui->State_tableWidget->setColumnWidth(5,90);
 
-
-    ui->State_tableWidget->verticalHeader()->setVisible(false);//设置垂直头不可见
     for(int i = 0; i < State_Tablist1.size(); i++)
     {
         ui->State_tableWidget->setItem(i, 0, new QTableWidgetItem(State_Tablist1.at(i)));
+        ui->State_tableWidget->item(i, 0)->setTextAlignment(Qt::AlignCenter);
     }
     for(int i = 0; i < State_Tablist2.size(); i++)
     {
         ui->State_tableWidget->setItem(i, 2, new QTableWidgetItem(State_Tablist2.at(i)));
+        ui->State_tableWidget->item(i, 2)->setTextAlignment(Qt::AlignCenter);
     }
     for(int i = 0; i < State_Tablist3.size(); i++)
     {
         ui->State_tableWidget->setItem(i, 4, new QTableWidgetItem(State_Tablist3.at(i)));
+        ui->State_tableWidget->item(i, 4)->setTextAlignment(Qt::AlignCenter);
     }
-    MPSState(ui->State_tableWidget); //MPS状态
+    MPSState(ui->State_tableWidget); //MPS状态说明
 }
 //DCAC设置
 void MyWidget::DCAC_tab()
@@ -1732,159 +1738,156 @@ void MyWidget::Load_Data(QTableWidget *myTable)
 //MPS状态 绘制button
 void MyWidget::MPSState(QTableWidget *myTable)
 {
-    int line=0;int column = 1;//当前解释的button行和列
+    //只让选择1,2两个模块
+    ui->RTS_module_3->setEnabled(false);
+    ui->RTS_module_4->setEnabled(false);
+    ui->RTS_module_5->setEnabled(false);
+    ui->RTS_module_6->setEnabled(false);
+    ui->RTS_module_7->setEnabled(false);
+    ui->RTS_module_8->setEnabled(false);
+    ui->RTS_module_9->setEnabled(false);
+    ui->RTS_module_10->setEnabled(false);
+    ui->RTS_module_11->setEnabled(false);
+    ui->RTS_module_12->setEnabled(false);
+
+    int line = 0;int column = 1;//当前解释的button行和列
     DC_input_Bre = new Specification(this,DC_input_Bre_explain, myTable, line++, column, \
                                             "Close", "DC input breaker", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是当前直流输入断路器的状态，有闭合(Close)、断开(Break)两种状态，直流断路器能实现继电保护，自动装置免受过载、短路等故障危害\nThis is the current DC input circuit breaker state, there are Close (Close), Break (Break) two states, DC circuit breaker can achieve relay protection, automatic device from overload, short circuit and other faults.");
     DC_input_Bre->add_Specification();
     DC_Con = new Specification(this,DC_Con_explain, myTable, line++, column, \
                                             "Close", "DC contactor", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是当前直流接触器的状态，有闭合(Close)、断开(Break)两种状态,直流接触器在直流回路中用于控制接通或切断直流电路使其启停\nThis is the current state of the DC contactor, with two states: Close and Break. The DC contactor is used to control the switching on or cutting off the DC circuit in the DC circuit to make it start and stop.");
     DC_Con->add_Specification();
     M_Bypass_Bre = new Specification(this,M_Bypass_Bre_explain, myTable, line++, column, \
                                             "Close", "Maintenance Bypass breaker", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是当前维修旁路断路器的状态，有闭合(Close)、断开(Break)两种状态，维修旁路断路器一般用于维修机器的时候，闭合该断路器，整个系统将完全掉电，保护维修人员的安全\nThis is the current state of maintenance bypass circuit breaker. There are two states: Close and Break. Maintenance bypass circuit breaker is generally used for machine maintenance. When the circuit breaker is closed, the entire system will be completely powered off, protecting the safety of maintenance personnel.");
     M_Bypass_Bre->add_Specification();
     Output_Bre = new Specification(this,Output_Bre_explain, myTable, line++, column, \
                                             "Close", "Output breaker", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是当前输出断路器的状态，有闭合(Close)、断开(Break)两种状态，根据需要可以切断和接通输出电路以达到保护电路的作用\nThis is the current output circuit breaker state, there are Close (Close), Break (Break) two states, according to the need to cut off and put on the output circuit to achieve the protection of the circuit.");
     Output_Bre->add_Specification();
     Output_Con = new Specification(this,Output_Con_explain, myTable, line++, column, \
                                             "Close", "Output contactor", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是当前输出接触器的状态，有闭合(Close)、断开(Break)两种状态，输出接触器在输出电路中用于控制接通或切断电路使其启停\nThis is the current state of the output contactor, with two states: Close and Break. The output contactor is used in the output circuit to control on or off the circuit to make it start or stop.");
     Output_Con->add_Specification();
     Grid_Bre = new Specification(this,Grid_Bre_explain, myTable, line++, column, \
                                             "Close", "Grid breaker", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是当前电网断路器的状态，有闭合(Close)、断开(Break)两种状态，根据需要可以切断和接通电网电路以达到保护电路的作用\nThis is the current state of the circuit breaker of the power grid, there are two states of Close (Close) and Break (Break), according to the need to cut off and connect the power grid circuit to protect the circuit.");
     Grid_Bre->add_Specification();
     DO1 = new Specification(this,DO1_explain, myTable, line++, column, \
                                             "Disable", "DO1", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是输出干接点1的状态，有使能(Enable)、禁止(Disable)两种状态\nThis is the status of the output dry contact 1, which can be enabled or disabled.");
     DO1->add_Specification();
     DO2 = new Specification(this,DO2_explain, myTable,line++, column, \
                                             "Disable", "DO2", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是输出干接点2的状态，有使能(Enable)、禁止(Disable)两种状态\nThis is the status of the output dry contact 2, which can be enabled or disabled.");
     DO2->add_Specification();
     DO3 = new Specification(this,DO3_explain, myTable, line++, column, \
                                             "Disable", "DO3", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是输出干接点3的状态，有使能(Enable)、禁止(Disable)两种状态\nThis is the status of the output dry contact 3, which can be enabled or disabled.");
     DO3->add_Specification();
-    state1 = new Specification(this,state1_explain, myTable, line++, column, \
-                                            "", "-", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    state1->add_Specification();
-    state2 = new Specification(this,state2_explain, myTable, line++, column, \
-                                            "", "-", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    state2->add_Specification();
-    state3 = new Specification(this,state3_explain, myTable, line++, column, \
-                                            "", "state3", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    state3->add_Specification();
-    line=0;
-    column=3;
+
+    line = 0;
+    column += 2;
     DCAC_Conver_avail = new Specification(this,DCAC_Conver_avail_explain, myTable, line++, column, \
                                             "Enable", "DCAC Converter available", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是当前变流器使能的状态，有使能(Enable)、禁止(Disable)两种状态,使能后变流器开机容许\nThis is the status of enabling the current converter. There are two states: Enable and Disable. After enabling, the converter is allowed to start.");
     DCAC_Conver_avail->add_Specification();
     DC_Soft_Start = new Specification(this,DC_Soft_Start_explain, myTable, line++, column, \
                                             "Not starting", "DC Soft start", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是当前直流软启动的状态，有软启中(Soft starting)、软启完成(complete)、未启动(Not starting)三种启动状态,软启动是指变流器在启动时，通过控制电流或电压的变化使设备逐渐加速或减速到正常运行状态，以减少电路中的电流冲击和电压峰值，保护电路元器件并减少设备的机械损伤。软启动可以增加设备的寿命，减少能耗，提高系统效率\nThis is the current DC Soft startup state, including Soft starting, complete and Not starting. Soft startup means that the converter gradually accelerates or decelerates the device to the normal operating state by controlling the change of current or voltage during startup.To reduce the current shock and voltage peak in the circuit, protect circuit components and reduce the mechanical damage of equipment.Soft boot can prolong the service life of the device, reduce power consumption, and improve system efficiency.");
     DC_Soft_Start->add_Specification();
     Converter_Status = new Specification(this,Converter_Status_explain, myTable, line++, column, \
                                             "OFF", "Converter Status", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是当前变流器的状态，有关闭(OFF)、软启动(Soft start)、并网充电(Grid-ON Charge)、并网放电(Grid-ON Discharge)、离网放电(Grid-OFF Discharge)、降额并网(Drop and Connected)、待机(Standby)、离网充电(Grid-OFF Charge)这八种状态\nThis is the current state of the converter,There are OFF, Soft start, grid-on Charge, grid-on Discharge, grid-off Discharge, derated Grid connection, Drop andThere are eight states: Connected, Standby and Grid-OFF Charge.");
     Converter_Status->add_Specification();
     Reactive_P_Reg = new Specification(this,Reactive_P_Reg_explain, myTable, line++, column, \
                                             "SVG", "Reactive power Regulation", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是无功调节方式，有禁止(Disable)、功率因数调节(Pf regulation)、无功功率调节(Q regulation)、夜间SVG模式(SVG)四种状态，无功调节主要用于调整电压，提高供电稳定性，SVG可以向电网提供动态无功补偿，降低电站孤岛运行的概率，也可一定程度提高低电压穿越能力\nThis is the reactive power regulation mode, including Disable, Pf regulation, Q regulation and night SVG mode. Reactive power regulation is mainly used to adjust voltage and improve power supply stability. SVG can provide dynamic reactive power compensation to the power grid.Reducing the probability of isolated operation of power station can also improve the low voltage crossing ability to some extent.");
     Reactive_P_Reg->add_Specification();
     Sleep_mode = new Specification(this,Sleep_mode_explain, myTable, line++, column, \
                                             "Dromant", "Sleep_mode", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是当前休眠模式的状态，有未休眠(No dromancy)、休眠(Dromant)两种状态\nThis is the status of the current hibernate mode, being No dromancy and Dromancy.");
     Sleep_mode->add_Specification();
     LVRT = new Specification(this,LVRT_explain, myTable, line++, column, \
                                             "LVRT", "LVRT", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是当前低电压穿越(LVRT)的状态，低电压穿越是在确定的时间内承受一定限值的电网低电压而不退出运行的能力，这里有两种状态，分别为无(Non)、有(LVRT)\nThis is the current state of low voltage crossing (LVRT). Low voltage crossing refers to the ability to withstand a certain limit of low voltage of the grid within a certain period of time without exiting the operation. There are two states here, namely Non and LVRT.");
     LVRT->add_Specification();
     DI1 = new Specification(this,DI1_explain, myTable, line++, column, \
                                             "Disable", "DI1", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是输入干接点1的状态，有使能(Enable)、禁止(Disable)两种状态\nThis is the status of the input dry contact 1. The status can be Enable or Disable.");
     DI1->add_Specification();
     DI2 = new Specification(this,DI2_explain, myTable, line++, column, \
                                             "Disable", "DI2", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是输入干接点2的状态，有使能(Enable)、禁止(Disable)两种状态\nThis is the status of the input dry contact 2. The status can be Enable or Disable.");
     DI2->add_Specification();
     DI3 = new Specification(this,DI3_explain, myTable, line++, column, \
                                             "Disable", "DI3", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是输入干接点3的状态，有使能(Enable)、禁止(Disable)两种状态\nThis is the status of the input dry contact 3. The status can be Enable or Disable.");
     DI3->add_Specification();
     DI4 = new Specification(this,DI4_explain, myTable, line++, column, \
                                             "Disable", "DI4", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是输入干接点4的状态，有使能(Enable)、禁止(Disable)两种状态\nThis is the status of the input dry contact 4. The status can be Enable or Disable.");
     DI4->add_Specification();
     DI5 = new Specification(this,DI5_explain, myTable, line++, column, \
                                             "Disable", "DI5", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是输入干接点5的状态，有使能(Enable)、禁止(Disable)两种状态\nThis is the status of the input dry contact 5. The status can be Enable or Disable.");
     DI5->add_Specification();
     DI6 = new Specification(this,DI6_explain, myTable, line++, column, \
                                             "Disable", "DI6", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "这是输入干接点6的状态，有使能(Enable)、禁止(Disable)两种状态\nThis is the status of the input dry contact 6. The status can be Enable or Disable.");
     DI6->add_Specification();
-    line=0;
-    column=5;
+    line = 0;
+    column += 2;
     Breaker1_Sta_Boost = new Specification(this,Breaker1_Sta_Boost_explain, myTable, line++, column, \
-                                            "0", "Breaker1 Status Boost", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "OFF", "Breaker1 Status Boost", \
+                                            "这是当前'DC'模块的高压侧断路器1，有闭合(ON)、断开(OFF)两种状态\nThis is the high voltage side circuit breaker 1 of the current 'DC' module, with two states: ON and OFF.");
     Breaker1_Sta_Boost->add_Specification();
     Breaker2_Sta_Boost = new Specification(this,Breaker2_Sta_Boost_explain, myTable, line++, column, \
-                                            "0", "Breaker2 Status Boost", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "OFF", "Breaker2 Status Boost", \
+                                            "这是当前'DC'模块的高压侧断路器2，有闭合(ON)、断开(OFF)两种状态\nThis is the high voltage side circuit breaker 2 of the current 'DC' module, with two states: ON and OFF.");
     Breaker2_Sta_Boost->add_Specification();
     Contator_Sta_Boost = new Specification(this,Contator_Sta_Boost_explain, myTable, line++, column, \
-                                            "0", "Contator Status Boost", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "OFF", "Contator Status Boost", \
+                                            "这是当前'DC'模块的高压侧接触器，有闭合(ON)、断开(OFF)两种状态\nThis is the high voltage side contactor of the current 'DC' module, with two states: ON and OFF.");
     Contator_Sta_Boost->add_Specification();
     Breaker1_Sta_Buck = new Specification(this,Breaker1_Sta_Buck_explain, myTable, line++, column, \
-                                            "0", "Breaker1 Status Buck", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "OFF", "Breaker1 Status Buck", \
+                                            "这是当前'DC'模块的低压侧断路器1，有闭合(ON)、断开(OFF)两种状态\nThis is the low-voltage side circuit breaker 1 of the current 'DC' module, which has two states: ON and OFF.");
     Breaker1_Sta_Buck->add_Specification();
     Breaker2_Sta_Buck = new Specification(this,Breaker2_Sta_Buck_explain, myTable, line++, column, \
-                                            "0", "Breaker2 Status Buck", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "OFF", "Breaker2 Status Buck", \
+                                            "这是当前'DC'模块的低压侧断路器2，有闭合(ON)、断开(OFF)两种状态\nThis is the low-voltage side circuit breaker 2 of the current 'DC' module, with two states: ON and OFF.");
     Breaker2_Sta_Buck->add_Specification();
     Contator_Sta_Buck = new Specification(this,Contator_Sta_Buck_explain, myTable, line++, column, \
-                                            "0", "Contator Status Buck", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "OFF", "Contator Status Buck", \
+                                            "这是当前'DC'模块的低压侧接触器，有闭合(ON)、断开(OFF)两种状态\nThis is the low voltage side contactor for the current 'DC' module, with two states: ON and OFF.");
     Contator_Sta_Buck->add_Specification();
     Run_mode = new Specification(this,Run_mode_explain, myTable, line++, column, \
-                                            "0", "Run mode", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "Buck", "Run mode", \
+                                            "这是当前'DC'模块的运行模式，有休息(Rest)、降压(Buck)、升压(Boost)三种状态\nThis is the current operation mode of the 'DC' module, including Rest, Buck and Boost states.");
     Run_mode->add_Specification();
     DCDC_Converter_ava = new Specification(this,DCDC_Converter_ava_explain, myTable, line++, column, \
-                                            "0", "DCDC Converter available", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "Disable", "DCDC Converter available", \
+                                            "这是当前'DC'模块的'DCDC'变流器开机使能，有使能(Enable)、禁止(Disable)两种状态\nThis is the power-on Enable of the 'DCDC' converter of the current 'DC' module. There are two states: enable and Disable.");
     DCDC_Converter_ava->add_Specification();
     Soft_Start_Sta_Boost = new Specification(this,Soft_Start_Sta_Boost_explain, myTable, line++, column, \
-                                            "0", "Soft Start Status Boost", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "Not starting", "Soft Start Status Boost", \
+                                            "这是当前'DC'模块的高压侧软启动状态，有未启动(Not starting)、软启中(Soft start)、软启完成(Soft start completion)三种状态\nThis is the current high voltage side soft start state of the 'DC' module. There are three states: Not starting, Soft start, and Soft Start completion.");
     Soft_Start_Sta_Boost->add_Specification();
     Soft_Start_Sta_Buck = new Specification(this,Soft_Start_Sta_Buck_explain, myTable, line++, column, \
-                                            "0", "Soft Start Status Buck", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "Not starting", "Soft Start Status Buck", \
+                                            "这是当前'DC'模块的低压侧软启动状态，有未启动(Not starting)、软启中(Soft start)、软启完成(Soft start completion)三种状态\nThis is the soft start state of the low voltage side of the current 'DC' module. There are three states: Not starting, Soft start, and Soft Start completion.");
     Soft_Start_Sta_Buck->add_Specification();
     Converter_Status_V = new Specification(this,Converter_Status_V_explain, myTable, line++, column, \
-                                            "0", "Converter Status", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "Turn off", "Converter Status", \
+                                            "这是当前'DC'模块的工作模式状态，有关闭(Turn off)、待机(Standby)、恒压(Constant VOL)、恒流(Constant CUR)、追踪最佳功率点(MPPT)、故障修复(Fault Recovery)六种状态\nThis is the working mode state of the current 'DC' module, including six states: Turn off, Standby, Constant VOL, Constant CUR, optimal power point tracking and Fault Recovery.");
     Converter_Status_V->add_Specification();
     ModeLock = new Specification(this,ModeLock_explain, myTable, line++, column, \
-                                            "0", "ModeLock", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "OFF", "ModeLock", \
+                                            "这是当前'DC'模块的模块锁状态，有闭合(ON)、断开(OFF)两种状态\nThis is the lock status of the current 'DC' module, with two states: ON and OFF.");
     ModeLock->add_Specification();
-    state4 = new Specification(this,state4_explain, myTable, line++, column, \
-                                            "0", "-", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
-    state4->add_Specification();
 
 }
 //自动运行 绘制button
@@ -2439,4 +2442,14 @@ void MyWidget::on_Eject_btn_clicked()
 {
     QMessageBox::question(this, "Eject Udisk"\
                           ,"退出U盘，将挂载到显控的U盘取消挂载，以保证U盘数据不会损坏\nExit the U disk and unmount the U disk mounted to the display control to ensure that the data in the U disk will not be damaged.", "OK");
+}
+/*********选中第一个模块*********/
+void MyWidget::on_RTS_module_1_clicked()
+{
+    QMessageBox::question(this , "1", "选中第一个模块，查看第一个模块的实时状态\nChoose the first module to view the real-time status of the first module", "OK");
+}
+/*********选中第二个模块*********/
+void MyWidget::on_RTS_module_2_clicked()
+{
+    QMessageBox::question(this , "2", "选中第二个模块，查看第二个模块的实时状态\nChoose the second module to view the real-time status of the second module", "OK");
 }

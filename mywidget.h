@@ -206,9 +206,6 @@ public:
     QPushButton *DO1_explain;
     QPushButton *DO2_explain;
     QPushButton *DO3_explain;
-    QPushButton *state1_explain;
-    QPushButton *state2_explain;
-    QPushButton *state3_explain;
 
     QPushButton *DCAC_Conver_avail_explain;
     QPushButton *DC_Soft_Start_explain;
@@ -235,7 +232,6 @@ public:
     QPushButton *Soft_Start_Sta_Buck_explain;
     QPushButton *Converter_Status_V_explain;
     QPushButton *ModeLock_explain;
-    QPushButton *state4_explain;
 
     Specification *DC_input_Bre;
     Specification *DC_Con;
@@ -593,6 +589,10 @@ private slots:
     void on_CoulombmeterReport_btn_clicked();
 
     void on_Eject_btn_clicked();
+
+    void on_RTS_module_1_clicked();
+
+    void on_RTS_module_2_clicked();
 
 private:
     Ui::MyWidget *ui;
