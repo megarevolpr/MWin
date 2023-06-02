@@ -291,6 +291,28 @@ public:
     QPushButton *Unbalance_power_enable_explain;    //功率不平衡使能说明
     Specification *Unbalance_power_enable;
 
+    /***************************DC参数****************************/
+    QPushButton *Work_parttern_explain; //DCDC工作模式说明
+    Specification *Work_parttern;
+
+    QPushButton *Boost_or_Buck_explain; //升/降压说明
+    Specification *Boost_or_Buck;
+
+    QPushButton *Bat_Charging_or_discharging_Model_explain; //电池充放电模式说明
+    Specification *Bat_Charging_or_discharging_Model;
+
+    QPushButton *DCDC_Capacity_explain; //DCDC容量说明
+    Specification *DCDC_Capacity;
+
+    QPushButton *Battery_position_explain; //电池位置说明
+    Specification *Battery_position;
+
+    QPushButton *Voltage_level_explain; //电压等级说明
+    Specification *Voltage_level;
+
+    QPushButton *Current_value_explain; //电流值说明
+    Specification *Current_value;
+
     /***************************自动运行**************************/
     //选择
     QPushButton *Check1_explain,*Check2_explain,*Check3_explain,*Check4_explain,*Check5_explain;
@@ -538,7 +560,7 @@ private:
     void ModuleState_Tab();     //MPS状态表初始化
     void RTAlarm();             //告警信息绘表
     void UserParam_tab();       //一般设置表初始化
-    void DCDC_tab();            //DCDC表初始化
+    void DCDCParam_tab();       //DCDC表初始化
     void RunTimeSet_tab();      //自动运行时间表初始化
     void Information_tbnt_released();//系统信息槽
     void Data_Report();         //数据报表
@@ -552,6 +574,7 @@ private:
     void Load_Data(QTableWidget *myTable);//负载数据 绘制button
     void MPSState(QTableWidget *myTable);  //MPS状态 绘制button
     void DC_AC_Parameter_tab(QTableWidget *myTable);    //DC/AC参数页说明
+    void DCDC_Paramter_tab(QTableWidget *myTable);       //DCDC参数页说明
     void PCS_Alarm_information_table();  //PCS故障信息表 绘制
     void AutoOperation(QTableWidget *myTable);//自动运行 绘制button
     void SystemMessages(QTableWidget *myTable);//系统信息 绘制button

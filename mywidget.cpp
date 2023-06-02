@@ -182,6 +182,15 @@ void MyWidget::MemoryAllocation()
     Parallel_explain = new QPushButton;                 //并机说明
     Unbalance_power_enable_explain = new QPushButton;   //功率不平衡使能说明
 
+    /***************************DC/AC参数**********************************/
+    Work_parttern_explain = new QPushButton;                     //DCDC工作模式说明
+    Boost_or_Buck_explain = new QPushButton;                     //升/降压说明
+    Bat_Charging_or_discharging_Model_explain = new QPushButton; //电池充放电模式说明
+    DCDC_Capacity_explain = new QPushButton;                     //DCDC容量说明
+    Battery_position_explain = new QPushButton;                  //电池位置说明
+    Voltage_level_explain = new QPushButton;                     //电压等级说明
+    Current_value_explain = new QPushButton;                     //电流值说明
+
     /*******************************自动运行*******************************/
 
     Check1_explain = new QPushButton;Check2_explain= new QPushButton;Check3_explain= new QPushButton;
@@ -398,7 +407,7 @@ void MyWidget::RunStatePage()
 void MyWidget::SystemSettingPage()
 {
     UserParam_tab();/*系统-设置表*/
-    DCDC_tab();/*系统-DCDC设置表*/
+    DCDCParam_tab();/*系统-DCDC设置表*/
 //    BatterySet_tab();/*系统-电池设置表*/
 
     RunTimeSet_tab();/*系统-自动运行时间设置表*/
@@ -645,11 +654,11 @@ void MyWidget::ModuleState_Tab()
     }
     MPSState(ui->State_tableWidget); //MPS状态说明
 }
-//DCDC设置
-void MyWidget::DCDC_tab()
+//DCDC参数设置
+void MyWidget::DCDCParam_tab()
 {
     ui->DCDC_tableWidget->setColumnCount(6);
-    ui->DCDC_tableWidget->setRowCount(5);
+    ui->DCDC_tableWidget->setRowCount(4);
     ui->DCDC_tableWidget->horizontalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
     ui->DCDC_tableWidget->verticalHeader()->setVisible(false);//设置垂直头不可见
     ui->DCDC_tableWidget->setFrameShape(QFrame::NoFrame);//设置无边框
@@ -661,19 +670,18 @@ void MyWidget::DCDC_tab()
     QStringList List5;
     List5 << tr("Name") << tr("Value") << tr("Unit") << tr("Name") << tr("Value")<< tr("Unit");
     ui->DCDC_tableWidget->setHorizontalHeaderLabels(List5);
-    ui->DCDC_tableWidget->setColumnWidth(0,130);
-    ui->DCDC_tableWidget->setColumnWidth(1,140);
-
-    ui->DCDC_tableWidget->setColumnWidth(2,40);
-    ui->DCDC_tableWidget->setColumnWidth(3,130);
-    ui->DCDC_tableWidget->setColumnWidth(4,140);
-    ui->DCDC_tableWidget->horizontalHeader()->setStretchLastSection(5);
+    ui->DCDC_tableWidget->setColumnWidth(0,300);
+    ui->DCDC_tableWidget->setColumnWidth(1,120);
+    ui->DCDC_tableWidget->setColumnWidth(2,100);
+    ui->DCDC_tableWidget->setColumnWidth(3,200);
+    ui->DCDC_tableWidget->setColumnWidth(4,120);
+    ui->DCDC_tableWidget->setColumnWidth(5,100);
     QStringList Display_Par1;
-        Display_Par1 << tr("Work parttern")<< tr("Boost or Buck") << tr("Bat Charging or \ndischarging Model") << tr("DCDC Capacity");
+        Display_Par1 << tr("Work parttern")<< tr("Boost or Buck") << tr("Bat Charging or discharging Model") << tr("DCDC Capacity");
     QStringList Display_Par2;
-    Display_Par2  << tr("Battery position")<<  tr("Voltage level\n") << tr("Current value");
+    Display_Par2  << tr("Battery position")<<  tr("Voltage level") << tr("Current value");
     QStringList Display_Par13;
-    Display_Par13 << tr("-") << tr("-") << tr("-")<< tr("-");
+    Display_Par13 << tr("-") << tr("-") << tr("-")<< tr("kW");
     QStringList Display_Par14;
     Display_Par14  << tr("-") << tr("V") << tr("A");
     for(int j = 0; j < 4; j++)
@@ -711,6 +719,7 @@ void MyWidget::DCDC_tab()
             }
         }
     }
+    DCDC_Paramter_tab(ui->DCDC_tableWidget);
 }
 
 //自动运行
@@ -1998,6 +2007,51 @@ void MyWidget::DC_AC_Parameter_tab(QTableWidget *myTable)
                                                "这是运行时段使能，有两项可选：使能(Enable)，禁止(Disable)\nThis is to Enable the run time function. Two options are available: Enable and Disable.");
     Unbalance_power_enable->add_Specification();
 
+}
+
+void MyWidget::DCDC_Paramter_tab(QTableWidget *myTable)
+{
+    //DCDC工作模式说明
+    Work_parttern = new Specification(this,Work_parttern_explain, myTable, 0, 1, \
+                                      "MPPT", "Work parttern", \
+                                      "这是'DC'模块的工作模式，有休息(Rest)、恒压(CV)、恒流(CC)、追踪最佳功率点(MPPT)四种状态\nThis is the working mode of 'DC' module, which has four states: Rest (Rest), constant voltage (CV), constant current (CC) and tracking optimal power point (MPPT).");
+    Work_parttern->add_Specification();
+
+    //升/降压说明
+    Boost_or_Buck = new Specification(this,Boost_or_Buck_explain, myTable, 1, 1, \
+                                      "Buck", "Boost or Buck", \
+                                      "这是'DC'模块的运行模式，有休息(Rest)、降压(Buck)、升压(Boost)三种模式，可根据项目需求，修改成休息(Rest)、降压(Buck)或者升压(Boost)模式\nThis is the operation mode of 'DC' module, which has three modes: Rest, Buck and Boost. It can be modified into Rest, Buck or Boost mode according to project requirements.");
+    Boost_or_Buck->add_Specification();
+
+    //电池充放电模式说明
+    Bat_Charging_or_discharging_Model = new Specification(this,Bat_Charging_or_discharging_Model_explain, myTable, 2, 1, \
+                                                          "Discharging", "Bat Charging or discharging Model", \
+                                                          "这是电池充放电模式，有充电(Charging)，放电(Discharging)两种模式\nThis is the battery Charging and Discharging mode. There are two charging and discharging modes.");
+    Bat_Charging_or_discharging_Model->add_Specification();
+
+    //DCDC容量说明
+    DCDC_Capacity = new Specification(this,DCDC_Capacity_explain, myTable, 3, 1, \
+                                      "50", "DCDC Capacity", \
+                                      "这是'DC'模块的容量\nThis is the capacity of the 'DC' module.");
+    DCDC_Capacity->add_Specification();
+
+    //电池位置说明
+    Battery_position = new Specification(this,Battery_position_explain, myTable, 0, 4, \
+                                         "LowSide", "Battery position", \
+                                         "这是当前电池所处位置，需要根据当前选择的'DC'模块运行模式来进行选择；如果选择了降压(Buck)，请选择低压侧(LowSide)；如果选择了升压(Boost)，请选择高压侧(HightSide)；如果选择了休息(Rest)，请选择无(NON)\nThis is the position of the current battery, which needs to be selected according to the operation mode of the 'DC' module currently selected. If Buck is selected, select the LowSide. If Boost is selected, select HightSide. If Rest is selected, please select NON.");
+    Battery_position->add_Specification();
+
+    //电压等级说明
+    Voltage_level = new Specification(this,Voltage_level_explain, myTable, 1, 4, \
+                                      "300", "Voltage level", \
+                                      "这是'DC'模块的电压等级\nThis is the voltage level of the 'DC' module.");
+    Voltage_level->add_Specification();
+
+    //电流值说明
+    Current_value = new Specification(this,Current_value_explain, myTable, 2, 4, \
+                                      "60", "Current value", \
+                                      "这是'DC'模块的电流值\nThis is the current value of the 'DC' module.");
+    Current_value->add_Specification();
 }
 //自动运行 绘制button
 void MyWidget::AutoOperation(QTableWidget *myTable)
