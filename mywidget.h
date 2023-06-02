@@ -44,6 +44,7 @@
 #include <QObject>
 #include <QMessageBox>
 #include <QTimer>
+#include <QButtonGroup>
 
 #include "Menu.h"
 #include "Specification/Specification.h"
@@ -390,6 +391,8 @@ public:
 
     /***************************系统信息**************************/
 
+    QButtonGroup *pButton_Version;
+
     QPushButton *MonitoringVersion_explain;
     QPushButton *DCAC_SysProtocol_Version_explain;
     QPushButton *DCAC_ConverterVersion_explain;
@@ -631,6 +634,7 @@ private slots:
     void on_RTD_Converter_clicked();
 
     void BatteryData_clicked(int nid);//电池数据
+    void SystemlnformationVer_clicked(int nid);//系统信息相关按钮的说明
 
     void SystemParam_tbnt_released();
 
@@ -683,6 +687,11 @@ private slots:
 
     void on_Battery_PowerOff_clicked();
 
+    void on_radio_static_clicked();
+
+    void on_radio_dhcp_clicked();
+
+
 private:
     Ui::MyWidget *ui;
     QButtonGroup *pButton_BatteryData;
@@ -690,6 +699,6 @@ private:
     QTimer *timer;
     QTimer *Update_RTData_timer;
     bool ASKey;//高级设置钥匙
-
+    bool IPShow;//IP地址显示标志位
 };
 #endif // MYWIDGET_H

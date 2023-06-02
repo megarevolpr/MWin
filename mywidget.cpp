@@ -45,6 +45,7 @@ MyWidget::~MyWidget()
 *********************************************************/
 void MyWidget::MemoryAllocation()
 {
+    IPShow = true;
     m_menu = new Menu(this);
     /************************实时数据******************************/
     //变流器
@@ -249,6 +250,15 @@ void MyWidget::MemoryAllocation()
 
     /**********************系统消息*************************/
 
+    pButton_Version = new QButtonGroup();
+    pButton_Version->addButton(ui->interface_explain_btn, 0);
+    pButton_Version->addButton(ui->port_explain_btn, 1);
+    pButton_Version->addButton(ui->ip_explain_btn, 2);
+    pButton_Version->addButton(ui->netmask_explain_btn, 3);
+    pButton_Version->addButton(ui->gateway_explain_btn, 4);
+    pButton_Version->addButton(ui->server_ip_explain_btn, 5);
+    pButton_Version->addButton(ui->ok, 6);
+
     MonitoringVersion_explain       = new QPushButton;
     DCAC_SysProtocol_Version_explain= new QPushButton;
     DCAC_ConverterVersion_explain   = new QPushButton;
@@ -408,6 +418,7 @@ void MyWidget::LinkRelationship()
     connect(ui->Alarm_Button, SIGNAL(clicked()), this,SLOT(on_Alarm_btn_clicker()));//跳转当前告警记录
 
     connect(pButton_BatteryData, SIGNAL(buttonClicked(int)), this,SLOT(BatteryData_clicked(int)));//电池数据
+    connect(pButton_Version, SIGNAL(buttonClicked(int)), this,SLOT(SystemlnformationVer_clicked(int)));//系统信息相关按钮的说明
 }
 //实时数据
 void MyWidget::RunStatePage()
@@ -786,7 +797,7 @@ void MyWidget::Information_tbnt_released()
     QStringList List4;
     List4 << tr("Name") << tr("Information") ;
     ui->EquipmentInfor_tableWidget->setHorizontalHeaderLabels(List4);
-    ui->EquipmentInfor_tableWidget->setColumnWidth(0,230);
+    ui->EquipmentInfor_tableWidget->setColumnWidth(0,300);
     ui->EquipmentInfor_tableWidget->horizontalHeader()->setStretchLastSection(1);//自动占用剩余空间
 
     SystemMessages(ui->EquipmentInfor_tableWidget);//系统信息 绘制button
@@ -1483,6 +1494,44 @@ void MyWidget::BatteryData_clicked(int nid)
         break;
     default:
         break;
+    }
+}
+
+/****系统信息相关按钮的说明****/
+void MyWidget::SystemlnformationVer_clicked(int nid)
+{
+    switch (nid)
+    {
+        case 0:
+            QMessageBox::question(this, "Interface"\
+                                  ,"这是接口号，默认eth0\nThis is the interface number, which defaults to eth0", "OK");
+            break;
+        case 1:
+            QMessageBox::question(this, "Port"\
+                                  ,"这是端口号，默认502\nThis is the port number, default 502", "OK");
+            break;
+        case 2:
+            QMessageBox::question(this, "Ip"\
+                                  ,"这是IP地址，默认192.168.1.100\nThis is the IP address. The default is 192.168.1.100", "OK");
+            break;
+        case 3:
+            QMessageBox::question(this, "Netmask"\
+                                  ,"这是子网掩码，255.255.255.0\nThis is the subnet mask, 255.255.255.0", "OK");
+            break;
+        case 4:
+            QMessageBox::question(this, "Gateway"\
+                                  ,"这是网关，默认192.168.1.1\nThis is the gateway. The default is 192.168.1.1", "OK");
+            break;
+        case 5:
+            QMessageBox::question(this, "Serber ip"\
+                                  ,"这是服务器IP，默认192.168.1.200\nThis is the server IP address. The default is 192.168.1.200", "OK");
+            break;
+        case 6:
+            QMessageBox::question(this, "Apply and Restart system"\
+                                  ,"这是应用并重启系统，点击后将重启系统，如有升级，将会使用新的程序\nThis is the application and restart the system, click will restart the system, if there is an upgrade, will use the new program.", "OK");
+            break;
+        default:
+            break;
     }
 }
 
@@ -2240,35 +2289,35 @@ void MyWidget::SystemMessages(QTableWidget *myTable)
     int line=0;int column=1;
     MonitoringVersion = new Specification(this,MonitoringVersion_explain, myTable, line++, column, \
                                      "V103B500D004", "Monitoring software version", \
-                                     "这是监控版本\nThis is the name of the manufacturer.");
+                                     "这是监控屏版本号\nThis is the monitor screen version number.");
     MonitoringVersion->add_Specification();
     DCAC_SysProtocol_Version = new Specification(this,DCAC_SysProtocol_Version_explain, myTable, line++, column, \
                                      "V001B001D001", "Manufacturer name", \
-                                     "这是协议版本号\nThis is the name of the manufacturer.");
+                                     "这是DCAC协议版本号\nThis is the DCAC protocol version number.");
     DCAC_SysProtocol_Version->add_Specification();
     DCAC_ConverterVersion = new Specification(this,DCAC_ConverterVersion_explain, myTable, line++, column, \
                                      "V105B500D008", "Manufacturer name", \
-                                     "这是变流器软件版本\nThis is the name of the manufacturer.");
+                                     "这是DCAC变流器软件版本\nThis is the DCAC converter software version.");
     DCAC_ConverterVersion->add_Specification();
     DCAC_CPLD_Version = new Specification(this,DCAC_CPLD_Version_explain, myTable, line++, column, \
                                      "V001B001D000", "Manufacturer name", \
-                                     "这是CPLD软件版本\nThis is the name of the manufacturer.");
+                                     "这是DCAC CPLD软件版本\nThis is the DCAC CPLD software version.");
     DCAC_CPLD_Version->add_Specification();
     DCDC_SysProtocol_Version = new Specification(this,DCDC_SysProtocol_Version_explain, myTable, line++, column, \
                                      "V001B001D001", "Manufacturer name", \
-                                     "这是协议版本号\nThis is the name of the manufacturer.");
+                                     "这是DCDC协议版本号\nThis is the DCDC protocol version number.");
     DCDC_SysProtocol_Version->add_Specification();
     DCDC_ConverterVersion = new Specification(this,DCDC_ConverterVersion_explain, myTable, line++, column, \
                                      "V105B500D008", "Manufacturer name", \
-                                     "这是变流器软件版本\nThis is the name of the manufacturer.");
+                                     "这是DCDC变流器软件版本\nThis is the DCDC converter software version.");
     DCDC_ConverterVersion->add_Specification();
     DCDC_CPLD_Version = new Specification(this,DCDC_CPLD_Version_explain, myTable, line++, column, \
                                      "V001B001D000", "Manufacturer name", \
-                                     "这是CPLD软件版本\nThis is the name of the manufacturer.");
+                                     "这是DCDC CPLD软件版本\nThis is the DCDC CPLD software version.");
     DCDC_CPLD_Version->add_Specification();
     SN = new Specification(this,SN_explain, myTable, line++, column, \
                                      "F12200000001", "Manufacturer name", \
-                                     "这是SN,即产品序列号\nThis is the name of the manufacturer.");
+                                     "这是SN，即产品序列号\nThis is SN, the serial number of the product.");
     SN->add_Specification();
 }
 
@@ -2721,6 +2770,7 @@ void MyWidget::on_UI_Complete_Btn_clicked()//退出高级设置
     ui->UI_stackedWidget->setCurrentWidget(ui->UI_page);
 }
 
+
 void MyWidget::on_Battery_PowerOn_clicked()
 {
     QMessageBox::question(this , "Power On", \
@@ -2731,4 +2781,47 @@ void MyWidget::on_Battery_PowerOff_clicked()
 {
     QMessageBox::question(this , "Power Off", \
                           "从这里可以给电池下电\nYou can power up the battery from here.", "OK");
+}
+
+/*********** 选择静态IP地址 ************/
+void MyWidget::on_radio_static_clicked()
+{
+    IPShow = true;
+    if(IPShow)
+    {
+        ui->ip_explain_btn->show();
+        ui->netmask_explain_btn->show();
+        ui->gateway_explain_btn->show();
+        ui->server_ip_explain_btn->show();
+    }
+    else
+    {
+        ui->ip_explain_btn->hide();
+        ui->netmask_explain_btn->hide();
+        ui->gateway_explain_btn->hide();
+        ui->server_ip_explain_btn->hide();
+    }
+    QMessageBox::question(this ,"STATIC", "如果选择此项，表示使用静态的IP地址\nIf this parameter is selected, static IP addresses are used", "OK");
+}
+
+/*********** 选择自动分配IP地址 ************/
+void MyWidget::on_radio_dhcp_clicked()
+{
+    IPShow = false;
+    if(IPShow)
+    {
+        ui->ip_explain_btn->show();
+        ui->netmask_explain_btn->show();
+        ui->gateway_explain_btn->show();
+        ui->server_ip_explain_btn->show();
+    }
+    else
+    {
+        ui->ip_explain_btn->hide();
+        ui->netmask_explain_btn->hide();
+        ui->gateway_explain_btn->hide();
+        ui->server_ip_explain_btn->hide();
+    }
+    QMessageBox::question(this ,"DHCP", "如果选择此项，表示使用自动分配的IP地址\nIf this parameter is selected, the automatically assigned IP address is used", "OK");
+
 }

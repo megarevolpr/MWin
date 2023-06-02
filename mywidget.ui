@@ -6967,7 +6967,9 @@ background-color: rgb(255, 0, 0);</string>
                 <bool>false</bool>
                </property>
                <property name="currentIndex">
-                <number>2</number>
+
+                <number>4</number>
+
                </property>
                <widget class="QWidget" name="DCACParameterSet_page">
                 <attribute name="title">
@@ -8026,11 +8028,6 @@ B1 - A1 ≥ 30 %
                           <string>8</string>
                          </property>
                         </row>
-                        <row>
-                         <property name="text">
-                          <string>9</string>
-                         </property>
-                        </row>
                         <column>
                          <property name="text">
                           <string>Name</string>
@@ -8045,40 +8042,64 @@ B1 - A1 ≥ 30 %
                          <property name="text">
                           <string>Monitoring software version</string>
                          </property>
+                         <property name="textAlignment">
+                          <set>AlignCenter</set>
+                         </property>
                         </item>
                         <item row="1" column="0">
                          <property name="text">
                           <string>DCAC Protocol version</string>
+                         </property>
+                         <property name="textAlignment">
+                          <set>AlignCenter</set>
                          </property>
                         </item>
                         <item row="2" column="0">
                          <property name="text">
                           <string>DCAC Converter software version</string>
                          </property>
+                         <property name="textAlignment">
+                          <set>AlignCenter</set>
+                         </property>
                         </item>
                         <item row="3" column="0">
                          <property name="text">
                           <string>DCAC CPLD software version</string>
+                         </property>
+                         <property name="textAlignment">
+                          <set>AlignCenter</set>
                          </property>
                         </item>
                         <item row="4" column="0">
                          <property name="text">
                           <string>DCDC Protocol version</string>
                          </property>
+                         <property name="textAlignment">
+                          <set>AlignCenter</set>
+                         </property>
                         </item>
                         <item row="5" column="0">
                          <property name="text">
                           <string>DCDC Converter software version</string>
+                         </property>
+                         <property name="textAlignment">
+                          <set>AlignCenter</set>
                          </property>
                         </item>
                         <item row="6" column="0">
                          <property name="text">
                           <string>DCDC CPLD software version</string>
                          </property>
+                         <property name="textAlignment">
+                          <set>AlignCenter</set>
+                         </property>
                         </item>
                         <item row="7" column="0">
                          <property name="text">
                           <string>SN:</string>
+                         </property>
+                         <property name="textAlignment">
+                          <set>AlignCenter</set>
                          </property>
                         </item>
                        </widget>
@@ -8134,7 +8155,7 @@ B1 - A1 ≥ 30 %
                          <widget class="QLabel" name="Port">
                           <property name="geometry">
                            <rect>
-                            <x>240</x>
+                            <x>230</x>
                             <y>10</y>
                             <width>40</width>
                             <height>30</height>
@@ -8148,7 +8169,7 @@ B1 - A1 ≥ 30 %
                           <property name="geometry">
                            <rect>
                             <x>130</x>
-                            <y>10</y>
+                            <y>9</y>
                             <width>91</width>
                             <height>30</height>
                            </rect>
@@ -8166,8 +8187,8 @@ B1 - A1 ≥ 30 %
                          <widget class="QPushButton" name="port_explain_btn">
                           <property name="geometry">
                            <rect>
-                            <x>280</x>
-                            <y>10</y>
+                            <x>270</x>
+                            <y>9</y>
                             <width>101</width>
                             <height>31</height>
                            </rect>
@@ -8180,9 +8201,9 @@ B1 - A1 ≥ 30 %
                           <property name="geometry">
                            <rect>
                             <x>0</x>
-                            <y>320</y>
+                            <y>314</y>
                             <width>381</width>
-                            <height>41</height>
+                            <height>35</height>
                            </rect>
                           </property>
                           <property name="text">
@@ -8192,16 +8213,16 @@ B1 - A1 ≥ 30 %
                          <widget class="QGroupBox" name="groupBox_4">
                           <property name="geometry">
                            <rect>
-                            <x>10</x>
+                            <x>0</x>
                             <y>40</y>
-                            <width>371</width>
-                            <height>281</height>
+                            <width>375</width>
+                            <height>274</height>
                            </rect>
                           </property>
                           <property name="title">
                            <string/>
                           </property>
-                          <widget class="QRadioButton" name="radioButton_2">
+                          <widget class="QRadioButton" name="radio_dhcp">
                            <property name="geometry">
                             <rect>
                              <x>10</x>
@@ -8214,7 +8235,7 @@ B1 - A1 ≥ 30 %
                             <string>DHCP</string>
                            </property>
                           </widget>
-                          <widget class="QRadioButton" name="radioButton_3">
+                          <widget class="QRadioButton" name="radio_static">
                            <property name="geometry">
                             <rect>
                              <x>180</x>
@@ -8225,6 +8246,9 @@ B1 - A1 ≥ 30 %
                            </property>
                            <property name="text">
                             <string>STATIC</string>
+                           </property>
+                           <property name="checked">
+                            <bool>true</bool>
                            </property>
                           </widget>
                           <widget class="QLabel" name="label_19">
@@ -8279,7 +8303,7 @@ B1 - A1 ≥ 30 %
                             <string>Server ip:</string>
                            </property>
                           </widget>
-                          <widget class="QPushButton" name="pushButton_22">
+                          <widget class="QPushButton" name="ip_explain_btn">
                            <property name="geometry">
                             <rect>
                              <x>140</x>
@@ -8292,7 +8316,7 @@ B1 - A1 ≥ 30 %
                             <string>192 . 168 . 1 . 100</string>
                            </property>
                           </widget>
-                          <widget class="QPushButton" name="pushButton_23">
+                          <widget class="QPushButton" name="netmask_explain_btn">
                            <property name="geometry">
                             <rect>
                              <x>140</x>
@@ -8305,7 +8329,7 @@ B1 - A1 ≥ 30 %
                             <string>255 . 255 . 255 . 0</string>
                            </property>
                           </widget>
-                          <widget class="QPushButton" name="pushButton_24">
+                          <widget class="QPushButton" name="gateway_explain_btn">
                            <property name="geometry">
                             <rect>
                              <x>140</x>
@@ -8318,7 +8342,7 @@ B1 - A1 ≥ 30 %
                             <string>192 . 168 .  1  . 1</string>
                            </property>
                           </widget>
-                          <widget class="QPushButton" name="pushButton_25">
+                          <widget class="QPushButton" name="server_ip_explain_btn">
                            <property name="geometry">
                             <rect>
                              <x>140</x>
