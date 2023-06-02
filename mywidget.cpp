@@ -191,6 +191,20 @@ void MyWidget::MemoryAllocation()
     Voltage_level_explain = new QPushButton;                     //电压等级说明
     Current_value_explain = new QPushButton;                     //电流值说明
 
+    /***************************电池设置****************************/
+    DOD_OnGrid_explain = new QPushButton;    //并网DOD说明
+    DOD_OffGrid_explain = new QPushButton;   //离网DOD说明
+    Charge_Volt_Upper_Limit_explain = new QPushButton;   //充电电压上限说明
+    Charge_Volt_upper_Limit_delta_explain = new QPushButton; //充电电压上限回差说明
+    Disc_Volt_lower_Limit_explain = new QPushButton;  //放电电压限制说明
+    Discharge_Volt_upper_Limit_delta_explain = new QPushButton; //放电电压下限回差说明
+    Charge_Current_Limit_explain = new QPushButton;  //充电电流限制说明
+    Discharge_Current_Limit_explain = new QPushButton;  //放电电流限制说明
+    Floating_charge_explain = new QPushButton;   //浮充电压说明
+    Equalized_charge_explain = new QPushButton;   //均充电压说明
+    Gen_turn_off_SOC_explain = new QPushButton;    //柴发关闭SOC说明
+    Gen_turn_on_SOC_explain = new QPushButton;     //柴发开启SOC说明
+
     /*******************************自动运行*******************************/
 
     Check1_explain = new QPushButton;Check2_explain= new QPushButton;Check3_explain= new QPushButton;
@@ -408,7 +422,7 @@ void MyWidget::SystemSettingPage()
 {
     UserParam_tab();/*系统-设置表*/
     DCDCParam_tab();/*系统-DCDC设置表*/
-//    BatterySet_tab();/*系统-电池设置表*/
+    BatterySet_tab();/*系统-电池设置表*/
 
     RunTimeSet_tab();/*系统-自动运行时间设置表*/
 
@@ -720,6 +734,14 @@ void MyWidget::DCDCParam_tab()
         }
     }
     DCDC_Paramter_tab(ui->DCDC_tableWidget);
+}
+//电池设置初始化
+void MyWidget::BatterySet_tab()
+{
+    ui->Lithum_Tab->setColumnWidth(0,350);
+    ui->Lithum_Tab->setColumnWidth(1,350);
+
+    Battery_Setup_Tab(ui->Lithum_Tab);
 }
 
 //自动运行
@@ -2053,6 +2075,83 @@ void MyWidget::DCDC_Paramter_tab(QTableWidget *myTable)
                                       "这是'DC'模块的电流值\nThis is the current value of the 'DC' module.");
     Current_value->add_Specification();
 }
+
+//电池设置页说明
+void MyWidget::Battery_Setup_Tab(QTableWidget *myTable)
+{
+    //并网DOD说明
+    DOD_OnGrid = new Specification(this,DOD_OnGrid_explain, myTable, 0, 1, \
+                                   "90", "DOD OnGrid", \
+                                   "并网工况下电池的放电深度，默认90\nThe default discharge depth of the battery in grid-connected condition is 90.");
+    DOD_OnGrid->add_Specification();
+
+    //离网DOD说明
+    DOD_OffGrid = new Specification(this,DOD_OffGrid_explain, myTable, 1, 1, \
+                                    "90", "DOD OffGrid", \
+                                    "离网工况下电池的放电深度，默认90\nThe default discharge depth of the battery in off-grid mode is 90.");
+    DOD_OffGrid->add_Specification();
+
+    //充电电压上限说明
+    Charge_Volt_Upper_Limit = new Specification(this,Charge_Volt_Upper_Limit_explain, myTable, 2, 1, \
+                                               "792", "Charge Volt Upper Limit", \
+                                               "充电时电池电压所允许达到的最大值\nThe maximum allowable battery voltage during charging.");
+    Charge_Volt_Upper_Limit->add_Specification();
+
+    //充电电压上限回差说明
+    Charge_Volt_upper_Limit_delta = new Specification(this,Charge_Volt_upper_Limit_delta_explain, myTable, 3, 1, \
+                                                      "10", "Charge Volt upper Limit delta", \
+                                                      "这是充电电压上限的回差，默认10\nThis is the return difference of the upper charge voltage, which defaults to 10.");
+    Charge_Volt_upper_Limit_delta->add_Specification();
+
+    //放电电压限制说明
+    Disc_Volt_lower_Limit = new Specification(this,Disc_Volt_lower_Limit_explain, myTable, 4, 1, \
+                                              "616", "Disc Volt lower Limit", \
+                                              "放电时电池电压所允许的最小值\nThe minimum allowable battery voltage when discharging.");
+    Disc_Volt_lower_Limit->add_Specification();
+
+    //放电电压下限回差说明
+    Discharge_Volt_upper_Limit_delta = new Specification(this,Discharge_Volt_upper_Limit_delta_explain, myTable, 5, 1, \
+                                                         "10", "Discharge Volt upper Limit delta", \
+                                                         "这是放电电压下限回差，默认10\nThis is the lower limit of discharge voltage, default 10.");
+    Discharge_Volt_upper_Limit_delta->add_Specification();
+
+    //充电电流限制说明
+    Charge_Current_Limit = new Specification(this,Charge_Current_Limit_explain, myTable, 6, 1, \
+                                             "240", "Charge Current Limit", \
+                                             "这是充电电流限制，系统充电时电流不允许超过这个值\nThis is the charge current limit, and the current is not allowed to exceed this value while the system is charging.");
+    Charge_Current_Limit->add_Specification();
+
+    //放电电流限制说明
+    Discharge_Current_Limit = new Specification(this,Discharge_Current_Limit_explain, myTable, 7, 1, \
+                                                "240", "Discharge Current Limit", \
+                                                "这是放电电流限制，系统放电时电流不允许超过这个值\nThis is the discharge current limit, and the system is not allowed to discharge current beyond this value.");
+    Discharge_Current_Limit->add_Specification();
+
+    //浮充电压说明
+    Floating_charge = new Specification(this,Floating_charge_explain, myTable, 8, 1, \
+                                        "600", "Floating charge", \
+                                        "这是电池浮充电压，默认600\nThis is the floating charge voltage of the battery. The default is 600.");
+    Floating_charge->add_Specification();
+
+    //均充电压说明
+    Equalized_charge = new Specification(this,Equalized_charge_explain, myTable, 9, 1, \
+                                         "600", "Equalized charge", \
+                                         "这是电池均充电压，默认600\nThis is the battery equalization voltage, and the default is 600.");
+    Equalized_charge->add_Specification();
+
+    //柴发关闭SOC说明
+    Gen_turn_off_SOC = new Specification(this,Gen_turn_off_SOC_explain, myTable, 10, 1, \
+                                         "85", "Gen turn off SOC", \
+                                         "这是柴发关闭SOC，当柴发给电池充电时，SOC达到85%，柴发关闭\nThis is the firewood to turn off the SOC. When the firewood battery is charged, the SOC reaches 85% and the firewood turns off.");
+    Gen_turn_off_SOC->add_Specification();
+
+    //柴发开启SOC说明
+    Gen_turn_on_SOC = new Specification(this,Gen_turn_on_SOC_explain, myTable, 11, 1, \
+                                        "25", "Gen turn on SOC", \
+                                        "这是柴发开启SOC，当电池处于放电模式时，SOC达到25%，柴发开启\nThis is Chaifa on SOC, when the battery is in discharge mode, SOC reaches 25%, Chaifa on.");
+    Gen_turn_on_SOC->add_Specification();
+}
+
 //自动运行 绘制button
 void MyWidget::AutoOperation(QTableWidget *myTable)
 {
@@ -2620,4 +2719,16 @@ void MyWidget::on_RTS_module_2_clicked()
 void MyWidget::on_UI_Complete_Btn_clicked()//退出高级设置
 {
     ui->UI_stackedWidget->setCurrentWidget(ui->UI_page);
+}
+
+void MyWidget::on_Battery_PowerOn_clicked()
+{
+    QMessageBox::question(this , "Power On", \
+                          "从这里可以给电池上电\nYou can power on the battery from here", "OK");
+}
+
+void MyWidget::on_Battery_PowerOff_clicked()
+{
+    QMessageBox::question(this , "Power Off", \
+                          "从这里可以给电池下电\nYou can power up the battery from here.", "OK");
 }

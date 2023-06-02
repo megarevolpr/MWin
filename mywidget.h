@@ -313,6 +313,44 @@ public:
     QPushButton *Current_value_explain; //电流值说明
     Specification *Current_value;
 
+    /***************************电池设置****************************/
+    QPushButton *DOD_OnGrid_explain;    //并网DOD说明
+    Specification *DOD_OnGrid;
+
+    QPushButton *DOD_OffGrid_explain;   //离网DOD说明
+    Specification *DOD_OffGrid;
+
+    QPushButton *Charge_Volt_Upper_Limit_explain;   //充电电压上限说明
+    Specification *Charge_Volt_Upper_Limit;
+
+    QPushButton *Charge_Volt_upper_Limit_delta_explain; //充电电压上限回差说明
+    Specification *Charge_Volt_upper_Limit_delta;
+
+    QPushButton *Disc_Volt_lower_Limit_explain;  //放电电压限制说明
+    Specification *Disc_Volt_lower_Limit;
+
+    QPushButton *Discharge_Volt_upper_Limit_delta_explain; //放电电压下限回差说明
+    Specification *Discharge_Volt_upper_Limit_delta;
+
+    QPushButton *Charge_Current_Limit_explain;  //充电电流限制说明
+    Specification *Charge_Current_Limit;
+
+    QPushButton *Discharge_Current_Limit_explain;  //放电电流限制说明
+    Specification *Discharge_Current_Limit;
+
+    QPushButton *Floating_charge_explain;   //浮充电压说明
+    Specification *Floating_charge;
+
+    QPushButton *Equalized_charge_explain;   //均充电压说明
+    Specification *Equalized_charge;
+
+    QPushButton *Gen_turn_off_SOC_explain;    //柴发关闭SOC说明
+    Specification *Gen_turn_off_SOC;
+
+    QPushButton *Gen_turn_on_SOC_explain;     //柴发开启SOC说明
+    Specification *Gen_turn_on_SOC;
+
+
     /***************************自动运行**************************/
     //选择
     QPushButton *Check1_explain,*Check2_explain,*Check3_explain,*Check4_explain,*Check5_explain;
@@ -561,6 +599,7 @@ private:
     void RTAlarm();             //告警信息绘表
     void UserParam_tab();       //一般设置表初始化
     void DCDCParam_tab();       //DCDC表初始化
+    void BatterySet_tab();       //电池设置表初始化
     void RunTimeSet_tab();      //自动运行时间表初始化
     void Information_tbnt_released();//系统信息槽
     void Data_Report();         //数据报表
@@ -575,6 +614,7 @@ private:
     void MPSState(QTableWidget *myTable);  //MPS状态 绘制button
     void DC_AC_Parameter_tab(QTableWidget *myTable);    //DC/AC参数页说明
     void DCDC_Paramter_tab(QTableWidget *myTable);       //DCDC参数页说明
+    void Battery_Setup_Tab(QTableWidget *myTable);      //电池设置页说明
     void PCS_Alarm_information_table();  //PCS故障信息表 绘制
     void AutoOperation(QTableWidget *myTable);//自动运行 绘制button
     void SystemMessages(QTableWidget *myTable);//系统信息 绘制button
@@ -638,6 +678,10 @@ private slots:
     void on_RTS_module_2_clicked();
 
     void on_UI_Complete_Btn_clicked();
+
+    void on_Battery_PowerOn_clicked();
+
+    void on_Battery_PowerOff_clicked();
 
 private:
     Ui::MyWidget *ui;

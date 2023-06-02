@@ -6967,7 +6967,7 @@ background-color: rgb(255, 0, 0);</string>
                 <bool>false</bool>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>2</number>
                </property>
                <widget class="QWidget" name="DCACParameterSet_page">
                 <attribute name="title">
@@ -7316,7 +7316,7 @@ Floating charge</string>
                               </sizepolicy>
                              </property>
                              <property name="text">
-                              <string>Powr off</string>
+                              <string>Power off</string>
                              </property>
                             </widget>
                            </item>
