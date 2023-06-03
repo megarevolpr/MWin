@@ -59,7 +59,7 @@
    <item row="0" column="0">
     <widget class="QStackedWidget" name="UI_stackedWidget">
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="BasicSet_page">
       <layout class="QGridLayout" name="gridLayout_6">
@@ -142,7 +142,7 @@ color: rgb(255, 255, 255);</string>
                 <cursorShape>ArrowCursor</cursorShape>
                </property>
                <property name="rowCount">
-                <number>12</number>
+                <number>11</number>
                </property>
                <property name="columnCount">
                 <number>9</number>
@@ -156,7 +156,6 @@ color: rgb(255, 255, 255);</string>
                <attribute name="verticalHeaderVisible">
                 <bool>false</bool>
                </attribute>
-               <row/>
                <row/>
                <row/>
                <row/>
@@ -735,43 +734,6 @@ color: rgb(255, 255, 255);</string>
                  <set>AlignCenter</set>
                 </property>
                </item>
-               <item row="11" column="0">
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="textAlignment">
-                 <set>AlignCenter</set>
-                </property>
-               </item>
-               <item row="11" column="2">
-                <property name="text">
-                 <string/>
-                </property>
-               </item>
-               <item row="11" column="3">
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="textAlignment">
-                 <set>AlignCenter</set>
-                </property>
-               </item>
-               <item row="11" column="4">
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="textAlignment">
-                 <set>AlignCenter</set>
-                </property>
-               </item>
-               <item row="11" column="5">
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="textAlignment">
-                 <set>AlignCenter</set>
-                </property>
-               </item>
               </widget>
              </item>
             </layout>
@@ -785,8 +747,8 @@ color: rgb(255, 255, 255);</string>
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>794</width>
-               <height>349</height>
+               <width>975</width>
+               <height>414</height>
               </rect>
              </property>
              <property name="sizePolicy">
@@ -982,7 +944,7 @@ color: rgb(255, 255, 255);</string>
              </item>
              <item row="3" column="0">
               <property name="text">
-               <string>Vol protection\n upper limit</string>
+               <string>Vol protection upper limit</string>
               </property>
               <property name="textAlignment">
                <set>AlignCenter</set>
@@ -1035,7 +997,7 @@ color: rgb(255, 255, 255);</string>
              </item>
              <item row="4" column="0">
               <property name="text">
-               <string>Vol protection\n lower limit</string>
+               <string>Vol protection lower limit</string>
               </property>
               <property name="textAlignment">
                <set>AlignCenter</set>
@@ -1440,8 +1402,8 @@ color: rgb(255, 255, 255);</string>
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>945</width>
-               <height>374</height>
+               <width>975</width>
+               <height>414</height>
               </rect>
              </property>
              <attribute name="horizontalHeaderDefaultSectionSize">
@@ -1595,8 +1557,8 @@ color: rgb(255, 255, 255);</string>
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>791</width>
-               <height>347</height>
+               <width>975</width>
+               <height>414</height>
               </rect>
              </property>
              <property name="sizePolicy">
@@ -2046,6 +2008,9 @@ color: rgb(255, 255, 255);</string>
               <property name="text">
                <string>INV A inductance Cur. revise</string>
               </property>
+              <property name="textAlignment">
+               <set>AlignCenter</set>
+              </property>
              </item>
              <item row="11" column="4">
               <property name="text">
@@ -2059,10 +2024,16 @@ color: rgb(255, 255, 255);</string>
               <property name="text">
                <string>INV B inductance Cur. revise</string>
               </property>
+              <property name="textAlignment">
+               <set>AlignCenter</set>
+              </property>
              </item>
              <item row="13" column="2">
               <property name="text">
                <string>INV C inductance Cur. revise</string>
+              </property>
+              <property name="textAlignment">
+               <set>AlignCenter</set>
               </property>
              </item>
             </widget>
@@ -2089,8 +2060,11 @@ color: rgb(255, 255, 255);</string>
              </property>
              <item row="0" column="0">
               <widget class="QTableWidget" name="UI_DCDC_Debug_tableWidget">
+               <property name="sizeAdjustPolicy">
+                <enum>QAbstractScrollArea::AdjustIgnored</enum>
+               </property>
                <property name="rowCount">
-                <number>11</number>
+                <number>7</number>
                </property>
                <property name="columnCount">
                 <number>6</number>
@@ -2111,10 +2085,6 @@ color: rgb(255, 255, 255);</string>
                <row/>
                <row/>
                <row/>
-               <row/>
-               <row/>
-               <row/>
-               <row/>
                <column/>
                <column/>
                <column/>
@@ -2125,100 +2095,152 @@ color: rgb(255, 255, 255);</string>
                 <property name="text">
                  <string>Debug variable 1</string>
                 </property>
+                <property name="textAlignment">
+                 <set>AlignCenter</set>
+                </property>
                </item>
                <item row="0" column="2">
                 <property name="text">
                  <string>Debug variable 1 address</string>
+                </property>
+                <property name="textAlignment">
+                 <set>AlignCenter</set>
                 </property>
                </item>
                <item row="0" column="4">
                 <property name="text">
                  <string>Debug memery var. 1</string>
                 </property>
+                <property name="textAlignment">
+                 <set>AlignCenter</set>
+                </property>
                </item>
                <item row="1" column="0">
                 <property name="text">
                  <string>Debug variable 2</string>
+                </property>
+                <property name="textAlignment">
+                 <set>AlignCenter</set>
                 </property>
                </item>
                <item row="1" column="2">
                 <property name="text">
                  <string>Debug variable 2 address</string>
                 </property>
+                <property name="textAlignment">
+                 <set>AlignCenter</set>
+                </property>
                </item>
                <item row="1" column="4">
                 <property name="text">
                  <string>Debug memery var. 3</string>
+                </property>
+                <property name="textAlignment">
+                 <set>AlignCenter</set>
                 </property>
                </item>
                <item row="2" column="0">
                 <property name="text">
                  <string>Debug variable 3</string>
                 </property>
+                <property name="textAlignment">
+                 <set>AlignCenter</set>
+                </property>
                </item>
                <item row="2" column="2">
                 <property name="text">
                  <string>Debug variable 3 address</string>
+                </property>
+                <property name="textAlignment">
+                 <set>AlignCenter</set>
                 </property>
                </item>
                <item row="2" column="4">
                 <property name="text">
                  <string>Debug memery var. 3</string>
                 </property>
+                <property name="textAlignment">
+                 <set>AlignCenter</set>
+                </property>
                </item>
                <item row="3" column="0">
                 <property name="text">
                  <string>Current ID</string>
+                </property>
+                <property name="textAlignment">
+                 <set>AlignCenter</set>
                 </property>
                </item>
                <item row="4" column="0">
                 <property name="text">
                  <string>INT main flag</string>
                 </property>
+                <property name="textAlignment">
+                 <set>AlignCenter</set>
+                </property>
                </item>
                <item row="4" column="2">
                 <property name="text">
                  <string>Inv on off flag</string>
+                </property>
+                <property name="textAlignment">
+                 <set>AlignCenter</set>
                 </property>
                </item>
                <item row="4" column="4">
                 <property name="text">
                  <string>Monitor order</string>
                 </property>
+                <property name="textAlignment">
+                 <set>AlignCenter</set>
+                </property>
                </item>
                <item row="5" column="0">
                 <property name="text">
                  <string>DC bus flag</string>
+                </property>
+                <property name="textAlignment">
+                 <set>AlignCenter</set>
                 </property>
                </item>
                <item row="5" column="2">
                 <property name="text">
                  <string>DCONV logic </string>
                 </property>
+                <property name="textAlignment">
+                 <set>AlignCenter</set>
+                </property>
                </item>
                <item row="5" column="4">
                 <property name="text">
                  <string>Bat infor</string>
+                </property>
+                <property name="textAlignment">
+                 <set>AlignCenter</set>
                 </property>
                </item>
                <item row="6" column="0">
                 <property name="text">
                  <string>PV flag</string>
                 </property>
+                <property name="textAlignment">
+                 <set>AlignCenter</set>
+                </property>
                </item>
                <item row="6" column="2">
                 <property name="text">
                  <string>Parallel signal</string>
+                </property>
+                <property name="textAlignment">
+                 <set>AlignCenter</set>
                 </property>
                </item>
                <item row="6" column="4">
                 <property name="text">
                  <string>Bat state</string>
                 </property>
-               </item>
-               <item row="7" column="2">
-                <property name="text">
-                 <string/>
+                <property name="textAlignment">
+                 <set>AlignCenter</set>
                 </property>
                </item>
               </widget>

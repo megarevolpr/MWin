@@ -1540,6 +1540,64 @@ void MyWidget::SystemlnformationVer_clicked(int nid)
 
 void MyWidget::SystemParam_tbnt_released()
 {
+    for(int i=0; i<11;i++)//调整功能设置、系统参数设置的列宽行高
+    {
+        ui->UI_Parameter_Tab->setColumnWidth(i,170);
+        ui->UI_Parameter_Tab->setRowHeight(i,38);
+        ui->UI_SystemParameter_Tab->setColumnWidth(i,170);
+        ui->UI_SystemParameter_Tab->setRowHeight(i++,42);
+
+        ui->UI_Parameter_Tab->setColumnWidth(i,90);
+        ui->UI_Parameter_Tab->setRowHeight(i,38);
+        ui->UI_SystemParameter_Tab->setColumnWidth(i,90);
+        ui->UI_SystemParameter_Tab->setRowHeight(i++,42);
+
+        ui->UI_Parameter_Tab->setColumnWidth(i,55);
+        ui->UI_Parameter_Tab->setRowHeight(i,38);
+        ui->UI_SystemParameter_Tab->setColumnWidth(i,55);
+        ui->UI_SystemParameter_Tab->setRowHeight(i,42);
+    }
+    for(int i=0;i<9;i++)//调整 外设 的列宽行高
+    {
+        ui->ExternalDevice_tW->setColumnWidth(i,200);
+        ui->ExternalDevice_tW->setRowHeight(i,50);
+        if(i==3){
+            ui->ExternalDevice_tW->setColumnWidth(i,280);
+            ui->ExternalDevice_tW->setRowHeight(i,50);
+        }
+    }
+    for(int i=0; i<14;i++)//调整 DCAC调试 的列宽行高
+    {
+        if(i%2==0)
+        {
+            ui->UI_Debug_Tab->setColumnWidth(i,175);
+            ui->UI_Debug_Tab->setRowHeight(i,50);
+        }
+        else
+        {
+            ui->UI_Debug_Tab->setColumnWidth(i,140);
+            ui->UI_Debug_Tab->setRowHeight(i,50);
+        }
+    }
+    for (int i=0; i<11; i++)
+    {
+            ui->UI_Debug_Tab->item (i,0)->setTextAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
+            ui->UI_Debug_Tab->item (i,2)->setTextAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
+            ui->UI_Debug_Tab->item (i,4)->setTextAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
+    }
+    for(int i=0; i<7;i++)//调整 DCDC调试 的列宽行高
+    {
+        if(i%2==0)
+        {
+            ui->UI_DCDC_Debug_tableWidget->setColumnWidth(i,180);
+            ui->UI_DCDC_Debug_tableWidget->setRowHeight(i,50);
+        }
+        else
+        {
+            ui->UI_DCDC_Debug_tableWidget->setColumnWidth(i,140);
+            ui->UI_DCDC_Debug_tableWidget->setRowHeight(i,50);
+        }
+    }
 
 }
 
