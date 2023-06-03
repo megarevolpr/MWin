@@ -692,6 +692,14 @@ private slots:
     void on_radio_dhcp_clicked();
 
 
+    void on_Switch_on_Inv_clicked();
+
+    void on_Switch_off_Inv_clicked();
+
+    void on_Switch_on_clicked();
+
+    void on_Switch_off_clicked();
+
 private:
     Ui::MyWidget *ui;
     QButtonGroup *pButton_BatteryData;

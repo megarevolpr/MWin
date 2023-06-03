@@ -2519,7 +2519,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <enum>QFrame::Raised</enum>
            </property>
            <property name="currentIndex">
-            <number>3</number>
+            <number>4</number>
            </property>
            <widget class="QWidget" name="Host_page">
             <widget class="QPushButton" name="Bypass_Grid_btn">
@@ -8375,8 +8375,8 @@ B1 - A1 ≥ 30 %
             <widget class="QToolButton" name="Switch_off">
              <property name="geometry">
               <rect>
-               <x>430</x>
-               <y>200</y>
+               <x>530</x>
+               <y>240</y>
                <width>211</width>
                <height>140</height>
               </rect>
@@ -8417,8 +8417,8 @@ B1 - A1 ≥ 30 %
             <widget class="QToolButton" name="Switch_on">
              <property name="geometry">
               <rect>
-               <x>135</x>
-               <y>200</y>
+               <x>235</x>
+               <y>240</y>
                <width>221</width>
                <height>140</height>
               </rect>
@@ -8462,8 +8462,8 @@ B1 - A1 ≥ 30 %
             <widget class="QToolButton" name="Switch_off_Inv">
              <property name="geometry">
               <rect>
-               <x>430</x>
-               <y>20</y>
+               <x>530</x>
+               <y>60</y>
                <width>211</width>
                <height>140</height>
               </rect>
@@ -8504,8 +8504,8 @@ B1 - A1 ≥ 30 %
             <widget class="QToolButton" name="Switch_on_Inv">
              <property name="geometry">
               <rect>
-               <x>135</x>
-               <y>20</y>
+               <x>235</x>
+               <y>60</y>
                <width>221</width>
                <height>140</height>
               </rect>

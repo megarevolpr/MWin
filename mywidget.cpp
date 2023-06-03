@@ -394,6 +394,7 @@ void MyWidget::FirstPage()
  ***************************************************************/
 void MyWidget::AdvancedSetup_btn_clicked()
 {
+    m_menu->hide();
     ui->UI_stackedWidget->setCurrentWidget(ui->BasicSet_page);
     if(ASKey)//保证只执行一次这句话，否则多次进出高级设置，会多次绘制页面，点击一次button，出现个消息对话框
     {
@@ -1389,7 +1390,8 @@ void MyWidget::My_menuAction(int Index)
             break;
         case MACHINESTANDBY:
             {
-
+                m_menu->hide();
+                QMessageBox::question(this, "Stand-by", "这是变流器待机开关，点击后变流器进入待机状态\nThis is the converter standby switch. Click the converter to enter the standby state", "OK");
             }
             break;
         case MACHINEOPEN:
@@ -1398,6 +1400,7 @@ void MyWidget::My_menuAction(int Index)
             }
             break;
         case MACHINESWITCH:
+            ui->stackedWidget->setCurrentWidget(ui->Switch_page);
             break;
 
         default:
@@ -2824,4 +2827,28 @@ void MyWidget::on_radio_dhcp_clicked()
     }
     QMessageBox::question(this ,"DHCP", "如果选择此项，表示使用自动分配的IP地址\nIf this parameter is selected, the automatically assigned IP address is used", "OK");
 
+}
+
+/****************DCDC 变流器开启*****************/
+void MyWidget::on_Switch_on_Inv_clicked()
+{
+    QMessageBox::question(this, "Turn on", "这是DCDC变流器打开开关,点击后开启DCDC变流器\nThis is the DCDC converter turn on the switch, click to turn on the DCDC converter", "OK");
+}
+
+/****************DCDC 变流器关闭*****************/
+void MyWidget::on_Switch_off_Inv_clicked()
+{
+    QMessageBox::question(this, "Turn off", "这是DCDC变流器关闭开关，点击后关闭DCDC变流器\nThis is the DCDC converter off switch. Click to turn off the DCDC converter", "OK");
+}
+
+/****************DCAC 变流器开启*****************/
+void MyWidget::on_Switch_on_clicked()
+{
+    QMessageBox::question(this, "Turn on", "这是DCAC变流器打开开关,点击后开启DCAC变流器\nThis is the DCAC converter turn on the switch, click to turn on the DCAC converter", "OK");
+}
+
+/****************DCAC 变流器关闭*****************/
+void MyWidget::on_Switch_off_clicked()
+{
+    QMessageBox::question(this, "Turn off", "这是DCAC变流器关闭开关，点击后关闭DCAC变流器\nThis is the DCAC converter off switch. Click to turn off the DCAC converter", "OK");
 }
