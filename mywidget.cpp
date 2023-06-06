@@ -421,6 +421,52 @@ void MyWidget::MemoryAllocation()
     Module_min_explain = new QPushButton;  //最小模块数说明
     Insulation_detection_enable_DCDC_explain = new QPushButton;  //DCDC绝缘监测使能说明
 
+    /***************************外设**************************/
+    //输入干接点1说明
+    DI_1_Enable_explain = new QPushButton;
+    DI_1_NC_O_explain   = new QPushButton;
+    DI_1_Action_explain = new QPushButton;
+
+    //输入干接点2说明
+    DI_2_Enable_explain = new QPushButton;
+    DI_2_NC_O_explain   = new QPushButton;
+    DI_2_Action_explain = new QPushButton;
+
+    //输入干接点3说明
+    DI_3_Enable_explain = new QPushButton;
+    DI_3_NC_O_explain   = new QPushButton;
+    DI_3_Action_explain = new QPushButton;
+
+    //输入干接点4说明
+    DI_4_Enable_explain = new QPushButton;
+    DI_4_NC_O_explain   = new QPushButton;
+    DI_4_Action_explain = new QPushButton;
+
+    //输入干接点5说明
+    DI_5_Enable_explain = new QPushButton;
+    DI_5_NC_O_explain   = new QPushButton;
+    DI_5_Action_explain = new QPushButton;
+
+    //输入干接点6说明
+    DI_6_Enable_explain = new QPushButton;
+    DI_6_NC_O_explain   = new QPushButton;
+    DI_6_Action_explain = new QPushButton;
+
+    //输出干接点1说明
+    DO_1_Enable_explain = new QPushButton;
+    DO_1_NC_O_explain   = new QPushButton;
+    DO_1_Action_explain = new QPushButton;
+
+    //输出干接点2说明
+    DO_2_Enable_explain = new QPushButton;
+    DO_2_NC_O_explain   = new QPushButton;
+    DO_2_Action_explain = new QPushButton;
+
+    //输出干接点3说明
+    DO_3_Enable_explain = new QPushButton;
+    DO_3_NC_O_explain   = new QPushButton;
+    DO_3_Action_explain = new QPushButton;
+
 }
 /********************************************************
  * 初始化界面
@@ -1629,6 +1675,10 @@ void MyWidget::SystemParam_tbnt_released()
             ui->ExternalDevice_tW->setRowHeight(i,50);
         }
     }
+    ui->ExternalDevice_tW->horizontalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
+    ui->ExternalDevice_tW->verticalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
+    ui->ExternalDevice_tW->setStyleSheet("selection-background-color:lightblue;");
+
     for(int i=0; i<14;i++)//调整 DCAC调试 的列宽行高
     {
         if(i%2==0)
@@ -1664,6 +1714,7 @@ void MyWidget::SystemParam_tbnt_released()
 
     FunctionSet(ui->UI_Parameter_Tab);
     SystemParameter(ui->UI_SystemParameter_Tab);
+    ExternalDevice(ui->ExternalDevice_tW);
 }
 
 void MyWidget::on_Running_btn_clicked()  //显示变流器实时数据
@@ -3167,6 +3218,120 @@ void MyWidget::SystemParameter(QTableWidget *myTable)
                                                          "这是DCDC绝缘监测使能设置，有两项可选：允许(Enable)、禁止(Disable)\nThis is the DCDC insulation monitoring Enable setting. There are two options: Enable and Disable.");
     Insulation_detection_enable_DCDC->add_Specification();
 
+}
+
+void MyWidget::ExternalDevice(QTableWidget *myTable)
+{
+    DI_1_Enable = new Specification(this,DI_1_Enable_explain, myTable, 0, 0, \
+                                   "Enable", "DI_1 Enable", \
+                                   "输入干接点1，发生NO关机时执行动作的开关,可选功能为使能(Enable)、禁止(Disable)\nInput dry contact 1, the switch to perform the action when NO shutdown occurs. The optional functions are Enable(Enable) or Disable(Disable).");
+    DI_1_Enable->add_Specification();
+    DI_2_Enable = new Specification(this,DI_2_Enable_explain, myTable, 1, 0, \
+                                   "Disable", "DI_2 Enable", \
+                                   "输入干接点2，发生NC关机时执行动作的开关，可选功能为使能(Enable)、禁止(Disable)\nEnter dry contact 2, the switch that performs the action when NC shutdown occurs.The optional functions are Enable(Enable) or Disable(Disable).");
+    DI_2_Enable->add_Specification();
+    DI_3_Enable = new Specification(this,DI_3_Enable_explain, myTable, 2, 0, \
+                                   "Enable", "DI_3 Enable", \
+                                   "输入干接点3，门禁开启时执行动作的开关，可选功能为使能(Enable)、禁止(Disable)\nEnter dry contact 3. The switch that performs the action when the access control is opened.The optional functions are Enable(Enable) or Disable(Disable).");
+    DI_3_Enable->add_Specification();
+    DI_4_Enable = new Specification(this,DI_4_Enable_explain, myTable, 3, 0, \
+                                   "Enable", "DI_4 Enable", \
+                                   "输入干接点4，柴发信号发出时执行动作的开关，可选功能为使能(Enable)、禁止(Disable)\nInput dry contact 4, the switch to perform the action when the firewood signal is sent.The optional functions are Enable(Enable) or Disable(Disable).");
+    DI_4_Enable->add_Specification();
+    DI_5_Enable = new Specification(this,DI_5_Enable_explain, myTable, 4, 0, \
+                                   "Enable", "DI_5 Enable", \
+                                   "输入干接点5，发生水浸时执行动作的开关，可选功能为使能(Enable)、禁止(Disable)\nEnter dry contact 5, the switch that performs the action when flooding occurs.The optional functions are Enable(Enable) or Disable(Disable).");
+    DI_5_Enable->add_Specification();
+    DI_6_Enable = new Specification(this,DI_6_Enable_explain, myTable, 5, 0, \
+                                   "Enable", "DI_6 Enable", \
+                                   "输入干接点6，消防信号发出时执行动作的开关，可选功能为使能(Enable)、禁止(Disable)\nInput dry contact 6, the switch to perform action when the fire signal is sent.The optional functions are Enable(Enable) or Disable(Disable).");
+    DI_6_Enable->add_Specification();
+    DO_1_Enable = new Specification(this,DO_1_Enable_explain, myTable, 6, 0, \
+                                   "Disable", "DO_1 Enable", \
+                                   "输出干接点1，发电机开启时执行动作的开关，可选功能为使能(Enable)、禁止(Disable)\nOutput dry contact 1, the switch that performs the action when the generator is on.The optional functions are Enable(Enable) or Disable(Disable).");
+    DO_1_Enable->add_Specification();
+    DO_2_Enable = new Specification(this,DO_2_Enable_explain, myTable, 7, 0, \
+                                   "Disable", "DO_2 Enable", \
+                                   "输出干接点2，预留功能，设置无效，可选功能为使能(Enable)、禁止(Disable)\nDry contact 2 is output. The reserved function is invalid.The optional functions are Enable(Enable) or Disable(Disable).");
+    DO_2_Enable->add_Specification();
+    DO_3_Enable = new Specification(this,DO_3_Enable_explain, myTable, 8, 0, \
+                                   "Disable", "DO_3 Enable", \
+                                   "输出干接点3，预留功能，设置无效，可选功能为使能(Enable)、禁止(Disable)\nDry contact 3 is output. The reserved function is invalid.The optional functions are Enable(Enable) or Disable(Disable).");
+    DO_3_Enable->add_Specification();
+
+    DI_1_NC_O = new Specification(this,DI_1_NC_O_explain, myTable, 0, 1, \
+                                   "N_O", "DI_1 NC_O", \
+                                   "输入干接点1，设置NO关机是常闭电路还是常开电路,可选功能为常开(N_O)常闭(N_C)\nInput dry contact 1, set NO shutdown is normally closed circuit or normally open circuit, optional function is normally open (N_O) normally closed (N_C).");
+    DI_1_NC_O->add_Specification();
+    DI_2_NC_O = new Specification(this,DI_2_NC_O_explain, myTable, 1, 1, \
+                                   "N_O", "DI_2 NC_O", \
+                                   "输入干接点2，设置NC关机是常闭电路还是常开电路可选功能为常开(N_O)常闭(N_C)\nInput dry contact 2, set NC shutdown is normally closed circuit or normally open circuit Optional function is normally open (N_O) normally closed (N_C).");
+    DI_2_NC_O->add_Specification();
+    DI_3_NC_O = new Specification(this,DI_3_NC_O_explain, myTable, 2, 1, \
+                                   "N_C", "DI_3 NC_O", \
+                                   "输入干接点3，设置门禁开是常闭电路还是常开电路可选功能为常开(N_O)常闭(N_C)\nInput dry contact 3, set the access control open normally closed circuit or normally open circuit Optional function: normally open (N_O) normally closed (N_C).");
+    DI_3_NC_O->add_Specification();
+    DI_4_NC_O = new Specification(this,DI_4_NC_O_explain, myTable, 3, 1, \
+                                   "N_O", "DI_4 NC_O", \
+                                   "输入干接点4，设置柴发信号是常闭电路还是常开电路可选功能为常开(N_O)常闭(N_C)\nInput dry contact 4, set the firewood signal is normally closed circuit or normally open circuit Optional function is normally open (N_O) normally closed (N_C).");
+    DI_4_NC_O->add_Specification();
+    DI_5_NC_O = new Specification(this,DI_5_NC_O_explain, myTable, 4, 1, \
+                                   "N_O", "DI_5 NC_O", \
+                                   "输入干接点5，设置水浸是常闭电路还是常开电路可选功能为常开(N_O)常闭(N_C)\nInput dry contact 5, set the flooding is normally closed circuit or normally open circuit Optional function is normally open (N_O) normally closed (N_C).");
+    DI_5_NC_O->add_Specification();
+    DI_6_NC_O = new Specification(this,DI_6_NC_O_explain, myTable, 5, 1, \
+                                   "N_O", "DI_6 NC_O", \
+                                   "输入干接点6，设置消防是常闭电路还是常开电路可选功能为常开(N_O)常闭(N_C)\nInput dry contact 6, set fire is normally closed circuit or normally open circuit Optional function is normally open (N_O) normally closed (N_C).");
+    DI_6_NC_O->add_Specification();
+    DO_1_NC_O = new Specification(this,DO_1_NC_O_explain, myTable, 6, 1, \
+                                   "N_O", "DO_1 NC_O", \
+                                   "输出干接点1，设置发电机是常闭电路还是常开电路可选功能为常开(N_O)常闭(N_C)\nOutput dry contact 1, set the generator is normally closed circuit or normally open circuit Optional function is normally open (N_O) normally closed (N_C).");
+    DO_1_NC_O->add_Specification();
+    DO_2_NC_O = new Specification(this,DO_2_NC_O_explain, myTable, 7, 1, \
+                                   "N_O", "DO_2 NC_O", \
+                                   "输出干接点2，预留功能，设置无效，设置是常闭电路还是常开电路可选功能为常开(N_O)常闭(N_C)\nOutput dry contact 2, reserved function, setting invalid, setting is normally closed circuit or normally open circuit Optional function: normally open (N_O) normally closed (N_C).");
+    DO_2_NC_O->add_Specification();
+    DO_3_NC_O = new Specification(this,DO_3_NC_O_explain, myTable, 8, 1, \
+                                   "N_O", "DO_3 NC_O", \
+                                   "输出干接点3，预留功能，设置无效，设置是常闭电路还是常开电路可选功能为常开(N_O)常闭(N_C)\nOutput dry contact 3, reserved function, setting invalid, setting is normally closed circuit or normally open circuit Optional function: normally open (N_O) normally closed (N_C).");
+    DO_3_NC_O->add_Specification();
+
+    DI_1_Action = new Specification(this,DI_1_Action_explain, myTable, 0, 2, \
+                                   "Shut down", "DI_1 Action", \
+                                   "输入干接点1，发生NO关机时执行的动作,可选功能为提示(Prompt)、待机(Standby)、关机(Shut down)、充满待机(Full standby)、放空待机(Empty standby)、故障待机(Failure standby)、电网信号(Grid singnal)\nInput dry contact 1 to perform the action when NO shutdown occurs. The optional functions are prompt(Prompt), standby(Standby), shutdown(Shut down), full standby(Full standby), empty standby(Empty standby), fault standby(Failure standby), and power grid signal(Grid singnal).");
+    DI_1_Action->add_Specification();
+    DI_2_Action = new Specification(this,DI_2_Action_explain, myTable, 1, 2, \
+                                   "Prompt", "DI_2 Action", \
+                                   "输入干接点2，发生NC关机时执行的动作,可选功能为提示(Prompt)、待机(Standby)、关机(Shut down)、充满待机(Full standby)、放空待机(Empty standby)、故障待机(Failure standby)、电网信号(Grid singnal)\nEnter dry contact 2 to perform the action when the NC is shut down.The optional functions are prompt(Prompt), standby(Standby), shutdown(Shut down), full standby(Full standby), empty standby(Empty standby), fault standby(Failure standby), and power grid signal(Grid singnal)");
+    DI_2_Action->add_Specification();
+    DI_3_Action = new Specification(this,DI_3_Action_explain, myTable, 2, 2, \
+                                   "Prompt", "DI_3 Action", \
+                                   "输入干接点3，门禁打开时执行的动作,可选功能为提示(Prompt)、待机(Standby)、关机(Shut down)、充满待机(Full standby)、放空待机(Empty standby)、故障待机(Failure standby)、电网信号(Grid singnal)\nEnter dry contact 3. The action is performed when the access control is opened.The optional functions are prompt(Prompt), standby(Standby), shutdown(Shut down), full standby(Full standby), empty standby(Empty standby), fault standby(Failure standby), and power grid signal(Grid singnal)");
+    DI_3_Action->add_Specification();
+    DI_4_Action = new Specification(this,DI_4_Action_explain, myTable, 3, 2, \
+                                   "Prompt", "DI_4 Action", \
+                                   "输入干接点4，柴发信号发出时执行的动作,可选功能为提示(Prompt)、待机(Standby)、关机(Shut down)、充满待机(Full standby)、放空待机(Empty standby)、故障待机(Failure standby)、电网信号(Grid singnal)\nInput dry contact 4, the action to be performed when the chai signal is issued.The optional functions are prompt(Prompt), standby(Standby), shutdown(Shut down), full standby(Full standby), empty standby(Empty standby), fault standby(Failure standby), and power grid signal(Grid singnal)");
+    DI_4_Action->add_Specification();
+    DI_5_Action = new Specification(this,DI_5_Action_explain, myTable, 4, 2, \
+                                   "Shut down", "DI_5 Action", \
+                                   "输入干接点5，发生水浸时执行的动作,可选功能为提示(Prompt)、待机(Standby)、关机(Shut down)、充满待机(Full standby)、放空待机(Empty standby)、故障待机(Failure standby)、电网信号(Grid singnal)\nEnter dry contact 5 to perform the action when flooding occurs.The optional functions are prompt(Prompt), standby(Standby), shutdown(Shut down), full standby(Full standby), empty standby(Empty standby), fault standby(Failure standby), and power grid signal(Grid singnal)");
+    DI_5_Action->add_Specification();
+    DI_6_Action = new Specification(this,DI_6_Action_explain, myTable, 5, 2, \
+                                   "Shut down", "DI_6 Action", \
+                                   "输入干接点6，触发消防时执行的动作,可选功能为提示(Prompt)、待机(Standby)、关机(Shut down)、充满待机(Full standby)、放空待机(Empty standby)、故障待机(Failure standby)、电网信号(Grid singnal)\nEnter dry contact 6 to trigger the fire extinguishing action.The optional functions are prompt(Prompt), standby(Standby), shutdown(Shut down), full standby(Full standby), empty standby(Empty standby), fault standby(Failure standby), and power grid signal(Grid singnal)");
+    DI_6_Action->add_Specification();
+    DO_1_Action = new Specification(this,DO_1_Action_explain, myTable, 6, 2, \
+                                   "Prompt", "DO_1 Action", \
+                                   "输出干接点1，启动发电机时执行的动作,可选功能为提示(Prompt)、待机(Standby)、关机(Shut down)、充满待机(Full standby)、放空待机(Empty standby)、故障待机(Failure standby)、电网信号(Grid singnal)\nOutput dry contact 1, the action to be performed when starting the generator.The optional functions are prompt(Prompt), standby(Standby), shutdown(Shut down), full standby(Full standby), empty standby(Empty standby), fault standby(Failure standby), and power grid signal(Grid singnal)");
+    DO_1_Action->add_Specification();
+    DO_2_Action = new Specification(this,DO_2_Action_explain, myTable, 7, 2, \
+                                   "Prompt", "DO_2 Action", \
+                                   "输出干接点2，预留功能，设置无效，信号触发时执行的动作,可选功能为提示(Prompt)、待机(Standby)、关机(Shut down)、充满待机(Full standby)、放空待机(Empty standby)、故障待机(Failure standby)、电网信号(Grid singnal)\nOutput dry contact 2, reserved function, set invalid, the action to be performed when the signal is triggered.The optional functions are prompt(Prompt), standby(Standby), shutdown(Shut down), full standby(Full standby), empty standby(Empty standby), fault standby(Failure standby), and power grid signal(Grid singnal)");
+    DO_2_Action->add_Specification();
+    DO_3_Action = new Specification(this,DO_3_Action_explain, myTable, 8, 2, \
+                                   "Prompt", "DO_3 Action", \
+                                   "输出干接点3，预留功能，设置无效，信号触发时执行的动作,可选功能为提示(Prompt)、待机(Standby)、关机(Shut down)、充满待机(Full standby)、放空待机(Empty standby)、故障待机(Failure standby)、电网信号(Grid singnal)\nDry contact 3 is output. The reserved function is invalid.The optional functions are prompt(Prompt), standby(Standby), shutdown(Shut down), full standby(Full standby), empty standby(Empty standby), fault standby(Failure standby), and power grid signal(Grid singnal)");
+    DO_3_Action->add_Specification();
 }
 
 

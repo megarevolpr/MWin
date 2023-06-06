@@ -759,6 +759,71 @@ public:
     QPushButton *Insulation_detection_enable_DCDC_explain;  //DCDC绝缘监测使能说明
     Specification *Insulation_detection_enable_DCDC;
 
+    /***************************外设**************************/
+    QPushButton *DI_1_Enable_explain;   //输入干接点1说明
+    Specification *DI_1_Enable;
+    QPushButton *DI_1_NC_O_explain;
+    Specification *DI_1_NC_O;
+    QPushButton *DI_1_Action_explain;
+    Specification *DI_1_Action;
+
+    QPushButton *DI_2_Enable_explain;   //输入干接点2说明
+    Specification *DI_2_Enable;
+    QPushButton *DI_2_NC_O_explain;
+    Specification *DI_2_NC_O;
+    QPushButton *DI_2_Action_explain;
+    Specification *DI_2_Action;
+
+    QPushButton *DI_3_Enable_explain;   //输入干接点3说明
+    Specification *DI_3_Enable;
+    QPushButton *DI_3_NC_O_explain;
+    Specification *DI_3_NC_O;
+    QPushButton *DI_3_Action_explain;
+    Specification *DI_3_Action;
+
+    QPushButton *DI_4_Enable_explain;   //输入干接点4说明
+    Specification *DI_4_Enable;
+    QPushButton *DI_4_NC_O_explain;
+    Specification *DI_4_NC_O;
+    QPushButton *DI_4_Action_explain;
+    Specification *DI_4_Action;
+
+    QPushButton *DI_5_Enable_explain;   //输入干接点5说明
+    Specification *DI_5_Enable;
+    QPushButton *DI_5_NC_O_explain;
+    Specification *DI_5_NC_O;
+    QPushButton *DI_5_Action_explain;
+    Specification *DI_5_Action;
+
+    QPushButton *DI_6_Enable_explain;   //输入干接点6说明
+    Specification *DI_6_Enable;
+    QPushButton *DI_6_NC_O_explain;
+    Specification *DI_6_NC_O;
+    QPushButton *DI_6_Action_explain;
+    Specification *DI_6_Action;
+
+    QPushButton *DO_1_Enable_explain;   //输出干接点1说明
+    Specification *DO_1_Enable;
+    QPushButton *DO_1_NC_O_explain;
+    Specification *DO_1_NC_O;
+    QPushButton *DO_1_Action_explain;
+    Specification *DO_1_Action;
+
+    QPushButton *DO_2_Enable_explain;   //输出干接点2说明
+    Specification *DO_2_Enable;
+    QPushButton *DO_2_NC_O_explain;
+    Specification *DO_2_NC_O;
+    QPushButton *DO_2_Action_explain;
+    Specification *DO_2_Action;
+
+    QPushButton *DO_3_Enable_explain;   //输出干接点3说明
+    Specification *DO_3_Enable;
+    QPushButton *DO_3_NC_O_explain;
+    Specification *DO_3_NC_O;
+    QPushButton *DO_3_Action_explain;
+    Specification *DO_3_Action;
+
+
 private:
 
 
@@ -802,6 +867,7 @@ private:
     void OperationLog_tab(QTableWidget *myTable);//操作日志 绘制button
     void FunctionSet(QTableWidget *myTable);    //功能设置页说明
     void SystemParameter(QTableWidget *myTable);//系统参数页说明
+    void ExternalDevice(QTableWidget *myTable);//外设页说明
 
 private slots:
     void on_UI_MenuBtn_clicked();//转到槽
