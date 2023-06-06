@@ -467,6 +467,47 @@ void MyWidget::MemoryAllocation()
     DO_3_NC_O_explain   = new QPushButton;
     DO_3_Action_explain = new QPushButton;
 
+    /***************************DCAC调试**************************/
+    Debug_variable_1_explain        = new QPushButton;  //调试变量1
+    Debug_variable_2_explain        = new QPushButton;  //调试变量2
+    Debug_variable_3_explain        = new QPushButton;  //调试变量3
+    Debug_variable_1_addr_explain   = new QPushButton;  //调试地址变量1
+    Debug_variable_2_addr_explain   = new QPushButton;  //调试地址变量2
+    Debug_variable_3_addr_explain   = new QPushButton;  //调试地址变量3
+    Debug_memery_var_1_explain      = new QPushButton;  //调试内存变量1
+    Debug_memery_var_2_explain      = new QPushButton;  //调试内存变量2
+    Debug_memery_var_3_explain      = new QPushButton;  //调试内存变量3
+    Input_Vol_revise_explain        = new QPushButton;  //输入电压系数
+    Input_Cur_revise_explain        = new QPushButton;  //输入电流系数
+
+    Voltage_1_5_revise_explain      = new QPushButton;  //1.5V电压系数
+    Bus_Vol_revise_explain          = new QPushButton;  //母线电压系数
+    Grid_A_AB_Vol_revise_explain    = new QPushButton;  //电网A相电压系数
+    Grid_B_BC_Vol_revise_explain    = new QPushButton;  //电网B相电压系数
+    Grid_C_CA_Vol_revise_explain    = new QPushButton;  //电网C相电压系数
+    Output_A_Cur_revise_explain     = new QPushButton;  //输出A相电流系数
+    Output_B_Cur_revise_explain     = new QPushButton;  //输出B相电流系数
+    Output_C_Cur_revise_explain     = new QPushButton;  //输出C相电流系数
+    INV_A_Vol_revise_explain        = new QPushButton;  //逆变A相电压系数
+    INV_B_Vol_revise_explain        = new QPushButton;  //逆变B相电压系数
+    INV_C_Vol_revise_explain        = new QPushButton;  //逆变C相电压系数
+    INV_A_ind_Cur_revise_explain    = new QPushButton;  //逆变A相电感电流系数
+    INV_B_ind_Cur_revise_explain    = new QPushButton;  //逆变B相电感电流系数
+    INV_C_ind_Cur_revise_explain    = new QPushButton;  //逆变C相电感电流系数
+
+    INV_On_off_flag_explain         = new QPushButton;  //开关机状态字
+    Logic_state_explain             = new QPushButton;  //逻辑状态字
+    INV_flag_explain                = new QPushButton;  //逆变状态字
+    Grid_flag_explain               = new QPushButton;  //电网状态字
+    Grid_protect_flag_explain       = new QPushButton;  //电网保护状态字
+    PV_flag_explain                 = new QPushButton;  //电池电压状态字
+    DC_bus_flag_explain             = new QPushButton;  //母线状态字
+    INT_main_flag_explain           = new QPushButton;  //中断状态字
+    parallel_signal_explain         = new QPushButton;  //并机状态字
+    Monitor_Order_explain           = new QPushButton;  //监控命令状态字
+    Bat_Infor_explain               = new QPushButton;  //电池信息字
+    Bat_State_explain               = new QPushButton;  //电池状态字
+
 }
 /********************************************************
  * 初始化界面
@@ -1715,6 +1756,7 @@ void MyWidget::SystemParam_tbnt_released()
     FunctionSet(ui->UI_Parameter_Tab);
     SystemParameter(ui->UI_SystemParameter_Tab);
     ExternalDevice(ui->ExternalDevice_tW);
+    DCAC_Debugg(ui->UI_Debug_Tab);
 }
 
 void MyWidget::on_Running_btn_clicked()  //显示变流器实时数据
@@ -3332,6 +3374,231 @@ void MyWidget::ExternalDevice(QTableWidget *myTable)
                                    "Prompt", "DO_3 Action", \
                                    "输出干接点3，预留功能，设置无效，信号触发时执行的动作,可选功能为提示(Prompt)、待机(Standby)、关机(Shut down)、充满待机(Full standby)、放空待机(Empty standby)、故障待机(Failure standby)、电网信号(Grid singnal)\nDry contact 3 is output. The reserved function is invalid.The optional functions are prompt(Prompt), standby(Standby), shutdown(Shut down), full standby(Full standby), empty standby(Empty standby), fault standby(Failure standby), and power grid signal(Grid singnal)");
     DO_3_Action->add_Specification();
+}
+
+void MyWidget::DCAC_Debugg(QTableWidget *myTable)
+{
+    //调试变量1
+    Debug_variable_1 = new Specification(this,Debug_variable_1_explain, myTable, 0, 1, \
+                                   "0", "Debug variable 1", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    Debug_variable_1->add_Specification();
+
+    //调试变量2
+    Debug_variable_2 = new Specification(this,Debug_variable_2_explain, myTable, 1, 1, \
+                                   "0", "Debug variable 2", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    Debug_variable_2->add_Specification();
+
+    //调试变量3
+    Debug_variable_3 = new Specification(this,Debug_variable_3_explain, myTable, 2, 1, \
+                                   "0", "Debug variable 3", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    Debug_variable_3->add_Specification();
+
+    //调试地址变量1
+    Debug_variable_1_addr = new Specification(this,Debug_variable_1_addr_explain, myTable, 3, 1, \
+                                   "4096", "Debug variable 1 addr", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    Debug_variable_1_addr->add_Specification();
+
+    //调试地址变量2
+    Debug_variable_2_addr = new Specification(this,Debug_variable_2_addr_explain, myTable, 4, 1, \
+                                   "4096", "Debug variable 2 addr", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    Debug_variable_2_addr->add_Specification();
+
+    //调试地址变量3
+    Debug_variable_3_addr = new Specification(this,Debug_variable_3_addr_explain, myTable, 5, 1, \
+                                   "4096", "Debug variable 3 addr", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    Debug_variable_3_addr->add_Specification();
+
+    //调试内存变量1
+    Debug_memery_var_1 = new Specification(this,Debug_memery_var_1_explain, myTable, 6, 1, \
+                                   "0", "Debug memery var 1", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    Debug_memery_var_1->add_Specification();
+
+    //调试内存变量2
+    Debug_memery_var_2 = new Specification(this,Debug_memery_var_2_explain, myTable, 7, 1, \
+                                   "0", "Debug memery var 2", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    Debug_memery_var_2->add_Specification();
+
+    //调试内存变量3
+    Debug_memery_var_3 = new Specification(this,Debug_memery_var_3_explain, myTable, 8, 1, \
+                                   "0", "Debug memery var 3", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    Debug_memery_var_3->add_Specification();
+
+    //输入电压系数
+    Input_Vol_revise = new Specification(this,Input_Vol_revise_explain, myTable, 9, 1, \
+                                   "", "Input Vol revise", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    Input_Vol_revise->add_Specification();
+
+    //输入电流系数
+    Input_Cur_revise = new Specification(this,Input_Cur_revise_explain, myTable, 10, 1, \
+                                   "", "Input Cur revise", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    Input_Cur_revise->add_Specification();
+
+    //1.5V电压系数
+    Voltage_1_5_revise = new Specification(this,Voltage_1_5_revise_explain, myTable, 0, 3, \
+                                   "", "Voltage 1.5 revise", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    Voltage_1_5_revise->add_Specification();
+
+    //母线电压系数
+    Bus_Vol_revise = new Specification(this,Bus_Vol_revise_explain, myTable, 1, 3, \
+                                   "", "Bus Vol revise", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    Bus_Vol_revise->add_Specification();
+
+    //电网A相电压系数
+    Grid_A_AB_Vol_revise = new Specification(this,Grid_A_AB_Vol_revise_explain, myTable, 2, 3, \
+                                   "", "Grid A AB Vol revise", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    Grid_A_AB_Vol_revise->add_Specification();
+
+    //电网B相电压系数
+    Grid_B_BC_Vol_revise = new Specification(this,Grid_B_BC_Vol_revise_explain, myTable, 3, 3, \
+                                   "", "Grid B BC Vol revise", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    Grid_B_BC_Vol_revise->add_Specification();
+
+    //电网C相电压系数
+    Grid_C_CA_Vol_revise = new Specification(this,Grid_C_CA_Vol_revise_explain, myTable, 4, 3, \
+                                   "", "Grid C CA Vol revise", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    Grid_C_CA_Vol_revise->add_Specification();
+
+    //输出A相电流系数
+    Output_A_Cur_revise = new Specification(this,Output_A_Cur_revise_explain, myTable, 5, 3, \
+                                   "", "Output A Cur revise", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    Output_A_Cur_revise->add_Specification();
+
+    //输出B相电流系数
+    Output_B_Cur_revise = new Specification(this,Output_B_Cur_revise_explain, myTable, 6, 3, \
+                                   "", "Output B Cur revise", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    Output_B_Cur_revise->add_Specification();
+
+    //输出C相电流系数
+    Output_C_Cur_revise = new Specification(this,Output_C_Cur_revise_explain, myTable, 7, 3, \
+                                   "", "Output C Cur revise", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    Output_C_Cur_revise->add_Specification();
+
+    //逆变A相电压系数
+    INV_A_Vol_revise = new Specification(this,INV_A_Vol_revise_explain, myTable, 8, 3, \
+                                   "", "INV A Vol revise", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    INV_A_Vol_revise->add_Specification();
+
+    //逆变B相电压系数
+    INV_B_Vol_revise = new Specification(this,INV_B_Vol_revise_explain, myTable, 9, 3, \
+                                   "", "INV B Vol revise", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    INV_B_Vol_revise->add_Specification();
+
+    //逆变C相电压系数
+    INV_C_Vol_revise = new Specification(this,INV_C_Vol_revise_explain, myTable, 10, 3, \
+                                   "", "INV C Vol revise", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    INV_C_Vol_revise->add_Specification();
+
+    //逆变A相电感电流系数
+    INV_A_ind_Cur_revise = new Specification(this,INV_A_ind_Cur_revise_explain, myTable, 11, 3, \
+                                   "", "INV A inductance Cur revise", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    INV_A_ind_Cur_revise->add_Specification();
+
+    //逆变B相电感电流系数
+    INV_B_ind_Cur_revise = new Specification(this,INV_B_ind_Cur_revise_explain, myTable, 12, 3, \
+                                   "", "INV B inductance Cur revise", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    INV_B_ind_Cur_revise->add_Specification();
+
+    //逆变C相电感电流系数
+    INV_C_ind_Cur_revise = new Specification(this,INV_C_ind_Cur_revise_explain, myTable, 13, 3, \
+                                   "", "INV C inductance Cur revise", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    INV_C_ind_Cur_revise->add_Specification();
+
+    //开关机状态字
+    INV_On_off_flag = new Specification(this,INV_On_off_flag_explain, myTable, 0, 5, \
+                                   "0", "INV On off flag", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    INV_On_off_flag->add_Specification();
+
+    //逻辑状态字
+    Logic_state = new Specification(this,Logic_state_explain, myTable, 1, 5, \
+                                   "0", "Logic state", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    Logic_state->add_Specification();
+
+    //逆变状态字
+    INV_flag = new Specification(this,INV_flag_explain, myTable, 2, 5, \
+                                   "0", "INV flag", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    INV_flag->add_Specification();
+
+    //电网状态字
+    Grid_flag = new Specification(this,Grid_flag_explain, myTable, 3, 5, \
+                                   "0", "Grid flag", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    Grid_flag->add_Specification();
+
+    //电网保护状态字
+    Grid_protect_flag = new Specification(this,Grid_protect_flag_explain, myTable, 4, 5, \
+                                   "0", "Grid protect flag", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    Grid_protect_flag->add_Specification();
+
+    //电池电压状态字
+    PV_flag = new Specification(this,PV_flag_explain, myTable, 5, 5, \
+                                   "0", "PV flag", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    PV_flag->add_Specification();
+
+    //母线状态字
+    DC_bus_flag = new Specification(this,DC_bus_flag_explain, myTable, 6, 5, \
+                                   "0", "DC bus flag", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    DC_bus_flag->add_Specification();
+
+    //中断状态字
+    INT_main_flag = new Specification(this,INT_main_flag_explain, myTable, 7, 5, \
+                                   "0", "INT main flag", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    INT_main_flag->add_Specification();
+
+    //并机状态字
+    parallel_signal = new Specification(this,parallel_signal_explain, myTable, 8, 5, \
+                                   "0", "parallel signal", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    parallel_signal->add_Specification();
+
+    //监控命令状态字
+    Monitor_Order = new Specification(this,Monitor_Order_explain, myTable, 9, 5, \
+                                   "0", "Monitor Order", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    Monitor_Order->add_Specification();
+
+    //电池信息字
+    Bat_Infor = new Specification(this,Bat_Infor_explain, myTable, 10, 5, \
+                                   "0", "Bat Infor", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    Bat_Infor->add_Specification();
+
+    //电池状态字
+    Bat_State = new Specification(this,Bat_State_explain, myTable, 11, 5, \
+                                   "0", "Bat State", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    Bat_State->add_Specification();
 }
 
 

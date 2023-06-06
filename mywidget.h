@@ -823,6 +823,118 @@ public:
     QPushButton *DO_3_Action_explain;
     Specification *DO_3_Action;
 
+    /***************************DCAC调试**************************/
+    QPushButton *Debug_variable_1_explain;  //调试变量1
+    Specification *Debug_variable_1;
+
+
+    QPushButton *Debug_variable_2_explain;  //调试变量2
+    Specification *Debug_variable_2;
+
+    QPushButton *Debug_variable_3_explain;  //调试变量3
+    Specification *Debug_variable_3;
+
+    QPushButton *Debug_variable_1_addr_explain; //调试地址变量1
+    Specification *Debug_variable_1_addr;
+
+    QPushButton *Debug_variable_2_addr_explain; //调试地址变量2
+    Specification *Debug_variable_2_addr;
+
+    QPushButton *Debug_variable_3_addr_explain; //调试地址变量3
+    Specification *Debug_variable_3_addr;
+
+    QPushButton *Debug_memery_var_1_explain;    //调试内存变量1
+    Specification *Debug_memery_var_1;
+
+    QPushButton *Debug_memery_var_2_explain;    //调试内存变量2
+    Specification *Debug_memery_var_2;
+
+    QPushButton *Debug_memery_var_3_explain;    //调试内存变量3
+    Specification *Debug_memery_var_3;
+
+    QPushButton *Input_Vol_revise_explain;  //输入电压系数
+    Specification *Input_Vol_revise;
+
+    QPushButton *Input_Cur_revise_explain;  //输入电流系数
+    Specification *Input_Cur_revise;
+
+    QPushButton *Voltage_1_5_revise_explain;   //1.5V电压系数
+    Specification *Voltage_1_5_revise;
+
+    QPushButton *Bus_Vol_revise_explain;    //母线电压系数
+    Specification *Bus_Vol_revise;
+
+    QPushButton *Grid_A_AB_Vol_revise_explain;  //电网A相电压系数
+    Specification *Grid_A_AB_Vol_revise;
+
+    QPushButton *Grid_B_BC_Vol_revise_explain;  //电网B相电压系数
+    Specification *Grid_B_BC_Vol_revise;
+
+    QPushButton *Grid_C_CA_Vol_revise_explain;  //电网C相电压系数
+    Specification *Grid_C_CA_Vol_revise;
+
+    QPushButton *Output_A_Cur_revise_explain; //输出A相电流系数
+    Specification *Output_A_Cur_revise;
+
+    QPushButton *Output_B_Cur_revise_explain;   //输出B相电流系数
+    Specification *Output_B_Cur_revise;
+
+    QPushButton *Output_C_Cur_revise_explain;   //输出C相电流系数
+    Specification *Output_C_Cur_revise;
+
+    QPushButton *INV_A_Vol_revise_explain;  //逆变A相电压系数
+    Specification *INV_A_Vol_revise;
+
+    QPushButton *INV_B_Vol_revise_explain;  //逆变B相电压系数
+    Specification *INV_B_Vol_revise;
+
+    QPushButton *INV_C_Vol_revise_explain;  //逆变C相电压系数
+    Specification *INV_C_Vol_revise;
+
+    QPushButton *INV_A_ind_Cur_revise_explain;  //逆变A相电感电流系数
+    Specification *INV_A_ind_Cur_revise;
+
+    QPushButton *INV_B_ind_Cur_revise_explain;  //逆变B相电感电流系数
+    Specification *INV_B_ind_Cur_revise;
+
+    QPushButton *INV_C_ind_Cur_revise_explain;  //逆变C相电感电流系数
+    Specification *INV_C_ind_Cur_revise;
+
+    QPushButton *INV_On_off_flag_explain;   //开关机状态字
+    Specification *INV_On_off_flag;
+
+    QPushButton *Logic_state_explain;   //逻辑状态字
+    Specification *Logic_state;
+
+    QPushButton *INV_flag_explain;  //逆变状态字
+    Specification *INV_flag;
+
+    QPushButton *Grid_flag_explain; //电网状态字
+    Specification *Grid_flag;
+
+    QPushButton *Grid_protect_flag_explain; //电网保护状态字
+    Specification *Grid_protect_flag;
+
+    QPushButton *PV_flag_explain; //电池电压状态字
+    Specification *PV_flag;
+
+    QPushButton *DC_bus_flag_explain;  //母线状态字
+    Specification *DC_bus_flag;
+
+    QPushButton *INT_main_flag_explain; //中断状态字
+    Specification *INT_main_flag;
+
+    QPushButton *parallel_signal_explain;  //并机状态字
+    Specification *parallel_signal;
+
+    QPushButton *Monitor_Order_explain;  //监控命令状态字
+    Specification *Monitor_Order;
+
+    QPushButton *Bat_Infor_explain;  //电池信息字
+    Specification *Bat_Infor;
+
+    QPushButton *Bat_State_explain;  //电池状态字
+    Specification *Bat_State;
 
 private:
 
@@ -868,6 +980,7 @@ private:
     void FunctionSet(QTableWidget *myTable);    //功能设置页说明
     void SystemParameter(QTableWidget *myTable);//系统参数页说明
     void ExternalDevice(QTableWidget *myTable);//外设页说明
+    void DCAC_Debugg(QTableWidget *myTable); //DCAC调试页说明
 
 private slots:
     void on_UI_MenuBtn_clicked();//转到槽
