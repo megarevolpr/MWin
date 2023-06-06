@@ -1353,7 +1353,7 @@ color: rgb(255, 255, 255);</string>
              </item>
              <item row="11" column="0">
               <property name="text">
-               <string>Load_Priority</string>
+               <string>Load priority</string>
               </property>
               <property name="textAlignment">
                <set>AlignCenter</set>
@@ -2469,7 +2469,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                <string notr="true">color: rgb(255, 255, 255);</string>
               </property>
               <property name="text">
-               <string>500kW</string>
+               <string>100kW</string>
               </property>
              </widget>
             </item>
@@ -2541,7 +2541,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <enum>QFrame::Raised</enum>
            </property>
            <property name="currentIndex">
-            <number>4</number>
+            <number>0</number>
            </property>
            <widget class="QWidget" name="Host_page">
             <widget class="QPushButton" name="Bypass_Grid_btn">
@@ -8146,8 +8146,8 @@ B1 - A1 ≥ 30 %
                           <rect>
                            <x>0</x>
                            <y>0</y>
-                           <width>374</width>
-                           <height>344</height>
+                           <width>16</width>
+                           <height>16</height>
                           </rect>
                          </property>
                          <property name="cursor">

@@ -388,6 +388,39 @@ void MyWidget::MemoryAllocation()
     Sounds_explain = new QPushButton;    //声音说明
     DryContact_explain = new QPushButton;    //干接点说明
 
+    /***************************系统参数**************************/
+    Change_rate_of_power_explain = new QPushButton;  //功率变化率说明
+    Grid_frequency_upper_limit_explain = new QPushButton;  //电网频率变化范围上限说明
+    Grid_frequency_lower_limit_explain = new QPushButton;  //电网频率变化范围下限说明
+    Vol_protection_upper_limit_explain = new QPushButton;  //电压保护范围上限说明
+    Vol_protection_lower_limit_explain = new QPushButton;  //电压保护范围下限说明
+    HVRT_enable_explain = new QPushButton;  //高穿使能说明
+    LVRT_enable_explain = new QPushButton;  //低穿使能说明
+    AFD_enable_explain = new QPushButton;  //孤岛使能说明
+    Insulation_detection_enable_explain = new QPushButton;  //绝缘监测使能说明
+    PrimaryFreq_enable_explain = new QPushButton;  //一次调频使能说明
+    Inertia_enable_explain = new QPushButton;  //转动惯量使能说明
+    Load_priority_explain = new QPushButton;  //负载优先说明
+    Machine_type_explain = new QPushButton;  //机器型号说明
+    Machine_capacity_explain = new QPushButton;  //机器容量说明
+    Output_Fre_grade_explain = new QPushButton;  //输出频率等级说明
+    Output_vol_level_explain = new QPushButton;  //输出电压等级说明
+    Converter_side_vol_level_explain = new QPushButton;  //逆变电压等级说明
+    Output_reactive_power_mode_explain = new QPushButton;  //输出无功方式说明
+    Grid_recovery_scheduling_explain = new QPushButton;  //电网恢复调度开机说明
+    Grid_recovery_time_explain = new QPushButton;  //电网恢复并网时间说明
+    Grid_connected_mode_of_Inv_explain = new QPushButton;  //逆变器并网方式说明
+    Pshedding_Freq_explain = new QPushButton;  //过频降载说明
+    QP_curve_explain = new QPushButton;  //QP曲线说明
+    CV_parallel_explain = new QPushButton;  //恒压并机说明
+    Module_Number_explain = new QPushButton;  //模块数量说明
+    Restore_factory_explain = new QPushButton;  //恢复出厂说明
+    Clear_Data_explain = new QPushButton;  //清除数据说明
+    Machine_Type_explain = new QPushButton;  //机架说明
+    Module_max_explain = new QPushButton;  //最大模块数说明
+    Module_min_explain = new QPushButton;  //最小模块数说明
+    Insulation_detection_enable_DCDC_explain = new QPushButton;  //DCDC绝缘监测使能说明
+
 }
 /********************************************************
  * 初始化界面
@@ -1630,6 +1663,7 @@ void MyWidget::SystemParam_tbnt_released()
     }
 
     FunctionSet(ui->UI_Parameter_Tab);
+    SystemParameter(ui->UI_SystemParameter_Tab);
 }
 
 void MyWidget::on_Running_btn_clicked()  //显示变流器实时数据
@@ -2943,6 +2977,196 @@ void MyWidget::FunctionSet(QTableWidget *myTable)
                                    "forbid", "DryContact", \
                                    "根据项目现场配置干接点功能，可供选择为允许(Allow)、禁止(forbid)\nAccording to the project site configuration dry contact function, can be selected as allowed(Allow), prohibited(forbid).");
     DryContact->add_Specification();
+}
+
+void MyWidget::SystemParameter(QTableWidget *myTable)
+{
+    //功率变化率说明
+    Change_rate_of_power = new Specification(this,Change_rate_of_power_explain, myTable, 0, 1, \
+                                             "20", "Change rate of power", \
+                                             "功率变化率是与额定功率相比功率变化的大小\nPower change ratio is the magnitude of the power change compared to the rated power.");
+    Change_rate_of_power->add_Specification();
+
+    //电网频率变化范围上限说明
+    Grid_frequency_upper_limit = new Specification(this,Grid_frequency_upper_limit_explain, myTable, 1, 1, \
+                                                   "0.2", "Grid frequency upper limit", \
+                                                   "电网频率变化范围的最大值,可供选择为0.2、0.5、1、5\nThe maximum value of the frequency variation range of the power grid can be selected as 0.2, 0.5, 1, and 5.");
+    Grid_frequency_upper_limit->add_Specification();
+
+    //电网频率变化范围下限说明
+    Grid_frequency_lower_limit = new Specification(this,Grid_frequency_lower_limit_explain, myTable, 2, 1, \
+                                                   "-0.5", "Grid frequency lower limit", \
+                                                   "电网频率变化范围的最小值,可供选择为-0.5、-1、-2、-5\nThe minimum value of the frequency variation range of the power grid can be selected as -0.5, -1, -2, -5.");
+    Grid_frequency_lower_limit->add_Specification();
+
+    //电压保护范围上限说明
+    Vol_protection_upper_limit = new Specification(this,Vol_protection_upper_limit_explain, myTable, 3, 1, \
+                                                   "+15", "Vol protection upper limit", \
+                                                   "当电压超过电压保护值一定百分比将进行电压保护,可供选择为+10、+15、+20、+30\nWhen the voltage exceeds a certain percentage of the voltage protection value, the voltage protection will be carried out, and the available options are +10, +15, +20, +30.");
+    Vol_protection_upper_limit->add_Specification();
+
+    //电压保护范围下限说明
+    Vol_protection_lower_limit = new Specification(this,Vol_protection_lower_limit_explain, myTable, 4, 1, \
+                                                   "-15", "Vol protection lower limit", \
+                                                   "当电压低于电压保护值一定百分比将进行电压保护,可供选择为-10、-15、-20、-30\nWhen the voltage is lower than a certain percentage of the voltage protection value, voltage protection will be carried out, which can be selected as -10, -15, -20, -30.");
+    Vol_protection_lower_limit->add_Specification();
+
+    //高穿使能说明
+    HVRT_enable = new Specification(this,HVRT_enable_explain, myTable, 5, 1, \
+                                                    "prohibit", "HVRT enable", \
+                                                    "这是高压穿越(HVRT)使能,使能后该设备不会因为短时间的高电压而停机,可供选择为允许(Enable)、禁止(prohibit)\nEThis is the High voltage ride through(HVRT) enable, after which the device will not be shut down due to a short period of high voltage. The options are Allow (Enable), forbid(prohibit).");
+    HVRT_enable->add_Specification();
+
+    //低穿使能说明
+    LVRT_enable = new Specification(this,LVRT_enable_explain, myTable, 6, 1, \
+                                    "prohibit", "LVRT enable", \
+                                    "这是低压穿越(LVRT)使能，使能后该设备不会因为短时间的低电压而停机,可供选择为允许(Enable)、禁止(prohibit)\nThis is a Low voltage ride through enable, which prevents the device from shutting down due to a short period of low voltage. The options are Allow(Enable),, forbid(prohibit).");
+    LVRT_enable->add_Specification();
+
+    //孤岛使能说明
+    AFD_enable = new Specification(this,AFD_enable_explain, myTable, 7, 1, \
+                                   "prohibit", "AFD enable", \
+                                   "防止孤岛效应，当检测出现孤岛效应(在光伏并网系统中,当大电网出现停电事故时,光伏并网逆变器发电与电网低压侧本地负载如果刚好出现功率相匹配时,容易出现自给自足的维持发电状态,从而出现""孤岛""现象,从而危及检修人员安全)时,让逆变器自动停机,可供选择为允许(Enable)、禁止(prohibit)\nPrevent island effect, When the detection of island effect (in the photovoltaic grid-connected system, when the power failure accident occurs in the large power grid, photovoltaic grid-connected inverter power generation and the local load on the low voltage side of the grid if there is just a power match, it is easy to self-contained maintenance power state, resulting in the phenomenon of ""island"", thereby endangering the safety of maintenance personnel), let the inverter automatic shutdown, optional Permit(Enable) and forbid(prohibit).");
+    AFD_enable->add_Specification();
+
+    //绝缘监测使能说明
+    Insulation_detection_enable = new Specification(this,Insulation_detection_enable_explain, myTable, 8, 1, \
+                                                    "prohibit", "Insulation detection enable", \
+                                                    "绝缘检测使能，绝缘电阻大于33KΩ要能正常起机运行，小于33KΩ不能起机，并且要告警，默认禁止,可供选择为允许(Enable)、禁止(prohibit)\nEnable insulation detection. If the insulation resistance is greater than 33KΩ, the machine can start normally; if the insulation resistance is smaller than 33KΩ, the machine cannot start, and the alarm should be generated. By default, it is prohibited, which can be selected as Allow(Enable) or forbid(prohibit).");
+    Insulation_detection_enable->add_Specification();
+
+    //一次调频使能说明
+    PrimaryFreq_enable = new Specification(this,PrimaryFreq_enable_explain, myTable, 9, 1, \
+                                           "prohibit", "PrimaryFreq enable", \
+                                           "一次调频使能,电网的频率偏离额定值时，通过控制有功功率的增减使电网频率维持稳定，可供选择为允许(Enable)、禁止(prohibit)\nWhen the frequency of the power grid deviates from the rated value, the frequency of the power grid can be maintained stable by controlling the increase or decrease of the active power. The alternatives are Allow(Enable) and forbid(prohibit).");
+    PrimaryFreq_enable->add_Specification();
+
+    //转动惯量使能说明
+    Inertia_enable = new Specification(this,Inertia_enable_explain, myTable, 10, 1, \
+                                       "prohibit", "Inertia enable", \
+                                       "转动惯量使能，可供选择为允许(Enable)、禁止(prohibit)\nThe moment of inertia is enabled (Enable, prohibit).");
+    Inertia_enable->add_Specification();
+
+    //负载优先说明
+    Load_priority = new Specification(this,Load_priority_explain, myTable, 11, 1, \
+                                      "prohibit", "Load priority", \
+                                      "这是负载优先使能设置，有两项可选：允许(Enable)、禁止(prohibit)，当使用'自发自用'模式时，需使能负载优先，当使用其他模式时，需禁止负载优先\nThis is the load priority enable setting, which has two options: enable and inhibit. When using the 'spontaneous self use' mode, load priority needs to be enabled, and when using other modes, load priority needs to be disabled");
+    Load_priority->add_Specification();
+
+    //机器型号说明
+    Machine_type = new Specification(this,Machine_type_explain, myTable, 0, 4, \
+                                     "MPS-TS", "Machine type", \
+                                     "根据实际机器型号进行设置，有三项可选：MPS、MPS-T、MPS-TS\nAccording to the actual machine model, there are three options: MPS, MPS-T, and MPS-TS.");
+    Machine_type->add_Specification();
+
+    //机器容量说明
+    Machine_capacity = new Specification(this,Machine_capacity_explain, myTable, 1, 4, \
+                                     "100", "Machine capacity", \
+                                     "MPS的额定容量，以出厂值为准，不可更改\nThe rated capacity of MPS is based on the factory value and cannot be changed.");
+    Machine_capacity->add_Specification();
+
+    //输出频率等级说明
+    Output_Fre_grade = new Specification(this,Output_Fre_grade_explain, myTable, 2, 4, \
+                                         "50", "Output Fre grade", \
+                                         "设置输出频率的等级，一般默认50HZ，与当地电网频率保持一致即可\nSet the output frequency level. Generally, the default frequency is 50HZ, which is consistent with the local power grid frequency.");
+    Output_Fre_grade->add_Specification();
+
+    //输出电压等级说明
+    Output_vol_level = new Specification(this,Output_vol_level_explain, myTable, 3, 4, \
+                                         "400", "Output vol level", \
+                                         "电压等级是通过变压器后输出的电压等级，要根据变压器的变比来设置，以出厂默认值为准，不可更改\nVoltage level is the output voltage level through the transformer, according to the transformer ratio to set, to the factory default value prevail, can not be changed.");
+    Output_vol_level->add_Specification();
+
+    //逆变电压等级说明
+    Converter_side_vol_level = new Specification(this,Converter_side_vol_level_explain, myTable, 4, 4, \
+                                         "270:400", "Converter side vol level", \
+                                         "逆变电压等级是逆变器逆变出来的电压等级，要根据变压器来设置，以出厂默认值为准，不可更改，可供更改选择为1:1、60:400、100:400、200:400、270:400、315:400、315:480\nThe inverter voltage level is the voltage level of the inverter, which should be set according to the transformer, and the factory default value shall be subject to change. The options for changing are 1:1, 60:400, 100:400, 200:400, 270:400, 315:400, 315:480.");
+    Converter_side_vol_level->add_Specification();
+
+    //输出无功方式说明
+    Output_reactive_power_mode = new Specification(this,Output_reactive_power_mode_explain, myTable, 5, 4, \
+                                         "Non adjustab", "Output reactive power mode", \
+                                         "输出无功方式，默认不可调节，可供选择为功率因数(PF)、无功功率(Q)、不可调节(Non adjustable)\nadjustable output reactive power mode, adjustable by default, adjustable power factor (PF), adjustable power (Q), Non adjustable(Non adjustable).");
+    Output_reactive_power_mode->add_Specification();
+
+    //电网恢复调度开机说明
+    Grid_recovery_scheduling = new Specification(this,Grid_recovery_scheduling_explain, myTable, 6, 4, \
+                                                 "Not Allow", "Grid recovery scheduling", \
+                                                 "这是电网恢复调度开机设置，有两项可选：允许(Allow)、不允许(Not Allow)\nThis is the power grid recovery and dispatching startup Settings, there are two options: Allow, Not Allow.");
+    Grid_recovery_scheduling->add_Specification();
+
+    //电网恢复并网时间说明
+    Grid_recovery_time = new Specification(this, Grid_recovery_time_explain, myTable, 7, 4, \
+                                           "0", "Grid recovery time", \
+                                           "这是电网恢复并网时间，当电网恢复调度开机允许时，根据实际需求设置即可\nThis is the grid restoration and grid connection time, when the grid restoration and dispatching start-up allows, according to the actual demand can be set.");
+    Grid_recovery_time->add_Specification();
+
+    //逆变器并网方式说明
+    Grid_connected_mode_of_Inv = new Specification(this,Grid_connected_mode_of_Inv_explain, myTable, 8, 4, \
+                                                   "Non counterc", "Grid connected mode of Inv", \
+                                                   "设置逆变器的并网方式，可逆流即光伏发电转换成交流电后可以并入电网；不可逆则是光伏发电的电流不会流向电网。默认可逆流，可供选择为可逆流(Counterc)、不可逆流(Non counterc)\nThe grid-connected mode of the inverter can be countercurrent, that is, photovoltaic power generation can be converted into alternating current, which can be incorporated into the power grid; Irreversible means that photovoltaic electricity does not flow to the grid. Countercurrent is available by default. The options are Counterc(Counterc) and Non counterc(Non counterc).");
+    Grid_connected_mode_of_Inv->add_Specification();
+
+    //过频降载说明
+    Pshedding_Freq = new Specification(this,Pshedding_Freq_explain, myTable, 9, 4, \
+                                       "prohibit", "Pshedding Freq", \
+                                       "这是过频降载设置，有两项可选：允许(Enable)、不允许(prohibit)\nThis is the overfrequency load reduction setting, with two options: Enable, prohibit.");
+    Pshedding_Freq->add_Specification();
+
+    //QP曲线说明
+    QP_curve = new Specification(this,QP_curve_explain, myTable, 10, 4, \
+                                 "prohibit", "QP curve", \
+                                 "这是QP曲线设置，有两项可选：允许(Enable)、不允许(prohibit)\nThis is the QP curve setting, with two options: Enable and prohibit.");
+    QP_curve->add_Specification();
+
+    //恒压并机说明
+    CV_parallel = new Specification(this,CV_parallel_explain, myTable, 11, 4, \
+                                    "prohibit", "CV parallel", \
+                                    "恒压并机使能,可供选择为允许(Enable)、禁止(prohibit)\nAllow (Enable) forbid(prohibit) Enable the constant voltage parallel machine.");
+    CV_parallel->add_Specification();
+
+    //模块数量说明
+    Module_Number = new Specification(this,Module_Number_explain, myTable, 0, 7, \
+                                      "1", "Module Number", \
+                                      "MPS的模块数量，默认值1\nNumber of modules for MPS, default 1.");
+    Module_Number->add_Specification();
+
+    //恢复出厂说明
+    Restore_factory = new Specification(this,Restore_factory_explain, myTable,1, 7, \
+                                        "restore", "Restore factory", \
+                                        "恢复出厂时的默认设置\nRestore the factory default Settings.");
+    Restore_factory->add_Specification();
+
+    //清除数据说明
+    Clear_Data = new Specification(this,Clear_Data_explain, myTable, 2, 7, \
+                                   "Clear", "Clear Data", \
+                                   "清除系统此前的记录数据及操作数据\nClear previous recorded data and operation data of the system.");
+    Clear_Data->add_Specification();
+
+    //机架说明
+    Machine_Type = new Specification(this,Machine_Type_explain, myTable, 3, 7, \
+                                     "Single", "Machine Type", \
+                                     "这是机架设置，有两项可选：独立(Single)、分体(More)\nThis is the rack setup, with two options: Single and More.");
+    Machine_Type->add_Specification();
+
+    //最大模块数说明
+    Module_max = new Specification(this,Module_max_explain, myTable, 4, 7, \
+                                   "2", "Module max", \
+                                   "这是当前系统的最大模块数\nThis is the maximum number of modules in the current system.");
+    Module_max->add_Specification();
+
+    //最小模块数说明
+    Module_min = new Specification(this,Module_min_explain, myTable, 5, 7, \
+                                   "1", "Module min", \
+                                   "这是当前系统的最小模块数\nThis is the minimum number of modules in the current system.");
+    Module_min->add_Specification();
+
+    //DCDC绝缘监测使能说明
+    Insulation_detection_enable_DCDC = new Specification(this,Insulation_detection_enable_DCDC_explain, myTable, 6, 7, \
+                                                         "Disable", "Insulation detection enable DCDC", \
+                                                         "这是DCDC绝缘监测使能设置，有两项可选：允许(Enable)、禁止(Disable)\nThis is the DCDC insulation monitoring Enable setting. There are two options: Enable and Disable.");
+    Insulation_detection_enable_DCDC->add_Specification();
+
 }
 
 
