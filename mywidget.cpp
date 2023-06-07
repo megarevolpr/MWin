@@ -508,6 +508,28 @@ void MyWidget::MemoryAllocation()
     Bat_Infor_explain               = new QPushButton;  //电池信息字
     Bat_State_explain               = new QPushButton;  //电池状态字
 
+    /***************************DCDC调试**************************/
+    DC_Debug_variable_1_explain = new QPushButton;  //调试变量1
+    DC_Debug_variable_2_explain = new QPushButton;  //调试变量2
+    DC_Debug_variable_3_explain = new QPushButton;  //调试变量3
+    Current_ID_explain = new QPushButton;   //当前模块号
+    DC_INT_main_flag_explain = new QPushButton;  //中断状态字
+    DC_DC_bus_flag_explain = new QPushButton;  //母线状态字
+    DC_PV_flag_explain = new QPushButton;  //电池电压状态字
+
+    DC_Debug_variable_1_addr_explain = new QPushButton;  //调试地址变量1
+    DC_Debug_variable_2_addr_explain = new QPushButton;  //调试地址变量2
+    DC_Debug_variable_3_addr_explain = new QPushButton;  //调试地址变量3
+    DCONV_logic_explain = new QPushButton;  //
+    DC_INV_On_off_flag_explain = new QPushButton;  //开关机状态字
+    DC_parallel_signal_explain = new QPushButton;  //并机状态字
+
+    DC_Debug_memery_var_1_explain = new QPushButton;  //调试内存变量1
+    DC_Debug_memery_var_2_explain = new QPushButton;  //调试内存变量2
+    DC_Debug_memery_var_3_explain = new QPushButton;  //调试内存变量3
+    DC_Monitor_Order_explain = new QPushButton;  //监控命令状态字
+    DC_Bat_Infor_explain = new QPushButton;  //电池信息字
+    DC_Bat_State_explain = new QPushButton;  //电池状态字
 }
 /********************************************************
  * 初始化界面
@@ -1757,6 +1779,7 @@ void MyWidget::SystemParam_tbnt_released()
     SystemParameter(ui->UI_SystemParameter_Tab);
     ExternalDevice(ui->ExternalDevice_tW);
     DCAC_Debugg(ui->UI_Debug_Tab);
+    DCDC_Debugg(ui->UI_DCDC_Debug_tableWidget);
 }
 
 void MyWidget::on_Running_btn_clicked()  //显示变流器实时数据
@@ -3599,6 +3622,123 @@ void MyWidget::DCAC_Debugg(QTableWidget *myTable)
                                    "0", "Bat State", \
                                    "仅提供内部调试使用\nIt is used for internal debugging only");
     Bat_State->add_Specification();
+}
+
+void MyWidget::DCDC_Debugg(QTableWidget *myTable)
+{
+    //调试变量1
+    DC_Debug_variable_1 = new Specification(this,DC_Debug_variable_1_explain, myTable, 0, 1, \
+                                   "0", "Debug variable 1", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    DC_Debug_variable_1->add_Specification();
+
+    //调试变量2
+    DC_Debug_variable_2 = new Specification(this,DC_Debug_variable_2_explain, myTable, 1, 1, \
+                                   "0", "Debug variable 2", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    DC_Debug_variable_2->add_Specification();
+
+    //调试变量3
+    DC_Debug_variable_3 = new Specification(this,DC_Debug_variable_3_explain, myTable, 2, 1, \
+                                   "0", "Debug variable 3", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    DC_Debug_variable_3->add_Specification();
+
+    //当前模块号
+    Current_ID = new Specification(this,Current_ID_explain, myTable, 3, 1, \
+                                   "1", "Debug variable 3", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    Current_ID->add_Specification();
+
+    //中断状态字
+    DC_INT_main_flag = new Specification(this,DC_INT_main_flag_explain, myTable, 4, 1, \
+                                   "0", "INT main flag", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    DC_INT_main_flag->add_Specification();
+
+    //母线状态字
+    DC_DC_bus_flag = new Specification(this,DC_DC_bus_flag_explain, myTable, 5, 1, \
+                                   "0", "DC bus flag", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    DC_DC_bus_flag->add_Specification();
+
+    //电池电压状态字
+    DC_PV_flag = new Specification(this,DC_PV_flag_explain, myTable, 6, 1, \
+                                   "0", "PV flag", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    DC_PV_flag->add_Specification();
+
+    //调试地址变量1
+    DC_Debug_variable_1_addr = new Specification(this,DC_Debug_variable_1_addr_explain, myTable, 0, 3, \
+                                   "0", "Debug variable 1 addr", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    DC_Debug_variable_1_addr->add_Specification();
+
+    //调试地址变量2
+    DC_Debug_variable_2_addr = new Specification(this,DC_Debug_variable_2_addr_explain, myTable, 1, 3, \
+                                   "0", "Debug variable 2 addr", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    DC_Debug_variable_2_addr->add_Specification();
+
+    //调试地址变量3
+    DC_Debug_variable_3_addr = new Specification(this,DC_Debug_variable_3_addr_explain, myTable, 2, 3, \
+                                   "0", "Debug variable 3 addr", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    DC_Debug_variable_3_addr->add_Specification();
+
+    //开关机状态字
+    DC_INV_On_off_flag = new Specification(this,DC_INV_On_off_flag_explain, myTable, 4, 3, \
+                                   "0", "INV On off flag", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    DC_INV_On_off_flag->add_Specification();
+
+    //
+    DCONV_logic = new Specification(this,DCONV_logic_explain, myTable, 5, 3, \
+                                    "0", "DCONV logic", \
+                                    "仅提供内部调试使用\nIt is used for internal debugging only");
+    DCONV_logic->add_Specification();
+
+    //并机状态字
+    DC_parallel_signal = new Specification(this,DC_parallel_signal_explain, myTable, 6, 3, \
+                                   "0", "parallel signal", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    DC_parallel_signal->add_Specification();
+
+    //调试内存变量1
+    DC_Debug_memery_var_1 = new Specification(this,DC_Debug_memery_var_1_explain, myTable, 0, 5, \
+                                   "0", "Debug memery var 1", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    DC_Debug_memery_var_1->add_Specification();
+
+    //调试内存变量2
+    DC_Debug_memery_var_2 = new Specification(this,DC_Debug_memery_var_2_explain, myTable, 1, 5, \
+                                   "0", "Debug memery var 2", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    DC_Debug_memery_var_2->add_Specification();
+
+    //调试内存变量3
+    DC_Debug_memery_var_3 = new Specification(this,DC_Debug_memery_var_3_explain, myTable, 2, 5, \
+                                   "0", "Debug memery var 3", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    DC_Debug_memery_var_3->add_Specification();
+
+    //监控命令状态字
+    DC_Monitor_Order = new Specification(this,DC_Monitor_Order_explain, myTable, 4, 5, \
+                                   "0", "Monitor Order", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    DC_Monitor_Order->add_Specification();
+
+    //电池信息字
+    DC_Bat_Infor = new Specification(this,DC_Bat_Infor_explain, myTable, 5, 5, \
+                                   "0", "Bat Infor", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    DC_Bat_Infor->add_Specification();
+
+    //电池状态字
+    DC_Bat_State = new Specification(this,DC_Bat_State_explain, myTable, 6, 5, \
+                                   "0", "Bat State", \
+                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+    DC_Bat_State->add_Specification();
 }
 
 

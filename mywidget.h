@@ -936,6 +936,65 @@ public:
     QPushButton *Bat_State_explain;  //电池状态字
     Specification *Bat_State;
 
+    /***************************DCDC调试**************************/
+    QPushButton *DC_Debug_variable_1_explain;  //调试变量1
+    Specification *DC_Debug_variable_1;
+
+
+    QPushButton *DC_Debug_variable_2_explain;  //调试变量2
+    Specification *DC_Debug_variable_2;
+
+    QPushButton *DC_Debug_variable_3_explain;  //调试变量3
+    Specification *DC_Debug_variable_3;
+
+    QPushButton *Current_ID_explain;  //当前模块号
+    Specification *Current_ID;
+
+    QPushButton *DC_INT_main_flag_explain;  //中断状态字
+    Specification *DC_INT_main_flag;
+
+    QPushButton *DC_DC_bus_flag_explain;  //母线状态字
+    Specification *DC_DC_bus_flag;
+
+    QPushButton *DC_PV_flag_explain;  //电池电压状态字
+    Specification *DC_PV_flag;
+
+    QPushButton *DC_Debug_variable_1_addr_explain;  //调试地址变量1
+    Specification *DC_Debug_variable_1_addr;
+
+    QPushButton *DC_Debug_variable_2_addr_explain;  //调试地址变量2
+    Specification *DC_Debug_variable_2_addr;
+
+    QPushButton *DC_Debug_variable_3_addr_explain;  //调试地址变量3
+    Specification *DC_Debug_variable_3_addr;
+
+    QPushButton *DC_INV_On_off_flag_explain;  //开关机状态字
+    Specification *DC_INV_On_off_flag;
+
+    QPushButton *DCONV_logic_explain;  //
+    Specification *DCONV_logic;
+
+    QPushButton *DC_parallel_signal_explain;  //并机状态字
+    Specification *DC_parallel_signal;
+
+    QPushButton *DC_Debug_memery_var_1_explain;    //调试内存变量1
+    Specification *DC_Debug_memery_var_1;
+
+    QPushButton *DC_Debug_memery_var_2_explain;    //调试内存变量2
+    Specification *DC_Debug_memery_var_2;
+
+    QPushButton *DC_Debug_memery_var_3_explain;    //调试内存变量3
+    Specification *DC_Debug_memery_var_3;
+
+    QPushButton *DC_Monitor_Order_explain;  //监控命令状态字
+    Specification *DC_Monitor_Order;
+
+    QPushButton *DC_Bat_Infor_explain;  //电池信息字
+    Specification *DC_Bat_Infor;
+
+    QPushButton *DC_Bat_State_explain;  //电池状态字
+    Specification *DC_Bat_State;
+
 private:
 
 
@@ -981,6 +1040,7 @@ private:
     void SystemParameter(QTableWidget *myTable);//系统参数页说明
     void ExternalDevice(QTableWidget *myTable);//外设页说明
     void DCAC_Debugg(QTableWidget *myTable); //DCAC调试页说明
+    void DCDC_Debugg(QTableWidget *myTable); //DCDC调试页说明
 
 private slots:
     void on_UI_MenuBtn_clicked();//转到槽
