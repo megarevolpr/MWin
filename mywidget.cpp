@@ -571,15 +571,15 @@ void MyWidget::AdvancedSetup_btn_clicked()
     if(ASKey)//保证只执行一次这句话，否则多次进出高级设置，会多次绘制页面，点击一次button，出现个消息对话框
     {
         ASKey = false;
-        SystemParam_tbnt_released();
+        SystemParam_tbnt_released();    //绘制高级设置界面
     }
 }
 //函数关联
 void MyWidget::LinkRelationship()
 {
-    connect(timer, SIGNAL(timeout()), this, SLOT(onTimerOut()));
+    connect(timer, SIGNAL(timeout()), this, SLOT(onTimerOut()));    //关联定时器，以便实时更新时间
 
-    connect(m_menu, SIGNAL(Sent(int)), this, SLOT(My_menuAction(int)));
+    connect(m_menu, SIGNAL(Sent(int)), this, SLOT(My_menuAction(int))); //菜单
 
     connect(AdvancedSetup_btn,SIGNAL(clicked(bool)), this, SLOT(AdvancedSetup_btn_clicked()));//高级设置
 
@@ -610,8 +610,6 @@ void MyWidget::SystemSettingPage()
 
     RunTimeSet_tab();/*系统-自动运行时间设置表*/
 
-//    History_tab();/*记录-历史记录、操作日志设置表*/
-
     Information_tbnt_released();/*系统-系统消息*/
 }
 /***************************************************************
@@ -624,7 +622,6 @@ void MyWidget::LCDSetting()
     timer = new QTimer();
     timer->setInterval(1000);//一秒刷新一次时间
     timer->start();
-
 
     Update_RTData_timer = new QTimer();
     Update_RTData_timer->setInterval(500);//设置数据实时显示刷新时间
@@ -917,7 +914,7 @@ void MyWidget::DCDCParam_tab()
             }
         }
     }
-    DCDC_Paramter_tab(ui->DCDC_tableWidget);
+    DCDC_Paramter_tab(ui->DCDC_tableWidget);    //DCDC参数页说明
 }
 //电池设置初始化
 void MyWidget::BatterySet_tab()
@@ -948,9 +945,7 @@ void MyWidget::RunTimeSet_tab()
     ui->Time_tableWidget->setColumnWidth(3,180);
     ui->Time_tableWidget->horizontalHeader()->setStretchLastSection(4);
 
-//    QStringList choice;
-//    choice << tr("System for self-use") << tr("Battery priority")  << tr("Peak shaving") << tr("Output PV power") << tr("Generator Trun on") << tr("Generator Trun off");
-    AutoOperation(ui->Time_tableWidget);
+    AutoOperation(ui->Time_tableWidget);    //自动运行页说明
 }
 
 //系统信息槽
@@ -973,7 +968,7 @@ void MyWidget::Information_tbnt_released()
     ui->EquipmentInfor_tableWidget->setColumnWidth(0,300);
     ui->EquipmentInfor_tableWidget->horizontalHeader()->setStretchLastSection(1);//自动占用剩余空间
 
-    SystemMessages(ui->EquipmentInfor_tableWidget);//系统信息 绘制button
+    SystemMessages(ui->EquipmentInfor_tableWidget);//系统信息页说明
 }
 
 //数据报表
@@ -1005,7 +1000,7 @@ void MyWidget::Data_Report()
         ui->Report_tableWidget->item(i, 0)->setTextAlignment(Qt::AlignCenter);
     }
 
-    DataReportMessages(ui->Report_tableWidget);
+    DataReportMessages(ui->Report_tableWidget); //数据报表页说明
 }
 
 //历史记录
@@ -1060,7 +1055,7 @@ void MyWidget::History()
     Describe7_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
     Describe8_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
 
-    HistoryRecord(ui->Historicalfailure_tableWidget);
+    HistoryRecord(ui->Historicalfailure_tableWidget);   //历史记录页说明
 }
 
 //操作日志
@@ -1079,9 +1074,8 @@ void MyWidget::OperationLog()
     ui->Operation_tableWidget->setColumnWidth(0,260);
     ui->Operation_tableWidget->horizontalHeader()->setStretchLastSection(true);
 
-    OperationLog_tab(ui->Operation_tableWidget);
+    OperationLog_tab(ui->Operation_tableWidget);    //操作日志页说明
 }
-
 
 //告警信息绘表
 void MyWidget::RTAlarm()
@@ -1109,7 +1103,7 @@ void MyWidget::RTAlarm()
 
     PCS_Alarm_information_table();  //展示PCS故障信息表
 }
-
+/*************DCAC参数*************/
 void MyWidget::UserParam_tab()
 {
     ui->System_Tab->setColumnCount(6);
@@ -1143,7 +1137,7 @@ void MyWidget::UserParam_tab()
     AdvancedSetup_btn->setText(tr("Advance setting"));
     ui->System_Tab->setCellWidget(7,5, (QWidget *)AdvancedSetup_btn);          //高级设置
 
-    DC_AC_Parameter_tab(ui->System_Tab);
+    DC_AC_Parameter_tab(ui->System_Tab);    //DCAC参数页说明
 }
 
 //展示PCS故障信息表
@@ -1522,7 +1516,7 @@ void MyWidget::onTimerOut()
 }
 
 /***************************************************************
- * @brief 根据索引打开相应的界面
+ * 根据索引打开相应的界面
  ***************************************************************/
 void MyWidget::My_menuAction(int Index)
 {
@@ -1709,7 +1703,7 @@ void MyWidget::SystemlnformationVer_clicked(int nid)
             break;
     }
 }
-
+/*************绘制高级设置界面**************/
 void MyWidget::SystemParam_tbnt_released()
 {
     for(int i=0; i<11;i++)//调整功能设置、系统参数设置的列宽行高
@@ -1775,11 +1769,11 @@ void MyWidget::SystemParam_tbnt_released()
         }
     }
 
-    FunctionSet(ui->UI_Parameter_Tab);
-    SystemParameter(ui->UI_SystemParameter_Tab);
-    ExternalDevice(ui->ExternalDevice_tW);
-    DCAC_Debugg(ui->UI_Debug_Tab);
-    DCDC_Debugg(ui->UI_DCDC_Debug_tableWidget);
+    FunctionSet(ui->UI_Parameter_Tab);  //功能设置页说明
+    SystemParameter(ui->UI_SystemParameter_Tab);    //系统设置页说明
+    ExternalDevice(ui->ExternalDevice_tW);  //外设页说明
+    DCAC_Debugg(ui->UI_Debug_Tab);  //DCAC调试页说明
+    DCDC_Debugg(ui->UI_DCDC_Debug_tableWidget); //DCDC调试页说明
 }
 
 void MyWidget::on_Running_btn_clicked()  //显示变流器实时数据
@@ -1826,19 +1820,19 @@ void MyWidget::on_Batt_btn_released()//显示电池信息
     ui->MPS_Data_stw->setCurrentWidget(ui->Machine_page);
 }
 
-void MyWidget::on_RTD_DC_clicked()
+void MyWidget::on_RTD_DC_clicked()//显示模块的实时数据
 {
     ui->RT_Dtata_StackedWidget->setCurrentWidget(ui->RTD_Bypass_N_page);
     ui->MPS_Data_stw->setCurrentWidget(ui->DC_page);
 }
 
-void MyWidget::on_RTD_Grid_clicked()
+void MyWidget::on_RTD_Grid_clicked()//显示电网的实时数据
 {
     ui->RT_Dtata_StackedWidget->setCurrentWidget(ui->RTD_Bypass_N_page);
     ui->MPS_Data_stw->setCurrentWidget(ui->Grid_page);
 }
 
-void MyWidget::on_RTD_Load_clicked()
+void MyWidget::on_RTD_Load_clicked()//显示负载的实时数据
 {
     ui->RT_Dtata_StackedWidget->setCurrentWidget(ui->RTD_Bypass_N_page);
     ui->MPS_Data_stw->setCurrentWidget(ui->Load_page);
@@ -2257,7 +2251,7 @@ void MyWidget::MPSState(QTableWidget *myTable)
     ModeLock->add_Specification();
 
 }
-
+/************************DCAC参数页说明*********************/
 void MyWidget::DC_AC_Parameter_tab(QTableWidget *myTable)
 {
     Grid_connected_mode = new Specification(this,Grid_connected_mode_explain, myTable, 0, 1, \
@@ -2321,7 +2315,7 @@ void MyWidget::DC_AC_Parameter_tab(QTableWidget *myTable)
     Unbalance_power_enable->add_Specification();
 
 }
-
+/************************DCDC参数页说明*********************/
 void MyWidget::DCDC_Paramter_tab(QTableWidget *myTable)
 {
     //DCDC工作模式说明
@@ -3094,7 +3088,7 @@ void MyWidget::FunctionSet(QTableWidget *myTable)
                                    "根据项目现场配置干接点功能，可供选择为允许(Allow)、禁止(forbid)\nAccording to the project site configuration dry contact function, can be selected as allowed(Allow), prohibited(forbid).");
     DryContact->add_Specification();
 }
-
+/********************系统设置页说明***********************/
 void MyWidget::SystemParameter(QTableWidget *myTable)
 {
     //功率变化率说明
@@ -3284,7 +3278,7 @@ void MyWidget::SystemParameter(QTableWidget *myTable)
     Insulation_detection_enable_DCDC->add_Specification();
 
 }
-
+/***********************外设页说明********************/
 void MyWidget::ExternalDevice(QTableWidget *myTable)
 {
     DI_1_Enable = new Specification(this,DI_1_Enable_explain, myTable, 0, 0, \
@@ -3398,7 +3392,7 @@ void MyWidget::ExternalDevice(QTableWidget *myTable)
                                    "输出干接点3，预留功能，设置无效，信号触发时执行的动作,可选功能为提示(Prompt)、待机(Standby)、关机(Shut down)、充满待机(Full standby)、放空待机(Empty standby)、故障待机(Failure standby)、电网信号(Grid singnal)\nDry contact 3 is output. The reserved function is invalid.The optional functions are prompt(Prompt), standby(Standby), shutdown(Shut down), full standby(Full standby), empty standby(Empty standby), fault standby(Failure standby), and power grid signal(Grid singnal)");
     DO_3_Action->add_Specification();
 }
-
+/*****************DCAC调试页说明*********************/
 void MyWidget::DCAC_Debugg(QTableWidget *myTable)
 {
     //调试变量1
@@ -3623,7 +3617,7 @@ void MyWidget::DCAC_Debugg(QTableWidget *myTable)
                                    "仅提供内部调试使用\nIt is used for internal debugging only");
     Bat_State->add_Specification();
 }
-
+/*****************DCDC调试页说明*******************/
 void MyWidget::DCDC_Debugg(QTableWidget *myTable)
 {
     //调试变量1
@@ -3741,73 +3735,71 @@ void MyWidget::DCDC_Debugg(QTableWidget *myTable)
     DC_Bat_State->add_Specification();
 }
 
-
 /*********选中第一个模块*********/
 void MyWidget::on_RTD_module_1_clicked()
 {
     QMessageBox::question(this , "1", "选中第一个模块，查看第一个模块的实时数据\nChoose the first module to view the real-time data of the first module", "OK");
 }
-
 /*********选中第二个模块*********/
 void MyWidget::on_RTD_module_2_clicked()
 {
     QMessageBox::question(this , "2", "选中第二个模块，查看第二个模块的实时数据\nChoose the second module to view the real-time data of the second module", "OK");
 }
-
+/********* 点击Y- *********/
 void MyWidget::on_Subtract_Y_clicked()
 {
     QMessageBox::question(this, "Y-"\
                           ,"查看上一年的数据，点击后将显示当前显示年份的上一年的数据\nTo view the previous year's data, click on it to display the previous year's data for the current displayed year.", "OK");
 }
-
+/********* 点击Y+ *********/
 void MyWidget::on_Add_Y_clicked()
 {
     QMessageBox::question(this, "Y+"\
                           ,"查看下一年的数据，点击后将显示当前显示年份的下一年的数据\nTo view the data for the next year, click on it to display the data for the next year of the current displayed year.", "OK");
 }
-
+/********* 点击M- *********/
 void MyWidget::on_Subtract_M_clicked()
 {
     QMessageBox::question(this, "M-"\
                           ,"查看上一个月的数据，点击后将显示当前显示月份的上一个月的数据\nTo view the data of the previous month, click on it to display the data of the previous month of the current displayed month.", "OK");
 }
-
+/********* 点击M+ *********/
 void MyWidget::on_Add_M_clicked()
 {
     QMessageBox::question(this, "M+"\
                           ,"查看下一个月的数据，点击后将显示当前显示月份的下一个月的数据\nTo view the data for the next month, click to display the data for the next month of the current displayed month.", "OK");
 }
-
+/********* 点击D- *********/
 void MyWidget::on_Subtract_D_clicked()
 {
     QMessageBox::question(this, "D-"\
                           ,"查看上一日的数据，点击后将显示当前日的上一日的数据\nTo view the data of the previous day. Click to display the data of the previous day of the current day.", "OK");
 }
-
+/********* 点击D+ *********/
 void MyWidget::on_Add_D_clicked()
 {
     QMessageBox::question(this, "D+"\
                           ,"查看下一日的数据，点击后将显示当前日的下一日的数据\nTo view the data of the next day. Click to display the data of the next day of the current day.", "OK");
 }
-
+/********* 导出历史记录 *********/
 void MyWidget::on_OutPut_historyFailuer_clicked()
 {
     QMessageBox::question(this, "HistoricalFailure"\
                           ,"导出历史记录，点击此处将会导出历史记录到U盘里\nTo export history, click here to export history to U disk", "OK");
 }
-
+/********* 导出操作日志 *********/
 void MyWidget::on_Output_OperationLog_clicked()
 {
     QMessageBox::question(this, "OperationLog"\
                           ,"导出操作日志，点击此处将会导出操作日志到U盘里\nExport operation log. Click here to export operation log to U disk.", "OK");
 }
-
+/********* 导出电量统计表 *********/
 void MyWidget::on_CoulombmeterReport_btn_clicked()
 {
     QMessageBox::question(this, "Coulombmeter report"\
                           ,"导出电量统计表，点击此处将会导出电量统计表到U盘里\nExport the battery statistics. Click here to export the battery statistics to the U disk.", "OK");
 }
-
+/********* 退出U盘 *********/
 void MyWidget::on_Eject_btn_clicked()
 {
     QMessageBox::question(this, "Eject Udisk"\
@@ -3828,20 +3820,18 @@ void MyWidget::on_UI_Complete_Btn_clicked()//退出高级设置
 {
     ui->UI_stackedWidget->setCurrentWidget(ui->UI_page);
 }
-
-
+/********* 电池上电 *********/
 void MyWidget::on_Battery_PowerOn_clicked()
 {
     QMessageBox::question(this , "Power On", \
                           "从这里可以给电池上电\nYou can power on the battery from here", "OK");
 }
-
+/********* 电池下电 *********/
 void MyWidget::on_Battery_PowerOff_clicked()
 {
     QMessageBox::question(this , "Power Off", \
                           "从这里可以给电池下电\nYou can power up the battery from here.", "OK");
 }
-
 /*********** 选择静态IP地址 ************/
 void MyWidget::on_radio_static_clicked()
 {
@@ -3862,7 +3852,6 @@ void MyWidget::on_radio_static_clicked()
     }
     QMessageBox::question(this ,"STATIC", "如果选择此项，表示使用静态的IP地址\nIf this parameter is selected, static IP addresses are used", "OK");
 }
-
 /*********** 选择自动分配IP地址 ************/
 void MyWidget::on_radio_dhcp_clicked()
 {
@@ -3884,25 +3873,21 @@ void MyWidget::on_radio_dhcp_clicked()
     QMessageBox::question(this ,"DHCP", "如果选择此项，表示使用自动分配的IP地址\nIf this parameter is selected, the automatically assigned IP address is used", "OK");
 
 }
-
 /****************DCDC 变流器开启*****************/
 void MyWidget::on_Switch_on_Inv_clicked()
 {
     QMessageBox::question(this, "Turn on", "这是DCDC变流器打开开关,点击后开启DCDC变流器\nThis is the DCDC converter turn on the switch, click to turn on the DCDC converter", "OK");
 }
-
 /****************DCDC 变流器关闭*****************/
 void MyWidget::on_Switch_off_Inv_clicked()
 {
     QMessageBox::question(this, "Turn off", "这是DCDC变流器关闭开关，点击后关闭DCDC变流器\nThis is the DCDC converter off switch. Click to turn off the DCDC converter", "OK");
 }
-
 /****************DCAC 变流器开启*****************/
 void MyWidget::on_Switch_on_clicked()
 {
     QMessageBox::question(this, "Turn on", "这是DCAC变流器打开开关,点击后开启DCAC变流器\nThis is the DCAC converter turn on the switch, click to turn on the DCAC converter", "OK");
 }
-
 /****************DCAC 变流器关闭*****************/
 void MyWidget::on_Switch_off_clicked()
 {
