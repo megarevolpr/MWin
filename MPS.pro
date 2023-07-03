@@ -40,6 +40,10 @@ TRANSLATIONS += \
 RESOURCES += image.qrc \
     language.qrc
 
+DISTFILES += \
+    Language/CN.ts \
+    Language/EN.ts
+
 
 
 

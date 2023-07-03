@@ -91,6 +91,23 @@ void MyWidget::MemoryAllocation()
     Batter_power_explain    = new QPushButton;
     Bus_vol_explain         = new QPushButton;
     Bus_cur_explain         = new QPushButton;
+    MPS_vol_AB = nullptr;
+    MPS_vol_BC = nullptr;
+    MPS_vol_CA = nullptr;
+    MPS_cur_A = nullptr;
+    MPS_cur_B = nullptr;
+    MPS_cur_C = nullptr;
+    MPS_IGBT_T = nullptr;
+    MPS_Env_T = nullptr;
+    MPS_Leakage_cur = nullptr;
+    PV_vol = nullptr;
+    PV_cur = nullptr;
+    PV_power = nullptr;
+    Batter_vol = nullptr;
+    Batter_cur = nullptr;
+    Batter_power = nullptr;
+    Bus_vol = nullptr;
+    Bus_cur = nullptr;
     //光伏
     PV_vol_H_explain            = new QPushButton;
     PV_cur_H_explain            = new QPushButton;
@@ -106,6 +123,20 @@ void MyWidget::MemoryAllocation()
     PV_IGBT_T_explain           = new QPushButton;
     NegativeInuslation_explain  = new QPushButton;
     Leakage_cur_explain         = new QPushButton;
+    PV_vol_H = nullptr;
+    PV_cur_H = nullptr;
+    PV_power_H = nullptr;
+    PV_vol_L = nullptr;
+    PV_cur_L = nullptr;
+    PV_power_L = nullptr;
+    PositiveInuslation = nullptr;
+    Bus_H_vol_add = nullptr;
+    Bus_H_vol_reduce = nullptr;
+    Bus_L_vol_add = nullptr;
+    Bus_L_vol_reduce = nullptr;
+    PV_IGBT_T = nullptr;
+    NegativeInuslation = nullptr;
+    Leakage_cur = nullptr;
     //电网
     Grid_vol_AB_explain         = new QPushButton;
     Grid_vol_BC_explain         = new QPushButton;
@@ -118,6 +149,17 @@ void MyWidget::MemoryAllocation()
     Grid_apparent_power_explain = new QPushButton;
     Grid_power_factor_explain   = new QPushButton;
     Grid_Frequency_explain      = new QPushButton;
+    Grid_vol_AB = nullptr;
+    Grid_vol_BC = nullptr;
+    Grid_vol_CA = nullptr;
+    Grid_cur_A = nullptr;
+    Grid_cur_B = nullptr;
+    Grid_cur_C = nullptr;
+    Grid_active_power = nullptr;
+    Grid_reactive_power = nullptr;
+    Grid_apparent_power = nullptr;
+    Grid_power_factor = nullptr;
+    Grid_Frequency = nullptr;
     //负载
     Load_vol_AB_explain         = new QPushButton;
     Load_vol_BC_explain         = new QPushButton;
@@ -130,6 +172,17 @@ void MyWidget::MemoryAllocation()
     Load_apparent_power_explain = new QPushButton;
     Load_power_factor_explain   = new QPushButton;
     Load_Frequency_explain      = new QPushButton;
+    Load_vol_AB = nullptr;
+    Load_vol_BC = nullptr;
+    Load_vol_CA = nullptr;
+    Load_cur_A = nullptr;
+    Load_cur_B = nullptr;
+    Load_cur_C = nullptr;
+    Load_active_power = nullptr;
+    Load_reactive_power = nullptr;
+    Load_apparent_power = nullptr;
+    Load_power_factor = nullptr;
+    Load_Frequency = nullptr;
 
     /*******************MPS状态***************************/
 
@@ -598,7 +651,9 @@ void MyWidget::AdvancedSetup_btn_clicked()
         SystemParam_tbnt_released();    //绘制高级设置界面
     }
 }
-
+/*************************************************************************
+*切换语言
+* ***********************************************************************/
 void MyWidget::ChangeLanguage_btn_clicked()
 {
     m_menu->hide();//隐藏菜单界面
@@ -1546,9 +1601,15 @@ void MyWidget::PCS_Alarm_information_table()
 //显示菜单
 void MyWidget::on_UI_MenuBtn_clicked()
 {
-
     if(m_menu->isHidden())
     {
+        if(m_menu != nullptr)
+        {
+            delete m_menu;
+        }
+        m_menu = new Menu(this);
+        connect(m_menu, SIGNAL(Sent(int)), this, SLOT(My_menuAction(int)));
+
         m_menu->setGeometry(0, 0, 250, 453);
         m_menu->move(QPoint((this->pos().x() + 10),(this->pos().y() + 85)));
         m_menu->show();
@@ -1865,7 +1926,9 @@ void MyWidget::on_Batt_btn_released()//显示电池信息
     ui->stackedWidget->setCurrentWidget(ui->Status_page);
     ui->Run_tabWidget->setCurrentWidget(ui->BatteryData_page);
     ui->BAT_stackedWidget->setCurrentWidget(ui->BAT_Lithium_page);
-}void MyWidget::on_RTD_Converter_clicked()
+}
+
+void MyWidget::on_RTD_Converter_clicked()
 {
     ui->RT_Dtata_StackedWidget->setCurrentWidget(ui->RTD_Bypass_N_page);
     ui->MPS_Data_stw->setCurrentWidget(ui->Machine_page);
@@ -1898,75 +1961,160 @@ void MyWidget::on_Alarm_btn_clicker()//显示告警信息
 void MyWidget::MPS_Data(QTableWidget *myTable)
 {
     int line=0;int column = 1;//当前解释的button行和列
+
+    if(MPS_vol_AB != nullptr)
+    {
+        delete MPS_vol_AB;
+    }
     MPS_vol_AB = new Specification(this,MPS_vol_AB_explain, myTable, line++, column, \
-                                            "0V", "voltage(AB)", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and B phases of the current PCS obtained from the converter.");
+                                            "0V", tr("voltage(AB)"), \
+                                            tr("The inverter side voltage of the current MPS is the phase voltage between phase A and phase B."));
     MPS_vol_AB->add_Specification();
+
+    if(MPS_vol_BC != nullptr)
+    {
+        delete MPS_vol_BC;
+    }
     MPS_vol_BC = new Specification(this,MPS_vol_BC_explain, myTable, line++, column, \
-                                            "0V", "voltage(BC)", \
-                                            "这是从变流器获取的当前MPS的B相和C相之间的电压\nThis is the voltage between the B and C phases of the current PCS obtained from the converter.");
+                                            "0V", "tr(voltage(BC))", \
+                                            tr("The inverter side voltage of the current MPS is the phase voltage between phase B and phase C."));
     MPS_vol_BC->add_Specification();
+
+    if(MPS_vol_CA != nullptr)
+    {
+        delete MPS_vol_CA;
+    }
     MPS_vol_CA = new Specification(this,MPS_vol_CA_explain, myTable, line++, column, \
-                                            "0V", "voltage(AC)", \
-                                            "这是从变流器获取的当前MPS的A相和B相之间的电压\nThis is the voltage between the A and C phases of the current PCS obtained from the converter.");
+                                            "0V", tr("voltage(AC)"), \
+                                            tr("The inverter side voltage of the current MPS is the phase voltage between phase A and phase C."));
     MPS_vol_CA->add_Specification();
+
+    if(MPS_cur_A != nullptr)
+    {
+        delete MPS_cur_A;
+    }
     MPS_cur_A = new Specification(this,MPS_cur_A_explain, myTable, line++, column, \
-                                            "0A", "current(A)", \
-                                            "这是从变流器获取的当前MPS的A相电流\nThis is the A-phase current of the current PCS obtained from the converter.");
+                                            "0A", tr("current(A)"), \
+                                           tr("The current of the inverter side of the current MPS is the current of phase A."));
     MPS_cur_A->add_Specification();
+
+    if(MPS_cur_B != nullptr)
+    {
+        delete MPS_cur_B;
+    }
     MPS_cur_B = new Specification(this,MPS_cur_B_explain, myTable, line++, column, \
-                                            "0A", "current(B)", \
-                                            "这是从变流器获取的当前MPS的B相电流\nThis is the B-phase current of the current PCS obtained from the converter.");
+                                            "0A", tr("current(B)"), \
+                                            tr("The current of the inverter side of the current MPS is the current of phase B."));
     MPS_cur_B->add_Specification();
+
+    if(MPS_cur_C != nullptr)
+    {
+        delete MPS_cur_C;
+    }
     MPS_cur_C = new Specification(this,MPS_cur_C_explain, myTable, line++, column, \
-                                            "0A", "current(C)", \
-                                            "这是从变流器获取的当前MPS的C相电流\nThis is the C-phase current of the current PCS obtained from the converter.");
+                                            "0A", tr("current(C)"), \
+                                            tr("The current of the inverter side of the current MPS is the current of phase C."));
     MPS_cur_C->add_Specification();
+
+    if(MPS_IGBT_T != nullptr)
+    {
+        delete MPS_IGBT_T;
+    }
     MPS_IGBT_T = new Specification(this,MPS_IGBT_T_explain, myTable, line++, column, \
-                                            "0℃", "IGBT temperature", \
-                                            "这是从变流器获取的当前IGBT温度，IGBT温度是指当前半导体芯片的最高温度\nThis is the current IGBT temperature obtained from the converter. IGBT temperature is the highest temperature of the current semiconductor chip.");
+                                            "0℃", tr("IGBT temperature"), \
+                                            tr("The current IGBT temperature of MPS shall not exceed 105℃, otherwise PCS will run derated."));
     MPS_IGBT_T->add_Specification();
+
+    if(MPS_Env_T != nullptr)
+    {
+        delete MPS_Env_T;
+    }
     MPS_Env_T = new Specification(this,MPS_Env_T_explain, myTable, line++, column, \
-                                            "0℃", "Environment temperature", \
-                                            "这是从变流器获取的当前环境温度\nThis is the current ambient temperature obtained from the converter.");
+                                            "0℃", tr("Environment temperature"), \
+                                            tr("The ambient temperature of the current MPS."));
     MPS_Env_T->add_Specification();
+
+    if(MPS_Leakage_cur != nullptr)
+    {
+        delete MPS_Leakage_cur;
+    }
     MPS_Leakage_cur = new Specification(this,MPS_Leakage_cur_explain, myTable, line++, column, \
-                                            "0mA", "Leakage current", \
-                                            "这是漏电流\nThis is the leakage current.");
+                                            "0mA", tr("Leakage current"), \
+                                            tr("Leakage current: the current to the ground of the grounding wire. If the value is larger, it indicates that there is leakage."));
     MPS_Leakage_cur->add_Specification();
     line=0;
     column=3;
+
+    if(PV_vol != nullptr)
+    {
+        delete PV_vol;
+    }
     PV_vol = new Specification(this,PV_vol_explain, myTable, line++, column, \
-                                            "0V", "PV voltage", \
-                                            "这是变流器采集的当前PV侧的电压\nThis is the current PV side voltage collected by the converter.");
+                                            "0V", tr("PV voltage"), \
+                                            tr("Total voltage on the PV side collected by the current MPS."));
     PV_vol->add_Specification();
+
+    if(PV_cur != nullptr)
+    {
+        delete PV_cur;
+    }
     PV_cur = new Specification(this,PV_cur_explain, myTable, line++, column, \
-                                            "0A", "PV current", \
-                                            "这是变流器采集的当前PV侧的电流\nThis is the current on the PV side collected by the converter.");
+                                            "0A", tr("PV current"), \
+                                            tr("Total current on the PV side collected by MPS."));
     PV_cur->add_Specification();
+
+    if(PV_power != nullptr)
+    {
+        delete PV_power;
+    }
     PV_power = new Specification(this,PV_power_explain, myTable, line++, column, \
-                                            "0kW", "PV power", \
-                                            "这是变流器采集的当前PV侧的功率\nThis is the current PV power collected by the converter.");
+                                            "0kW", tr("PV power"), \
+                                            tr("The PV side power is obtained by multiplying the total voltage and total current calculated in the current MPS."));
     PV_power->add_Specification();
+
+    if(Batter_vol != nullptr)
+    {
+        delete Batter_vol;
+    }
     Batter_vol = new Specification(this,Batter_vol_explain, myTable, line++, column, \
-                                            "0V", "Battery voltage", \
-                                            "这是变流器采集的当前电池的总压\nThis is the total voltage of the current battery collected by the converter.");
+                                            "0V", tr("Battery voltage"), \
+                                            tr("The current MPS samples the battery voltage from the connected battery."));
     Batter_vol->add_Specification();
+
+    if(Batter_cur != nullptr)
+    {
+        delete Batter_cur;
+    }
     Batter_cur = new Specification(this,Batter_cur_explain, myTable, line++, column, \
-                                            "0A", "Battery current", \
-                                            "这是变流器采集的当前电池的电流\nThis is the current of the battery collected by the converter.");
+                                            "0A", tr("Battery current"), \
+                                            tr("Battery current sampled by the MPS from the connected battery."));
     Batter_cur->add_Specification();
+
+    if(Batter_power != nullptr)
+    {
+        delete Batter_power;
+    }
     Batter_power = new Specification(this,Batter_power_explain, myTable, line++, column, \
-                                            "0kW", "Battery power", \
-                                            "这是变流器采集的当前电池的功率\nThis is the current battery power collected by the converter.");
+                                            "0kW", tr("Battery power"), \
+                                            tr("At present, MPS calculates the product of battery voltage and battery current to obtain battery power."));
     Batter_power->add_Specification();
+
+    if(Bus_vol != nullptr)
+    {
+        delete Bus_vol;
+    }
     Bus_vol = new Specification(this,Bus_vol_explain, myTable, line++, column, \
-                                            "0V", "Bus voltage", \
-                                            "这是变流器采集的当前的母线电压\nThis is the current bus voltage collected by the converter.");
+                                            "0V", tr("Bus voltage"), \
+                                            tr("The current bus voltage sampled by MPS from the bus side."));
     Bus_vol->add_Specification();
+
+    if(Bus_cur != nullptr)
+    {
+        delete Bus_cur;
+    }
     Bus_cur = new Specification(this,Bus_cur_explain, myTable, line++, column, \
-                                            "0V", "Bus current", \
-                                            "这是变流器采集的当前的母线电流\nThis is the current busbar current collected by the converter.");
+                                            "0V", tr("Bus current"), \
+                                            tr("Current bus current sampled by MPS from the bus side."));
     Bus_cur->add_Specification();
 }
 //PV数据 绘制button

@@ -124,7 +124,7 @@ public:
     QPushButton *Load_Frequency_explain;
 
     Specification *MPS_vol_AB;
-    Specification *MPS_vol_BC;
+    Specification *MPS_vol_BC = nullptr;
     Specification *MPS_vol_CA;
     Specification *MPS_cur_A;
     Specification *MPS_cur_B;
