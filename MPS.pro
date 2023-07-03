@@ -11,7 +11,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 DEFINES += QT_DEPRECATED_WARNINGS
 #QT      += network
 
-TARGET = MPSWin/config
+TARGET = MPSWin
 TEMPLATE = app
 
 
@@ -33,7 +33,12 @@ HEADERS  += mywidget.h \
 
 FORMS    += mywidget.ui
 
-RESOURCES += image.qrc
+TRANSLATIONS += \
+    $$PWD/Language/CN.ts\
+    $$PWD/Language/EN.ts\
+
+RESOURCES += image.qrc \
+    language.qrc
 
 
 

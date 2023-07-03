@@ -17,18 +17,24 @@
 //#include <QMessageBox>
 //#include <QButtonGroup>
 
+#define CHINESE     0
+#define ENGLISH     1
 
 MyWidget::MyWidget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::MyWidget)
 {
+    LanguageType = CHINESE; //开机默认为中文
+
     ui->setupUi(this);
 //    setFixedSize(800,562);//固定窗口大小
     ui->UI_stackedWidget->setCurrentWidget(ui->UI_page);
     ui->stackedWidget->setCurrentWidget(ui->Host_page); //执行程序后，自动进入到主页
 
+    LoadLanguageInit(); //初始化语言
     MemoryAllocation(); //初始化内存空间
     UIPageInit();       //初始化界面
+    LinkRelationship();//函数关联
 
 }
 
@@ -38,6 +44,25 @@ MyWidget::~MyWidget()
 
 
     delete ui;
+}
+
+void MyWidget::LoadLanguageInit()
+{
+    translator = new QTranslator(qApp);
+    if(LanguageType == CHINESE)//开机语言 中文
+    {
+        translator->load(":/Language/CN.qm");
+        qApp->installTranslator(translator);
+        ui->retranslateUi(this);
+        LanguageType = CHINESE;
+    }
+    else if(LanguageType == ENGLISH)//开机语言 英文
+    {
+        translator->load(":/Language/EN.qm");
+        qApp->installTranslator(translator);
+        ui->retranslateUi(this);
+        LanguageType = ENGLISH;
+    }
 }
 
 /********************************************************
@@ -541,7 +566,6 @@ void MyWidget::UIPageInit()
     SystemSettingPage();//系统设置
     LCDSetting();   //实时刷新时间
     RecordPage();//记录页面
-    LinkRelationship();//函数关联
 }
 //触摸点击
 void MyWidget::FirstPage()
@@ -574,6 +598,30 @@ void MyWidget::AdvancedSetup_btn_clicked()
         SystemParam_tbnt_released();    //绘制高级设置界面
     }
 }
+
+void MyWidget::ChangeLanguage_btn_clicked()
+{
+    m_menu->hide();//隐藏菜单界面
+
+    if(LanguageType == CHINESE)
+    {
+        LanguageType = ENGLISH;//如果当前是中文，则切英文
+        translator->load(":/Language/EN.qm");
+        ui->ChangeLanguage_btn->setText(tr("Change Language"));
+        qApp->installTranslator(translator);
+        ui->retranslateUi(this);
+    }
+    else if(LanguageType == ENGLISH)
+    {
+        LanguageType = CHINESE;//如果当前是英文，则切中文
+        translator->load(":/Language/CN.qm");
+        ui->ChangeLanguage_btn->setText(tr("切换语言"));
+        qApp->installTranslator(translator);
+        ui->retranslateUi(this);
+    }
+
+    UIPageInit();       //初始化界面
+}
 //函数关联
 void MyWidget::LinkRelationship()
 {
@@ -592,6 +640,9 @@ void MyWidget::LinkRelationship()
 
     connect(pButton_BatteryData, SIGNAL(buttonClicked(int)), this,SLOT(BatteryData_clicked(int)));//电池数据
     connect(pButton_Version, SIGNAL(buttonClicked(int)), this,SLOT(SystemlnformationVer_clicked(int)));//系统信息相关按钮的说明
+
+    connect(ui->ChangeLanguage_btn, SIGNAL(clicked(bool)), this, SLOT(ChangeLanguage_btn_clicked()));
+    connect(ui->ChangeLanguage_btn_1, SIGNAL(clicked(bool)), this, SLOT(ChangeLanguage_btn_clicked()));
 }
 //实时数据
 void MyWidget::RunStatePage()
@@ -649,7 +700,7 @@ void MyWidget::MPS_Data_Tab()
     QStringList Converter_Tablist1;
     Converter_Tablist1  << tr("Voltage(AB)") << tr("Voltage(BC)") << tr("Voltage(CA)")
                         << tr("Current(A)") << tr("Current(B)")<< tr("Current(C)")
-                        << tr("IGBT temp.") << tr("Env. temp.") << tr("Leakage current");
+                        << tr("IGBT temperature") << tr("Env. temperature") << tr("Leakage current");
     QStringList Converter_Tablist2;
     Converter_Tablist2  << tr("PV voltage") << tr("PV current") << tr("PV power")
                         << tr("Battery voltage") << tr("Battery current")<< tr("Battery power")
@@ -687,10 +738,10 @@ void MyWidget::MPS_Data_Tab()
 
     QStringList PV_Tablist1;
     PV_Tablist1  << tr("Voltage_H") << tr("Current_H") << tr("Power_H")
-                        << tr("CVoltage_L") << tr("Current_L")<< tr("Power_L")<< tr("PositiveInuslation");
+                        << tr("Voltage_L") << tr("Current_L")<< tr("Power_L")<< tr("PositiveInuslation");
     QStringList PV_Tablist2;
     PV_Tablist2  << tr("Bus_H_Vol(+)") << tr("Bus_H_Vol(-)") << tr("Bus_L_Vol(+)")<< tr("Bus_L_Vol(-)")
-                 << tr("IGBT Temp.")<< tr("NegativeInuslation")<< tr("Leakage current");
+                 << tr("IGBT Temperature")<< tr("NegativeInuslation")<< tr("Leakage current");
     ui->RT_DCDC_tableWidget->setColumnCount(4);
     ui->RT_DCDC_tableWidget->setRowCount(PV_Tablist1.size());
     ui->RT_DCDC_tableWidget->horizontalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
@@ -801,7 +852,7 @@ void MyWidget::ModuleState_Tab()
 {
     QStringList State_Tablist1;
     State_Tablist1  << tr("DC input breaker") << tr("DC contactor") << tr("Maintenance Bypass breaker")
-                   << tr("COutput breaker") << tr("Output contactor")<< tr("Grid breaker")
+                   << tr("Output breaker") << tr("Output contactor")<< tr("Grid breaker")
                    << tr("DO1")<< tr("DO2")<< tr("DO3");
     QStringList State_Tablist2;
     State_Tablist2  << tr("DCAC Converter available") << tr("DC Soft start") << tr("Converter status")<< tr("Reactive power Regulation")

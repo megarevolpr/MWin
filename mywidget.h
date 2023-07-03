@@ -45,6 +45,7 @@
 #include <QMessageBox>
 #include <QTimer>
 #include <QButtonGroup>
+#include <QTranslator>
 
 #include "Menu.h"
 #include "Specification/Specification.h"
@@ -997,7 +998,7 @@ public:
 
 private:
 
-
+    void LoadLanguageInit();    //初始化语言
     void MemoryAllocation();    //初始化内存空间
     void UIPageInit();          //初始化界面
 
@@ -1064,6 +1065,7 @@ private slots:
     void on_Batt_btn_released();//跳转到电池信息
     void on_Alarm_btn_clicker();//跳转实时告警页面
     void AdvancedSetup_btn_clicked();//跳转到高级设置
+    void ChangeLanguage_btn_clicked();//切换语言
 
 
     void on_RTD_DC_clicked();
@@ -1125,5 +1127,7 @@ private:
     QTimer *Update_RTData_timer;
     bool ASKey;//高级设置钥匙
     bool IPShow;//IP地址显示标志位
+    QTranslator *translator;    //翻译
+    int LanguageType;   //当前语言
 };
 #endif // MYWIDGET_H
