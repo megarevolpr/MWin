@@ -609,6 +609,47 @@ void MyWidget::MemoryAllocation()
     DC_Bat_Infor_explain = new QPushButton;  //电池信息字
     DC_Bat_State_explain = new QPushButton;  //电池状态字
 }
+
+/************MPS状态释放说明弹窗的空间***************/
+void MyWidget::MPS_state_delete()
+{
+    delete DC_input_Bre;
+    delete DC_Con;
+    delete M_Bypass_Bre;
+    delete Output_Bre;
+    delete Output_Con;
+    delete Grid_Bre;
+    delete DO1;
+    delete DO2;
+    delete DO3;
+
+    delete DCAC_Conver_avail;
+    delete DC_Soft_Start;
+    delete Converter_Status;
+    delete Reactive_P_Reg;
+    delete Sleep_mode;
+    delete LVRT;
+    delete DI1;
+    delete DI2;
+    delete DI3;
+    delete DI4;
+    delete DI5;
+    delete DI6;
+
+    delete Breaker1_Sta_Boost;
+    delete Breaker2_Sta_Boost;
+    delete Contator_Sta_Boost;
+    delete Breaker1_Sta_Buck;
+    delete Breaker2_Sta_Buck;
+    delete Contator_Sta_Buck;
+    delete Run_mode;
+    delete DCDC_Converter_ava;
+    delete Soft_Start_Sta_Boost;
+    delete Soft_Start_Sta_Buck;
+    delete Converter_Status_V;
+    delete ModeLock;
+}
+
 /********************************************************
  * 初始化界面
 *********************************************************/
@@ -675,7 +716,9 @@ void MyWidget::ChangeLanguage_btn_clicked()
         ui->retranslateUi(this);
     }
 
+    MPS_state_delete();//释放MPS状态 的空间
     UIPageInit();       //初始化界面
+
 }
 //函数关联
 void MyWidget::LinkRelationship()
@@ -1187,7 +1230,7 @@ void MyWidget::OperationLog()
 void MyWidget::RTAlarm()
 {
     ui->RTAlarm_Data_page->setColumnCount(5);
-    ui->RTAlarm_Data_page->setRowCount(30);
+    ui->RTAlarm_Data_page->setRowCount(28);
     ui->RTAlarm_Data_page->horizontalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
     ui->RTAlarm_Data_page->verticalHeader()->setVisible(false);//设置垂直头不可见
     ui->RTAlarm_Data_page->setFrameShape(QFrame::NoFrame);//设置无边框
@@ -1203,8 +1246,8 @@ void MyWidget::RTAlarm()
     ui->RTAlarm_Data_page->setColumnWidth(4,250);
 
     QStringList RTAlarm_Title;
-    RTAlarm_Title << tr("告警名称\nAlarm name") << tr("告警等级\nAlarm leve")<< tr("触发条件\nTrigger condition") \
-                    << tr("响应动作\nResponse action")<< tr("是否自动复位及复位时间\nWhether to reset\nautomatically and reset time");
+    RTAlarm_Title << tr("Alarm name") << tr("Alarm leve")<< tr("Trigger condition") \
+                    << tr("Response action")<< tr("Whether to reset\nautomatically and reset time");
     ui->RTAlarm_Data_page->setHorizontalHeaderLabels(RTAlarm_Title);
 
     PCS_Alarm_information_table();  //展示PCS故障信息表
@@ -1251,10 +1294,10 @@ void MyWidget::PCS_Alarm_information_table()
 {
     ui->RTAlarm_Data_page->setRowHeight(0, 110);
     QStringList RTAlarm_List;
-    RTAlarm_List << tr("逆变器过流\nInverter overcurrent") << tr("一般故障\nGeneral failure") \
-                << tr("电感电流瞬时值>3Ip\n或电感电流有效值>1.36In\nInductive current instantaneous value >3lp or inductive current RMS value >1.36ln") \
-                << tr("PCS 停机，输出接触器断开\nPCS shut down and disconnect the output contactor") \
-                << tr("可恢复，故障消除5min后自动恢复\nRecoverable, automatic recovery 5 minutes after the fault is eliminated");
+    RTAlarm_List << tr("Inverter overcurrent") << tr("General failure") \
+                << tr("Inductive current instantaneous value >3lp or inductive current RMS value >1.36ln") \
+                << tr("PCS shut down and disconnect the output contactor") \
+                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
     for(int i = 0; i < RTAlarm_List.size(); i++)
     {
         ui->RTAlarm_Data_page->setItem(0, i, new QTableWidgetItem(RTAlarm_List.at(i)));
@@ -1263,10 +1306,10 @@ void MyWidget::PCS_Alarm_information_table()
 
     ui->RTAlarm_Data_page->setRowHeight(1, 130);
     RTAlarm_List.clear();
-    RTAlarm_List << tr("变流器故障\nConverter fault") << tr("一般故障\nGeneral failure")\
-                << tr("变流器开机软启过程中，30s后逆变电压有效值>1.2Vgrid或逆变电压有效值<0.3Vgrid\nDuring soft startup of converter, inverter voltage RMS more then 1.2Vgrid or inverter voltage RMS less than 0.3Vgrid after 30s") \
-                << tr("PCS 停机，停止开机软启\nPCS shut down and Stop the soft startup") \
-                << tr("可恢复，故障消除5min后自动恢复\nRecoverable, automatic recovery 5 minutes after the fault is eliminated");
+    RTAlarm_List << tr("Converter fault") << tr("General failure")\
+                << tr("During soft startup of converter, inverter voltage RMS more then 1.2Vgrid or inverter voltage RMS less than 0.3Vgrid after 30s") \
+                << tr("PCS shut down and Stop the soft startup") \
+                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
     for(int i = 0; i < RTAlarm_List.size(); i++)
     {
         ui->RTAlarm_Data_page->setItem(1, i, new QTableWidgetItem(RTAlarm_List.at(i)));
@@ -1275,10 +1318,10 @@ void MyWidget::PCS_Alarm_information_table()
 
     ui->RTAlarm_Data_page->setRowHeight(2, 110);
     RTAlarm_List.clear();
-    RTAlarm_List << tr("电池电压低\nBattery low voltage") << tr("告警\nWarning") \
-                << tr("直流出入电压低于电池EOD电压或者小于1.414倍电网线电压\nThe DC input/output voltage is lower than the battery EOD voltage or less than 1.414 times the grid line voltage") \
-                << tr("PCS 停机，交流接触器断开\nPCS shut down and the AC contactor is disconnected") \
-                << tr("可恢复，故障消除5min后自动恢复\nRecoverable, automatic recovery 5 minutes after the fault is eliminated");
+    RTAlarm_List << tr("Battery low voltage") << tr("Warning") \
+                << tr("The DC input/output voltage is lower than the battery EOD voltage or less than 1.414 times the grid line voltage") \
+                << tr("PCS shut down and the AC contactor is disconnected") \
+                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
     for(int i = 0; i < RTAlarm_List.size(); i++)
     {
         ui->RTAlarm_Data_page->setItem(2, i, new QTableWidgetItem(RTAlarm_List.at(i)));
@@ -1287,10 +1330,10 @@ void MyWidget::PCS_Alarm_information_table()
 
     ui->RTAlarm_Data_page->setRowHeight(3, 200);
     RTAlarm_List.clear();
-    RTAlarm_List << tr("电池功率低\nLow battery power") << tr("告警\nWarning") \
-                << tr("电池电压低于电池EOD电压值(适用无BMS电池系统，防止电压回升)\nThe battery voltage is lower than the EOD voltage value (applicable to BMS free battery systems to prevent voltage rebound)") \
-                << tr("处于放电状态时PCS停机(充电过程不受影响)，交流接触器断开\nWhen the PCS is in discharge state, the machine stops (the charging process is not affected) and the AC contactor is disconnected") \
-                << tr("可恢复，PCS充电时间大于5min后，告警消除\nRecoverable, The alarm is cleared when the charging time of PCS is longer than 5 minutes");
+    RTAlarm_List << tr("Low battery power") << tr("Warning") \
+                << tr("The battery voltage is lower than the EOD voltage value (applicable to BMS free battery systems to prevent voltage rebound)") \
+                << tr("When the PCS is in discharge state, the machine stops (the charging process is not affected) and the AC contactor is disconnected") \
+                << tr("Recoverable, The alarm is cleared when the charging time of PCS is longer than 5 minutes");
     for(int i = 0; i < RTAlarm_List.size(); i++)
     {
         ui->RTAlarm_Data_page->setItem(3, i, new QTableWidgetItem(RTAlarm_List.at(i)));
@@ -1299,10 +1342,10 @@ void MyWidget::PCS_Alarm_information_table()
 
     ui->RTAlarm_Data_page->setRowHeight(4, 130);
     RTAlarm_List.clear();
-    RTAlarm_List << tr("直流母线过压\nDc bus overvoltage") << tr("严重故障\nSerious failure") \
-                << tr("直流输入电压>850V\nDc input voltage more then 850V") \
-                << tr("PCS 停机，交流接触器断开，直流断路器脱扣\nPCS shut down, the AC contactor is disconnected, and the DC circuit breaker is tripped") \
-                << tr("不可恢复\nUnrecoverable");
+    RTAlarm_List << tr("DC bus overvoltage") << tr("Serious failure") \
+                << tr("DC input voltage more then 850V") \
+                << tr("PCS shut down, the AC contactor is disconnected, and the DC circuit breaker is tripped") \
+                << tr("Unrecoverable");
     for(int i = 0; i < RTAlarm_List.size(); i++)
     {
         ui->RTAlarm_Data_page->setItem(4, i, new QTableWidgetItem(RTAlarm_List.at(i)));
@@ -1311,10 +1354,10 @@ void MyWidget::PCS_Alarm_information_table()
 
     ui->RTAlarm_Data_page->setRowHeight(5, 130);
     RTAlarm_List.clear();
-    RTAlarm_List << tr("直流母线短路\nDc bus short circuit") << tr("严重故障\nSerious failure") \
-                << tr("直流母线电压低于200V，直流电流大于50A，判断时间为200us\nThe DC bus voltage is less than 200V, the DC current is more than 50A, and the judgment time is 200us") \
-                << tr("PCS 停机，交流接触器断开，直流断路器脱扣\nPCS shut down, the AC contactor is disconnected, and the DC circuit breaker is tripped") \
-                << tr("不可恢复\nUnrecoverable");
+    RTAlarm_List << tr("DC bus short circuit") << tr("Serious failure") \
+                << tr("The DC bus voltage is less than 200V, the DC current is more than 50A, and the judgment time is 200us") \
+                << tr("PCS shut down, the AC contactor is disconnected, and the DC circuit breaker is tripped") \
+                << tr("Unrecoverable");
     for(int i = 0; i < RTAlarm_List.size(); i++)
     {
         ui->RTAlarm_Data_page->setItem(5, i, new QTableWidgetItem(RTAlarm_List.at(i)));
@@ -1323,10 +1366,10 @@ void MyWidget::PCS_Alarm_information_table()
 
     ui->RTAlarm_Data_page->setRowHeight(6, 110);
     RTAlarm_List.clear();
-    RTAlarm_List << tr("输出接触器开路\nThe output contactor is open") << tr("一般故障\nGeneral failure")\
-                << tr("PCS运行状态下，交流接触器的辅助触点信号为断开状态\nWhen PCS is running, the auxiliary contact signal of AC contactor is in the disconnected state") \
-                << tr("PCS 停机，交流接触器断开\nPCS shut down and the AC contactor is disconnected") \
-                << tr("可恢复，故障消除5min后自动恢复\nRecoverable, automatic recovery 5 minutes after the fault is eliminated");
+    RTAlarm_List << tr("The output contactor is open") << tr("General failure")\
+                << tr("When PCS is running, the auxiliary contact signal of AC contactor is in the disconnected state") \
+                << tr("PCS shut down and the AC contactor is disconnected") \
+                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
     for(int i = 0; i < RTAlarm_List.size(); i++)
     {
         ui->RTAlarm_Data_page->setItem(6, i, new QTableWidgetItem(RTAlarm_List.at(i)));
@@ -1335,10 +1378,10 @@ void MyWidget::PCS_Alarm_information_table()
 
     ui->RTAlarm_Data_page->setRowHeight(7, 110);
     RTAlarm_List.clear();
-    RTAlarm_List << tr("输出接触器短路\nOutput contactor short circuit") << tr("一般故障\nGeneral failure")\
-                << tr("PCS停机状态下，交流接触器的辅助触点信号为闭合状态\nWhen PCS is shut down, the auxiliary contact signal of AC contactor is closed") \
-                << tr("PCS 停机，交流接触器断开\nPCS shut down and the AC contactor is disconnected") \
-                << tr("可恢复，故障消除5min后自动恢复\nRecoverable, automatic recovery 5 minutes after the fault is eliminated");
+    RTAlarm_List << tr("Output contactor short circuit") << tr("General failure")\
+                << tr("When PCS is shut down, the auxiliary contact signal of AC contactor is closed") \
+                << tr("PCS shut down and the AC contactor is disconnected") \
+                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
     for(int i = 0; i < RTAlarm_List.size(); i++)
     {
         ui->RTAlarm_Data_page->setItem(7, i, new QTableWidgetItem(RTAlarm_List.at(i)));
@@ -1347,10 +1390,10 @@ void MyWidget::PCS_Alarm_information_table()
 
     ui->RTAlarm_Data_page->setRowHeight(8, 310);
     RTAlarm_List.clear();
-    RTAlarm_List << tr("变流器过温\nThe converter is overheated") << tr("告警\nWarning") \
-                << tr("IGBT温度超过105℃或电抗器温度超过160℃\nIGBT temperature exceeds 105℃ or reactor temperature exceeds 160℃") \
-                << tr("IGBT过温：降额运行(并网)；IGBT过温：PCS停机(离网)，交流接触器断开；电抗器过温：PCS 停机，交流接触器断开\nIGBT overtemperature: derating operation (grid-connected); IGBT overtemperature: PCS shut down (off-grid), AC contactor is disconnected; Reactor overtemperature: PCS shut down and AC contactor is disconnected") \
-                << tr("可恢复，故障消除5min后自动恢复\nRecoverable, automatic recovery 5 minutes after the fault is eliminated");
+    RTAlarm_List << tr("The converter is overheated") << tr("Warning") \
+                << tr("IGBT temperature exceeds 105℃ or reactor temperature exceeds 160℃") \
+                << tr("IGBT overtemperature: derating operation (grid-connected); IGBT overtemperature: PCS shut down (off-grid), AC contactor is disconnected; Reactor overtemperature: PCS shut down and AC contactor is disconnected") \
+                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
     for(int i = 0; i < RTAlarm_List.size(); i++)
     {
         ui->RTAlarm_Data_page->setItem(8, i, new QTableWidgetItem(RTAlarm_List.at(i)));
@@ -1359,10 +1402,10 @@ void MyWidget::PCS_Alarm_information_table()
 
     ui->RTAlarm_Data_page->setRowHeight(9, 90);
     RTAlarm_List.clear();
-    RTAlarm_List << tr("输出过载\nOutput over load") << tr("告警\nWarning") \
-                << tr("离网负载功率>110%Pn\nOff-grid load power >110%Pn") \
-                << tr("PCS 停机，交流接触器断开\nPCS shut down and the AC contactor is disconnected") \
-                << tr("可恢复，故障消除5min后自动恢复\nRecoverable, automatic recovery 5 minutes after the fault is eliminated");
+    RTAlarm_List << tr("Output over load") << tr("Warning") \
+                << tr("Off-grid load power >110%Pn") \
+                << tr("PCS shut down and the AC contactor is disconnected") \
+                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
     for(int i = 0; i < RTAlarm_List.size(); i++)
     {
         ui->RTAlarm_Data_page->setItem(9, i, new QTableWidgetItem(RTAlarm_List.at(i)));
@@ -1371,10 +1414,10 @@ void MyWidget::PCS_Alarm_information_table()
 
     ui->RTAlarm_Data_page->setRowHeight(10, 170);
     RTAlarm_List.clear();
-    RTAlarm_List << tr("电池接反故障\nThe positive and negative terminals of the battery are connected inversely fault") << tr("告警\nWarning") \
-                << tr("直流输入正负极性接反\nThe DC input is reversed") \
-                << tr("PCS 停机，交流接触器断开\nPCS shut down and the AC contactor is disconnected") \
-                << tr("不可恢复\nUnrecoverable");
+    RTAlarm_List << tr("The positive and negative terminals of the battery are connected inversely fault") << tr("Warning") \
+                << tr("The DC input is reversed") \
+                << tr("PCS shut down and the AC contactor is disconnected") \
+                << tr("Unrecoverable");
     for(int i = 0; i < RTAlarm_List.size(); i++)
     {
         ui->RTAlarm_Data_page->setItem(10, i, new QTableWidgetItem(RTAlarm_List.at(i)));
@@ -1383,10 +1426,10 @@ void MyWidget::PCS_Alarm_information_table()
 
     ui->RTAlarm_Data_page->setRowHeight(11, 170);
     RTAlarm_List.clear();
-    RTAlarm_List << tr("DC接触器故障\nThe DC contactor is faulty") << tr("一般故障\nGeneral failure") \
-                << tr("驱动信号为闭合信号条件下，电池和母线之间的压测>50V；驱动信号为断开条件下，辅助触点信号为闭合状态\nWhen the driving signal is a closed signal, the pressure difference between the battery and the bus is greater than 50V;When the driving signal is off, the auxiliary contact signal is closed") \
-                << tr("PCS 停机，交流接触器断开\nPCS shut down and the AC contactor is disconnected") \
-                << tr("可恢复，故障消除5min后自动恢复\nRecoverable, automatic recovery 5 minutes after the fault is eliminated");
+    RTAlarm_List << tr("The DC contactor is faulty") << tr("General failure") \
+                << tr("When the driving signal is a closed signal, the pressure difference between the battery and the bus is greater than 50V;When the driving signal is off, the auxiliary contact signal is closed") \
+                << tr("PCS shut down and the AC contactor is disconnected") \
+                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
     for(int i = 0; i < RTAlarm_List.size(); i++)
     {
         ui->RTAlarm_Data_page->setItem(11, i, new QTableWidgetItem(RTAlarm_List.at(i)));
@@ -1395,10 +1438,10 @@ void MyWidget::PCS_Alarm_information_table()
 
     ui->RTAlarm_Data_page->setRowHeight(12, 90);
     RTAlarm_List.clear();
-    RTAlarm_List << tr("EMS通信故障\nEMS communicate\nfault") << tr("一般故障\nGeneral failure") \
-                << tr("PCS与EMS通信丢失，判断时间3min\nThe communication between PCS and EMS is lost, and the judgment time is 3 minutes") \
-                << tr("PCS 停机，交流接触器断开\nPCS shut down and the AC contactor is disconnected") \
-                << tr("可恢复，故障消除后30s自动恢复\nRecoverable, the fault recovers automatically 30 seconds after it is rectified");
+    RTAlarm_List << tr("EMS communicate\nfault") << tr("General failure") \
+                << tr("The communication between PCS and EMS is lost, and the judgment time is 3 minutes") \
+                << tr("PCS shut down and the AC contactor is disconnected") \
+                << tr("Recoverable, the fault recovers automatically 30 seconds after it is rectified");
     for(int i = 0; i < RTAlarm_List.size(); i++)
     {
         ui->RTAlarm_Data_page->setItem(12, i, new QTableWidgetItem(RTAlarm_List.at(i)));
@@ -1407,10 +1450,10 @@ void MyWidget::PCS_Alarm_information_table()
 
     ui->RTAlarm_Data_page->setRowHeight(13, 90);
     RTAlarm_List.clear();
-    RTAlarm_List << tr("BMS通信故障\nBMS communicate\nfault") << tr("一般故障\nGeneral failure") \
-                << tr("PCS与BMS通信丢失，判断时间50s\nCommunication loss between PCS and BMS, judgment time 50s") \
-                << tr("PCS 停机，交流接触器断开\nPCS shut down and the AC contactor is disconnected") \
-                << tr("可恢复，故障消除后30s自动恢复\nRecoverable, the fault recovers automatically 30 seconds after it is rectified");
+    RTAlarm_List << tr("BMS communicate\nfault") << tr("General failure") \
+                << tr("Communication loss between PCS and BMS, judgment time 50s") \
+                << tr("PCS shut down and the AC contactor is disconnected") \
+                << tr("Recoverable, the fault recovers automatically 30 seconds after it is rectified");
     for(int i = 0; i < RTAlarm_List.size(); i++)
     {
         ui->RTAlarm_Data_page->setItem(13, i, new QTableWidgetItem(RTAlarm_List.at(i)));
@@ -1419,10 +1462,10 @@ void MyWidget::PCS_Alarm_information_table()
 
     ui->RTAlarm_Data_page->setRowHeight(14, 130);
     RTAlarm_List.clear();
-    RTAlarm_List << tr("变流器缺相故障\nConverter phase loss fault") << tr("一般故障\nGeneral failure") \
-                << tr("并网功率大于50%条件下，三相电路出现一项或多项线路无输出功率，判断时间为10s\nWhen the grid-connected power is greater than 50%, one or more lines of the three-phase circuit have no output power, and the judgment time is 10s") \
-                << tr("PCS 停机，交流接触器断开\nPCS shut down and the AC contactor is disconnected") \
-                << tr("可恢复，故障消除5min后自动恢复\nRecoverable, automatic recovery 5 minutes after the fault is eliminated");
+    RTAlarm_List << tr("Converter phase loss fault") << tr("General failure") \
+                << tr("When the grid-connected power is greater than 50%, one or more lines of the three-phase circuit have no output power, and the judgment time is 10s") \
+                << tr("PCS shut down and the AC contactor is disconnected") \
+                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
     for(int i = 0; i < RTAlarm_List.size(); i++)
     {
         ui->RTAlarm_Data_page->setItem(14, i, new QTableWidgetItem(RTAlarm_List.at(i)));
@@ -1431,10 +1474,10 @@ void MyWidget::PCS_Alarm_information_table()
 
     ui->RTAlarm_Data_page->setRowHeight(15, 110);
     RTAlarm_List.clear();
-    RTAlarm_List << tr("电网过压\nGrid overvoltage") << tr("告警\nWarning") \
-                << tr("电网电压超过最大允许电压(90%~70%可设定),判断时间1s\nIf the power grid voltage exceeds the maximum allowable voltage (90% to 70% can be set), the judgment time is 1s") \
-                << tr("PCS 停机，交流接触器断开\nPCS shut down and the AC contactor is disconnected") \
-                << tr("可恢复，故障消除5min后自动恢复\nRecoverable, automatic recovery 5 minutes after the fault is eliminated");
+    RTAlarm_List << tr("Grid overvoltage") << tr("Warning") \
+                << tr("If the power grid voltage exceeds the maximum allowable voltage (90% to 70% can be set), the judgment time is 1s") \
+                << tr("PCS shut down and the AC contactor is disconnected") \
+                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
     for(int i = 0; i < RTAlarm_List.size(); i++)
     {
         ui->RTAlarm_Data_page->setItem(15, i, new QTableWidgetItem(RTAlarm_List.at(i)));
@@ -1443,10 +1486,10 @@ void MyWidget::PCS_Alarm_information_table()
 
     ui->RTAlarm_Data_page->setRowHeight(16, 110);
     RTAlarm_List.clear();
-    RTAlarm_List << tr("电网欠压\nGrid undervoltage") << tr("告警\nWarning") \
-                << tr("电网电压超过最大允许电压(90%~70%可设定),判断时间1s\nIf the power grid voltage exceeds the maximum allowable voltage (90% to 70% can be set), the judgment time is 1s") \
-                << tr("PCS 停机，交流接触器断开\nPCS shut down and the AC contactor is disconnected") \
-                << tr("可恢复，故障消除5min后自动恢复\nRecoverable, automatic recovery 5 minutes after the fault is eliminated");
+    RTAlarm_List << tr("Grid undervoltage") << tr("Warning") \
+                << tr("If the power grid voltage exceeds the maximum allowable voltage (90% to 70% can be set), the judgment time is 1s") \
+                << tr("PCS shut down and the AC contactor is disconnected") \
+                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
     for(int i = 0; i < RTAlarm_List.size(); i++)
     {
         ui->RTAlarm_Data_page->setItem(16, i, new QTableWidgetItem(RTAlarm_List.at(i)));
@@ -1455,10 +1498,10 @@ void MyWidget::PCS_Alarm_information_table()
 
     ui->RTAlarm_Data_page->setRowHeight(17, 150);
     RTAlarm_List.clear();
-    RTAlarm_List << tr("电网反序\nGrid reverse sequence") << tr("告警\nWarning") \
-                << tr("三相相序接反(电网电压正序模值小于负序模值)，判断时间为1s\nThe three-phase phase sequence is reversed (the positive sequence mode value of the grid voltage is less than the negative sequence mode value), and the judgment time is 1s") \
-                << tr("PCS 停机，交流接触器断开\nPCS shut down and the AC contactor is disconnected") \
-                << tr("不可恢复\nUnrecoverable");
+    RTAlarm_List << tr("Grid reverse sequence") << tr("Warning") \
+                << tr("The three-phase phase sequence is reversed (the positive sequence mode value of the grid voltage is less than the negative sequence mode value), and the judgment time is 1s") \
+                << tr("PCS shut down and the AC contactor is disconnected") \
+                << tr("Unrecoverable");
     for(int i = 0; i < RTAlarm_List.size(); i++)
     {
         ui->RTAlarm_Data_page->setItem(17, i, new QTableWidgetItem(RTAlarm_List.at(i)));
@@ -1467,10 +1510,10 @@ void MyWidget::PCS_Alarm_information_table()
 
     ui->RTAlarm_Data_page->setRowHeight(18, 150);
     RTAlarm_List.clear();
-    RTAlarm_List << tr("电网频率异常\nGrid frequency anomaly") << tr("告警\nWarning") \
-                << tr("电网频率超出PCS允许范围内(±2Hz可设定)\nGrid frequency frequency beyond the allowable range of PCS (±2Hz can be set)") \
-                << tr("PCS 停机，交流接触器断开\nPCS shut down and the AC contactor is disconnected") \
-                << tr("可恢复，故障消除5min后自动恢复\nRecoverable, automatic recovery 5 minutes after the fault is eliminated");
+    RTAlarm_List << tr("Grid frequency anomaly") << tr("Warning") \
+                << tr("Grid frequency frequency beyond the allowable range of PCS (±2Hz can be set)") \
+                << tr("PCS shut down and the AC contactor is disconnected") \
+                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
     for(int i = 0; i < RTAlarm_List.size(); i++)
     {
         ui->RTAlarm_Data_page->setItem(18, i, new QTableWidgetItem(RTAlarm_List.at(i)));
@@ -1479,10 +1522,10 @@ void MyWidget::PCS_Alarm_information_table()
 
     ui->RTAlarm_Data_page->setRowHeight(19, 150);
     RTAlarm_List.clear();
-    RTAlarm_List << tr("变流器孤岛保护\nConverter shutter island protection") << tr("告警\nWarning") \
-                << tr("主动孤岛保护模式下电网失电，且负载和逆变器并网功率和相角相匹配\nInitiative shutter island protection mode, the power grid loses power, and the load matches the grid-connected power and phase Angle of the inverter") \
-                << tr("PCS 停机，交流接触器断开\nPCS shut down and the AC contactor is disconnected") \
-                << tr("可恢复，故障消除5min后自动恢复\nRecoverable, automatic recovery 5 minutes after the fault is eliminated");
+    RTAlarm_List << tr("Converter shutter island protection") << tr("Warning") \
+                << tr("Initiative shutter island protection mode, the power grid loses power, and the load matches the grid-connected power and phase Angle of the inverter") \
+                << tr("PCS shut down and the AC contactor is disconnected") \
+                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
     for(int i = 0; i < RTAlarm_List.size(); i++)
     {
         ui->RTAlarm_Data_page->setItem(19, i, new QTableWidgetItem(RTAlarm_List.at(i)));
@@ -1491,10 +1534,10 @@ void MyWidget::PCS_Alarm_information_table()
 
     ui->RTAlarm_Data_page->setRowHeight(20, 150);
     RTAlarm_List.clear();
-    RTAlarm_List << tr("驱动线故障\nDrive line fault") << tr("一般故障\nGeneral failure") \
-                << tr("驱动线端口松动\nThe driver cable port is loose") \
-                << tr("PCS 停机，交流接触器断开\nPCS shut down and the AC contactor is disconnected") \
-                << tr("可恢复，故障消除5min后自动恢复\nRecoverable, automatic recovery 5 minutes after the fault is eliminated");
+    RTAlarm_List << tr("Drive line fault") << tr("General failure") \
+                << tr("The driver cable port is loose") \
+                << tr("PCS shut down and the AC contactor is disconnected") \
+                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
     for(int i = 0; i < RTAlarm_List.size(); i++)
     {
         ui->RTAlarm_Data_page->setItem(20, i, new QTableWidgetItem(RTAlarm_List.at(i)));
@@ -1503,10 +1546,10 @@ void MyWidget::PCS_Alarm_information_table()
 
     ui->RTAlarm_Data_page->setRowHeight(21, 150);
     RTAlarm_List.clear();
-    RTAlarm_List << tr("防雷故障\nLightning protection fault") << tr("告警\nWarning") \
-                << tr("防雷器击穿或漏电\nSurge arrester breakdown or leakage") \
-                << tr("PCS 停机，交流接触器断开\nPCS shut down and the AC contactor is disconnected") \
-                << tr("不可恢复\nUnrecoverable");
+    RTAlarm_List << tr("Lightning protection fault") << tr("Warning") \
+                << tr("Surge arrester breakdown or leakage") \
+                << tr("PCS shut down and the AC contactor is disconnected") \
+                << tr("Unrecoverable");
     for(int i = 0; i < RTAlarm_List.size(); i++)
     {
         ui->RTAlarm_Data_page->setItem(21, i, new QTableWidgetItem(RTAlarm_List.at(i)));
@@ -1515,10 +1558,10 @@ void MyWidget::PCS_Alarm_information_table()
 
     ui->RTAlarm_Data_page->setRowHeight(22, 150);
     RTAlarm_List.clear();
-    RTAlarm_List << tr("绝缘阻抗异常\nDrive line fault") << tr("告警\nWarning") \
-                << tr("直流侧正负母线对地电压异常（小于50V）\nAbnormal voltage of positive and negative bus to ground in DC side (less than 50V)") \
-                << tr("PCS 停机，交流接触器断开\nPCS shut down and the AC contactor is disconnected") \
-                << tr("可恢复，故障消除5min后自动恢复\nRecoverable, automatic recovery 5 minutes after the fault is eliminated");
+    RTAlarm_List << tr("The AC auxiliary power supply is faulty") << tr("General failure") \
+                << tr("The AC auxiliary power output is abnormal. Procedure") \
+                << tr("PCS shut down and the AC contactor is disconnected") \
+                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
     for(int i = 0; i < RTAlarm_List.size(); i++)
     {
         ui->RTAlarm_Data_page->setItem(22, i, new QTableWidgetItem(RTAlarm_List.at(i)));
@@ -1527,10 +1570,10 @@ void MyWidget::PCS_Alarm_information_table()
 
     ui->RTAlarm_Data_page->setRowHeight(23, 150);
     RTAlarm_List.clear();
-    RTAlarm_List << tr("交流辅助电源故障\nThe AC auxiliary power supply is faulty") << tr("一般故障\nGeneral failure") \
-                << tr("交流辅助电源输出出现异常\nThe AC auxiliary power output is abnormal. Procedure") \
-                << tr("PCS 停机，交流接触器断开\nPCS shut down and the AC contactor is disconnected") \
-                << tr("可恢复，故障消除5min后自动恢复\nRecoverable, automatic recovery 5 minutes after the fault is eliminated");
+    RTAlarm_List << tr("The DC auxiliary power supply is faulty") << tr("General failure") \
+                << tr("The DC auxiliary power output is abnormal. Procedure") \
+                << tr("PCS shut down and the AC contactor is disconnected") \
+                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
     for(int i = 0; i < RTAlarm_List.size(); i++)
     {
         ui->RTAlarm_Data_page->setItem(23, i, new QTableWidgetItem(RTAlarm_List.at(i)));
@@ -1539,10 +1582,10 @@ void MyWidget::PCS_Alarm_information_table()
 
     ui->RTAlarm_Data_page->setRowHeight(24, 150);
     RTAlarm_List.clear();
-    RTAlarm_List << tr("直流辅助电源故障\nThe DC auxiliary power supply is faulty") << tr("一般故障\nGeneral failure") \
-                << tr("直流辅助电源输出出现异常\nThe DC auxiliary power output is abnormal. Procedure") \
-                << tr("PCS 停机，交流接触器断开\nPCS shut down and the AC contactor is disconnected") \
-                << tr("可恢复，故障消除5min后自动恢复\nRecoverable, automatic recovery 5 minutes after the fault is eliminated");
+    RTAlarm_List << tr("Fan failure") << tr("Warning") \
+                << tr("The fan cannot be started") \
+                << tr("PCS derating operation") \
+                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
     for(int i = 0; i < RTAlarm_List.size(); i++)
     {
         ui->RTAlarm_Data_page->setItem(24, i, new QTableWidgetItem(RTAlarm_List.at(i)));
@@ -1551,10 +1594,10 @@ void MyWidget::PCS_Alarm_information_table()
 
     ui->RTAlarm_Data_page->setRowHeight(25, 150);
     RTAlarm_List.clear();
-    RTAlarm_List << tr("风扇故障\nFan failure") << tr("告警\nWarning") \
-                << tr("风扇无法启动运行\nThe fan cannot be started") \
-                << tr("PCS 降额运行\nPCS derating operation") \
-                << tr("可恢复，故障消除5min后自动恢复\nRecoverable, automatic recovery 5 minutes after the fault is eliminated");
+    RTAlarm_List << tr("Emergency shutdown") << tr("Warning") \
+                << tr("Press the EPO button on the converter control panel") \
+                << tr("PCS shut down and the AC contactor is disconnected") \
+                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
     for(int i = 0; i < RTAlarm_List.size(); i++)
     {
         ui->RTAlarm_Data_page->setItem(25, i, new QTableWidgetItem(RTAlarm_List.at(i)));
@@ -1563,10 +1606,10 @@ void MyWidget::PCS_Alarm_information_table()
 
     ui->RTAlarm_Data_page->setRowHeight(26, 150);
     RTAlarm_List.clear();
-    RTAlarm_List << tr("紧急关机\nEmergency shutdown") << tr("告警\nWarning") \
-                << tr("在变流器控制面板上按下EPO按钮\nPress the EPO button on the converter control panel") \
-                << tr("PCS 停机，交流接触器断开\nPCS shut down and the AC contactor is disconnected") \
-                << tr("可恢复，故障消除5min后自动恢复\nRecoverable, automatic recovery 5 minutes after the fault is eliminated");
+    RTAlarm_List << tr("CT or Hall open circuit fault") << tr("General failure") \
+                << tr("When PCS grid-connected power is greater than 50%, CT detection current is less than 70% of the given quantity") \
+                << tr("PCS shut down and the AC contactor is disconnected") \
+                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
     for(int i = 0; i < RTAlarm_List.size(); i++)
     {
         ui->RTAlarm_Data_page->setItem(26, i, new QTableWidgetItem(RTAlarm_List.at(i)));
@@ -1575,26 +1618,14 @@ void MyWidget::PCS_Alarm_information_table()
 
     ui->RTAlarm_Data_page->setRowHeight(27, 150);
     RTAlarm_List.clear();
-    RTAlarm_List << tr("CT或霍尔开路故障\nCT or Hall open circuit fault") << tr("一般故障\nGeneral failure") \
-                << tr("PCS并网功率大于50%运行时，CT检测电流小于给定量的70%\nWhen PCS grid-connected power is greater than 50%, CT detection current is less than 70% of the given quantity") \
-                << tr("PCS 停机，交流接触器断开\nPCS shut down and the AC contactor is disconnected") \
-                << tr("可恢复，故障消除5min后自动恢复\nRecoverable, automatic recovery 5 minutes after the fault is eliminated");
+    RTAlarm_List << tr("Insulation impedance anomaly") << tr("Serious failure") \
+                << tr("For 1000V systems, the positive or negative ground impedance is less than 33KΩ") \
+                << tr("PCS shut down and the AC contactor is disconnected") \
+                << tr("Unrecoverable");
     for(int i = 0; i < RTAlarm_List.size(); i++)
     {
         ui->RTAlarm_Data_page->setItem(27, i, new QTableWidgetItem(RTAlarm_List.at(i)));
         ui->RTAlarm_Data_page->item(27, i)->setTextAlignment(Qt::AlignCenter);
-    }
-
-    ui->RTAlarm_Data_page->setRowHeight(28, 150);
-    RTAlarm_List.clear();
-    RTAlarm_List << tr("绝缘阻抗异常\nAbnormal insulation impedance") << tr("严重故障\nSerious failure") \
-                << tr("对于1000V系统，正对地或负对地阻抗小于33K欧姆\nFor 1000V systems, the positive or negative ground impedance is less than 33KΩ") \
-                << tr("PCS 停机，交流接触器断开\nPCS shut down and the AC contactor is disconnected") \
-                << tr("不可恢复\nUnrecoverable");
-    for(int i = 0; i < RTAlarm_List.size(); i++)
-    {
-        ui->RTAlarm_Data_page->setItem(28, i, new QTableWidgetItem(RTAlarm_List.at(i)));
-        ui->RTAlarm_Data_page->item(28, i)->setTextAlignment(Qt::AlignCenter);
     }
 }
 
@@ -4116,7 +4147,6 @@ void MyWidget::DCDC_Debugg(QTableWidget *myTable)
                                    "仅提供内部调试使用\nIt is used for internal debugging only");
     DC_Bat_State->add_Specification();
 }
-
 /*********选中第一个模块*********/
 void MyWidget::on_RTD_module_1_clicked()
 {
@@ -4274,4 +4304,37 @@ void MyWidget::on_Switch_on_clicked()
 void MyWidget::on_Switch_off_clicked()
 {
     QMessageBox::question(this, "Turn off", "这是DCAC变流器关闭开关，点击后关闭DCAC变流器\nThis is the DCAC converter off switch. Click to turn off the DCAC converter", "OK");
+}
+
+void MyWidget::on_search_btn_clicked()
+{
+    QString search = ui->search_le->text();
+    int row=ui->RTAlarm_Data_page->rowCount();
+
+    if (search == "")   //判断搜索框是否是空，如果是空就显示所有行
+    {
+        for(int i=0; i<row; i++)
+        {
+            ui->RTAlarm_Data_page->setRowHidden(i,false);
+        }
+    }
+    else
+    {
+        //通过你输入的和表格里面所有内容进行比对，找到符合条件的索引
+        QList <QTableWidgetItem *> item = ui->RTAlarm_Data_page->findItems(ui->search_le->text(), Qt::MatchContains);
+
+        for(int i=0; i<row; i++)
+        {
+            ui->RTAlarm_Data_page->setRowHidden(i,true);//然后把所有行都隐藏
+        }
+
+        if(!item.empty())   //判断符合条件索引是不是空
+        {
+            //恢复对应的行
+            for(int i=0; i<item.count(); i++)
+            {
+                ui->RTAlarm_Data_page->setRowHidden(item.at(i)->row(),false);//恢复对应的行
+            }
+        }
+    }
 }

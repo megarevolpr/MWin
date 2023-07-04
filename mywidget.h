@@ -1043,6 +1043,8 @@ private:
     void DCAC_Debugg(QTableWidget *myTable); //DCAC调试页说明
     void DCDC_Debugg(QTableWidget *myTable); //DCDC调试页说明
 
+    void MPS_state_delete();//MPS状态释放说明弹窗的空间
+
 private slots:
     void on_UI_MenuBtn_clicked();//转到槽
 
@@ -1118,6 +1120,8 @@ private slots:
     void on_Switch_on_clicked();
 
     void on_Switch_off_clicked();
+
+    void on_search_btn_clicked();
 
 private:
     Ui::MyWidget *ui;
