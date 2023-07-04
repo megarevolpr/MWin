@@ -2133,114 +2133,241 @@ void MyWidget::PV_Data(QTableWidget *myTable)
     ui->RTD_module_12->setEnabled(false);
 
     int line=0;int column = 1;//当前解释的button行和列
+
+    if(PV_vol_H != nullptr)
+    {
+        delete PV_vol_H;
+    }
     PV_vol_H = new Specification(this,PV_vol_H_explain, myTable, line++, column, \
-                                            "0V", "Voltage H", \
-                                            "这是当前DC模块的高压侧电压\nThis is the high voltage side voltage of the current DC module.");
+                                            "0V", tr("Voltage H"), \
+                                            tr("Current voltage of the high voltage side of the DCDC module."));
     PV_vol_H->add_Specification();
+
+    if(PV_cur_H != nullptr)
+    {
+        delete PV_cur_H;
+    }
     PV_cur_H = new Specification(this,PV_cur_H_explain, myTable, line++, column, \
-                                            "0A", "Current H", \
-                                            "这是当前DC模块的高压侧电流\nThis is the current high voltage side current of the DC module.");
+                                            "0A", tr("Current H"), \
+                                            tr("Current of the high voltage side of the DCDC module."));
     PV_cur_H->add_Specification();
+
+    if(PV_power_H != nullptr)
+    {
+        delete PV_power_H;
+    }
     PV_power_H = new Specification(this,PV_power_H_explain, myTable,line++, column, \
-                                            "0kW", "Power H", \
-                                            "这是当前DC模块的高压侧功率\nThis is the high voltage side power of the current DC module.");
+                                            "0kW", tr("Power H"), \
+                                            tr("Power of the high voltage side of the DCDC module."));
     PV_power_H->add_Specification();
+
+    if(PV_vol_L != nullptr)
+    {
+        delete PV_vol_L;
+    }
     PV_vol_L = new Specification(this,PV_vol_L_explain, myTable, line++, column, \
-                                            "0V", "Voltage L", \
-                                            "这是当前DC模块的低压侧电压\nThis is the low voltage side voltage of the current DC module.");
+                                            "0V", tr("Voltage L"), \
+                                            tr("Voltage of the low voltage side of the DCDC module."));
     PV_vol_L->add_Specification();
+
+    if(PV_cur_L != nullptr)
+    {
+        delete PV_cur_L;
+    }
     PV_cur_L = new Specification(this,PV_cur_L_explain, myTable,line++, column, \
-                                            "0A", "Current L", \
-                                            "这是当前DC模块的低压侧电流\nThis is the current low voltage side current of the DC module.");
+                                            "0A", tr("Current L"), \
+                                            tr("Current of the low-voltage side of the DCDC module."));
     PV_cur_L->add_Specification();
+
+    if(PV_power_L != nullptr)
+    {
+        delete PV_power_L;
+    }
     PV_power_L = new Specification(this,PV_power_L_explain, myTable, line++, column, \
-                                            "0kW", "Power L", \
-                                            "这是当前DC模块的低压侧功率\nThis is the low voltage side power of the current DC module.");
+                                            "0kW", tr("Power L"), \
+                                            tr("Power of the low voltage side of the DCDC module."));
     PV_power_L->add_Specification();
+
+    if(PositiveInuslation != nullptr)
+    {
+        delete PositiveInuslation;
+    }
     PositiveInuslation = new Specification(this,PositiveInuslation_explain, myTable, line++, column, \
-                                            "0kΩ", "PositiveInuslation", \
-                                            "这是当前DC模块的正绝缘阻抗\nThis is the positive insulation impedance of the current DC module.");
+                                            "0kΩ", tr("PositiveInuslation"), \
+                                            tr("Positive insulation impedance of the current DCDC module."));
     PositiveInuslation->add_Specification();
+
     line=0;
     column=3;
+
+    if(Bus_H_vol_add != nullptr)
+    {
+        delete Bus_H_vol_add;
+    }
     Bus_H_vol_add = new Specification(this,Bus_H_vol_add_explain, myTable, line++, column, \
-                                            "0V", "Bus_H_vol(+)", \
-                                            "这是当前DC模块的高压侧正母线电压\nThis is the current positive bus voltage of the high voltage side of the DC module.");
+                                            "0V", tr("Bus_H_vol(+)"), \
+                                            tr("Positive bus voltage of the high voltage side of the DC module."));
     Bus_H_vol_add->add_Specification();
+
+    if(Bus_H_vol_reduce != nullptr)
+    {
+        delete Bus_H_vol_reduce;
+    }
     Bus_H_vol_reduce = new Specification(this,Bus_H_vol_reduce_explain, myTable, line++, column, \
-                                            "0V", "Bus_H_vol(-)", \
-                                            "这是当前DC模块的高压侧负母线电压\nThis is the negative bus voltage of the high voltage side of the current DC module.");
+                                            "0V", tr("Bus_H_vol(-)"), \
+                                            tr("The current high voltage side of the DC module is negative for the bus voltage."));
     Bus_H_vol_reduce->add_Specification();
+
+    if(Bus_L_vol_add != nullptr)
+    {
+        delete Bus_L_vol_add;
+    }
     Bus_L_vol_add = new Specification(this,Bus_L_vol_add_explain, myTable, line++, column, \
-                                            "0V", "Bus_L_vol(+)", \
-                                            "这是当前DC模块的低压侧正母线电压\nThis is the positive bus voltage of the low voltage side of the current DC module.");
+                                            "0V", tr("Bus_L_vol(+)"), \
+                                            tr("Positive bus voltage of the low voltage side of the DC module."));
     Bus_L_vol_add->add_Specification();
+
+    if(Bus_L_vol_reduce != nullptr)
+    {
+        delete Bus_L_vol_reduce;
+    }
     Bus_L_vol_reduce = new Specification(this,Bus_L_vol_reduce_explain, myTable, line++, column, \
-                                            "0V", "Bus_L_vol(-)", \
-                                            "这是当前DC模块的低压侧负母线电压\nThis is the negative bus voltage of the low voltage side of the current DC module.");
+                                            "0V", tr("Bus_L_vol(-)"), \
+                                            tr("The low voltage side of the DC module is negative for the bus voltage."));
     Bus_L_vol_reduce->add_Specification();
+
+    if(PV_IGBT_T != nullptr)
+    {
+        delete PV_IGBT_T;
+    }
     PV_IGBT_T = new Specification(this,PV_IGBT_T_explain, myTable, line++, column, \
-                                            "0℃", "IGBT Temperature", \
-                                            "这是当前DC模块内部的IGBT温度\nThis is the current IGBT temperature inside the DC module.");
+                                            "0℃", tr("IGBT Temperature"), \
+                                            tr("The current IGBT temperature of MPS shall not exceed 105℃, otherwise PCS will run derated."));
     PV_IGBT_T->add_Specification();
+
+    if(NegativeInuslation != nullptr)
+    {
+        delete NegativeInuslation;
+    }
     NegativeInuslation = new Specification(this,NegativeInuslation_explain, myTable, line++, column, \
-                                            "0kΩ", "NegativeInuslation", \
-                                            "这是当前DC模块的负绝缘阻抗\nThis is the negative insulation impedance of the current DC module.");
+                                            "0kΩ", tr("NegativeInuslation"), \
+                                            tr("Negative insulation impedance of the current DCDC module."));
     NegativeInuslation->add_Specification();
+
+    if(Leakage_cur != nullptr)
+    {
+        delete Leakage_cur;
+    }
     Leakage_cur = new Specification(this,Leakage_cur_explain, myTable, line++, column, \
-                                            "0mA", "Leakage_cur", \
-                                            "这是当前模块的漏电流\nThis is the leakage current of the current module.");
+                                            "0mA", tr("Leakage_cur"), \
+                                            tr("Current leakage current of the DCDC module."));
     Leakage_cur->add_Specification();
 }
 //电网数据 绘制button
 void MyWidget::Grid_Data(QTableWidget *myTable)
 {
     int line=0;int column=1;
+
+    if(Grid_vol_AB != nullptr)
+    {
+        delete Grid_vol_AB;
+    }
     Grid_vol_AB = new Specification(this,Grid_vol_AB_explain, myTable, line++, column, \
-                                            "0V", "Voltage(AB)", \
-                                            "这是变流器采集的当前电网的A相和B相之间的电压\nThis is the voltage between phase A and phase B of the current grid collected by the converter.");
+                                            "0V", tr("Voltage(AB)"), \
+                                            tr("The grid side voltage of the current MPS, this item is the phase voltage between phase A and phase B."));
     Grid_vol_AB->add_Specification();
+
+    if(Grid_vol_BC != nullptr)
+    {
+        delete Grid_vol_BC;
+    }
     Grid_vol_BC = new Specification(this,Grid_vol_BC_explain, myTable, line++, column, \
-                                            "0V", "Voltage(BC)", \
-                                            "这是变流器采集的当前电网的B相和C相之间的电压\nThis is the voltage between phase B and phase C of the current grid collected by the converter.");
+                                            "0V", tr("Voltage(BC)"), \
+                                            tr("The grid side voltage of the current MPS, this item is the phase voltage between phase B and phase C."));
     Grid_vol_BC->add_Specification();
+
+    if(Grid_vol_CA != nullptr)
+    {
+        delete Grid_vol_CA;
+    }
     Grid_vol_CA = new Specification(this,Grid_vol_CA_explain, myTable,line++, column, \
-                                            "0V", "Voltage(CA)", \
-                                            "这是变流器采集的当前电网的A相和C相之间的电压\nThis is the voltage between phase A and phase C of the current grid collected by the converter.");
+                                            "0V", tr("Voltage(CA)"), \
+                                            tr("The grid side voltage of the current MPS, this item is the phase voltage between phase A and phase C."));
     Grid_vol_CA->add_Specification();
+
+    if(Grid_cur_A != nullptr)
+    {
+        delete Grid_cur_A;
+    }
     Grid_cur_A = new Specification(this,Grid_cur_A_explain, myTable, line++, column, \
-                                            "0A", "Current(A)", \
-                                            "这是变流器采集的当前电网的A相的电流\nThis is the A-phase current of the current grid collected by the converter.");
+                                            "0A", tr("Current(A)"), \
+                                            tr("The current on the grid side of MPS, this item is the current of phase A."));
     Grid_cur_A->add_Specification();
+
+    if(Grid_cur_B != nullptr)
+    {
+        delete Grid_cur_B;
+    }
     Grid_cur_B = new Specification(this,Grid_cur_B_explain, myTable, line++, column, \
-                                            "0A", "Current(B)", \
-                                            "这是变流器采集的当前电网的B相的电流\nThis is the B-phase current of the current grid collected by the converter.");
+                                            "0A", tr("Current(B)"), \
+                                            tr("The current on the grid side of MPS, this item is the current of phase B."));
     Grid_cur_B->add_Specification();
+
+    if(Grid_cur_C != nullptr)
+    {
+        delete Grid_cur_C;
+    }
     Grid_cur_C = new Specification(this,Grid_cur_C_explain, myTable, line++, column, \
-                                            "0A", "Current(C)", \
-                                            "这是变流器采集的当前电网的C相的电流\nThis is the C phase current of the current grid collected by the converter.");
+                                            "0A", tr("Current(C)"), \
+                                            tr("The current on the grid side of MPS, this item is the current of phase C."));
     Grid_cur_C->add_Specification();
+
     line=0;
     column=3;
+
+    if(Grid_active_power != nullptr)
+    {
+        delete Grid_active_power;
+    }
     Grid_active_power = new Specification(this,Grid_active_power_explain, myTable, line++, column, \
-                                            "0kW", "Active power", \
-                                            "这是变流器采集的当前电网的有功功率\nThis is the active power of the current grid collected by the converter.");
+                                            "0kW", tr("Active power"), \
+                                            tr("Current active power (P) on the grid side of MPS."));
     Grid_active_power->add_Specification();
+
+    if(Grid_reactive_power != nullptr)
+    {
+        delete Grid_reactive_power;
+    }
     Grid_reactive_power = new Specification(this,Grid_reactive_power_explain, myTable, line++, column, \
-                                            "0Kvar", "Reactive power", \
-                                            "这是变流器采集的当前电网的无功功率\nThis is the reactive power of the current grid collected by the converter.");
+                                            "0Kvar", tr("Reactive power"), \
+                                            tr("Current reactive power (Q) on the grid side of MPS."));
     Grid_reactive_power->add_Specification();
+
+    if(Grid_apparent_power != nullptr)
+    {
+        delete Grid_apparent_power;
+    }
     Grid_apparent_power = new Specification(this,Grid_apparent_power_explain, myTable, line++, column, \
-                                            "0kVA", "Apparent power", \
-                                            "这是变流器采集的当前电网的视在功率\nThis is the current apparent power of the grid collected by the converter.");
+                                            "0kVA", tr("Apparent power"), \
+                                            tr("Current MPS grid side view power (S), S= √((P^2+Q^2))."));
     Grid_apparent_power->add_Specification();
+
+    if(Grid_power_factor != nullptr)
+    {
+        delete Grid_power_factor;
+    }
     Grid_power_factor = new Specification(this,Grid_power_factor_explain, myTable, line++, column, \
-                                            "0", "Power factor", \
-                                            "这是变流器采集的当前电网的功率因素\nThis is the power factor of the current grid collected by the converter.");
+                                            "0", tr("Power factor"), \
+                                            tr("Grid side power factor (Pf) of the current MPS, Pf = P/S."));
     Grid_power_factor->add_Specification();
+
+    if(Grid_Frequency != nullptr)
+    {
+        delete Grid_Frequency;
+    }
     Grid_Frequency = new Specification(this,Grid_Frequency_explain, myTable, line++, column, \
-                                            "0Hz", "Frequency", \
-                                            "这是变流器采集的当前电网的频率\nThis is the frequency of the current grid collected by the converter.");
+                                            "0Hz", tr("Frequency"), \
+                                            tr("Current MPS collection of power grid frequency."));
     Grid_Frequency->add_Specification();
 
 }
@@ -2248,51 +2375,107 @@ void MyWidget::Grid_Data(QTableWidget *myTable)
 void MyWidget::Load_Data(QTableWidget *myTable)
 {
     int line=0;int column=1;
+
+    if(Load_vol_AB != nullptr)
+    {
+        delete Load_vol_AB;
+    }
     Load_vol_AB = new Specification(this,Load_vol_AB_explain, myTable, line++, column, \
-                                            "0V", "Voltage(AB)", \
-                                            "这是变流器采集的当前负载的A相和B相之间的电压\nThis is the voltage between phase A and phase B of the current load collected by the converter.");
+                                            "0V", tr("Voltage(AB)"), \
+                                            tr("The load side voltage of the current MPS, this item is the phase voltage between phase A and phase B."));
     Load_vol_AB->add_Specification();
+
+    if(Load_vol_BC != nullptr)
+    {
+        delete Load_vol_BC;
+    }
     Load_vol_BC = new Specification(this,Load_vol_BC_explain, myTable, line++, column, \
-                                            "0V", "Voltage(BC)", \
-                                            "这是变流器采集的当前负载的B相和C相之间的电压\nThis is the voltage between the B and C phases of the current load collected by the converter.");
+                                            "0V", tr("Voltage(BC)"), \
+                                            tr("The load side voltage of the current MPS, this item is the phase voltage between phase B and phase C."));
     Load_vol_BC->add_Specification();
+
+    if(Load_vol_CA != nullptr)
+    {
+        delete Load_vol_CA;
+    }
     Load_vol_CA = new Specification(this,Load_vol_CA_explain, myTable, line++, column, \
-                                            "0V", "Voltage(CA)", \
-                                            "这是变流器采集的当前负载的A相和C相之间的电压\nThis is the voltage between phase A and phase C of the current load collected by the converter.");
+                                            "0V", tr("Voltage(CA)"), \
+                                            tr("The load side voltage of the current MPS, this item is the phase voltage between phase A and phase C."));
     Load_vol_CA->add_Specification();
+
+    if(Load_cur_A != nullptr)
+    {
+        delete Load_cur_A;
+    }
     Load_cur_A = new Specification(this,Load_cur_A_explain, myTable, line++, column, \
-                                            "0A", "Current(A)", \
-                                            "这是变流器采集的当前负载的A相的电流\nThis is the A-phase current of the current load collected by the converter.");
+                                            "0A", tr("Current(A)"), \
+                                            tr("The current on the load side of MPS, this item is the current of phase A."));
     Load_cur_A->add_Specification();
+
+    if(Load_cur_B != nullptr)
+    {
+        delete Load_cur_B;
+    }
     Load_cur_B = new Specification(this,Load_cur_B_explain, myTable, line++, column, \
-                                            "0A", "Current(B)", \
-                                            "这是变流器采集的当前负载的B相的电流\nThis is the B-phase current of the current load collected by the converter.");
+                                            "0A", tr("Current(B)"), \
+                                            tr("The current at the load side of MPS is the current of phase B."));
     Load_cur_B->add_Specification();
+
+    if(Load_cur_C != nullptr)
+    {
+        delete Load_cur_C;
+    }
     Load_cur_C = new Specification(this,Load_cur_C_explain, myTable, line++, column, \
-                                            "0A", "Current(C)", \
-                                            "这是变流器采集的当前负载的C相的电流\nThis is the C phase current of the current load collected by the converter.");
+                                            "0A", tr("Current(C)"), \
+                                            tr("The current at the load side of MPS is the current of phase C."));
     Load_cur_C->add_Specification();
+
     line=0;
     column=3;
+
+    if(Load_active_power != nullptr)
+    {
+        delete Load_active_power;
+    }
     Load_active_power = new Specification(this,Load_active_power_explain, myTable, line++, column, \
-                                            "0kW", "Active power", \
-                                            "这是变流器采集的当前负载的有功功率\nThis is the active power of the current load collected by the converter.");
+                                            "0kW", tr("Active power"), \
+                                            tr("Current MPS active power (P) on load side."));
     Load_active_power->add_Specification();
+
+    if(Load_reactive_power != nullptr)
+    {
+        delete Load_reactive_power;
+    }
     Load_reactive_power = new Specification(this,Load_reactive_power_explain, myTable, line++, column, \
-                                            "0Kvar", "Reactive power", \
-                                            "这是变流器采集的当前负载的无功功率\nThis is the reactive power of the current load collected by the converter.");
+                                            "0Kvar", tr("Reactive power"), \
+                                            tr("Reactive power (Q) on the load side of current MPS."));
     Load_reactive_power->add_Specification();
+
+    if(Load_apparent_power != nullptr)
+    {
+        delete Load_apparent_power;
+    }
     Load_apparent_power = new Specification(this,Load_apparent_power_explain, myTable, line++, column, \
-                                            "0kVA", "Apparent power", \
-                                            "这是变流器采集的当前负载的视在功率\nThis is the apparent power of the current load collected by the converter.");
+                                            "0kVA", tr("Apparent power"), \
+                                            tr("Current MPS load side view at power (S), S= √((P^2+Q^2))."));
     Load_apparent_power->add_Specification();
+
+    if(Load_power_factor != nullptr)
+    {
+        delete Load_power_factor;
+    }
     Load_power_factor = new Specification(this,Load_power_factor_explain, myTable, line++, column, \
-                                            "0", "Power factor", \
-                                            "这是变流器采集的当前负载的功率因素\nThis is the power factor of the current load collected by the converter.");
+                                            "0", tr("Power factor"), \
+                                           tr("The load side power factor (Pf) of the current MPS, Pf = P/S."));
     Load_power_factor->add_Specification();
+
+    if(Load_Frequency != nullptr)
+    {
+        delete Load_Frequency;
+    }
     Load_Frequency = new Specification(this,Load_Frequency_explain, myTable, line++, column, \
-                                            "0Hz", "Frequency", \
-                                            "这是变流器采集的当前负载的频率\nThis is the frequency of the current load collected by the converter.");
+                                            "0Hz", tr("Frequency"), \
+                                            tr("Current MPS collection of power load frequency."));
     Load_Frequency->add_Specification();
 }
 //MPS状态 绘制button

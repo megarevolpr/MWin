@@ -1895,6 +1895,8 @@ B1 - A1 ≥ 30 %
         <location filename="../mywidget.cpp" line="756"/>
         <location filename="../mywidget.cpp" line="830"/>
         <location filename="../mywidget.cpp" line="866"/>
+        <location filename="../mywidget.cpp" line="2276"/>
+        <location filename="../mywidget.cpp" line="2384"/>
         <source>Voltage(AB)</source>
         <translation>电压 (AB)</translation>
     </message>
@@ -1902,6 +1904,8 @@ B1 - A1 ≥ 30 %
         <location filename="../mywidget.cpp" line="756"/>
         <location filename="../mywidget.cpp" line="830"/>
         <location filename="../mywidget.cpp" line="866"/>
+        <location filename="../mywidget.cpp" line="2285"/>
+        <location filename="../mywidget.cpp" line="2393"/>
         <source>Voltage(BC)</source>
         <translation>电压 (BC)</translation>
     </message>
@@ -1909,6 +1913,8 @@ B1 - A1 ≥ 30 %
         <location filename="../mywidget.cpp" line="756"/>
         <location filename="../mywidget.cpp" line="830"/>
         <location filename="../mywidget.cpp" line="866"/>
+        <location filename="../mywidget.cpp" line="2294"/>
+        <location filename="../mywidget.cpp" line="2402"/>
         <source>Voltage(CA)</source>
         <translation>电压 (CA)</translation>
     </message>
@@ -1916,6 +1922,8 @@ B1 - A1 ≥ 30 %
         <location filename="../mywidget.cpp" line="757"/>
         <location filename="../mywidget.cpp" line="831"/>
         <location filename="../mywidget.cpp" line="867"/>
+        <location filename="../mywidget.cpp" line="2303"/>
+        <location filename="../mywidget.cpp" line="2411"/>
         <source>Current(A)</source>
         <translation>电流 (A)</translation>
     </message>
@@ -1923,6 +1931,8 @@ B1 - A1 ≥ 30 %
         <location filename="../mywidget.cpp" line="757"/>
         <location filename="../mywidget.cpp" line="831"/>
         <location filename="../mywidget.cpp" line="867"/>
+        <location filename="../mywidget.cpp" line="2312"/>
+        <location filename="../mywidget.cpp" line="2420"/>
         <source>Current(B)</source>
         <translation>电流 (B)</translation>
     </message>
@@ -1930,6 +1940,8 @@ B1 - A1 ≥ 30 %
         <location filename="../mywidget.cpp" line="757"/>
         <location filename="../mywidget.cpp" line="831"/>
         <location filename="../mywidget.cpp" line="867"/>
+        <location filename="../mywidget.cpp" line="2321"/>
+        <location filename="../mywidget.cpp" line="2429"/>
         <source>Current(C)</source>
         <translation>电流 (C)</translation>
     </message>
@@ -2036,6 +2048,7 @@ B1 - A1 ≥ 30 %
     </message>
     <message>
         <location filename="../mywidget.cpp" line="796"/>
+        <location filename="../mywidget.cpp" line="2196"/>
         <source>PositiveInuslation</source>
         <translation>正绝缘阻抗</translation>
     </message>
@@ -2066,41 +2079,53 @@ B1 - A1 ≥ 30 %
     </message>
     <message>
         <location filename="../mywidget.cpp" line="799"/>
+        <location filename="../mywidget.cpp" line="2253"/>
         <source>NegativeInuslation</source>
         <translation>负绝缘阻抗</translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="799"/>
+        <location filename="../mywidget.cpp" line="2244"/>
         <source>IGBT Temperature</source>
         <translation>IGBT温度</translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="833"/>
         <location filename="../mywidget.cpp" line="869"/>
+        <location filename="../mywidget.cpp" line="2333"/>
+        <location filename="../mywidget.cpp" line="2441"/>
         <source>Active power</source>
         <translation>有功功率</translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="833"/>
         <location filename="../mywidget.cpp" line="869"/>
+        <location filename="../mywidget.cpp" line="2342"/>
+        <location filename="../mywidget.cpp" line="2450"/>
         <source>Reactive power</source>
         <translation>无功功率</translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="833"/>
         <location filename="../mywidget.cpp" line="869"/>
+        <location filename="../mywidget.cpp" line="2351"/>
+        <location filename="../mywidget.cpp" line="2459"/>
         <source>Apparent power</source>
         <translation>视在功率</translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="833"/>
         <location filename="../mywidget.cpp" line="869"/>
+        <location filename="../mywidget.cpp" line="2360"/>
+        <location filename="../mywidget.cpp" line="2468"/>
         <source>Power factor</source>
         <translation>功率因素</translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="834"/>
         <location filename="../mywidget.cpp" line="870"/>
+        <location filename="../mywidget.cpp" line="2369"/>
+        <location filename="../mywidget.cpp" line="2477"/>
         <source>Frequency</source>
         <translation>频率</translation>
     </message>
@@ -2986,6 +3011,7 @@ For 1000V systems, the positive or negative ground impedance is less than 33KΩ<
     </message>
     <message>
         <location filename="../mywidget.cpp" line="2025"/>
+        <location filename="../mywidget.cpp" line="2245"/>
         <source>The current IGBT temperature of MPS shall not exceed 105℃, otherwise PCS will run derated.</source>
         <translation>当前MPS 的IGBT温度，IGBT温度不得超过105℃，否则MPS将降额运行。</translation>
     </message>
@@ -3036,8 +3062,242 @@ For 1000V systems, the positive or negative ground impedance is less than 33KΩ<
     </message>
     <message>
         <location filename="../mywidget.cpp" line="2117"/>
-        <source>Current bus current sampled by MPS from the bus side</source>
+        <source>Current bus current sampled by MPS from the bus side.</source>
         <translation>当前MPS从母线侧采样的母线电流。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2142"/>
+        <source>Voltage H</source>
+        <translation>高压侧电压</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2143"/>
+        <source>Current voltage of the high voltage side of the DCDC module.</source>
+        <translation>当前DCDC模块高压侧的电压。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2151"/>
+        <source>Current H</source>
+        <translation>高压侧电流</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2152"/>
+        <source>Current of the high voltage side of the DCDC module.</source>
+        <translation>当前DCDC模块高压侧的电流。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2160"/>
+        <source>Power H</source>
+        <translation>高压侧功率</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2161"/>
+        <source>Power of the high voltage side of the DCDC module.</source>
+        <translation>当前DCDC模块高压侧的功率。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2169"/>
+        <source>Voltage L</source>
+        <translation>低压侧电压</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2170"/>
+        <source>Voltage of the low voltage side of the DCDC module.</source>
+        <translation>当前DCDC模块低压侧的电压。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2178"/>
+        <source>Current L</source>
+        <translation>低压侧电流</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2179"/>
+        <source>Current of the low-voltage side of the DCDC module.</source>
+        <translation>当前DCDC模块低压侧的电流。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2187"/>
+        <source>Power L</source>
+        <translation>低压侧功率</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2188"/>
+        <source>Power of the low voltage side of the DCDC module.</source>
+        <translation>当前DCDC模块低压侧的功率。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2197"/>
+        <source>Positive insulation impedance of the current DCDC module.</source>
+        <translation>当前DCDC模块的正绝缘阻抗。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2208"/>
+        <source>Bus_H_vol(+)</source>
+        <translation>高压侧正母线电压</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2209"/>
+        <source>Positive bus voltage of the high voltage side of the DC module.</source>
+        <translation>当前DCDC模块的高压侧正母线电压。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2217"/>
+        <source>Bus_H_vol(-)</source>
+        <translation>高压侧负母线电压</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2218"/>
+        <source>The current high voltage side of the DC module is negative for the bus voltage.</source>
+        <translation>当前DCDC模块的高压侧负母线电压。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2226"/>
+        <source>Bus_L_vol(+)</source>
+        <translation>低压侧正母线电压</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2227"/>
+        <source>Positive bus voltage of the low voltage side of the DC module.</source>
+        <translation>当前DCDC模块的低压侧正母线电压。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2235"/>
+        <source>Bus_L_vol(-)</source>
+        <translation>低压侧负母线电压</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2236"/>
+        <source>The low voltage side of the DC module is negative for the bus voltage.</source>
+        <translation>当前DCDC模块的低压侧负母线电压。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2254"/>
+        <source>Negative insulation impedance of the current DCDC module.</source>
+        <translation>当前DCDC模块的负绝缘阻抗。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2262"/>
+        <source>Leakage_cur</source>
+        <translation>漏电流</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2263"/>
+        <source>Current leakage current of the DCDC module.</source>
+        <translation>当前DCDC模块的漏电流。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2277"/>
+        <source>The grid side voltage of the current MPS, this item is the phase voltage between phase A and phase B.</source>
+        <translation>当前MPS的电网侧电压，此项为A相 和B相 之间的相电压。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2286"/>
+        <source>The grid side voltage of the current MPS, this item is the phase voltage between phase B and phase C.</source>
+        <translation>当前MPS的电网侧电压，此项为B相 和C相 之间的相电压。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2295"/>
+        <source>The grid side voltage of the current MPS, this item is the phase voltage between phase A and phase C.</source>
+        <translation>当前MPS的电网侧电压，此项为A相 和C相 之间的相电压。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2304"/>
+        <source>The current on the grid side of MPS, this item is the current of phase A.</source>
+        <translation>当前MPS的电网侧电流，此项为A相的电流。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2313"/>
+        <source>The current on the grid side of MPS, this item is the current of phase B.</source>
+        <translation>当前MPS的电网侧电流，此项为B相的电流。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2322"/>
+        <source>The current on the grid side of MPS, this item is the current of phase C.</source>
+        <translation>当前MPS的电网侧电流，此项为C相的电流。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2334"/>
+        <source>Current active power (P) on the grid side of MPS.</source>
+        <translation>当前MPS的电网侧有功功率P。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2343"/>
+        <source>Current reactive power (Q) on the grid side of MPS.</source>
+        <translation>当前MPS的电网侧无功功率Q。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2352"/>
+        <source>Current MPS grid side view power (S), S= √((P^2+Q^2)).</source>
+        <translation>当前MPS的电网侧视在功率S，S= √((P^2+Q^2))。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2361"/>
+        <source>Grid side power factor (Pf) of the current MPS, Pf = P/S.</source>
+        <translation>当前MPS的电网侧功率因素Pf， Pf = P / S。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2370"/>
+        <source>Current MPS collection of power grid frequency.</source>
+        <translation>当前MPS的采集的电网频率。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2385"/>
+        <source>The load side voltage of the current MPS, this item is the phase voltage between phase A and phase B.</source>
+        <translation>当前MPS的负载侧电压，此项为A相 和B相 之间的相电压。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2394"/>
+        <source>The load side voltage of the current MPS, this item is the phase voltage between phase B and phase C.</source>
+        <translation>当前MPS的负载侧电压，此项为B相 和C相 之间的相电压。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2403"/>
+        <source>The load side voltage of the current MPS, this item is the phase voltage between phase A and phase C.</source>
+        <translation>当前MPS的负载侧电压，此项为A相 和C相 之间的相电压。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2412"/>
+        <source>The current on the load side of MPS, this item is the current of phase A.</source>
+        <translation>当前MPS的负载侧电流，此项为A相的电流。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2421"/>
+        <source>The current at the load side of MPS is the current of phase B.</source>
+        <translation>当前MPS的负载侧电流，此项为B相的电流。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2430"/>
+        <source>The current at the load side of MPS is the current of phase C.</source>
+        <translation>当前MPS的负载侧电流，此项为C相的电流。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2442"/>
+        <source>Current MPS active power (P) on load side.</source>
+        <translation>当前MPS的负载侧有功功率P。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2451"/>
+        <source>Reactive power (Q) on the load side of current MPS.</source>
+        <translation>当前MPS的负载侧无功功率Q。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2460"/>
+        <source>Current MPS load side view at power (S), S= √((P^2+Q^2)).</source>
+        <translation>当前MPS的负载侧视在功率S，S= √((P^2+Q^2))。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2469"/>
+        <source>The load side power factor (Pf) of the current MPS, Pf = P/S.</source>
+        <translation>当前MPS的负载侧功率因素Pf， Pf = P / S。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2478"/>
+        <source>Current MPS collection of power load frequency.</source>
+        <translation>当前MPS的采集的负载频率。</translation>
+    </message>
+    <message>
+        <source>Current bus current sampled by MPS from the bus side</source>
+        <translation type="vanished">当前MPS从母线侧采样的母线电流。</translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="1988"/>

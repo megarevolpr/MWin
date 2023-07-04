@@ -1884,6 +1884,8 @@ B1 - A1 ≥ 30 %
         <location filename="../mywidget.cpp" line="756"/>
         <location filename="../mywidget.cpp" line="830"/>
         <location filename="../mywidget.cpp" line="866"/>
+        <location filename="../mywidget.cpp" line="2276"/>
+        <location filename="../mywidget.cpp" line="2384"/>
         <source>Voltage(AB)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1891,6 +1893,8 @@ B1 - A1 ≥ 30 %
         <location filename="../mywidget.cpp" line="756"/>
         <location filename="../mywidget.cpp" line="830"/>
         <location filename="../mywidget.cpp" line="866"/>
+        <location filename="../mywidget.cpp" line="2285"/>
+        <location filename="../mywidget.cpp" line="2393"/>
         <source>Voltage(BC)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1898,6 +1902,8 @@ B1 - A1 ≥ 30 %
         <location filename="../mywidget.cpp" line="756"/>
         <location filename="../mywidget.cpp" line="830"/>
         <location filename="../mywidget.cpp" line="866"/>
+        <location filename="../mywidget.cpp" line="2294"/>
+        <location filename="../mywidget.cpp" line="2402"/>
         <source>Voltage(CA)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1905,6 +1911,8 @@ B1 - A1 ≥ 30 %
         <location filename="../mywidget.cpp" line="757"/>
         <location filename="../mywidget.cpp" line="831"/>
         <location filename="../mywidget.cpp" line="867"/>
+        <location filename="../mywidget.cpp" line="2303"/>
+        <location filename="../mywidget.cpp" line="2411"/>
         <source>Current(A)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1912,6 +1920,8 @@ B1 - A1 ≥ 30 %
         <location filename="../mywidget.cpp" line="757"/>
         <location filename="../mywidget.cpp" line="831"/>
         <location filename="../mywidget.cpp" line="867"/>
+        <location filename="../mywidget.cpp" line="2312"/>
+        <location filename="../mywidget.cpp" line="2420"/>
         <source>Current(B)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1919,6 +1929,8 @@ B1 - A1 ≥ 30 %
         <location filename="../mywidget.cpp" line="757"/>
         <location filename="../mywidget.cpp" line="831"/>
         <location filename="../mywidget.cpp" line="867"/>
+        <location filename="../mywidget.cpp" line="2321"/>
+        <location filename="../mywidget.cpp" line="2429"/>
         <source>Current(C)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2025,6 +2037,7 @@ B1 - A1 ≥ 30 %
     </message>
     <message>
         <location filename="../mywidget.cpp" line="796"/>
+        <location filename="../mywidget.cpp" line="2196"/>
         <source>PositiveInuslation</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2055,41 +2068,53 @@ B1 - A1 ≥ 30 %
     </message>
     <message>
         <location filename="../mywidget.cpp" line="799"/>
+        <location filename="../mywidget.cpp" line="2253"/>
         <source>NegativeInuslation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="799"/>
+        <location filename="../mywidget.cpp" line="2244"/>
         <source>IGBT Temperature</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="833"/>
         <location filename="../mywidget.cpp" line="869"/>
+        <location filename="../mywidget.cpp" line="2333"/>
+        <location filename="../mywidget.cpp" line="2441"/>
         <source>Active power</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="833"/>
         <location filename="../mywidget.cpp" line="869"/>
+        <location filename="../mywidget.cpp" line="2342"/>
+        <location filename="../mywidget.cpp" line="2450"/>
         <source>Reactive power</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="833"/>
         <location filename="../mywidget.cpp" line="869"/>
+        <location filename="../mywidget.cpp" line="2351"/>
+        <location filename="../mywidget.cpp" line="2459"/>
         <source>Apparent power</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="833"/>
         <location filename="../mywidget.cpp" line="869"/>
+        <location filename="../mywidget.cpp" line="2360"/>
+        <location filename="../mywidget.cpp" line="2468"/>
         <source>Power factor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="834"/>
         <location filename="../mywidget.cpp" line="870"/>
+        <location filename="../mywidget.cpp" line="2369"/>
+        <location filename="../mywidget.cpp" line="2477"/>
         <source>Frequency</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2975,6 +3000,7 @@ For 1000V systems, the positive or negative ground impedance is less than 33KΩ<
     </message>
     <message>
         <location filename="../mywidget.cpp" line="2025"/>
+        <location filename="../mywidget.cpp" line="2245"/>
         <source>The current IGBT temperature of MPS shall not exceed 105℃, otherwise PCS will run derated.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3025,7 +3051,237 @@ For 1000V systems, the positive or negative ground impedance is less than 33KΩ<
     </message>
     <message>
         <location filename="../mywidget.cpp" line="2117"/>
-        <source>Current bus current sampled by MPS from the bus side</source>
+        <source>Current bus current sampled by MPS from the bus side.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2142"/>
+        <source>Voltage H</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2143"/>
+        <source>Current voltage of the high voltage side of the DCDC module.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2151"/>
+        <source>Current H</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2152"/>
+        <source>Current of the high voltage side of the DCDC module.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2160"/>
+        <source>Power H</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2161"/>
+        <source>Power of the high voltage side of the DCDC module.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2169"/>
+        <source>Voltage L</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2170"/>
+        <source>Voltage of the low voltage side of the DCDC module.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2178"/>
+        <source>Current L</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2179"/>
+        <source>Current of the low-voltage side of the DCDC module.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2187"/>
+        <source>Power L</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2188"/>
+        <source>Power of the low voltage side of the DCDC module.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2197"/>
+        <source>Positive insulation impedance of the current DCDC module.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2208"/>
+        <source>Bus_H_vol(+)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2209"/>
+        <source>Positive bus voltage of the high voltage side of the DC module.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2217"/>
+        <source>Bus_H_vol(-)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2218"/>
+        <source>The current high voltage side of the DC module is negative for the bus voltage.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2226"/>
+        <source>Bus_L_vol(+)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2227"/>
+        <source>Positive bus voltage of the low voltage side of the DC module.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2235"/>
+        <source>Bus_L_vol(-)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2236"/>
+        <source>The low voltage side of the DC module is negative for the bus voltage.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2254"/>
+        <source>Negative insulation impedance of the current DCDC module.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2262"/>
+        <source>Leakage_cur</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2263"/>
+        <source>Current leakage current of the DCDC module.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2277"/>
+        <source>The grid side voltage of the current MPS, this item is the phase voltage between phase A and phase B.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2286"/>
+        <source>The grid side voltage of the current MPS, this item is the phase voltage between phase B and phase C.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2295"/>
+        <source>The grid side voltage of the current MPS, this item is the phase voltage between phase A and phase C.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2304"/>
+        <source>The current on the grid side of MPS, this item is the current of phase A.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2313"/>
+        <source>The current on the grid side of MPS, this item is the current of phase B.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2322"/>
+        <source>The current on the grid side of MPS, this item is the current of phase C.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2334"/>
+        <source>Current active power (P) on the grid side of MPS.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2343"/>
+        <source>Current reactive power (Q) on the grid side of MPS.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2352"/>
+        <source>Current MPS grid side view power (S), S= √((P^2+Q^2)).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2361"/>
+        <source>Grid side power factor (Pf) of the current MPS, Pf = P/S.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2370"/>
+        <source>Current MPS collection of power grid frequency.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2385"/>
+        <source>The load side voltage of the current MPS, this item is the phase voltage between phase A and phase B.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2394"/>
+        <source>The load side voltage of the current MPS, this item is the phase voltage between phase B and phase C.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2403"/>
+        <source>The load side voltage of the current MPS, this item is the phase voltage between phase A and phase C.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2412"/>
+        <source>The current on the load side of MPS, this item is the current of phase A.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2421"/>
+        <source>The current at the load side of MPS is the current of phase B.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2430"/>
+        <source>The current at the load side of MPS is the current of phase C.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2442"/>
+        <source>Current MPS active power (P) on load side.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2451"/>
+        <source>Reactive power (Q) on the load side of current MPS.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2460"/>
+        <source>Current MPS load side view at power (S), S= √((P^2+Q^2)).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2469"/>
+        <source>The load side power factor (Pf) of the current MPS, Pf = P/S.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2478"/>
+        <source>Current MPS collection of power load frequency.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
