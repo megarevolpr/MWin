@@ -194,7 +194,6 @@ public:
     QPushButton *DC_Soft_Start_explain;
     QPushButton *Converter_Status_explain;
     QPushButton *Reactive_P_Reg_explain;
-    QPushButton *Sleep_mode_explain;
     QPushButton *LVRT_explain;
     QPushButton *DI1_explain;
     QPushButton *DI2_explain;
@@ -203,11 +202,7 @@ public:
     QPushButton *DI5_explain;
     QPushButton *DI6_explain;
 
-    QPushButton *Breaker1_Sta_Boost_explain;
-    QPushButton *Breaker2_Sta_Boost_explain;
     QPushButton *Contator_Sta_Boost_explain;
-    QPushButton *Breaker1_Sta_Buck_explain;
-    QPushButton *Breaker2_Sta_Buck_explain;
     QPushButton *Contator_Sta_Buck_explain;
     QPushButton *Run_mode_explain;
     QPushButton *DCDC_Converter_ava_explain;
@@ -225,15 +220,11 @@ public:
     Specification *DO1;
     Specification *DO2;
     Specification *DO3;
-    Specification *state1;
-    Specification *state2;
-    Specification *state3;
 
     Specification *DCAC_Conver_avail;
     Specification *DC_Soft_Start;
     Specification *Converter_Status;
     Specification *Reactive_P_Reg;
-    Specification *Sleep_mode;
     Specification *LVRT;
     Specification *DI1;
     Specification *DI2;
@@ -242,11 +233,7 @@ public:
     Specification *DI5;
     Specification *DI6;
 
-    Specification *Breaker1_Sta_Boost;
-    Specification *Breaker2_Sta_Boost;
     Specification *Contator_Sta_Boost;
-    Specification *Breaker1_Sta_Buck;
-    Specification *Breaker2_Sta_Buck;
     Specification *Contator_Sta_Buck;
     Specification *Run_mode;
     Specification *DCDC_Converter_ava;
@@ -254,7 +241,6 @@ public:
     Specification *Soft_Start_Sta_Buck;
     Specification *Converter_Status_V;
     Specification *ModeLock;
-    Specification *state4;
 
     /***************************DC/AC参数****************************/
     QPushButton *Grid_connected_mode_explain;//并网方式说明
