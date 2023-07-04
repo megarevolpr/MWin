@@ -635,6 +635,34 @@ void MyWidget::MPS_state_delete()
     delete Converter_Status_V;
     delete ModeLock;
 }
+/************数据报表 释放 说明************/
+void MyWidget::Data_Report_delete()
+{
+    delete PV_power_generation_Day;
+    delete PV_power_generation_Month;
+    delete PV_power_generation_Year;
+    delete PV_power_generation_Total;
+    delete Load_Discharge_Day;
+    delete Load_Discharge_Month;
+    delete Load_Discharge_Year;
+    delete Load_Discharge_Total;
+    delete Battery_Charge_Day;
+    delete Battery_Charge_Month;
+    delete Battery_Charge_Year;
+    delete Battery_Charge_Total;
+    delete Battery_Discharge_Day;
+    delete Battery_Discharge_Month;
+    delete Battery_Discharge_Year;
+    delete Battery_Discharge_Total;
+    delete Grid_Charge_Day;
+    delete Grid_Charge_Month;
+    delete Grid_Charge_Year;
+    delete Grid_Charge_Total;
+    delete Grid_Discharge_Day;
+    delete Grid_Discharge_Month;
+    delete Grid_Discharge_Year;
+    delete Grid_Discharge_Total;
+}
 
 /********************************************************
  * 初始化界面
@@ -703,6 +731,7 @@ void MyWidget::ChangeLanguage_btn_clicked()
     }
 
     MPS_state_delete();//释放MPS状态 的空间
+    Data_Report_delete();//释放 数据报表
     UIPageInit();       //初始化界面
 
 }
@@ -2924,115 +2953,115 @@ void MyWidget::DataReportMessages(QTableWidget *myTable)
 {
     int line=0, column=1;
     PV_power_generation_Day = new Specification(this,PV_power_generation_Day_explain, myTable, line, column++, \
-                                            "0", "PV power generation Day", \
-                                            "这是光伏今日的发电量\nThis is the electricity generation of photovoltaic today.");
+                                            "0", tr("PV power generation Day"), \
+                                            tr("This is the electricity generation of photovoltaic today."));
     PV_power_generation_Day->add_Specification();
     PV_power_generation_Month = new Specification(this,PV_power_generation_Month_explain, myTable, line, column++, \
-                                            "0", "PV power generation Month", \
-                                            "这是光伏这个月的发电量\nThis is the amount of photovoltaic power generated this month.");
+                                            "0", tr("PV power generation Month"), \
+                                            tr("This is the amount of photovoltaic power generated this month."));
     PV_power_generation_Month->add_Specification();
     PV_power_generation_Year = new Specification(this,PV_power_generation_Year_explain, myTable, line, column++, \
-                                            "0", "PV power generation Year", \
-                                            "这是光伏今年的发电量\nThis is how much photovoltaic will produce this year.");
+                                            "0", tr("PV power generation Year"), \
+                                            tr("This is how much photovoltaic will produce this year."));
     PV_power_generation_Year->add_Specification();
     PV_power_generation_Total = new Specification(this,PV_power_generation_Total_explain, myTable, line, column++, \
-                                             "0", "PV power generation Total", \
-                                             "这是光伏的总发电量\nThis is the total amount of photovoltaic power produced.");
+                                             "0", tr("PV power generation Total"), \
+                                             tr("This is the total amount of photovoltaic power produced."));
     PV_power_generation_Total->add_Specification();
 
     line++;
     column = 1;
     Load_Discharge_Day = new Specification(this,Load_Discharge_Day_explain, myTable, line, column++, \
-                                            "0", "Load Discharge Day", \
-                                            "这是负载今日的用电量\nThis is the electricity consumption of the load today.");
+                                            "0", tr("Load Discharge Day"), \
+                                            tr("This is the electricity consumption of the load today."));
     Load_Discharge_Day->add_Specification();
     Load_Discharge_Month = new Specification(this,Load_Discharge_Month_explain, myTable, line, column++, \
-                                            "0", "Load Discharge Month", \
-                                            "这是负载这个月的用电量\nThis is the electricity consumption of the load this month.");
+                                            "0", tr("Load Discharge Month"), \
+                                            tr("This is the electricity consumption of the load this month."));
     Load_Discharge_Month->add_Specification();
     Load_Discharge_Year = new Specification(this,Load_Discharge_Year_explain, myTable, line, column++, \
-                                            "0", "Load Discharge Year", \
-                                            "这是负载今年的用电量\nThis is how much electricity the load is using this year.");
+                                            "0", tr("Load Discharge Year"), \
+                                            tr("This is how much electricity the load is using this year."));
     Load_Discharge_Year->add_Specification();
     Load_Discharge_Total = new Specification(this,Load_Discharge_Total_explain, myTable, line, column++, \
-                                            "0", "Load Discharge Total", \
-                                            "这是负载的总用电量\nThis is the total power consumption of the load.");
+                                            "0", tr("Load Discharge Total"), \
+                                            tr("This is the total power consumption of the load."));
     Load_Discharge_Total->add_Specification();
 
     line++;
     column = 1;
     Battery_Charge_Day = new Specification(this,Battery_Charge_Day_explain, myTable, line, column++, \
-                                            "0", "Battery Charge Day", \
-                                            "这是电池今日的充电量\nThis is the charging capacity of the battery today.");
+                                            "0", tr("Battery Charge Day"), \
+                                            tr("This is the charging capacity of the battery today."));
     Battery_Charge_Day->add_Specification();
     Battery_Charge_Month = new Specification(this,Battery_Charge_Month_explain, myTable, line, column++, \
-                                            "0", "Load Discharge Month", \
-                                            "这是电池这个月的充电量\nThis is how much the battery has been charged for the month.");
+                                            "0", tr("Battery Discharge Month"), \
+                                            tr("This is how much the battery has been charged for the month."));
     Battery_Charge_Month->add_Specification();
     Battery_Charge_Year = new Specification(this,Battery_Charge_Year_explain, myTable, line, column++, \
-                                            "0", "Load Discharge Year", \
-                                            "这是电池今年的充电量\nThis is how much the battery has been charged this year.");
+                                            "0", tr("Battery Discharge Year"), \
+                                            tr("This is how much the battery has been charged this year."));
     Battery_Charge_Year->add_Specification();
     Battery_Charge_Total = new Specification(this,Battery_Charge_Total_explain, myTable, line, column++, \
-                                            "0", "Load Discharge Total", \
-                                            "这是电池的总充电量\nThis is the total charge of the battery.");
+                                            "0", tr("Battery Discharge Total"), \
+                                            tr("This is the total charge of the battery."));
     Battery_Charge_Total->add_Specification();
 
     line++;
     column = 1;
     Battery_Discharge_Day = new Specification(this,Battery_Discharge_Day_explain, myTable, line, column++, \
-                                            "0", "Battery Charge Day", \
-                                            "这是电池今日的放电量\nThis is the discharging capacity of the battery today.");
+                                            "0", tr("Battery Charge Day"), \
+                                            tr("This is the discharging capacity of the battery today."));
     Battery_Discharge_Day->add_Specification();
     Battery_Discharge_Month = new Specification(this,Battery_Discharge_Month_explain, myTable, line, column++, \
-                                            "0", "Load Discharge Month", \
-                                            "这是电池这个月的放电量\nThis is how much the battery has been discharged for the month.");
+                                            "0", tr("Battery Discharge Month"), \
+                                            tr("This is how much the battery has been discharged for the month."));
     Battery_Discharge_Month->add_Specification();
     Battery_Discharge_Year = new Specification(this,Battery_Discharge_Year_explain, myTable, line, column++, \
-                                            "0", "Load Discharge Year", \
-                                            "这是电池今年的放电量\nThis is how much the battery has been discharged this year.");
+                                            "0", tr("Battery Discharge Year"), \
+                                            tr("This is how much the battery has been discharged this year."));
     Battery_Discharge_Year->add_Specification();
     Battery_Discharge_Total = new Specification(this,Battery_Discharge_Total_explain, myTable, line, column++, \
-                                            "0", "Load Discharge Total", \
-                                            "这是电池的总放电量\nThis is the total discharge of the battery.");
+                                            "0", tr("Battery Discharge Total"), \
+                                            tr("This is the total discharge of the battery."));
     Battery_Discharge_Total->add_Specification();
 
     line++;
     column = 1;
     Grid_Charge_Day = new Specification(this,Grid_Charge_Day_explain, myTable, line, column++, \
-                                            "0", "Grid Charge Day", \
-                                            "这是今日从电网充电的充电量\nThis is the amount of charging from the grid today.");
+                                            "0", tr("Grid Charge Day"), \
+                                            tr("This is the amount of charging from the grid today."));
     Grid_Charge_Day->add_Specification();
     Grid_Charge_Month = new Specification(this,Grid_Charge_Month_explain, myTable, line, column++, \
-                                            "0", "Grid Charge Month", \
-                                            "这是这个月从电网充电的充电量\nThis is the amount of charging from the grid for the month.");
+                                            "0", tr("Grid Charge Month"), \
+                                            tr("This is the amount of charging from the grid for the month."));
     Grid_Charge_Month->add_Specification();
     Grid_Charge_Year = new Specification(this,Grid_Charge_Year_explain, myTable, line, column++, \
-                                            "0", "Grid Charge Year", \
-                                            "这是今年从电网充电的充电量\nThis is the amount of charging from the grid this year.");
+                                            "0", tr("Grid Charge Year"), \
+                                            tr("This is the amount of charging from the grid this year."));
     Grid_Charge_Year->add_Specification();
     Grid_Charge_Total = new Specification(this,Grid_Charge_Total_explain, myTable, line, column++, \
-                                            "0", "Grid Charge Total", \
-                                            "这是从电网充电的总充电量\nThis is the total amount of charge from the grid.");
+                                            "0", tr("Grid Charge Total"), \
+                                            tr("This is the total amount of charge from the grid."));
     Grid_Charge_Total->add_Specification();
 
     line++;
     column = 1;
     Grid_Discharge_Day = new Specification(this,Grid_Discharge_Day_explain, myTable, line, column++, \
-                                            "0", "Grid Charge Day", \
-                                            "这是今日给电网放电的放电量\nThis is the amount of energy being discharged into the grid today.");
+                                            "0", tr("Grid Charge Day"), \
+                                            tr("This is the amount of energy being discharged into the grid today."));
     Grid_Discharge_Day->add_Specification();
     Grid_Discharge_Month = new Specification(this,Grid_Discharge_Month_explain, myTable, line, column++, \
-                                            "0", "Grid Charge Month", \
-                                            "这是这个月给电网放电的放电量\nThis is the amount of electricity discharged into the grid this month.");
+                                            "0", tr("Grid Charge Month"), \
+                                            tr("This is the amount of electricity discharged into the grid this month."));
     Grid_Discharge_Month->add_Specification();
     Grid_Discharge_Year = new Specification(this,Grid_Discharge_Year_explain, myTable, line, column++, \
-                                            "0", "Grid Charge Year", \
-                                            "这是今年给电网放电的放电量\nThis is the amount of energy that has been discharged into the grid this year.");
+                                            "0", tr("Grid Charge Year"), \
+                                            tr("This is the amount of energy that has been discharged into the grid this year."));
     Grid_Discharge_Year->add_Specification();
     Grid_Discharge_Total = new Specification(this,Grid_Discharge_Total_explain, myTable, line, column++, \
-                                            "0", "Grid Charge Total", \
-                                            "这是给电网放电的总放电量\nThis is the total amount of discharge to the grid.");
+                                            "0", tr("Grid Charge Total"), \
+                                            tr("This is the total amount of discharge to the grid."));
     Grid_Discharge_Total->add_Specification();
 }
 
@@ -4110,37 +4139,37 @@ void MyWidget::on_RTD_module_2_clicked()
 void MyWidget::on_Subtract_Y_clicked()
 {
     QMessageBox::question(this, "Y-"\
-                          ,"查看上一年的数据，点击后将显示当前显示年份的上一年的数据\nTo view the previous year's data, click on it to display the previous year's data for the current displayed year.", "OK");
+                          ,tr("To view the previous year's data, click on it to display the previous year's data for the current displayed year."), tr("OK"));
 }
 /********* 点击Y+ *********/
 void MyWidget::on_Add_Y_clicked()
 {
     QMessageBox::question(this, "Y+"\
-                          ,"查看下一年的数据，点击后将显示当前显示年份的下一年的数据\nTo view the data for the next year, click on it to display the data for the next year of the current displayed year.", "OK");
+                          ,tr("To view the data for the next year, click on it to display the data for the next year of the current displayed year."), tr("OK"));
 }
 /********* 点击M- *********/
 void MyWidget::on_Subtract_M_clicked()
 {
     QMessageBox::question(this, "M-"\
-                          ,"查看上一个月的数据，点击后将显示当前显示月份的上一个月的数据\nTo view the data of the previous month, click on it to display the data of the previous month of the current displayed month.", "OK");
+                          ,tr("To view the data of the previous month, click on it to display the data of the previous month of the current displayed month."), tr("OK"));
 }
 /********* 点击M+ *********/
 void MyWidget::on_Add_M_clicked()
 {
     QMessageBox::question(this, "M+"\
-                          ,"查看下一个月的数据，点击后将显示当前显示月份的下一个月的数据\nTo view the data for the next month, click to display the data for the next month of the current displayed month.", "OK");
+                          ,tr("To view the data for the next month, click to display the data for the next month of the current displayed month."), tr("OK"));
 }
 /********* 点击D- *********/
 void MyWidget::on_Subtract_D_clicked()
 {
     QMessageBox::question(this, "D-"\
-                          ,"查看上一日的数据，点击后将显示当前日的上一日的数据\nTo view the data of the previous day. Click to display the data of the previous day of the current day.", "OK");
+                          ,tr("To view the data of the previous day. Click to display the data of the previous day of the current day."), tr("OK"));
 }
 /********* 点击D+ *********/
 void MyWidget::on_Add_D_clicked()
 {
     QMessageBox::question(this, "D+"\
-                          ,"查看下一日的数据，点击后将显示当前日的下一日的数据\nTo view the data of the next day. Click to display the data of the next day of the current day.", "OK");
+                          ,tr("To view the data of the next day. Click to display the data of the next day of the current day."), tr("OK"));
 }
 /********* 导出历史记录 *********/
 void MyWidget::on_OutPut_historyFailuer_clicked()

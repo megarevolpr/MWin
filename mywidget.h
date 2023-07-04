@@ -1029,7 +1029,8 @@ private:
     void DCAC_Debugg(QTableWidget *myTable); //DCAC调试页说明
     void DCDC_Debugg(QTableWidget *myTable); //DCDC调试页说明
 
-    void MPS_state_delete();//MPS状态释放说明弹窗的空间
+    void MPS_state_delete();//MPS状态 释放 说明
+    void Data_Report_delete();//数据报表 释放 说明
 
 private slots:
     void on_UI_MenuBtn_clicked();//转到槽

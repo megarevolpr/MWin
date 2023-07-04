@@ -3762,7 +3762,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                 <string notr="true"/>
                </property>
                <property name="currentIndex">
-                <number>1</number>
+                <number>0</number>
                </property>
                <widget class="QWidget" name="RT_Data_page">
                 <attribute name="title">
@@ -3816,7 +3816,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                         <enum>Qt::TabFocus</enum>
                        </property>
                        <property name="currentIndex">
-                        <number>3</number>
+                        <number>1</number>
                        </property>
                        <widget class="QWidget" name="Machine_page">
                         <property name="focusPolicy">
