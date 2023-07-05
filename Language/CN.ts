@@ -122,8 +122,8 @@
         <location filename="../mywidget.ui" line="7847"/>
         <location filename="../mywidget.ui" line="7873"/>
         <location filename="../mywidget.ui" line="8041"/>
-        <location filename="../mywidget.cpp" line="1042"/>
-        <location filename="../mywidget.cpp" line="1044"/>
+        <location filename="../mywidget.cpp" line="1107"/>
+        <location filename="../mywidget.cpp" line="1109"/>
         <source>-</source>
         <translation>-</translation>
     </message>
@@ -205,7 +205,7 @@
         <location filename="../mywidget.ui" line="5872"/>
         <location filename="../mywidget.ui" line="5896"/>
         <location filename="../mywidget.ui" line="7154"/>
-        <location filename="../mywidget.cpp" line="1042"/>
+        <location filename="../mywidget.cpp" line="1107"/>
         <source>kW</source>
         <translation>kW</translation>
     </message>
@@ -303,7 +303,7 @@
         <location filename="../mywidget.ui" line="7756"/>
         <location filename="../mywidget.ui" line="7769"/>
         <location filename="../mywidget.ui" line="7782"/>
-        <location filename="../mywidget.cpp" line="1044"/>
+        <location filename="../mywidget.cpp" line="1109"/>
         <source>V</source>
         <translation>V</translation>
     </message>
@@ -917,7 +917,7 @@
     <message>
         <location filename="../mywidget.ui" line="102"/>
         <location filename="../mywidget.ui" line="2456"/>
-        <location filename="../mywidget.cpp" line="720"/>
+        <location filename="../mywidget.cpp" line="784"/>
         <source>Change Language</source>
         <translation>切换语言</translation>
     </message>
@@ -1085,13 +1085,13 @@
         <location filename="../mywidget.ui" line="7669"/>
         <location filename="../mywidget.ui" line="7684"/>
         <location filename="../mywidget.ui" line="8120"/>
-        <location filename="../mywidget.cpp" line="869"/>
-        <location filename="../mywidget.cpp" line="904"/>
-        <location filename="../mywidget.cpp" line="940"/>
-        <location filename="../mywidget.cpp" line="988"/>
-        <location filename="../mywidget.cpp" line="1029"/>
-        <location filename="../mywidget.cpp" line="1129"/>
-        <location filename="../mywidget.cpp" line="1283"/>
+        <location filename="../mywidget.cpp" line="934"/>
+        <location filename="../mywidget.cpp" line="969"/>
+        <location filename="../mywidget.cpp" line="1005"/>
+        <location filename="../mywidget.cpp" line="1053"/>
+        <location filename="../mywidget.cpp" line="1094"/>
+        <location filename="../mywidget.cpp" line="1194"/>
+        <location filename="../mywidget.cpp" line="1348"/>
         <source>Name</source>
         <translation>名称</translation>
     </message>
@@ -1102,19 +1102,19 @@
     </message>
     <message>
         <location filename="../mywidget.ui" line="4830"/>
-        <location filename="../mywidget.cpp" line="1742"/>
+        <location filename="../mywidget.cpp" line="1807"/>
         <source>Bat current</source>
         <translation>电池电流</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="4848"/>
-        <location filename="../mywidget.cpp" line="1746"/>
+        <location filename="../mywidget.cpp" line="1811"/>
         <source>SOC</source>
         <translation>SOC</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="4866"/>
-        <location filename="../mywidget.cpp" line="1750"/>
+        <location filename="../mywidget.cpp" line="1815"/>
         <source>SOH</source>
         <translation>SOH</translation>
     </message>
@@ -1143,13 +1143,13 @@
         <location filename="../mywidget.ui" line="5575"/>
         <location filename="../mywidget.ui" line="7674"/>
         <location filename="../mywidget.ui" line="7689"/>
-        <location filename="../mywidget.cpp" line="833"/>
-        <location filename="../mywidget.cpp" line="869"/>
-        <location filename="../mywidget.cpp" line="904"/>
-        <location filename="../mywidget.cpp" line="940"/>
-        <location filename="../mywidget.cpp" line="988"/>
-        <location filename="../mywidget.cpp" line="1029"/>
-        <location filename="../mywidget.cpp" line="1283"/>
+        <location filename="../mywidget.cpp" line="898"/>
+        <location filename="../mywidget.cpp" line="934"/>
+        <location filename="../mywidget.cpp" line="969"/>
+        <location filename="../mywidget.cpp" line="1005"/>
+        <location filename="../mywidget.cpp" line="1053"/>
+        <location filename="../mywidget.cpp" line="1094"/>
+        <location filename="../mywidget.cpp" line="1348"/>
         <source>Value</source>
         <translation>值</translation>
     </message>
@@ -1168,6 +1168,7 @@
         <location filename="../mywidget.ui" line="5657"/>
         <location filename="../mywidget.ui" line="5676"/>
         <location filename="../mywidget.ui" line="5695"/>
+        <location filename="../mywidget.cpp" line="3136"/>
         <source>0</source>
         <translation>0</translation>
     </message>
@@ -1176,8 +1177,8 @@
         <location filename="../mywidget.ui" line="5752"/>
         <location filename="../mywidget.ui" line="7679"/>
         <location filename="../mywidget.ui" line="7694"/>
-        <location filename="../mywidget.cpp" line="1029"/>
-        <location filename="../mywidget.cpp" line="1283"/>
+        <location filename="../mywidget.cpp" line="1094"/>
+        <location filename="../mywidget.cpp" line="1348"/>
         <source>Unit</source>
         <translation>单位</translation>
     </message>
@@ -1188,7 +1189,7 @@
         <location filename="../mywidget.ui" line="7282"/>
         <location filename="../mywidget.ui" line="7899"/>
         <location filename="../mywidget.ui" line="7912"/>
-        <location filename="../mywidget.cpp" line="1044"/>
+        <location filename="../mywidget.cpp" line="1109"/>
         <source>A</source>
         <translation>A</translation>
     </message>
@@ -1206,13 +1207,13 @@
     </message>
     <message>
         <location filename="../mywidget.ui" line="5367"/>
-        <location filename="../mywidget.cpp" line="1770"/>
+        <location filename="../mywidget.cpp" line="1835"/>
         <source>Charging current limite</source>
         <translation>充电电流上限</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="5391"/>
-        <location filename="../mywidget.cpp" line="1774"/>
+        <location filename="../mywidget.cpp" line="1839"/>
         <source>Discharging current limite</source>
         <translation>放电电流上限</translation>
     </message>
@@ -1276,7 +1277,7 @@ enable</source>
         <location filename="../mywidget.ui" line="6231"/>
         <location filename="../mywidget.ui" line="6275"/>
         <location filename="../mywidget.ui" line="7971"/>
-        <location filename="../mywidget.cpp" line="2566"/>
+        <location filename="../mywidget.cpp" line="2631"/>
         <source>Enable</source>
         <translation>使能</translation>
     </message>
@@ -1373,25 +1374,25 @@ enable</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="6866"/>
-        <location filename="../mywidget.cpp" line="4177"/>
+        <location filename="../mywidget.cpp" line="4259"/>
         <source>HistoricalFailure</source>
         <translation>历史记录</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="6889"/>
-        <location filename="../mywidget.cpp" line="4183"/>
+        <location filename="../mywidget.cpp" line="4265"/>
         <source>OperationLog</source>
         <translation>操作日志</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="6927"/>
-        <location filename="../mywidget.cpp" line="4189"/>
+        <location filename="../mywidget.cpp" line="4271"/>
         <source>Coulombmeter report</source>
         <translation>电量统计表</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="6956"/>
-        <location filename="../mywidget.cpp" line="4195"/>
+        <location filename="../mywidget.cpp" line="4277"/>
         <source>Eject Udisk</source>
         <translation>退出U盘</translation>
     </message>
@@ -1713,7 +1714,7 @@ B1 - A1 ≥ 30 %
     </message>
     <message>
         <location filename="../mywidget.ui" line="8125"/>
-        <location filename="../mywidget.cpp" line="1129"/>
+        <location filename="../mywidget.cpp" line="1194"/>
         <source>Information</source>
         <translation>系统信息</translation>
     </message>
@@ -1902,322 +1903,322 @@ B1 - A1 ≥ 30 %
         <translation>202A</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="728"/>
+        <location filename="../mywidget.cpp" line="792"/>
         <source>切换语言</source>
         <translation>Change Language</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="814"/>
-        <location filename="../mywidget.cpp" line="888"/>
-        <location filename="../mywidget.cpp" line="924"/>
-        <location filename="../mywidget.cpp" line="2305"/>
-        <location filename="../mywidget.cpp" line="2413"/>
+        <location filename="../mywidget.cpp" line="879"/>
+        <location filename="../mywidget.cpp" line="953"/>
+        <location filename="../mywidget.cpp" line="989"/>
+        <location filename="../mywidget.cpp" line="2370"/>
+        <location filename="../mywidget.cpp" line="2478"/>
         <source>Voltage(AB)</source>
         <translation>电压 (AB)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="814"/>
-        <location filename="../mywidget.cpp" line="888"/>
-        <location filename="../mywidget.cpp" line="924"/>
-        <location filename="../mywidget.cpp" line="2314"/>
-        <location filename="../mywidget.cpp" line="2422"/>
+        <location filename="../mywidget.cpp" line="879"/>
+        <location filename="../mywidget.cpp" line="953"/>
+        <location filename="../mywidget.cpp" line="989"/>
+        <location filename="../mywidget.cpp" line="2379"/>
+        <location filename="../mywidget.cpp" line="2487"/>
         <source>Voltage(BC)</source>
         <translation>电压 (BC)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="814"/>
-        <location filename="../mywidget.cpp" line="888"/>
-        <location filename="../mywidget.cpp" line="924"/>
-        <location filename="../mywidget.cpp" line="2323"/>
-        <location filename="../mywidget.cpp" line="2431"/>
+        <location filename="../mywidget.cpp" line="879"/>
+        <location filename="../mywidget.cpp" line="953"/>
+        <location filename="../mywidget.cpp" line="989"/>
+        <location filename="../mywidget.cpp" line="2388"/>
+        <location filename="../mywidget.cpp" line="2496"/>
         <source>Voltage(CA)</source>
         <translation>电压 (CA)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="815"/>
-        <location filename="../mywidget.cpp" line="889"/>
-        <location filename="../mywidget.cpp" line="925"/>
-        <location filename="../mywidget.cpp" line="2332"/>
-        <location filename="../mywidget.cpp" line="2440"/>
+        <location filename="../mywidget.cpp" line="880"/>
+        <location filename="../mywidget.cpp" line="954"/>
+        <location filename="../mywidget.cpp" line="990"/>
+        <location filename="../mywidget.cpp" line="2397"/>
+        <location filename="../mywidget.cpp" line="2505"/>
         <source>Current(A)</source>
         <translation>电流 (A)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="815"/>
-        <location filename="../mywidget.cpp" line="889"/>
-        <location filename="../mywidget.cpp" line="925"/>
-        <location filename="../mywidget.cpp" line="2341"/>
-        <location filename="../mywidget.cpp" line="2449"/>
+        <location filename="../mywidget.cpp" line="880"/>
+        <location filename="../mywidget.cpp" line="954"/>
+        <location filename="../mywidget.cpp" line="990"/>
+        <location filename="../mywidget.cpp" line="2406"/>
+        <location filename="../mywidget.cpp" line="2514"/>
         <source>Current(B)</source>
         <translation>电流 (B)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="815"/>
-        <location filename="../mywidget.cpp" line="889"/>
-        <location filename="../mywidget.cpp" line="925"/>
-        <location filename="../mywidget.cpp" line="2350"/>
-        <location filename="../mywidget.cpp" line="2458"/>
+        <location filename="../mywidget.cpp" line="880"/>
+        <location filename="../mywidget.cpp" line="954"/>
+        <location filename="../mywidget.cpp" line="990"/>
+        <location filename="../mywidget.cpp" line="2415"/>
+        <location filename="../mywidget.cpp" line="2523"/>
         <source>Current(C)</source>
         <translation>电流 (C)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="816"/>
-        <location filename="../mywidget.cpp" line="857"/>
-        <location filename="../mywidget.cpp" line="2071"/>
+        <location filename="../mywidget.cpp" line="881"/>
+        <location filename="../mywidget.cpp" line="922"/>
+        <location filename="../mywidget.cpp" line="2136"/>
         <source>Leakage current</source>
         <translation>漏电流</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="816"/>
-        <location filename="../mywidget.cpp" line="2053"/>
+        <location filename="../mywidget.cpp" line="881"/>
+        <location filename="../mywidget.cpp" line="2118"/>
         <source>IGBT temperature</source>
         <translation>IGBT温度</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="816"/>
+        <location filename="../mywidget.cpp" line="881"/>
         <source>Env. temperature</source>
         <translation>环境温度</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="818"/>
-        <location filename="../mywidget.cpp" line="2082"/>
+        <location filename="../mywidget.cpp" line="883"/>
+        <location filename="../mywidget.cpp" line="2147"/>
         <source>PV voltage</source>
         <translation>PV电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="818"/>
-        <location filename="../mywidget.cpp" line="2091"/>
+        <location filename="../mywidget.cpp" line="883"/>
+        <location filename="../mywidget.cpp" line="2156"/>
         <source>PV current</source>
         <translation>PV电流</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="818"/>
-        <location filename="../mywidget.cpp" line="2100"/>
+        <location filename="../mywidget.cpp" line="883"/>
+        <location filename="../mywidget.cpp" line="2165"/>
         <source>PV power</source>
         <translation>PV功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="819"/>
-        <location filename="../mywidget.cpp" line="2109"/>
+        <location filename="../mywidget.cpp" line="884"/>
+        <location filename="../mywidget.cpp" line="2174"/>
         <source>Battery voltage</source>
         <translation>电池电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="819"/>
-        <location filename="../mywidget.cpp" line="2118"/>
+        <location filename="../mywidget.cpp" line="884"/>
+        <location filename="../mywidget.cpp" line="2183"/>
         <source>Battery current</source>
         <translation>电池电流</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="819"/>
-        <location filename="../mywidget.cpp" line="2127"/>
+        <location filename="../mywidget.cpp" line="884"/>
+        <location filename="../mywidget.cpp" line="2192"/>
         <source>Battery power</source>
         <translation>电池功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="820"/>
-        <location filename="../mywidget.cpp" line="2136"/>
+        <location filename="../mywidget.cpp" line="885"/>
+        <location filename="../mywidget.cpp" line="2201"/>
         <source>Bus voltage</source>
         <translation>母线电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="820"/>
-        <location filename="../mywidget.cpp" line="2145"/>
+        <location filename="../mywidget.cpp" line="885"/>
+        <location filename="../mywidget.cpp" line="2210"/>
         <source>Bus current</source>
         <translation>母线电流</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="833"/>
+        <location filename="../mywidget.cpp" line="898"/>
         <source>Inverter</source>
         <translation>逆变</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="833"/>
+        <location filename="../mywidget.cpp" line="898"/>
         <source>DC</source>
         <translation>直流</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="853"/>
+        <location filename="../mywidget.cpp" line="918"/>
         <source>Voltage_H</source>
         <translation>高压侧电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="853"/>
+        <location filename="../mywidget.cpp" line="918"/>
         <source>Current_H</source>
         <translation>高压侧电流</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="853"/>
+        <location filename="../mywidget.cpp" line="918"/>
         <source>Power_H</source>
         <translation>高压侧功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="854"/>
+        <location filename="../mywidget.cpp" line="919"/>
         <source>Current_L</source>
         <translation>低压侧电流</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="854"/>
+        <location filename="../mywidget.cpp" line="919"/>
         <source>Power_L</source>
         <translation>低压侧功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="854"/>
-        <location filename="../mywidget.cpp" line="2225"/>
+        <location filename="../mywidget.cpp" line="919"/>
+        <location filename="../mywidget.cpp" line="2290"/>
         <source>PositiveInuslation</source>
         <translation>正绝缘阻抗</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="854"/>
+        <location filename="../mywidget.cpp" line="919"/>
         <source>Voltage_L</source>
         <translation>低压侧电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="856"/>
+        <location filename="../mywidget.cpp" line="921"/>
         <source>Bus_H_Vol(+)</source>
         <translation>高压侧正母线电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="856"/>
+        <location filename="../mywidget.cpp" line="921"/>
         <source>Bus_H_Vol(-)</source>
         <translation>高压侧负母线电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="856"/>
+        <location filename="../mywidget.cpp" line="921"/>
         <source>Bus_L_Vol(+)</source>
         <translation>低压侧正母线电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="856"/>
+        <location filename="../mywidget.cpp" line="921"/>
         <source>Bus_L_Vol(-)</source>
         <translation>低压侧负母线电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="857"/>
-        <location filename="../mywidget.cpp" line="2282"/>
+        <location filename="../mywidget.cpp" line="922"/>
+        <location filename="../mywidget.cpp" line="2347"/>
         <source>NegativeInuslation</source>
         <translation>负绝缘阻抗</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="857"/>
-        <location filename="../mywidget.cpp" line="2273"/>
+        <location filename="../mywidget.cpp" line="922"/>
+        <location filename="../mywidget.cpp" line="2338"/>
         <source>IGBT Temperature</source>
         <translation>IGBT温度</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="891"/>
-        <location filename="../mywidget.cpp" line="927"/>
-        <location filename="../mywidget.cpp" line="2362"/>
-        <location filename="../mywidget.cpp" line="2470"/>
+        <location filename="../mywidget.cpp" line="956"/>
+        <location filename="../mywidget.cpp" line="992"/>
+        <location filename="../mywidget.cpp" line="2427"/>
+        <location filename="../mywidget.cpp" line="2535"/>
         <source>Active power</source>
         <translation>有功功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="891"/>
-        <location filename="../mywidget.cpp" line="927"/>
-        <location filename="../mywidget.cpp" line="2371"/>
-        <location filename="../mywidget.cpp" line="2479"/>
+        <location filename="../mywidget.cpp" line="956"/>
+        <location filename="../mywidget.cpp" line="992"/>
+        <location filename="../mywidget.cpp" line="2436"/>
+        <location filename="../mywidget.cpp" line="2544"/>
         <source>Reactive power</source>
         <translation>无功功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="891"/>
-        <location filename="../mywidget.cpp" line="927"/>
-        <location filename="../mywidget.cpp" line="2380"/>
-        <location filename="../mywidget.cpp" line="2488"/>
+        <location filename="../mywidget.cpp" line="956"/>
+        <location filename="../mywidget.cpp" line="992"/>
+        <location filename="../mywidget.cpp" line="2445"/>
+        <location filename="../mywidget.cpp" line="2553"/>
         <source>Apparent power</source>
         <translation>视在功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="891"/>
-        <location filename="../mywidget.cpp" line="927"/>
-        <location filename="../mywidget.cpp" line="2389"/>
-        <location filename="../mywidget.cpp" line="2497"/>
+        <location filename="../mywidget.cpp" line="956"/>
+        <location filename="../mywidget.cpp" line="992"/>
+        <location filename="../mywidget.cpp" line="2454"/>
+        <location filename="../mywidget.cpp" line="2562"/>
         <source>Power factor</source>
         <translation>功率因素</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="892"/>
-        <location filename="../mywidget.cpp" line="928"/>
-        <location filename="../mywidget.cpp" line="2398"/>
-        <location filename="../mywidget.cpp" line="2506"/>
+        <location filename="../mywidget.cpp" line="957"/>
+        <location filename="../mywidget.cpp" line="993"/>
+        <location filename="../mywidget.cpp" line="2463"/>
+        <location filename="../mywidget.cpp" line="2571"/>
         <source>Frequency</source>
         <translation>频率</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="967"/>
-        <location filename="../mywidget.cpp" line="2527"/>
+        <location filename="../mywidget.cpp" line="1032"/>
+        <location filename="../mywidget.cpp" line="2592"/>
         <source>DC input breaker</source>
         <translation>直流输入断路器</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="967"/>
-        <location filename="../mywidget.cpp" line="2531"/>
+        <location filename="../mywidget.cpp" line="1032"/>
+        <location filename="../mywidget.cpp" line="2596"/>
         <source>DC contactor</source>
         <translation>直流接触器</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="967"/>
+        <location filename="../mywidget.cpp" line="1032"/>
         <source>Maintenance Bypass breaker</source>
         <translation>维修旁路断路器</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="968"/>
-        <location filename="../mywidget.cpp" line="2543"/>
+        <location filename="../mywidget.cpp" line="1033"/>
+        <location filename="../mywidget.cpp" line="2608"/>
         <source>Output contactor</source>
         <translation>输出接触器</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="968"/>
-        <location filename="../mywidget.cpp" line="2547"/>
+        <location filename="../mywidget.cpp" line="1033"/>
+        <location filename="../mywidget.cpp" line="2612"/>
         <source>Grid breaker</source>
         <translation>电网断路器</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="968"/>
-        <location filename="../mywidget.cpp" line="2539"/>
+        <location filename="../mywidget.cpp" line="1033"/>
+        <location filename="../mywidget.cpp" line="2604"/>
         <source>Output breaker</source>
         <translation>输出断路器</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="969"/>
-        <location filename="../mywidget.cpp" line="2551"/>
+        <location filename="../mywidget.cpp" line="1034"/>
+        <location filename="../mywidget.cpp" line="2616"/>
         <source>DO1</source>
         <translation>DO1</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="969"/>
-        <location filename="../mywidget.cpp" line="2555"/>
+        <location filename="../mywidget.cpp" line="1034"/>
+        <location filename="../mywidget.cpp" line="2620"/>
         <source>DO2</source>
         <translation>DO2</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="969"/>
-        <location filename="../mywidget.cpp" line="2559"/>
+        <location filename="../mywidget.cpp" line="1034"/>
+        <location filename="../mywidget.cpp" line="2624"/>
         <source>DO3</source>
         <translation>DO3</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="971"/>
-        <location filename="../mywidget.cpp" line="2566"/>
+        <location filename="../mywidget.cpp" line="1036"/>
+        <location filename="../mywidget.cpp" line="2631"/>
         <source>DCAC Converter available</source>
         <translation>DCAC变流器使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="971"/>
-        <location filename="../mywidget.cpp" line="2570"/>
+        <location filename="../mywidget.cpp" line="1036"/>
+        <location filename="../mywidget.cpp" line="2635"/>
         <source>DC Soft start</source>
         <translation>直流软启动</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="971"/>
-        <location filename="../mywidget.cpp" line="975"/>
+        <location filename="../mywidget.cpp" line="1036"/>
+        <location filename="../mywidget.cpp" line="1040"/>
         <source>Converter status</source>
         <translation>变流器状态</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="971"/>
-        <location filename="../mywidget.cpp" line="2578"/>
+        <location filename="../mywidget.cpp" line="1036"/>
+        <location filename="../mywidget.cpp" line="2643"/>
         <source>Reactive power Regulation</source>
         <translation>无功调节方式</translation>
     </message>
@@ -2226,44 +2227,44 @@ B1 - A1 ≥ 30 %
         <translation type="vanished">休眠模式</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="972"/>
-        <location filename="../mywidget.cpp" line="2582"/>
+        <location filename="../mywidget.cpp" line="1037"/>
+        <location filename="../mywidget.cpp" line="2647"/>
         <source>LVRT</source>
         <translation>LVRT</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="972"/>
-        <location filename="../mywidget.cpp" line="2586"/>
+        <location filename="../mywidget.cpp" line="1037"/>
+        <location filename="../mywidget.cpp" line="2651"/>
         <source>DI1</source>
         <translation>DI1</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="972"/>
-        <location filename="../mywidget.cpp" line="2590"/>
+        <location filename="../mywidget.cpp" line="1037"/>
+        <location filename="../mywidget.cpp" line="2655"/>
         <source>DI2</source>
         <translation>DI2</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="972"/>
-        <location filename="../mywidget.cpp" line="2594"/>
+        <location filename="../mywidget.cpp" line="1037"/>
+        <location filename="../mywidget.cpp" line="2659"/>
         <source>DI3</source>
         <translation>DI3</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="972"/>
-        <location filename="../mywidget.cpp" line="2598"/>
+        <location filename="../mywidget.cpp" line="1037"/>
+        <location filename="../mywidget.cpp" line="2663"/>
         <source>DI4</source>
         <translation>DI4</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="972"/>
-        <location filename="../mywidget.cpp" line="2602"/>
+        <location filename="../mywidget.cpp" line="1037"/>
+        <location filename="../mywidget.cpp" line="2667"/>
         <source>DI5</source>
         <translation>DI5</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="972"/>
-        <location filename="../mywidget.cpp" line="2606"/>
+        <location filename="../mywidget.cpp" line="1037"/>
+        <location filename="../mywidget.cpp" line="2671"/>
         <source>DI6</source>
         <translation>DI6</translation>
     </message>
@@ -2276,7 +2277,7 @@ B1 - A1 ≥ 30 %
         <translation type="vanished">高压侧断路器2</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="974"/>
+        <location filename="../mywidget.cpp" line="1039"/>
         <source>Contactor status boost</source>
         <translation>高压侧接触器</translation>
     </message>
@@ -2289,1039 +2290,1150 @@ B1 - A1 ≥ 30 %
         <translation type="vanished">低压侧断路器2</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="974"/>
+        <location filename="../mywidget.cpp" line="1039"/>
         <source>Contactor status buck</source>
         <translation>低压侧接触器</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="974"/>
-        <location filename="../mywidget.cpp" line="2620"/>
+        <location filename="../mywidget.cpp" line="1039"/>
+        <location filename="../mywidget.cpp" line="2685"/>
         <source>Run mode</source>
         <translation>运行模式</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="974"/>
-        <location filename="../mywidget.cpp" line="2624"/>
+        <location filename="../mywidget.cpp" line="1039"/>
+        <location filename="../mywidget.cpp" line="2689"/>
         <source>DCDC Converter available</source>
         <translation>DCDC变流器使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="975"/>
+        <location filename="../mywidget.cpp" line="1040"/>
         <source>Soft start status boost</source>
         <translation>高压侧软启动</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="975"/>
+        <location filename="../mywidget.cpp" line="1040"/>
         <source>Soft start status buck</source>
         <translation>低压侧软启动</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="975"/>
-        <location filename="../mywidget.cpp" line="2640"/>
+        <location filename="../mywidget.cpp" line="1040"/>
+        <location filename="../mywidget.cpp" line="2705"/>
         <source>ModeLock</source>
         <translation>模块锁</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1038"/>
+        <location filename="../mywidget.cpp" line="1103"/>
         <source>Work parttern</source>
         <translation>工作模式</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1038"/>
+        <location filename="../mywidget.cpp" line="1103"/>
         <source>Boost or Buck</source>
         <translation>升/降压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1038"/>
+        <location filename="../mywidget.cpp" line="1103"/>
         <source>Bat Charging or discharging Model</source>
         <translation>电池充放电模式</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1038"/>
+        <location filename="../mywidget.cpp" line="1103"/>
         <source>DCDC Capacity</source>
         <translation>DCDC容量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1040"/>
+        <location filename="../mywidget.cpp" line="1105"/>
         <source>Battery position</source>
         <translation>电池位置</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1040"/>
+        <location filename="../mywidget.cpp" line="1105"/>
         <source>Voltage level</source>
         <translation>电压等级</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1040"/>
+        <location filename="../mywidget.cpp" line="1105"/>
         <source>Current value</source>
         <translation>电流值</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1095"/>
+        <location filename="../mywidget.cpp" line="1160"/>
         <source>Check</source>
         <translation>选择</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1095"/>
+        <location filename="../mywidget.cpp" line="1160"/>
         <source>StartTime</source>
         <translation>开始时间</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1095"/>
+        <location filename="../mywidget.cpp" line="1160"/>
         <source>EndTime</source>
         <translation>结束时间</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1095"/>
+        <location filename="../mywidget.cpp" line="1160"/>
         <source>Features</source>
         <translation>功能</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1095"/>
+        <location filename="../mywidget.cpp" line="1160"/>
         <source>Power</source>
         <translation>功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1141"/>
+        <location filename="../mywidget.cpp" line="1206"/>
         <source>PV power generation</source>
         <translation>PV发电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1141"/>
+        <location filename="../mywidget.cpp" line="1206"/>
         <source>Load discharge</source>
         <translation>负载用电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1141"/>
+        <location filename="../mywidget.cpp" line="1206"/>
         <source>Battery charge</source>
         <translation>电池充电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1142"/>
+        <location filename="../mywidget.cpp" line="1207"/>
         <source>Battery discharge</source>
         <translation>电池放电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1142"/>
+        <location filename="../mywidget.cpp" line="1207"/>
         <source>Grid charge</source>
         <translation>电网充电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1142"/>
+        <location filename="../mywidget.cpp" line="1207"/>
         <source>Grid discharge</source>
         <translation>电网放电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1144"/>
+        <location filename="../mywidget.cpp" line="1209"/>
         <source> </source>
         <translation> </translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1144"/>
+        <location filename="../mywidget.cpp" line="1209"/>
         <source>Day(kWh)</source>
         <translation>日电量(kWh)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1144"/>
+        <location filename="../mywidget.cpp" line="1209"/>
         <source>Month(kWh)</source>
         <translation>月电量(kWh)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1144"/>
+        <location filename="../mywidget.cpp" line="1209"/>
         <source>Year(kWh)</source>
         <translation>年电量(kWh)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1144"/>
+        <location filename="../mywidget.cpp" line="1209"/>
         <source>Total(kWh)</source>
         <translation>总电量(kWh)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1174"/>
+        <location filename="../mywidget.cpp" line="1239"/>
+        <location filename="../mywidget.cpp" line="3137"/>
         <source>Level</source>
         <translation>等级</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1174"/>
+        <location filename="../mywidget.cpp" line="1239"/>
+        <location filename="../mywidget.cpp" line="3139"/>
         <source>Start Time</source>
         <translation>开始时间</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1174"/>
+        <location filename="../mywidget.cpp" line="1239"/>
+        <location filename="../mywidget.cpp" line="3141"/>
         <source>End Time</source>
         <translation>结束时间</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1174"/>
+        <location filename="../mywidget.cpp" line="1239"/>
+        <location filename="../mywidget.cpp" line="3145"/>
         <source>Description</source>
         <translation>描述</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1229"/>
+        <location filename="../mywidget.cpp" line="1294"/>
+        <location filename="../mywidget.cpp" line="3289"/>
         <source>ModificationTime</source>
         <translation>修改时间</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1229"/>
+        <location filename="../mywidget.cpp" line="1294"/>
+        <location filename="../mywidget.cpp" line="3291"/>
         <source>RecordEvent</source>
         <translation>事件记录</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1263"/>
+        <location filename="../mywidget.cpp" line="1328"/>
         <source>Alarm name</source>
         <translation>告警名称</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1263"/>
+        <location filename="../mywidget.cpp" line="1328"/>
         <source>Alarm leve</source>
         <translation>告警等级</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1263"/>
+        <location filename="../mywidget.cpp" line="1328"/>
         <source>Trigger condition</source>
         <translation>触发条件</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1264"/>
+        <location filename="../mywidget.cpp" line="1329"/>
         <source>Response action</source>
         <translation>响应动作</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1264"/>
+        <location filename="../mywidget.cpp" line="1329"/>
         <source>Whether to reset
 automatically and reset time</source>
         <translation>是否自动复位及复位时间</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1311"/>
+        <location filename="../mywidget.cpp" line="1376"/>
         <source>Inverter overcurrent</source>
         <translation>逆变器过流</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1311"/>
-        <location filename="../mywidget.cpp" line="1323"/>
-        <location filename="../mywidget.cpp" line="1383"/>
-        <location filename="../mywidget.cpp" line="1395"/>
-        <location filename="../mywidget.cpp" line="1443"/>
-        <location filename="../mywidget.cpp" line="1455"/>
-        <location filename="../mywidget.cpp" line="1467"/>
-        <location filename="../mywidget.cpp" line="1479"/>
-        <location filename="../mywidget.cpp" line="1551"/>
-        <location filename="../mywidget.cpp" line="1575"/>
-        <location filename="../mywidget.cpp" line="1587"/>
-        <location filename="../mywidget.cpp" line="1623"/>
+        <location filename="../mywidget.cpp" line="1376"/>
+        <location filename="../mywidget.cpp" line="1388"/>
+        <location filename="../mywidget.cpp" line="1448"/>
+        <location filename="../mywidget.cpp" line="1460"/>
+        <location filename="../mywidget.cpp" line="1508"/>
+        <location filename="../mywidget.cpp" line="1520"/>
+        <location filename="../mywidget.cpp" line="1532"/>
+        <location filename="../mywidget.cpp" line="1544"/>
+        <location filename="../mywidget.cpp" line="1616"/>
+        <location filename="../mywidget.cpp" line="1640"/>
+        <location filename="../mywidget.cpp" line="1652"/>
+        <location filename="../mywidget.cpp" line="1688"/>
         <source>General failure</source>
         <translation>一般故障</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1312"/>
+        <location filename="../mywidget.cpp" line="1377"/>
         <source>Inductive current instantaneous value &gt;3lp or inductive current RMS value &gt;1.36ln</source>
         <translation>电感电流瞬时值&gt;3Ip 或电感电流有效值&gt;1.36In</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1313"/>
+        <location filename="../mywidget.cpp" line="1378"/>
         <source>PCS shut down and disconnect the output contactor</source>
         <translation>PCS 停机，输出接触器断开</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1314"/>
-        <location filename="../mywidget.cpp" line="1326"/>
-        <location filename="../mywidget.cpp" line="1338"/>
-        <location filename="../mywidget.cpp" line="1386"/>
-        <location filename="../mywidget.cpp" line="1398"/>
-        <location filename="../mywidget.cpp" line="1410"/>
-        <location filename="../mywidget.cpp" line="1422"/>
-        <location filename="../mywidget.cpp" line="1446"/>
-        <location filename="../mywidget.cpp" line="1482"/>
-        <location filename="../mywidget.cpp" line="1494"/>
-        <location filename="../mywidget.cpp" line="1506"/>
-        <location filename="../mywidget.cpp" line="1530"/>
-        <location filename="../mywidget.cpp" line="1542"/>
-        <location filename="../mywidget.cpp" line="1554"/>
-        <location filename="../mywidget.cpp" line="1578"/>
-        <location filename="../mywidget.cpp" line="1590"/>
-        <location filename="../mywidget.cpp" line="1602"/>
-        <location filename="../mywidget.cpp" line="1614"/>
-        <location filename="../mywidget.cpp" line="1626"/>
+        <location filename="../mywidget.cpp" line="1379"/>
+        <location filename="../mywidget.cpp" line="1391"/>
+        <location filename="../mywidget.cpp" line="1403"/>
+        <location filename="../mywidget.cpp" line="1451"/>
+        <location filename="../mywidget.cpp" line="1463"/>
+        <location filename="../mywidget.cpp" line="1475"/>
+        <location filename="../mywidget.cpp" line="1487"/>
+        <location filename="../mywidget.cpp" line="1511"/>
+        <location filename="../mywidget.cpp" line="1547"/>
+        <location filename="../mywidget.cpp" line="1559"/>
+        <location filename="../mywidget.cpp" line="1571"/>
+        <location filename="../mywidget.cpp" line="1595"/>
+        <location filename="../mywidget.cpp" line="1607"/>
+        <location filename="../mywidget.cpp" line="1619"/>
+        <location filename="../mywidget.cpp" line="1643"/>
+        <location filename="../mywidget.cpp" line="1655"/>
+        <location filename="../mywidget.cpp" line="1667"/>
+        <location filename="../mywidget.cpp" line="1679"/>
+        <location filename="../mywidget.cpp" line="1691"/>
         <source>Recoverable, automatic recovery 5 minutes after the fault is eliminated</source>
         <translation>可恢复，故障消除5min后自动恢复</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1323"/>
+        <location filename="../mywidget.cpp" line="1388"/>
         <source>Converter fault</source>
         <translation>变流器故障</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1324"/>
+        <location filename="../mywidget.cpp" line="1389"/>
         <source>During soft startup of converter, inverter voltage RMS more then 1.2Vgrid or inverter voltage RMS less than 0.3Vgrid after 30s</source>
         <translation>变流器开机软启过程中，30s后逆变电压有效值&gt;1.2Vgrid或逆变电压有效值&lt;0.3Vgrid</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1325"/>
+        <location filename="../mywidget.cpp" line="1390"/>
         <source>PCS shut down and Stop the soft startup</source>
         <translation>PCS 停机，停止开机软启</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1335"/>
+        <location filename="../mywidget.cpp" line="1400"/>
         <source>Battery low voltage</source>
         <translation>电池电压低</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1335"/>
-        <location filename="../mywidget.cpp" line="1347"/>
-        <location filename="../mywidget.cpp" line="1407"/>
-        <location filename="../mywidget.cpp" line="1419"/>
-        <location filename="../mywidget.cpp" line="1431"/>
-        <location filename="../mywidget.cpp" line="1491"/>
-        <location filename="../mywidget.cpp" line="1503"/>
-        <location filename="../mywidget.cpp" line="1515"/>
-        <location filename="../mywidget.cpp" line="1527"/>
-        <location filename="../mywidget.cpp" line="1539"/>
-        <location filename="../mywidget.cpp" line="1563"/>
-        <location filename="../mywidget.cpp" line="1599"/>
-        <location filename="../mywidget.cpp" line="1611"/>
+        <location filename="../mywidget.cpp" line="1400"/>
+        <location filename="../mywidget.cpp" line="1412"/>
+        <location filename="../mywidget.cpp" line="1472"/>
+        <location filename="../mywidget.cpp" line="1484"/>
+        <location filename="../mywidget.cpp" line="1496"/>
+        <location filename="../mywidget.cpp" line="1556"/>
+        <location filename="../mywidget.cpp" line="1568"/>
+        <location filename="../mywidget.cpp" line="1580"/>
+        <location filename="../mywidget.cpp" line="1592"/>
+        <location filename="../mywidget.cpp" line="1604"/>
+        <location filename="../mywidget.cpp" line="1628"/>
+        <location filename="../mywidget.cpp" line="1664"/>
+        <location filename="../mywidget.cpp" line="1676"/>
         <source>Warning</source>
         <translation>告警</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1336"/>
+        <location filename="../mywidget.cpp" line="1401"/>
         <source>The DC input/output voltage is lower than the battery EOD voltage or less than 1.414 times the grid line voltage</source>
         <translation>直流出入电压低于电池EOD电压或者小于1.414倍电网线电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1337"/>
-        <location filename="../mywidget.cpp" line="1385"/>
-        <location filename="../mywidget.cpp" line="1397"/>
-        <location filename="../mywidget.cpp" line="1421"/>
-        <location filename="../mywidget.cpp" line="1433"/>
-        <location filename="../mywidget.cpp" line="1445"/>
-        <location filename="../mywidget.cpp" line="1457"/>
-        <location filename="../mywidget.cpp" line="1469"/>
-        <location filename="../mywidget.cpp" line="1481"/>
-        <location filename="../mywidget.cpp" line="1493"/>
-        <location filename="../mywidget.cpp" line="1505"/>
-        <location filename="../mywidget.cpp" line="1517"/>
-        <location filename="../mywidget.cpp" line="1529"/>
-        <location filename="../mywidget.cpp" line="1541"/>
-        <location filename="../mywidget.cpp" line="1553"/>
-        <location filename="../mywidget.cpp" line="1565"/>
-        <location filename="../mywidget.cpp" line="1577"/>
-        <location filename="../mywidget.cpp" line="1589"/>
-        <location filename="../mywidget.cpp" line="1613"/>
-        <location filename="../mywidget.cpp" line="1625"/>
-        <location filename="../mywidget.cpp" line="1637"/>
+        <location filename="../mywidget.cpp" line="1402"/>
+        <location filename="../mywidget.cpp" line="1450"/>
+        <location filename="../mywidget.cpp" line="1462"/>
+        <location filename="../mywidget.cpp" line="1486"/>
+        <location filename="../mywidget.cpp" line="1498"/>
+        <location filename="../mywidget.cpp" line="1510"/>
+        <location filename="../mywidget.cpp" line="1522"/>
+        <location filename="../mywidget.cpp" line="1534"/>
+        <location filename="../mywidget.cpp" line="1546"/>
+        <location filename="../mywidget.cpp" line="1558"/>
+        <location filename="../mywidget.cpp" line="1570"/>
+        <location filename="../mywidget.cpp" line="1582"/>
+        <location filename="../mywidget.cpp" line="1594"/>
+        <location filename="../mywidget.cpp" line="1606"/>
+        <location filename="../mywidget.cpp" line="1618"/>
+        <location filename="../mywidget.cpp" line="1630"/>
+        <location filename="../mywidget.cpp" line="1642"/>
+        <location filename="../mywidget.cpp" line="1654"/>
+        <location filename="../mywidget.cpp" line="1678"/>
+        <location filename="../mywidget.cpp" line="1690"/>
+        <location filename="../mywidget.cpp" line="1702"/>
         <source>PCS shut down and the AC contactor is disconnected</source>
         <translation>PCS 停机，交流接触器断开</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1347"/>
+        <location filename="../mywidget.cpp" line="1412"/>
         <source>Low battery power</source>
         <translation>电池功率低</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1348"/>
+        <location filename="../mywidget.cpp" line="1413"/>
         <source>The battery voltage is lower than the EOD voltage value (applicable to BMS free battery systems to prevent voltage rebound)</source>
         <translation>电池电压低于电池EOD电压值（适用无BMS电池系统，防止电压回升）</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1349"/>
+        <location filename="../mywidget.cpp" line="1414"/>
         <source>When the PCS is in discharge state, the machine stops (the charging process is not affected) and the AC contactor is disconnected</source>
         <translation>处于放电状态时PCS停机（充电过程不受影响），交流接触器断开</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1350"/>
+        <location filename="../mywidget.cpp" line="1415"/>
         <source>Recoverable, The alarm is cleared when the charging time of PCS is longer than 5 minutes</source>
         <translation>可恢复， PCS充电时间大于5min后，告警消除</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1359"/>
+        <location filename="../mywidget.cpp" line="1424"/>
         <source>DC bus overvoltage</source>
         <translation>直流母线过压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1359"/>
-        <location filename="../mywidget.cpp" line="1371"/>
-        <location filename="../mywidget.cpp" line="1635"/>
+        <location filename="../mywidget.cpp" line="1424"/>
+        <location filename="../mywidget.cpp" line="1436"/>
+        <location filename="../mywidget.cpp" line="1700"/>
         <source>Serious failure</source>
         <translation>严重故障</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1360"/>
+        <location filename="../mywidget.cpp" line="1425"/>
         <source>DC input voltage more then 850V</source>
         <translation>直流输入电压&gt;850V</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1361"/>
-        <location filename="../mywidget.cpp" line="1373"/>
+        <location filename="../mywidget.cpp" line="1426"/>
+        <location filename="../mywidget.cpp" line="1438"/>
         <source>PCS shut down, the AC contactor is disconnected, and the DC circuit breaker is tripped</source>
         <translation>PCS 停机，交流接触器断开，直流断路器脱扣</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1362"/>
-        <location filename="../mywidget.cpp" line="1374"/>
-        <location filename="../mywidget.cpp" line="1434"/>
-        <location filename="../mywidget.cpp" line="1518"/>
-        <location filename="../mywidget.cpp" line="1566"/>
-        <location filename="../mywidget.cpp" line="1638"/>
+        <location filename="../mywidget.cpp" line="1427"/>
+        <location filename="../mywidget.cpp" line="1439"/>
+        <location filename="../mywidget.cpp" line="1499"/>
+        <location filename="../mywidget.cpp" line="1583"/>
+        <location filename="../mywidget.cpp" line="1631"/>
+        <location filename="../mywidget.cpp" line="1703"/>
         <source>Unrecoverable</source>
         <translation>不可恢复</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1371"/>
+        <location filename="../mywidget.cpp" line="1436"/>
         <source>DC bus short circuit</source>
         <translation>直流母线短路</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1372"/>
+        <location filename="../mywidget.cpp" line="1437"/>
         <source>The DC bus voltage is less than 200V, the DC current is more than 50A, and the judgment time is 200us</source>
         <translation>直流母线电压低于200V，直流电流大于50A，判断时间为200us</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1383"/>
+        <location filename="../mywidget.cpp" line="1448"/>
         <source>The output contactor is open</source>
         <translation>输出接触器开路</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1384"/>
+        <location filename="../mywidget.cpp" line="1449"/>
         <source>When PCS is running, the auxiliary contact signal of AC contactor is in the disconnected state</source>
         <translation>PCS运行状态下，交流接触器的辅助触点信号为断开状态</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1395"/>
+        <location filename="../mywidget.cpp" line="1460"/>
         <source>Output contactor short circuit</source>
         <translation>输出接触器短路</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1396"/>
+        <location filename="../mywidget.cpp" line="1461"/>
         <source>When PCS is shut down, the auxiliary contact signal of AC contactor is closed</source>
         <translation>PCS停机状态下，交流接触器的辅助触点信号为闭合状态</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1407"/>
+        <location filename="../mywidget.cpp" line="1472"/>
         <source>The converter is overheated</source>
         <translation>变流器过温</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1408"/>
+        <location filename="../mywidget.cpp" line="1473"/>
         <source>IGBT temperature exceeds 105℃ or reactor temperature exceeds 160℃</source>
         <translation>IGBT温度超过105℃或电抗器温度超过160℃</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1409"/>
+        <location filename="../mywidget.cpp" line="1474"/>
         <source>IGBT overtemperature: derating operation (grid-connected); IGBT overtemperature: PCS shut down (off-grid), AC contactor is disconnected; Reactor overtemperature: PCS shut down and AC contactor is disconnected</source>
         <translation>IGBT过温：降额运行（并网）；IGBT过温：PCS停机（离网网），交流接触器断开；电抗器过温：PCS 停机，交流接触器断开</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1419"/>
+        <location filename="../mywidget.cpp" line="1484"/>
         <source>Output over load</source>
         <translation>输出过载</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1420"/>
+        <location filename="../mywidget.cpp" line="1485"/>
         <source>Off-grid load power &gt;110%Pn</source>
         <translation>离网负载功率&gt;110%Pn</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1431"/>
+        <location filename="../mywidget.cpp" line="1496"/>
         <source>The positive and negative terminals of the battery are connected inversely fault</source>
         <translation>电池接反故障</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1432"/>
+        <location filename="../mywidget.cpp" line="1497"/>
         <source>The DC input is reversed</source>
         <translation>直流输入正负极性接反</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1443"/>
+        <location filename="../mywidget.cpp" line="1508"/>
         <source>The DC contactor is faulty</source>
         <translation>DC接触器故障</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1444"/>
+        <location filename="../mywidget.cpp" line="1509"/>
         <source>When the driving signal is a closed signal, the pressure difference between the battery and the bus is greater than 50V;When the driving signal is off, the auxiliary contact signal is closed</source>
         <translation>驱动信号为闭合信号条件下，电池和母线之间的压测&gt;50V；驱动信号为断开条件下，辅助触点信号为闭合状态</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1455"/>
+        <location filename="../mywidget.cpp" line="1520"/>
         <source>EMS communicate
 fault</source>
         <translation>EMS通信故障</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1456"/>
+        <location filename="../mywidget.cpp" line="1521"/>
         <source>The communication between PCS and EMS is lost, and the judgment time is 3 minutes</source>
         <translation>PCS与EMS通信丢失，判断时间3min</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1458"/>
-        <location filename="../mywidget.cpp" line="1470"/>
+        <location filename="../mywidget.cpp" line="1523"/>
+        <location filename="../mywidget.cpp" line="1535"/>
         <source>Recoverable, the fault recovers automatically 30 seconds after it is rectified</source>
         <translation>可恢复，故障消除后30s自动恢复</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1467"/>
+        <location filename="../mywidget.cpp" line="1532"/>
         <source>BMS communicate
 fault</source>
         <translation>BMS通信故障</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1468"/>
+        <location filename="../mywidget.cpp" line="1533"/>
         <source>Communication loss between PCS and BMS, judgment time 50s</source>
         <translation>PCS与BMS通信丢失，判断时间50s</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1479"/>
+        <location filename="../mywidget.cpp" line="1544"/>
         <source>Converter phase loss fault</source>
         <translation>变流器缺相故障</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1480"/>
+        <location filename="../mywidget.cpp" line="1545"/>
         <source>When the grid-connected power is greater than 50%, one or more lines of the three-phase circuit have no output power, and the judgment time is 10s</source>
         <translation>并网功率大于50%条件下，三相电路出现一项或多项线路无输出功率，判断时间为10s</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1491"/>
+        <location filename="../mywidget.cpp" line="1556"/>
         <source>Grid overvoltage</source>
         <translation>电网过压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1492"/>
-        <location filename="../mywidget.cpp" line="1504"/>
+        <location filename="../mywidget.cpp" line="1557"/>
+        <location filename="../mywidget.cpp" line="1569"/>
         <source>If the power grid voltage exceeds the maximum allowable voltage (90% to 70% can be set), the judgment time is 1s</source>
         <translation>电网电压超过最大允许电压（110%~130%可设定）,判断时间1s</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1503"/>
+        <location filename="../mywidget.cpp" line="1568"/>
         <source>Grid undervoltage</source>
         <translation>电网欠压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1515"/>
+        <location filename="../mywidget.cpp" line="1580"/>
         <source>Grid reverse sequence</source>
         <translation>电网反序</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1516"/>
+        <location filename="../mywidget.cpp" line="1581"/>
         <source>The three-phase phase sequence is reversed (the positive sequence mode value of the grid voltage is less than the negative sequence mode value), and the judgment time is 1s</source>
         <translation>三相相序接反（电网电压正序模值小于负序模值），判断时间为1s</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1527"/>
+        <location filename="../mywidget.cpp" line="1592"/>
         <source>Grid frequency anomaly</source>
         <translation>电网频率异常</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1528"/>
+        <location filename="../mywidget.cpp" line="1593"/>
         <source>Grid frequency frequency beyond the allowable range of PCS (±2Hz can be set)</source>
         <translation>电网频率超出PCS允许范围内（±2Hz可设定）</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1539"/>
+        <location filename="../mywidget.cpp" line="1604"/>
         <source>Converter shutter island protection</source>
         <translation>变流器孤岛保护</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1540"/>
+        <location filename="../mywidget.cpp" line="1605"/>
         <source>Initiative shutter island protection mode, the power grid loses power, and the load matches the grid-connected power and phase Angle of the inverter</source>
         <translation>主动孤岛保护模式下电网失电，且负载和逆变器并网功率和相角相匹配</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1551"/>
+        <location filename="../mywidget.cpp" line="1616"/>
         <source>Drive line fault</source>
         <translation>驱动线故障</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1552"/>
+        <location filename="../mywidget.cpp" line="1617"/>
         <source>The driver cable port is loose</source>
         <translation>驱动线端口松动</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1563"/>
+        <location filename="../mywidget.cpp" line="1628"/>
         <source>Lightning protection fault</source>
         <translation>防雷故障</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1564"/>
+        <location filename="../mywidget.cpp" line="1629"/>
         <source>Surge arrester breakdown or leakage</source>
         <translation>防雷器击穿或漏电</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1575"/>
+        <location filename="../mywidget.cpp" line="1640"/>
         <source>The AC auxiliary power supply is faulty</source>
         <translation>交流辅助电源故障</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1576"/>
+        <location filename="../mywidget.cpp" line="1641"/>
         <source>The AC auxiliary power output is abnormal. Procedure</source>
         <translation>交流辅助电源输出出现异常</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1587"/>
+        <location filename="../mywidget.cpp" line="1652"/>
         <source>The DC auxiliary power supply is faulty</source>
         <translation>直流辅助电源故障</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1588"/>
+        <location filename="../mywidget.cpp" line="1653"/>
         <source>The DC auxiliary power output is abnormal. Procedure</source>
         <translation>直流辅助电源输出出现异常</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1599"/>
+        <location filename="../mywidget.cpp" line="1664"/>
         <source>Fan failure</source>
         <translation>风扇故障</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1600"/>
+        <location filename="../mywidget.cpp" line="1665"/>
         <source>The fan cannot be started</source>
         <translation>风扇无法启动运行</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1601"/>
+        <location filename="../mywidget.cpp" line="1666"/>
         <source>PCS derating operation</source>
         <translation>PCS 降额运行</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1611"/>
+        <location filename="../mywidget.cpp" line="1676"/>
         <source>Emergency shutdown</source>
         <translation>紧急关机</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1612"/>
+        <location filename="../mywidget.cpp" line="1677"/>
         <source>Press the EPO button on the converter control panel</source>
         <translation>在变流器控制面板上按下EPO按钮</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1623"/>
+        <location filename="../mywidget.cpp" line="1688"/>
         <source>CT or Hall open circuit fault</source>
         <translation>CT或霍尔开路故障</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1624"/>
+        <location filename="../mywidget.cpp" line="1689"/>
         <source>When PCS grid-connected power is greater than 50%, CT detection current is less than 70% of the given quantity</source>
         <translation>PCS并网功率大于50%运行时，CT检测电流小于给定量的70%</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1635"/>
+        <location filename="../mywidget.cpp" line="1700"/>
         <source>Insulation impedance anomaly</source>
         <translation>绝缘阻抗异常</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1636"/>
+        <location filename="../mywidget.cpp" line="1701"/>
         <source>For 1000V systems, the positive or negative ground impedance is less than 33KΩ</source>
         <translation>对于1000V系统，正对地或负对地阻抗小于33K欧姆</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2527"/>
-        <location filename="../mywidget.cpp" line="2531"/>
-        <location filename="../mywidget.cpp" line="2535"/>
-        <location filename="../mywidget.cpp" line="2539"/>
-        <location filename="../mywidget.cpp" line="2543"/>
-        <location filename="../mywidget.cpp" line="2547"/>
+        <location filename="../mywidget.cpp" line="2592"/>
+        <location filename="../mywidget.cpp" line="2596"/>
+        <location filename="../mywidget.cpp" line="2600"/>
+        <location filename="../mywidget.cpp" line="2604"/>
+        <location filename="../mywidget.cpp" line="2608"/>
+        <location filename="../mywidget.cpp" line="2612"/>
         <source>Close</source>
         <translation>闭合</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2532"/>
+        <location filename="../mywidget.cpp" line="2597"/>
         <source>DC contactor has two states: Break, Close; When the DC side is soft Break, the DC contactor is closed. When the DC side of the battery is disconnected, the DC bus voltage drops to a certain voltage, and the DC contactor is disconnected.</source>
         <translation>直流接触器有两种状态： 断开、闭合；当直流侧软启完成后，直流接触器闭合；当电池直流侧断开，直流母线电压下降到一定电压，直流接触器断开。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2535"/>
+        <location filename="../mywidget.cpp" line="2600"/>
         <source>Maintenance Bypass Breaker</source>
         <translation>维修旁路断路器</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2536"/>
+        <location filename="../mywidget.cpp" line="2601"/>
         <source>Maintenance bypass circuit breaker has two states: Break, Close; This circuit breaker is only used for machine maintenance, if necessary, please contact the maintenance personnel.</source>
         <translation>维修旁路断路器有两种状态：断开、闭合；此断路器仅用于机器维护，如有需要，请联系维护人员。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2540"/>
+        <location filename="../mywidget.cpp" line="2605"/>
         <source>The output circuit breaker has three states: open, closed, trip; If the output circuit breaker overcurrent, the output circuit breaker will trip.</source>
         <translation>输出断路器有三种状态： 断开、闭合、脱扣；只能手动断开，如果输出断路器过流，输出断路器会发生脱扣。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2544"/>
+        <location filename="../mywidget.cpp" line="2609"/>
         <source>The output contactor has two states: Break, Close; When the DC side soft opening is completed, the output contactor is closed; When the converter is turned off, the output contactor is disconnected.</source>
         <translation>输出接触器有两种状态： 断开、闭合；当直流侧软启完成后，输出接触器闭合；当变流器关机时，输出接触器断开。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2548"/>
+        <location filename="../mywidget.cpp" line="2613"/>
         <source>The power grid circuit breaker has three states: Break, Close, Trip; The power grid circuit breaker can only be manually disconnected. If the power grid circuit breaker overflows, the power grid circuit breaker may trip.</source>
         <translation>电网断路器有三种状态： 断开、闭合、脱扣；只能手动断开，如果电网断路器过流，电网断路器会发生脱扣。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2551"/>
-        <location filename="../mywidget.cpp" line="2555"/>
-        <location filename="../mywidget.cpp" line="2559"/>
-        <location filename="../mywidget.cpp" line="2578"/>
-        <location filename="../mywidget.cpp" line="2586"/>
-        <location filename="../mywidget.cpp" line="2590"/>
-        <location filename="../mywidget.cpp" line="2594"/>
-        <location filename="../mywidget.cpp" line="2598"/>
-        <location filename="../mywidget.cpp" line="2602"/>
-        <location filename="../mywidget.cpp" line="2606"/>
+        <location filename="../mywidget.cpp" line="2616"/>
+        <location filename="../mywidget.cpp" line="2620"/>
         <location filename="../mywidget.cpp" line="2624"/>
+        <location filename="../mywidget.cpp" line="2643"/>
+        <location filename="../mywidget.cpp" line="2651"/>
+        <location filename="../mywidget.cpp" line="2655"/>
+        <location filename="../mywidget.cpp" line="2659"/>
+        <location filename="../mywidget.cpp" line="2663"/>
+        <location filename="../mywidget.cpp" line="2667"/>
+        <location filename="../mywidget.cpp" line="2671"/>
+        <location filename="../mywidget.cpp" line="2689"/>
         <source>Disable</source>
         <translation>禁止</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2552"/>
+        <location filename="../mywidget.cpp" line="2617"/>
         <source>This is the status of the output dry contact 1, which can be enabled or disabled.</source>
         <translation>这是输出干接点1的状态，有使能(Enable)、禁止(Disable)两种状态。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2556"/>
+        <location filename="../mywidget.cpp" line="2621"/>
         <source>This is the status of the output dry contact 2, which can be enabled or disabled.</source>
         <translation>这是输出干接点2的状态，有使能(Enable)、禁止(Disable)两种状态。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2560"/>
+        <location filename="../mywidget.cpp" line="2625"/>
         <source>This is the status of the output dry contact 3, which can be enabled or disabled.</source>
         <translation>这是输出干接点3的状态，有使能(Enable)、禁止(Disable)两种状态。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2567"/>
+        <location filename="../mywidget.cpp" line="2632"/>
         <source>The converter can be enabled in two states: enable and disable; If the internal self-test of the machine is no problem, the converter is enabled; Otherwise the converter is prohibited.</source>
         <translation>变流器使能有两种状态：使能、禁止；机器内部自检没有问题时，变流器使能；否则变流器禁止。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2570"/>
-        <location filename="../mywidget.cpp" line="2628"/>
-        <location filename="../mywidget.cpp" line="2632"/>
+        <location filename="../mywidget.cpp" line="2635"/>
+        <location filename="../mywidget.cpp" line="2693"/>
+        <location filename="../mywidget.cpp" line="2697"/>
         <source>Not starting</source>
         <translation>未启动</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2571"/>
+        <location filename="../mywidget.cpp" line="2636"/>
         <source>The DC Soft boot has three states: Soft starting, complete, and Not starting. Soft start means that when the converter is started, it gradually accelerates or decelerates the device to the normal operating state by controlling the change of current or voltage, so as to reduce the current shock and voltage peak in the circuit, protect the circuit components and reduce the mechanical damage of the device. Soft start can increase device life, reduce energy consumption, and improve system efficiency.</source>
         <translation>直流软启动有三种状态:软启中(Soft starting)，软启完成(complete)，未启动(Not starting);软启动是指变流器在启动时，通过控制电流或电压的变化使设备逐渐加速或减速到正常运行状态，以减少电路中的电流冲击和电压峰值，保护电路元器件并减少设备的机械损伤。软启动可以增加设备的寿命，减少能耗，提高系统效率。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2574"/>
-        <location filename="../mywidget.cpp" line="2612"/>
-        <location filename="../mywidget.cpp" line="2616"/>
-        <location filename="../mywidget.cpp" line="2640"/>
+        <location filename="../mywidget.cpp" line="2639"/>
+        <location filename="../mywidget.cpp" line="2677"/>
+        <location filename="../mywidget.cpp" line="2681"/>
+        <location filename="../mywidget.cpp" line="2705"/>
         <source>OFF</source>
         <translation>关闭</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2574"/>
-        <location filename="../mywidget.cpp" line="2636"/>
+        <location filename="../mywidget.cpp" line="2639"/>
+        <location filename="../mywidget.cpp" line="2701"/>
         <source>Converter Status</source>
         <translation>变流器状态</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2575"/>
+        <location filename="../mywidget.cpp" line="2640"/>
         <source>There are eight converter states:Shut down, Soft start, Grid-ON Charge, Grid-ON Discharge, Grid-OFF Discharge, Drop and Connected,Standby, Grid-OFF Charge.</source>
         <translation>这是当前变流器的状态，有关闭(OFF)、软启动(Softstart)、并网充电(Grid-ON Charge)、并网放电(Grid-ON Discharge)、离网放电(Grid-OFF
 Discharge)、降额并网(Drop and Connected)、待机(Standby)、离网充电(Grid-OFF Charge)这八种状态。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2599"/>
+        <location filename="../mywidget.cpp" line="2664"/>
         <source>This is the status of the input dry contact 4. The status can be Enable or Disable.</source>
         <translation>这是输入干接点4的状态，有使能(Enable)、禁止(Disable)两种状态。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2956"/>
+        <location filename="../mywidget.cpp" line="3021"/>
         <source>PV power generation Day</source>
         <translation>光伏日发电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2957"/>
+        <location filename="../mywidget.cpp" line="3022"/>
         <source>This is the electricity generation of photovoltaic today.</source>
         <translation>这是光伏今日的发电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2960"/>
+        <location filename="../mywidget.cpp" line="3025"/>
         <source>PV power generation Month</source>
         <translation>光伏月发电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2961"/>
+        <location filename="../mywidget.cpp" line="3026"/>
         <source>This is the amount of photovoltaic power generated this month.</source>
         <translation>这是光伏这个月的发电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2964"/>
+        <location filename="../mywidget.cpp" line="3029"/>
         <source>PV power generation Year</source>
         <translation>光伏年发电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2965"/>
+        <location filename="../mywidget.cpp" line="3030"/>
         <source>This is how much photovoltaic will produce this year.</source>
         <translation>这是光伏今年的发电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2968"/>
+        <location filename="../mywidget.cpp" line="3033"/>
         <source>PV power generation Total</source>
         <translation>光伏总发电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2969"/>
+        <location filename="../mywidget.cpp" line="3034"/>
         <source>This is the total amount of photovoltaic power produced.</source>
         <translation>这是光伏的总发电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2975"/>
+        <location filename="../mywidget.cpp" line="3040"/>
         <source>Load Discharge Day</source>
         <translation>负载日用电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2976"/>
+        <location filename="../mywidget.cpp" line="3041"/>
         <source>This is the electricity consumption of the load today.</source>
         <translation>这是负载今日的用电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2979"/>
+        <location filename="../mywidget.cpp" line="3044"/>
         <source>Load Discharge Month</source>
         <translation>负载月用电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2980"/>
+        <location filename="../mywidget.cpp" line="3045"/>
         <source>This is the electricity consumption of the load this month.</source>
         <translation>这是负载这个月的用电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2983"/>
+        <location filename="../mywidget.cpp" line="3048"/>
         <source>Load Discharge Year</source>
         <translation>负载年用电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2984"/>
+        <location filename="../mywidget.cpp" line="3049"/>
         <source>This is how much electricity the load is using this year.</source>
         <translation>这是负载今年的用电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2987"/>
+        <location filename="../mywidget.cpp" line="3052"/>
         <source>Load Discharge Total</source>
         <translation>负载总用电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2988"/>
+        <location filename="../mywidget.cpp" line="3053"/>
         <source>This is the total power consumption of the load.</source>
         <translation>这是负载的总用电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2994"/>
-        <location filename="../mywidget.cpp" line="3013"/>
+        <location filename="../mywidget.cpp" line="3059"/>
+        <location filename="../mywidget.cpp" line="3078"/>
         <source>Battery Charge Day</source>
         <translation>电池日充电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2995"/>
+        <location filename="../mywidget.cpp" line="3060"/>
         <source>This is the charging capacity of the battery today.</source>
         <translation>这是电池今日的充电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2998"/>
-        <location filename="../mywidget.cpp" line="3017"/>
+        <location filename="../mywidget.cpp" line="3063"/>
+        <location filename="../mywidget.cpp" line="3082"/>
         <source>Battery Discharge Month</source>
         <translation>电池月放电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2999"/>
+        <location filename="../mywidget.cpp" line="3064"/>
         <source>This is how much the battery has been charged for the month.</source>
         <translation>这是电池这个月的充电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3002"/>
-        <location filename="../mywidget.cpp" line="3021"/>
+        <location filename="../mywidget.cpp" line="3067"/>
+        <location filename="../mywidget.cpp" line="3086"/>
         <source>Battery Discharge Year</source>
         <translation>电池年放电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3003"/>
+        <location filename="../mywidget.cpp" line="3068"/>
         <source>This is how much the battery has been charged this year.</source>
         <translation>这是电池今年的充电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3006"/>
-        <location filename="../mywidget.cpp" line="3025"/>
+        <location filename="../mywidget.cpp" line="3071"/>
+        <location filename="../mywidget.cpp" line="3090"/>
         <source>Battery Discharge Total</source>
         <translation>电池总放电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3007"/>
+        <location filename="../mywidget.cpp" line="3072"/>
         <source>This is the total charge of the battery.</source>
         <translation>这是电池的总充电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3014"/>
+        <location filename="../mywidget.cpp" line="3079"/>
         <source>This is the discharging capacity of the battery today.</source>
         <translation>这是电池今日的放电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3018"/>
+        <location filename="../mywidget.cpp" line="3083"/>
         <source>This is how much the battery has been discharged for the month.</source>
         <translation>这是电池这个月的放电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3022"/>
+        <location filename="../mywidget.cpp" line="3087"/>
         <source>This is how much the battery has been discharged this year.</source>
         <translation>这是电池今年的放电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3026"/>
+        <location filename="../mywidget.cpp" line="3091"/>
         <source>This is the total discharge of the battery.</source>
         <translation>这是电池的总放电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3032"/>
-        <location filename="../mywidget.cpp" line="3051"/>
+        <location filename="../mywidget.cpp" line="3097"/>
+        <location filename="../mywidget.cpp" line="3116"/>
         <source>Grid Charge Day</source>
         <translation>电网日充电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3033"/>
+        <location filename="../mywidget.cpp" line="3098"/>
         <source>This is the amount of charging from the grid today.</source>
         <translation>这是今日从电网充电的充电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3036"/>
-        <location filename="../mywidget.cpp" line="3055"/>
+        <location filename="../mywidget.cpp" line="3101"/>
+        <location filename="../mywidget.cpp" line="3120"/>
         <source>Grid Charge Month</source>
         <translation>电网月充电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3037"/>
+        <location filename="../mywidget.cpp" line="3102"/>
         <source>This is the amount of charging from the grid for the month.</source>
         <translation>这是这个月从电网充电的充电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3040"/>
-        <location filename="../mywidget.cpp" line="3059"/>
+        <location filename="../mywidget.cpp" line="3105"/>
+        <location filename="../mywidget.cpp" line="3124"/>
         <source>Grid Charge Year</source>
         <translation>电网年充电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3041"/>
+        <location filename="../mywidget.cpp" line="3106"/>
         <source>This is the amount of charging from the grid this year.</source>
         <translation>这是今年从电网充电的充电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3044"/>
-        <location filename="../mywidget.cpp" line="3063"/>
+        <location filename="../mywidget.cpp" line="3109"/>
+        <location filename="../mywidget.cpp" line="3128"/>
         <source>Grid Charge Total</source>
         <translation>电网总充电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3045"/>
+        <location filename="../mywidget.cpp" line="3110"/>
         <source>This is the total amount of charge from the grid.</source>
         <translation>这是从电网充电的总充电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3052"/>
+        <location filename="../mywidget.cpp" line="3117"/>
         <source>This is the amount of energy being discharged into the grid today.</source>
         <translation>这是今日给电网放电的放电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3056"/>
+        <location filename="../mywidget.cpp" line="3121"/>
         <source>This is the amount of electricity discharged into the grid this month.</source>
         <translation>这是这个月给电网放电的放电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3060"/>
+        <location filename="../mywidget.cpp" line="3125"/>
         <source>This is the amount of energy that has been discharged into the grid this year.</source>
         <translation>这是今年给电网放电的放电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3064"/>
+        <location filename="../mywidget.cpp" line="3129"/>
         <source>This is the total amount of discharge to the grid.</source>
         <translation>这是给电网放电的总放电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4131"/>
+        <location filename="../mywidget.cpp" line="3138"/>
+        <source>This is the event alarm level. When the event alarm level is 0, it is marked red, indicating that this is the fault information.</source>
+        <translation>这是事件告警等级，当事件告警等级为0时标红，表示这是故障信息。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3140"/>
+        <source>This is the event start time, which means that the record started appearing at this time.</source>
+        <translation>这是事件开始时间，表示这条记录从这个时间开始出现。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3142"/>
+        <source>This is the event end time, which means the end time of this record,&apos;... &apos;means no end time.</source>
+        <translation>这是事件结束时间，表示这条记录的结束时间,...&apos;表示无结束时间。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3144"/>
+        <source>CAN communication failure</source>
+        <translation>Can通讯故障</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3146"/>
+        <source>This is the event description, when there is an alarm information, the alarm information will be recorded here.</source>
+        <translation>这是事件描述，当有告警信息时，会将告警信息记录在这里。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3147"/>
+        <source>Fire alarm (High temp. alarm)</source>
+        <translation>消防告警(高温告警)</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3148"/>
+        <source>Power Meter Comm fualttLead-acid abnormal</source>
+        <translation>电能表通讯故障</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3290"/>
+        <source>Time when the system Settings are modified.</source>
+        <translation>系统设置修改时的时间。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3292"/>
+        <source>Here is a record of the operation when a change is made to the system Settings.</source>
+        <translation>这里是对系统设置进行修改时的操作记录。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3345"/>
+        <source>Power control type：CP_P-&gt;CP_N&amp;&amp;P</source>
+        <translation>功率控制类型：CP_P-&gt;CP_N&amp;&amp;P</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3349"/>
+        <source>Power control type：CP_N&amp;&amp;P-&gt;CP_P</source>
+        <translation>功率控制类型：CP_N&amp;&amp;P-&gt;CP_P</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3353"/>
+        <source>Grid Fre Upper limit：0.2-&gt;3</source>
+        <translation>电网频率变化范围上限：0.2-&gt;3</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3357"/>
+        <source>Grid Fre Upper limit：3-&gt;0.2</source>
+        <translation>电网频率变化范围上限：3-&gt;0.2</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3361"/>
+        <source>Voltage protection Lower limit：-10-&gt;-15</source>
+        <translation>电压保护范围下限：-10-&gt;-15</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3365"/>
+        <source>Voltage protection Lower limit：-15-&gt;-10</source>
+        <translation>电压保护范围下限：-15-&gt;-10</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3369"/>
+        <source>Operation mode：Prevent countercurrnet-&gt;Peak valley</source>
+        <translation>操作模式：系统防逆流-&gt;削峰填谷</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3373"/>
+        <source>Operation mode：UPS-&gt;Prevent countercurrnet</source>
+        <translation>操作模式：UPS(备电模式)-&gt;系统防逆流</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3377"/>
+        <source>Operation mode：Manual-&gt;UPS</source>
+        <translation>操作模式：手动-&gt;UPS(备电模式)</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3381"/>
+        <source>Operation mode：Peak valley-&gt;Manual</source>
+        <translation>操作模式：削峰填谷-&gt;手动</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3385"/>
+        <source>Inv ON/Off-Grid：Off-&gt;automatic</source>
+        <translation>并离网：关闭-&gt;自动</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3389"/>
+        <source>Inv ON/Off-Grid：automatic-&gt;Off</source>
+        <translation>并离网：自动-&gt;关闭</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4213"/>
         <source>Choose the first module to view the real-time data of the first module</source>
         <translation>选中第一个模块，查看第一个模块的实时数据</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4136"/>
+        <location filename="../mywidget.cpp" line="4218"/>
         <source>Choose the second module to view the real-time data of the second module</source>
         <translation>选中第二个模块，查看第二个模块的实时数据</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4142"/>
+        <location filename="../mywidget.cpp" line="4224"/>
         <source>To view the previous year&apos;s data, click on it to display the previous year&apos;s data for the current displayed year.</source>
         <translation>查看上一年的数据，点击后将显示当前显示年份的上一年的数据。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4148"/>
+        <location filename="../mywidget.cpp" line="4230"/>
         <source>To view the data for the next year, click on it to display the data for the next year of the current displayed year.</source>
         <translation>查看下一年的数据，点击后将显示当前显示年份的下一年的数据。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4154"/>
+        <location filename="../mywidget.cpp" line="4236"/>
         <source>To view the data of the previous month, click on it to display the data of the previous month of the current displayed month.</source>
         <translation>查看上一个月的数据，点击后将显示当前显示年当前月份的上一个月的数据。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4160"/>
+        <location filename="../mywidget.cpp" line="4242"/>
         <source>To view the data for the next month, click to display the data for the next month of the current displayed month.</source>
         <translation>查看下一个月的数据，点击后将显示当前显示月份的下一个月的数据。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4166"/>
+        <location filename="../mywidget.cpp" line="4248"/>
         <source>To view the data of the previous day. Click to display the data of the previous day of the current day.</source>
         <translation>查看上一日的数据，点击后将显示当前日的上一日的数据。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4172"/>
+        <location filename="../mywidget.cpp" line="4254"/>
         <source>To view the data of the next day. Click to display the data of the next day of the current day.</source>
         <translation>查看下一日的数据，点击后将显示当前日的下一日的数据。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4178"/>
+        <location filename="../mywidget.cpp" line="4260"/>
         <source>To export history records, click here to export history records to the USB flash drive. The file exported to the USB flash drive is HistoryRecord.csv, which needs to be opened with Excel.</source>
         <translation>导出历史记录，点击此处将会导出历史记录到U盘里,导出到U盘的文件为HistoryRecord.csv，此文件需要用Excel打开。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4184"/>
+        <location filename="../mywidget.cpp" line="4266"/>
         <source>Export operation log. Click here to export operation log to U disk.</source>
         <translation>导出操作日志，点击此处将会导出操作日志到U盘里。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4190"/>
+        <location filename="../mywidget.cpp" line="4272"/>
         <source>Export the battery statistics. Click here to export the battery statistics to the U disk.</source>
         <translation>导出电量统计表，点击此处将会导出电量统计表到U盘里。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4196"/>
+        <location filename="../mywidget.cpp" line="4278"/>
         <source>Exit the U disk and unmount the U disk mounted to the display control to ensure that the data in the U disk will not be damaged.</source>
         <translation>退出U盘，将挂载到显控的U盘取消挂载，以保证U盘数据不会损坏。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4201"/>
+        <location filename="../mywidget.cpp" line="4283"/>
         <source>Choose the first module to view the real-time status of the first module</source>
         <translation>选中第一个模块，查看第一个模块的实时状态</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4206"/>
+        <location filename="../mywidget.cpp" line="4288"/>
         <source>Choose the second module to view the real-time status of the second module</source>
         <translation>选中第二个模块，查看第二个模块的实时状态</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2579"/>
+        <location filename="../mywidget.cpp" line="2644"/>
         <source>There are three types of reactive power regulation: Disable, Pf regulation, and Q regulation.</source>
         <translation>无功调节有三种:禁止(Disable)、功率因数调节(P fregulation)、无功功率调节(Q regulation)。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2583"/>
+        <location filename="../mywidget.cpp" line="2648"/>
         <source>This is the current state of low voltage crossing (LVRT). Low voltage crossing refers to the ability to withstand a certain limit of low voltage of the grid within a certain period of time without exiting the operation. There are two states here, namely Non and LVRT.</source>
         <translation>这是当前低电压穿越(LVRT)的状态，低电压穿越是在确定的时间内承受一定限值的电网低电压而不退出运行的能力，这里有两种状态，分别为无(Non)、有(LVRT)。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2587"/>
+        <location filename="../mywidget.cpp" line="2652"/>
         <source>This is the status of the input dry contact 1. The status can be Enable or Disable.</source>
         <translation>这是输入干接点1的状态，有使能(Enable)、禁止(Disable)两种状态。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2591"/>
+        <location filename="../mywidget.cpp" line="2656"/>
         <source>This is the status of the input dry contact 2. The status can be Enable or Disable.</source>
         <translation>这是输入干接点2的状态，有使能(Enable)、禁止(Disable)两种状态。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2595"/>
+        <location filename="../mywidget.cpp" line="2660"/>
         <source>This is the status of the input dry contact 3. The status can be Enable or Disable.</source>
         <translation>这是输入干接点3的状态，有使能(Enable)、禁止(Disable)两种状态。</translation>
     </message>
@@ -3330,588 +3442,588 @@ Discharge)、降额并网(Drop and Connected)、待机(Standby)、离网充电(G
         <translation type="obsolete">DI4)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2603"/>
+        <location filename="../mywidget.cpp" line="2668"/>
         <source>This is the status of the input dry contact 5. The status can be Enable or Disable.</source>
         <translation>这是输入干接点5的状态，有使能(Enable)、禁止(Disable)两种状态。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2607"/>
+        <location filename="../mywidget.cpp" line="2672"/>
         <source>This is the status of the input dry contact 6. The status can be Enable or Disable.</source>
         <translation>这是输入干接点6的状态，有使能(Enable)、禁止(Disable)两种状态。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2612"/>
+        <location filename="../mywidget.cpp" line="2677"/>
         <source>Contator Status Boost</source>
         <translation>高压侧接触器</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2613"/>
+        <location filename="../mywidget.cpp" line="2678"/>
         <source>DC module high voltage contactor has two states: open, closed; When there is voltage on the high voltage side, close the high voltage contactor; Otherwise, the high voltage contactor is disconnected.</source>
         <translation>DC模块高压侧接触器有两种状态：断开、闭合；当高压侧有电压时，闭合高压侧接触器；否则高压侧接触器断开。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2616"/>
+        <location filename="../mywidget.cpp" line="2681"/>
         <source>Contator Status Buck</source>
         <translation>低压侧接触器</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2617"/>
+        <location filename="../mywidget.cpp" line="2682"/>
         <source>DC module low voltage contactor has two states: open, closed; When there is voltage on the low voltage side, close the contactor on the low voltage side; Otherwise, the low pressure contactor is disconnected.</source>
         <translation>DC模块低压侧接触器有两种状态：断开、闭合；当低压侧有电压时，闭合低压侧接触器；否则低压侧接触器断开。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2620"/>
+        <location filename="../mywidget.cpp" line="2685"/>
         <source>Buck</source>
         <translation>降压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2621"/>
+        <location filename="../mywidget.cpp" line="2686"/>
         <source>This is the current &apos;DC&apos; module operation mode, there are Buck (Buck), Boost (Boost) two states.</source>
         <translation>这就是目前&apos;DC&apos;模块的工作方式，有Buck(降压)、Boost(升压)两种状态。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2625"/>
+        <location filename="../mywidget.cpp" line="2690"/>
         <source>The DC converter can be enabled in two states: Enable and disable. If the internal self-test of the machine is no problem, the DC converter is enabled. Otherwise, the DC converter is prohibited.</source>
         <translation>DC变流器使能有两种状态：使能、禁止；机器内部自检没有问题时，DC变流器使能；否则DC变流器禁止。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2628"/>
+        <location filename="../mywidget.cpp" line="2693"/>
         <source>Soft Start Status Boost</source>
         <translation>高压侧软启动</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2629"/>
+        <location filename="../mywidget.cpp" line="2694"/>
         <source>This is the current high voltage side soft start state of the &apos;DC&apos; module. There are three states: Not starting, Soft start, and Soft Start completion.</source>
         <translation>这是当前&apos;DC&apos;模块的高压侧软启动状态，有未启动(Not starting)、软启中(Soft start)、软启完成(Softstart completion)三种状态。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2632"/>
+        <location filename="../mywidget.cpp" line="2697"/>
         <source>Soft Start Status Buck</source>
         <translation>低压侧软启动</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2633"/>
+        <location filename="../mywidget.cpp" line="2698"/>
         <source>This is the soft start state of the low voltage side of the current &apos;DC&apos; module. There are three states: Not starting, Soft start, and Soft Start completion.</source>
         <translation>这是当前&apos;DC&apos;模块的低压侧软启动状态，有未启动(Not starting)、软启中(Soft start)、软启完成(Softstart completion)三种状态。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2636"/>
+        <location filename="../mywidget.cpp" line="2701"/>
         <source>Turn off</source>
         <translation>关闭</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2637"/>
+        <location filename="../mywidget.cpp" line="2702"/>
         <source>This is the working mode state of the current &apos;DC&apos; module, including six states: Turn off, Standby, Constant VOL, Constant CUR, optimal power point tracking and Fault Recovery.</source>
         <translation>这是当前&apos;DC&apos;模块的工作模式状态，有关闭(Turnoff)、待机(Standby)、恒压(Constant VOL)、恒流(Constant CUR)、追踪最佳功率点(MPPT)、故障修复(Fault Recovery)六种状态。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2641"/>
+        <location filename="../mywidget.cpp" line="2706"/>
         <source>This is the lock status of the current &apos;DC&apos; module, with two states: ON and OFF.</source>
         <translation>这是当前&apos;DC&apos;模块的模块锁状态，有闭合(ON)、断开(OFF)两种状态。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1300"/>
+        <location filename="../mywidget.cpp" line="1365"/>
         <source>Advance setting</source>
         <translation>高级设置</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1738"/>
+        <location filename="../mywidget.cpp" line="1803"/>
         <source>Bat volage</source>
         <translation>电池电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1739"/>
+        <location filename="../mywidget.cpp" line="1804"/>
         <source>This is the total battery pressure of the battery pack uploaded from the BMS via the CAN/485/TCP communication protocol.</source>
         <translation>这是通过CAN/485/TCP通讯协议从BMS上传的电池组的电池总压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1739"/>
-        <location filename="../mywidget.cpp" line="1743"/>
-        <location filename="../mywidget.cpp" line="1747"/>
-        <location filename="../mywidget.cpp" line="1751"/>
-        <location filename="../mywidget.cpp" line="1755"/>
-        <location filename="../mywidget.cpp" line="1759"/>
-        <location filename="../mywidget.cpp" line="1763"/>
-        <location filename="../mywidget.cpp" line="1767"/>
-        <location filename="../mywidget.cpp" line="1771"/>
-        <location filename="../mywidget.cpp" line="1775"/>
-        <location filename="../mywidget.cpp" line="1779"/>
-        <location filename="../mywidget.cpp" line="1783"/>
-        <location filename="../mywidget.cpp" line="1787"/>
-        <location filename="../mywidget.cpp" line="1791"/>
-        <location filename="../mywidget.cpp" line="1795"/>
-        <location filename="../mywidget.cpp" line="1799"/>
-        <location filename="../mywidget.cpp" line="1803"/>
-        <location filename="../mywidget.cpp" line="4131"/>
-        <location filename="../mywidget.cpp" line="4136"/>
-        <location filename="../mywidget.cpp" line="4142"/>
-        <location filename="../mywidget.cpp" line="4148"/>
-        <location filename="../mywidget.cpp" line="4154"/>
-        <location filename="../mywidget.cpp" line="4160"/>
-        <location filename="../mywidget.cpp" line="4166"/>
-        <location filename="../mywidget.cpp" line="4172"/>
-        <location filename="../mywidget.cpp" line="4178"/>
-        <location filename="../mywidget.cpp" line="4184"/>
-        <location filename="../mywidget.cpp" line="4190"/>
-        <location filename="../mywidget.cpp" line="4196"/>
-        <location filename="../mywidget.cpp" line="4201"/>
-        <location filename="../mywidget.cpp" line="4206"/>
+        <location filename="../mywidget.cpp" line="1804"/>
+        <location filename="../mywidget.cpp" line="1808"/>
+        <location filename="../mywidget.cpp" line="1812"/>
+        <location filename="../mywidget.cpp" line="1816"/>
+        <location filename="../mywidget.cpp" line="1820"/>
+        <location filename="../mywidget.cpp" line="1824"/>
+        <location filename="../mywidget.cpp" line="1828"/>
+        <location filename="../mywidget.cpp" line="1832"/>
+        <location filename="../mywidget.cpp" line="1836"/>
+        <location filename="../mywidget.cpp" line="1840"/>
+        <location filename="../mywidget.cpp" line="1844"/>
+        <location filename="../mywidget.cpp" line="1848"/>
+        <location filename="../mywidget.cpp" line="1852"/>
+        <location filename="../mywidget.cpp" line="1856"/>
+        <location filename="../mywidget.cpp" line="1860"/>
+        <location filename="../mywidget.cpp" line="1864"/>
+        <location filename="../mywidget.cpp" line="1868"/>
+        <location filename="../mywidget.cpp" line="4213"/>
+        <location filename="../mywidget.cpp" line="4218"/>
+        <location filename="../mywidget.cpp" line="4224"/>
+        <location filename="../mywidget.cpp" line="4230"/>
+        <location filename="../mywidget.cpp" line="4236"/>
+        <location filename="../mywidget.cpp" line="4242"/>
+        <location filename="../mywidget.cpp" line="4248"/>
+        <location filename="../mywidget.cpp" line="4254"/>
+        <location filename="../mywidget.cpp" line="4260"/>
+        <location filename="../mywidget.cpp" line="4266"/>
+        <location filename="../mywidget.cpp" line="4272"/>
+        <location filename="../mywidget.cpp" line="4278"/>
+        <location filename="../mywidget.cpp" line="4283"/>
+        <location filename="../mywidget.cpp" line="4288"/>
         <source>OK</source>
         <translation>确定</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1743"/>
+        <location filename="../mywidget.cpp" line="1808"/>
         <source>This is the total current of the battery pack uploaded from the BMS via the CAN/485/TCP communication protocol.</source>
         <translation>这是通过CAN/485/TCP通讯协议从BMS上传的电池组的总电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1747"/>
+        <location filename="../mywidget.cpp" line="1812"/>
         <source>This is the SOC of the battery pack uploaded from the BMS via the CAN/485/TCP communication protocol, that is, the percentage of the current battery remaining.</source>
         <translation>这是通过CAN/485/TCP通讯协议从BMS上传的电池组SOC，即当前电池剩余电量百分比。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1751"/>
+        <location filename="../mywidget.cpp" line="1816"/>
         <source>This is the SOH of the battery pack uploaded from the BMS through the CAN/485/TCP communication protocol, the percentage of the current capacity of the battery pack to the factory capacity, that is, the health of the battery.</source>
         <translation>这是通过CAN/485/TCP通讯协议从BMS上传的电池组SOH，电池组当前的容量与出厂容量的百分比，即电池的健康度。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1754"/>
+        <location filename="../mywidget.cpp" line="1819"/>
         <source>Cell voltage(max)</source>
         <translation>单体最高电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1755"/>
+        <location filename="../mywidget.cpp" line="1820"/>
         <source>This is the maximum voltage of the cell uploaded from the BMS via the CAN/485/TCP communication protocol, that is, the maximum voltage of all cell cells at present.</source>
         <translation>这是通过CAN/485/TCP通讯协议从BMS上传的单体最高电压,即当前所有电池单体的最高电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1758"/>
+        <location filename="../mywidget.cpp" line="1823"/>
         <source>Cell voltage(min)</source>
         <translation>单体最低电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1759"/>
+        <location filename="../mywidget.cpp" line="1824"/>
         <source>This is the lowest voltage of the cell uploaded from the BMS via the CAN/485/TCP communication protocol, that is, the lowest voltage of all battery cells at present.</source>
         <translation>这是通过CAN/485/TCP通讯协议从BMS上传的单体最低电压,即当前所有电池单体的最低电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1762"/>
+        <location filename="../mywidget.cpp" line="1827"/>
         <source>Cell temp.(max)</source>
         <translation>单体最高温度</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1763"/>
+        <location filename="../mywidget.cpp" line="1828"/>
         <source>This is the highest temperature of the cell uploaded from the BMS via the CAN/485/TCP communication protocol, that is, the highest temperature of all battery cells at present.</source>
         <translation>这是通过CAN/485/TCP通讯协议从BMS上传的单体最高温度,即当前所有电池单体的最高温度。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1766"/>
+        <location filename="../mywidget.cpp" line="1831"/>
         <source>Cell temp.(min)</source>
         <translation>单体最低温度</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1767"/>
+        <location filename="../mywidget.cpp" line="1832"/>
         <source>This is the lowest temperature of the cell uploaded from the BMS via the CAN/485/TCP communication protocol, that is, the lowest temperature of all battery cells at present.</source>
         <translation>这是通过CAN/485/TCP通讯协议从BMS上传的单体最低温度,即当前所有电池单体的最低温度。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1771"/>
+        <location filename="../mywidget.cpp" line="1836"/>
         <source>This is the upper limit of the charging current uploaded from the BMS via the CAN/485/TCP communication protocol, the maximum charging current allowed by the current battery pack (Note: when charging the end, PCS will limit the current according to the actual current).</source>
         <translation>这是通过CAN/485/TCP通讯协议从BMS上传的充电电流上限，当前电池组所允许通过的最大充电电流(注:充电末端时，PCS会根据实际电流来进行限流)。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1775"/>
+        <location filename="../mywidget.cpp" line="1840"/>
         <source>This is the upper limit of the discharge current uploaded from the BMS via the CAN/485/TCP communication protocol, the maximum discharge current allowed by the current battery pack.</source>
         <translation>这是通过CAN/485/TCP通讯协议从BMS上传的放电电流上限，当前电池组所允许通过的最大放电电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1778"/>
+        <location filename="../mywidget.cpp" line="1843"/>
         <source>Allow charge power</source>
         <translation>可充电功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1779"/>
+        <location filename="../mywidget.cpp" line="1844"/>
         <source>This is the rechargeable power uploaded from the BMS through the CAN/485 communication protocol. The charging power of the battery cannot exceed this limit value.</source>
         <translation>这是通过CAN/485/TCP通讯协议从BMS上传的可充电功率，电池的充电功率不可超过这个限制数值。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1782"/>
+        <location filename="../mywidget.cpp" line="1847"/>
         <source>Allow discharge power</source>
         <translation>可放电功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1783"/>
+        <location filename="../mywidget.cpp" line="1848"/>
         <source>This is the discharge power uploaded from the BMS using the CAN/485 communication protocol. The discharge power of the battery cannot exceed this limit.</source>
         <translation>这是通过CAN/485/TCP通讯协议从BMS上传的可放电功率，电池的放电功率不可超过这个限制数值。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1786"/>
+        <location filename="../mywidget.cpp" line="1851"/>
         <source>Allow charge energy</source>
         <translation>可充电电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1787"/>
+        <location filename="../mywidget.cpp" line="1852"/>
         <source>This is the allowable charge amount uploaded from the BMS via the CAN/485/TCP communication protocol, the capacity of the current battery pack allowed to charge (Note: only some BMS will provide this value).</source>
         <translation>这是通过CAN/485/TCP通讯协议从BMS上传的允许充电量，当前电池组允许充电的容量(注:仅部分BMS会提供这个值)。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1790"/>
+        <location filename="../mywidget.cpp" line="1855"/>
         <source>Allow discharge energy</source>
         <translation>可放电电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1791"/>
+        <location filename="../mywidget.cpp" line="1856"/>
         <source>This is the allowable discharge from the BMS via the CAN/485/TCP communication protocol, the current capacity of the battery pack allowed to discharge (Note: only some BMS will provide this value).</source>
         <translation>这是通过CAN/485/TCP通讯协议从BMS上传的允许放电量，当前电池组允许放电的容量(注:仅部分BMS会提供这个值)。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1794"/>
+        <location filename="../mywidget.cpp" line="1859"/>
         <source>Alarm level</source>
         <translation>告警等级</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1795"/>
+        <location filename="../mywidget.cpp" line="1860"/>
         <source>This is the alarm level icon. The color is changed according to the alarm level uploaded by the BMS. The alarm level is green for normal alarms, yellow for primary alarms, orange for secondary alarms, and red for tertiary alarms.If the alarm is Level 1 or Level 2, PCS does not respond.If the alarm is Level 3, the PCS shuts down.</source>
         <translation>这是告警等级图示，根据BMS上传的告警等级改变颜色，此处可以通过颜色判断告警等级，正常为绿色、—级告警为黄色、二级告警为橙色、三级告警为红色;如果是一级告警或者二级告警，PCS不做响应;如果是三级告警，PCS关机。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1798"/>
+        <location filename="../mywidget.cpp" line="1863"/>
         <source>Charge enable</source>
         <translation>充电使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1799"/>
+        <location filename="../mywidget.cpp" line="1864"/>
         <source>This is the current battery status uploaded by BMS via CAN/485/TCP. Enable indicates that the battery can be charged. Disable indicates that the battery cannot be charged.</source>
         <translation>这是充电使能，由BMS通过CAN/485/TCP通讯协议上传的当前电池的状态;使能表示目前电池允许充电，禁止表示目前电池不允许充电。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1802"/>
+        <location filename="../mywidget.cpp" line="1867"/>
         <source>Discharge enable</source>
         <translation>放电使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1803"/>
+        <location filename="../mywidget.cpp" line="1868"/>
         <source>This is the current state of the battery uploaded by the BMS via the CAN/485/TCP protocol. Enable indicates that the battery can be discharged. Disable indicates that the battery cannot be discharged.</source>
         <translation>这是放电使能，由BMS通过CAN/485/TCP通讯协议上传的当前电池的状态;使能表示目前电池允许放电，禁止表示目前电池不允许放电。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1999"/>
+        <location filename="../mywidget.cpp" line="2064"/>
         <source>voltage(AB)</source>
         <translation>电压(AB)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2000"/>
+        <location filename="../mywidget.cpp" line="2065"/>
         <source>The inverter side voltage of the current MPS is the phase voltage between phase A and phase B.</source>
         <translation>当前MPS的逆变侧电压，此项为A相 和B相 之间的相电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2009"/>
+        <location filename="../mywidget.cpp" line="2074"/>
         <source>The inverter side voltage of the current MPS is the phase voltage between phase B and phase C.</source>
         <translation>当前MPS的逆变侧电压，此项为B相 和C相 之间的相电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2018"/>
+        <location filename="../mywidget.cpp" line="2083"/>
         <source>The inverter side voltage of the current MPS is the phase voltage between phase A and phase C.</source>
         <translation>当前MPS的逆变侧电压，此项为A相 和C相 之间的相电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2027"/>
+        <location filename="../mywidget.cpp" line="2092"/>
         <source>The current of the inverter side of the current MPS is the current of phase A.</source>
         <translation>当前MPS的逆变侧电流，此项为A相的电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2036"/>
+        <location filename="../mywidget.cpp" line="2101"/>
         <source>The current of the inverter side of the current MPS is the current of phase B.</source>
         <translation>当前MPS的逆变侧电流，此项为B相的电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2045"/>
+        <location filename="../mywidget.cpp" line="2110"/>
         <source>The current of the inverter side of the current MPS is the current of phase C.</source>
         <translation>当前MPS的逆变侧电流，此项为C相的电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2054"/>
-        <location filename="../mywidget.cpp" line="2274"/>
+        <location filename="../mywidget.cpp" line="2119"/>
+        <location filename="../mywidget.cpp" line="2339"/>
         <source>The current IGBT temperature of MPS shall not exceed 105℃, otherwise PCS will run derated.</source>
         <translation>当前MPS 的IGBT温度，IGBT温度不得超过105℃，否则MPS将降额运行。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2063"/>
+        <location filename="../mywidget.cpp" line="2128"/>
         <source>The ambient temperature of the current MPS.</source>
         <translation>当前MPS 所处的环境温度。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2072"/>
+        <location filename="../mywidget.cpp" line="2137"/>
         <source>Leakage current: the current to the ground of the grounding wire. If the value is larger, it indicates that there is leakage.</source>
         <translation>漏电流，接地线的对地电流，如果此项较大，说明此处有漏电现象。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2083"/>
+        <location filename="../mywidget.cpp" line="2148"/>
         <source>Total voltage on the PV side collected by the current MPS.</source>
         <translation>当前MPS 采集的PV侧的总电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2092"/>
+        <location filename="../mywidget.cpp" line="2157"/>
         <source>Total current on the PV side collected by MPS.</source>
         <translation>当前MPS 采集的PV侧的总电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2101"/>
+        <location filename="../mywidget.cpp" line="2166"/>
         <source>The PV side power is obtained by multiplying the total voltage and total current calculated in the current MPS.</source>
         <translation>当前MPS 内部计算的总电压与总电流的乘积，得到PV侧功率。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2110"/>
+        <location filename="../mywidget.cpp" line="2175"/>
         <source>The current MPS samples the battery voltage from the connected battery.</source>
         <translation>当前MPS 从接入的电池侧采样的电池电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2119"/>
+        <location filename="../mywidget.cpp" line="2184"/>
         <source>Battery current sampled by the MPS from the connected battery.</source>
         <translation>当前MPS 从接入的电池侧采样的电池电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2128"/>
+        <location filename="../mywidget.cpp" line="2193"/>
         <source>At present, MPS calculates the product of battery voltage and battery current to obtain battery power.</source>
         <translation>当前MPS 内部计算电池电压与电池电流的乘积，得到电池功率。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2137"/>
+        <location filename="../mywidget.cpp" line="2202"/>
         <source>The current bus voltage sampled by MPS from the bus side.</source>
         <translation>当前MPS 从母线侧采样的母线电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2146"/>
+        <location filename="../mywidget.cpp" line="2211"/>
         <source>Current bus current sampled by MPS from the bus side.</source>
         <translation>当前MPS从母线侧采样的母线电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2171"/>
+        <location filename="../mywidget.cpp" line="2236"/>
         <source>Voltage H</source>
         <translation>高压侧电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2172"/>
+        <location filename="../mywidget.cpp" line="2237"/>
         <source>Current voltage of the high voltage side of the DCDC module.</source>
         <translation>当前DCDC模块高压侧的电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2180"/>
+        <location filename="../mywidget.cpp" line="2245"/>
         <source>Current H</source>
         <translation>高压侧电流</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2181"/>
+        <location filename="../mywidget.cpp" line="2246"/>
         <source>Current of the high voltage side of the DCDC module.</source>
         <translation>当前DCDC模块高压侧的电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2189"/>
+        <location filename="../mywidget.cpp" line="2254"/>
         <source>Power H</source>
         <translation>高压侧功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2190"/>
+        <location filename="../mywidget.cpp" line="2255"/>
         <source>Power of the high voltage side of the DCDC module.</source>
         <translation>当前DCDC模块高压侧的功率。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2198"/>
+        <location filename="../mywidget.cpp" line="2263"/>
         <source>Voltage L</source>
         <translation>低压侧电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2199"/>
+        <location filename="../mywidget.cpp" line="2264"/>
         <source>Voltage of the low voltage side of the DCDC module.</source>
         <translation>当前DCDC模块低压侧的电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2207"/>
+        <location filename="../mywidget.cpp" line="2272"/>
         <source>Current L</source>
         <translation>低压侧电流</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2208"/>
+        <location filename="../mywidget.cpp" line="2273"/>
         <source>Current of the low-voltage side of the DCDC module.</source>
         <translation>当前DCDC模块低压侧的电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2216"/>
+        <location filename="../mywidget.cpp" line="2281"/>
         <source>Power L</source>
         <translation>低压侧功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2217"/>
+        <location filename="../mywidget.cpp" line="2282"/>
         <source>Power of the low voltage side of the DCDC module.</source>
         <translation>当前DCDC模块低压侧的功率。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2226"/>
+        <location filename="../mywidget.cpp" line="2291"/>
         <source>Positive insulation impedance of the current DCDC module.</source>
         <translation>当前DCDC模块的正绝缘阻抗。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2237"/>
+        <location filename="../mywidget.cpp" line="2302"/>
         <source>Bus_H_vol(+)</source>
         <translation>高压侧正母线电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2238"/>
+        <location filename="../mywidget.cpp" line="2303"/>
         <source>Positive bus voltage of the high voltage side of the DC module.</source>
         <translation>当前DCDC模块的高压侧正母线电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2246"/>
+        <location filename="../mywidget.cpp" line="2311"/>
         <source>Bus_H_vol(-)</source>
         <translation>高压侧负母线电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2247"/>
+        <location filename="../mywidget.cpp" line="2312"/>
         <source>The current high voltage side of the DC module is negative for the bus voltage.</source>
         <translation>当前DCDC模块的高压侧负母线电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2255"/>
+        <location filename="../mywidget.cpp" line="2320"/>
         <source>Bus_L_vol(+)</source>
         <translation>低压侧正母线电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2256"/>
+        <location filename="../mywidget.cpp" line="2321"/>
         <source>Positive bus voltage of the low voltage side of the DC module.</source>
         <translation>当前DCDC模块的低压侧正母线电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2264"/>
+        <location filename="../mywidget.cpp" line="2329"/>
         <source>Bus_L_vol(-)</source>
         <translation>低压侧负母线电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2265"/>
+        <location filename="../mywidget.cpp" line="2330"/>
         <source>The low voltage side of the DC module is negative for the bus voltage.</source>
         <translation>当前DCDC模块的低压侧负母线电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2283"/>
+        <location filename="../mywidget.cpp" line="2348"/>
         <source>Negative insulation impedance of the current DCDC module.</source>
         <translation>当前DCDC模块的负绝缘阻抗。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2291"/>
+        <location filename="../mywidget.cpp" line="2356"/>
         <source>Leakage_cur</source>
         <translation>漏电流</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2292"/>
+        <location filename="../mywidget.cpp" line="2357"/>
         <source>Current leakage current of the DCDC module.</source>
         <translation>当前DCDC模块的漏电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2306"/>
+        <location filename="../mywidget.cpp" line="2371"/>
         <source>The grid side voltage of the current MPS, this item is the phase voltage between phase A and phase B.</source>
         <translation>当前MPS的电网侧电压，此项为A相 和B相 之间的相电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2315"/>
+        <location filename="../mywidget.cpp" line="2380"/>
         <source>The grid side voltage of the current MPS, this item is the phase voltage between phase B and phase C.</source>
         <translation>当前MPS的电网侧电压，此项为B相 和C相 之间的相电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2324"/>
+        <location filename="../mywidget.cpp" line="2389"/>
         <source>The grid side voltage of the current MPS, this item is the phase voltage between phase A and phase C.</source>
         <translation>当前MPS的电网侧电压，此项为A相 和C相 之间的相电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2333"/>
+        <location filename="../mywidget.cpp" line="2398"/>
         <source>The current on the grid side of MPS, this item is the current of phase A.</source>
         <translation>当前MPS的电网侧电流，此项为A相的电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2342"/>
+        <location filename="../mywidget.cpp" line="2407"/>
         <source>The current on the grid side of MPS, this item is the current of phase B.</source>
         <translation>当前MPS的电网侧电流，此项为B相的电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2351"/>
+        <location filename="../mywidget.cpp" line="2416"/>
         <source>The current on the grid side of MPS, this item is the current of phase C.</source>
         <translation>当前MPS的电网侧电流，此项为C相的电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2363"/>
+        <location filename="../mywidget.cpp" line="2428"/>
         <source>Current active power (P) on the grid side of MPS.</source>
         <translation>当前MPS的电网侧有功功率P。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2372"/>
+        <location filename="../mywidget.cpp" line="2437"/>
         <source>Current reactive power (Q) on the grid side of MPS.</source>
         <translation>当前MPS的电网侧无功功率Q。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2381"/>
+        <location filename="../mywidget.cpp" line="2446"/>
         <source>Current MPS grid side view power (S), S= √((P^2+Q^2)).</source>
         <translation>当前MPS的电网侧视在功率S，S= √((P^2+Q^2))。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2390"/>
+        <location filename="../mywidget.cpp" line="2455"/>
         <source>Grid side power factor (Pf) of the current MPS, Pf = P/S.</source>
         <translation>当前MPS的电网侧功率因素Pf， Pf = P / S。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2399"/>
+        <location filename="../mywidget.cpp" line="2464"/>
         <source>Current MPS collection of power grid frequency.</source>
         <translation>当前MPS的采集的电网频率。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2414"/>
+        <location filename="../mywidget.cpp" line="2479"/>
         <source>The load side voltage of the current MPS, this item is the phase voltage between phase A and phase B.</source>
         <translation>当前MPS的负载侧电压，此项为A相 和B相 之间的相电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2423"/>
+        <location filename="../mywidget.cpp" line="2488"/>
         <source>The load side voltage of the current MPS, this item is the phase voltage between phase B and phase C.</source>
         <translation>当前MPS的负载侧电压，此项为B相 和C相 之间的相电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2432"/>
+        <location filename="../mywidget.cpp" line="2497"/>
         <source>The load side voltage of the current MPS, this item is the phase voltage between phase A and phase C.</source>
         <translation>当前MPS的负载侧电压，此项为A相 和C相 之间的相电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2441"/>
+        <location filename="../mywidget.cpp" line="2506"/>
         <source>The current on the load side of MPS, this item is the current of phase A.</source>
         <translation>当前MPS的负载侧电流，此项为A相的电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2450"/>
+        <location filename="../mywidget.cpp" line="2515"/>
         <source>The current at the load side of MPS is the current of phase B.</source>
         <translation>当前MPS的负载侧电流，此项为B相的电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2459"/>
+        <location filename="../mywidget.cpp" line="2524"/>
         <source>The current at the load side of MPS is the current of phase C.</source>
         <translation>当前MPS的负载侧电流，此项为C相的电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2471"/>
+        <location filename="../mywidget.cpp" line="2536"/>
         <source>Current MPS active power (P) on load side.</source>
         <translation>当前MPS的负载侧有功功率P。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2480"/>
+        <location filename="../mywidget.cpp" line="2545"/>
         <source>Reactive power (Q) on the load side of current MPS.</source>
         <translation>当前MPS的负载侧无功功率Q。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2489"/>
+        <location filename="../mywidget.cpp" line="2554"/>
         <source>Current MPS load side view at power (S), S= √((P^2+Q^2)).</source>
         <translation>当前MPS的负载侧视在功率S，S= √((P^2+Q^2))。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2498"/>
+        <location filename="../mywidget.cpp" line="2563"/>
         <source>The load side power factor (Pf) of the current MPS, Pf = P/S.</source>
         <translation>当前MPS的负载侧功率因素Pf， Pf = P / S。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2507"/>
+        <location filename="../mywidget.cpp" line="2572"/>
         <source>Current MPS collection of power load frequency.</source>
         <translation>当前MPS的采集的负载频率。</translation>
     </message>
@@ -3920,27 +4032,27 @@ Discharge)、降额并网(Drop and Connected)、待机(Standby)、离网充电(G
         <translation type="vanished">当前MPS从母线侧采样的母线电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2017"/>
+        <location filename="../mywidget.cpp" line="2082"/>
         <source>voltage(AC)</source>
         <translation>电压(AC)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2026"/>
+        <location filename="../mywidget.cpp" line="2091"/>
         <source>current(A)</source>
         <translation>电流(A)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2035"/>
+        <location filename="../mywidget.cpp" line="2100"/>
         <source>current(B)</source>
         <translation>电流(B)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2044"/>
+        <location filename="../mywidget.cpp" line="2109"/>
         <source>current(C)</source>
         <translation>电流(C)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2062"/>
+        <location filename="../mywidget.cpp" line="2127"/>
         <source>Environment temperature</source>
         <translation>环境温度</translation>
     </message>

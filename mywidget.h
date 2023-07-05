@@ -1031,6 +1031,8 @@ private:
 
     void MPS_state_delete();//MPS状态 释放 说明
     void Data_Report_delete();//数据报表 释放 说明
+    void HistoryRecord_delete();//历史数据 释放 说明
+    void OperationLog_tab_delete();//操作日志 释放 说明
 
 private slots:
     void on_UI_MenuBtn_clicked();//转到槽

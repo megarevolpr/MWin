@@ -663,6 +663,70 @@ void MyWidget::Data_Report_delete()
     delete Grid_Discharge_Year;
     delete Grid_Discharge_Total;
 }
+/************历史数据 释放 说明************/
+void MyWidget::HistoryRecord_delete()
+{
+    delete Grade;
+    delete Grade2;
+    delete Grade3;
+    delete Grade4;
+    delete Grade5;
+    delete Grade6;
+    delete Grade7;
+    delete Grade8;
+    delete StartTime;
+    delete StartTime2;
+    delete StartTime3;
+    delete StartTime4;
+    delete StartTime5;
+    delete StartTime6;
+    delete StartTime7;
+    delete StartTime8;
+    delete EndTime;
+    delete EndTime2;
+    delete EndTime3;
+    delete EndTime4;
+    delete EndTime5;
+    delete EndTime6;
+    delete EndTime7;
+    delete EndTime8;
+    delete Describe;
+    delete Describe2;
+    delete Describe3;
+    delete Describe4;
+    delete Describe5;
+    delete Describe6;
+    delete Describe7;
+    delete Describe8;
+}
+/************操作日志 释放 说明************/
+void MyWidget::OperationLog_tab_delete()
+{
+    delete ModificationTime;
+    delete ModificationTime2;
+    delete ModificationTime3;
+    delete ModificationTime4;
+    delete ModificationTime5;
+    delete ModificationTime6;
+    delete ModificationTime7;
+    delete ModificationTime8;
+    delete ModificationTime9;
+    delete ModificationTime10;
+    delete ModificationTime11;
+    delete ModificationTime12;
+    delete EventRecord;
+    delete EventRecord2;
+    delete EventRecord3;
+    delete EventRecord4;
+    delete EventRecord5;
+    delete EventRecord6;
+    delete EventRecord7;
+    delete EventRecord8;
+    delete EventRecord9;
+    delete EventRecord10;
+    delete EventRecord11;
+    delete EventRecord12;
+}
 
 /********************************************************
  * 初始化界面
@@ -732,8 +796,9 @@ void MyWidget::ChangeLanguage_btn_clicked()
 
     MPS_state_delete();//释放MPS状态 的空间
     Data_Report_delete();//释放 数据报表
+    HistoryRecord_delete();//释放 历史记录
+    OperationLog_tab_delete();//释放 操作日志
     UIPageInit();       //初始化界面
-
 }
 //函数关联
 void MyWidget::LinkRelationship()
@@ -1228,7 +1293,7 @@ void MyWidget::OperationLog()
     Ope_headers.clear();
     Ope_headers << tr("ModificationTime") << tr("RecordEvent");
     ui->Operation_tableWidget->setColumnCount(Ope_headers.size());
-    ui->Operation_tableWidget->setRowCount(8);
+    ui->Operation_tableWidget->setRowCount(12);
     ui->Operation_tableWidget->setHorizontalHeaderLabels(Ope_headers);
     ui->Operation_tableWidget->setFrameShape(QFrame::NoFrame);//设置无边框
     ui->Operation_tableWidget->setShowGrid(true);//设置显示格子
@@ -3068,244 +3133,261 @@ void MyWidget::DataReportMessages(QTableWidget *myTable)
 //历史记录   绘制button
 void MyWidget::HistoryRecord(QTableWidget *myTable)
 {
+    QString str1 = tr("0");
+    QString str2 = tr("Level");
+    QString str3 = tr("This is the event alarm level. When the event alarm level is 0, it is marked red, indicating that this is the fault information.");//这是事件告警等级，当事件告警等级为0时标红，表示这是故障信息
+    QString str4 = tr("Start Time");
+    QString str5 = tr("This is the event start time, which means that the record started appearing at this time.");//这是事件开始时间，表示这条记录从这个时间开始出现。
+    QString str6 = tr("End Time");
+    QString str7 = tr("This is the event end time, which means the end time of this record,'... 'means no end time.");//这是事件结束时间，表示这条记录的结束时间,...'表示无结束时间。
+
+    QString str8 = tr("CAN communication failure");
+    QString str9 = tr("Description");//描述
+    QString str10 = tr("This is the event description, when there is an alarm information, the alarm information will be recorded here.");//这是事件描述，当有告警信息时，会将告警信息记录在这里。
+    QString str11 = tr("Fire alarm (High temp. alarm)");//消防告警(高温告警)
+    QString str12 = tr("Power Meter Comm fualttLead-acid abnormal");//电能表通讯故障
     int line=0;int column=0;
     Grade = new Specification(this,Grade_explain, myTable, line++, column, \
-                                                    "0", "Level", \
-                                                    "这是事件告警等级，当事件告警等级为0时标红，表示这是故障信息\nThis is the event alarm level. When the event alarm level is 0, it is marked red, indicating that this is the fault information.");
+                                                    str1, str2, \
+                                                    str3);
     Grade->add_Specification();
     Grade2 = new Specification(this,Grade2_explain, myTable, line++, column, \
-                                                    "0", "Level", \
-                                                    "这是事件告警等级，当事件告警等级为0时标红，表示这是故障信息\nThis is the event alarm level. When the event alarm level is 0, it is marked red, indicating that this is the fault information.");
+                                                    str1, str2, \
+                                                    str3);
     Grade2->add_Specification();
     Grade3 = new Specification(this,Grade3_explain, myTable, line++, column, \
-                                                    "0", "Level", \
-                                                    "这是事件告警等级，当事件告警等级为0时标红，表示这是故障信息\nThis is the event alarm level. When the event alarm level is 0, it is marked red, indicating that this is the fault information.");
+                                                    str1, str2, \
+                                                    str3);
     Grade3->add_Specification();
     Grade4 = new Specification(this,Grade4_explain, myTable, line++, column, \
-                                                    "0", "Level", \
-                                                    "这是事件告警等级，当事件告警等级为0时标红，表示这是故障信息\nThis is the event alarm level. When the event alarm level is 0, it is marked red, indicating that this is the fault information.");
+                                                    str1, str2, \
+                                                    str3);
     Grade4->add_Specification();
     Grade5 = new Specification(this,Grade5_explain, myTable, line++, column, \
-                                                    "0", "Level", \
-                                                    "这是事件告警等级，当事件告警等级为0时标红，表示这是故障信息\nThis is the event alarm level. When the event alarm level is 0, it is marked red, indicating that this is the fault information.");
+                                                    str1, str2, \
+                                                    str3);
     Grade5->add_Specification();
     Grade6 = new Specification(this,Grade6_explain, myTable, line++, column, \
-                                                    "0", "Level", \
-                                                    "这是事件告警等级，当事件告警等级为0时标红，表示这是故障信息\nThis is the event alarm level. When the event alarm level is 0, it is marked red, indicating that this is the fault information.");
+                                                    str1, str2, \
+                                                    str3);
     Grade6->add_Specification();
     Grade7 = new Specification(this,Grade7_explain, myTable, line++, column, \
-                                                    "0", "Level", \
-                                                    "这是事件告警等级，当事件告警等级为0时标红，表示这是故障信息\nThis is the event alarm level. When the event alarm level is 0, it is marked red, indicating that this is the fault information.");
+                                                    str1, str2, \
+                                                    str3);
     Grade7->add_Specification();
     Grade8 = new Specification(this,Grade8_explain, myTable, line++, column, \
-                                                    "0", "Level", \
-                                                    "这是事件告警等级，当事件告警等级为0时标红，表示这是故障信息\nThis is the event alarm level. When the event alarm level is 0, it is marked red, indicating that this is the fault information.");
+                                                    str1, str2, \
+                                                    str3);
     Grade8->add_Specification();
     line=0;
     column=1;
     StartTime = new Specification(this,StartTime_explain, myTable, line++, column, \
-                                                    "2023.5.6 15:49:50", "Start Time", \
-                                                    "这是事件开始时间，表示这条记录从这个时间开始出现\nThis is the event start time, which means that the record started appearing at this time.");
+                                                    "2023.5.6 15:49:50", str4, \
+                                                    str5);
     StartTime->add_Specification();
     StartTime2 = new Specification(this,StartTime2_explain, myTable, line++, column, \
-                                                    "2023.5.6 15:48:18", "Start Time", \
-                                                    "这是事件开始时间，表示这条记录从这个时间开始出现\nThis is the event start time, which means that the record started appearing at this time.");
+                                                    "2023.5.6 15:48:18", str4, \
+                                                    str5);
     StartTime2->add_Specification();
     StartTime3 = new Specification(this,StartTime3_explain, myTable, line++, column, \
-                                                    "2023.5.6 15:39:3", "Start Time", \
-                                                    "这是事件开始时间，表示这条记录从这个时间开始出现\nThis is the event start time, which means that the record started appearing at this time.");
+                                                    "2023.5.6 15:39:3", str4, \
+                                                    str5);
     StartTime3->add_Specification();
     StartTime4 = new Specification(this,StartTime4_explain, myTable, line++, column, \
-                                                    "2023.5.6 15:39:3", "Start Time", \
-                                                    "这是事件开始时间，表示这条记录从这个时间开始出现\nThis is the event start time, which means that the record started appearing at this time.");
+                                                    "2023.5.6 15:39:3", str4, \
+                                                    str5);
     StartTime4->add_Specification();
     StartTime5 = new Specification(this,StartTime5_explain, myTable, line++, column, \
-                                                    "2023.5.6 15:39:3", "Start Time", \
-                                                    "这是事件开始时间，表示这条记录从这个时间开始出现\nThis is the event start time, which means that the record started appearing at this time.");
+                                                    "2023.5.6 15:39:3", str4, \
+                                                    str5);
     StartTime5->add_Specification();
     StartTime6 = new Specification(this,StartTime6_explain, myTable, line++, column, \
-                                                    "2023.5.6 15:21:56", "Start Time", \
-                                                    "这是事件开始时间，表示这条记录从这个时间开始出现\nThis is the event start time, which means that the record started appearing at this time.");
+                                                    "2023.5.6 15:21:56", str4, \
+                                                    str5);
     StartTime6->add_Specification();
     StartTime7 = new Specification(this,StartTime7_explain, myTable, line++, column, \
-                                                    "2023.5.6 15:21:38", "Start Time", \
-                                                    "这是事件开始时间，表示这条记录从这个时间开始出现\nThis is the event start time, which means that the record started appearing at this time.");
+                                                    "2023.5.6 15:21:38", str4, \
+                                                    str5);
     StartTime7->add_Specification();
     StartTime8 = new Specification(this,StartTime8_explain, myTable, line++, column, \
-                                                    "2023.5.6 15:21:38", "Start Time", \
-                                                    "这是事件开始时间，表示这条记录从这个时间开始出现\nThis is the event start time, which means that the record started appearing at this time.");
+                                                    "2023.5.6 15:21:38", str4, \
+                                                    str5);
     StartTime8->add_Specification();
     line=0;
     column=2;
     EndTime = new Specification(this,EndTime_explain, myTable, line++, column, \
-                                                    "-", "End Time", \
-                                                    "这是事件结束时间，表示这条记录的结束时间,'...'表示无结束时间\nThis is the event end time, which means the end time of this record,'... 'means no end time.");
+                                                    "-", str6, \
+                                                    str7);
     EndTime->add_Specification();
     EndTime2 = new Specification(this,EndTime2_explain, myTable, line++, column, \
-                                                    "-", "End Time", \
-                                                    "这是事件结束时间，表示这条记录的结束时间,'...'表示无结束时间\nThis is the event end time, which means the end time of this record,'... 'means no end time.");
+                                                    "-", str6, \
+                                                    str7);
     EndTime2->add_Specification();
     EndTime3 = new Specification(this,EndTime3_explain, myTable, line++, column, \
-                                                    "...", "End Time", \
-                                                    "这是事件结束时间，表示这条记录的结束时间,'...'表示无结束时间\nThis is the event end time, which means the end time of this record,'... 'means no end time.");
+                                                    "...", str6, \
+                                                    str7);
     EndTime3->add_Specification();
     EndTime4 = new Specification(this,EndTime4_explain, myTable, line++, column, \
-                                                    "-", "End Time", \
-                                                    "这是事件结束时间，表示这条记录的结束时间,'...'表示无结束时间\nThis is the event end time, which means the end time of this record,'... 'means no end time.");
+                                                    "-", str6, \
+                                                    str7);
     EndTime4->add_Specification();
     EndTime5 = new Specification(this,EndTime5_explain, myTable, line++, column, \
-                                                    "...", "End Time", \
-                                                    "这是事件结束时间，表示这条记录的结束时间,'...'表示无结束时间\nThis is the event end time, which means the end time of this record,'... 'means no end time.");
+                                                    "...", str6, \
+                                                    str7);
     EndTime5->add_Specification();
     EndTime6 = new Specification(this,EndTime6_explain, myTable, line++, column, \
-                                                    "-", "End Time", \
-                                                    "这是事件结束时间，表示这条记录的结束时间,'...'表示无结束时间\nThis is the event end time, which means the end time of this record,'... 'means no end time.");
+                                                    "-", str6, \
+                                                    str7);
     EndTime6->add_Specification();
     EndTime7 = new Specification(this,EndTime7_explain, myTable, line++, column, \
-                                                    "-", "End Time", \
-                                                    "这是事件结束时间，表示这条记录的结束时间,'...'表示无结束时间\nThis is the event end time, which means the end time of this record,'... 'means no end time.");
+                                                    "-", str6, \
+                                                    str7);
     EndTime7->add_Specification();
     EndTime8 = new Specification(this,EndTime8_explain, myTable, line++, column, \
-                                                    "-", "End Time", \
-                                                    "这是事件结束时间，表示这条记录的结束时间,'...'表示无结束时间\nThis is the event end time, which means the end time of this record,'... 'means no end time.");
+                                                    "-", str6, \
+                                                    str7);
     EndTime8->add_Specification();
     line=0;
     column=3;
     Describe = new Specification(this,Describe_explain, myTable, line++, column, \
-                                                    "CAN communication failure", "Description", \
-                                                    "这是事件描述，当有告警信息时，会将告警信息记录在这里\nThis is the event description, when there is an alarm information, the alarm information will be recorded here.");
+                                                    str8, str9, \
+                                                    str10);
     Describe->add_Specification();
     Describe2 = new Specification(this,Describe2_explain, myTable, line++, column, \
-                                                    "CAN communication failure", "Description", \
-                                                    "这是事件描述，当有告警信息时，会将告警信息记录在这里\nThis is the event description, when there is an alarm information, the alarm information will be recorded here.");
+                                                    str8, str9, \
+                                                    str10);
     Describe2->add_Specification();
     Describe3 = new Specification(this,Describe3_explain, myTable, line++, column, \
-                                                    "Fire alarm (High temp. alarm)", "Description", \
-                                                    "这是事件描述，当有告警信息时，会将告警信息记录在这里\nThis is the event description, when there is an alarm information, the alarm information will be recorded here.");
+                                                    str11, str9, \
+                                                    str10);
     Describe3->add_Specification();
     Describe4 = new Specification(this,Describe4_explain, myTable, line++, column, \
-                                                    "CAN communication failure", "Description", \
-                                                    "这是事件描述，当有告警信息时，会将告警信息记录在这里\nThis is the event description, when there is an alarm information, the alarm information will be recorded here.");
+                                                    str8, str9, \
+                                                    str10);
     Describe4->add_Specification();
     Describe5 = new Specification(this,Describe5_explain, myTable, line++, column, \
-                                                    "PowerMeter Comm fualttLead-acid abnormal", "Description", \
-                                                    "这是事件描述，当有告警信息时，会将告警信息记录在这里\nThis is the event description, when there is an alarm information, the alarm information will be recorded here.");
+                                                    str12, str9, \
+                                                    str10);
     Describe5->add_Specification();
     Describe6 = new Specification(this,Describe6_explain, myTable, line++, column, \
-                                                    "CAN communication failure", "Description", \
-                                                    "这是事件描述，当有告警信息时，会将告警信息记录在这里\nThis is the event description, when there is an alarm information, the alarm information will be recorded here.");
+                                                    str8, str9, \
+                                                    str10);
     Describe6->add_Specification();
     Describe7 = new Specification(this,Describe7_explain, myTable, line++, column, \
-                                                    "Fire alarm (High temp. alarm)", "Description", \
-                                                    "这是事件描述，当有告警信息时，会将告警信息记录在这里\nThis is the event description, when there is an alarm information, the alarm information will be recorded here.");
+                                                    str11, str9, \
+                                                    str10);
     Describe7->add_Specification();
     Describe8 = new Specification(this,Describe8_explain, myTable, line++, column, \
-                                                    "PowerMeter Comm fualttLead-acid abnormal", "Description", \
-                                                    "这是事件描述，当有告警信息时，会将告警信息记录在这里\nThis is the event description, when there is an alarm information, the alarm information will be recorded here.");
+                                                    str12, str9, \
+                                                    str10);
     Describe8->add_Specification();
 }
 
 //操作日志 绘制button
 void MyWidget::OperationLog_tab(QTableWidget *myTable)
 {
+    QString str = tr("ModificationTime");
+    QString str1 = tr("Time when the system Settings are modified.");
+    QString str2 = tr("RecordEvent");
+    QString str3 = tr("Here is a record of the operation when a change is made to the system Settings.");
     int line=0;int column=0;
     ModificationTime = new Specification(this,ModificationTime_explain, myTable, line++, column, \
-                                                    "2023-05-12 11:32:45", "ModificationTime", \
-                                                    "系统设置修改时的时间\nTime when the system Settings are modified");
+                                                    "2023-05-12 11:32:45", str, \
+                                                    str1);
     ModificationTime->add_Specification();
     ModificationTime2 = new Specification(this,ModificationTime2_explain, myTable, line++, column, \
-                                                    "2023-05-12 11:32:33", "ModificationTime", \
-                                                    "系统设置修改时的时间\nTime when the system Settings are modified");
+                                                    "2023-05-12 11:32:33", str, \
+                                                    str1);
     ModificationTime2->add_Specification();
     ModificationTime3 = new Specification(this,ModificationTime3_explain, myTable, line++, column, \
-                                                    "2023-05-11 19:29:24", "ModificationTime", \
-                                                    "系统设置修改时的时间\nTime when the system Settings are modified");
+                                                    "2023-05-11 19:29:24", str, \
+                                                    str1);
     ModificationTime3->add_Specification();
     ModificationTime4 = new Specification(this,ModificationTime4_explain, myTable, line++, column, \
-                                                    "2023-05-11 19:29:21", "ModificationTime", \
-                                                    "系统设置修改时的时间\nTime when the system Settings are modified");
+                                                    "2023-05-11 19:29:21", str, \
+                                                    str1);
     ModificationTime4->add_Specification();
     ModificationTime5 = new Specification(this,ModificationTime5_explain, myTable, line++, column, \
-                                                    "2023-05-11 19:29:10", "ModificationTime", \
-                                                    "系统设置修改时的时间\nTime when the system Settings are modified");
+                                                    "2023-05-11 19:29:10", str, \
+                                                    str1);
     ModificationTime5->add_Specification();
     ModificationTime6 = new Specification(this,ModificationTime6_explain, myTable, line++, column, \
-                                                    "2023-05-11 19:29:07", "ModificationTime", \
-                                                    "系统设置修改时的时间\nTime when the system Settings are modified");
+                                                    "2023-05-11 19:29:07", str, \
+                                                    str1);
     ModificationTime6->add_Specification();
     ModificationTime7 = new Specification(this,ModificationTime7_explain, myTable, line++,column, \
-                                                    "2023-05-11 17:21:16", "ModificationTime", \
-                                                    "系统设置修改时的时间\nTime when the system Settings are modified");
+                                                    "2023-05-11 17:21:16", str, \
+                                                    str1);
     ModificationTime7->add_Specification();
     ModificationTime8 = new Specification(this,ModificationTime8_explain, myTable, line++, column, \
-                                                    "2023-05-11 11:21:02", "ModificationTime", \
-                                                    "系统设置修改时的时间\nTime when the system Settings are modified");
+                                                    "2023-05-11 11:21:02", str, \
+                                                    str1);
     ModificationTime8->add_Specification();
     ModificationTime9 = new Specification(this,ModificationTime9_explain, myTable, line++, column, \
-                                                    "2023-05-11 11:20:58", "ModificationTime", \
-                                                    "系统设置修改时的时间\nTime when the system Settings are modified");
+                                                    "2023-05-11 11:20:58", str, \
+                                                    str1);
     ModificationTime9->add_Specification();
     ModificationTime10 = new Specification(this,ModificationTime10_explain, myTable, line++, column, \
-                                                    "2023-05-11 11:02:22", "ModificationTime", \
-                                                    "系统设置修改时的时间\nTime when the system Settings are modified");
+                                                    "2023-05-11 11:02:22", str, \
+                                                    str1);
     ModificationTime10->add_Specification();
     ModificationTime11 = new Specification(this,ModificationTime11_explain, myTable, line++, column, \
-                                                    "2023-05-11 11:02:18", "ModificationTime", \
-                                                    "系统设置修改时的时间\nTime when the system Settings are modified");
+                                                    "2023-05-11 11:02:18", str, \
+                                                    str1);
     ModificationTime11->add_Specification();
     ModificationTime12 = new Specification(this,ModificationTime12_explain, myTable, line++, column, \
-                                                    "2023-05-11 11:02:14", "ModificationTime", \
-                                                    "系统设置修改时的时间\nTime when the system Settings are modified");
+                                                    "2023-05-11 11:02:14", str, \
+                                                    str1);
     ModificationTime12->add_Specification();
     line=0;
     column=1;
     EventRecord = new Specification(this,EventRecord_explain, myTable, line++, column, \
-                                                    "Power control type：CP_P->CP_N&&P", "RecordEvent", \
-                                                    "这里是对系统设置进行修改时的操作记录\nHere is a record of the operation when a change is made to the system Settings.");
+                                                    tr("Power control type：CP_P->CP_N&&P"), str2, \
+                                                    str3);
     EventRecord->add_Specification();
     EventRecord2 = new Specification(this,EventRecord2_explain, myTable, line++, column, \
-                                                    "Power control type：CP_N&&P->CP_P", "RecordEvent", \
-                                                    "这里是对系统设置进行修改时的操作记录\nHere is a record of the operation when a change is made to the system Settings.");
+                                                    tr("Power control type：CP_N&&P->CP_P"), str2, \
+                                                    str3);
     EventRecord2->add_Specification();
     EventRecord3 = new Specification(this,EventRecord3_explain, myTable,line++, column, \
-                                                    "Grid Fre Upper limit：0.2->3", "RecordEvent", \
-                                                    "这里是对系统设置进行修改时的操作记录\nHere is a record of the operation when a change is made to the system Settings.");
+                                                    tr("Grid Fre Upper limit：0.2->3"), str2, \
+                                                    str3);
     EventRecord3->add_Specification();
     EventRecord4 = new Specification(this,EventRecord4_explain, myTable, line++, column, \
-                                                    "Grid Fre Upper limit：3->0.2", "RecordEvent", \
-                                                    "这里是对系统设置进行修改时的操作记录\nHere is a record of the operation when a change is made to the system Settings.");
+                                                    tr("Grid Fre Upper limit：3->0.2"), str2, \
+                                                    str3);
     EventRecord4->add_Specification();
     EventRecord5 = new Specification(this,EventRecord5_explain, myTable, line++, 1, \
-                                                    "Voltage protection Lower limit：-10->-15", "RecordEvent", \
-                                                    "这里是对系统设置进行修改时的操作记录\nHere is a record of the operation when a change is made to the system Settings.");
+                                                    tr("Voltage protection Lower limit：-10->-15"), str2, \
+                                                    str3);
     EventRecord5->add_Specification();
     EventRecord6 = new Specification(this,EventRecord6_explain, myTable, line++, column, \
-                                                    "Voltage protection Lower limit：-15->-10", "RecordEvent", \
-                                                    "这里是对系统设置进行修改时的操作记录\nHere is a record of the operation when a change is made to the system Settings.");
+                                                    tr("Voltage protection Lower limit：-15->-10"), str2, \
+                                                    str3);
     EventRecord6->add_Specification();
     EventRecord7 = new Specification(this,EventRecord7_explain, myTable, line++, column, \
-                                                    "Operation mode：Prevent countercurrnet->Peak valley", "RecordEvent", \
-                                                    "这里是对系统设置进行修改时的操作记录\nHere is a record of the operation when a change is made to the system Settings.");
+                                                    tr("Operation mode：Prevent countercurrnet->Peak valley"), str2, \
+                                                    str3);
     EventRecord7->add_Specification();
     EventRecord8 = new Specification(this,EventRecord8_explain, myTable, line++, column, \
-                                                    "Operation mode：UPS->Prevent countercurrnet", "RecordEvent", \
-                                                    "这里是对系统设置进行修改时的操作记录\nHere is a record of the operation when a change is made to the system Settings.");
+                                                    tr("Operation mode：UPS->Prevent countercurrnet"), str2, \
+                                                    str3);
     EventRecord8->add_Specification();
     EventRecord9 = new Specification(this,EventRecord9_explain, myTable, line++, column, \
-                                                    "Operation mode：Manual->UPS", "RecordEvent", \
-                                                    "这里是对系统设置进行修改时的操作记录\nHere is a record of the operation when a change is made to the system Settings.");
+                                                    tr("Operation mode：Manual->UPS"), str2, \
+                                                    str3);
     EventRecord9->add_Specification();
     EventRecord10 = new Specification(this,EventRecord10_explain, myTable, line++, column, \
-                                                    "Operation mode：Peak valley->Manual", "RecordEvent", \
-                                                    "这里是对系统设置进行修改时的操作记录\nHere is a record of the operation when a change is made to the system Settings.");
+                                                    tr("Operation mode：Peak valley->Manual"), str2, \
+                                                    str3);
     EventRecord10->add_Specification();
     EventRecord11 = new Specification(this,EventRecord11_explain, myTable, line++, column, \
-                                                    "Inv ON/Off-Grid：Off->automatic", "RecordEvent", \
-                                                    "这里是对系统设置进行修改时的操作记录\nHere is a record of the operation when a change is made to the system Settings.");
+                                                    tr("Inv ON/Off-Grid：Off->automatic"), str2, \
+                                                    str3);
     EventRecord11->add_Specification();
     EventRecord12 = new Specification(this,EventRecord12_explain, myTable, line++, column, \
-                                                    "Inv ON/Off-Grid：automatic->Off", "RecordEvent", \
-                                                    "这里是对系统设置进行修改时的操作记录\nHere is a record of the operation when a change is made to the system Settings.");
+                                                    tr("Inv ON/Off-Grid：automatic->Off"), str2, \
+                                                    str3);
     EventRecord12->add_Specification();
 }
 /******************功能设置页说明**********************/
@@ -4283,7 +4365,9 @@ void MyWidget::on_Switch_off_clicked()
 {
     QMessageBox::question(this, "Turn off", "这是DCAC变流器关闭开关，点击后关闭DCAC变流器\nThis is the DCAC converter off switch. Click to turn off the DCAC converter", "OK");
 }
-
+/***************************************************************
+ * 故障信息表搜索功能
+ ***************************************************************/
 void MyWidget::on_search_btn_clicked()
 {
     QString search = ui->search_le->text();
