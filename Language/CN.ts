@@ -1373,21 +1373,25 @@ enable</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="6866"/>
+        <location filename="../mywidget.cpp" line="4177"/>
         <source>HistoricalFailure</source>
         <translation>历史记录</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="6889"/>
+        <location filename="../mywidget.cpp" line="4183"/>
         <source>OperationLog</source>
         <translation>操作日志</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="6927"/>
+        <location filename="../mywidget.cpp" line="4189"/>
         <source>Coulombmeter report</source>
         <translation>电量统计表</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="6956"/>
+        <location filename="../mywidget.cpp" line="4195"/>
         <source>Eject Udisk</source>
         <translation>退出U盘</translation>
     </message>
@@ -3267,6 +3271,26 @@ Discharge)、降额并网(Drop and Connected)、待机(Standby)、离网充电(G
         <translation>查看下一日的数据，点击后将显示当前日的下一日的数据。</translation>
     </message>
     <message>
+        <location filename="../mywidget.cpp" line="4178"/>
+        <source>To export history records, click here to export history records to the USB flash drive. The file exported to the USB flash drive is HistoryRecord.csv, which needs to be opened with Excel.</source>
+        <translation>导出历史记录，点击此处将会导出历史记录到U盘里,导出到U盘的文件为HistoryRecord.csv，此文件需要用Excel打开。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4184"/>
+        <source>Export operation log. Click here to export operation log to U disk.</source>
+        <translation>导出操作日志，点击此处将会导出操作日志到U盘里。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4190"/>
+        <source>Export the battery statistics. Click here to export the battery statistics to the U disk.</source>
+        <translation>导出电量统计表，点击此处将会导出电量统计表到U盘里。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4196"/>
+        <source>Exit the U disk and unmount the U disk mounted to the display control to ensure that the data in the U disk will not be damaged.</source>
+        <translation>退出U盘，将挂载到显控的U盘取消挂载，以保证U盘数据不会损坏。</translation>
+    </message>
+    <message>
         <location filename="../mywidget.cpp" line="4201"/>
         <source>Choose the first module to view the real-time status of the first module</source>
         <translation>选中第一个模块，查看第一个模块的实时状态</translation>
@@ -3426,6 +3450,10 @@ Discharge)、降额并网(Drop and Connected)、待机(Standby)、离网充电(G
         <location filename="../mywidget.cpp" line="4160"/>
         <location filename="../mywidget.cpp" line="4166"/>
         <location filename="../mywidget.cpp" line="4172"/>
+        <location filename="../mywidget.cpp" line="4178"/>
+        <location filename="../mywidget.cpp" line="4184"/>
+        <location filename="../mywidget.cpp" line="4190"/>
+        <location filename="../mywidget.cpp" line="4196"/>
         <location filename="../mywidget.cpp" line="4201"/>
         <location filename="../mywidget.cpp" line="4206"/>
         <source>OK</source>

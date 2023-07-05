@@ -1373,21 +1373,25 @@ enable</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="6866"/>
+        <location filename="../mywidget.cpp" line="4177"/>
         <source>HistoricalFailure</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="6889"/>
+        <location filename="../mywidget.cpp" line="4183"/>
         <source>OperationLog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="6927"/>
+        <location filename="../mywidget.cpp" line="4189"/>
         <source>Coulombmeter report</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="6956"/>
+        <location filename="../mywidget.cpp" line="4195"/>
         <source>Eject Udisk</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2472,6 +2476,10 @@ B1 - A1 ≥ 30 %
         <location filename="../mywidget.cpp" line="4160"/>
         <location filename="../mywidget.cpp" line="4166"/>
         <location filename="../mywidget.cpp" line="4172"/>
+        <location filename="../mywidget.cpp" line="4178"/>
+        <location filename="../mywidget.cpp" line="4184"/>
+        <location filename="../mywidget.cpp" line="4190"/>
+        <location filename="../mywidget.cpp" line="4196"/>
         <location filename="../mywidget.cpp" line="4201"/>
         <location filename="../mywidget.cpp" line="4206"/>
         <source>OK</source>
@@ -3290,6 +3298,26 @@ B1 - A1 ≥ 30 %
     <message>
         <location filename="../mywidget.cpp" line="4172"/>
         <source>To view the data of the next day. Click to display the data of the next day of the current day.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4178"/>
+        <source>To export history records, click here to export history records to the USB flash drive. The file exported to the USB flash drive is HistoryRecord.csv, which needs to be opened with Excel.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4184"/>
+        <source>Export operation log. Click here to export operation log to U disk.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4190"/>
+        <source>Export the battery statistics. Click here to export the battery statistics to the U disk.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4196"/>
+        <source>Exit the U disk and unmount the U disk mounted to the display control to ensure that the data in the U disk will not be damaged.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
