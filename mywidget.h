@@ -244,61 +244,47 @@ public:
 
     /***************************DC/AC参数****************************/
     QPushButton *Grid_connected_mode_explain;//并网方式说明
-    Specification *Grid_connected_mode;
-
     QPushButton *Constant_power_explain;     //功率说明
-    Specification *Constant_power;
-
     QPushButton *Charging_and_discharging_explain;  //充放电说明
-    Specification *Charging_and_discharging;
-
     QPushButton *Work_mode_explain;  //工作模式说明
-    Specification *Work_mode;
-
     QPushButton *Output_power_factor_explain;    //输出功率因素说明
-    Specification *Output_power_factor;
-
     QPushButton *Output_reactive_power_explain;  //输出无功功率说明
-    Specification *Output_reactive_power;
-
     QPushButton *Constant_current_explain;  //恒流说明
-    Specification *Constant_current;
-
     QPushButton *Constant_voltage_explain; //恒压说明
-    Specification *Constant_voltage;
-
     QPushButton *Control_mode_explain;  //控制模式说明
-    Specification *Control_mode;
-
     QPushButton *Machine_number_explain;    //设备号说明
-    Specification *Machine_number;
-
     QPushButton *Parallel_explain;  //并机说明
-    Specification *Parallel;
-
     QPushButton *Unbalance_power_enable_explain;    //功率不平衡使能说明
-    Specification *Unbalance_power_enable;
 
+
+    Specification *Grid_connected_mode;
+    Specification *Constant_power;
+    Specification *Charging_and_discharging;
+    Specification *Work_mode;
+    Specification *Output_power_factor;
+    Specification *Output_reactive_power;
+    Specification *Constant_current;
+    Specification *Constant_voltage;
+    Specification *Control_mode;
+    Specification *Machine_number;
+    Specification *Parallel;
+    Specification *Unbalance_power_enable;
     /***************************DC参数****************************/
     QPushButton *Work_parttern_explain; //DCDC工作模式说明
-    Specification *Work_parttern;
-
     QPushButton *Boost_or_Buck_explain; //升/降压说明
-    Specification *Boost_or_Buck;
-
     QPushButton *Bat_Charging_or_discharging_Model_explain; //电池充放电模式说明
-    Specification *Bat_Charging_or_discharging_Model;
-
     QPushButton *DCDC_Capacity_explain; //DCDC容量说明
-    Specification *DCDC_Capacity;
-
     QPushButton *Battery_position_explain; //电池位置说明
-    Specification *Battery_position;
-
     QPushButton *Voltage_level_explain; //电压等级说明
-    Specification *Voltage_level;
-
     QPushButton *Current_value_explain; //电流值说明
+
+
+    Specification *Work_parttern;
+    Specification *Boost_or_Buck;
+    Specification *Bat_Charging_or_discharging_Model;
+    Specification *DCDC_Capacity;
+    Specification *Battery_position;
+    Specification *Voltage_level;
     Specification *Current_value;
 
     /***************************电池设置****************************/
@@ -1033,6 +1019,8 @@ private:
     void Data_Report_delete();//数据报表 释放 说明
     void HistoryRecord_delete();//历史数据 释放 说明
     void OperationLog_tab_delete();//操作日志 释放 说明
+    void DC_AC_Parameter_tab_delete();//DCAC参数 释放 说明
+    void DCDC_Paramter_tab_delete();//DCDC参数 释放 说明
 
 private slots:
     void on_UI_MenuBtn_clicked();//转到槽

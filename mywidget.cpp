@@ -727,6 +727,33 @@ void MyWidget::OperationLog_tab_delete()
     delete EventRecord11;
     delete EventRecord12;
 }
+/************DC/AC参数 释放 说明************/
+void MyWidget::DC_AC_Parameter_tab_delete()
+{
+    delete Grid_connected_mode;
+    delete Constant_power;
+    delete Charging_and_discharging;
+    delete Work_mode;
+    delete Output_power_factor;
+    delete Output_reactive_power;
+    delete Constant_current;
+    delete Constant_voltage;
+    delete Control_mode;
+    delete Machine_number;
+    delete Parallel;
+    delete Unbalance_power_enable;
+}
+/************DCDC参数 释放 说明************/
+void MyWidget::DCDC_Paramter_tab_delete()
+{
+    delete Work_parttern;
+    delete Boost_or_Buck;
+    delete Bat_Charging_or_discharging_Model;
+    delete DCDC_Capacity;
+    delete Battery_position;
+    delete Voltage_level;
+    delete Current_value;
+}
 
 /********************************************************
  * 初始化界面
@@ -798,6 +825,8 @@ void MyWidget::ChangeLanguage_btn_clicked()
     Data_Report_delete();//释放 数据报表
     HistoryRecord_delete();//释放 历史记录
     OperationLog_tab_delete();//释放 操作日志
+    DC_AC_Parameter_tab_delete();//释放 DC/AC参数
+    DCDC_Paramter_tab_delete();//释放 DC/DC参数
     UIPageInit();       //初始化界面
 }
 //函数关联
@@ -2711,64 +2740,64 @@ void MyWidget::MPSState(QTableWidget *myTable)
 void MyWidget::DC_AC_Parameter_tab(QTableWidget *myTable)
 {
     Grid_connected_mode = new Specification(this,Grid_connected_mode_explain, myTable, 0, 1, \
-                                            "automatic", "Grid connected mode of PCS", \
-                                            "这是PCS并网方式，一共有三项可选：自动(automatic)，并网(On)，离网(Off),选择'自动'时将自动识别当前的并网方式\n并网:与相邻电力系统发送电气连接，并进行功率交换(如与电网连接)\n离网：不依赖电网而独立运行(不接电网)\nThis is the PCS grid connection mode, there are three options: automatic(automatic), On(On), Off(Off), select 'automatic' will automatically identify the current grid connection mode \n grid connection: send electrical connection with the adjacent power system, and carry out power exchange (such as connection with the grid)\n off-grid: To operate independently of the grid (not connected to the grid).");
+                                            tr("automatic"), tr("Grid connected mode of PCS"), \
+                                            tr("    When automatic and off-grid is selected, it will automatically identify and switch and off-grid. When the voltage on the grid side is normal, the contactor on the grid side will close, and the machine is in grid-connected mode (PQ).When the grid is out of power, the grid side contactor will be disconnected, and the machine is in off-grid mode (VF).\n   When the grid-connected mode is selected, and the grid side voltage is normal, the grid side contactor will close, and the machine is in grid-connected mode (PQ);If the power grid loses power, the machine will give an alarm warning of the power grid low voltage.\n    When off-grid mode is selected, the machine will disconnect the grid side contactor, and the machine is in off-grid mode (VF)."));
     Grid_connected_mode->add_Specification();
 
     Constant_power = new Specification(this,Constant_power_explain, myTable, 1, 1, \
-                                       "0", "Constant power(AC)", \
-                                       "这是恒功率，可以通过修改这项数值来设置机器的功率,当控制功率方式选择正负功率(CP_N&P)时,正数表示放电，负数表示充电\nThis is constant power, and the power of the machine can be set by modifying this value. When the power control mode is positive and negative (CP_N&P), the positive number means discharge and the negative number means charge.");
+                                       tr("0"), tr("Constant power(AC)"), \
+                                       tr("    This is the power setting of the AC side. The charging and discharging power of the AC side can be controlled by modifying the value of this item.When advanced Settings control power mode select constant power mode (CP_N&P), positive value indicates discharge, negative value indicates charging.\n    For example, set -5, indicating that the AC side will charge the battery with a power of -5kW, due to the loss of the inverter, the power on the DC side will be less than the power on the AC side.\n    For example, set 5, indicating that the AC side will be 5kW power output, due to the loss of the inverter, the DC side of the power will be greater than the AC side of the power."));
     Constant_power->add_Specification();
 
     Charging_and_discharging = new Specification(this,Charging_and_discharging_explain, myTable, 2, 1, \
-                                                 "Charge", "Charging and discharging", \
-                                                 "这是充放电，一共有两项可选：充电(Charge)，放电(Discharge)，根据此处选择决定是充电还是放电，当控制功率方式选择恒功率(CP_P)时，此项可调\nThis is Charge and Discharge, and there are two options: charge(Charge) and discharge(Discharge). Charge or discharge can be determined according to the choice here. When the power control mode is Constant power(CP_P), this option can be adjusted.");
+                                                 tr("Charge"), tr("Charging and discharging"), \
+                                                 tr("Reserve."));
     Charging_and_discharging->add_Specification();
 
     Work_mode = new Specification(this,Work_mode_explain, myTable, 3, 1, \
-                                  "Manual", "Operational mode", \
-                                  "这是工作模式，有三项可选：自发自用(System for self-use)，电池优先(Battery priority)，削峰填谷(Peak shaving)\n选择自发自用模式时，优先给负载供电\n选择电池优先模式时，优先给电池充电\n削峰填谷模式时，用电高峰时优先使用电池给负载供电，用电低谷时优先给电池充电\nThis is the working mode with three options: System for self use, Battery priority, and Peak shaving; When selecting the self use mode, priority is given to supplying power to the load; When selecting battery priority mode, priority is given to charging the battery; During peak shaving and valley filling mode, priority is given to using batteries to supply power to the load during peak electricity usage, and to charging batteries during low electricity usage.");
+                                  tr("Manual"), tr("Operational mode"), \
+                                  tr("这是工作模式，有三项可选：自发自用(System for self-use)，电池优先(Battery priority)，削峰填谷(Peak shaving)\n选择自发自用模式时，优先给负载供电\n选择电池优先模式时，优先给电池充电\n削峰填谷模式时，用电高峰时优先使用电池给负载供电，用电低谷时优先给电池充电\nThis is the working mode with three options: System for self use, Battery priority, and Peak shaving; When selecting the self use mode, priority is given to supplying power to the load; When selecting battery priority mode, priority is given to charging the battery; During peak shaving and valley filling mode, priority is given to using batteries to supply power to the load during peak electricity usage, and to charging batteries during low electricity usage."));
     Work_mode->add_Specification();
 
     Output_power_factor = new Specification(this,Output_power_factor_explain, myTable, 4, 1, \
-                                            "1", "Output power factor", \
-                                            "这是输出功率因数，是用来衡量电气设备输出效率高低的一个系数，不可调\nThis is the output power factor, which is a coefficient used to measure the output efficiency of electrical equipment and cannot be adjusted.");
+                                            tr("1"), tr("Output power factor"), \
+                                            tr("    The power factor Pf can be modified. The power factor is equal to the ratio of active power and reactive power. Positive value indicates reactive power lead and negative value indicates reactive power lag.\n    The power factor is a coefficient used to measure the output efficiency of electrical equipment, and the power factor is equal to the ratio of active power to reactive power. When the output reactive power factor is selected in the advanced settings 'system Settings' page, this output power factor can be modified to control the output of active power and reactive power."));
     Output_power_factor->add_Specification();
 
     Output_reactive_power = new Specification(this,Output_reactive_power_explain, myTable, 5, 1, \
-                                              "1", "Output reactive power", \
-                                              "这是输出无功功率，它表达了输出交流电源能量与磁场或电场能量交换的最大速率，不可调\nThis is the output reactive power, which expresses the maximum rate at which the output AC power source energy is exchanged with the magnetic or electric field energy and is not adjustable.");
+                                              tr("1"), tr("Output reactive power"), \
+                                              tr("    This parameter can change the reactive power Q, positive value indicates reactive power lead, negative value indicates reactive power lag."));
     Output_reactive_power->add_Specification();
 
     Constant_current = new Specification(this,Constant_current_explain, myTable, 6, 1, \
-                                         "100", "Constant current", \
-                                         "这是恒流值，当控制功率方式选择恒流(CC)时，此项可调，电流值稳定为此值\nThis is the constant current value, when the control power mode selects constant current (CC), this can be adjusted, the current value is stable for this value.");
+                                         tr("100"), tr("Constant current"), \
+                                         tr("    When the control power mode of the advanced Settings page is set to constant current (CC), modify the constant current value, then the machine will charge and discharge the battery with the current value, positive value represents discharge, negative value represents charging."));
     Constant_current->add_Specification();
 
     Constant_voltage = new Specification(this,Constant_voltage_explain, myTable, 7, 1, \
-                                         "600", "Constant voltage", \
-                                         "这是恒压值，当控制功率方式选择恒压(CV)时，此项可调，电压值稳定为此值\nThis is the constant voltage value, when the control power mode selects constant voltage (CV), this can be adjusted, the voltage value is stable for this value.");
+                                         tr("600"), tr("Constant voltage"), \
+                                         tr("    When the control power mode of the Advanced Settings 'Function Settings' page is set to constant voltage (CV), modify the constant voltage value, the machine will operate at a constant voltage value, and the machine will be used as a constant voltage source."));
     Constant_voltage->add_Specification();
 
     Control_mode = new Specification(this,Control_mode_explain, myTable, 0, 4, \
-                                     "Local", "Control mode", \
-                                     "这是工作模式，有两项可选：本地(Local)，远程(Remote)，选择'本地'时，可在本地修改系统参数，选择'远程'时，可通过EMS、485等进行远程修改参数\nThis is the working mode, there are two options: Local (Local), Remote (Remote), select 'local', you can modify the system parameters locally, select 'remote', you can modify the parameters remotely through EMS, 485, etc.");
+                                     tr("Local"), tr("Control mode"), \
+                                     tr("    This is the control mode;If the local mode is selected, the dispatcher (EMS, RS485) can only monitor data but cannot control PCS. If the remote mode is selected,PCS parameter setting is disabled and the dispatcher (EMS,  RS485) can read and write data."));
     Control_mode->add_Specification();
 
     Machine_number = new Specification(this,Machine_number_explain, myTable, 1, 4, \
-                                       "Master_00", "Machine number", \
-                                       "这是设备号，可以选择主机(Master)或者从机(Slave)，其中主机为Master_00，其余八项Slave_01~Slave_08均为从机\nThis is the device number, and you can choose host(Master) or slave(Slave), where master is Master_00 and Slave_01 to Slave_08 are slaves.");
+                                       tr("Master_00"), tr("Machine number"), \
+                                       tr("    This is the device number, and you can choose host(Master) or slave(Slave), where master is Master_00 and Slave_01 to Slave_08 are slaves."));
     Machine_number->add_Specification();
 
     Parallel = new Specification(this,Parallel_explain, myTable, 2, 4, \
-                                 "Disable", "Parallel", \
-                                 "这是并机模式，有两项可选：使能(Enable)，禁止(Disable)，开启并机时，可将多台设备联合到一起为负载供电\nThis is the parallel mode, with two options: enabled(Enable), disabled(Disable), and when enabled, multiple devices can be combined to power the load.");
+                                 tr("Disable"), tr("Parallel"), \
+                                 tr("Reserve."));
     Parallel->add_Specification();
 
     Unbalance_power_enable = new Specification(this,Unbalance_power_enable_explain, myTable, 3, 4, \
-                                               "Disable", "Run time enable", \
-                                               "这是运行时段使能，有两项可选：使能(Enable)，禁止(Disable)\nThis is to Enable the run time function. Two options are available: Enable and Disable.");
-    Unbalance_power_enable->add_Specification();
+                                               tr("Disable"), tr("Run time enable"), \
+                                               tr("    This is to Enable the run time function. Two options are available: Enable and Disable."));
+    Unbalance_power_enable->add_Specification();//这是运行时段使能，有两项可选：使能(Enable)，禁止(Disable)\n
 
 }
 /************************DCDC参数页说明*********************/
@@ -2776,45 +2805,45 @@ void MyWidget::DCDC_Paramter_tab(QTableWidget *myTable)
 {
     //DCDC工作模式说明
     Work_parttern = new Specification(this,Work_parttern_explain, myTable, 0, 1, \
-                                      "MPPT", "Work parttern", \
-                                      "这是'DC'模块的工作模式，有休息(Rest)、恒压(CV)、恒流(CC)、追踪最佳功率点(MPPT)四种状态\nThis is the working mode of 'DC' module, which has four states: Rest (Rest), constant voltage (CV), constant current (CC) and tracking optimal power point (MPPT).");
-    Work_parttern->add_Specification();
+                                      tr("MPPT"), tr("Work parttern"), \
+                                      tr("This is the working mode of 'DC' module, which has four states: Rest (Rest), constant voltage (CV), constant current (CC) and tracking optimal power point (MPPT)."));
+    Work_parttern->add_Specification();//这是'DC'模块的工作模式，有休息(Rest)、恒压(CV)、恒流(CC)、追踪最佳功率点(MPPT)四种状态\n
 
     //升/降压说明
     Boost_or_Buck = new Specification(this,Boost_or_Buck_explain, myTable, 1, 1, \
-                                      "Buck", "Boost or Buck", \
-                                      "这是'DC'模块的运行模式，有休息(Rest)、降压(Buck)、升压(Boost)三种模式，可根据项目需求，修改成休息(Rest)、降压(Buck)或者升压(Boost)模式\nThis is the operation mode of 'DC' module, which has three modes: Rest, Buck and Boost. It can be modified into Rest, Buck or Boost mode according to project requirements.");
-    Boost_or_Buck->add_Specification();
+                                      tr("Buck"), tr("Boost or Buck"), \
+                                      tr("This is the operation mode of 'DC' module, which has three modes: Rest, Buck and Boost. It can be modified into Rest, Buck or Boost mode according to project requirements."));
+    Boost_or_Buck->add_Specification();//这是'DC'模块的运行模式，有休息(Rest)、降压(Buck)、升压(Boost)三种模式，可根据项目需求，修改成休息(Rest)、降压(Buck)或者升压(Boost)模式\n
 
     //电池充放电模式说明
     Bat_Charging_or_discharging_Model = new Specification(this,Bat_Charging_or_discharging_Model_explain, myTable, 2, 1, \
-                                                          "Discharging", "Bat Charging or discharging Model", \
-                                                          "这是电池充放电模式，有充电(Charging)，放电(Discharging)两种模式\nThis is the battery Charging and Discharging mode. There are two charging and discharging modes.");
-    Bat_Charging_or_discharging_Model->add_Specification();
+                                                          tr("Discharging"), tr("Bat Charging or discharging Model"), \
+                                                          tr("This is the battery Charging and Discharging mode. There are two charging and discharging modes."));
+    Bat_Charging_or_discharging_Model->add_Specification();//这是电池充放电模式，有充电(Charging)，放电(Discharging)两种模式\n
 
     //DCDC容量说明
     DCDC_Capacity = new Specification(this,DCDC_Capacity_explain, myTable, 3, 1, \
-                                      "50", "DCDC Capacity", \
-                                      "这是'DC'模块的容量\nThis is the capacity of the 'DC' module.");
-    DCDC_Capacity->add_Specification();
+                                      tr("50"), tr("DCDC Capacity"), \
+                                      tr("This is the capacity of the 'DC' module."));
+    DCDC_Capacity->add_Specification();//这是'DC'模块的容量\n
 
     //电池位置说明
     Battery_position = new Specification(this,Battery_position_explain, myTable, 0, 4, \
-                                         "LowSide", "Battery position", \
-                                         "这是当前电池所处位置，需要根据当前选择的'DC'模块运行模式来进行选择；如果选择了降压(Buck)，请选择低压侧(LowSide)；如果选择了升压(Boost)，请选择高压侧(HightSide)；如果选择了休息(Rest)，请选择无(NON)\nThis is the position of the current battery, which needs to be selected according to the operation mode of the 'DC' module currently selected. If Buck is selected, select the LowSide. If Boost is selected, select HightSide. If Rest is selected, please select NON.");
-    Battery_position->add_Specification();
+                                         tr("LowSide"), tr("Battery position"), \
+                                         tr("This is the position of the current battery, which needs to be selected according to the operation mode of the 'DC' module currently selected. If Buck is selected, select the LowSide. If Boost is selected, select HightSide. If Rest is selected, please select NON."));
+    Battery_position->add_Specification();//这是当前电池所处位置，需要根据当前选择的'DC'模块运行模式来进行选择；如果选择了降压(Buck)，请选择低压侧(LowSide)；如果选择了升压(Boost)，请选择高压侧(HightSide)；如果选择了休息(Rest)，请选择无(NON)\n
 
     //电压等级说明
     Voltage_level = new Specification(this,Voltage_level_explain, myTable, 1, 4, \
-                                      "300", "Voltage level", \
-                                      "这是'DC'模块的电压等级\nThis is the voltage level of the 'DC' module.");
-    Voltage_level->add_Specification();
+                                      tr("300"), tr("Voltage level"), \
+                                      tr("This is the voltage level of the 'DC' module."));
+    Voltage_level->add_Specification();//这是'DC'模块的电压等级\n
 
     //电流值说明
     Current_value = new Specification(this,Current_value_explain, myTable, 2, 4, \
-                                      "60", "Current value", \
-                                      "这是'DC'模块的电流值\nThis is the current value of the 'DC' module.");
-    Current_value->add_Specification();
+                                      tr("60"), tr("Current value"), \
+                                      tr("This is the current value of the 'DC' module."));
+    Current_value->add_Specification();//这是'DC'模块的电流值\n
 }
 
 //电池设置页说明
