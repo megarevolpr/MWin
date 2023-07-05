@@ -68,6 +68,7 @@
     </message>
     <message>
         <location filename="../mywidget.ui" line="230"/>
+        <location filename="../mywidget.cpp" line="4115"/>
         <source>Battery type</source>
         <translation type="unfinished"></translation>
     </message>
@@ -129,11 +130,13 @@
     </message>
     <message>
         <location filename="../mywidget.ui" line="246"/>
+        <location filename="../mywidget.cpp" line="4174"/>
         <source>Host Address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="262"/>
+        <location filename="../mywidget.cpp" line="4240"/>
         <source>ProtocolVersion</source>
         <translation type="unfinished"></translation>
     </message>
@@ -144,6 +147,7 @@
     </message>
     <message>
         <location filename="../mywidget.ui" line="294"/>
+        <location filename="../mywidget.cpp" line="4180"/>
         <source>serial port 1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -158,21 +162,25 @@
     </message>
     <message>
         <location filename="../mywidget.ui" line="310"/>
+        <location filename="../mywidget.cpp" line="4246"/>
         <source>UserPassPort</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="326"/>
+        <location filename="../mywidget.cpp" line="4127"/>
         <source>Power control type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="342"/>
+        <location filename="../mywidget.cpp" line="4186"/>
         <source>serial port 2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="358"/>
+        <location filename="../mywidget.cpp" line="4252"/>
         <source>RootPassport</source>
         <translation type="unfinished"></translation>
     </message>
@@ -183,16 +191,19 @@
     </message>
     <message>
         <location filename="../mywidget.ui" line="395"/>
+        <location filename="../mywidget.cpp" line="4192"/>
         <source>serial port 3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="411"/>
+        <location filename="../mywidget.cpp" line="4258"/>
         <source>Language</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="432"/>
+        <location filename="../mywidget.cpp" line="4138"/>
         <source>Output power limit</source>
         <translation type="unfinished"></translation>
     </message>
@@ -211,6 +222,7 @@
     </message>
     <message>
         <location filename="../mywidget.ui" line="448"/>
+        <location filename="../mywidget.cpp" line="4198"/>
         <source>serial port 4</source>
         <translation type="unfinished"></translation>
     </message>
@@ -221,21 +233,25 @@
     </message>
     <message>
         <location filename="../mywidget.ui" line="501"/>
+        <location filename="../mywidget.cpp" line="4204"/>
         <source>serial port 5</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="517"/>
+        <location filename="../mywidget.cpp" line="4270"/>
         <source>Sounds</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="538"/>
+        <location filename="../mywidget.cpp" line="4150"/>
         <source>Charge SOC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="554"/>
+        <location filename="../mywidget.cpp" line="4210"/>
         <source>Can port 1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -246,22 +262,19 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="570"/>
-        <source>DryContact</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../mywidget.ui" line="591"/>
         <source>Discharge SOC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="607"/>
+        <location filename="../mywidget.cpp" line="4216"/>
         <source>Can port 2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="644"/>
+        <location filename="../mywidget.cpp" line="4162"/>
         <source>DG capacity</source>
         <translation type="unfinished"></translation>
     </message>
@@ -283,11 +296,13 @@
     </message>
     <message>
         <location filename="../mywidget.ui" line="692"/>
+        <location filename="../mywidget.cpp" line="4168"/>
         <source>Energy priority</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="708"/>
+        <location filename="../mywidget.cpp" line="4228"/>
         <source>ForceCharge start</source>
         <translation type="unfinished"></translation>
     </message>
@@ -309,6 +324,7 @@
     </message>
     <message>
         <location filename="../mywidget.ui" line="756"/>
+        <location filename="../mywidget.cpp" line="4234"/>
         <source>ForceCharge top</source>
         <translation type="unfinished"></translation>
     </message>
@@ -917,7 +933,7 @@
     <message>
         <location filename="../mywidget.ui" line="102"/>
         <location filename="../mywidget.ui" line="2456"/>
-        <location filename="../mywidget.cpp" line="862"/>
+        <location filename="../mywidget.cpp" line="861"/>
         <source>Change Language</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1377,25 +1393,25 @@ enable</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="6866"/>
-        <location filename="../mywidget.cpp" line="4977"/>
+        <location filename="../mywidget.cpp" line="4971"/>
         <source>HistoricalFailure</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="6889"/>
-        <location filename="../mywidget.cpp" line="4983"/>
+        <location filename="../mywidget.cpp" line="4977"/>
         <source>OperationLog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="6927"/>
-        <location filename="../mywidget.cpp" line="4989"/>
+        <location filename="../mywidget.cpp" line="4983"/>
         <source>Coulombmeter report</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="6956"/>
-        <location filename="../mywidget.cpp" line="4995"/>
+        <location filename="../mywidget.cpp" line="4989"/>
         <source>Eject Udisk</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1789,13 +1805,13 @@ B1 - A1 ≥ 30 %
     </message>
     <message>
         <location filename="../mywidget.ui" line="8304"/>
-        <location filename="../mywidget.cpp" line="5063"/>
+        <location filename="../mywidget.cpp" line="5057"/>
         <source>DHCP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="8317"/>
-        <location filename="../mywidget.cpp" line="5043"/>
+        <location filename="../mywidget.cpp" line="5037"/>
         <source>STATIC</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1904,7 +1920,7 @@ B1 - A1 ≥ 30 %
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="870"/>
+        <location filename="../mywidget.cpp" line="869"/>
         <source>切换语言</source>
         <translation>Change Language</translation>
     </message>
@@ -2504,7 +2520,8 @@ B1 - A1 ≥ 30 %
         <location filename="../mywidget.cpp" line="1981"/>
         <location filename="../mywidget.cpp" line="1985"/>
         <location filename="../mywidget.cpp" line="1989"/>
-        <location filename="../mywidget.cpp" line="4931"/>
+        <location filename="../mywidget.cpp" line="4925"/>
+        <location filename="../mywidget.cpp" line="4930"/>
         <location filename="../mywidget.cpp" line="4936"/>
         <location filename="../mywidget.cpp" line="4942"/>
         <location filename="../mywidget.cpp" line="4948"/>
@@ -2515,11 +2532,10 @@ B1 - A1 ≥ 30 %
         <location filename="../mywidget.cpp" line="4978"/>
         <location filename="../mywidget.cpp" line="4984"/>
         <location filename="../mywidget.cpp" line="4990"/>
-        <location filename="../mywidget.cpp" line="4996"/>
-        <location filename="../mywidget.cpp" line="5001"/>
-        <location filename="../mywidget.cpp" line="5006"/>
-        <location filename="../mywidget.cpp" line="5043"/>
-        <location filename="../mywidget.cpp" line="5063"/>
+        <location filename="../mywidget.cpp" line="4995"/>
+        <location filename="../mywidget.cpp" line="5000"/>
+        <location filename="../mywidget.cpp" line="5037"/>
+        <location filename="../mywidget.cpp" line="5057"/>
         <source>OK</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3468,12 +3484,195 @@ This is the working mode with three options: System for self use, Battery priori
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="5043"/>
+        <location filename="../mywidget.cpp" line="4115"/>
+        <source>Lithium</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4116"/>
+        <source>Choose the battery type according to the actual situation, there are two types of Lithium and LeadAcid to choose from.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4121"/>
+        <source>BMS Comm type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4122"/>
+        <source>Set the communication mode between the battery, RS485 or CAN communication or Ethernet can be selected according to the situation.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4128"/>
+        <source>Set the control power mode, including constant voltage (CV), constant current (CC), constant power (CP_P), and positive and negative power (CP_N&amp;P).
+If constant voltage (CV) mode is selected, the converter will operate in constant voltage mode.
+If constant current (CC) mode is selected, the converter will operate in constant current mode.
+If you choose constant power (CP_P) or positive and negative power (CP_N&amp;P) mode: you can set the power size at &apos;constant power&apos;, the value is the size of the power size, positive for discharge, negative for charging.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4133"/>
+        <source>EMS Comm type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4134"/>
+        <source>You CAN set the communication mode of the EMS, including RS485,CAN, and Ethernet. Select one communication mode that can be read and written remotely, and the other two communication modes can be read only.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4139"/>
+        <source>HMI Limits the range of power Settings on the AC side.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4144"/>
+        <source>Auto</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4144"/>
+        <source>BAT protocol</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4145"/>
+        <source>This is the battery protocol that parses the packets sent by the BMS according to the selected battery protocol.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4151"/>
+        <source>This is the charging SOC. When the battery SOC is below 20%, the battery will start charging until the charging reaches the discharging SOC before allowing the battery to discharge again.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4156"/>
+        <source>Disharge SOC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4157"/>
+        <source>This is the discharge SOC. When the battery SOC is lower than the charging SOC, after the battery starts charging, it will be charged to the discharge SOC (50%) before allowing the battery to discharge again.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4163"/>
+        <source>This is the maximum allowable input power of diesel generator, which shall not exceed the model capacity.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4168"/>
+        <source>Bat&gt;Grid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4169"/>
+        <source>Energy priority: In automatic self-use mode, if you choose Battery &gt; power grid, the battery is preferred to power the load. If you choose Grid &gt; Battery, power is supplied to the power grid first.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4175"/>
+        <source>This is the device address, which defaults to 1 and can be adjusted from 1 to 255 to match the host address during EMS communication.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4181"/>
+        <source>This is serial port 1, there are six options, namely 1200, 2400, 4800, 9600, 19200, 38400, serial port 1 default baud rate is 9600 BPS, eight data bits, no check, one stop bit(8, N, 1).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4211"/>
+        <source>This is the CAN1 port, the baud rate of PCS internal communication, the default baud rate is 500kbps, eight data bits, no check, one stop bit(8, N, 1).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4217"/>
+        <source>This is the CAN2 port, the baud rate of communication between PCS and BMS, the default baud rate is 125, eight data bits, no check, one stop bit (8, N, 1).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4222"/>
+        <source>Release Charging Ban Sign</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4222"/>
+        <source>Follow battery</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4223"/>
+        <source>This is the release of the forbidden charge flag, when the battery SOC is below the selected value, there are four options: Follow battery, 95%, 90%, 85%.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4229"/>
+        <source>When the minimum battery voltage is lower than this value, switch to the battery priority mode first, and the AC side will charge the battery with 10kw power.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4235"/>
+        <source>When the maximum battery voltage is higher than this value, exit the battery priority mode and return to the pre-strong charge mode.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4241"/>
+        <source>This is the protocol version number, which is used to view the current protocol version. The protocol version number defaults to V1.0.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4247"/>
+        <source>This is the user password, you can reset the user password, the default user password 123456, (note: User password must be six digits).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4253"/>
+        <source>This is the super permission password, you can reset the super permission password, the default super permission password 888888, (Note: super permission password must be six digits).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4258"/>
+        <source>English</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4259"/>
+        <source>You can set the display language of the screen to Chinese or English. The system needs to restart before switching the language.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4264"/>
+        <source>upgrade</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4264"/>
+        <source>System_upgrade</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4265"/>
+        <source>Click to enter the system upgrade application and upgrade the system according to the upgrade document.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4270"/>
+        <source>Allow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4271"/>
+        <source>Set whether the display is enabled sound, which can be allowed(Allow) or prohibited(forbid).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="5037"/>
         <source>If this parameter is selected, static IP addresses are used</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="5063"/>
+        <location filename="../mywidget.cpp" line="5057"/>
         <source>If this parameter is selected, the automatically assigned IP address is used</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3856,72 +4055,92 @@ This is the working mode with three options: System for self use, Battery priori
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4931"/>
+        <location filename="../mywidget.cpp" line="4187"/>
+        <source>This is serial port 2, there are six options, namely 1200, 2400, 4800, 9600, 19200, 38400, serial port 2 default baud rate is 9600 BPS, eight data bits, no check, one stop bit(8, N, 1).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4193"/>
+        <source>This is serial port 3, there are six options, namely 1200, 2400, 4800, 9600, 19200, 38400, serial port 3 default baud rate is 9600 BPS, eight data bits, no check, one stop bit(8, N, 1).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4199"/>
+        <source>This is serial port 4, there are six options, namely 1200, 2400, 4800, 9600, 19200, 38400, serial port 4 default baud rate is 9600 BPS, eight data bits, no check, one stop bit(8, N, 1).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4205"/>
+        <source>This is serial port 5, there are six options, namely 1200, 2400, 4800, 9600, 19200, 38400, serial port 5 default baud rate is 9600 BPS, eight data bits, no check, one stop bit(8, N, 1).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4925"/>
         <source>Choose the first module to view the real-time data of the first module</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4936"/>
+        <location filename="../mywidget.cpp" line="4930"/>
         <source>Choose the second module to view the real-time data of the second module</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4942"/>
+        <location filename="../mywidget.cpp" line="4936"/>
         <source>To view the previous year&apos;s data, click on it to display the previous year&apos;s data for the current displayed year.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4948"/>
+        <location filename="../mywidget.cpp" line="4942"/>
         <source>To view the data for the next year, click on it to display the data for the next year of the current displayed year.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4954"/>
+        <location filename="../mywidget.cpp" line="4948"/>
         <source>To view the data of the previous month, click on it to display the data of the previous month of the current displayed month.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4960"/>
+        <location filename="../mywidget.cpp" line="4954"/>
         <source>To view the data for the next month, click to display the data for the next month of the current displayed month.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4966"/>
+        <location filename="../mywidget.cpp" line="4960"/>
         <source>To view the data of the previous day. Click to display the data of the previous day of the current day.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4972"/>
+        <location filename="../mywidget.cpp" line="4966"/>
         <source>To view the data of the next day. Click to display the data of the next day of the current day.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4978"/>
+        <location filename="../mywidget.cpp" line="4972"/>
         <source>To export history records, click here to export history records to the USB flash drive. The file exported to the USB flash drive is HistoryRecord.csv, which needs to be opened with Excel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4984"/>
+        <location filename="../mywidget.cpp" line="4978"/>
         <source>Export operation log. Click here to export operation log to U disk.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4990"/>
+        <location filename="../mywidget.cpp" line="4984"/>
         <source>Export the battery statistics. Click here to export the battery statistics to the U disk.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4996"/>
+        <location filename="../mywidget.cpp" line="4990"/>
         <source>Exit the U disk and unmount the U disk mounted to the display control to ensure that the data in the U disk will not be damaged.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="5001"/>
+        <location filename="../mywidget.cpp" line="4995"/>
         <source>Choose the first module to view the real-time status of the first module</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="5006"/>
+        <location filename="../mywidget.cpp" line="5000"/>
         <source>Choose the second module to view the real-time status of the second module</source>
         <translation type="unfinished"></translation>
     </message>

@@ -59,7 +59,7 @@
    <item row="0" column="0">
     <widget class="QStackedWidget" name="UI_stackedWidget">
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="BasicSet_page">
       <widget class="QWidget" name="layoutWidget">
@@ -567,7 +567,7 @@ color: rgb(255, 255, 255);</string>
               </item>
               <item row="6" column="6">
                <property name="text">
-                <string>DryContact</string>
+                <string/>
                </property>
                <property name="textAlignment">
                 <set>AlignCenter</set>
@@ -2613,7 +2613,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <enum>QFrame::Raised</enum>
            </property>
            <property name="currentIndex">
-            <number>3</number>
+            <number>1</number>
            </property>
            <widget class="QWidget" name="Host_page">
             <widget class="QPushButton" name="Bypass_Grid_btn">
@@ -3762,7 +3762,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                 <string notr="true"/>
                </property>
                <property name="currentIndex">
-                <number>1</number>
+                <number>0</number>
                </property>
                <widget class="QWidget" name="RT_Data_page">
                 <attribute name="title">

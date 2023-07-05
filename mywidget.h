@@ -551,88 +551,60 @@ public:
 
     /*************************功能设置*************************/
     QPushButton *Battery_type_explain;  //电池类型说明
-    Specification *Battery_type;
-
     QPushButton *BMS_Comm_type_explain; //电池通信方式说明
-    Specification *BMS_Comm_type;
-
     QPushButton *Power_control_type_explain;    //功率控制类型说明
-    Specification *Power_control_type;
-
     QPushButton *EMS_Comm_type_explain; //EMS通讯方式说明
-    Specification *EMS_Comm_type;
-
     QPushButton *Output_power_limit_explain;    //输出功率上限说明
-    Specification *Output_power_limit;
-
-    QPushButton *BAT_manufacturers_explain; //电池厂家说明
-    Specification *BAT_manufacturers;
-
+    QPushButton *BAT_manufacturers_explain; //电池协议说明
     QPushButton *Charge_SOC_explain;    //充电SOC说明
-    Specification *Charge_SOC;
-
     QPushButton *Disharge_SOC_explain;  //放电SOC说明
-    Specification *Disharge_SOC;
-
     QPushButton *DG_capacity_explain;   //柴发容量说明
-    Specification *DG_capacity;
-
     QPushButton *Energy_priority_explain;   //能量优先级说明
-    Specification *Energy_priority;
-
     QPushButton *Host_Address_explain;  //主机地址说明
-    Specification *Host_Address;
-
     QPushButton *serial_port_1_explain; //串口1说明
-    Specification *serial_port_1;
-
     QPushButton *serial_port_2_explain; //串口2说明
-    Specification *serial_port_2;
-
     QPushButton *serial_port_3_explain; //串口3说明
-    Specification *serial_port_3;
-
     QPushButton *serial_port_4_explain; //串口4说明
-    Specification *serial_port_4;
-
     QPushButton *serial_port_5_explain; //串口5说明
-    Specification *serial_port_5;
-
     QPushButton *Can_port_1_explain;    //CAN1说明
-    Specification *Can_port_1;
-
     QPushButton *Can_port_2_explain;    //CAN2说明
-    Specification *Can_port_2;
-
     QPushButton *Relese_Charge_mark_explain;    //释放充电标志说明
-    Specification *Relese_Charge_mark;
-
     QPushButton *ForceCharge_start_explain; //强充开启说明
-    Specification *ForceCharge_start;
-
     QPushButton *ForceCharge_top_explain;   // 强充结束说明
-    Specification *ForceCharge_top;
-
     QPushButton *ProtocolVersion_explain;   //协议版本说明
-    Specification *ProtocolVersion;
-
     QPushButton *UserPassPort_explain;  //用户密码说明
-    Specification *UserPassPort;
-
     QPushButton *RootPassport_explain;  //超级权限说明
-    Specification *RootPassport;
-
     QPushButton *Language_explain;  //语言说明
-    Specification *Language;
-
     QPushButton *System_upgrade_explain;    //系统升级说明
-    Specification *System_upgrade;
-
     QPushButton *Sounds_explain;    //声音说明
-    Specification *Sounds;
 
-    QPushButton *DryContact_explain;    //干接点说明
-    Specification *DryContact;
+    Specification *Battery_type;
+    Specification *BMS_Comm_type;
+    Specification *Power_control_type;
+    Specification *EMS_Comm_type;
+    Specification *Output_power_limit;
+    Specification *BAT_manufacturers;
+    Specification *Charge_SOC;
+    Specification *Disharge_SOC;
+    Specification *DG_capacity;
+    Specification *Energy_priority;
+    Specification *Host_Address;
+    Specification *serial_port_1;
+    Specification *serial_port_2;
+    Specification *serial_port_3;
+    Specification *serial_port_4;
+    Specification *serial_port_5;
+    Specification *Can_port_1;
+    Specification *Can_port_2;
+    Specification *Relese_Charge_mark;
+    Specification *ForceCharge_start;
+    Specification *ForceCharge_top;
+    Specification *ProtocolVersion;
+    Specification *UserPassPort;
+    Specification *RootPassport;
+    Specification *Language;
+    Specification *System_upgrade;
+    Specification *Sounds;
 
     /***************************系统参数**************************/
     QPushButton *Change_rate_of_power_explain;  //功率变化率说明
@@ -1020,6 +992,8 @@ private:
     void Battery_Setup_Tab_delete();//电池设置 释放 说明
     void AutoOperation_delete();//自动运行 释放 说明
     void SystemMessages_delete();//系统信息 释放 说明
+    void FunctionSet_delete();//功能设置 释放 说明
+
 
 private slots:
     void on_UI_MenuBtn_clicked();//转到槽
