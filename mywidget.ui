@@ -7056,7 +7056,7 @@ background-color: rgb(255, 0, 0);</string>
                 <bool>false</bool>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>2</number>
                </property>
                <widget class="QWidget" name="DCACParameterSet_page">
                 <attribute name="title">
@@ -7419,7 +7419,7 @@ Floating charge</string>
                           <cursorShape>ArrowCursor</cursorShape>
                          </property>
                          <property name="rowCount">
-                          <number>12</number>
+                          <number>10</number>
                          </property>
                          <property name="columnCount">
                           <number>2</number>
@@ -7436,8 +7436,6 @@ Floating charge</string>
                          <attribute name="verticalHeaderVisible">
                           <bool>false</bool>
                          </attribute>
-                         <row/>
-                         <row/>
                          <row/>
                          <row/>
                          <row/>
@@ -7524,7 +7522,7 @@ Floating charge</string>
                          </item>
                          <item row="8" column="0">
                           <property name="text">
-                           <string>Floating charge(V)</string>
+                           <string>Generator turn off SOC(B1)</string>
                           </property>
                           <property name="textAlignment">
                            <set>AlignCenter</set>
@@ -7536,22 +7534,6 @@ Floating charge</string>
                           </property>
                          </item>
                          <item row="9" column="0">
-                          <property name="text">
-                           <string>Equalized charge(V)</string>
-                          </property>
-                          <property name="textAlignment">
-                           <set>AlignCenter</set>
-                          </property>
-                         </item>
-                         <item row="10" column="0">
-                          <property name="text">
-                           <string>Generator turn off SOC(B1)</string>
-                          </property>
-                          <property name="textAlignment">
-                           <set>AlignCenter</set>
-                          </property>
-                         </item>
-                         <item row="11" column="0">
                           <property name="text">
                            <string>Generator turn on SOC(A1)</string>
                           </property>

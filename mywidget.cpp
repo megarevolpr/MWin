@@ -270,8 +270,8 @@ void MyWidget::MemoryAllocation()
     Discharge_Volt_upper_Limit_delta_explain = new QPushButton; //放电电压下限回差说明
     Charge_Current_Limit_explain = new QPushButton;  //充电电流限制说明
     Discharge_Current_Limit_explain = new QPushButton;  //放电电流限制说明
-    Floating_charge_explain = new QPushButton;   //浮充电压说明
-    Equalized_charge_explain = new QPushButton;   //均充电压说明
+//    Floating_charge_explain = new QPushButton;   //浮充电压说明
+//    Equalized_charge_explain = new QPushButton;   //均充电压说明
     Gen_turn_off_SOC_explain = new QPushButton;    //柴发关闭SOC说明
     Gen_turn_on_SOC_explain = new QPushButton;     //柴发开启SOC说明
 
@@ -754,6 +754,20 @@ void MyWidget::DCDC_Paramter_tab_delete()
     delete Voltage_level;
     delete Current_value;
 }
+/************电池设置 释放 说明************/
+void MyWidget::Battery_Setup_Tab_delete()
+{
+    delete DOD_OnGrid;
+    delete DOD_OffGrid;
+    delete Charge_Volt_Upper_Limit;
+    delete Charge_Volt_upper_Limit_delta;
+    delete Disc_Volt_lower_Limit;
+    delete Discharge_Volt_upper_Limit_delta;
+    delete Charge_Current_Limit;
+    delete Discharge_Current_Limit;
+    delete Gen_turn_off_SOC;
+    delete Gen_turn_on_SOC;
+}
 
 /********************************************************
  * 初始化界面
@@ -827,6 +841,7 @@ void MyWidget::ChangeLanguage_btn_clicked()
     OperationLog_tab_delete();//释放 操作日志
     DC_AC_Parameter_tab_delete();//释放 DC/AC参数
     DCDC_Paramter_tab_delete();//释放 DC/DC参数
+    Battery_Setup_Tab_delete();//释放 电池设置
     UIPageInit();       //初始化界面
 }
 //函数关联
@@ -2851,74 +2866,74 @@ void MyWidget::Battery_Setup_Tab(QTableWidget *myTable)
 {
     //并网DOD说明
     DOD_OnGrid = new Specification(this,DOD_OnGrid_explain, myTable, 0, 1, \
-                                   "90", "DOD OnGrid", \
-                                   "并网工况下电池的放电深度，默认90\nThe default discharge depth of the battery in grid-connected condition is 90.");
+                                   "90", tr("DOD_OnGrid"), \
+                                   tr("Grid-connected DOD, the depth of discharge allowed in grid-connected mode."));
     DOD_OnGrid->add_Specification();
 
     //离网DOD说明
     DOD_OffGrid = new Specification(this,DOD_OffGrid_explain, myTable, 1, 1, \
-                                    "90", "DOD OffGrid", \
-                                    "离网工况下电池的放电深度，默认90\nThe default discharge depth of the battery in off-grid mode is 90.");
+                                    "90", tr("DOD_OffGrid"), \
+                                    tr("Off-network DOD: Discharge depth allowed in off-network mode."));
     DOD_OffGrid->add_Specification();
 
     //充电电压上限说明
     Charge_Volt_Upper_Limit = new Specification(this,Charge_Volt_Upper_Limit_explain, myTable, 2, 1, \
-                                               "792", "Charge Volt Upper Limit", \
-                                               "充电时电池电压所允许达到的最大值\nThe maximum allowable battery voltage during charging.");
+                                               "792", tr("Charge_Vol_Up_Limit"), \
+                                                tr("This is the upper limit of the charging voltage. When the total battery voltage reaches this value during charging, the PCS will enter the constant voltage mode to prevent the battery from overcharging."));
     Charge_Volt_Upper_Limit->add_Specification();
 
     //充电电压上限回差说明
     Charge_Volt_upper_Limit_delta = new Specification(this,Charge_Volt_upper_Limit_delta_explain, myTable, 3, 1, \
-                                                      "10", "Charge Volt upper Limit delta", \
-                                                      "这是充电电压上限的回差，默认10\nThis is the return difference of the upper charge voltage, which defaults to 10.");
+                                                      "10", tr("Charge Volt upper Limit delta"), \
+                                                      tr("Upper return difference of charging voltage: When the total battery voltage reaches the upper limit of charging voltage during battery charging, the constant voltage mode is removed when the total battery voltage is lower than the upper limit of charging voltage minus the return difference."));
     Charge_Volt_upper_Limit_delta->add_Specification();
 
     //放电电压限制说明
     Disc_Volt_lower_Limit = new Specification(this,Disc_Volt_lower_Limit_explain, myTable, 4, 1, \
-                                              "616", "Disc Volt lower Limit", \
-                                              "放电时电池电压所允许的最小值\nThe minimum allowable battery voltage when discharging.");
+                                              "616", tr("Disc_Vol_lower_Limit"), \
+                                              tr("Lower limit of discharge voltage. When the total battery voltage reaches this value during discharge, MPS will enter the constant voltage mode to prevent battery overdischarge."));
     Disc_Volt_lower_Limit->add_Specification();
 
     //放电电压下限回差说明
     Discharge_Volt_upper_Limit_delta = new Specification(this,Discharge_Volt_upper_Limit_delta_explain, myTable, 5, 1, \
-                                                         "10", "Discharge Volt upper Limit delta", \
-                                                         "这是放电电压下限回差，默认10\nThis is the lower limit of discharge voltage, default 10.");
+                                                         "10", tr("Discharge Volt upper Limit delta"), \
+                                                         tr("When the battery is discharging and the total voltage of the battery reaches the lower limit of the discharge voltage, MPS enters the constant voltage mode. When the total voltage of the battery rises to the lower limit of the discharge voltage and the return difference value is added, the constant voltage mode is removed."));
     Discharge_Volt_upper_Limit_delta->add_Specification();
 
     //充电电流限制说明
     Charge_Current_Limit = new Specification(this,Charge_Current_Limit_explain, myTable, 6, 1, \
-                                             "240", "Charge Current Limit", \
-                                             "这是充电电流限制，系统充电时电流不允许超过这个值\nThis is the charge current limit, and the current is not allowed to exceed this value while the system is charging.");
+                                             "240", tr("Charge Current Limit"), \
+                                             tr("Upper limit of charging current, which is the maximum current allowed on the DC side of PCS to prevent charging overcurrent."));
     Charge_Current_Limit->add_Specification();
 
     //放电电流限制说明
     Discharge_Current_Limit = new Specification(this,Discharge_Current_Limit_explain, myTable, 7, 1, \
-                                                "240", "Discharge Current Limit", \
-                                                "这是放电电流限制，系统放电时电流不允许超过这个值\nThis is the discharge current limit, and the system is not allowed to discharge current beyond this value.");
+                                                "240", tr("Discharge Current Limit"), \
+                                                tr("The upper limit of discharge current, which is the maximum current allowed to discharge on the DC side of PCS to prevent discharge from overcurrent."));
     Discharge_Current_Limit->add_Specification();
 
-    //浮充电压说明
-    Floating_charge = new Specification(this,Floating_charge_explain, myTable, 8, 1, \
-                                        "600", "Floating charge", \
-                                        "这是电池浮充电压，默认600\nThis is the floating charge voltage of the battery. The default is 600.");
-    Floating_charge->add_Specification();
+//    //浮充电压说明
+//    Floating_charge = new Specification(this,Floating_charge_explain, myTable, 8, 1, \
+//                                        "600", "Floating charge", \
+//                                        "这是电池浮充电压，默认600\nThis is the floating charge voltage of the battery. The default is 600.");
+//    Floating_charge->add_Specification();
 
-    //均充电压说明
-    Equalized_charge = new Specification(this,Equalized_charge_explain, myTable, 9, 1, \
-                                         "600", "Equalized charge", \
-                                         "这是电池均充电压，默认600\nThis is the battery equalization voltage, and the default is 600.");
-    Equalized_charge->add_Specification();
+//    //均充电压说明
+//    Equalized_charge = new Specification(this,Equalized_charge_explain, myTable, 9, 1, \
+//                                         "600", "Equalized charge", \
+//                                         "这是电池均充电压，默认600\nThis is the battery equalization voltage, and the default is 600.");
+//    Equalized_charge->add_Specification();
 
     //柴发关闭SOC说明
-    Gen_turn_off_SOC = new Specification(this,Gen_turn_off_SOC_explain, myTable, 10, 1, \
-                                         "85", "Gen turn off SOC", \
-                                         "这是柴发关闭SOC，当柴发给电池充电时，SOC达到85%，柴发关闭\nThis is the firewood to turn off the SOC. When the firewood battery is charged, the SOC reaches 85% and the firewood turns off.");
+    Gen_turn_off_SOC = new Specification(this,Gen_turn_off_SOC_explain, myTable, 8, 1, \
+                                         "85", tr("Gen_turn_off_SOC"), \
+                                         tr("When the specified SCO value is reached, the diesel generator shuts down."));
     Gen_turn_off_SOC->add_Specification();
 
     //柴发开启SOC说明
-    Gen_turn_on_SOC = new Specification(this,Gen_turn_on_SOC_explain, myTable, 11, 1, \
-                                        "25", "Gen turn on SOC", \
-                                        "这是柴发开启SOC，当电池处于放电模式时，SOC达到25%，柴发开启\nThis is Chaifa on SOC, when the battery is in discharge mode, SOC reaches 25%, Chaifa on.");
+    Gen_turn_on_SOC = new Specification(this,Gen_turn_on_SOC_explain, myTable, 9, 1, \
+                                        "25", tr("Gen_turn_on_SOC"), \
+                                        tr("When the specified SOC value is reached, the diesel generator starts."));
     Gen_turn_on_SOC->add_Specification();
 }
 

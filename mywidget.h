@@ -289,41 +289,31 @@ public:
 
     /***************************电池设置****************************/
     QPushButton *DOD_OnGrid_explain;    //并网DOD说明
-    Specification *DOD_OnGrid;
-
     QPushButton *DOD_OffGrid_explain;   //离网DOD说明
-    Specification *DOD_OffGrid;
-
     QPushButton *Charge_Volt_Upper_Limit_explain;   //充电电压上限说明
-    Specification *Charge_Volt_Upper_Limit;
-
     QPushButton *Charge_Volt_upper_Limit_delta_explain; //充电电压上限回差说明
-    Specification *Charge_Volt_upper_Limit_delta;
-
     QPushButton *Disc_Volt_lower_Limit_explain;  //放电电压限制说明
-    Specification *Disc_Volt_lower_Limit;
-
     QPushButton *Discharge_Volt_upper_Limit_delta_explain; //放电电压下限回差说明
-    Specification *Discharge_Volt_upper_Limit_delta;
-
     QPushButton *Charge_Current_Limit_explain;  //充电电流限制说明
-    Specification *Charge_Current_Limit;
-
     QPushButton *Discharge_Current_Limit_explain;  //放电电流限制说明
-    Specification *Discharge_Current_Limit;
-
-    QPushButton *Floating_charge_explain;   //浮充电压说明
-    Specification *Floating_charge;
-
-    QPushButton *Equalized_charge_explain;   //均充电压说明
-    Specification *Equalized_charge;
-
+//    QPushButton *Floating_charge_explain;   //浮充电压说明
+//    QPushButton *Equalized_charge_explain;   //均充电压说明
     QPushButton *Gen_turn_off_SOC_explain;    //柴发关闭SOC说明
-    Specification *Gen_turn_off_SOC;
-
     QPushButton *Gen_turn_on_SOC_explain;     //柴发开启SOC说明
-    Specification *Gen_turn_on_SOC;
 
+
+    Specification *DOD_OnGrid;
+    Specification *DOD_OffGrid;
+    Specification *Charge_Volt_Upper_Limit;
+    Specification *Charge_Volt_upper_Limit_delta;
+    Specification *Disc_Volt_lower_Limit;
+    Specification *Discharge_Volt_upper_Limit_delta;
+    Specification *Charge_Current_Limit;
+    Specification *Discharge_Current_Limit;
+//    Specification *Floating_charge;
+//    Specification *Equalized_charge;
+    Specification *Gen_turn_off_SOC;
+    Specification *Gen_turn_on_SOC;
 
     /***************************自动运行**************************/
     //选择
@@ -1021,6 +1011,7 @@ private:
     void OperationLog_tab_delete();//操作日志 释放 说明
     void DC_AC_Parameter_tab_delete();//DCAC参数 释放 说明
     void DCDC_Paramter_tab_delete();//DCDC参数 释放 说明
+    void Battery_Setup_Tab_delete();//电池设置 释放 说明
 
 private slots:
     void on_UI_MenuBtn_clicked();//转到槽
