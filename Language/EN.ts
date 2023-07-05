@@ -1171,7 +1171,7 @@
         <location filename="../mywidget.ui" line="5676"/>
         <location filename="../mywidget.ui" line="5695"/>
         <location filename="../mywidget.cpp" line="2802"/>
-        <location filename="../mywidget.cpp" line="3956"/>
+        <location filename="../mywidget.cpp" line="3853"/>
         <source>0</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1377,25 +1377,25 @@ enable</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="6866"/>
-        <location filename="../mywidget.cpp" line="5080"/>
+        <location filename="../mywidget.cpp" line="4977"/>
         <source>HistoricalFailure</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="6889"/>
-        <location filename="../mywidget.cpp" line="5086"/>
+        <location filename="../mywidget.cpp" line="4983"/>
         <source>OperationLog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="6927"/>
-        <location filename="../mywidget.cpp" line="5092"/>
+        <location filename="../mywidget.cpp" line="4989"/>
         <source>Coulombmeter report</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="6956"/>
-        <location filename="../mywidget.cpp" line="5098"/>
+        <location filename="../mywidget.cpp" line="4995"/>
         <source>Eject Udisk</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1712,36 +1712,43 @@ B1 - A1 ≥ 30 %
     </message>
     <message>
         <location filename="../mywidget.ui" line="8112"/>
+        <location filename="../mywidget.cpp" line="3700"/>
         <source>Monitoring software version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="8120"/>
+        <location filename="../mywidget.cpp" line="3704"/>
         <source>DCAC Protocol version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="8128"/>
+        <location filename="../mywidget.cpp" line="3708"/>
         <source>DCAC Converter software version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="8136"/>
+        <location filename="../mywidget.cpp" line="3712"/>
         <source>DCAC CPLD software version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="8144"/>
+        <location filename="../mywidget.cpp" line="3716"/>
         <source>DCDC Protocol version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="8152"/>
+        <location filename="../mywidget.cpp" line="3720"/>
         <source>DCDC Converter software version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="8160"/>
+        <location filename="../mywidget.cpp" line="3724"/>
         <source>DCDC CPLD software version</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1782,11 +1789,13 @@ B1 - A1 ≥ 30 %
     </message>
     <message>
         <location filename="../mywidget.ui" line="8304"/>
+        <location filename="../mywidget.cpp" line="5063"/>
         <source>DHCP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="8317"/>
+        <location filename="../mywidget.cpp" line="5043"/>
         <source>STATIC</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2338,7 +2347,7 @@ B1 - A1 ≥ 30 %
     </message>
     <message>
         <location filename="../mywidget.cpp" line="1243"/>
-        <location filename="../mywidget.cpp" line="3074"/>
+        <location filename="../mywidget.cpp" line="2971"/>
         <source>Check</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2354,13 +2363,13 @@ B1 - A1 ≥ 30 %
     </message>
     <message>
         <location filename="../mywidget.cpp" line="1243"/>
-        <location filename="../mywidget.cpp" line="3077"/>
+        <location filename="../mywidget.cpp" line="2974"/>
         <source>Features</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="1243"/>
-        <location filename="../mywidget.cpp" line="3078"/>
+        <location filename="../mywidget.cpp" line="2975"/>
         <source>Power</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2421,37 +2430,37 @@ B1 - A1 ≥ 30 %
     </message>
     <message>
         <location filename="../mywidget.cpp" line="1322"/>
-        <location filename="../mywidget.cpp" line="3957"/>
+        <location filename="../mywidget.cpp" line="3854"/>
         <source>Level</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="1322"/>
-        <location filename="../mywidget.cpp" line="3959"/>
+        <location filename="../mywidget.cpp" line="3856"/>
         <source>Start Time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="1322"/>
-        <location filename="../mywidget.cpp" line="3961"/>
+        <location filename="../mywidget.cpp" line="3858"/>
         <source>End Time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="1322"/>
-        <location filename="../mywidget.cpp" line="3965"/>
+        <location filename="../mywidget.cpp" line="3862"/>
         <source>Description</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="1377"/>
-        <location filename="../mywidget.cpp" line="4109"/>
+        <location filename="../mywidget.cpp" line="4006"/>
         <source>ModificationTime</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="1377"/>
-        <location filename="../mywidget.cpp" line="4111"/>
+        <location filename="../mywidget.cpp" line="4008"/>
         <source>RecordEvent</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2488,20 +2497,29 @@ B1 - A1 ≥ 30 %
         <location filename="../mywidget.cpp" line="1943"/>
         <location filename="../mywidget.cpp" line="1947"/>
         <location filename="../mywidget.cpp" line="1951"/>
-        <location filename="../mywidget.cpp" line="5034"/>
-        <location filename="../mywidget.cpp" line="5039"/>
-        <location filename="../mywidget.cpp" line="5045"/>
-        <location filename="../mywidget.cpp" line="5051"/>
-        <location filename="../mywidget.cpp" line="5057"/>
+        <location filename="../mywidget.cpp" line="1965"/>
+        <location filename="../mywidget.cpp" line="1969"/>
+        <location filename="../mywidget.cpp" line="1973"/>
+        <location filename="../mywidget.cpp" line="1977"/>
+        <location filename="../mywidget.cpp" line="1981"/>
+        <location filename="../mywidget.cpp" line="1985"/>
+        <location filename="../mywidget.cpp" line="1989"/>
+        <location filename="../mywidget.cpp" line="4931"/>
+        <location filename="../mywidget.cpp" line="4936"/>
+        <location filename="../mywidget.cpp" line="4942"/>
+        <location filename="../mywidget.cpp" line="4948"/>
+        <location filename="../mywidget.cpp" line="4954"/>
+        <location filename="../mywidget.cpp" line="4960"/>
+        <location filename="../mywidget.cpp" line="4966"/>
+        <location filename="../mywidget.cpp" line="4972"/>
+        <location filename="../mywidget.cpp" line="4978"/>
+        <location filename="../mywidget.cpp" line="4984"/>
+        <location filename="../mywidget.cpp" line="4990"/>
+        <location filename="../mywidget.cpp" line="4996"/>
+        <location filename="../mywidget.cpp" line="5001"/>
+        <location filename="../mywidget.cpp" line="5006"/>
+        <location filename="../mywidget.cpp" line="5043"/>
         <location filename="../mywidget.cpp" line="5063"/>
-        <location filename="../mywidget.cpp" line="5069"/>
-        <location filename="../mywidget.cpp" line="5075"/>
-        <location filename="../mywidget.cpp" line="5081"/>
-        <location filename="../mywidget.cpp" line="5087"/>
-        <location filename="../mywidget.cpp" line="5093"/>
-        <location filename="../mywidget.cpp" line="5099"/>
-        <location filename="../mywidget.cpp" line="5104"/>
-        <location filename="../mywidget.cpp" line="5109"/>
         <source>OK</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2638,6 +2656,76 @@ B1 - A1 ≥ 30 %
     <message>
         <location filename="../mywidget.cpp" line="1951"/>
         <source>This is the current state of the battery uploaded by the BMS via the CAN/485/TCP protocol. Enable indicates that the battery can be discharged. Disable indicates that the battery cannot be discharged.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="1964"/>
+        <source>Interface</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="1965"/>
+        <source>This is the interface number, which defaults to eth0</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="1968"/>
+        <source>Port</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="1969"/>
+        <source>This is the port number, default 502</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="1972"/>
+        <source>Ip</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="1973"/>
+        <source>This is the IP address. The default is 192.168.1.100</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="1976"/>
+        <source>Netmask</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="1977"/>
+        <source>This is the subnet mask, 255.255.255.0</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="1980"/>
+        <source>Gateway</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="1981"/>
+        <source>This is the gateway. The default is 192.168.1.1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="1984"/>
+        <source>Serber ip</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="1985"/>
+        <source>This is the server IP address. The default is 192.168.1.200</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="1988"/>
+        <source>Apply and Restart system</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="1989"/>
+        <source>This is the application and restart the system, click will restart the system, if there is an upgrade, will use the new program.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3350,435 +3438,490 @@ This is the working mode with three options: System for self use, Battery priori
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3075"/>
+        <location filename="../mywidget.cpp" line="2972"/>
         <source>Start_Time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3076"/>
+        <location filename="../mywidget.cpp" line="2973"/>
         <source>End_Time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3079"/>
+        <location filename="../mywidget.cpp" line="2976"/>
         <source>9:00</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3080"/>
+        <location filename="../mywidget.cpp" line="2977"/>
         <source>10:00</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3085"/>
+        <location filename="../mywidget.cpp" line="2982"/>
         <source>This is&apos; Enable &apos;, which will enable the specified state at the specified time with the specified power, and end at the specified time.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3086"/>
+        <location filename="../mywidget.cpp" line="2983"/>
         <source>System for self-use</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3084"/>
-        <source>This is the start time at which the specified state will begin to be entered with the specified power.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3081"/>
-        <source>This is the end time at which the state started with the &apos;start time&apos; will end.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3082"/>
-        <source>.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3083"/>
-        <source>This is the working power, which is executed according to the working state when working in this state, the positive number is discharging, and the negative number is charging.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3841"/>
-        <source>PV power generation Day</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3842"/>
-        <source>This is the electricity generation of photovoltaic today.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3845"/>
-        <source>PV power generation Month</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3846"/>
-        <source>This is the amount of photovoltaic power generated this month.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3849"/>
-        <source>PV power generation Year</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3850"/>
-        <source>This is how much photovoltaic will produce this year.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3853"/>
-        <source>PV power generation Total</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3854"/>
-        <source>This is the total amount of photovoltaic power produced.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3860"/>
-        <source>Load Discharge Day</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3861"/>
-        <source>This is the electricity consumption of the load today.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3864"/>
-        <source>Load Discharge Month</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3865"/>
-        <source>This is the electricity consumption of the load this month.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3868"/>
-        <source>Load Discharge Year</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3869"/>
-        <source>This is how much electricity the load is using this year.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3872"/>
-        <source>Load Discharge Total</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3873"/>
-        <source>This is the total power consumption of the load.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3879"/>
-        <location filename="../mywidget.cpp" line="3898"/>
-        <source>Battery Charge Day</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3880"/>
-        <source>This is the charging capacity of the battery today.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3883"/>
-        <location filename="../mywidget.cpp" line="3902"/>
-        <source>Battery Discharge Month</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3884"/>
-        <source>This is how much the battery has been charged for the month.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3887"/>
-        <location filename="../mywidget.cpp" line="3906"/>
-        <source>Battery Discharge Year</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3888"/>
-        <source>This is how much the battery has been charged this year.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3891"/>
-        <location filename="../mywidget.cpp" line="3910"/>
-        <source>Battery Discharge Total</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3892"/>
-        <source>This is the total charge of the battery.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3899"/>
-        <source>This is the discharging capacity of the battery today.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3903"/>
-        <source>This is how much the battery has been discharged for the month.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3907"/>
-        <source>This is how much the battery has been discharged this year.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3911"/>
-        <source>This is the total discharge of the battery.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3917"/>
-        <location filename="../mywidget.cpp" line="3936"/>
-        <source>Grid Charge Day</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3918"/>
-        <source>This is the amount of charging from the grid today.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3921"/>
-        <location filename="../mywidget.cpp" line="3940"/>
-        <source>Grid Charge Month</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3922"/>
-        <source>This is the amount of charging from the grid for the month.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3925"/>
-        <location filename="../mywidget.cpp" line="3944"/>
-        <source>Grid Charge Year</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3926"/>
-        <source>This is the amount of charging from the grid this year.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3929"/>
-        <location filename="../mywidget.cpp" line="3948"/>
-        <source>Grid Charge Total</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3930"/>
-        <source>This is the total amount of charge from the grid.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3937"/>
-        <source>This is the amount of energy being discharged into the grid today.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3941"/>
-        <source>This is the amount of electricity discharged into the grid this month.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3945"/>
-        <source>This is the amount of energy that has been discharged into the grid this year.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3949"/>
-        <source>This is the total amount of discharge to the grid.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3958"/>
-        <source>This is the event alarm level. When the event alarm level is 0, it is marked red, indicating that this is the fault information.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3960"/>
-        <source>This is the event start time, which means that the record started appearing at this time.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3962"/>
-        <source>This is the event end time, which means the end time of this record,&apos;... &apos;means no end time.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3964"/>
-        <source>CAN communication failure</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3966"/>
-        <source>This is the event description, when there is an alarm information, the alarm information will be recorded here.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3967"/>
-        <source>Fire alarm (High temp. alarm)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="3968"/>
-        <source>Power Meter Comm fualttLead-acid abnormal</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="4110"/>
-        <source>Time when the system Settings are modified.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="4112"/>
-        <source>Here is a record of the operation when a change is made to the system Settings.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="4165"/>
-        <source>Power control type：CP_P-&gt;CP_N&amp;&amp;P</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="4169"/>
-        <source>Power control type：CP_N&amp;&amp;P-&gt;CP_P</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="4173"/>
-        <source>Grid Fre Upper limit：0.2-&gt;3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="4177"/>
-        <source>Grid Fre Upper limit：3-&gt;0.2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="4181"/>
-        <source>Voltage protection Lower limit：-10-&gt;-15</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="4185"/>
-        <source>Voltage protection Lower limit：-15-&gt;-10</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="4189"/>
-        <source>Operation mode：Prevent countercurrnet-&gt;Peak valley</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="4193"/>
-        <source>Operation mode：UPS-&gt;Prevent countercurrnet</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="4197"/>
-        <source>Operation mode：Manual-&gt;UPS</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="4201"/>
-        <source>Operation mode：Peak valley-&gt;Manual</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="4205"/>
-        <source>Inv ON/Off-Grid：Off-&gt;automatic</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="4209"/>
-        <source>Inv ON/Off-Grid：automatic-&gt;Off</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="5034"/>
-        <source>Choose the first module to view the real-time data of the first module</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="5039"/>
-        <source>Choose the second module to view the real-time data of the second module</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="5045"/>
-        <source>To view the previous year&apos;s data, click on it to display the previous year&apos;s data for the current displayed year.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="5051"/>
-        <source>To view the data for the next year, click on it to display the data for the next year of the current displayed year.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="5057"/>
-        <source>To view the data of the previous month, click on it to display the data of the previous month of the current displayed month.</source>
+        <location filename="../mywidget.cpp" line="5043"/>
+        <source>If this parameter is selected, static IP addresses are used</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="5063"/>
+        <source>If this parameter is selected, the automatically assigned IP address is used</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2981"/>
+        <source>This is the start time at which the specified state will begin to be entered with the specified power.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2978"/>
+        <source>This is the end time at which the state started with the &apos;start time&apos; will end.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2979"/>
+        <source>.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2980"/>
+        <source>This is the working power, which is executed according to the working state when working in this state, the positive number is discharging, and the negative number is charging.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3701"/>
+        <source>This is the monitor screen version number.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3705"/>
+        <source>This is the DCAC protocol version number.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3709"/>
+        <source>This is the DCAC converter software version.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3713"/>
+        <source>This is the DCAC CPLD software version.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3717"/>
+        <source>This is the DCDC protocol version number.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3721"/>
+        <source>This is the DCDC converter software version.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3725"/>
+        <source>This is the DCDC CPLD software version.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3728"/>
+        <source>SN</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3729"/>
+        <source>This is SN, the serial number of the product.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3738"/>
+        <source>PV power generation Day</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3739"/>
+        <source>This is the electricity generation of photovoltaic today.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3742"/>
+        <source>PV power generation Month</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3743"/>
+        <source>This is the amount of photovoltaic power generated this month.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3746"/>
+        <source>PV power generation Year</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3747"/>
+        <source>This is how much photovoltaic will produce this year.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3750"/>
+        <source>PV power generation Total</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3751"/>
+        <source>This is the total amount of photovoltaic power produced.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3757"/>
+        <source>Load Discharge Day</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3758"/>
+        <source>This is the electricity consumption of the load today.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3761"/>
+        <source>Load Discharge Month</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3762"/>
+        <source>This is the electricity consumption of the load this month.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3765"/>
+        <source>Load Discharge Year</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3766"/>
+        <source>This is how much electricity the load is using this year.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3769"/>
+        <source>Load Discharge Total</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3770"/>
+        <source>This is the total power consumption of the load.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3776"/>
+        <location filename="../mywidget.cpp" line="3795"/>
+        <source>Battery Charge Day</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3777"/>
+        <source>This is the charging capacity of the battery today.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3780"/>
+        <location filename="../mywidget.cpp" line="3799"/>
+        <source>Battery Discharge Month</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3781"/>
+        <source>This is how much the battery has been charged for the month.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3784"/>
+        <location filename="../mywidget.cpp" line="3803"/>
+        <source>Battery Discharge Year</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3785"/>
+        <source>This is how much the battery has been charged this year.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3788"/>
+        <location filename="../mywidget.cpp" line="3807"/>
+        <source>Battery Discharge Total</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3789"/>
+        <source>This is the total charge of the battery.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3796"/>
+        <source>This is the discharging capacity of the battery today.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3800"/>
+        <source>This is how much the battery has been discharged for the month.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3804"/>
+        <source>This is how much the battery has been discharged this year.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3808"/>
+        <source>This is the total discharge of the battery.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3814"/>
+        <location filename="../mywidget.cpp" line="3833"/>
+        <source>Grid Charge Day</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3815"/>
+        <source>This is the amount of charging from the grid today.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3818"/>
+        <location filename="../mywidget.cpp" line="3837"/>
+        <source>Grid Charge Month</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3819"/>
+        <source>This is the amount of charging from the grid for the month.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3822"/>
+        <location filename="../mywidget.cpp" line="3841"/>
+        <source>Grid Charge Year</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3823"/>
+        <source>This is the amount of charging from the grid this year.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3826"/>
+        <location filename="../mywidget.cpp" line="3845"/>
+        <source>Grid Charge Total</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3827"/>
+        <source>This is the total amount of charge from the grid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3834"/>
+        <source>This is the amount of energy being discharged into the grid today.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3838"/>
+        <source>This is the amount of electricity discharged into the grid this month.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3842"/>
+        <source>This is the amount of energy that has been discharged into the grid this year.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3846"/>
+        <source>This is the total amount of discharge to the grid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3855"/>
+        <source>This is the event alarm level. When the event alarm level is 0, it is marked red, indicating that this is the fault information.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3857"/>
+        <source>This is the event start time, which means that the record started appearing at this time.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3859"/>
+        <source>This is the event end time, which means the end time of this record,&apos;... &apos;means no end time.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3861"/>
+        <source>CAN communication failure</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3863"/>
+        <source>This is the event description, when there is an alarm information, the alarm information will be recorded here.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3864"/>
+        <source>Fire alarm (High temp. alarm)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3865"/>
+        <source>Power Meter Comm fualttLead-acid abnormal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4007"/>
+        <source>Time when the system Settings are modified.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4009"/>
+        <source>Here is a record of the operation when a change is made to the system Settings.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4062"/>
+        <source>Power control type：CP_P-&gt;CP_N&amp;&amp;P</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4066"/>
+        <source>Power control type：CP_N&amp;&amp;P-&gt;CP_P</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4070"/>
+        <source>Grid Fre Upper limit：0.2-&gt;3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4074"/>
+        <source>Grid Fre Upper limit：3-&gt;0.2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4078"/>
+        <source>Voltage protection Lower limit：-10-&gt;-15</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4082"/>
+        <source>Voltage protection Lower limit：-15-&gt;-10</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4086"/>
+        <source>Operation mode：Prevent countercurrnet-&gt;Peak valley</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4090"/>
+        <source>Operation mode：UPS-&gt;Prevent countercurrnet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4094"/>
+        <source>Operation mode：Manual-&gt;UPS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4098"/>
+        <source>Operation mode：Peak valley-&gt;Manual</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4102"/>
+        <source>Inv ON/Off-Grid：Off-&gt;automatic</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4106"/>
+        <source>Inv ON/Off-Grid：automatic-&gt;Off</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4931"/>
+        <source>Choose the first module to view the real-time data of the first module</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4936"/>
+        <source>Choose the second module to view the real-time data of the second module</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4942"/>
+        <source>To view the previous year&apos;s data, click on it to display the previous year&apos;s data for the current displayed year.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4948"/>
+        <source>To view the data for the next year, click on it to display the data for the next year of the current displayed year.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4954"/>
+        <source>To view the data of the previous month, click on it to display the data of the previous month of the current displayed month.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4960"/>
         <source>To view the data for the next month, click to display the data for the next month of the current displayed month.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="5069"/>
+        <location filename="../mywidget.cpp" line="4966"/>
         <source>To view the data of the previous day. Click to display the data of the previous day of the current day.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="5075"/>
+        <location filename="../mywidget.cpp" line="4972"/>
         <source>To view the data of the next day. Click to display the data of the next day of the current day.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="5081"/>
+        <location filename="../mywidget.cpp" line="4978"/>
         <source>To export history records, click here to export history records to the USB flash drive. The file exported to the USB flash drive is HistoryRecord.csv, which needs to be opened with Excel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="5087"/>
+        <location filename="../mywidget.cpp" line="4984"/>
         <source>Export operation log. Click here to export operation log to U disk.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="5093"/>
+        <location filename="../mywidget.cpp" line="4990"/>
         <source>Export the battery statistics. Click here to export the battery statistics to the U disk.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="5099"/>
+        <location filename="../mywidget.cpp" line="4996"/>
         <source>Exit the U disk and unmount the U disk mounted to the display control to ensure that the data in the U disk will not be damaged.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="5104"/>
+        <location filename="../mywidget.cpp" line="5001"/>
         <source>Choose the first module to view the real-time status of the first module</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="5109"/>
+        <location filename="../mywidget.cpp" line="5006"/>
         <source>Choose the second module to view the real-time status of the second module</source>
         <translation type="unfinished"></translation>
     </message>

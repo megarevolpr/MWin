@@ -1961,33 +1961,33 @@ void MyWidget::SystemlnformationVer_clicked(int nid)
     switch (nid)
     {
         case 0:
-            QMessageBox::question(this, "Interface"\
-                                  ,"这是接口号，默认eth0\nThis is the interface number, which defaults to eth0", "OK");
-            break;
+            QMessageBox::question(this, tr("Interface")\
+                                  ,tr("This is the interface number, which defaults to eth0"), tr("OK"));
+            break;//这是接口号，默认eth0\n
         case 1:
-            QMessageBox::question(this, "Port"\
-                                  ,"这是端口号，默认502\nThis is the port number, default 502", "OK");
-            break;
+            QMessageBox::question(this, tr("Port")\
+                                  ,tr("This is the port number, default 502"), tr("OK"));
+            break;//这是端口号，默认502\n
         case 2:
-            QMessageBox::question(this, "Ip"\
-                                  ,"这是IP地址，默认192.168.1.100\nThis is the IP address. The default is 192.168.1.100", "OK");
-            break;
+            QMessageBox::question(this, tr("Ip")\
+                                  ,tr("This is the IP address. The default is 192.168.1.100"), tr("OK"));
+            break;//这是IP地址，默认192.168.1.100\n
         case 3:
-            QMessageBox::question(this, "Netmask"\
-                                  ,"这是子网掩码，255.255.255.0\nThis is the subnet mask, 255.255.255.0", "OK");
-            break;
+            QMessageBox::question(this, tr("Netmask")\
+                                  ,tr("This is the subnet mask, 255.255.255.0"), tr("OK"));
+            break;//这是子网掩码，255.255.255.0\n
         case 4:
-            QMessageBox::question(this, "Gateway"\
-                                  ,"这是网关，默认192.168.1.1\nThis is the gateway. The default is 192.168.1.1", "OK");
-            break;
+            QMessageBox::question(this, tr("Gateway")\
+                                  ,tr("This is the gateway. The default is 192.168.1.1"), tr("OK"));
+            break;//这是网关，默认192.168.1.1\n
         case 5:
-            QMessageBox::question(this, "Serber ip"\
-                                  ,"这是服务器IP，默认192.168.1.200\nThis is the server IP address. The default is 192.168.1.200", "OK");
-            break;
+            QMessageBox::question(this, tr("Serber ip")\
+                                  ,tr("This is the server IP address. The default is 192.168.1.200"), tr("OK"));
+            break;//这是服务器IP，默认192.168.1.200\n
         case 6:
-            QMessageBox::question(this, "Apply and Restart system"\
-                                  ,"这是应用并重启系统，点击后将重启系统，如有升级，将会使用新的程序\nThis is the application and restart the system, click will restart the system, if there is an upgrade, will use the new program.", "OK");
-            break;
+            QMessageBox::question(this, tr("Apply and Restart system")\
+                                  ,tr("This is the application and restart the system, click will restart the system, if there is an upgrade, will use the new program."), tr("OK"));
+            break;//这是应用并重启系统，点击后将重启系统，如有升级，将会使用新的程序\n
         default:
             break;
     }
@@ -2967,110 +2967,7 @@ void MyWidget::Battery_Setup_Tab(QTableWidget *myTable)
 //自动运行 绘制button
 void MyWidget::AutoOperation(QTableWidget *myTable)
 {
-//    Specification * temp[]  ={Check1,Check2,Check3,Check4,Check5,Check6,Check7,Check8,Check9,Check10,\
-//                           Check11,Check12,Check13,Check14,Check15,Check16,Check17,Check18,Check19,Check20};
 
-//    QPushButton * temp2[] ={Check1_explain,Check2_explain,Check3_explain,Check4_explain,Check5_explain,\
-//                           Check6_explain,Check7_explain,Check8_explain,Check9_explain,Check10_explain,\
-//                           Check11_explain,Check12_explain,Check13_explain,Check14_explain,Check15_explain,\
-//                           Check16_explain,Check17_explain,Check18_explain,Check19_explain,Check20_explain};
-
-//    Specification * temp4[]  ={Start_T1,Start_T2,Start_T3,Start_T4,Start_T5,Start_T6,Start_T7,Start_T8,Start_T9,Start_T10,\
-//                           Start_T11,Start_T12,Start_T13,Start_T14,Start_T15,Start_T16,Start_T17,Start_T18,Start_T19,Start_T20};
-
-//    QPushButton * temp5[] ={Start_T1_explain,Start_T2_explain,Start_T3_explain,Start_T4_explain,Start_T5_explain,\
-//                           Start_T6_explain,Start_T7_explain,Start_T8_explain,Start_T9_explain,Start_T10_explain,\
-//                           Start_T11_explain,Start_T12_explain,Start_T13_explain,Start_T14_explain,Start_T15_explain,\
-//                           Start_T16_explain,Start_T17_explain,Start_T18_explain,Start_T19_explain,Start_T20_explain};
-
-//    Specification * temp7[]  ={End_T1,End_T2,End_T3,End_T4,End_T5,End_T6,End_T7,End_T8,End_T9,End_T10,\
-//                           End_T11,End_T12,End_T13,End_T14,End_T15,End_T16,End_T17,End_T18,End_T19,End_T20};
-
-//    QPushButton * temp8[] ={End_T1_explain,End_T2_explain,End_T3_explain,End_T4_explain,End_T5_explain,\
-//                           End_T6_explain,End_T7_explain,End_T8_explain,End_T9_explain,End_T10_explain,\
-//                           End_T11_explain,End_T12_explain,End_T13_explain,End_T14_explain,End_T15_explain,\
-//                           End_T16_explain,End_T17_explain,End_T18_explain,End_T19_explain,End_T20_explain};
-
-//    Specification * temp10[]  ={State1,State2,State3,State4,State5,State6,State7,State8,State9,State10,\
-//                           State11,State12,State13,State14,State15,State16,State17,State18,State19,State20};
-
-//    QPushButton * temp11[] ={State1_explain,State2_explain,State3_explain,State4_explain,State5_explain,\
-//                           State6_explain,State7_explain,State8_explain,State9_explain,State10_explain,\
-//                           State11_explain,State12_explain,State13_explain,State14_explain,State15_explain,\
-//                           State16_explain,State17_explain,State18_explain,State19_explain,State20_explain};
-
-//    Specification * temp13[]  ={Power1,Power2,Power3,Power4,Power5,Power6,Power7,Power8,Power9,Power10,\
-//                           Power11,Power12,Power13,Power14,Power15,Power16,Power17,Power18,Power19,Power20};
-
-//    QPushButton * temp14[] ={Power1_explain,Power2_explain,Power3_explain,Power4_explain,Power5_explain,\
-//                           Power6_explain,Power7_explain,Power8_explain,Power9_explain,Power10_explain,\
-//                           Power11_explain,Power12_explain,Power13_explain,Power14_explain,Power15_explain,\
-//                           Power16_explain,Power17_explain,Power18_explain,Power19_explain,Power20_explain};
-
-//    for(int i=0;i<20;i++)
-//    {
-//        QString temp3 = QString("Check%1").arg(i+1);
-//        QString temp6 = QString("Start_T%1").arg(i+1);
-//        QString temp9 = QString("End_T%1").arg(i+1);
-//        QString temp12 = QString("State%1").arg(i+1);
-//        QString temp15 = QString("Power%1").arg(i+1);
-
-//        QString temp16 = QString("10:00");
-//        QString temp17 = QString("11:00");
-//        if(i<5)
-//        {
-//            if(temp[i] != nullptr)
-//            {
-//                delete temp[i];
-//            }
-//            temp[i] = new Specification(this,temp2[i], myTable, i, 0, \
-//                                                "√", temp3, \
-//                                                tr("This is' Enable ', which will enable the specified state at the specified time with the specified power, and end at the specified time."));
-//        }
-//        else
-//        {
-//            if(temp[i] != nullptr)
-//            {
-//                delete temp[i];
-//            }
-//            temp[i] = new Specification(this,temp2[i], myTable, i, 0, \
-//                                                "", temp3, \
-//                                                tr("This is' Enable ', which will enable the specified state at the specified time with the specified power, and end at the specified time."));
-//        }
-//        temp[i]->add_Specification();//这是'使能'，选择后将在指定的时间以指定的功率开启指定的状态，并在指定的时间结束\n
-//        if(temp4[i] != nullptr)
-//        {
-//            delete temp4[i];
-//        }
-//        temp4[i] = new Specification(this,temp5[i], myTable, i, 1, \
-//                                                temp16, temp6, \
-//                                                tr("This is the start time at which the specified state will begin to be entered with the specified power."));
-//        temp4[i]->add_Specification();//这是开始时间，将在此时间开始以指定的功率进入指定的状态\n
-//        if(temp7[i] != nullptr)
-//        {
-//            delete temp7[i];
-//        }
-//        temp7[i] = new Specification(this,temp8[i], myTable, i, 2, \
-//                                                temp17, temp9, \
-//                                                tr("This is the end time at which the state started with the 'start time' will end."));
-//        temp7[i]->add_Specification();//这是结束时间，将在此时间结束由'开始时间'开始的状态\n
-//        if(temp10[i] != nullptr)
-//        {
-//            delete temp10[i];
-//        }
-//        temp10[i] = new Specification(this,temp11[i], myTable, i, 3, \
-//                                                    tr("System for self-use"), temp12, \
-//                                                    tr("."));
-//        temp10[i]->add_Specification();
-//        if(temp13[i] != nullptr)
-//        {
-//            delete temp13[i];
-//        }
-//        temp13[i] = new Specification(this,temp14[i], myTable, i, 4, \
-//                                                    "10", temp15, \
-//                                                    tr("This is the working power, which is executed according to the working state when working in this state, the positive number is discharging, and the negative number is charging."));
-//        temp13[i]->add_Specification();//这是工作功率，此状态下工作时根据工作状态执行此功率，正数为放电，负数为充电\n
-//    }
     QString temp1 = tr("Check");
     QString temp2 = tr("Start_Time");
     QString temp3 = tr("End_Time");
@@ -3800,37 +3697,37 @@ void MyWidget::SystemMessages(QTableWidget *myTable)
 {
     int line=0;int column=1;
     MonitoringVersion = new Specification(this,MonitoringVersion_explain, myTable, line++, column, \
-                                     "V103B500D004", "Monitoring software version", \
-                                     "这是监控屏版本号\nThis is the monitor screen version number.");
-    MonitoringVersion->add_Specification();
+                                     "V103B500D004", tr("Monitoring software version"), \
+                                     tr("This is the monitor screen version number."));
+    MonitoringVersion->add_Specification();//这是监控屏版本号\n
     DCAC_SysProtocol_Version = new Specification(this,DCAC_SysProtocol_Version_explain, myTable, line++, column, \
-                                     "V001B001D001", "Manufacturer name", \
-                                     "这是DCAC协议版本号\nThis is the DCAC protocol version number.");
-    DCAC_SysProtocol_Version->add_Specification();
+                                     "V001B001D001", tr("DCAC Protocol version"), \
+                                     tr("This is the DCAC protocol version number."));
+    DCAC_SysProtocol_Version->add_Specification();//这是DCAC协议版本号\n
     DCAC_ConverterVersion = new Specification(this,DCAC_ConverterVersion_explain, myTable, line++, column, \
-                                     "V105B500D008", "Manufacturer name", \
-                                     "这是DCAC变流器软件版本\nThis is the DCAC converter software version.");
-    DCAC_ConverterVersion->add_Specification();
+                                     "V105B500D008", tr("DCAC Converter software version"), \
+                                     tr("This is the DCAC converter software version."));
+    DCAC_ConverterVersion->add_Specification();//这是DCAC变流器软件版本\n
     DCAC_CPLD_Version = new Specification(this,DCAC_CPLD_Version_explain, myTable, line++, column, \
-                                     "V001B001D000", "Manufacturer name", \
-                                     "这是DCAC CPLD软件版本\nThis is the DCAC CPLD software version.");
-    DCAC_CPLD_Version->add_Specification();
+                                     "V001B001D000", tr("DCAC CPLD software version"), \
+                                     tr("This is the DCAC CPLD software version."));
+    DCAC_CPLD_Version->add_Specification();//这是DCAC CPLD软件版本\n
     DCDC_SysProtocol_Version = new Specification(this,DCDC_SysProtocol_Version_explain, myTable, line++, column, \
-                                     "V001B001D001", "Manufacturer name", \
-                                     "这是DCDC协议版本号\nThis is the DCDC protocol version number.");
-    DCDC_SysProtocol_Version->add_Specification();
+                                     "V001B001D001", tr("DCDC Protocol version"), \
+                                     tr("This is the DCDC protocol version number."));
+    DCDC_SysProtocol_Version->add_Specification();//这是DCDC协议版本号\n
     DCDC_ConverterVersion = new Specification(this,DCDC_ConverterVersion_explain, myTable, line++, column, \
-                                     "V105B500D008", "Manufacturer name", \
-                                     "这是DCDC变流器软件版本\nThis is the DCDC converter software version.");
-    DCDC_ConverterVersion->add_Specification();
+                                     "V105B500D008", tr("DCDC Converter software version"), \
+                                     tr("This is the DCDC converter software version."));
+    DCDC_ConverterVersion->add_Specification();//这是DCDC变流器软件版本\n
     DCDC_CPLD_Version = new Specification(this,DCDC_CPLD_Version_explain, myTable, line++, column, \
-                                     "V001B001D000", "Manufacturer name", \
-                                     "这是DCDC CPLD软件版本\nThis is the DCDC CPLD software version.");
-    DCDC_CPLD_Version->add_Specification();
+                                     "V001B001D000", tr("DCDC CPLD software version"), \
+                                     tr("This is the DCDC CPLD software version."));
+    DCDC_CPLD_Version->add_Specification();//这是DCDC CPLD软件版本\n
     SN = new Specification(this,SN_explain, myTable, line++, column, \
-                                     "F12200000001", "Manufacturer name", \
-                                     "这是SN，即产品序列号\nThis is SN, the serial number of the product.");
-    SN->add_Specification();
+                                     "F12200000001", tr("SN"), \
+                                     tr("This is SN, the serial number of the product."));
+    SN->add_Specification();//这是SN，即产品序列号\n
 }
 
 /******数据报表说明******/
@@ -5143,7 +5040,7 @@ void MyWidget::on_radio_static_clicked()
         ui->gateway_explain_btn->hide();
         ui->server_ip_explain_btn->hide();
     }
-    QMessageBox::question(this ,"STATIC", "如果选择此项，表示使用静态的IP地址\nIf this parameter is selected, static IP addresses are used", "OK");
+    QMessageBox::question(this ,tr("STATIC"), tr("If this parameter is selected, static IP addresses are used"), tr("OK"));//如果选择此项，表示使用静态的IP地址\n
 }
 /*********** 选择自动分配IP地址 ************/
 void MyWidget::on_radio_dhcp_clicked()
@@ -5163,7 +5060,7 @@ void MyWidget::on_radio_dhcp_clicked()
         ui->gateway_explain_btn->hide();
         ui->server_ip_explain_btn->hide();
     }
-    QMessageBox::question(this ,"DHCP", "如果选择此项，表示使用自动分配的IP地址\nIf this parameter is selected, the automatically assigned IP address is used", "OK");
+    QMessageBox::question(this ,tr("DHCP"), tr("If this parameter is selected, the automatically assigned IP address is used"), tr("OK"));//如果选择此项，表示使用自动分配的IP地址\n
 
 }
 /****************DCDC 变流器开启*****************/
