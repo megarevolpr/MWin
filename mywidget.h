@@ -675,238 +675,182 @@ public:
 
     /***************************外设**************************/
     QPushButton *DI_1_Enable_explain;   //输入干接点1说明
-    Specification *DI_1_Enable;
     QPushButton *DI_1_NC_O_explain;
-    Specification *DI_1_NC_O;
     QPushButton *DI_1_Action_explain;
-    Specification *DI_1_Action;
-
     QPushButton *DI_2_Enable_explain;   //输入干接点2说明
-    Specification *DI_2_Enable;
     QPushButton *DI_2_NC_O_explain;
-    Specification *DI_2_NC_O;
     QPushButton *DI_2_Action_explain;
-    Specification *DI_2_Action;
-
     QPushButton *DI_3_Enable_explain;   //输入干接点3说明
-    Specification *DI_3_Enable;
     QPushButton *DI_3_NC_O_explain;
-    Specification *DI_3_NC_O;
     QPushButton *DI_3_Action_explain;
-    Specification *DI_3_Action;
-
     QPushButton *DI_4_Enable_explain;   //输入干接点4说明
-    Specification *DI_4_Enable;
     QPushButton *DI_4_NC_O_explain;
-    Specification *DI_4_NC_O;
     QPushButton *DI_4_Action_explain;
-    Specification *DI_4_Action;
-
     QPushButton *DI_5_Enable_explain;   //输入干接点5说明
-    Specification *DI_5_Enable;
     QPushButton *DI_5_NC_O_explain;
-    Specification *DI_5_NC_O;
     QPushButton *DI_5_Action_explain;
-    Specification *DI_5_Action;
-
     QPushButton *DI_6_Enable_explain;   //输入干接点6说明
-    Specification *DI_6_Enable;
     QPushButton *DI_6_NC_O_explain;
-    Specification *DI_6_NC_O;
     QPushButton *DI_6_Action_explain;
-    Specification *DI_6_Action;
-
     QPushButton *DO_1_Enable_explain;   //输出干接点1说明
-    Specification *DO_1_Enable;
     QPushButton *DO_1_NC_O_explain;
-    Specification *DO_1_NC_O;
     QPushButton *DO_1_Action_explain;
-    Specification *DO_1_Action;
-
     QPushButton *DO_2_Enable_explain;   //输出干接点2说明
-    Specification *DO_2_Enable;
     QPushButton *DO_2_NC_O_explain;
-    Specification *DO_2_NC_O;
     QPushButton *DO_2_Action_explain;
-    Specification *DO_2_Action;
-
     QPushButton *DO_3_Enable_explain;   //输出干接点3说明
-    Specification *DO_3_Enable;
     QPushButton *DO_3_NC_O_explain;
-    Specification *DO_3_NC_O;
     QPushButton *DO_3_Action_explain;
+
+
+
+    Specification *DI_1_Enable;
+    Specification *DI_1_NC_O;
+    Specification *DI_1_Action;
+    Specification *DI_2_Enable;
+    Specification *DI_2_NC_O;
+    Specification *DI_2_Action;
+    Specification *DI_3_Enable;
+    Specification *DI_3_NC_O;
+    Specification *DI_3_Action;
+    Specification *DI_4_Enable;
+    Specification *DI_4_NC_O;
+    Specification *DI_4_Action;
+    Specification *DI_5_Enable;
+    Specification *DI_5_NC_O;
+    Specification *DI_5_Action;
+    Specification *DI_6_Enable;
+    Specification *DI_6_NC_O;
+    Specification *DI_6_Action;
+    Specification *DO_1_Enable;
+    Specification *DO_1_NC_O;
+    Specification *DO_1_Action;
+    Specification *DO_2_Enable;
+    Specification *DO_2_NC_O;
+    Specification *DO_2_Action;
+    Specification *DO_3_Enable;
+    Specification *DO_3_NC_O;
     Specification *DO_3_Action;
 
     /***************************DCAC调试**************************/
     QPushButton *Debug_variable_1_explain;  //调试变量1
-    Specification *Debug_variable_1;
-
-
     QPushButton *Debug_variable_2_explain;  //调试变量2
-    Specification *Debug_variable_2;
-
     QPushButton *Debug_variable_3_explain;  //调试变量3
-    Specification *Debug_variable_3;
-
     QPushButton *Debug_variable_1_addr_explain; //调试地址变量1
-    Specification *Debug_variable_1_addr;
-
     QPushButton *Debug_variable_2_addr_explain; //调试地址变量2
-    Specification *Debug_variable_2_addr;
-
     QPushButton *Debug_variable_3_addr_explain; //调试地址变量3
-    Specification *Debug_variable_3_addr;
-
     QPushButton *Debug_memery_var_1_explain;    //调试内存变量1
-    Specification *Debug_memery_var_1;
-
     QPushButton *Debug_memery_var_2_explain;    //调试内存变量2
-    Specification *Debug_memery_var_2;
-
     QPushButton *Debug_memery_var_3_explain;    //调试内存变量3
-    Specification *Debug_memery_var_3;
-
     QPushButton *Input_Vol_revise_explain;  //输入电压系数
-    Specification *Input_Vol_revise;
-
     QPushButton *Input_Cur_revise_explain;  //输入电流系数
-    Specification *Input_Cur_revise;
-
     QPushButton *Voltage_1_5_revise_explain;   //1.5V电压系数
-    Specification *Voltage_1_5_revise;
-
     QPushButton *Bus_Vol_revise_explain;    //母线电压系数
-    Specification *Bus_Vol_revise;
-
     QPushButton *Grid_A_AB_Vol_revise_explain;  //电网A相电压系数
-    Specification *Grid_A_AB_Vol_revise;
-
     QPushButton *Grid_B_BC_Vol_revise_explain;  //电网B相电压系数
-    Specification *Grid_B_BC_Vol_revise;
-
     QPushButton *Grid_C_CA_Vol_revise_explain;  //电网C相电压系数
-    Specification *Grid_C_CA_Vol_revise;
-
     QPushButton *Output_A_Cur_revise_explain; //输出A相电流系数
-    Specification *Output_A_Cur_revise;
-
     QPushButton *Output_B_Cur_revise_explain;   //输出B相电流系数
-    Specification *Output_B_Cur_revise;
-
     QPushButton *Output_C_Cur_revise_explain;   //输出C相电流系数
-    Specification *Output_C_Cur_revise;
-
     QPushButton *INV_A_Vol_revise_explain;  //逆变A相电压系数
-    Specification *INV_A_Vol_revise;
-
     QPushButton *INV_B_Vol_revise_explain;  //逆变B相电压系数
-    Specification *INV_B_Vol_revise;
-
     QPushButton *INV_C_Vol_revise_explain;  //逆变C相电压系数
-    Specification *INV_C_Vol_revise;
-
     QPushButton *INV_A_ind_Cur_revise_explain;  //逆变A相电感电流系数
-    Specification *INV_A_ind_Cur_revise;
-
     QPushButton *INV_B_ind_Cur_revise_explain;  //逆变B相电感电流系数
-    Specification *INV_B_ind_Cur_revise;
-
     QPushButton *INV_C_ind_Cur_revise_explain;  //逆变C相电感电流系数
-    Specification *INV_C_ind_Cur_revise;
-
     QPushButton *INV_On_off_flag_explain;   //开关机状态字
-    Specification *INV_On_off_flag;
-
     QPushButton *Logic_state_explain;   //逻辑状态字
-    Specification *Logic_state;
-
     QPushButton *INV_flag_explain;  //逆变状态字
-    Specification *INV_flag;
-
     QPushButton *Grid_flag_explain; //电网状态字
-    Specification *Grid_flag;
-
     QPushButton *Grid_protect_flag_explain; //电网保护状态字
-    Specification *Grid_protect_flag;
-
     QPushButton *PV_flag_explain; //电池电压状态字
-    Specification *PV_flag;
-
     QPushButton *DC_bus_flag_explain;  //母线状态字
-    Specification *DC_bus_flag;
-
     QPushButton *INT_main_flag_explain; //中断状态字
-    Specification *INT_main_flag;
-
     QPushButton *parallel_signal_explain;  //并机状态字
-    Specification *parallel_signal;
-
     QPushButton *Monitor_Order_explain;  //监控命令状态字
-    Specification *Monitor_Order;
-
     QPushButton *Bat_Infor_explain;  //电池信息字
-    Specification *Bat_Infor;
-
     QPushButton *Bat_State_explain;  //电池状态字
+
+
+
+    Specification *Debug_variable_1;
+    Specification *Debug_variable_2;
+    Specification *Debug_variable_3;
+    Specification *Debug_variable_1_addr;
+    Specification *Debug_variable_2_addr;
+    Specification *Debug_variable_3_addr;
+    Specification *Debug_memery_var_1;
+    Specification *Debug_memery_var_2;
+    Specification *Debug_memery_var_3;
+    Specification *Input_Vol_revise;
+    Specification *Input_Cur_revise;
+    Specification *Voltage_1_5_revise;
+    Specification *Bus_Vol_revise;
+    Specification *Grid_A_AB_Vol_revise;
+    Specification *Grid_B_BC_Vol_revise;
+    Specification *Grid_C_CA_Vol_revise;
+    Specification *Output_A_Cur_revise;
+    Specification *Output_B_Cur_revise;
+    Specification *Output_C_Cur_revise;
+    Specification *INV_A_Vol_revise;
+    Specification *INV_B_Vol_revise;
+    Specification *INV_C_Vol_revise;
+    Specification *INV_A_ind_Cur_revise;
+    Specification *INV_B_ind_Cur_revise;
+    Specification *INV_C_ind_Cur_revise;
+    Specification *INV_On_off_flag;
+    Specification *Logic_state;
+    Specification *INV_flag;
+    Specification *Grid_flag;
+    Specification *Grid_protect_flag;
+    Specification *PV_flag;
+    Specification *DC_bus_flag;
+    Specification *INT_main_flag;
+    Specification *parallel_signal;
+    Specification *Monitor_Order;
+    Specification *Bat_Infor;
     Specification *Bat_State;
 
     /***************************DCDC调试**************************/
     QPushButton *DC_Debug_variable_1_explain;  //调试变量1
-    Specification *DC_Debug_variable_1;
-
-
     QPushButton *DC_Debug_variable_2_explain;  //调试变量2
-    Specification *DC_Debug_variable_2;
-
     QPushButton *DC_Debug_variable_3_explain;  //调试变量3
-    Specification *DC_Debug_variable_3;
-
     QPushButton *Current_ID_explain;  //当前模块号
-    Specification *Current_ID;
-
     QPushButton *DC_INT_main_flag_explain;  //中断状态字
-    Specification *DC_INT_main_flag;
-
     QPushButton *DC_DC_bus_flag_explain;  //母线状态字
-    Specification *DC_DC_bus_flag;
-
     QPushButton *DC_PV_flag_explain;  //电池电压状态字
-    Specification *DC_PV_flag;
-
     QPushButton *DC_Debug_variable_1_addr_explain;  //调试地址变量1
-    Specification *DC_Debug_variable_1_addr;
-
     QPushButton *DC_Debug_variable_2_addr_explain;  //调试地址变量2
-    Specification *DC_Debug_variable_2_addr;
-
     QPushButton *DC_Debug_variable_3_addr_explain;  //调试地址变量3
-    Specification *DC_Debug_variable_3_addr;
-
     QPushButton *DC_INV_On_off_flag_explain;  //开关机状态字
-    Specification *DC_INV_On_off_flag;
-
-    QPushButton *DCONV_logic_explain;  //
-    Specification *DCONV_logic;
-
+    QPushButton *DCONV_logic_explain;  //逻辑状态字
     QPushButton *DC_parallel_signal_explain;  //并机状态字
-    Specification *DC_parallel_signal;
-
     QPushButton *DC_Debug_memery_var_1_explain;    //调试内存变量1
-    Specification *DC_Debug_memery_var_1;
-
     QPushButton *DC_Debug_memery_var_2_explain;    //调试内存变量2
-    Specification *DC_Debug_memery_var_2;
-
     QPushButton *DC_Debug_memery_var_3_explain;    //调试内存变量3
-    Specification *DC_Debug_memery_var_3;
-
     QPushButton *DC_Monitor_Order_explain;  //监控命令状态字
-    Specification *DC_Monitor_Order;
-
     QPushButton *DC_Bat_Infor_explain;  //电池信息字
-    Specification *DC_Bat_Infor;
-
     QPushButton *DC_Bat_State_explain;  //电池状态字
+
+
+    Specification *DC_Debug_variable_1;
+    Specification *DC_Debug_variable_2;
+    Specification *DC_Debug_variable_3;
+    Specification *Current_ID;
+    Specification *DC_INT_main_flag;
+    Specification *DC_DC_bus_flag;
+    Specification *DC_PV_flag;
+    Specification *DC_Debug_variable_1_addr;
+    Specification *DC_Debug_variable_2_addr;
+    Specification *DC_Debug_variable_3_addr;
+    Specification *DC_INV_On_off_flag;
+    Specification *DCONV_logic;
+    Specification *DC_parallel_signal;
+    Specification *DC_Debug_memery_var_1;
+    Specification *DC_Debug_memery_var_2;
+    Specification *DC_Debug_memery_var_3;
+    Specification *DC_Monitor_Order;
+    Specification *DC_Bat_Infor;
     Specification *DC_Bat_State;
 
 private:
@@ -967,6 +911,10 @@ private:
     void SystemMessages_delete();//系统信息 释放 说明
     void FunctionSet_delete();//功能设置 释放 说明
     void SystemParameter_delete();//系统参数 释放 说明
+    void ExternalDevice_delete();//外设 释放 说明
+    void DCAC_Debugg_delete();//DCAC调试 释放 说明
+    void DCDC_Debugg_delete();//DCDC调试 释放 说明
+    void Delete_explain();//调用上面的释放函数
 
 
 private slots:
@@ -1053,7 +1001,6 @@ private:
 
     QTimer *timer;
     QTimer *Update_RTData_timer;
-    bool ASKey;//高级设置钥匙
     bool IPShow;//IP地址显示标志位
     QTranslator *translator;    //翻译
     int LanguageType;   //当前语言

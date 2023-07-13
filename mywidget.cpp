@@ -870,6 +870,119 @@ void MyWidget::SystemParameter_delete()
     delete Module_min;
     delete Insulation_detection_enable_DCDC;
 }
+/************系统参数 释放 说明************/
+void MyWidget::ExternalDevice_delete()
+{
+    delete DI_1_Enable;
+    delete DI_1_NC_O;
+    delete DI_1_Action;
+    delete DI_2_Enable;
+    delete DI_2_NC_O;
+    delete DI_2_Action;
+    delete DI_3_Enable;
+    delete DI_3_NC_O;
+    delete DI_3_Action;
+    delete DI_4_Enable;
+    delete DI_4_NC_O;
+    delete DI_4_Action;
+    delete DI_5_Enable;
+    delete DI_5_NC_O;
+    delete DI_5_Action;
+    delete DI_6_Enable;
+    delete DI_6_NC_O;
+    delete DI_6_Action;
+    delete DO_1_Enable;
+    delete DO_1_NC_O;
+    delete DO_1_Action;
+    delete DO_2_Enable;
+    delete DO_2_NC_O;
+    delete DO_2_Action;
+    delete DO_3_Enable;
+    delete DO_3_NC_O;
+    delete DO_3_Action;
+}
+/************DCAC调试 释放 说明************/
+void MyWidget::DCAC_Debugg_delete()
+{
+    delete Debug_variable_1;
+    delete Debug_variable_2;
+    delete Debug_variable_3;
+    delete Debug_variable_1_addr;
+    delete Debug_variable_2_addr;
+    delete Debug_variable_3_addr;
+    delete Debug_memery_var_1;
+    delete Debug_memery_var_2;
+    delete Debug_memery_var_3;
+    delete Input_Vol_revise;
+    delete Input_Cur_revise;
+    delete Voltage_1_5_revise;
+    delete Bus_Vol_revise;
+    delete Grid_A_AB_Vol_revise;
+    delete Grid_B_BC_Vol_revise;
+    delete Grid_C_CA_Vol_revise;
+    delete Output_A_Cur_revise;
+    delete Output_B_Cur_revise;
+    delete Output_C_Cur_revise;
+    delete INV_A_Vol_revise;
+    delete INV_B_Vol_revise;
+    delete INV_C_Vol_revise;
+    delete INV_A_ind_Cur_revise;
+    delete INV_B_ind_Cur_revise;
+    delete INV_C_ind_Cur_revise;
+    delete INV_On_off_flag;
+    delete Logic_state;
+    delete INV_flag;
+    delete Grid_flag;
+    delete Grid_protect_flag;
+    delete PV_flag;
+    delete DC_bus_flag;
+    delete INT_main_flag;
+    delete parallel_signal;
+    delete Monitor_Order;
+    delete Bat_Infor;
+    delete Bat_State;
+}
+/************DCDC调试 释放 说明************/
+void MyWidget::DCDC_Debugg_delete()
+{
+    delete DC_Debug_variable_1;
+    delete DC_Debug_variable_2;
+    delete DC_Debug_variable_3;
+    delete Current_ID;
+    delete DC_INT_main_flag;
+    delete DC_DC_bus_flag;
+    delete DC_PV_flag;
+    delete DC_Debug_variable_1_addr;
+    delete DC_Debug_variable_2_addr;
+    delete DC_Debug_variable_3_addr;
+    delete DC_INV_On_off_flag;
+    delete DCONV_logic;
+    delete DC_parallel_signal;
+    delete DC_Debug_memery_var_1;
+    delete DC_Debug_memery_var_2;
+    delete DC_Debug_memery_var_3;
+    delete DC_Monitor_Order;
+    delete DC_Bat_Infor;
+    delete DC_Bat_State;
+}
+/************调用上面的释放函数************/
+void MyWidget::Delete_explain()
+{
+    MPS_state_delete();//释放MPS状态 的空间
+    Data_Report_delete();//释放 数据报表
+    HistoryRecord_delete();//释放 历史记录
+    OperationLog_tab_delete();//释放 操作日志
+    DC_AC_Parameter_tab_delete();//释放 DC/AC参数
+    DCDC_Paramter_tab_delete();//释放 DC/DC参数
+    Battery_Setup_Tab_delete();//释放 电池设置
+//    AutoOperation_delete();//释放 自动运行
+    SystemMessages_delete();//释放 系统消息
+    FunctionSet_delete();//释放 功能设置
+    SystemParameter_delete();//释放 系统参数
+    ExternalDevice_delete();//释放 外设
+    DCAC_Debugg_delete();//释放 DCAC调试
+    DCDC_Debugg_delete();//释放 DCDC调试
+}
 
 /********************************************************
  * 初始化界面
@@ -881,6 +994,7 @@ void MyWidget::UIPageInit()
     SystemSettingPage();//系统设置
     LCDSetting();   //实时刷新时间
     RecordPage();//记录页面
+    SystemParam_tbnt_released();//绘制高级设置界面
 }
 //触摸点击
 void MyWidget::FirstPage()
@@ -907,11 +1021,6 @@ void MyWidget::AdvancedSetup_btn_clicked()
 {
     m_menu->hide();
     ui->UI_stackedWidget->setCurrentWidget(ui->BasicSet_page);
-    if(ASKey)//保证只执行一次这句话，否则多次进出高级设置，会多次绘制页面，点击一次button，出现个消息对话框
-    {
-        ASKey = false;
-        SystemParam_tbnt_released();    //绘制高级设置界面
-    }
 }
 /*************************************************************************
 *切换语言
@@ -937,20 +1046,9 @@ void MyWidget::ChangeLanguage_btn_clicked()
         ui->retranslateUi(this);
     }
 
-    MPS_state_delete();//释放MPS状态 的空间
-    Data_Report_delete();//释放 数据报表
-    HistoryRecord_delete();//释放 历史记录
-    OperationLog_tab_delete();//释放 操作日志
-    DC_AC_Parameter_tab_delete();//释放 DC/AC参数
-    DCDC_Paramter_tab_delete();//释放 DC/DC参数
-    Battery_Setup_Tab_delete();//释放 电池设置
-//    AutoOperation_delete();//释放 自动运行
-    SystemMessages_delete();//释放 系统消息
-    FunctionSet_delete();//释放 功能设置
-    SystemParameter_delete();//释放 系统参数
+    Delete_explain();//释放空间
 
     UIPageInit();       //初始化界面
-    SystemParam_tbnt_released();//高级设置 绘制
 }
 //函数关联
 void MyWidget::LinkRelationship()
@@ -1931,8 +2029,8 @@ void MyWidget::My_menuAction(int Index)
         case MACHINESTANDBY:
             {
                 m_menu->hide();
-                QMessageBox::question(this, "Stand-by", "这是变流器待机开关，点击后变流器进入待机状态\nThis is the converter standby switch. Click the converter to enter the standby state", "OK");
-            }
+                QMessageBox::question(this, tr("Stand-by"), tr("This is the converter standby switch. Click the converter to enter the standby state"), tr("OK"));
+            }//这是变流器待机开关，点击后变流器进入待机状态
             break;
         case MACHINEOPEN:
             {
@@ -4534,458 +4632,445 @@ void MyWidget::SystemParameter(QTableWidget *myTable)
 /***********************外设页说明********************/
 void MyWidget::ExternalDevice(QTableWidget *myTable)
 {
+    QString str = tr("Normally closed circuit (NC) or normally open circuit (NO) according to field Settings.");
+    QString str1 = tr("When the dry contact is enabled and an abnormal signal is received, the device performs the selected action.");
+
     DI_1_Enable = new Specification(this,DI_1_Enable_explain, myTable, 0, 0, \
-                                   "Enable", "DI_1 Enable", \
-                                   "输入干接点1，发生NO关机时执行动作的开关,可选功能为使能(Enable)、禁止(Disable)\nInput dry contact 1, the switch to perform the action when NO shutdown occurs. The optional functions are Enable(Enable) or Disable(Disable).");
+                                    tr("Enable"), tr("DI_1_Enable"), \
+                                    tr("Enter dry contact 1. If Enable is selected, the Action is triggered when the dry contact detects that NO/NC is not set. If Disable is selected, the dry contact does not take any action when it detects that NO/NC is not set."));
     DI_1_Enable->add_Specification();
     DI_2_Enable = new Specification(this,DI_2_Enable_explain, myTable, 1, 0, \
-                                   "Disable", "DI_2 Enable", \
-                                   "输入干接点2，发生NC关机时执行动作的开关，可选功能为使能(Enable)、禁止(Disable)\nEnter dry contact 2, the switch that performs the action when NC shutdown occurs.The optional functions are Enable(Enable) or Disable(Disable).");
+                                    tr("Disable"), tr("DI_2_Enable"), \
+                                    tr("Enter dry contact 2. If Enable is selected, the Action is triggered when the dry contact detects that NO/NC is not set. If Disable is selected, the dry contact does not take any action when it detects that NO/NC is not set."));
     DI_2_Enable->add_Specification();
     DI_3_Enable = new Specification(this,DI_3_Enable_explain, myTable, 2, 0, \
-                                   "Enable", "DI_3 Enable", \
-                                   "输入干接点3，门禁开启时执行动作的开关，可选功能为使能(Enable)、禁止(Disable)\nEnter dry contact 3. The switch that performs the action when the access control is opened.The optional functions are Enable(Enable) or Disable(Disable).");
+                                    tr("Enable"), tr("DI_3_Enable"), \
+                                    tr("Enter dry contact 3. If Enable is selected, the Action is triggered when the dry contact detects that NO/NC is not set. If Disable is selected, the dry contact does not take any action when it detects that NO/NC is not set."));
     DI_3_Enable->add_Specification();
     DI_4_Enable = new Specification(this,DI_4_Enable_explain, myTable, 3, 0, \
-                                   "Enable", "DI_4 Enable", \
-                                   "输入干接点4，柴发信号发出时执行动作的开关，可选功能为使能(Enable)、禁止(Disable)\nInput dry contact 4, the switch to perform the action when the firewood signal is sent.The optional functions are Enable(Enable) or Disable(Disable).");
+                                    tr("Enable"), tr("DI_4_Enable"), \
+                                    tr("Enter dry contact 4. If Enable is selected, the Action is triggered when the dry contact detects that NO/NC is not set. If Disable is selected, the dry contact does not take any action when it detects that NO/NC is not set."));
     DI_4_Enable->add_Specification();
     DI_5_Enable = new Specification(this,DI_5_Enable_explain, myTable, 4, 0, \
-                                   "Enable", "DI_5 Enable", \
-                                   "输入干接点5，发生水浸时执行动作的开关，可选功能为使能(Enable)、禁止(Disable)\nEnter dry contact 5, the switch that performs the action when flooding occurs.The optional functions are Enable(Enable) or Disable(Disable).");
+                                    tr("Enable"), tr("DI_5_Enable"), \
+                                    tr("Enter dry contact 5. If Enable is selected, the Action is triggered when the dry contact detects that NO/NC is not set. If Disable is selected, the dry contact does not take any action when it detects that NO/NC is not set."));
     DI_5_Enable->add_Specification();
     DI_6_Enable = new Specification(this,DI_6_Enable_explain, myTable, 5, 0, \
-                                   "Enable", "DI_6 Enable", \
-                                   "输入干接点6，消防信号发出时执行动作的开关，可选功能为使能(Enable)、禁止(Disable)\nInput dry contact 6, the switch to perform action when the fire signal is sent.The optional functions are Enable(Enable) or Disable(Disable).");
+                                    tr("Enable"), tr("DI_6_Enable"), \
+                                    tr("Enter dry contact 6. If Enable is selected, the Action is triggered when the dry contact detects that NO/NC is not set. If Disable is selected, the dry contact does not take any action when it detects that NO/NC is not set."));
     DI_6_Enable->add_Specification();
     DO_1_Enable = new Specification(this,DO_1_Enable_explain, myTable, 6, 0, \
-                                   "Disable", "DO_1 Enable", \
-                                   "输出干接点1，发电机开启时执行动作的开关，可选功能为使能(Enable)、禁止(Disable)\nOutput dry contact 1, the switch that performs the action when the generator is on.The optional functions are Enable(Enable) or Disable(Disable).");
+                                    tr("Disable"), tr("DO_1_Enable"), \
+                                    tr("Output dry contact 1. If Enable is selected, the Action is triggered when the dry contact detects that NO/NC is not set. If Disable is selected, the dry contact does not take any action when it detects that NO/NC is not set."));
     DO_1_Enable->add_Specification();
     DO_2_Enable = new Specification(this,DO_2_Enable_explain, myTable, 7, 0, \
-                                   "Disable", "DO_2 Enable", \
-                                   "输出干接点2，预留功能，设置无效，可选功能为使能(Enable)、禁止(Disable)\nDry contact 2 is output. The reserved function is invalid.The optional functions are Enable(Enable) or Disable(Disable).");
+                                    tr("Disable"), tr("DO_2_Enable"), \
+                                    tr("Output dry contact 2. If Enable is selected, the Action is triggered when the dry contact detects that NO/NC is not set. If Disable is selected, the dry contact does not take any action when it detects that NO/NC is not set."));
     DO_2_Enable->add_Specification();
     DO_3_Enable = new Specification(this,DO_3_Enable_explain, myTable, 8, 0, \
-                                   "Disable", "DO_3 Enable", \
-                                   "输出干接点3，预留功能，设置无效，可选功能为使能(Enable)、禁止(Disable)\nDry contact 3 is output. The reserved function is invalid.The optional functions are Enable(Enable) or Disable(Disable).");
+                                    tr("Disable"), tr("DO_3_Enable"), \
+                                    tr("Output dry contact 3. If Enable is selected, the Action is triggered when the dry contact detects that NO/NC is not set. If Disable is selected, the dry contact does not take any action when it detects that NO/NC is not set."));
     DO_3_Enable->add_Specification();
 
     DI_1_NC_O = new Specification(this,DI_1_NC_O_explain, myTable, 0, 1, \
-                                   "N_O", "DI_1 NC_O", \
-                                   "输入干接点1，设置NO关机是常闭电路还是常开电路,可选功能为常开(N_O)常闭(N_C)\nInput dry contact 1, set NO shutdown is normally closed circuit or normally open circuit, optional function is normally open (N_O) normally closed (N_C).");
+                                   "N_O", tr("DI_1_NC_O"), str);
     DI_1_NC_O->add_Specification();
     DI_2_NC_O = new Specification(this,DI_2_NC_O_explain, myTable, 1, 1, \
-                                   "N_O", "DI_2 NC_O", \
-                                   "输入干接点2，设置NC关机是常闭电路还是常开电路可选功能为常开(N_O)常闭(N_C)\nInput dry contact 2, set NC shutdown is normally closed circuit or normally open circuit Optional function is normally open (N_O) normally closed (N_C).");
+                                   "N_O", tr("DI_2_NC_O"), str);
     DI_2_NC_O->add_Specification();
     DI_3_NC_O = new Specification(this,DI_3_NC_O_explain, myTable, 2, 1, \
-                                   "N_C", "DI_3 NC_O", \
-                                   "输入干接点3，设置门禁开是常闭电路还是常开电路可选功能为常开(N_O)常闭(N_C)\nInput dry contact 3, set the access control open normally closed circuit or normally open circuit Optional function: normally open (N_O) normally closed (N_C).");
+                                   "N_C", tr("DI_3_NC_O"), str);
     DI_3_NC_O->add_Specification();
     DI_4_NC_O = new Specification(this,DI_4_NC_O_explain, myTable, 3, 1, \
-                                   "N_O", "DI_4 NC_O", \
-                                   "输入干接点4，设置柴发信号是常闭电路还是常开电路可选功能为常开(N_O)常闭(N_C)\nInput dry contact 4, set the firewood signal is normally closed circuit or normally open circuit Optional function is normally open (N_O) normally closed (N_C).");
+                                   "N_O", tr("DI_4_NC_O"), str);
     DI_4_NC_O->add_Specification();
     DI_5_NC_O = new Specification(this,DI_5_NC_O_explain, myTable, 4, 1, \
-                                   "N_O", "DI_5 NC_O", \
-                                   "输入干接点5，设置水浸是常闭电路还是常开电路可选功能为常开(N_O)常闭(N_C)\nInput dry contact 5, set the flooding is normally closed circuit or normally open circuit Optional function is normally open (N_O) normally closed (N_C).");
+                                   "N_O", tr("DI_5_NC_O"), str);
     DI_5_NC_O->add_Specification();
     DI_6_NC_O = new Specification(this,DI_6_NC_O_explain, myTable, 5, 1, \
-                                   "N_O", "DI_6 NC_O", \
-                                   "输入干接点6，设置消防是常闭电路还是常开电路可选功能为常开(N_O)常闭(N_C)\nInput dry contact 6, set fire is normally closed circuit or normally open circuit Optional function is normally open (N_O) normally closed (N_C).");
+                                   "N_O", tr("DI_6_NC_O"), str);
     DI_6_NC_O->add_Specification();
     DO_1_NC_O = new Specification(this,DO_1_NC_O_explain, myTable, 6, 1, \
-                                   "N_O", "DO_1 NC_O", \
-                                   "输出干接点1，设置发电机是常闭电路还是常开电路可选功能为常开(N_O)常闭(N_C)\nOutput dry contact 1, set the generator is normally closed circuit or normally open circuit Optional function is normally open (N_O) normally closed (N_C).");
+                                   "N_O", tr("DO_1_NC_O"), str);
     DO_1_NC_O->add_Specification();
     DO_2_NC_O = new Specification(this,DO_2_NC_O_explain, myTable, 7, 1, \
-                                   "N_O", "DO_2 NC_O", \
-                                   "输出干接点2，预留功能，设置无效，设置是常闭电路还是常开电路可选功能为常开(N_O)常闭(N_C)\nOutput dry contact 2, reserved function, setting invalid, setting is normally closed circuit or normally open circuit Optional function: normally open (N_O) normally closed (N_C).");
+                                   "N_O", tr("DO_2_NC_O"), str);
     DO_2_NC_O->add_Specification();
     DO_3_NC_O = new Specification(this,DO_3_NC_O_explain, myTable, 8, 1, \
-                                   "N_O", "DO_3 NC_O", \
-                                   "输出干接点3，预留功能，设置无效，设置是常闭电路还是常开电路可选功能为常开(N_O)常闭(N_C)\nOutput dry contact 3, reserved function, setting invalid, setting is normally closed circuit or normally open circuit Optional function: normally open (N_O) normally closed (N_C).");
+                                   "N_O", tr("DO_3_NC_O"), str);
     DO_3_NC_O->add_Specification();
 
     DI_1_Action = new Specification(this,DI_1_Action_explain, myTable, 0, 2, \
-                                   "Shut down", "DI_1 Action", \
-                                   "输入干接点1，发生NO关机时执行的动作,可选功能为提示(Prompt)、待机(Standby)、关机(Shut down)、充满待机(Full standby)、放空待机(Empty standby)、故障待机(Failure standby)、电网信号(Grid singnal)\nInput dry contact 1 to perform the action when NO shutdown occurs. The optional functions are prompt(Prompt), standby(Standby), shutdown(Shut down), full standby(Full standby), empty standby(Empty standby), fault standby(Failure standby), and power grid signal(Grid singnal).");
+                                   tr("Shut down"), tr("DI_1_Action"), str1);
     DI_1_Action->add_Specification();
     DI_2_Action = new Specification(this,DI_2_Action_explain, myTable, 1, 2, \
-                                   "Prompt", "DI_2 Action", \
-                                   "输入干接点2，发生NC关机时执行的动作,可选功能为提示(Prompt)、待机(Standby)、关机(Shut down)、充满待机(Full standby)、放空待机(Empty standby)、故障待机(Failure standby)、电网信号(Grid singnal)\nEnter dry contact 2 to perform the action when the NC is shut down.The optional functions are prompt(Prompt), standby(Standby), shutdown(Shut down), full standby(Full standby), empty standby(Empty standby), fault standby(Failure standby), and power grid signal(Grid singnal)");
+                                   tr("Prompt"), tr("DI_2_Action"), str1);
     DI_2_Action->add_Specification();
     DI_3_Action = new Specification(this,DI_3_Action_explain, myTable, 2, 2, \
-                                   "Prompt", "DI_3 Action", \
-                                   "输入干接点3，门禁打开时执行的动作,可选功能为提示(Prompt)、待机(Standby)、关机(Shut down)、充满待机(Full standby)、放空待机(Empty standby)、故障待机(Failure standby)、电网信号(Grid singnal)\nEnter dry contact 3. The action is performed when the access control is opened.The optional functions are prompt(Prompt), standby(Standby), shutdown(Shut down), full standby(Full standby), empty standby(Empty standby), fault standby(Failure standby), and power grid signal(Grid singnal)");
+                                   tr("Prompt"), tr("DI_3_Action"), str1);
     DI_3_Action->add_Specification();
     DI_4_Action = new Specification(this,DI_4_Action_explain, myTable, 3, 2, \
-                                   "Prompt", "DI_4 Action", \
-                                   "输入干接点4，柴发信号发出时执行的动作,可选功能为提示(Prompt)、待机(Standby)、关机(Shut down)、充满待机(Full standby)、放空待机(Empty standby)、故障待机(Failure standby)、电网信号(Grid singnal)\nInput dry contact 4, the action to be performed when the chai signal is issued.The optional functions are prompt(Prompt), standby(Standby), shutdown(Shut down), full standby(Full standby), empty standby(Empty standby), fault standby(Failure standby), and power grid signal(Grid singnal)");
+                                   tr("Prompt"), tr("DI_4_Action"), str1);
     DI_4_Action->add_Specification();
     DI_5_Action = new Specification(this,DI_5_Action_explain, myTable, 4, 2, \
-                                   "Shut down", "DI_5 Action", \
-                                   "输入干接点5，发生水浸时执行的动作,可选功能为提示(Prompt)、待机(Standby)、关机(Shut down)、充满待机(Full standby)、放空待机(Empty standby)、故障待机(Failure standby)、电网信号(Grid singnal)\nEnter dry contact 5 to perform the action when flooding occurs.The optional functions are prompt(Prompt), standby(Standby), shutdown(Shut down), full standby(Full standby), empty standby(Empty standby), fault standby(Failure standby), and power grid signal(Grid singnal)");
+                                   tr("Shut down"), tr("DI_5_Action"), str1);
     DI_5_Action->add_Specification();
     DI_6_Action = new Specification(this,DI_6_Action_explain, myTable, 5, 2, \
-                                   "Shut down", "DI_6 Action", \
-                                   "输入干接点6，触发消防时执行的动作,可选功能为提示(Prompt)、待机(Standby)、关机(Shut down)、充满待机(Full standby)、放空待机(Empty standby)、故障待机(Failure standby)、电网信号(Grid singnal)\nEnter dry contact 6 to trigger the fire extinguishing action.The optional functions are prompt(Prompt), standby(Standby), shutdown(Shut down), full standby(Full standby), empty standby(Empty standby), fault standby(Failure standby), and power grid signal(Grid singnal)");
+                                   tr("Shut down"), tr("DI_6_Action"), str1);
     DI_6_Action->add_Specification();
     DO_1_Action = new Specification(this,DO_1_Action_explain, myTable, 6, 2, \
-                                   "Prompt", "DO_1 Action", \
-                                   "输出干接点1，启动发电机时执行的动作,可选功能为提示(Prompt)、待机(Standby)、关机(Shut down)、充满待机(Full standby)、放空待机(Empty standby)、故障待机(Failure standby)、电网信号(Grid singnal)\nOutput dry contact 1, the action to be performed when starting the generator.The optional functions are prompt(Prompt), standby(Standby), shutdown(Shut down), full standby(Full standby), empty standby(Empty standby), fault standby(Failure standby), and power grid signal(Grid singnal)");
+                                   tr("Prompt"), tr("DO_1_Action"), str1);
     DO_1_Action->add_Specification();
     DO_2_Action = new Specification(this,DO_2_Action_explain, myTable, 7, 2, \
-                                   "Prompt", "DO_2 Action", \
-                                   "输出干接点2，预留功能，设置无效，信号触发时执行的动作,可选功能为提示(Prompt)、待机(Standby)、关机(Shut down)、充满待机(Full standby)、放空待机(Empty standby)、故障待机(Failure standby)、电网信号(Grid singnal)\nOutput dry contact 2, reserved function, set invalid, the action to be performed when the signal is triggered.The optional functions are prompt(Prompt), standby(Standby), shutdown(Shut down), full standby(Full standby), empty standby(Empty standby), fault standby(Failure standby), and power grid signal(Grid singnal)");
+                                   tr("Prompt"), tr("DO_2_Action"), str1);
     DO_2_Action->add_Specification();
     DO_3_Action = new Specification(this,DO_3_Action_explain, myTable, 8, 2, \
-                                   "Prompt", "DO_3 Action", \
-                                   "输出干接点3，预留功能，设置无效，信号触发时执行的动作,可选功能为提示(Prompt)、待机(Standby)、关机(Shut down)、充满待机(Full standby)、放空待机(Empty standby)、故障待机(Failure standby)、电网信号(Grid singnal)\nDry contact 3 is output. The reserved function is invalid.The optional functions are prompt(Prompt), standby(Standby), shutdown(Shut down), full standby(Full standby), empty standby(Empty standby), fault standby(Failure standby), and power grid signal(Grid singnal)");
+                                   tr("Prompt"), tr("DO_3_Action"), str1);
     DO_3_Action->add_Specification();
 
 }
 /*****************DCAC调试页说明*********************/
 void MyWidget::DCAC_Debugg(QTableWidget *myTable)
 {
+    QString str = tr("It is used for internal debugging only.");
     //调试变量1
     Debug_variable_1 = new Specification(this,Debug_variable_1_explain, myTable, 0, 1, \
-                                   "0", "Debug variable 1", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("Debug variable 1"), \
+                                   str);
     Debug_variable_1->add_Specification();
 
     //调试变量2
     Debug_variable_2 = new Specification(this,Debug_variable_2_explain, myTable, 1, 1, \
-                                   "0", "Debug variable 2", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("Debug variable 2"), \
+                                   str);
     Debug_variable_2->add_Specification();
 
     //调试变量3
     Debug_variable_3 = new Specification(this,Debug_variable_3_explain, myTable, 2, 1, \
-                                   "0", "Debug variable 3", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("Debug variable 3"), \
+                                   str);
     Debug_variable_3->add_Specification();
 
     //调试地址变量1
     Debug_variable_1_addr = new Specification(this,Debug_variable_1_addr_explain, myTable, 3, 1, \
-                                   "4096", "Debug variable 1 addr", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "4096", tr("Debug variable 1 addr"), \
+                                   str);
     Debug_variable_1_addr->add_Specification();
 
     //调试地址变量2
     Debug_variable_2_addr = new Specification(this,Debug_variable_2_addr_explain, myTable, 4, 1, \
-                                   "4096", "Debug variable 2 addr", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "4096", tr("Debug variable 2 addr"), \
+                                   str);
     Debug_variable_2_addr->add_Specification();
 
     //调试地址变量3
     Debug_variable_3_addr = new Specification(this,Debug_variable_3_addr_explain, myTable, 5, 1, \
-                                   "4096", "Debug variable 3 addr", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "4096", tr("Debug variable 3 addr"), \
+                                   str);
     Debug_variable_3_addr->add_Specification();
 
     //调试内存变量1
     Debug_memery_var_1 = new Specification(this,Debug_memery_var_1_explain, myTable, 6, 1, \
-                                   "0", "Debug memery var 1", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("Debug memery var 1"), \
+                                   str);
     Debug_memery_var_1->add_Specification();
 
     //调试内存变量2
     Debug_memery_var_2 = new Specification(this,Debug_memery_var_2_explain, myTable, 7, 1, \
-                                   "0", "Debug memery var 2", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("Debug memery var 2"), \
+                                   str);
     Debug_memery_var_2->add_Specification();
 
     //调试内存变量3
     Debug_memery_var_3 = new Specification(this,Debug_memery_var_3_explain, myTable, 8, 1, \
-                                   "0", "Debug memery var 3", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("Debug memery var 3"), \
+                                   str);
     Debug_memery_var_3->add_Specification();
 
     //输入电压系数
     Input_Vol_revise = new Specification(this,Input_Vol_revise_explain, myTable, 9, 1, \
-                                   "", "Input Vol revise", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "", tr("Input Vol revise"), \
+                                   str);
     Input_Vol_revise->add_Specification();
 
     //输入电流系数
     Input_Cur_revise = new Specification(this,Input_Cur_revise_explain, myTable, 10, 1, \
-                                   "", "Input Cur revise", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "", tr("Input Cur revise"), \
+                                   str);
     Input_Cur_revise->add_Specification();
 
     //1.5V电压系数
     Voltage_1_5_revise = new Specification(this,Voltage_1_5_revise_explain, myTable, 0, 3, \
-                                   "", "Voltage 1.5 revise", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "", tr("Voltage 1.5 revise"), \
+                                   str);
     Voltage_1_5_revise->add_Specification();
 
     //母线电压系数
     Bus_Vol_revise = new Specification(this,Bus_Vol_revise_explain, myTable, 1, 3, \
-                                   "", "Bus Vol revise", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "", tr("Bus Vol revise"), \
+                                   str);
     Bus_Vol_revise->add_Specification();
 
     //电网A相电压系数
     Grid_A_AB_Vol_revise = new Specification(this,Grid_A_AB_Vol_revise_explain, myTable, 2, 3, \
-                                   "", "Grid A AB Vol revise", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "", tr("Grid A AB Vol revise"), \
+                                   str);
     Grid_A_AB_Vol_revise->add_Specification();
 
     //电网B相电压系数
     Grid_B_BC_Vol_revise = new Specification(this,Grid_B_BC_Vol_revise_explain, myTable, 3, 3, \
-                                   "", "Grid B BC Vol revise", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "", tr("Grid B BC Vol revise"), \
+                                   str);
     Grid_B_BC_Vol_revise->add_Specification();
 
     //电网C相电压系数
     Grid_C_CA_Vol_revise = new Specification(this,Grid_C_CA_Vol_revise_explain, myTable, 4, 3, \
-                                   "", "Grid C CA Vol revise", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "", tr("Grid C CA Vol revise"), \
+                                   str);
     Grid_C_CA_Vol_revise->add_Specification();
 
     //输出A相电流系数
     Output_A_Cur_revise = new Specification(this,Output_A_Cur_revise_explain, myTable, 5, 3, \
-                                   "", "Output A Cur revise", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "", tr("Output A Cur revise"), \
+                                   str);
     Output_A_Cur_revise->add_Specification();
 
     //输出B相电流系数
     Output_B_Cur_revise = new Specification(this,Output_B_Cur_revise_explain, myTable, 6, 3, \
-                                   "", "Output B Cur revise", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "", tr("Output B Cur revise"), \
+                                   str);
     Output_B_Cur_revise->add_Specification();
 
     //输出C相电流系数
     Output_C_Cur_revise = new Specification(this,Output_C_Cur_revise_explain, myTable, 7, 3, \
-                                   "", "Output C Cur revise", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "", tr("Output C Cur revise"), \
+                                   str);
     Output_C_Cur_revise->add_Specification();
 
     //逆变A相电压系数
     INV_A_Vol_revise = new Specification(this,INV_A_Vol_revise_explain, myTable, 8, 3, \
-                                   "", "INV A Vol revise", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "", tr("INV A Vol revise"), \
+                                   str);
     INV_A_Vol_revise->add_Specification();
 
     //逆变B相电压系数
     INV_B_Vol_revise = new Specification(this,INV_B_Vol_revise_explain, myTable, 9, 3, \
-                                   "", "INV B Vol revise", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "", tr("INV B Vol revise"), \
+                                   str);
     INV_B_Vol_revise->add_Specification();
 
     //逆变C相电压系数
     INV_C_Vol_revise = new Specification(this,INV_C_Vol_revise_explain, myTable, 10, 3, \
-                                   "", "INV C Vol revise", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "", tr("INV C Vol revise"), \
+                                   str);
     INV_C_Vol_revise->add_Specification();
 
     //逆变A相电感电流系数
     INV_A_ind_Cur_revise = new Specification(this,INV_A_ind_Cur_revise_explain, myTable, 11, 3, \
-                                   "", "INV A inductance Cur revise", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "", tr("INV A inductance Cur revise"), \
+                                   str);
     INV_A_ind_Cur_revise->add_Specification();
 
     //逆变B相电感电流系数
     INV_B_ind_Cur_revise = new Specification(this,INV_B_ind_Cur_revise_explain, myTable, 12, 3, \
-                                   "", "INV B inductance Cur revise", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "", tr("INV B inductance Cur revise"), \
+                                   str);
     INV_B_ind_Cur_revise->add_Specification();
 
     //逆变C相电感电流系数
     INV_C_ind_Cur_revise = new Specification(this,INV_C_ind_Cur_revise_explain, myTable, 13, 3, \
-                                   "", "INV C inductance Cur revise", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "", tr("INV C inductance Cur revise"), \
+                                   str);
     INV_C_ind_Cur_revise->add_Specification();
 
     //开关机状态字
     INV_On_off_flag = new Specification(this,INV_On_off_flag_explain, myTable, 0, 5, \
-                                   "0", "INV On off flag", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("INV On off flag"), \
+                                   str);
     INV_On_off_flag->add_Specification();
 
     //逻辑状态字
     Logic_state = new Specification(this,Logic_state_explain, myTable, 1, 5, \
-                                   "0", "Logic state", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("Logic state"), \
+                                   str);
     Logic_state->add_Specification();
 
     //逆变状态字
     INV_flag = new Specification(this,INV_flag_explain, myTable, 2, 5, \
-                                   "0", "INV flag", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("INV flag"), \
+                                   str);
     INV_flag->add_Specification();
 
     //电网状态字
     Grid_flag = new Specification(this,Grid_flag_explain, myTable, 3, 5, \
-                                   "0", "Grid flag", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("Grid flag"), \
+                                   str);
     Grid_flag->add_Specification();
 
     //电网保护状态字
     Grid_protect_flag = new Specification(this,Grid_protect_flag_explain, myTable, 4, 5, \
-                                   "0", "Grid protect flag", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("Grid protect flag"), \
+                                   str);
     Grid_protect_flag->add_Specification();
 
     //电池电压状态字
     PV_flag = new Specification(this,PV_flag_explain, myTable, 5, 5, \
-                                   "0", "PV flag", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("PV flag"), \
+                                   str);
     PV_flag->add_Specification();
 
     //母线状态字
     DC_bus_flag = new Specification(this,DC_bus_flag_explain, myTable, 6, 5, \
-                                   "0", "DC bus flag", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("DC bus flag"), \
+                                   str);
     DC_bus_flag->add_Specification();
 
     //中断状态字
     INT_main_flag = new Specification(this,INT_main_flag_explain, myTable, 7, 5, \
-                                   "0", "INT main flag", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("INT main flag"), \
+                                   str);
     INT_main_flag->add_Specification();
 
     //并机状态字
     parallel_signal = new Specification(this,parallel_signal_explain, myTable, 8, 5, \
-                                   "0", "parallel signal", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("parallel signal"), \
+                                   str);
     parallel_signal->add_Specification();
 
     //监控命令状态字
     Monitor_Order = new Specification(this,Monitor_Order_explain, myTable, 9, 5, \
-                                   "0", "Monitor Order", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("Monitor Order"), \
+                                   str);
     Monitor_Order->add_Specification();
 
     //电池信息字
     Bat_Infor = new Specification(this,Bat_Infor_explain, myTable, 10, 5, \
-                                   "0", "Bat Infor", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("Bat Infor"), \
+                                   str);
     Bat_Infor->add_Specification();
 
     //电池状态字
     Bat_State = new Specification(this,Bat_State_explain, myTable, 11, 5, \
-                                   "0", "Bat State", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("Bat State"), \
+                                   str);
     Bat_State->add_Specification();
 }
 /*****************DCDC调试页说明*******************/
 void MyWidget::DCDC_Debugg(QTableWidget *myTable)
 {
+    QString str = tr("It is used for internal debugging only.");
     //调试变量1
     DC_Debug_variable_1 = new Specification(this,DC_Debug_variable_1_explain, myTable, 0, 1, \
-                                   "0", "Debug variable 1", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("Debug variable 1"), \
+                                   str);
     DC_Debug_variable_1->add_Specification();
 
     //调试变量2
     DC_Debug_variable_2 = new Specification(this,DC_Debug_variable_2_explain, myTable, 1, 1, \
-                                   "0", "Debug variable 2", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("Debug variable 2"), \
+                                   str);
     DC_Debug_variable_2->add_Specification();
 
     //调试变量3
     DC_Debug_variable_3 = new Specification(this,DC_Debug_variable_3_explain, myTable, 2, 1, \
-                                   "0", "Debug variable 3", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("Debug variable 3"), \
+                                   str);
     DC_Debug_variable_3->add_Specification();
 
     //当前模块号
     Current_ID = new Specification(this,Current_ID_explain, myTable, 3, 1, \
-                                   "1", "Debug variable 3", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "1", tr("Debug variable 3"), \
+                                   str);
     Current_ID->add_Specification();
 
     //中断状态字
     DC_INT_main_flag = new Specification(this,DC_INT_main_flag_explain, myTable, 4, 1, \
-                                   "0", "INT main flag", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("INT main flag"), \
+                                   str);
     DC_INT_main_flag->add_Specification();
 
     //母线状态字
     DC_DC_bus_flag = new Specification(this,DC_DC_bus_flag_explain, myTable, 5, 1, \
-                                   "0", "DC bus flag", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("DC bus flag"), \
+                                   str);
     DC_DC_bus_flag->add_Specification();
 
     //电池电压状态字
     DC_PV_flag = new Specification(this,DC_PV_flag_explain, myTable, 6, 1, \
-                                   "0", "PV flag", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("PV flag"), \
+                                   str);
     DC_PV_flag->add_Specification();
 
     //调试地址变量1
     DC_Debug_variable_1_addr = new Specification(this,DC_Debug_variable_1_addr_explain, myTable, 0, 3, \
-                                   "0", "Debug variable 1 addr", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("Debug variable 1 addr"), \
+                                   str);
     DC_Debug_variable_1_addr->add_Specification();
 
     //调试地址变量2
     DC_Debug_variable_2_addr = new Specification(this,DC_Debug_variable_2_addr_explain, myTable, 1, 3, \
-                                   "0", "Debug variable 2 addr", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("Debug variable 2 addr"), \
+                                   str);
     DC_Debug_variable_2_addr->add_Specification();
 
     //调试地址变量3
     DC_Debug_variable_3_addr = new Specification(this,DC_Debug_variable_3_addr_explain, myTable, 2, 3, \
-                                   "0", "Debug variable 3 addr", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("Debug variable 3 addr"), \
+                                   str);
     DC_Debug_variable_3_addr->add_Specification();
 
     //开关机状态字
     DC_INV_On_off_flag = new Specification(this,DC_INV_On_off_flag_explain, myTable, 4, 3, \
-                                   "0", "INV On off flag", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("INV On off flag"), \
+                                   str);
     DC_INV_On_off_flag->add_Specification();
 
     //
     DCONV_logic = new Specification(this,DCONV_logic_explain, myTable, 5, 3, \
-                                    "0", "DCONV logic", \
-                                    "仅提供内部调试使用\nIt is used for internal debugging only");
+                                    "0", tr("DCONV logic"), \
+                                    str);
     DCONV_logic->add_Specification();
 
     //并机状态字
     DC_parallel_signal = new Specification(this,DC_parallel_signal_explain, myTable, 6, 3, \
-                                   "0", "parallel signal", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("parallel signal"), \
+                                   str);
     DC_parallel_signal->add_Specification();
 
     //调试内存变量1
     DC_Debug_memery_var_1 = new Specification(this,DC_Debug_memery_var_1_explain, myTable, 0, 5, \
-                                   "0", "Debug memery var 1", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("Debug memery var 1"), \
+                                   str);
     DC_Debug_memery_var_1->add_Specification();
 
     //调试内存变量2
     DC_Debug_memery_var_2 = new Specification(this,DC_Debug_memery_var_2_explain, myTable, 1, 5, \
-                                   "0", "Debug memery var 2", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("Debug memery var 2"), \
+                                   str);
     DC_Debug_memery_var_2->add_Specification();
 
     //调试内存变量3
     DC_Debug_memery_var_3 = new Specification(this,DC_Debug_memery_var_3_explain, myTable, 2, 5, \
-                                   "0", "Debug memery var 3", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("Debug memery var 3"), \
+                                   str);
     DC_Debug_memery_var_3->add_Specification();
 
     //监控命令状态字
     DC_Monitor_Order = new Specification(this,DC_Monitor_Order_explain, myTable, 4, 5, \
-                                   "0", "Monitor Order", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("Monitor Order"), \
+                                   str);
     DC_Monitor_Order->add_Specification();
 
     //电池信息字
     DC_Bat_Infor = new Specification(this,DC_Bat_Infor_explain, myTable, 5, 5, \
-                                   "0", "Bat Infor", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("Bat Infor"), \
+                                   str);
     DC_Bat_Infor->add_Specification();
 
     //电池状态字
     DC_Bat_State = new Specification(this,DC_Bat_State_explain, myTable, 6, 5, \
-                                   "0", "Bat State", \
-                                   "仅提供内部调试使用\nIt is used for internal debugging only");
+                                   "0", tr("Bat State"), \
+                                   str);
     DC_Bat_State->add_Specification();
 }
 /*********选中第一个模块*********/
@@ -5076,14 +5161,14 @@ void MyWidget::on_UI_Complete_Btn_clicked()//退出高级设置
 /********* 电池上电 *********/
 void MyWidget::on_Battery_PowerOn_clicked()
 {
-    QMessageBox::question(this , "Power On", \
-                          "从这里可以给电池上电\nYou can power on the battery from here", "OK");
+    QMessageBox::question(this , tr("Power On"), \
+                          tr("When the battery is powered on, this item can give the BMS instructions to close the contactor (Note: only some BMS manufacturers support this function)."), tr("OK"));
 }
 /********* 电池下电 *********/
 void MyWidget::on_Battery_PowerOff_clicked()
 {
-    QMessageBox::question(this , "Power Off", \
-                          "从这里可以给电池下电\nYou can power up the battery from here.", "OK");
+    QMessageBox::question(this , tr("Power Off"), \
+                          tr("Battery power off, this item can give the BMS to disconnect the contactor command (note: only some BMS manufacturers support this function)."), tr("OK"));
 }
 /*********** 选择静态IP地址 ************/
 void MyWidget::on_radio_static_clicked()
@@ -5129,23 +5214,23 @@ void MyWidget::on_radio_dhcp_clicked()
 /****************DCDC 变流器开启*****************/
 void MyWidget::on_Switch_on_Inv_clicked()
 {
-    QMessageBox::question(this, "Turn on", "这是DCDC变流器打开开关,点击后开启DCDC变流器\nThis is the DCDC converter turn on the switch, click to turn on the DCDC converter", "OK");
-}
+    QMessageBox::question(this, tr("Turn on"), tr("This is the DCDC converter turn on the switch, click to turn on the DCDC converter."), tr("OK"));
+}//这是DCDC变流器打开开关,点击后开启DCDC变流器\n
 /****************DCDC 变流器关闭*****************/
 void MyWidget::on_Switch_off_Inv_clicked()
 {
-    QMessageBox::question(this, "Turn off", "这是DCDC变流器关闭开关，点击后关闭DCDC变流器\nThis is the DCDC converter off switch. Click to turn off the DCDC converter", "OK");
-}
+    QMessageBox::question(this, tr("Turn off"), tr("This is the DCDC converter off switch. Click to turn off the DCDC converter."), tr("OK"));
+}//这是DCDC变流器关闭开关，点击后关闭DCDC变流器\n
 /****************DCAC 变流器开启*****************/
 void MyWidget::on_Switch_on_clicked()
 {
-    QMessageBox::question(this, "Turn on", "这是DCAC变流器打开开关,点击后开启DCAC变流器\nThis is the DCAC converter turn on the switch, click to turn on the DCAC converter", "OK");
-}
+    QMessageBox::question(this, tr("Turn on"), tr("This is the DCAC converter turn on the switch, click to turn on the DCAC converter."), tr("OK"));
+}//这是DCAC变流器打开开关,点击后开启DCAC变流器\n
 /****************DCAC 变流器关闭*****************/
 void MyWidget::on_Switch_off_clicked()
 {
-    QMessageBox::question(this, "Turn off", "这是DCAC变流器关闭开关，点击后关闭DCAC变流器\nThis is the DCAC converter off switch. Click to turn off the DCAC converter", "OK");
-}
+    QMessageBox::question(this, tr("Turn off"), tr("This is the DCAC converter off switch. Click to turn off the DCAC converter."), tr("OK"));
+}//这是DCAC变流器关闭开关，点击后关闭DCAC变流器\n
 /***************************************************************
  * 故障信息表搜索功能
  ***************************************************************/
