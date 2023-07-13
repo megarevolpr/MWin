@@ -59,7 +59,7 @@
    <item row="0" column="0">
     <widget class="QStackedWidget" name="UI_stackedWidget">
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="BasicSet_page">
       <widget class="QWidget" name="layoutWidget">
@@ -2613,7 +2613,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <enum>QFrame::Raised</enum>
            </property>
            <property name="currentIndex">
-            <number>0</number>
+            <number>3</number>
            </property>
            <widget class="QWidget" name="Host_page">
             <widget class="QPushButton" name="Bypass_Grid_btn">
@@ -3762,7 +3762,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                 <string notr="true"/>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>3</number>
                </property>
                <widget class="QWidget" name="RT_Data_page">
                 <attribute name="title">
@@ -4746,7 +4746,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                  <item row="0" column="0">
                   <widget class="QStackedWidget" name="BAT_stackedWidget">
                    <property name="currentIndex">
-                    <number>0</number>
+                    <number>1</number>
                    </property>
                    <widget class="QWidget" name="BAT_Lithium_page">
                     <layout class="QGridLayout" name="gridLayout_17">
@@ -6339,7 +6339,7 @@ enable</string>
              <item row="0" column="0">
               <widget class="QTabWidget" name="Record_tabWidget">
                <property name="currentIndex">
-                <number>1</number>
+                <number>0</number>
                </property>
                <widget class="QWidget" name="DataReport_page">
                 <attribute name="title">
@@ -7419,7 +7419,7 @@ Floating charge</string>
                           <cursorShape>ArrowCursor</cursorShape>
                          </property>
                          <property name="rowCount">
-                          <number>10</number>
+                          <number>11</number>
                          </property>
                          <property name="columnCount">
                           <number>2</number>
@@ -7436,6 +7436,11 @@ Floating charge</string>
                          <attribute name="verticalHeaderVisible">
                           <bool>false</bool>
                          </attribute>
+                         <row>
+                          <property name="text">
+                           <string>1</string>
+                          </property>
+                         </row>
                          <row/>
                          <row/>
                          <row/>
@@ -7488,17 +7493,17 @@ Floating charge</string>
                            <set>AlignCenter</set>
                           </property>
                          </item>
-                         <item row="4" column="1">
+                         <item row="5" column="0">
                           <property name="text">
-                           <string/>
+                           <string>Discharge Volt. lower Limit delta(V)</string>
                           </property>
                           <property name="textAlignment">
                            <set>AlignCenter</set>
                           </property>
                          </item>
-                         <item row="5" column="0">
+                         <item row="5" column="1">
                           <property name="text">
-                           <string>Discharge Volt. lower Limit delta(V)</string>
+                           <string/>
                           </property>
                           <property name="textAlignment">
                            <set>AlignCenter</set>
@@ -7528,14 +7533,22 @@ Floating charge</string>
                            <set>AlignCenter</set>
                           </property>
                          </item>
-                         <item row="8" column="1">
+                         <item row="9" column="0">
+                          <property name="text">
+                           <string>Generator turn on SOC(A1)</string>
+                          </property>
+                          <property name="textAlignment">
+                           <set>AlignCenter</set>
+                          </property>
+                         </item>
+                         <item row="9" column="1">
                           <property name="text">
                            <string/>
                           </property>
                          </item>
-                         <item row="9" column="0">
+                         <item row="10" column="0">
                           <property name="text">
-                           <string>Generator turn on SOC(A1)</string>
+                           <string>SwitchingBatteryTypes</string>
                           </property>
                           <property name="textAlignment">
                            <set>AlignCenter</set>
@@ -7730,12 +7743,12 @@ B1 - A1 ≥ 30 %
                          </item>
                          <item row="2" column="0">
                           <property name="text">
-                           <string>Battery float voltage</string>
+                           <string>Charge limiting value</string>
                           </property>
                          </item>
                          <item row="2" column="2">
                           <property name="text">
-                           <string>V</string>
+                           <string>C</string>
                           </property>
                           <property name="textAlignment">
                            <set>AlignCenter</set>
@@ -7756,12 +7769,12 @@ B1 - A1 ≥ 30 %
                          </item>
                          <item row="3" column="0">
                           <property name="text">
-                           <string>Battery filling voltage</string>
+                           <string>Discharge limiting value</string>
                           </property>
                          </item>
                          <item row="3" column="2">
                           <property name="text">
-                           <string>V</string>
+                           <string>C</string>
                           </property>
                           <property name="textAlignment">
                            <set>AlignCenter</set>
@@ -7782,12 +7795,12 @@ B1 - A1 ≥ 30 %
                          </item>
                          <item row="4" column="0">
                           <property name="text">
-                           <string>Charge limiting value</string>
+                           <string>Generator turn off SOC(B1)</string>
                           </property>
                          </item>
                          <item row="4" column="2">
                           <property name="text">
-                           <string>C</string>
+                           <string>%</string>
                           </property>
                           <property name="textAlignment">
                            <set>AlignCenter</set>
@@ -7808,12 +7821,12 @@ B1 - A1 ≥ 30 %
                          </item>
                          <item row="5" column="0">
                           <property name="text">
-                           <string>Discharge limiting value</string>
+                           <string>Generator turn on SOC(A1)</string>
                           </property>
                          </item>
                          <item row="5" column="2">
                           <property name="text">
-                           <string>C</string>
+                           <string>%</string>
                           </property>
                           <property name="textAlignment">
                            <set>AlignCenter</set>
@@ -7834,12 +7847,12 @@ B1 - A1 ≥ 30 %
                          </item>
                          <item row="6" column="0">
                           <property name="text">
-                           <string>Generator turn off SOC(B1)</string>
+                           <string>SwitchingBatteryTypes</string>
                           </property>
                          </item>
                          <item row="6" column="2">
                           <property name="text">
-                           <string>%</string>
+                           <string/>
                           </property>
                           <property name="textAlignment">
                            <set>AlignCenter</set>
@@ -7860,12 +7873,12 @@ B1 - A1 ≥ 30 %
                          </item>
                          <item row="7" column="0">
                           <property name="text">
-                           <string>Generator turn on SOC(A1)</string>
+                           <string/>
                           </property>
                          </item>
                          <item row="7" column="2">
                           <property name="text">
-                           <string>%</string>
+                           <string/>
                           </property>
                           <property name="textAlignment">
                            <set>AlignCenter</set>
@@ -7873,12 +7886,25 @@ B1 - A1 ≥ 30 %
                          </item>
                          <item row="7" column="3">
                           <property name="text">
-                           <string>Uniform charging and flushing current</string>
+                           <string/>
                           </property>
                          </item>
                          <item row="7" column="5">
                           <property name="text">
-                           <string>A</string>
+                           <string/>
+                          </property>
+                          <property name="textAlignment">
+                           <set>AlignCenter</set>
+                          </property>
+                         </item>
+                         <item row="8" column="0">
+                          <property name="text">
+                           <string/>
+                          </property>
+                         </item>
+                         <item row="8" column="2">
+                          <property name="text">
+                           <string/>
                           </property>
                           <property name="textAlignment">
                            <set>AlignCenter</set>
@@ -7886,12 +7912,12 @@ B1 - A1 ≥ 30 %
                          </item>
                          <item row="8" column="3">
                           <property name="text">
-                           <string>Float turn uniform charging current</string>
+                           <string/>
                           </property>
                          </item>
                          <item row="8" column="5">
                           <property name="text">
-                           <string>A</string>
+                           <string/>
                           </property>
                           <property name="textAlignment">
                            <set>AlignCenter</set>
@@ -8195,8 +8221,8 @@ B1 - A1 ≥ 30 %
                           <rect>
                            <x>0</x>
                            <y>0</y>
-                           <width>16</width>
-                           <height>16</height>
+                           <width>383</width>
+                           <height>359</height>
                           </rect>
                          </property>
                          <property name="cursor">

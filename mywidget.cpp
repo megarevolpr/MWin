@@ -261,7 +261,9 @@ void MyWidget::MemoryAllocation()
     Voltage_level_explain = new QPushButton;                     //电压等级说明
     Current_value_explain = new QPushButton;                     //电流值说明
 
-    /***************************电池设置****************************/
+    /***************************电池设置 锂电****************************/
+    SwitchingBatteryTypes = new QPushButton;//切换电池类型
+
     DOD_OnGrid_explain = new QPushButton;    //并网DOD说明
     DOD_OffGrid_explain = new QPushButton;   //离网DOD说明
     Charge_Volt_Upper_Limit_explain = new QPushButton;   //充电电压上限说明
@@ -274,6 +276,23 @@ void MyWidget::MemoryAllocation()
 //    Equalized_charge_explain = new QPushButton;   //均充电压说明
     Gen_turn_off_SOC_explain = new QPushButton;    //柴发关闭SOC说明
     Gen_turn_on_SOC_explain = new QPushButton;     //柴发开启SOC说明
+
+    /***************************电池设置 铅酸****************************/
+
+    Capacity_explain  = new QPushButton;
+    Cell_number_2V_explain  = new QPushButton;
+    Charge_limiting_value_explain  = new QPushButton;
+    Discharge_limiting_value_explain  = new QPushButton;
+    Generator_turn_off_SOC_B1_explain  = new QPushButton;
+    Generator_turn_on_SOC_A1_explain  = new QPushButton;
+    SwitchingBatteryTypes_Leaad  = new QPushButton;
+    Grid_off_EOD_explain  = new QPushButton;
+    Grid_on_EOD_explain  = new QPushButton;
+    Shutdown_voltage_point_explain  = new QPushButton;
+    Mending_center_point_explain  = new QPushButton;
+    Temperature_filling_coefficient_explain  = new QPushButton;
+    Mending_allowable_setting_explain  = new QPushButton;
+    Temperature_alarm_upper_limit_explain  = new QPushButton;
 
     /*******************************自动运行*******************************/
 
@@ -1071,6 +1090,8 @@ void MyWidget::LinkRelationship()
 
     connect(ui->ChangeLanguage_btn, SIGNAL(clicked(bool)), this, SLOT(ChangeLanguage_btn_clicked()));//切换语言点击槽
     connect(ui->ChangeLanguage_btn_1, SIGNAL(clicked(bool)), this, SLOT(ChangeLanguage_btn_clicked()));//切换语言点击槽_高级设置
+    connect(SwitchingBatteryTypes, SIGNAL(clicked(bool)), this, SLOT(SwitchingBatteryTypes_clicked()));
+    connect(SwitchingBatteryTypes_Leaad, SIGNAL(clicked(bool)), this, SLOT(SwitchingBatteryTypes_Lead_clicked()));
 }
 //实时数据
 void MyWidget::RunStatePage()
@@ -1085,8 +1106,8 @@ void MyWidget::SystemSettingPage()
 {
     UserParam_tab();/*系统-设置表*/
     DCDCParam_tab();/*系统-DCDC设置表*/
-    BatterySet_tab();/*系统-电池设置表*/
-
+    BatterySet_tab();/*系统-电池设置表-锂电*/
+    BatterySet_Lead_tab();/*系统-电池设置表-铅酸*/
     RunTimeSet_tab();/*系统-自动运行时间设置表*/
 
     Information_tbnt_released();/*系统-系统消息*/
@@ -1394,13 +1415,24 @@ void MyWidget::DCDCParam_tab()
     }
     DCDC_Paramter_tab(ui->DCDC_tableWidget);    //DCDC参数页说明
 }
-//电池设置初始化
+//电池设置初始化_锂电池
 void MyWidget::BatterySet_tab()
 {
     ui->Lithum_Tab->setColumnWidth(0,350);
     ui->Lithum_Tab->setColumnWidth(1,350);
 
     Battery_Setup_Tab(ui->Lithum_Tab);
+}
+//电池设置表初始化_铅酸
+void MyWidget::BatterySet_Lead_tab()
+{
+    ui->Lead_Tab->setColumnWidth(0,150);
+    ui->Lead_Tab->setColumnWidth(1,150);
+    ui->Lead_Tab->setColumnWidth(2,50);
+    ui->Lead_Tab->setColumnWidth(3,150);
+    ui->Lead_Tab->setColumnWidth(4,150);
+    ui->Lead_Tab->setColumnWidth(5,50);
+    Battery_Setup_Lead_Tab(ui->Lead_Tab);
 }
 
 //自动运行
@@ -3067,7 +3099,7 @@ void MyWidget::DCDC_Paramter_tab(QTableWidget *myTable)
     Current_value->add_Specification();//这是'DC'模块的电流值\n
 }
 
-//电池设置页说明
+//电池设置页说明_锂电池
 void MyWidget::Battery_Setup_Tab(QTableWidget *myTable)
 {
     //并网DOD说明
@@ -3129,6 +3161,85 @@ void MyWidget::Battery_Setup_Tab(QTableWidget *myTable)
                                         "25", tr("Gen_turn_on_SOC"), \
                                         tr("When the specified SOC value is reached, the diesel generator starts."));
     Gen_turn_on_SOC->add_Specification();
+
+
+    SwitchingBatteryTypes->setText(tr("Lithium"));
+    myTable->setCellWidget(10, 1, (QWidget *)SwitchingBatteryTypes);
+}
+void MyWidget::Battery_Setup_Lead_Tab(QTableWidget *myTable)
+{
+
+    //容量
+    Capacity = new Specification(this,Capacity_explain, myTable, 0, 1, \
+                                        "0", tr("Capacity"), \
+                                        tr("Capacity, the capacity of the lead-acid battery."));
+    Capacity->add_Specification();//容量，铅酸电池的容量大小
+    //电池节数
+    Cell_number_2V = new Specification(this,Cell_number_2V_explain, myTable, 1, 1, \
+                                        "0", tr("Cell_number_2V"), \
+                                        tr("."));
+    Cell_number_2V->add_Specification();//电池节数，一块铅酸电池的节数
+    //充电限流值
+    Charge_limiting_value = new Specification(this,Charge_limiting_value_explain, myTable, 2, 1, \
+                                        "0", tr("Charge_limiting_value"), \
+                                        tr("Upper limit of charging current, which is the maximum current allowed on the DC side of PCS to prevent charging overcurrent."));
+    Charge_limiting_value->add_Specification();
+    //放电限流值
+    Discharge_limiting_value = new Specification(this,Discharge_limiting_value_explain, myTable, 3, 1, \
+                                        "0", tr("Discharge_limiting_value"), \
+                                        tr("The upper limit of discharge current, which is the maximum current allowed to discharge on the DC side of PCS to prevent discharge from overcurrent."));
+    Discharge_limiting_value->add_Specification();
+    //发电机关闭SOC
+    Generator_turn_off_SOC_B1 = new Specification(this,Generator_turn_off_SOC_B1_explain, myTable, 4, 1, \
+                                        "0", tr("Generator_turn_off_SOC_B1"), \
+                                        tr("When the specified SCO value is reached, the diesel generator shuts down."));
+    Generator_turn_off_SOC_B1->add_Specification();
+    //发电机开启SOC
+    Generator_turn_on_SOC_A1 = new Specification(this,Generator_turn_on_SOC_A1_explain, myTable, 5, 1, \
+                                        "0", tr("Generator_turn_on_SOC_A1"), \
+                                        tr("When the specified SOC value is reached, the diesel generator starts."));
+    Generator_turn_on_SOC_A1->add_Specification();
+    //离网EOD
+    Grid_off_EOD = new Specification(this,Grid_off_EOD_explain, myTable, 0, 4, \
+                                        "0", tr("Grid_off_EOD"), \
+                                        tr("Off-grid discharge terminal voltage, the voltage when the battery power is used up in the off-grid state, and the discharge stops when the battery voltage reaches this value."));
+    Grid_off_EOD->add_Specification();//离网放电终点电压，离网状态下电池的电量用完时的电压，电池电压达到该值时停止放电
+    //并网EOD
+    Grid_on_EOD = new Specification(this,Grid_on_EOD_explain, myTable, 1, 4, \
+                                        "0", tr("Grid_on_EOD"), \
+                                        tr("The terminal voltage of grid-connected discharge, the voltage when the battery power is used up in the grid-connected state, and the discharge stops when the battery voltage reaches this value."));
+    Grid_on_EOD->add_Specification();//并网放电终点电压，并网状态下电池的电量用完时的电压，电池电压达到该值时停止放电
+    //关机电压点
+    Shutdown_voltage_point = new Specification(this,Shutdown_voltage_point_explain, myTable, 2, 4, \
+                                        "0", tr("Shutdown_voltage_point"), \
+                                        tr("Shutdown voltage point. When the voltage is lower than this value, the device will shut down."));
+    Shutdown_voltage_point->add_Specification();//关机电压点，电压低于该电压值时设备将会关机
+    //温补中心点
+    Mending_center_point = new Specification(this,Mending_center_point_explain, myTable, 3, 4, \
+                                        "0", tr("Mending_center_point"), \
+                                        tr("Temperature compensation center point, the battery in the state of floating charge, floating charge voltage can be compensated according to the temperature."));
+    Mending_center_point->add_Specification();//温度补偿中心点，电池在浮充状态下，浮充电压可以根据温度进行补偿
+    //温补系数
+    Temperature_filling_coefficient = new Specification(this,Temperature_filling_coefficient_explain, myTable, 4, 4, \
+                                        "0", tr("Temperature_filling_coefficient"), \
+                                        tr("Temperature compensation coefficient, the coefficient when temperature compensation is performed."));
+    Temperature_filling_coefficient->add_Specification();//温度补偿系数，进行温度补偿时的系数
+    //温补允许设置
+    Mending_allowable_setting = new Specification(this,Mending_allowable_setting_explain, myTable, 5, 4, \
+                                        "0", tr("Mending_allowable_setting"), \
+                                        tr("Temperature compensation Allow setting, you can set whether to allow temperature compensation."));
+    Mending_allowable_setting->add_Specification();//温补允许设置，可设置是否允许进行温度补偿
+    //温度告警上限
+    Temperature_alarm_upper_limit = new Specification(this,Temperature_alarm_upper_limit_explain, myTable, 6, 4, \
+                                        "0", tr("Temperature_alarm_upper_limit"), \
+                                        tr("Temperature Alarm upper limit. An alarm is generated when the battery temperature reaches this threshold."));
+    Temperature_alarm_upper_limit->add_Specification();//温度告警上限，电池温度达到该值时将会告警
+
+
+    //选择电池类型
+    SwitchingBatteryTypes_Leaad->setText(tr("Lead"));
+    myTable->setCellWidget(6, 1, (QWidget *)SwitchingBatteryTypes_Leaad);
+
 }
 
 //自动运行 绘制button
@@ -3143,7 +3254,7 @@ void MyWidget::AutoOperation(QTableWidget *myTable)
     QString temp6 = tr("9:00");
     QString temp7 = tr("10:00");
     QString temp8 = tr("This is the end time at which the state started with the 'start time' will end.");
-    QString temp9 = tr(".");
+    QString temp9 = tr("This is the function that will perform this function during business hours, there are six to choose from, They are System for self-use, battery Batter priority, Peak shaving, Output PV power, Generator Trun on and Generator Trun off.");
     QString temp10 = tr("This is the working power, which is executed according to the working state when working in this state, the positive number is discharging, and the negative number is charging.");
     QString temp11 = tr("This is the start time at which the specified state will begin to be entered with the specified power.");
     QString temp12 = tr("This is' Enable ', which will enable the specified state at the specified time with the specified power, and end at the specified time.");
@@ -5231,6 +5342,30 @@ void MyWidget::on_Switch_off_clicked()
 {
     QMessageBox::question(this, tr("Turn off"), tr("This is the DCAC converter off switch. Click to turn off the DCAC converter."), tr("OK"));
 }//这是DCAC变流器关闭开关，点击后关闭DCAC变流器\n
+//每月深度放电日期+
+void MyWidget::on_pushButton_add_clicked()
+{
+    QMessageBox::question(this, tr("Date +"), tr("Clicking will move the monthly deep discharge date back one day."), tr("OK"));
+}
+//每月深度放电日期-
+void MyWidget::on_pushButton_sub_clicked()
+{
+    QMessageBox::question(this, tr("Date -"), tr("Clicking will move the monthly deep discharge date forward by one day."), tr("OK"));
+}
+//切换电池类型 锂电
+void MyWidget::SwitchingBatteryTypes_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(ui->System_page);
+    ui->System_tabWidget->setCurrentWidget(ui->BatterySet_page);
+    ui->BatterSet_stackedWidget->setCurrentWidget(ui->Lead_stackedWidgetPage);
+}
+//切换电池类型 铅酸
+void MyWidget::SwitchingBatteryTypes_Lead_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(ui->System_page);
+    ui->System_tabWidget->setCurrentWidget(ui->BatterySet_page);
+    ui->BatterSet_stackedWidget->setCurrentWidget(ui->Lithium_stackedWidgetPage);
+}
 /***************************************************************
  * 故障信息表搜索功能
  ***************************************************************/
@@ -5266,3 +5401,4 @@ void MyWidget::on_search_btn_clicked()
         }
     }
 }
+

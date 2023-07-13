@@ -287,7 +287,9 @@ public:
     Specification *Voltage_level;
     Specification *Current_value;
 
-    /***************************电池设置****************************/
+    /***************************电池设置-锂电****************************/
+    QPushButton *SwitchingBatteryTypes;//切换电池类型
+
     QPushButton *DOD_OnGrid_explain;    //并网DOD说明
     QPushButton *DOD_OffGrid_explain;   //离网DOD说明
     QPushButton *Charge_Volt_Upper_Limit_explain;   //充电电压上限说明
@@ -314,6 +316,38 @@ public:
 //    Specification *Equalized_charge;
     Specification *Gen_turn_off_SOC;
     Specification *Gen_turn_on_SOC;
+
+
+    /***************************电池设置-锂电****************************/
+    QPushButton *Capacity_explain;
+    QPushButton *Cell_number_2V_explain;
+    QPushButton *Charge_limiting_value_explain;
+    QPushButton *Discharge_limiting_value_explain;
+    QPushButton *Generator_turn_off_SOC_B1_explain;
+    QPushButton *Generator_turn_on_SOC_A1_explain;
+    QPushButton *SwitchingBatteryTypes_Leaad;
+    QPushButton *Grid_off_EOD_explain;
+    QPushButton *Grid_on_EOD_explain;
+    QPushButton *Shutdown_voltage_point_explain;
+    QPushButton *Mending_center_point_explain;
+    QPushButton *Temperature_filling_coefficient_explain;
+    QPushButton *Mending_allowable_setting_explain;
+    QPushButton *Temperature_alarm_upper_limit_explain;
+
+
+    Specification *Capacity;
+    Specification *Cell_number_2V;
+    Specification *Charge_limiting_value;
+    Specification *Discharge_limiting_value;
+    Specification *Generator_turn_off_SOC_B1;
+    Specification *Generator_turn_on_SOC_A1;
+    Specification *Grid_off_EOD;
+    Specification *Grid_on_EOD;
+    Specification *Shutdown_voltage_point;
+    Specification *Mending_center_point;
+    Specification *Temperature_filling_coefficient;
+    Specification *Mending_allowable_setting;
+    Specification *Temperature_alarm_upper_limit;
 
     /***************************自动运行**************************/
     //选择
@@ -872,7 +906,8 @@ private:
     void RTAlarm();             //告警信息绘表
     void UserParam_tab();       //一般设置表初始化
     void DCDCParam_tab();       //DCDC表初始化
-    void BatterySet_tab();       //电池设置表初始化
+    void BatterySet_tab();      //电池设置表初始化_锂电
+    void BatterySet_Lead_tab(); //电池设置表初始化_铅酸
     void RunTimeSet_tab();      //自动运行时间表初始化
     void Information_tbnt_released();//系统信息槽
     void Data_Report();         //数据报表
@@ -887,7 +922,8 @@ private:
     void MPSState(QTableWidget *myTable);  //MPS状态 绘制button
     void DC_AC_Parameter_tab(QTableWidget *myTable);    //DC/AC参数页说明
     void DCDC_Paramter_tab(QTableWidget *myTable);       //DCDC参数页说明
-    void Battery_Setup_Tab(QTableWidget *myTable);      //电池设置页说明
+    void Battery_Setup_Tab(QTableWidget *myTable);      //电池设置页说明_锂电
+    void Battery_Setup_Lead_Tab(QTableWidget *myTable); //电池设置页说明_铅酸
     void PCS_Alarm_information_table();  //PCS故障信息表 绘制
     void AutoOperation(QTableWidget *myTable);//自动运行 绘制button
     void SystemMessages(QTableWidget *myTable);//系统信息 绘制button
@@ -994,6 +1030,14 @@ private slots:
     void on_Switch_off_clicked();
 
     void on_search_btn_clicked();
+
+    void on_pushButton_add_clicked();
+
+    void on_pushButton_sub_clicked();
+
+    void SwitchingBatteryTypes_clicked();
+
+    void SwitchingBatteryTypes_Lead_clicked();
 
 private:
     Ui::MyWidget *ui;
