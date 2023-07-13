@@ -145,7 +145,7 @@ color: rgb(255, 255, 255);</string>
            </sizepolicy>
           </property>
           <property name="currentIndex">
-           <number>0</number>
+           <number>1</number>
           </property>
           <widget class="QWidget" name="UI_Parameter_page">
            <attribute name="title">
@@ -2613,7 +2613,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <enum>QFrame::Raised</enum>
            </property>
            <property name="currentIndex">
-            <number>1</number>
+            <number>0</number>
            </property>
            <widget class="QWidget" name="Host_page">
             <widget class="QPushButton" name="Bypass_Grid_btn">
@@ -8195,8 +8195,8 @@ B1 - A1 ≥ 30 %
                           <rect>
                            <x>0</x>
                            <y>0</y>
-                           <width>383</width>
-                           <height>359</height>
+                           <width>16</width>
+                           <height>16</height>
                           </rect>
                          </property>
                          <property name="cursor">

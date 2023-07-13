@@ -608,97 +608,70 @@ public:
 
     /***************************系统参数**************************/
     QPushButton *Change_rate_of_power_explain;  //功率变化率说明
-    Specification *Change_rate_of_power;
-
     QPushButton *Grid_frequency_upper_limit_explain;  //电网频率变化范围上限说明
-    Specification *Grid_frequency_upper_limit;
-
     QPushButton *Grid_frequency_lower_limit_explain;  //电网频率变化范围下限说明
-    Specification *Grid_frequency_lower_limit;
-
     QPushButton *Vol_protection_upper_limit_explain;  //电压保护范围上限说明
-    Specification *Vol_protection_upper_limit;
-
     QPushButton *Vol_protection_lower_limit_explain;  //电压保护范围下限说明
-    Specification *Vol_protection_lower_limit;
-
     QPushButton *HVRT_enable_explain;  //高穿使能说明
-    Specification *HVRT_enable;
-
     QPushButton *LVRT_enable_explain;  //低穿使能说明
-    Specification *LVRT_enable;
-
     QPushButton *AFD_enable_explain;  //孤岛使能说明
-    Specification *AFD_enable;
-
     QPushButton *Insulation_detection_enable_explain;  //绝缘监测使能说明
-    Specification *Insulation_detection_enable;
-
     QPushButton *PrimaryFreq_enable_explain;  //一次调频使能说明
-    Specification *PrimaryFreq_enable;
-
     QPushButton *Inertia_enable_explain;  //转动惯量使能说明
-    Specification *Inertia_enable;
-
     QPushButton *Load_priority_explain;  //负载优先说明
-    Specification *Load_priority;
-
     QPushButton *Machine_type_explain;  //机器型号说明
-    Specification *Machine_type;
-
     QPushButton *Machine_capacity_explain;  //机器容量说明
-    Specification *Machine_capacity;
-
     QPushButton *Output_Fre_grade_explain;  //输出频率等级说明
-    Specification *Output_Fre_grade;
-
     QPushButton *Output_vol_level_explain;  //输出电压等级说明
-    Specification *Output_vol_level;
-
     QPushButton *Converter_side_vol_level_explain;  //逆变电压等级说明
-    Specification *Converter_side_vol_level;
-
     QPushButton *Output_reactive_power_mode_explain;  //输出无功方式说明
-    Specification *Output_reactive_power_mode;
-
     QPushButton *Grid_recovery_scheduling_explain;  //电网恢复调度开机说明
-    Specification *Grid_recovery_scheduling;
-
     QPushButton *Grid_recovery_time_explain;  //电网恢复并网时间说明
-    Specification *Grid_recovery_time;
-
     QPushButton *Grid_connected_mode_of_Inv_explain;  //逆变器并网方式说明
-    Specification *Grid_connected_mode_of_Inv;
-
     QPushButton *Pshedding_Freq_explain;  //过频降载说明
-    Specification *Pshedding_Freq;
-
     QPushButton *QP_curve_explain;  //QP曲线说明
-    Specification *QP_curve;
-
     QPushButton *CV_parallel_explain;  //恒压并机说明
-    Specification *CV_parallel;
-
     QPushButton *Module_Number_explain;  //模块数量说明
-    Specification *Module_Number;
-
     QPushButton *Restore_factory_explain;  //恢复出厂说明
-    Specification *Restore_factory;
-
     QPushButton *Clear_Data_explain;  //清除数据说明
-    Specification *Clear_Data;
-
     QPushButton *Machine_Type_explain;  //机架说明
-    Specification *Machine_Type;
-
     QPushButton *Module_max_explain;  //最大模块数说明
-    Specification *Module_max;
-
     QPushButton *Module_min_explain;  //最小模块数说明
-    Specification *Module_min;
-
     QPushButton *Insulation_detection_enable_DCDC_explain;  //DCDC绝缘监测使能说明
+
+
+    Specification *Change_rate_of_power;
+    Specification *Grid_frequency_upper_limit;
+    Specification *Grid_frequency_lower_limit;
+    Specification *Vol_protection_upper_limit;
+    Specification *Vol_protection_lower_limit;
+    Specification *HVRT_enable;
+    Specification *LVRT_enable;
+    Specification *AFD_enable;
+    Specification *Insulation_detection_enable;
+    Specification *PrimaryFreq_enable;
+    Specification *Inertia_enable;
+    Specification *Load_priority;
+    Specification *Machine_type;
+    Specification *Machine_capacity;
+    Specification *Output_Fre_grade;
+    Specification *Output_vol_level;
+    Specification *Converter_side_vol_level;
+    Specification *Output_reactive_power_mode;
+    Specification *Grid_recovery_scheduling;
+    Specification *Grid_recovery_time;
+    Specification *Grid_connected_mode_of_Inv;
+    Specification *Pshedding_Freq;
+    Specification *QP_curve;
+    Specification *CV_parallel;
+    Specification *Module_Number;
+    Specification *Restore_factory;
+    Specification *Clear_Data;
+    Specification *Machine_Type;
+    Specification *Module_max;
+    Specification *Module_min;
     Specification *Insulation_detection_enable_DCDC;
+
 
     /***************************外设**************************/
     QPushButton *DI_1_Enable_explain;   //输入干接点1说明
@@ -993,6 +966,7 @@ private:
     void AutoOperation_delete();//自动运行 释放 说明
     void SystemMessages_delete();//系统信息 释放 说明
     void FunctionSet_delete();//功能设置 释放 说明
+    void SystemParameter_delete();//系统参数 释放 说明
 
 
 private slots:
