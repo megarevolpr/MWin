@@ -18,27 +18,30 @@ TEMPLATE = app
 
 include         ($$PWD/UI_Menu/UI_Menu.pri)
 include         ($$PWD/Specification/Specification.pri)
+include         ($$PWD/OperMode/OperMode.pri)
+#include         ($$PWD/Operational_mode/Operational_mode.pri)
 
 INCLUDEPATH     +=$$PWD/Specification/
 INCLUDEPATH     +=$$PWD/UI_Menu/
+INCLUDEPATH     +=$$PWD/OperMode/
 
 
 CONFIG += c++11
 
 SOURCES +=\
         mywidget.cpp \
-    MainThread.cpp \
+        MainThread.cpp
 
-HEADERS  += mywidget.h \
+HEADERS  += mywidget.h
 
 FORMS    += mywidget.ui
 
 TRANSLATIONS += \
     $$PWD/Language/CN.ts\
-    $$PWD/Language/EN.ts\
+    $$PWD/Language/EN.ts
 
 RESOURCES += image.qrc \
-    language.qrc
+            language.qrc
 
 DISTFILES += \
     Language/CN.ts \

@@ -72,6 +72,7 @@ void MyWidget::MemoryAllocation()
 {
     IPShow = true;
     m_menu = new Menu(this);
+    mode_expelain = new OperMode(this);
     /************************实时数据******************************/
     //变流器
     MPS_vol_AB_explain      = new QPushButton;
@@ -768,10 +769,10 @@ void MyWidget::OperationLog_tab_delete()
 /************DC/AC参数 释放 说明************/
 void MyWidget::DC_AC_Parameter_tab_delete()
 {
+    delete mode_expelain;//操作模式新窗口
     delete Grid_connected_mode;
     delete Constant_power;
     delete Charging_and_discharging;
-    delete Work_mode;
     delete Output_power_factor;
     delete Output_reactive_power;
     delete Constant_current;
@@ -805,6 +806,23 @@ void MyWidget::Battery_Setup_Tab_delete()
     delete Discharge_Current_Limit;
     delete Gen_turn_off_SOC;
     delete Gen_turn_on_SOC;
+}
+
+void MyWidget::Battery_Setup_Lead_Tab_delete()
+{
+    delete Capacity;
+    delete Cell_number_2V;
+    delete Charge_limiting_value;
+    delete Discharge_limiting_value;
+    delete Generator_turn_off_SOC_B1;
+    delete Generator_turn_on_SOC_A1;
+    delete Grid_off_EOD;
+    delete Grid_on_EOD;
+    delete Shutdown_voltage_point;
+    delete Mending_center_point;
+    delete Temperature_filling_coefficient;
+    delete Mending_allowable_setting;
+    delete Temperature_alarm_upper_limit;
 }
 /***********自动运行 释放 说明************/
 void MyWidget::AutoOperation_delete()
@@ -923,6 +941,8 @@ void MyWidget::ExternalDevice_delete()
 /************DCAC调试 释放 说明************/
 void MyWidget::DCAC_Debugg_delete()
 {
+
+
     delete Debug_variable_1;
     delete Debug_variable_2;
     delete Debug_variable_3;
@@ -1001,6 +1021,7 @@ void MyWidget::Delete_explain()
     ExternalDevice_delete();//释放 外设
     DCAC_Debugg_delete();//释放 DCAC调试
     DCDC_Debugg_delete();//释放 DCDC调试
+    Battery_Setup_Lead_Tab_delete();
 }
 
 /********************************************************
@@ -1055,6 +1076,7 @@ void MyWidget::ChangeLanguage_btn_clicked()
         ui->ChangeLanguage_btn->setText(tr("Change Language"));
         qApp->installTranslator(translator);
         ui->retranslateUi(this);
+        ui->retranslateUi(mode_expelain);
     }
     else if(LanguageType == ENGLISH)
     {
@@ -1063,11 +1085,26 @@ void MyWidget::ChangeLanguage_btn_clicked()
         ui->ChangeLanguage_btn->setText(tr("切换语言"));
         qApp->installTranslator(translator);
         ui->retranslateUi(this);
+        ui->retranslateUi(mode_expelain);
     }
 
     Delete_explain();//释放空间
 
     UIPageInit();       //初始化界面
+}
+
+void MyWidget::Operational_mode_clicked()
+{
+    if(mode_expelain->isHidden())
+    {
+        mode_expelain->show();
+//        this->hide();
+    }
+    else
+    {
+        mode_expelain->hide();
+//        this->show();
+    }
 }
 //函数关联
 void MyWidget::LinkRelationship()
@@ -1075,6 +1112,7 @@ void MyWidget::LinkRelationship()
     connect(timer, SIGNAL(timeout()), this, SLOT(onTimerOut()));    //关联定时器，以便实时更新时间
 
     connect(m_menu, SIGNAL(Sent(int)), this, SLOT(My_menuAction(int))); //菜单
+    connect(Work_mode_explain, SIGNAL(clicked(bool)), this, SLOT(Operational_mode_clicked())); //
 
     connect(AdvancedSetup_btn,SIGNAL(clicked(bool)), this, SLOT(AdvancedSetup_btn_clicked()));//高级设置
 
@@ -3007,10 +3045,14 @@ void MyWidget::DC_AC_Parameter_tab(QTableWidget *myTable)
                                                  tr("Reserve."));
     Charging_and_discharging->add_Specification();
 
-    Work_mode = new Specification(this,Work_mode_explain, myTable, 3, 1, \
-                                  tr("Manual"), tr("Operational mode"), \
-                                  tr("这是工作模式，有三项可选：自发自用(System for self-use)，电池优先(Battery priority)，削峰填谷(Peak shaving)\n选择自发自用模式时，优先给负载供电\n选择电池优先模式时，优先给电池充电\n削峰填谷模式时，用电高峰时优先使用电池给负载供电，用电低谷时优先给电池充电\nThis is the working mode with three options: System for self use, Battery priority, and Peak shaving; When selecting the self use mode, priority is given to supplying power to the load; When selecting battery priority mode, priority is given to charging the battery; During peak shaving and valley filling mode, priority is given to using batteries to supply power to the load during peak electricity usage, and to charging batteries during low electricity usage."));
-    Work_mode->add_Specification();
+//    Work_mode = new Specification(this,Work_mode_explain, myTable, 3, 1, \
+//                                  tr("Manual"), tr("Operational mode"), \
+//                                  tr("这是工作模式，有三项可选：自发自用(System for self-use)，电池优先(Battery priority)，削峰填谷(Peak shaving)\n选择自发自用模式时，优先给负载供电\n选择电池优先模式时，优先给电池充电\n削峰填谷模式时，用电高峰时优先使用电池给负载供电，用电低谷时优先给电池充电\nThis is the working mode with three options: System for self use, Battery priority, and Peak shaving; When selecting the self use mode, priority is given to supplying power to the load; When selecting battery priority mode, priority is given to charging the battery; During peak shaving and valley filling mode, priority is given to using batteries to supply power to the load during peak electricity usage, and to charging batteries during low electricity usage."));
+//    Work_mode->add_Specification();
+
+    mode_expelain = new OperMode(this);
+    Work_mode_explain->setText(tr("Manual"));
+    myTable->setCellWidget(3, 1, (QWidget *)Work_mode_explain);
 
     Output_power_factor = new Specification(this,Output_power_factor_explain, myTable, 4, 1, \
                                             tr("1"), tr("Output power factor"), \
@@ -3177,7 +3219,7 @@ void MyWidget::Battery_Setup_Lead_Tab(QTableWidget *myTable)
     //电池节数
     Cell_number_2V = new Specification(this,Cell_number_2V_explain, myTable, 1, 1, \
                                         "0", tr("Cell_number_2V"), \
-                                        tr("."));
+                                        tr("Number of batteries, the number of lead-acid batteries."));
     Cell_number_2V->add_Specification();//电池节数，一块铅酸电池的节数
     //充电限流值
     Charge_limiting_value = new Specification(this,Charge_limiting_value_explain, myTable, 2, 1, \

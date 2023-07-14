@@ -49,6 +49,7 @@
 
 #include "Menu.h"
 #include "Specification/Specification.h"
+#include "OperMode.h"
 
 namespace Ui {
 class MyWidget;
@@ -63,6 +64,7 @@ public:
     ~MyWidget();
 
     Menu *m_menu;
+    OperMode *mode_expelain;
     QPushButton *AdvancedSetup_btn;//高级设置入口
     /************************实时数据******************************/
     //变流器
@@ -943,6 +945,7 @@ private:
     void DC_AC_Parameter_tab_delete();//DCAC参数 释放 说明
     void DCDC_Paramter_tab_delete();//DCDC参数 释放 说明
     void Battery_Setup_Tab_delete();//电池设置 释放 说明
+    void Battery_Setup_Lead_Tab_delete();
     void AutoOperation_delete();//自动运行 释放 说明
     void SystemMessages_delete();//系统信息 释放 说明
     void FunctionSet_delete();//功能设置 释放 说明
@@ -976,6 +979,7 @@ private slots:
     void on_Alarm_btn_clicker();//跳转实时告警页面
     void AdvancedSetup_btn_clicked();//跳转到高级设置
     void ChangeLanguage_btn_clicked();//切换语言
+    void Operational_mode_clicked();//
 
 
     void on_RTD_DC_clicked();
