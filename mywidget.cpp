@@ -793,7 +793,7 @@ void MyWidget::DCDC_Paramter_tab_delete()
     delete Voltage_level;
     delete Current_value;
 }
-/************电池设置 释放 说明************/
+/************锂电池设置 释放 说明************/
 void MyWidget::Battery_Setup_Tab_delete()
 {
     delete DOD_OnGrid;
@@ -807,7 +807,7 @@ void MyWidget::Battery_Setup_Tab_delete()
     delete Gen_turn_off_SOC;
     delete Gen_turn_on_SOC;
 }
-
+/************铅酸电池设置 释放 说明************/
 void MyWidget::Battery_Setup_Lead_Tab_delete()
 {
     delete Capacity;
@@ -1014,7 +1014,7 @@ void MyWidget::Delete_explain()
     DC_AC_Parameter_tab_delete();//释放 DC/AC参数
     DCDC_Paramter_tab_delete();//释放 DC/DC参数
     Battery_Setup_Tab_delete();//释放 电池设置
-//    AutoOperation_delete();//释放 自动运行
+    //    AutoOperation_delete();//释放 自动运行
     SystemMessages_delete();//释放 系统消息
     FunctionSet_delete();//释放 功能设置
     SystemParameter_delete();//释放 系统参数

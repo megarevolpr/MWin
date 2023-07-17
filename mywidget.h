@@ -917,6 +917,7 @@ private:
     void OperationLog();        //操作日志
 
 
+
     void MPS_Data(QTableWidget *myTable);//MPS数据 绘制button
     void PV_Data(QTableWidget *myTable);//PV数据 绘制button
     void Grid_Data(QTableWidget *myTable);//电网数据 绘制button

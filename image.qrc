@@ -52,6 +52,19 @@
         <file>UI/MEGA.jpg</file>
         <file>UI/BatterySOC.png</file>
         <file>UI/Loading.gif</file>
+        <file>UI/PV_A.png</file>
+        <file>UI/PV_B.png</file>
+        <file>UI/PV_C.png</file>
+        <file>UI/BAT_A.png</file>
+        <file>UI/BAT_B.png</file>
+        <file>UI/BAT_B2.png</file>
+        <file>UI/BAT2A.png</file>
+        <file>UI/ZY_2A.png</file>
+        <file>UI/ZY_2B.png</file>
+        <file>UI/ZY_A.png</file>
+        <file>UI/ZY_B.png</file>
+        <file>UI/ZY_C.png</file>
+        <file>UI/ZY_D.png</file>
     </qresource>
     <qresource prefix="/Massagebox">
         <file>UI/Close.png</file>

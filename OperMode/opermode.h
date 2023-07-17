@@ -20,7 +20,8 @@ public:
 protected:
 //    bool eventFilter(QObject *o, QEvent *e);
 
-    void InitializeText();//设置文本
+//    void InitializeText();//设置文本
+    virtual void resizeEvent(QResizeEvent *event)override;//调整控件大小
 
 private slots:
     void on_Return_clicked();
@@ -29,7 +30,7 @@ private slots:
 
     void on_Batter_btn_clicked();
 
-    void on_Peak_btn_clicked();
+    void on_Optimal_btn_clicked();
 
 
 
