@@ -6,12 +6,309 @@ OperMode::OperMode(QWidget *parent) :
     ui(new Ui::OperMode)
 {
     ui->setupUi(this);
-//    InitializeText();
+
+    InitializeMemorySpace();
+
+    Init_Tab_button();
+
+
 }
 
 OperMode::~OperMode()
 {
     delete ui;
+}
+//初始化内存空间
+void OperMode::InitializeMemorySpace()
+{
+    Bat_Type_btn = new QPushButton;
+    Bat_Comm_btn = new QPushButton;
+    EMS_Comm_btn = new QPushButton;
+    Charge_SOC_btn = new QPushButton;
+    Discharge_SOC_btn = new QPushButton;
+    Energy_priority_btn = new QPushButton;
+    Anti_reflux_btn = new QPushButton;
+    ConstantPower_btn = new QPushButton;
+    Charge_upper_Limit = new QPushButton;
+    Charge_Limit_delta_btn = new QPushButton;
+    Disharge_Lower_Limit = new QPushButton;
+    Disharge_Limit_delta_btn = new QPushButton;
+    Charge_Current_btn = new QPushButton;
+    Discharge_Current_Limit_btn = new QPushButton;
+    DOD_OnGrid_btn = new QPushButton;
+    DOD_OffGrid_btn = new QPushButton;
+    Generator_turn_on_SOC_btn = new QPushButton;
+    Generator_turn_off_SOC_btn = new QPushButton;
+    Max_Bat_protection_btn = new QPushButton;
+    DG_ECP = new QPushButton;
+    DG_FCP = new QPushButton;
+    Grid_ECP = new QPushButton;
+    Grid_FCP = new QPushButton;
+    Grid_EDP = new QPushButton;
+    Grid_FDP = new QPushButton;
+
+    BatPri_Bat_Type_btn = new QPushButton;
+    BatPri_Bat_Comm_btn = new QPushButton;
+    BatPri_EMS_Comm_btn = new QPushButton;
+    BatPri_Charge_SOC_btn = new QPushButton;
+    BatPri_Discharge_SOC_btn = new QPushButton;
+    BatPri_Energy_priority_btn = new QPushButton;
+    BatPri_Anti_reflux_btn = new QPushButton;
+    BatPri_ConstantPower_btn = new QPushButton;
+    BatPri_Charge_upper_Limit = new QPushButton;
+    BatPri_Charge_Limit_delta_btn = new QPushButton;
+    BatPri_Disharge_Lower_Limit = new QPushButton;
+    BatPri_Disharge_Limit_delta_btn = new QPushButton;
+    BatPri_Charge_Current_btn = new QPushButton;
+    BatPri_Discharge_Current_Limit_btn = new QPushButton;
+    BatPri_DOD_OnGrid_btn = new QPushButton;
+    BatPri_DOD_OffGrid_btn = new QPushButton;
+    BatPri_Generator_turn_on_SOC_btn = new QPushButton;
+    BatPri_Generator_turn_off_SOC_btn = new QPushButton;
+    BatPri_Max_Bat_protection_btn = new QPushButton;
+    BatPri_DG_ECP = new QPushButton;
+    BatPri_DG_FCP = new QPushButton;
+    BatPri_Grid_ECP = new QPushButton;
+    BatPri_Grid_FCP = new QPushButton;
+    BatPri_Grid_EDP = new QPushButton;
+    BatPri_Grid_FDP = new QPushButton;
+
+    OptMod_Bat_Type_btn = new QPushButton;
+    OptMod_Bat_Comm_btn = new QPushButton;
+    OptMod_EMS_Comm_btn = new QPushButton;
+    OptMod_Charge_SOC_btn = new QPushButton;
+    OptMod_Discharge_SOC_btn = new QPushButton;
+    OptMod_Energy_priority_btn = new QPushButton;
+    OptMod_Anti_reflux_btn = new QPushButton;
+    OptMod_ConstantPower_btn = new QPushButton;
+    OptMod_Charge_upper_Limit = new QPushButton;
+    OptMod_Charge_Limit_delta_btn = new QPushButton;
+    OptMod_Disharge_Lower_Limit = new QPushButton;
+    OptMod_Disharge_Limit_delta_btn = new QPushButton;
+    OptMod_Charge_Current_btn = new QPushButton;
+    OptMod_Discharge_Current_Limit_btn = new QPushButton;
+    OptMod_DOD_OnGrid_btn = new QPushButton;
+    OptMod_DOD_OffGrid_btn = new QPushButton;
+    OptMod_Generator_turn_on_SOC_btn = new QPushButton;
+    OptMod_Generator_turn_off_SOC_btn = new QPushButton;
+    OptMod_Max_Bat_protection_btn = new QPushButton;
+    OptMod_DG_ECP = new QPushButton;
+    OptMod_DG_FCP = new QPushButton;
+    OptMod_Grid_ECP = new QPushButton;
+    OptMod_Grid_FCP = new QPushButton;
+    OptMod_Grid_EDP = new QPushButton;
+    OptMod_Grid_FDP = new QPushButton;
+
+    str = tr("Click to view");
+    str2 = tr("Invalid in this mode.");//该模式下无效
+    str3 = tr("In this mode, the charging power of the AC side is limited.");//该模式下，限制交流侧的充电功率
+    str4 = tr("Protection is not triggered in this mode.");//该模式下不会触发保护。
+    str5 = tr("");
+    str6 = tr("");
+
+    Bat_Type_str = tr("Battery type");
+    Bat_Comm_str = tr("BMS Comm.type");
+    EMS_Comm_str = tr("EMS Comm.type");
+    Charge_SOC_str = tr("Charge SOC");
+    Discharge_SOC_str = tr("Discharge SOC");
+    Energy_priority_str = tr("Energy priority");
+    Anti_reflux_str = tr("Grid connected mode of lnv");
+    ConstantPower_str = tr("Constant power(AC)");
+    Charge_upper_Limit_str = tr("Charge Volt. upper Limit(V)");
+    Charge_Limit_delta_str = tr("Charge Volt. upper Limit delta(V)");
+    Disharge_Lower_Limit_str = tr("Discharge Volt. lower Limit(V)");
+    Disharge_Limit_delta_str = tr("Discharge Volt. lower Limit delta(V)");
+    Charge_Current_str = tr("Charge Current Limit(A)");
+    Discharge_Current_Limit_str = tr("Discharge Current Limit(A)");
+    DOD_OnGrid_str = tr("DOD_OnGrid(%)");
+    DOD_OffGrid_str = tr("DOD_OffGrid(%)");
+    Generator_turn_on_SOC_str = tr("Generator turn on SOC(A1)");
+    Generator_turn_off_SOC_str = tr("Generator turn off SOC(B1)");
+    Max_Bat_protection_str = tr("Maximum battery protection value(V)");
+    DG_ECP_str = tr("DG_ECP");
+    DG_FCP_str = tr("DG_FCP");
+    Grid_ECP_str = tr("Grid_ECP");
+    Grid_FCP_str = tr("Grid_FCP");
+    Grid_EDP_str = tr("Grid_EDP");
+    Grid_FDP_str = tr("Grid_FDP");
+
+    Bat_Type_str_Content = tr("Currently, only lithium batteries are supported.");
+    Bat_Comm_str_Content = tr("Set the communication mode with the battery.");
+    EMS_Comm_str_Content = tr("This section describes how to set the communication mode with the EMS.");
+    Charge_SOC_str_Content = tr("In this mode, if the SOC is smaller than the charging SOC, the AC test provides a small power to maintain the charging SOC.");
+    Discharge_SOC_str_Content = tr("Invalid in this mode.");
+    Energy_priority_str_Content = tr("In this mode, you can choose whether to preferentially use electricity from the grid or battery.");
+    Anti_reflux_str_Content = tr("In this mode, you can choose whether to reverse the flow.");
+    ConstantPower_str_Content = tr("Invalid in this mode.");
+    Charge_upper_Limit_str_Content = tr("Battery charging voltage cut-off point.");
+    Charge_Limit_delta_str_Content = tr("Battery charge voltage back almost.");
+    Disharge_Lower_Limit_str_Content = tr("Battery discharge voltage cut-off point.");
+    Disharge_Limit_delta_str_Content = tr("Battery discharge voltage back to almost.");
+    Charge_Current_str_Content = tr("Limit the battery charging current point.");
+    Discharge_Current_Limit_str_Content = tr("Limit the battery discharge current point.");
+    DOD_OnGrid_str_Content = tr("In this mode, when the SOC is less than (100 - DOD), the battery does not discharge and does not draw power from the grid.");
+    DOD_OffGrid_str_Content = tr("After DOD is triggered in this mode, no charge or shutdown is performed in grid-connected mode, and the device is shut down in off-network condition.");
+    Generator_turn_on_SOC_str_Content = tr("When SOC is less than or equal to Chaifa, start Chaifa.");
+    Generator_turn_off_SOC_str_Content = tr("When SOC is greater than or equal to Chaifa, turn off Chaifa.");
+    Max_Bat_protection_str_Content = tr("Limit the maximum voltage of the battery charging cell.");
+    DG_ECP_str_Content = tr("In chai-hair mode, the AC power reference value of the saturation zone and the equalization zone.");
+    DG_FCP_str_Content = tr("Power reference value of AC side of the discharge area in Chai hair mode.");
+    Grid_ECP_str_Content = tr("In the power grid mode, the AC power reference value in the saturation zone and the equilibrium zone.");
+    Grid_FCP_str_Content = tr("In power grid mode, this parameter specifies the power reference value on the AC side of the vent area.");
+    Grid_EDP_str_Content = tr("The equalization zone limits the discharge power of the system to the grid side.");
+    Grid_FDP_str_Content = tr("The discharge zone limits the discharge power of the system to the power grid side.");
+}
+//初始化图表
+void OperMode::InitializeChart(QTableWidget *myWidget)
+{
+    myWidget->verticalHeader()->setVisible(false);//设置垂直头不可见
+    myWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);//设置不可编辑
+    myWidget->setColumnWidth(0,190);
+    myWidget->setColumnWidth(1,150);
+    myWidget->setColumnWidth(2,100);
+    myWidget->setColumnWidth(3,110);
+
+    for(int i=0;i<25;i++)
+    {
+        if(i==6)
+        {
+            myWidget->setRowHeight(i,60);
+        }
+        else if(i==7)
+        {
+            myWidget->setRowHeight(i,80);
+        }
+        else
+        {
+            myWidget->setRowHeight(i,42);
+        }
+
+    }
+
+}
+
+void OperMode::InitializeChart_2(QTableWidget *myWidget)
+{
+    myWidget->verticalHeader()->setVisible(false);//设置垂直头不可见
+    myWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);//设置不可编辑
+    myWidget->setColumnWidth(0,190);
+    myWidget->setColumnWidth(1,150);
+    myWidget->setColumnWidth(2,170);
+    myWidget->setColumnWidth(3,140);
+
+    ui->BatteryAreaEdit->setReadOnly(true);//只读
+    ui->ChaifaLogicEdit->setReadOnly(true);
+
+    for(int i=0;i<25;i++)
+    {
+        myWidget->setRowHeight(i,42);
+    }
+}
+//初始化表格点击控件
+void OperMode::Init_Tab_button()
+{
+    Init_SysTab_button(ui->Paramrter_Widget);
+    Init_BatTab_button(ui->BatPri_Widget);
+    Init_OptTab_button(ui->OptMod_Widget);
+
+    InitializeChart(ui->Paramrter_Widget);
+    InitializeChart_2(ui->BatPri_Widget);
+    InitializeChart_2(ui->OptMod_Widget);
+
+}
+//初始化表格
+void OperMode::Init_SysTab_button(QTableWidget *myWidget)
+{
+    myWidget->setCellWidget(0, 1, (QWidget *)Bat_Type_btn);
+    myWidget->setCellWidget(1, 1, (QWidget *)Bat_Comm_btn);
+    myWidget->setCellWidget(2, 1, (QWidget *)EMS_Comm_btn);
+    myWidget->setCellWidget(3, 1, (QWidget *)Charge_SOC_btn);
+    myWidget->setCellWidget(4, 1, (QWidget *)Discharge_SOC_btn);
+    myWidget->setCellWidget(5, 1, (QWidget *)Energy_priority_btn);
+    myWidget->setCellWidget(6, 1, (QWidget *)Anti_reflux_btn);
+    myWidget->setCellWidget(7, 1, (QWidget *)ConstantPower_btn);
+    myWidget->setCellWidget(8, 1, (QWidget *)Charge_upper_Limit);
+    myWidget->setCellWidget(9, 1, (QWidget *)Charge_Limit_delta_btn);
+    myWidget->setCellWidget(10, 1, (QWidget *)Disharge_Lower_Limit);
+    myWidget->setCellWidget(11, 1, (QWidget *)Disharge_Limit_delta_btn);
+    myWidget->setCellWidget(12, 1, (QWidget *)Charge_Current_btn);
+    myWidget->setCellWidget(13, 1, (QWidget *)Discharge_Current_Limit_btn);
+    myWidget->setCellWidget(14, 1, (QWidget *)DOD_OnGrid_btn);
+    myWidget->setCellWidget(15, 1, (QWidget *)DOD_OffGrid_btn);
+    myWidget->setCellWidget(16, 1, (QWidget *)Generator_turn_on_SOC_btn);
+    myWidget->setCellWidget(17, 1, (QWidget *)Generator_turn_off_SOC_btn);
+    myWidget->setCellWidget(18, 1, (QWidget *)Max_Bat_protection_btn);
+    myWidget->setCellWidget(19, 1, (QWidget *)DG_ECP);
+    myWidget->setCellWidget(20, 1, (QWidget *)DG_FCP);
+    myWidget->setCellWidget(21, 1, (QWidget *)Grid_ECP);
+    myWidget->setCellWidget(22, 1, (QWidget *)Grid_FCP);
+    myWidget->setCellWidget(23, 1, (QWidget *)Grid_EDP);
+    myWidget->setCellWidget(24, 1, (QWidget *)Grid_FDP);
+
+}
+//初始化表格
+void OperMode::Init_BatTab_button(QTableWidget *myWidget)
+{
+    myWidget->setCellWidget(0, 1, (QWidget *)BatPri_Bat_Type_btn);
+    myWidget->setCellWidget(1, 1, (QWidget *)BatPri_Bat_Comm_btn);
+    myWidget->setCellWidget(2, 1, (QWidget *)BatPri_EMS_Comm_btn);
+    myWidget->setCellWidget(3, 1, (QWidget *)BatPri_Charge_SOC_btn);
+    myWidget->setCellWidget(4, 1, (QWidget *)BatPri_Discharge_SOC_btn);
+    myWidget->setCellWidget(5, 1, (QWidget *)BatPri_Energy_priority_btn);
+    myWidget->setCellWidget(6, 1, (QWidget *)BatPri_Anti_reflux_btn);
+    myWidget->setCellWidget(7, 1, (QWidget *)BatPri_ConstantPower_btn);
+    myWidget->setCellWidget(8, 1, (QWidget *)BatPri_Charge_upper_Limit);
+    myWidget->setCellWidget(9, 1, (QWidget *)BatPri_Charge_Limit_delta_btn);
+    myWidget->setCellWidget(10, 1, (QWidget *)BatPri_Disharge_Lower_Limit);
+    myWidget->setCellWidget(11, 1, (QWidget *)BatPri_Disharge_Limit_delta_btn);
+    myWidget->setCellWidget(12, 1, (QWidget *)BatPri_Charge_Current_btn);
+    myWidget->setCellWidget(13, 1, (QWidget *)BatPri_Discharge_Current_Limit_btn);
+    myWidget->setCellWidget(14, 1, (QWidget *)BatPri_DOD_OnGrid_btn);
+    myWidget->setCellWidget(15, 1, (QWidget *)BatPri_DOD_OffGrid_btn);
+    myWidget->setCellWidget(16, 1, (QWidget *)BatPri_Generator_turn_on_SOC_btn);
+    myWidget->setCellWidget(17, 1, (QWidget *)BatPri_Generator_turn_off_SOC_btn);
+    myWidget->setCellWidget(18, 1, (QWidget *)BatPri_Max_Bat_protection_btn);
+    myWidget->setCellWidget(19, 1, (QWidget *)BatPri_DG_ECP);
+    myWidget->setCellWidget(20, 1, (QWidget *)BatPri_DG_FCP);
+    myWidget->setCellWidget(21, 1, (QWidget *)BatPri_Grid_ECP);
+    myWidget->setCellWidget(22, 1, (QWidget *)BatPri_Grid_FCP);
+    myWidget->setCellWidget(23, 1, (QWidget *)BatPri_Grid_EDP);
+    myWidget->setCellWidget(24, 1, (QWidget *)BatPri_Grid_FDP);
+
+
+}
+//初始化表格
+void OperMode::Init_OptTab_button(QTableWidget *myWidget)
+{
+    myWidget->setCellWidget(0, 1, (QWidget *)OptMod_Bat_Type_btn);
+    myWidget->setCellWidget(1, 1, (QWidget *)OptMod_Bat_Comm_btn);
+    myWidget->setCellWidget(2, 1, (QWidget *)OptMod_EMS_Comm_btn);
+    myWidget->setCellWidget(3, 1, (QWidget *)OptMod_Charge_SOC_btn);
+    myWidget->setCellWidget(4, 1, (QWidget *)OptMod_Discharge_SOC_btn);
+    myWidget->setCellWidget(5, 1, (QWidget *)OptMod_Energy_priority_btn);
+    myWidget->setCellWidget(6, 1, (QWidget *)OptMod_Anti_reflux_btn);
+    myWidget->setCellWidget(7, 1, (QWidget *)OptMod_ConstantPower_btn);
+    myWidget->setCellWidget(8, 1, (QWidget *)OptMod_Charge_upper_Limit);
+    myWidget->setCellWidget(9, 1, (QWidget *)OptMod_Charge_Limit_delta_btn);
+    myWidget->setCellWidget(10, 1, (QWidget *)OptMod_Disharge_Lower_Limit);
+    myWidget->setCellWidget(11, 1, (QWidget *)OptMod_Disharge_Limit_delta_btn);
+    myWidget->setCellWidget(12, 1, (QWidget *)OptMod_Charge_Current_btn);
+    myWidget->setCellWidget(13, 1, (QWidget *)OptMod_Discharge_Current_Limit_btn);
+    myWidget->setCellWidget(14, 1, (QWidget *)OptMod_DOD_OnGrid_btn);
+    myWidget->setCellWidget(15, 1, (QWidget *)OptMod_DOD_OffGrid_btn);
+    myWidget->setCellWidget(16, 1, (QWidget *)OptMod_Generator_turn_on_SOC_btn);
+    myWidget->setCellWidget(17, 1, (QWidget *)OptMod_Generator_turn_off_SOC_btn);
+    myWidget->setCellWidget(18, 1, (QWidget *)OptMod_Max_Bat_protection_btn);
+    myWidget->setCellWidget(19, 1, (QWidget *)OptMod_DG_ECP);
+    myWidget->setCellWidget(20, 1, (QWidget *)OptMod_DG_FCP);
+    myWidget->setCellWidget(21, 1, (QWidget *)OptMod_Grid_ECP);
+    myWidget->setCellWidget(22, 1, (QWidget *)OptMod_Grid_FCP);
+    myWidget->setCellWidget(23, 1, (QWidget *)OptMod_Grid_EDP);
+    myWidget->setCellWidget(24, 1, (QWidget *)OptMod_Grid_FDP);
+
+    SetExplain(myWidget);
+
+
 }
 //返回
 void OperMode::on_Return_clicked()
@@ -25,6 +322,9 @@ void OperMode::on_System_btn_clicked()
 {
     ui->ExplainWidget->setCurrentWidget(ui->Explainpage);
     ui->ExplanationTextWidget->setCurrentWidget(ui->Systempage);
+    Charge_SOC_btn_explain->ModifyText(Charge_SOC_str_Content);
+    ConstantPower_btn_explain->ModifyText(ConstantPower_str_Content);
+    DOD_OnGrid_btn_explain->ModifyText(DOD_OnGrid_str_Content);
 }
 //电池优先
 void OperMode::on_Batter_btn_clicked()
@@ -32,87 +332,22 @@ void OperMode::on_Batter_btn_clicked()
     ui->ExplainWidget->setCurrentWidget(ui->Explainpage);
     ui->ExplanationTextWidget->setCurrentWidget(ui->Batterpage);
 }
-//削峰填谷
+//最优模式
 void OperMode::on_Optimal_btn_clicked()
 {
     ui->ExplainWidget->setCurrentWidget(ui->Explainpage);
     ui->ExplanationTextWidget->setCurrentWidget(ui->Optimalpage);
 }
-//初始化文本
-//void OperMode::InitializeText()
-//{
-////    QFile file("D:/Desktop/WORD/MPS_code/MPSWin_V1.0/MWin/RunLogic/System-Chinese.txt");
-////    file.open((QFile::ReadOnly | QFile::Text));
-////    QTextStream in(&file);
-////    ui->SystemEidt->insertPlainText(read());
+//
+void OperMode::on_AreaDivision_btn_clicked()
+{
+    ui->ExplainWidget->setCurrentWidget(ui->Explainpage);
+    ui->ExplanationTextWidget->setCurrentWidget(ui->AreaDivisionpage);
+    Charge_SOC_btn_explain->ModifyText(str2);
+    ConstantPower_btn_explain->ModifyText(str3);
+    DOD_OnGrid_btn_explain->ModifyText(str4);
+}
 
-//    ui->SystemEidt->setPlainText(QString(tr("\
-//System for self-use mode:\nPV first provides energy to the user's load, and if there is more energy left, it will charge the battery.\n\n\
-//System for self-use Running logic:\n\
-//1.1 When the grid is operating, the system is under on-grid operating mode. Grid side of the ATS is closed.\n\
-//① PPV≥PLOAD+PBAT \n\
-//PV provides energy to user`s load as first priority, if there is more energy left, it will charge up the batteries. After the batteries are fully charged, if PPV＞PLOAD, the MPS will run at power limited operation.\n\n\
-//② PPV＜PLOAD＜PPV+PBAT\n\
-//PV and batteries provide energy to the load together, when the battery SOC < 20%(set point resettable), the battery will stop discharging. The load will be supplied from PV and grid.\n\n\
-//③ When PV and batteries are unavailable, the grid will provide energy to the load.\n\n\
-//1.2 When the grid has faults or cut off from electricity, ATS will switch from grid side to diesel power generator side automatically. The MPS is under off-grid mode during the progress of switching. PV and batteries will provide energy to the load under this circumstance. When MPS detects that ATS has switched to the diesel power generator side already, and MPS detects battery SOC <20%, then MPS will send Dry Contact signal to start the diesel generator. After the diesel generator started successfully, if the real-time detection is the consistent to the grid voltage magnitude, frequency and phase, the MPS will be at on-grid mode.\n\n\
-//① PPV≥PLOAD+PBAT\n\
-//PV will provide energy to user`s loads as first priority, if there is more energy from PV, the energy will be used to charge up batteries. After the batteries are fully charged, if PPV > PLOAD, the MPS will run at power limited operation.\n\n\
-//② PPV＜PLOAD＜PPV+PBAT\n\
-//PV and batteries provide energy to the load together, when the batteries SOC < 20%(set point resettable), MPS will send the starting signal to DG controller so that the diesel generator is started. The load will be supplied from PV and DG.\n\n\
-//③ PPV＜PLOAD＜PPV+PBAT\n\
-//When the battery SOC > 80% (this set point resettable), MPS will send Dry Contact signals to shut down the diesel generator, PV and batteries provide energy to user`s load all together.\n\n\
-//1.3 When the grid is recovered, ATS will switch from diesel generator side to grid side automatically. During the switching progress, the MPS turns into off-grid operating mode, when the MPS detects ATS is switched to grid side, the MPS will recover grid operating mode again.\n\n\
-//After MPS switched to on-grid mode, the control strategies follow the settings of normal grid circumstances.")));
-
-
-//    ui->BatterEdit->setPlainText(QString(tr("\
-//Battery priority mode:\nPV prioritizes charging the battery, and if more energy is available, it will be used to power the user's load.\n\n\
-//Battery priority mode running logic:\n\
-//1.1 When the grid is operating, the system is under on-grid operating mode. Grid side of the ATS is closed.\n\
-//① PPV≥PLOAD+PBAT(charging)\n\
-//PV charges battery up as first priority, if there is more energy, it will be used to provide energy to user`s load. After the battery is fully charged, if PPV > PLOAD, then MPS will work under power limited operation.\n\n\
-//② PPV＞PBAT(charging) and PPV ＜ PLOAD+PBAT(charging)\n\
-//PV will charge the batteries up as first priority, PV and the grid will provide energy to user`s load all together. That is PLOAD =PPV －PBAT(charging)＋PGRID.\n\n\
-//③ PPV＜PBAT(charging) \n\
-//PV and the grid charge the batteries up all together, the load's energy will be provided totally by the grid. That is PBAT（charging）= Pset（charging）＋ PPV ，PGRID =Pset＋ PLOAD.\n\n\
-//④ When PV is unavailable, the grid will provide energy to the load, and charge the batteries simultaneously. That is PGRID = PLOAD ＋ PBAT（charging）.\n\n\
-//⑤ PPV < PLOAD and the battery SOC=100%\n\n\
-//PV and the grid provide energy to the load all together. MPS collects real time load power and PV generated power. By calculating PV generated power and load power, the remaining energy required by the load is provided by the grid, that is PLOAD = PPV ＋PGRID.\n\n\
-//1.2 When the grid has faults or cut off from electricity, ATS switches from grid side to diesel power generator side automatically, the MPS is under off-grid operation mode while switching, PV and batteries will provide energy to the load. When MPS detects ATS has switched to diesel generators side, MPS will send Dry Contact signals to start the diesel power generator. After the diesel generator started successfully, if the real-time detection is the consistent to the grid voltage magnitude, frequency and phase, the MPS will be at on-grid mode. \n\n\
-//① PPV≥PLOAD+PBAT(charging)\n\
-//PV will charge the batteries up as first priority, if there is more energy left, it will be provided to the load. When the battery is fully charged, if PPV > PLOAD, then MPS will work under power limited operation.\n\n\
-//② PPV＞PBAT(charging) and PPV ＜ PLOAD+PBAT(charging)\n\
-//PV will charge the batteries up as first priority, PV and diesel generator will provide energy to user`s load all together. That is PLOAD =PPV －PBAT（charging）＋PDG.\n\n\
-//③ PPV＜PBAT(charging) \n\
-//PV and diesel generator combine to charge the batteries up, the load’s energy will be provided totally by the diesel generator. PBAT（charging）=PDG － PLOAD ＋PPV. \n\n\
-//④ When PV is unavailable, diesel generator will provide energy to the load and charge the batteries simultaneously. That is PDG= PLOAD ＋ PBAT（charging）.\n\n\
-//⑤ PPV < PLOAD and the battery SOC=100%\n\
-//PV and diesel generator provide energy to the load all together. MPS collects real time load power and PV generated power. By calculating PV generated power and load power, diesel generator will provide the remaining energy, that is PLOAD = PPV ＋PDG.\n\n\
-//1.3 When the grid is recovered, ATS will switch from diesel generator side to grid side automatically. During the switching progress, the MPS turns into off-grid operating mode, when the MPS detects ATS is switched to grid side, the MPS will recover grid operating mode again.\n\n\
-//After MPS switched to on-grid mode, the control strategies follow the settings of normal grid circumstances.")));
-
-
-
-//    ui->PeakEdit->setPlainText(QString(tr("\
-//Peak shaving mode:\nThe peak-valley filling mode is used for peak-valley arbitrage.PCS can operate according tothe local peak-valley electricity price period, andcan go to the automatic operation page to setthe charging and discharging mode chargingand discharging power and other informationduring the operation period.")));
-///*削峰填谷模式：\n削峰填谷模式用于峰谷套利，PCS可根据当地的峰谷电价时段运行，可前往“自动运行”页面设置运行时间段、充放电模式、充放电功率等信息。*/
-
-
-
-//    ui->SystemEidt->setReadOnly(true);//设置为不可编辑属性
-//    ui->BatterEdit->setReadOnly(true);
-//    ui->PeakEdit->setReadOnly(true);
-
-
-
-
-///*这是工作模式，有三项可选：自发自用(System for self-use)，电池优先(Battery priority)，削峰填谷(Peak shaving)\n
-//    选择自发自用模式时，优先给负载供电\n
-//    选择电池优先模式时，优先给电池充电\n
-//    削峰填谷模式时，用电高峰时优先使用电池给负载供电，用电低谷时优先给电池充电\n*/
-
-//}
 //调整控件大小
 void OperMode::resizeEvent(QResizeEvent *event)
 {
@@ -129,6 +364,136 @@ void OperMode::resizeEvent(QResizeEvent *event)
 //    ui->BatterEdit->setGeometry(0,0,x-130,y-20);
 //    ui->PeakEdit->setGeometry(0,0,x-130,y-20);
 }
+
+void OperMode::SetExplain(QTableWidget *myWidget)
+{
+    Bat_Type_btn_explain = new Specification(this,OptMod_Bat_Type_btn, myWidget, 0, 1, str, Bat_Type_str, Bat_Type_str_Content);
+    Bat_Type_btn_explain->add_Specification();
+    Bat_Type_btn_explain->Opermode_btn_clicked(BatPri_Bat_Type_btn);
+    Bat_Type_btn_explain->Opermode_btn_clicked(Bat_Type_btn);
+
+    Bat_Comm_btn_explain = new Specification(this,OptMod_Bat_Comm_btn, myWidget, 1, 1, str, Bat_Comm_str, Bat_Comm_str_Content);
+    Bat_Comm_btn_explain->add_Specification();
+    Bat_Comm_btn_explain->Opermode_btn_clicked(BatPri_Bat_Comm_btn);
+    Bat_Comm_btn_explain->Opermode_btn_clicked(Bat_Comm_btn);
+
+    EMS_Comm_btn_explain = new Specification(this,OptMod_EMS_Comm_btn, myWidget, 2, 1, str, EMS_Comm_str, EMS_Comm_str_Content);
+    EMS_Comm_btn_explain->add_Specification();
+    EMS_Comm_btn_explain->Opermode_btn_clicked(BatPri_EMS_Comm_btn);
+    EMS_Comm_btn_explain->Opermode_btn_clicked(EMS_Comm_btn);
+
+    Charge_SOC_btn_explain = new Specification(this,OptMod_Charge_SOC_btn, myWidget, 3, 1, str, Charge_SOC_str, Charge_SOC_str_Content);
+    Charge_SOC_btn_explain->add_Specification();
+    Charge_SOC_btn_explain->Opermode_btn_clicked(BatPri_Charge_SOC_btn);
+    Charge_SOC_btn_explain->Opermode_btn_clicked(Charge_SOC_btn);
+
+    Discharge_SOC_btn_explain = new Specification(this,OptMod_Discharge_SOC_btn, myWidget, 4, 1, str, Discharge_SOC_str, Discharge_SOC_str_Content);
+    Discharge_SOC_btn_explain->add_Specification();
+    Discharge_SOC_btn_explain->Opermode_btn_clicked(BatPri_Discharge_SOC_btn);
+    Discharge_SOC_btn_explain->Opermode_btn_clicked(Discharge_SOC_btn);
+
+    Energy_priority_btn_explain = new Specification(this,OptMod_Energy_priority_btn, myWidget, 5, 1, str, Energy_priority_str, Energy_priority_str_Content);
+    Energy_priority_btn_explain->add_Specification();
+    Energy_priority_btn_explain->Opermode_btn_clicked(BatPri_Energy_priority_btn);
+    Energy_priority_btn_explain->Opermode_btn_clicked(Energy_priority_btn);
+
+    Anti_reflux_btn_explain = new Specification(this,OptMod_Anti_reflux_btn, myWidget, 6, 1, str, Anti_reflux_str, Anti_reflux_str_Content);
+    Anti_reflux_btn_explain->add_Specification();
+    Anti_reflux_btn_explain->Opermode_btn_clicked(BatPri_Anti_reflux_btn);
+    Anti_reflux_btn_explain->Opermode_btn_clicked(Anti_reflux_btn);
+
+    ConstantPower_btn_explain = new Specification(this,OptMod_ConstantPower_btn, myWidget, 7, 1, str, ConstantPower_str, ConstantPower_str_Content);
+    ConstantPower_btn_explain->add_Specification();
+    ConstantPower_btn_explain->Opermode_btn_clicked(BatPri_ConstantPower_btn);
+    ConstantPower_btn_explain->Opermode_btn_clicked(ConstantPower_btn);
+
+    Charge_upper_Limit_explain = new Specification(this,OptMod_Charge_upper_Limit, myWidget, 8, 1, str, Charge_upper_Limit_str, Charge_upper_Limit_str_Content);
+    Charge_upper_Limit_explain->add_Specification();
+    Charge_upper_Limit_explain->Opermode_btn_clicked(BatPri_Charge_upper_Limit);
+    Charge_upper_Limit_explain->Opermode_btn_clicked(Charge_upper_Limit);
+
+    Charge_Limit_delta_btn_explain = new Specification(this,OptMod_Charge_Limit_delta_btn, myWidget, 9, 1, str, Charge_Limit_delta_str, Charge_Limit_delta_str_Content);
+    Charge_Limit_delta_btn_explain->add_Specification();
+    Charge_Limit_delta_btn_explain->Opermode_btn_clicked(BatPri_Charge_Limit_delta_btn);
+    Charge_Limit_delta_btn_explain->Opermode_btn_clicked(Charge_Limit_delta_btn);
+
+    Disharge_Lower_Limit_explain = new Specification(this,OptMod_Disharge_Lower_Limit, myWidget, 10, 1, str, Disharge_Lower_Limit_str, Disharge_Lower_Limit_str_Content);
+    Disharge_Lower_Limit_explain->add_Specification();
+    Disharge_Lower_Limit_explain->Opermode_btn_clicked(BatPri_Disharge_Lower_Limit);
+    Disharge_Lower_Limit_explain->Opermode_btn_clicked(Disharge_Lower_Limit);
+
+    Disharge_Limit_delta_btn_explain = new Specification(this,OptMod_Disharge_Limit_delta_btn, myWidget, 11, 1, str, Disharge_Limit_delta_str, Disharge_Limit_delta_str_Content);
+    Disharge_Limit_delta_btn_explain->add_Specification();
+    Disharge_Limit_delta_btn_explain->Opermode_btn_clicked(BatPri_Disharge_Limit_delta_btn);
+    Disharge_Limit_delta_btn_explain->Opermode_btn_clicked(Disharge_Limit_delta_btn);
+
+    Charge_Current_btn_explain = new Specification(this,OptMod_Charge_Current_btn, myWidget, 12, 1, str, Charge_Current_str, Charge_Current_str_Content);
+    Charge_Current_btn_explain->add_Specification();
+    Charge_Current_btn_explain->Opermode_btn_clicked(BatPri_Charge_Current_btn);
+    Charge_Current_btn_explain->Opermode_btn_clicked(Charge_Current_btn);
+
+    Discharge_Current_Limit_btn_explain = new Specification(this,OptMod_Discharge_Current_Limit_btn, myWidget, 13, 1, str, Discharge_Current_Limit_str, Discharge_Current_Limit_str_Content);
+    Discharge_Current_Limit_btn_explain->add_Specification();
+    Discharge_Current_Limit_btn_explain->Opermode_btn_clicked(BatPri_Discharge_Current_Limit_btn);
+    Discharge_Current_Limit_btn_explain->Opermode_btn_clicked(Discharge_Current_Limit_btn);
+
+    DOD_OnGrid_btn_explain = new Specification(this,OptMod_DOD_OnGrid_btn, myWidget, 14, 1, str, DOD_OnGrid_str, DOD_OnGrid_str_Content);
+    DOD_OnGrid_btn_explain->add_Specification();
+    DOD_OnGrid_btn_explain->Opermode_btn_clicked(BatPri_DOD_OnGrid_btn);
+    DOD_OnGrid_btn_explain->Opermode_btn_clicked(DOD_OnGrid_btn);
+
+    DOD_OffGrid_btn_explain = new Specification(this,OptMod_DOD_OffGrid_btn, myWidget, 15, 1, str, DOD_OffGrid_str, DOD_OffGrid_str_Content);
+    DOD_OffGrid_btn_explain->add_Specification();
+    DOD_OffGrid_btn_explain->Opermode_btn_clicked(BatPri_DOD_OffGrid_btn);
+    DOD_OffGrid_btn_explain->Opermode_btn_clicked(DOD_OffGrid_btn);
+
+    Generator_turn_on_SOC_btn_explain = new Specification(this,OptMod_Generator_turn_on_SOC_btn, myWidget, 16, 1, str, Generator_turn_on_SOC_str, Generator_turn_on_SOC_str_Content);
+    Generator_turn_on_SOC_btn_explain->add_Specification();
+    Generator_turn_on_SOC_btn_explain->Opermode_btn_clicked(BatPri_Generator_turn_on_SOC_btn);
+    Generator_turn_on_SOC_btn_explain->Opermode_btn_clicked(Generator_turn_on_SOC_btn);
+
+    Generator_turn_off_SOC_btn_explain = new Specification(this,OptMod_Generator_turn_off_SOC_btn, myWidget, 17, 1, str, Generator_turn_off_SOC_str, Generator_turn_off_SOC_str_Content);
+    Generator_turn_off_SOC_btn_explain->add_Specification();
+    Generator_turn_off_SOC_btn_explain->Opermode_btn_clicked(BatPri_Generator_turn_off_SOC_btn);
+    Generator_turn_off_SOC_btn_explain->Opermode_btn_clicked(Generator_turn_off_SOC_btn);
+
+    Max_Bat_protection_btn_explain = new Specification(this,OptMod_Max_Bat_protection_btn, myWidget, 18, 1, str, Max_Bat_protection_str, Max_Bat_protection_str_Content);
+    Max_Bat_protection_btn_explain->add_Specification();
+    Max_Bat_protection_btn_explain->Opermode_btn_clicked(BatPri_Max_Bat_protection_btn);
+    Max_Bat_protection_btn_explain->Opermode_btn_clicked(Max_Bat_protection_btn);
+
+    DG_ECP_explain = new Specification(this,OptMod_DG_ECP, myWidget, 19, 1, str, DG_ECP_str, DG_ECP_str_Content);
+    DG_ECP_explain->add_Specification();
+    DG_ECP_explain->Opermode_btn_clicked(BatPri_DG_ECP);
+    DG_ECP_explain->Opermode_btn_clicked(DG_ECP);
+
+    DG_FCP_explain = new Specification(this,OptMod_DG_FCP, myWidget, 20, 1, str, DG_FCP_str, DG_FCP_str_Content);
+    DG_FCP_explain->add_Specification();
+    DG_FCP_explain->Opermode_btn_clicked(BatPri_DG_FCP);
+    DG_FCP_explain->Opermode_btn_clicked(DG_FCP);
+
+    Grid_ECP_explain = new Specification(this,OptMod_Grid_ECP, myWidget, 21, 1, str, Grid_ECP_str, Grid_ECP_str_Content);
+    Grid_ECP_explain->add_Specification();
+    Grid_ECP_explain->Opermode_btn_clicked(BatPri_Grid_ECP);
+    Grid_ECP_explain->Opermode_btn_clicked(Grid_ECP);
+
+    Grid_FCP_explain = new Specification(this,OptMod_Grid_FCP, myWidget, 22, 1, str, Grid_FCP_str, Grid_FCP_str_Content);
+    Grid_FCP_explain->add_Specification();
+    Grid_FCP_explain->Opermode_btn_clicked(BatPri_Grid_FCP);
+    Grid_FCP_explain->Opermode_btn_clicked(Grid_FCP);
+
+    Grid_EDP_explain = new Specification(this,OptMod_Grid_EDP, myWidget, 23, 1, str, Grid_EDP_str, Grid_EDP_str_Content);
+    Grid_EDP_explain->add_Specification();
+    Grid_EDP_explain->Opermode_btn_clicked(BatPri_Grid_EDP);
+    Grid_EDP_explain->Opermode_btn_clicked(Grid_EDP);
+
+    Grid_FDP_explain = new Specification(this,OptMod_Grid_FDP, myWidget, 24, 1, str, Grid_FDP_str, Grid_FDP_str_Content);
+    Grid_FDP_explain->add_Specification();
+    Grid_FDP_explain->Opermode_btn_clicked(BatPri_Grid_FDP);
+    Grid_FDP_explain->Opermode_btn_clicked(Grid_FDP);
+}
+
+
 
 
 

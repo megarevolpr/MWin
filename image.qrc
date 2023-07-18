@@ -65,6 +65,7 @@
         <file>UI/ZY_B.png</file>
         <file>UI/ZY_C.png</file>
         <file>UI/ZY_D.png</file>
+        <file>UI/电池区域划分.png</file>
     </qresource>
     <qresource prefix="/Massagebox">
         <file>UI/Close.png</file>

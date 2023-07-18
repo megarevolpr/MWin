@@ -2616,7 +2616,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <enum>QFrame::Raised</enum>
            </property>
            <property name="currentIndex">
-            <number>3</number>
+            <number>1</number>
            </property>
            <widget class="QWidget" name="Host_page">
             <widget class="QPushButton" name="Bypass_Grid_btn">
@@ -3765,7 +3765,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                 <string notr="true"/>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>3</number>
                </property>
                <widget class="QWidget" name="RT_Data_page">
                 <attribute name="title">
@@ -3819,7 +3819,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                         <enum>Qt::TabFocus</enum>
                        </property>
                        <property name="currentIndex">
-                        <number>0</number>
+                        <number>1</number>
                        </property>
                        <widget class="QWidget" name="Machine_page">
                         <property name="focusPolicy">
@@ -4749,7 +4749,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                  <item row="0" column="0">
                   <widget class="QStackedWidget" name="BAT_stackedWidget">
                    <property name="currentIndex">
-                    <number>1</number>
+                    <number>0</number>
                    </property>
                    <widget class="QWidget" name="BAT_Lithium_page">
                     <layout class="QGridLayout" name="gridLayout_17">

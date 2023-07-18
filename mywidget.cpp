@@ -448,10 +448,7 @@ void MyWidget::MemoryAllocation()
     ModificationTime4_explain   = new QPushButton;
     ModificationTime5_explain   = new QPushButton;
     ModificationTime6_explain   = new QPushButton;
-    ModificationTime7_explain   = new QPushButton;
-    ModificationTime8_explain   = new QPushButton;
     ModificationTime9_explain   = new QPushButton;
-    ModificationTime10_explain  = new QPushButton;
     ModificationTime11_explain  = new QPushButton;
     ModificationTime12_explain  = new QPushButton;
     EventRecord_explain         = new QPushButton;
@@ -460,10 +457,7 @@ void MyWidget::MemoryAllocation()
     EventRecord4_explain        = new QPushButton;
     EventRecord5_explain        = new QPushButton;
     EventRecord6_explain        = new QPushButton;
-    EventRecord7_explain        = new QPushButton;
-    EventRecord8_explain        = new QPushButton;
     EventRecord9_explain        = new QPushButton;
-    EventRecord10_explain       = new QPushButton;
     EventRecord11_explain       = new QPushButton;
     EventRecord12_explain       = new QPushButton;
 
@@ -747,10 +741,7 @@ void MyWidget::OperationLog_tab_delete()
     delete ModificationTime4;
     delete ModificationTime5;
     delete ModificationTime6;
-    delete ModificationTime7;
-    delete ModificationTime8;
     delete ModificationTime9;
-    delete ModificationTime10;
     delete ModificationTime11;
     delete ModificationTime12;
     delete EventRecord;
@@ -759,10 +750,7 @@ void MyWidget::OperationLog_tab_delete()
     delete EventRecord4;
     delete EventRecord5;
     delete EventRecord6;
-    delete EventRecord7;
-    delete EventRecord8;
     delete EventRecord9;
-    delete EventRecord10;
     delete EventRecord11;
     delete EventRecord12;
 }
@@ -1011,9 +999,9 @@ void MyWidget::Delete_explain()
     Data_Report_delete();//释放 数据报表
     HistoryRecord_delete();//释放 历史记录
     OperationLog_tab_delete();//释放 操作日志
-    DC_AC_Parameter_tab_delete();//释放 DC/AC参数
+
     DCDC_Paramter_tab_delete();//释放 DC/DC参数
-    Battery_Setup_Tab_delete();//释放 电池设置
+    Battery_Setup_Tab_delete();//释放 电池设置-锂电
     //    AutoOperation_delete();//释放 自动运行
     SystemMessages_delete();//释放 系统消息
     FunctionSet_delete();//释放 功能设置
@@ -1021,7 +1009,8 @@ void MyWidget::Delete_explain()
     ExternalDevice_delete();//释放 外设
     DCAC_Debugg_delete();//释放 DCAC调试
     DCDC_Debugg_delete();//释放 DCDC调试
-    Battery_Setup_Lead_Tab_delete();
+    DC_AC_Parameter_tab_delete();//释放 DC/AC参数
+    Battery_Setup_Lead_Tab_delete();//释放 电池设置-铅酸
 }
 
 /********************************************************
@@ -1089,10 +1078,10 @@ void MyWidget::ChangeLanguage_btn_clicked()
     }
 
     Delete_explain();//释放空间
-
+    mode_expelain = new OperMode(this);
     UIPageInit();       //初始化界面
 }
-
+//操作模式新界面
 void MyWidget::Operational_mode_clicked()
 {
     if(mode_expelain->isHidden())
@@ -1105,6 +1094,11 @@ void MyWidget::Operational_mode_clicked()
         mode_expelain->hide();
 //        this->show();
     }
+}
+//操作模式的表格控件重新关联
+void MyWidget::Operational_btn_connect()
+{
+
 }
 //函数关联
 void MyWidget::LinkRelationship()
@@ -1130,6 +1124,7 @@ void MyWidget::LinkRelationship()
     connect(ui->ChangeLanguage_btn_1, SIGNAL(clicked(bool)), this, SLOT(ChangeLanguage_btn_clicked()));//切换语言点击槽_高级设置
     connect(SwitchingBatteryTypes, SIGNAL(clicked(bool)), this, SLOT(SwitchingBatteryTypes_clicked()));
     connect(SwitchingBatteryTypes_Leaad, SIGNAL(clicked(bool)), this, SLOT(SwitchingBatteryTypes_Lead_clicked()));
+
 }
 //实时数据
 void MyWidget::RunStatePage()
@@ -3039,6 +3034,7 @@ void MyWidget::DC_AC_Parameter_tab(QTableWidget *myTable)
                                        tr("0"), tr("Constant power(AC)"), \
                                        tr("    This is the power setting of the AC side. The charging and discharging power of the AC side can be controlled by modifying the value of this item.When advanced Settings control power mode select constant power mode (CP_N&P), positive value indicates discharge, negative value indicates charging.\n    For example, set -5, indicating that the AC side will charge the battery with a power of -5kW, due to the loss of the inverter, the power on the DC side will be less than the power on the AC side.\n    For example, set 5, indicating that the AC side will be 5kW power output, due to the loss of the inverter, the DC side of the power will be greater than the AC side of the power."));
     Constant_power->add_Specification();
+//    Constant_power->Opermode_btn_clicked(mode_expelain->ConstantPower_btn);
 
     Charging_and_discharging = new Specification(this,Charging_and_discharging_explain, myTable, 2, 1, \
                                                  tr("Charge"), tr("Charging and discharging"), \
@@ -3050,9 +3046,11 @@ void MyWidget::DC_AC_Parameter_tab(QTableWidget *myTable)
 //                                  tr("这是工作模式，有三项可选：自发自用(System for self-use)，电池优先(Battery priority)，削峰填谷(Peak shaving)\n选择自发自用模式时，优先给负载供电\n选择电池优先模式时，优先给电池充电\n削峰填谷模式时，用电高峰时优先使用电池给负载供电，用电低谷时优先给电池充电\nThis is the working mode with three options: System for self use, Battery priority, and Peak shaving; When selecting the self use mode, priority is given to supplying power to the load; When selecting battery priority mode, priority is given to charging the battery; During peak shaving and valley filling mode, priority is given to using batteries to supply power to the load during peak electricity usage, and to charging batteries during low electricity usage."));
 //    Work_mode->add_Specification();
 
-    mode_expelain = new OperMode(this);
+
+
     Work_mode_explain->setText(tr("Manual"));
     myTable->setCellWidget(3, 1, (QWidget *)Work_mode_explain);
+
 
     Output_power_factor = new Specification(this,Output_power_factor_explain, myTable, 4, 1, \
                                             tr("1"), tr("Output power factor"), \
@@ -3078,6 +3076,7 @@ void MyWidget::DC_AC_Parameter_tab(QTableWidget *myTable)
                                      tr("Local"), tr("Control mode"), \
                                      tr("    This is the control mode;If the local mode is selected, the dispatcher (EMS, RS485) can only monitor data but cannot control PCS. If the remote mode is selected,PCS parameter setting is disabled and the dispatcher (EMS,  RS485) can read and write data."));
     Control_mode->add_Specification();
+
 
     Machine_number = new Specification(this,Machine_number_explain, myTable, 1, 4, \
                                        tr("Master_00"), tr("Machine number"), \
@@ -3149,61 +3148,70 @@ void MyWidget::Battery_Setup_Tab(QTableWidget *myTable)
                                    "90", tr("DOD_OnGrid"), \
                                    tr("Grid-connected DOD, the depth of discharge allowed in grid-connected mode."));
     DOD_OnGrid->add_Specification();
+//    DOD_OnGrid->Opermode_btn_clicked(mode_expelain->DOD_OnGrid_btn);
 
     //离网DOD说明
     DOD_OffGrid = new Specification(this,DOD_OffGrid_explain, myTable, 1, 1, \
                                     "90", tr("DOD_OffGrid"), \
                                     tr("Off-network DOD: Discharge depth allowed in off-network mode."));
     DOD_OffGrid->add_Specification();
+//    DOD_OffGrid->Opermode_btn_clicked(mode_expelain->DOD_OffGrid_btn);
 
     //充电电压上限说明
     Charge_Volt_Upper_Limit = new Specification(this,Charge_Volt_Upper_Limit_explain, myTable, 2, 1, \
                                                "792", tr("Charge_Vol_Up_Limit"), \
                                                 tr("This is the upper limit of the charging voltage. When the total battery voltage reaches this value during charging, the PCS will enter the constant voltage mode to prevent the battery from overcharging."));
     Charge_Volt_Upper_Limit->add_Specification();
+//    Charge_Volt_Upper_Limit->Opermode_btn_clicked(mode_expelain->Charge_upper_Limit);
 
     //充电电压上限回差说明
     Charge_Volt_upper_Limit_delta = new Specification(this,Charge_Volt_upper_Limit_delta_explain, myTable, 3, 1, \
                                                       "10", tr("Charge Volt upper Limit delta"), \
                                                       tr("Upper return difference of charging voltage: When the total battery voltage reaches the upper limit of charging voltage during battery charging, the constant voltage mode is removed when the total battery voltage is lower than the upper limit of charging voltage minus the return difference."));
     Charge_Volt_upper_Limit_delta->add_Specification();
+//    Charge_Volt_upper_Limit_delta->Opermode_btn_clicked(mode_expelain->Charge_Limit_delta_btn);
 
     //放电电压限制说明
     Disc_Volt_lower_Limit = new Specification(this,Disc_Volt_lower_Limit_explain, myTable, 4, 1, \
                                               "616", tr("Disc_Vol_lower_Limit"), \
                                               tr("Lower limit of discharge voltage. When the total battery voltage reaches this value during discharge, MPS will enter the constant voltage mode to prevent battery overdischarge."));
     Disc_Volt_lower_Limit->add_Specification();
+//    Disc_Volt_lower_Limit->Opermode_btn_clicked(mode_expelain->Disharge_Lower_Limit);
 
     //放电电压下限回差说明
     Discharge_Volt_upper_Limit_delta = new Specification(this,Discharge_Volt_upper_Limit_delta_explain, myTable, 5, 1, \
                                                          "10", tr("Discharge Volt upper Limit delta"), \
                                                          tr("When the battery is discharging and the total voltage of the battery reaches the lower limit of the discharge voltage, MPS enters the constant voltage mode. When the total voltage of the battery rises to the lower limit of the discharge voltage and the return difference value is added, the constant voltage mode is removed."));
     Discharge_Volt_upper_Limit_delta->add_Specification();
+//    Discharge_Volt_upper_Limit_delta->Opermode_btn_clicked(mode_expelain->Disharge_Limit_delta_btn);
 
     //充电电流限制说明
     Charge_Current_Limit = new Specification(this,Charge_Current_Limit_explain, myTable, 6, 1, \
                                              "240", tr("Charge Current Limit"), \
                                              tr("Upper limit of charging current, which is the maximum current allowed on the DC side of PCS to prevent charging overcurrent."));
     Charge_Current_Limit->add_Specification();
+//    Charge_Current_Limit->Opermode_btn_clicked(mode_expelain->Charge_Current_btn);
 
     //放电电流限制说明
     Discharge_Current_Limit = new Specification(this,Discharge_Current_Limit_explain, myTable, 7, 1, \
                                                 "240", tr("Discharge Current Limit"), \
                                                 tr("The upper limit of discharge current, which is the maximum current allowed to discharge on the DC side of PCS to prevent discharge from overcurrent."));
     Discharge_Current_Limit->add_Specification();
+//    Discharge_Current_Limit->Opermode_btn_clicked(mode_expelain->Discharge_Current_Limit_btn);
 
     //柴发关闭SOC说明
     Gen_turn_off_SOC = new Specification(this,Gen_turn_off_SOC_explain, myTable, 8, 1, \
                                          "85", tr("Gen_turn_off_SOC"), \
                                          tr("When the specified SCO value is reached, the diesel generator shuts down."));
     Gen_turn_off_SOC->add_Specification();
+//    Gen_turn_off_SOC->Opermode_btn_clicked(mode_expelain->Generator_turn_off_SOC_btn);
 
     //柴发开启SOC说明
     Gen_turn_on_SOC = new Specification(this,Gen_turn_on_SOC_explain, myTable, 9, 1, \
                                         "25", tr("Gen_turn_on_SOC"), \
                                         tr("When the specified SOC value is reached, the diesel generator starts."));
     Gen_turn_on_SOC->add_Specification();
-
+//    Gen_turn_on_SOC->Opermode_btn_clicked(mode_expelain->Generator_turn_on_SOC_btn);
 
     SwitchingBatteryTypes->setText(tr("Lithium"));
     myTable->setCellWidget(10, 1, (QWidget *)SwitchingBatteryTypes);
@@ -3296,7 +3304,7 @@ void MyWidget::AutoOperation(QTableWidget *myTable)
     QString temp6 = tr("9:00");
     QString temp7 = tr("10:00");
     QString temp8 = tr("This is the end time at which the state started with the 'start time' will end.");
-    QString temp9 = tr("This is the function that will perform this function during business hours, there are six to choose from, They are System for self-use, battery Batter priority, Peak shaving, Output PV power, Generator Trun on and Generator Trun off.");
+    QString temp9 = tr("This is the function that will perform this function during business hours, there are six to choose from, They are System for self-use, battery Batter priority, Peak shaving, Output PV power.");
     QString temp10 = tr("This is the working power, which is executed according to the working state when working in this state, the positive number is discharging, and the negative number is charging.");
     QString temp11 = tr("This is the start time at which the specified state will begin to be entered with the specified power.");
     QString temp12 = tr("This is' Enable ', which will enable the specified state at the specified time with the specified power, and end at the specified time.");
@@ -4352,22 +4360,10 @@ void MyWidget::OperationLog_tab(QTableWidget *myTable)
                                                     "2023-05-11 19:29:07", str, \
                                                     str1);
     ModificationTime6->add_Specification();
-    ModificationTime7 = new Specification(this,ModificationTime7_explain, myTable, line++,column, \
-                                                    "2023-05-11 17:21:16", str, \
-                                                    str1);
-    ModificationTime7->add_Specification();
-    ModificationTime8 = new Specification(this,ModificationTime8_explain, myTable, line++, column, \
-                                                    "2023-05-11 11:21:02", str, \
-                                                    str1);
-    ModificationTime8->add_Specification();
     ModificationTime9 = new Specification(this,ModificationTime9_explain, myTable, line++, column, \
                                                     "2023-05-11 11:20:58", str, \
                                                     str1);
     ModificationTime9->add_Specification();
-    ModificationTime10 = new Specification(this,ModificationTime10_explain, myTable, line++, column, \
-                                                    "2023-05-11 11:02:22", str, \
-                                                    str1);
-    ModificationTime10->add_Specification();
     ModificationTime11 = new Specification(this,ModificationTime11_explain, myTable, line++, column, \
                                                     "2023-05-11 11:02:18", str, \
                                                     str1);
@@ -4402,22 +4398,10 @@ void MyWidget::OperationLog_tab(QTableWidget *myTable)
                                                     tr("Voltage protection Lower limit：-15->-10"), str2, \
                                                     str3);
     EventRecord6->add_Specification();
-    EventRecord7 = new Specification(this,EventRecord7_explain, myTable, line++, column, \
-                                                    tr("Operation mode：Prevent countercurrnet->Peak valley"), str2, \
-                                                    str3);
-    EventRecord7->add_Specification();
-    EventRecord8 = new Specification(this,EventRecord8_explain, myTable, line++, column, \
-                                                    tr("Operation mode：UPS->Prevent countercurrnet"), str2, \
-                                                    str3);
-    EventRecord8->add_Specification();
     EventRecord9 = new Specification(this,EventRecord9_explain, myTable, line++, column, \
                                                     tr("Operation mode：Manual->UPS"), str2, \
                                                     str3);
     EventRecord9->add_Specification();
-    EventRecord10 = new Specification(this,EventRecord10_explain, myTable, line++, column, \
-                                                    tr("Operation mode：Peak valley->Manual"), str2, \
-                                                    str3);
-    EventRecord10->add_Specification();
     EventRecord11 = new Specification(this,EventRecord11_explain, myTable, line++, column, \
                                                     tr("Inv ON/Off-Grid：Off->automatic"), str2, \
                                                     str3);
@@ -4435,12 +4419,14 @@ void MyWidget::FunctionSet(QTableWidget *myTable)
                                      tr("Lithium"), tr("Battery type"), \
                                      tr("Choose the battery type according to the actual situation, there are two types of Lithium and LeadAcid to choose from."));
     Battery_type->add_Specification();
+//    Battery_type->Opermode_btn_clicked(mode_expelain->Bat_Type_btn);
 
     //电池通信方式说明
     BMS_Comm_type = new Specification(this,BMS_Comm_type_explain, myTable, 1, 1, \
                                       "CAN", tr("BMS Comm type"), \
                                       tr("Set the communication mode between the battery, RS485 or CAN communication or Ethernet can be selected according to the situation."));
     BMS_Comm_type->add_Specification();
+//    BMS_Comm_type->Opermode_btn_clicked(mode_expelain->Bat_Comm_btn);
 
     //功率控制类型说明
     Power_control_type = new Specification(this,Power_control_type_explain, myTable, 2, 1,\
@@ -4453,6 +4439,8 @@ void MyWidget::FunctionSet(QTableWidget *myTable)
                                       "RS485", tr("EMS Comm type"), \
                                       tr("You CAN set the communication mode of the EMS, including RS485,CAN, and Ethernet. Select one communication mode that can be read and written remotely, and the other two communication modes can be read only."));
     EMS_Comm_type->add_Specification();
+//    EMS_Comm_type->Opermode_btn_clicked(mode_expelain->EMS_Comm_btn);
+
     //输出功率上限说明
     Output_power_limit = new Specification(this,Output_power_limit_explain, myTable, 4, 1,\
                                            "100", tr("Output power limit"), \
@@ -4470,12 +4458,14 @@ void MyWidget::FunctionSet(QTableWidget *myTable)
                                           "20", tr("Charge SOC"), \
                                           tr("This is the charging SOC. When the battery SOC is below 20%, the battery will start charging until the charging reaches the discharging SOC before allowing the battery to discharge again."));
     Charge_SOC->add_Specification();//这是充电SOC，当电池SOC低于20%时，电池将启动充电，直到充电达到放电SOC，才允许电池再次放电\n
+//    Charge_SOC->Opermode_btn_clicked(mode_expelain->Charge_SOC_btn);
 
     //放电SOC说明
     Disharge_SOC = new Specification(this,Disharge_SOC_explain, myTable, 7, 1, \
                                           "50", tr("Disharge SOC"), \
                                           tr("This is the discharge SOC. When the battery SOC is lower than the charging SOC, after the battery starts charging, it will be charged to the discharge SOC (50%) before allowing the battery to discharge again."));
     Disharge_SOC->add_Specification();//这是放电SOC，当电池SOC低于充电SOC，电池启动充电后，电池将充电至放电SOC(50%)时，才允许电池再次放电\n
+//    Disharge_SOC->Opermode_btn_clicked(mode_expelain->Discharge_SOC_btn);
 
     //柴发容量说明
     DG_capacity = new Specification(this,DG_capacity_explain, myTable, 8, 1, \
@@ -4488,6 +4478,7 @@ void MyWidget::FunctionSet(QTableWidget *myTable)
                                         tr("Bat>Grid"), tr("Energy priority"), \
                                         tr("Energy priority: In automatic self-use mode, if you choose Battery > power grid, the battery is preferred to power the load. If you choose Grid > Battery, power is supplied to the power grid first."));
     Energy_priority->add_Specification();
+//    Energy_priority->Opermode_btn_clicked(mode_expelain->Energy_priority_btn);
 
     //主机地址说明
     Host_Address = new Specification(this,Host_Address_explain, myTable, 0, 4,\
@@ -4720,6 +4711,7 @@ void MyWidget::SystemParameter(QTableWidget *myTable)
                                                    tr("Non\ncountercurrent"), tr("Grid connected mode of Inv"), \
                                                    tr("Set the grid-connected mode of the inverter, which can be countercurrent, that is, DC can be converted into AC power and then incorporated into the power grid; Irreversible means that the current on the DC side does not flow to the grid. The default value can be Countercurrent. The options can be countercurrent or Non countercurrent. With the local grid qualification, it can be changed to 'countercurrent'; When using Prevent countercurrent mode, you can change to 'countercurrent'."));
     Grid_connected_mode_of_Inv->add_Specification();
+//    Grid_connected_mode_of_Inv->Opermode_btn_clicked(mode_expelain->Anti_reflux_btn);
 
     //过频降载说明
     Pshedding_Freq = new Specification(this,Pshedding_Freq_explain, myTable, 9, 4, \

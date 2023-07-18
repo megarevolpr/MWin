@@ -541,10 +541,7 @@ public:
     QPushButton *ModificationTime4_explain;
     QPushButton *ModificationTime5_explain;
     QPushButton *ModificationTime6_explain;
-    QPushButton *ModificationTime7_explain;
-    QPushButton *ModificationTime8_explain;
     QPushButton *ModificationTime9_explain;
-    QPushButton *ModificationTime10_explain;
     QPushButton *ModificationTime11_explain;
     QPushButton *ModificationTime12_explain;
     QPushButton *EventRecord_explain;
@@ -553,10 +550,7 @@ public:
     QPushButton *EventRecord4_explain;
     QPushButton *EventRecord5_explain;
     QPushButton *EventRecord6_explain;
-    QPushButton *EventRecord7_explain;
-    QPushButton *EventRecord8_explain;
     QPushButton *EventRecord9_explain;
-    QPushButton *EventRecord10_explain;
     QPushButton *EventRecord11_explain;
     QPushButton *EventRecord12_explain;
 
@@ -566,10 +560,7 @@ public:
     Specification *ModificationTime4;
     Specification *ModificationTime5;
     Specification *ModificationTime6;
-    Specification *ModificationTime7;
-    Specification *ModificationTime8;
     Specification *ModificationTime9;
-    Specification *ModificationTime10;
     Specification *ModificationTime11;
     Specification *ModificationTime12;
     Specification *EventRecord;
@@ -578,10 +569,7 @@ public:
     Specification *EventRecord4;
     Specification *EventRecord5;
     Specification *EventRecord6;
-    Specification *EventRecord7;
-    Specification *EventRecord8;
     Specification *EventRecord9;
-    Specification *EventRecord10;
     Specification *EventRecord11;
     Specification *EventRecord12;
 
@@ -980,7 +968,8 @@ private slots:
     void on_Alarm_btn_clicker();//跳转实时告警页面
     void AdvancedSetup_btn_clicked();//跳转到高级设置
     void ChangeLanguage_btn_clicked();//切换语言
-    void Operational_mode_clicked();//
+    void Operational_mode_clicked();//操作模式新界面
+    void Operational_btn_connect();//操作模式的表格控件重新关联
 
 
     void on_RTD_DC_clicked();
