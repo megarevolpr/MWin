@@ -6,7 +6,7 @@ OperMode::OperMode(QWidget *parent) :
     ui(new Ui::OperMode)
 {
     ui->setupUi(this);
-
+    setWindowState(Qt::WindowMaximized); // 最大化
     InitializeMemorySpace();
 
     Init_Tab_button();
@@ -163,10 +163,25 @@ void OperMode::InitializeChart(QTableWidget *myWidget)
 {
     myWidget->verticalHeader()->setVisible(false);//设置垂直头不可见
     myWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);//设置不可编辑
-    myWidget->setColumnWidth(0,190);
-    myWidget->setColumnWidth(1,150);
-    myWidget->setColumnWidth(2,100);
-    myWidget->setColumnWidth(3,110);
+    ui->PVEidt->setReadOnly(true);//只读
+    ui->PV_A_Edit->setReadOnly(true);
+    ui->PV_B_Edit->setReadOnly(true);
+    ui->PV_C_Edit->setReadOnly(true);
+
+    ui->plainTextEdit->setReadOnly(true);//只读
+    ui->BAT_A_Edit->setReadOnly(true);
+    ui->BAT_B1_Edit->setReadOnly(true);
+    ui->BAT_B2_Edit->setReadOnly(true);
+    ui->BAT_2A_Edit->setReadOnly(true);
+
+
+    ui->BPG_Edit->setReadOnly(true);//只读
+    ui->Optimal_A_Edit->setReadOnly(true);
+    ui->Optimal_B_Edit->setReadOnly(true);
+    ui->Optimal_C_Edit->setReadOnly(true);
+    ui->Optimal_D_Edit->setReadOnly(true);
+    ui->Optimal_2A_Edit->setReadOnly(true);
+    ui->Optimal_2B_Edit->setReadOnly(true);
 
     for(int i=0;i<25;i++)
     {
@@ -191,10 +206,6 @@ void OperMode::InitializeChart_2(QTableWidget *myWidget)
 {
     myWidget->verticalHeader()->setVisible(false);//设置垂直头不可见
     myWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);//设置不可编辑
-    myWidget->setColumnWidth(0,190);
-    myWidget->setColumnWidth(1,150);
-    myWidget->setColumnWidth(2,170);
-    myWidget->setColumnWidth(3,140);
 
     ui->BatteryAreaEdit->setReadOnly(true);//只读
     ui->ChaifaLogicEdit->setReadOnly(true);
@@ -354,15 +365,24 @@ void OperMode::resizeEvent(QResizeEvent *event)
     int x = this->frameGeometry().width(); //获取ui形成窗口宽度
     int y = this->frameGeometry().height();//获取窗口高度
 
-//    ui->ExplainWidget->setGeometry(0,0,x,y-20);
-//    ui->Explainpage->setGeometry(0,0,x,y-20);
-//    ui->ExplanationTextWidget->setGeometry(0,0,x-20,y-20);
-//    ui->Systempage->setGeometry(0,0,x-130,y-20);
-//    ui->Batterpage->setGeometry(0,0,x-130,y-20);
-//    ui->Optimalpage->setGeometry(0,0,x-130,y-20);
-//    ui->SystemEidt->setGeometry(0,0,x-130,y-20);
-//    ui->BatterEdit->setGeometry(0,0,x-130,y-20);
-//    ui->PeakEdit->setGeometry(0,0,x-130,y-20);
+    ui->ExplainWidget->setGeometry(0,0,x-160,y-10);
+    ui->Explainpage->setGeometry(0,0,x-160,y-10);
+
+//    ui->Paramrter_Widget->setGeometry(0,0,x-160,y);
+    ui->BatPri_Widget->setColumnWidth(0,(x-600)*0.25);//450\650\150
+    ui->BatPri_Widget->setColumnWidth(1,(x-600)*0.21);
+    ui->BatPri_Widget->setColumnWidth(2,(x-600)*0.22);
+    ui->BatPri_Widget->setColumnWidth(3,(x-600)*0.19);
+    ui->OptMod_Widget->setColumnWidth(0,(x-600)*0.25);//450\650\150
+    ui->OptMod_Widget->setColumnWidth(1,(x-600)*0.21);
+    ui->OptMod_Widget->setColumnWidth(2,(x-600)*0.22);
+    ui->OptMod_Widget->setColumnWidth(3,(x-600)*0.19);
+
+    ui->Paramrter_Widget->setColumnWidth(0,(x-710)*0.25);//560\650\150
+    ui->Paramrter_Widget->setColumnWidth(1,(x-710)*0.21);
+    ui->Paramrter_Widget->setColumnWidth(2,(x-710)*0.22);
+    ui->Paramrter_Widget->setColumnWidth(3,(x-710)*0.19);
+
 }
 
 void OperMode::SetExplain(QTableWidget *myWidget)

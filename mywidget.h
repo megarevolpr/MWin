@@ -290,7 +290,6 @@ public:
     Specification *Current_value;
 
     /***************************电池设置-锂电****************************/
-    QPushButton *SwitchingBatteryTypes;//切换电池类型
 
     QPushButton *DOD_OnGrid_explain;    //并网DOD说明
     QPushButton *DOD_OffGrid_explain;   //离网DOD说明
@@ -320,36 +319,43 @@ public:
     Specification *Gen_turn_on_SOC;
 
 
-    /***************************电池设置-锂电****************************/
+    /***************************电池设置-铅酸****************************/
     QPushButton *Capacity_explain;
     QPushButton *Cell_number_2V_explain;
+    QPushButton *Bat_float_vol_explain;
+    QPushButton *Bat_filling_vol_explain;
     QPushButton *Charge_limiting_value_explain;
     QPushButton *Discharge_limiting_value_explain;
     QPushButton *Generator_turn_off_SOC_B1_explain;
     QPushButton *Generator_turn_on_SOC_A1_explain;
-    QPushButton *SwitchingBatteryTypes_Leaad;
     QPushButton *Grid_off_EOD_explain;
     QPushButton *Grid_on_EOD_explain;
-    QPushButton *Shutdown_voltage_point_explain;
+    /*QPushButton *Shutdown_voltage_point_explain;
     QPushButton *Mending_center_point_explain;
     QPushButton *Temperature_filling_coefficient_explain;
     QPushButton *Mending_allowable_setting_explain;
-    QPushButton *Temperature_alarm_upper_limit_explain;
+    QPushButton *Temperature_alarm_upper_limit_explain;*/
+    QPushButton *Uniform_To_Flushing_current_explain;
+    QPushButton *Flushing_To_Uniform_current_explain;
 
 
     Specification *Capacity;
     Specification *Cell_number_2V;
+    Specification *Bat_float_vol;
+    Specification *Bat_filling_vol;
     Specification *Charge_limiting_value;
     Specification *Discharge_limiting_value;
     Specification *Generator_turn_off_SOC_B1;
     Specification *Generator_turn_on_SOC_A1;
     Specification *Grid_off_EOD;
     Specification *Grid_on_EOD;
-    Specification *Shutdown_voltage_point;
+    /*Specification *Shutdown_voltage_point;
     Specification *Mending_center_point;
     Specification *Temperature_filling_coefficient;
     Specification *Mending_allowable_setting;
-    Specification *Temperature_alarm_upper_limit;
+    Specification *Temperature_alarm_upper_limit;*/
+    Specification *Uniform_To_Flushing_current;
+    Specification *Flushing_To_Uniform_current;
 
     /***************************自动运行**************************/
     //选择
@@ -1029,9 +1035,7 @@ private slots:
 
     void on_pushButton_sub_clicked();
 
-    void SwitchingBatteryTypes_clicked();
-
-    void SwitchingBatteryTypes_Lead_clicked();
+    void on_TimeSeting_btn_clicked();
 
 private:
     Ui::MyWidget *ui;

@@ -2616,7 +2616,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <enum>QFrame::Raised</enum>
            </property>
            <property name="currentIndex">
-            <number>1</number>
+            <number>3</number>
            </property>
            <widget class="QWidget" name="Host_page">
             <widget class="QPushButton" name="Bypass_Grid_btn">
@@ -2874,7 +2874,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                <x>290</x>
                <y>70</y>
                <width>91</width>
-               <height>84</height>
+               <height>93</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_37">
@@ -3680,7 +3680,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
               <rect>
                <x>570</x>
                <y>390</y>
-               <width>134</width>
+               <width>204</width>
                <height>30</height>
               </rect>
              </property>
@@ -3707,7 +3707,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                <x>270</x>
                <y>330</y>
                <width>89</width>
-               <height>23</height>
+               <height>33</height>
               </rect>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_12">
@@ -7339,11 +7339,20 @@ background-color: rgb(255, 0, 0);</string>
                   <number>0</number>
                  </property>
                  <item row="0" column="0">
-                  <widget class="QStackedWidget" name="BatterSet_stackedWidget">
+                  <widget class="QTabWidget" name="BatterSet_tabWidget">
                    <property name="currentIndex">
                     <number>0</number>
                    </property>
-                   <widget class="QWidget" name="Lithium_stackedWidgetPage">
+                   <property name="iconSize">
+                    <size>
+                     <width>16</width>
+                     <height>8</height>
+                    </size>
+                   </property>
+                   <widget class="QWidget" name="LithiumBatterPage" native="true">
+                    <attribute name="title">
+                     <string>Lithium</string>
+                    </attribute>
                     <layout class="QGridLayout" name="gridLayout_23">
                      <property name="leftMargin">
                       <number>0</number>
@@ -7367,7 +7376,7 @@ background-color: rgb(255, 0, 0);</string>
                          <item>
                           <widget class="QLabel" name="label_9">
                            <property name="styleSheet">
-                            <string notr="true">border-image: url(:/new_ui/UI/BatterySOC.png);</string>
+                            <string notr="true">border-image: url(:/new_ui/UI/BatterySOC_new.png);</string>
                            </property>
                            <property name="text">
                             <string/>
@@ -7378,9 +7387,9 @@ background-color: rgb(255, 0, 0);</string>
                           <widget class="QPlainTextEdit" name="plainTextEdit">
                            <property name="plainText">
                             <string>A1: 
-Discharge Volt. Limit(EOD)
+Generator turn on voltage(A1)
 B1: 
-Floating charge</string>
+Generator turn off voltage(B1)</string>
                            </property>
                           </widget>
                          </item>
@@ -7417,7 +7426,7 @@ Floating charge</string>
                         </layout>
                        </item>
                        <item>
-                        <widget class="QTableWidget" name="Lithum_Tab">
+                        <widget class="QTableWidget" name="Lithium_Tab">
                          <property name="cursor" stdset="0">
                           <cursorShape>ArrowCursor</cursorShape>
                          </property>
@@ -7551,7 +7560,7 @@ Floating charge</string>
                          </item>
                          <item row="10" column="0">
                           <property name="text">
-                           <string>SwitchingBatteryTypes</string>
+                           <string/>
                           </property>
                           <property name="textAlignment">
                            <set>AlignCenter</set>
@@ -7563,7 +7572,10 @@ Floating charge</string>
                      </item>
                     </layout>
                    </widget>
-                   <widget class="QWidget" name="Lead_stackedWidgetPage">
+                   <widget class="QWidget" name="LeadBatterPage" native="true">
+                    <attribute name="title">
+                     <string>Lead</string>
+                    </attribute>
                     <layout class="QGridLayout" name="gridLayout_25">
                      <property name="leftMargin">
                       <number>0</number>
@@ -7584,7 +7596,7 @@ Floating charge</string>
                          <item>
                           <widget class="QLabel" name="label_11">
                            <property name="styleSheet">
-                            <string notr="true">border-image: url(:/new_ui/UI/BatterySOC.png);</string>
+                            <string notr="true">border-image: url(:/new_ui/UI/BatterySOC_new.png);</string>
                            </property>
                            <property name="text">
                             <string/>
@@ -7594,15 +7606,11 @@ Floating charge</string>
                          <item>
                           <widget class="QPlainTextEdit" name="plainTextEdit_2">
                            <property name="plainText">
-                            <string>A1: 
-Generator turn on SOC
-B1: 
-Generator turn off SOC
-A1 Setting range: [10%, 50%]
-B1 Setting range: [50%, 100%]
-Set rule:
-B1 - A1 ≥ 30 %
-</string>
+                            <string>A1: Generator turn on voltage
+B1: Generator turn off voltage
+A1 Setting range: [250, 900]
+B1 Setting range: [250, 900]
+Set rule:B1 - A1 ≥ 10V</string>
                            </property>
                           </widget>
                          </item>
@@ -7746,12 +7754,12 @@ B1 - A1 ≥ 30 %
                          </item>
                          <item row="2" column="0">
                           <property name="text">
-                           <string>Charge limiting value</string>
+                           <string>Battery float voltage</string>
                           </property>
                          </item>
                          <item row="2" column="2">
                           <property name="text">
-                           <string>C</string>
+                           <string>V</string>
                           </property>
                           <property name="textAlignment">
                            <set>AlignCenter</set>
@@ -7760,6 +7768,56 @@ B1 - A1 ≥ 30 %
                          <item row="2" column="3">
                           <property name="text">
                            <string>Shutdown voltage point</string>
+                          </property>
+                          <property name="background">
+                           <brush brushstyle="NoBrush">
+                            <color alpha="255">
+                             <red>138</red>
+                             <green>138</green>
+                             <blue>138</blue>
+                            </color>
+                           </brush>
+                          </property>
+                          <property name="foreground">
+                           <brush brushstyle="NoBrush">
+                            <color alpha="255">
+                             <red>138</red>
+                             <green>138</green>
+                             <blue>138</blue>
+                            </color>
+                           </brush>
+                          </property>
+                          <property name="flags">
+                           <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+                          </property>
+                         </item>
+                         <item row="2" column="4">
+                          <property name="text">
+                           <string>0</string>
+                          </property>
+                          <property name="textAlignment">
+                           <set>AlignCenter</set>
+                          </property>
+                          <property name="background">
+                           <brush brushstyle="NoBrush">
+                            <color alpha="255">
+                             <red>138</red>
+                             <green>138</green>
+                             <blue>138</blue>
+                            </color>
+                           </brush>
+                          </property>
+                          <property name="foreground">
+                           <brush brushstyle="NoBrush">
+                            <color alpha="255">
+                             <red>138</red>
+                             <green>138</green>
+                             <blue>138</blue>
+                            </color>
+                           </brush>
+                          </property>
+                          <property name="flags">
+                           <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
                           </property>
                          </item>
                          <item row="2" column="5">
@@ -7772,12 +7830,12 @@ B1 - A1 ≥ 30 %
                          </item>
                          <item row="3" column="0">
                           <property name="text">
-                           <string>Discharge limiting value</string>
+                           <string>Battery filling voltage</string>
                           </property>
                          </item>
                          <item row="3" column="2">
                           <property name="text">
-                           <string>C</string>
+                           <string>V</string>
                           </property>
                           <property name="textAlignment">
                            <set>AlignCenter</set>
@@ -7786,6 +7844,56 @@ B1 - A1 ≥ 30 %
                          <item row="3" column="3">
                           <property name="text">
                            <string>Mending center point</string>
+                          </property>
+                          <property name="background">
+                           <brush brushstyle="NoBrush">
+                            <color alpha="255">
+                             <red>138</red>
+                             <green>138</green>
+                             <blue>138</blue>
+                            </color>
+                           </brush>
+                          </property>
+                          <property name="foreground">
+                           <brush brushstyle="NoBrush">
+                            <color alpha="255">
+                             <red>138</red>
+                             <green>138</green>
+                             <blue>138</blue>
+                            </color>
+                           </brush>
+                          </property>
+                          <property name="flags">
+                           <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+                          </property>
+                         </item>
+                         <item row="3" column="4">
+                          <property name="text">
+                           <string>0</string>
+                          </property>
+                          <property name="textAlignment">
+                           <set>AlignCenter</set>
+                          </property>
+                          <property name="background">
+                           <brush brushstyle="NoBrush">
+                            <color alpha="255">
+                             <red>138</red>
+                             <green>138</green>
+                             <blue>138</blue>
+                            </color>
+                           </brush>
+                          </property>
+                          <property name="foreground">
+                           <brush brushstyle="NoBrush">
+                            <color alpha="255">
+                             <red>138</red>
+                             <green>138</green>
+                             <blue>138</blue>
+                            </color>
+                           </brush>
+                          </property>
+                          <property name="flags">
+                           <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
                           </property>
                          </item>
                          <item row="3" column="5">
@@ -7798,12 +7906,12 @@ B1 - A1 ≥ 30 %
                          </item>
                          <item row="4" column="0">
                           <property name="text">
-                           <string>Generator turn off SOC(B1)</string>
+                           <string>Charge limiting value</string>
                           </property>
                          </item>
                          <item row="4" column="2">
                           <property name="text">
-                           <string>%</string>
+                           <string>C</string>
                           </property>
                           <property name="textAlignment">
                            <set>AlignCenter</set>
@@ -7812,6 +7920,38 @@ B1 - A1 ≥ 30 %
                          <item row="4" column="3">
                           <property name="text">
                            <string>Temperature filling coefficient</string>
+                          </property>
+                          <property name="foreground">
+                           <brush brushstyle="NoBrush">
+                            <color alpha="255">
+                             <red>138</red>
+                             <green>138</green>
+                             <blue>138</blue>
+                            </color>
+                           </brush>
+                          </property>
+                          <property name="flags">
+                           <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+                          </property>
+                         </item>
+                         <item row="4" column="4">
+                          <property name="text">
+                           <string>0</string>
+                          </property>
+                          <property name="textAlignment">
+                           <set>AlignCenter</set>
+                          </property>
+                          <property name="foreground">
+                           <brush brushstyle="NoBrush">
+                            <color alpha="255">
+                             <red>138</red>
+                             <green>138</green>
+                             <blue>138</blue>
+                            </color>
+                           </brush>
+                          </property>
+                          <property name="flags">
+                           <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
                           </property>
                          </item>
                          <item row="4" column="5">
@@ -7824,12 +7964,12 @@ B1 - A1 ≥ 30 %
                          </item>
                          <item row="5" column="0">
                           <property name="text">
-                           <string>Generator turn on SOC(A1)</string>
+                           <string>Discharge limiting value</string>
                           </property>
                          </item>
                          <item row="5" column="2">
                           <property name="text">
-                           <string>%</string>
+                           <string>C</string>
                           </property>
                           <property name="textAlignment">
                            <set>AlignCenter</set>
@@ -7838,6 +7978,38 @@ B1 - A1 ≥ 30 %
                          <item row="5" column="3">
                           <property name="text">
                            <string>Mending allowable setting</string>
+                          </property>
+                          <property name="foreground">
+                           <brush brushstyle="NoBrush">
+                            <color alpha="255">
+                             <red>138</red>
+                             <green>138</green>
+                             <blue>138</blue>
+                            </color>
+                           </brush>
+                          </property>
+                          <property name="flags">
+                           <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+                          </property>
+                         </item>
+                         <item row="5" column="4">
+                          <property name="text">
+                           <string>0</string>
+                          </property>
+                          <property name="textAlignment">
+                           <set>AlignCenter</set>
+                          </property>
+                          <property name="foreground">
+                           <brush brushstyle="NoBrush">
+                            <color alpha="255">
+                             <red>138</red>
+                             <green>138</green>
+                             <blue>138</blue>
+                            </color>
+                           </brush>
+                          </property>
+                          <property name="flags">
+                           <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
                           </property>
                          </item>
                          <item row="5" column="5">
@@ -7850,12 +8022,12 @@ B1 - A1 ≥ 30 %
                          </item>
                          <item row="6" column="0">
                           <property name="text">
-                           <string>SwitchingBatteryTypes</string>
+                           <string>Generator turn off SOC(B1)</string>
                           </property>
                          </item>
                          <item row="6" column="2">
                           <property name="text">
-                           <string/>
+                           <string>%</string>
                           </property>
                           <property name="textAlignment">
                            <set>AlignCenter</set>
@@ -7864,6 +8036,38 @@ B1 - A1 ≥ 30 %
                          <item row="6" column="3">
                           <property name="text">
                            <string>Temperature alarm upper limit</string>
+                          </property>
+                          <property name="foreground">
+                           <brush brushstyle="NoBrush">
+                            <color alpha="255">
+                             <red>138</red>
+                             <green>138</green>
+                             <blue>138</blue>
+                            </color>
+                           </brush>
+                          </property>
+                          <property name="flags">
+                           <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+                          </property>
+                         </item>
+                         <item row="6" column="4">
+                          <property name="text">
+                           <string>0</string>
+                          </property>
+                          <property name="textAlignment">
+                           <set>AlignCenter</set>
+                          </property>
+                          <property name="foreground">
+                           <brush brushstyle="NoBrush">
+                            <color alpha="255">
+                             <red>138</red>
+                             <green>138</green>
+                             <blue>138</blue>
+                            </color>
+                           </brush>
+                          </property>
+                          <property name="flags">
+                           <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
                           </property>
                          </item>
                          <item row="6" column="5">
@@ -7876,12 +8080,12 @@ B1 - A1 ≥ 30 %
                          </item>
                          <item row="7" column="0">
                           <property name="text">
-                           <string/>
+                           <string>Generator turn on SOC(A1)</string>
                           </property>
                          </item>
                          <item row="7" column="2">
                           <property name="text">
-                           <string/>
+                           <string>%</string>
                           </property>
                           <property name="textAlignment">
                            <set>AlignCenter</set>
@@ -7889,12 +8093,12 @@ B1 - A1 ≥ 30 %
                          </item>
                          <item row="7" column="3">
                           <property name="text">
-                           <string/>
+                           <string>Uniform charging and flushing current</string>
                           </property>
                          </item>
                          <item row="7" column="5">
                           <property name="text">
-                           <string/>
+                           <string>A</string>
                           </property>
                           <property name="textAlignment">
                            <set>AlignCenter</set>
@@ -7915,12 +8119,12 @@ B1 - A1 ≥ 30 %
                          </item>
                          <item row="8" column="3">
                           <property name="text">
-                           <string/>
+                           <string>Float turn uniform charging current</string>
                           </property>
                          </item>
                          <item row="8" column="5">
                           <property name="text">
-                           <string/>
+                           <string>A</string>
                           </property>
                           <property name="textAlignment">
                            <set>AlignCenter</set>
@@ -8225,7 +8429,7 @@ B1 - A1 ≥ 30 %
                            <x>0</x>
                            <y>0</y>
                            <width>383</width>
-                           <height>359</height>
+                           <height>341</height>
                           </rect>
                          </property>
                          <property name="cursor">
