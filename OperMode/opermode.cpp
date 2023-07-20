@@ -218,6 +218,22 @@ void OperMode::InitializeChart_2(QTableWidget *myWidget)
 //初始化表格点击控件
 void OperMode::Init_Tab_button()
 {
+    setStyleSheet(
+        /**鼠标停留在按钮上的样式**/
+        "QPushButton::hover{"
+            "color: #FFFFFF;"
+            "background-color: #718093;"
+            "border-color: #2f3640;"
+        "}"
+
+        /**鼠标按压下去的样式**/
+        "QPushButton::pressed,QPushButton::checked{"
+            "color: #FFFFFF;"
+            "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #273c75, stop:1 #487eb0);"
+        "}"
+         );
+
+
     Init_SysTab_button(ui->Paramrter_Widget);
     Init_BatTab_button(ui->BatPri_Widget);
     Init_OptTab_button(ui->OptMod_Widget);

@@ -7341,7 +7341,7 @@ background-color: rgb(255, 0, 0);</string>
                  <item row="0" column="0">
                   <widget class="QTabWidget" name="BatterSet_tabWidget">
                    <property name="currentIndex">
-                    <number>0</number>
+                    <number>1</number>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -8022,7 +8022,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                          </item>
                          <item row="6" column="0">
                           <property name="text">
-                           <string>Generator turn off SOC(B1)</string>
+                           <string>Generator turn off voltage</string>
                           </property>
                          </item>
                          <item row="6" column="2">
@@ -8080,7 +8080,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                          </item>
                          <item row="7" column="0">
                           <property name="text">
-                           <string>Generator turn on SOC(A1)</string>
+                           <string>Generator turn on voltage</string>
                           </property>
                          </item>
                          <item row="7" column="2">

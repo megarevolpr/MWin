@@ -31,6 +31,7 @@ MyWidget::MyWidget(QWidget *parent) :
     ui->UI_stackedWidget->setCurrentWidget(ui->UI_page);
     ui->stackedWidget->setCurrentWidget(ui->Host_page); //执行程序后，自动进入到主页
 
+
     LoadLanguageInit(); //初始化语言
     MemoryAllocation(); //初始化内存空间
     UIPageInit();       //初始化界面
@@ -3254,24 +3255,24 @@ void MyWidget::Battery_Setup_Lead_Tab(QTableWidget *myTable)
     Discharge_limiting_value->add_Specification();
     //发电机关闭SOC
     Generator_turn_off_SOC_B1 = new Specification(this,Generator_turn_off_SOC_B1_explain, myTable, 6, 1, \
-                                        "0", tr("Generator_turn_off_SOC_B1"), \
-                                        tr("When the specified SCO value is reached, the diesel generator shuts down."));
+                                        "0", tr("Generator turn off voltage"), \
+                                        tr("Generator shutdown voltage."));
     Generator_turn_off_SOC_B1->add_Specification();
     //发电机开启SOC
     Generator_turn_on_SOC_A1 = new Specification(this,Generator_turn_on_SOC_A1_explain, myTable, 7, 1, \
-                                        "0", tr("Generator_turn_on_SOC_A1"), \
-                                        tr("When the specified SOC value is reached, the diesel generator starts."));
+                                        "0", tr("Generator turn on voltage"), \
+                                        tr("Generator opening voltage."));
     Generator_turn_on_SOC_A1->add_Specification();
     //离网EOD
     Grid_off_EOD = new Specification(this,Grid_off_EOD_explain, myTable, 0, 4, \
                                         "0", tr("Grid_off_EOD"), \
-                                        tr("Off-grid discharge terminal voltage, the voltage when the battery power is used up in the off-grid state, and the discharge stops when the battery voltage reaches this value."));
-    Grid_off_EOD->add_Specification();//离网放电终点电压，离网状态下电池的电量用完时的电压，电池电压达到该值时停止放电
+                                        tr("Off-grid discharge cut-off voltage."));
+    Grid_off_EOD->add_Specification();//
     //并网EOD
     Grid_on_EOD = new Specification(this,Grid_on_EOD_explain, myTable, 1, 4, \
                                         "0", tr("Grid_on_EOD"), \
-                                        tr("The terminal voltage of grid-connected discharge, the voltage when the battery power is used up in the grid-connected state, and the discharge stops when the battery voltage reaches this value."));
-    Grid_on_EOD->add_Specification();//并网放电终点电压，并网状态下电池的电量用完时的电压，电池电压达到该值时停止放电
+                                        tr("Grid-connected discharge cut-off voltage."));
+    Grid_on_EOD->add_Specification();//
     /*/关机电压点
     Shutdown_voltage_point = new Specification(this,Shutdown_voltage_point_explain, myTable, 2, 4, \
                                         "0", tr("Shutdown_voltage_point"), \

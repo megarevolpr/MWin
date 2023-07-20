@@ -3146,6 +3146,12 @@ FDP action area:
         <property name="text">
          <string>Return</string>
         </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>false</bool>
+        </property>
        </widget>
       </item>
       <item>
@@ -3163,11 +3169,19 @@ FDP action area:
          </size>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(31, 133, 227);</string>
+         <string notr="true">background-color: rgb(31, 133, 227);
+QToolButton{&quot;border:1px solid rgba(255,255,255,0);&quot;}
+QToolButton::hover{&quot;border:1px solid rgb(123,123,123);&quot;}</string>
         </property>
         <property name="text">
          <string>Battery
 AreaDivision</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
@@ -3191,6 +3205,12 @@ AreaDivision</string>
          <string>System
 for self-use</string>
         </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
        </widget>
       </item>
       <item>
@@ -3212,6 +3232,15 @@ for self-use</string>
         <property name="text">
          <string>Batter
 priority</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="autoRepeat">
+         <bool>false</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
@@ -3239,6 +3268,12 @@ priority</string>
         </property>
         <property name="text">
          <string>Optimal</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
