@@ -50,6 +50,7 @@
 #include "Menu.h"
 #include "Specification/Specification.h"
 #include "OperMode.h"
+#include "upgradetools.h"
 
 namespace Ui {
 class MyWidget;
@@ -65,6 +66,7 @@ public:
 
     Menu *m_menu;
     OperMode *mode_expelain;
+    UpgradeTools *UpgradeInterface;
     QPushButton *AdvancedSetup_btn;//高级设置入口
     /************************实时数据******************************/
     //变流器
@@ -211,7 +213,6 @@ public:
     QPushButton *Soft_Start_Sta_Boost_explain;
     QPushButton *Soft_Start_Sta_Buck_explain;
     QPushButton *Converter_Status_V_explain;
-    QPushButton *ModeLock_explain;
 
     Specification *DC_input_Bre;
     Specification *DC_Con;
@@ -242,7 +243,6 @@ public:
     Specification *Soft_Start_Sta_Boost;
     Specification *Soft_Start_Sta_Buck;
     Specification *Converter_Status_V;
-    Specification *ModeLock;
 
     /***************************DC/AC参数****************************/
     QPushButton *Grid_connected_mode_explain;//并网方式说明
@@ -483,6 +483,13 @@ public:
     QPushButton *Grade6_explain;
     QPushButton *Grade7_explain;
     QPushButton *Grade8_explain;
+    QPushButton *Grade9_explain;
+    QPushButton *Grade10_explain;
+    QPushButton *Grade11_explain;
+    QPushButton *Grade12_explain;
+    QPushButton *Grade13_explain;
+    QPushButton *Grade14_explain;
+    QPushButton *Grade15_explain;
     QPushButton *StartTime_explain;
     QPushButton *StartTime2_explain;
     QPushButton *StartTime3_explain;
@@ -491,6 +498,13 @@ public:
     QPushButton *StartTime6_explain;
     QPushButton *StartTime7_explain;
     QPushButton *StartTime8_explain;
+    QPushButton *StartTime9_explain;
+    QPushButton *StartTime10_explain;
+    QPushButton *StartTime11_explain;
+    QPushButton *StartTime12_explain;
+    QPushButton *StartTime13_explain;
+    QPushButton *StartTime14_explain;
+    QPushButton *StartTime15_explain;
     QPushButton *EndTime_explain;
     QPushButton *EndTime2_explain;
     QPushButton *EndTime3_explain;
@@ -499,6 +513,13 @@ public:
     QPushButton *EndTime6_explain;
     QPushButton *EndTime7_explain;
     QPushButton *EndTime8_explain;
+    QPushButton *EndTime9_explain;
+    QPushButton *EndTime10_explain;
+    QPushButton *EndTime11_explain;
+    QPushButton *EndTime12_explain;
+    QPushButton *EndTime13_explain;
+    QPushButton *EndTime14_explain;
+    QPushButton *EndTime15_explain;
     QPushButton *Describe_explain;
     QPushButton *Describe2_explain;
     QPushButton *Describe3_explain;
@@ -507,6 +528,14 @@ public:
     QPushButton *Describe6_explain;
     QPushButton *Describe7_explain;
     QPushButton *Describe8_explain;
+    QPushButton *Describe9_explain;
+    QPushButton *Describe10_explain;
+    QPushButton *Describe11_explain;
+    QPushButton *Describe12_explain;
+    QPushButton *Describe13_explain;
+    QPushButton *Describe14_explain;
+    QPushButton *Describe15_explain;
+
     Specification *Grade;
     Specification *Grade2;
     Specification *Grade3;
@@ -515,6 +544,13 @@ public:
     Specification *Grade6;
     Specification *Grade7;
     Specification *Grade8;
+    Specification *Grade9;
+    Specification *Grade10;
+    Specification *Grade11;
+    Specification *Grade12;
+    Specification *Grade13;
+    Specification *Grade14;
+    Specification *Grade15;
     Specification *StartTime;
     Specification *StartTime2;
     Specification *StartTime3;
@@ -523,6 +559,13 @@ public:
     Specification *StartTime6;
     Specification *StartTime7;
     Specification *StartTime8;
+    Specification *StartTime9;
+    Specification *StartTime10;
+    Specification *StartTime11;
+    Specification *StartTime12;
+    Specification *StartTime13;
+    Specification *StartTime14;
+    Specification *StartTime15;
     Specification *EndTime;
     Specification *EndTime2;
     Specification *EndTime3;
@@ -531,6 +574,13 @@ public:
     Specification *EndTime6;
     Specification *EndTime7;
     Specification *EndTime8;
+    Specification *EndTime9;
+    Specification *EndTime10;
+    Specification *EndTime11;
+    Specification *EndTime12;
+    Specification *EndTime13;
+    Specification *EndTime14;
+    Specification *EndTime15;
     Specification *Describe;
     Specification *Describe2;
     Specification *Describe3;
@@ -539,6 +589,13 @@ public:
     Specification *Describe6;
     Specification *Describe7;
     Specification *Describe8;
+    Specification *Describe9;
+    Specification *Describe10;
+    Specification *Describe11;
+    Specification *Describe12;
+    Specification *Describe13;
+    Specification *Describe14;
+    Specification *Describe15;
 
     /**********************操作日志*************************/
     QPushButton *ModificationTime_explain;
@@ -633,7 +690,6 @@ public:
     Specification *UserPassPort;
     Specification *RootPassport;
     Specification *Language;
-    Specification *System_upgrade;
     Specification *Sounds;
 
     /***************************系统参数**************************/
@@ -648,7 +704,6 @@ public:
     QPushButton *Insulation_detection_enable_explain;  //绝缘监测使能说明
     QPushButton *PrimaryFreq_enable_explain;  //一次调频使能说明
     QPushButton *Inertia_enable_explain;  //转动惯量使能说明
-    QPushButton *Load_priority_explain;  //负载优先说明
     QPushButton *Machine_type_explain;  //机器型号说明
     QPushButton *Machine_capacity_explain;  //机器容量说明
     QPushButton *Output_Fre_grade_explain;  //输出频率等级说明
@@ -722,7 +777,7 @@ public:
     QPushButton *DI_6_Enable_explain;   //输入干接点6说明
     QPushButton *DI_6_NC_O_explain;
     QPushButton *DI_6_Action_explain;
-    QPushButton *DO_1_Enable_explain;   //输出干接点1说明
+    /*QPushButton *DO_1_Enable_explain;   //输出干接点1说明
     QPushButton *DO_1_NC_O_explain;
     QPushButton *DO_1_Action_explain;
     QPushButton *DO_2_Enable_explain;   //输出干接点2说明
@@ -730,7 +785,7 @@ public:
     QPushButton *DO_2_Action_explain;
     QPushButton *DO_3_Enable_explain;   //输出干接点3说明
     QPushButton *DO_3_NC_O_explain;
-    QPushButton *DO_3_Action_explain;
+    QPushButton *DO_3_Action_explain;*/
 
 
 
@@ -752,7 +807,7 @@ public:
     Specification *DI_6_Enable;
     Specification *DI_6_NC_O;
     Specification *DI_6_Action;
-    Specification *DO_1_Enable;
+    /*Specification *DO_1_Enable;
     Specification *DO_1_NC_O;
     Specification *DO_1_Action;
     Specification *DO_2_Enable;
@@ -760,7 +815,7 @@ public:
     Specification *DO_2_Action;
     Specification *DO_3_Enable;
     Specification *DO_3_NC_O;
-    Specification *DO_3_Action;
+    Specification *DO_3_Action;*/
 
     /***************************DCAC调试**************************/
     QPushButton *Debug_variable_1_explain;  //调试变量1
@@ -975,8 +1030,7 @@ private slots:
     void AdvancedSetup_btn_clicked();//跳转到高级设置
     void ChangeLanguage_btn_clicked();//切换语言
     void Operational_mode_clicked();//操作模式新界面
-    void Operational_btn_connect();//操作模式的表格控件重新关联
-
+    void UpgradeInterface_clicked();//升级界面
 
     void on_RTD_DC_clicked();
 

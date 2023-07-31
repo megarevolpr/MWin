@@ -74,6 +74,7 @@ void MyWidget::MemoryAllocation()
     IPShow = true;
     m_menu = new Menu(this);
     mode_expelain = new OperMode(this);
+    UpgradeInterface = new UpgradeTools(this);
     /************************实时数据******************************/
     //变流器
     MPS_vol_AB_explain      = new QPushButton;
@@ -217,7 +218,6 @@ void MyWidget::MemoryAllocation()
     Soft_Start_Sta_Boost_explain= new QPushButton;
     Soft_Start_Sta_Buck_explain = new QPushButton;
     Converter_Status_V_explain  = new QPushButton;
-    ModeLock_explain            = new QPushButton;
 
     /**********************电池数据***************************/
     pButton_BatteryData  = new QButtonGroup();
@@ -257,8 +257,6 @@ void MyWidget::MemoryAllocation()
     /***************************DC/AC参数**********************************/
     Work_parttern_explain = new QPushButton;                     //DCDC工作模式说明
     Boost_or_Buck_explain = new QPushButton;                     //升/降压说明
-    Bat_Charging_or_discharging_Model_explain = new QPushButton; //电池充放电模式说明
-    DCDC_Capacity_explain = new QPushButton;                     //DCDC容量说明
     Battery_position_explain = new QPushButton;                  //电池位置说明
     Voltage_level_explain = new QPushButton;                     //电压等级说明
     Current_value_explain = new QPushButton;                     //电流值说明
@@ -419,6 +417,13 @@ void MyWidget::MemoryAllocation()
     Grade6_explain      = new QPushButton;
     Grade7_explain      = new QPushButton;
     Grade8_explain      = new QPushButton;
+    Grade9_explain      = new QPushButton;
+    Grade10_explain     = new QPushButton;
+    Grade11_explain     = new QPushButton;
+    Grade12_explain     = new QPushButton;
+    Grade13_explain     = new QPushButton;
+    Grade14_explain     = new QPushButton;
+    Grade15_explain     = new QPushButton;
     StartTime_explain   = new QPushButton;
     StartTime2_explain  = new QPushButton;
     StartTime3_explain  = new QPushButton;
@@ -427,6 +432,13 @@ void MyWidget::MemoryAllocation()
     StartTime6_explain  = new QPushButton;
     StartTime7_explain  = new QPushButton;
     StartTime8_explain  = new QPushButton;
+    StartTime9_explain  = new QPushButton;
+    StartTime10_explain = new QPushButton;
+    StartTime11_explain = new QPushButton;
+    StartTime12_explain = new QPushButton;
+    StartTime13_explain = new QPushButton;
+    StartTime14_explain = new QPushButton;
+    StartTime15_explain = new QPushButton;
     EndTime_explain     = new QPushButton;
     EndTime2_explain    = new QPushButton;
     EndTime3_explain    = new QPushButton;
@@ -435,6 +447,13 @@ void MyWidget::MemoryAllocation()
     EndTime6_explain    = new QPushButton;
     EndTime7_explain    = new QPushButton;
     EndTime8_explain    = new QPushButton;
+    EndTime9_explain    = new QPushButton;
+    EndTime10_explain   = new QPushButton;
+    EndTime11_explain   = new QPushButton;
+    EndTime12_explain   = new QPushButton;
+    EndTime13_explain   = new QPushButton;
+    EndTime14_explain   = new QPushButton;
+    EndTime15_explain   = new QPushButton;
     Describe_explain    = new QPushButton;
     Describe2_explain   = new QPushButton;
     Describe3_explain   = new QPushButton;
@@ -443,6 +462,13 @@ void MyWidget::MemoryAllocation()
     Describe6_explain   = new QPushButton;
     Describe7_explain   = new QPushButton;
     Describe8_explain   = new QPushButton;
+    Describe9_explain   = new QPushButton;
+    Describe10_explain  = new QPushButton;
+    Describe11_explain  = new QPushButton;
+    Describe12_explain  = new QPushButton;
+    Describe13_explain  = new QPushButton;
+    Describe14_explain  = new QPushButton;
+    Describe15_explain  = new QPushButton;
 
     /***************************操作日志**********************************/
     ModificationTime_explain    = new QPushButton;
@@ -505,7 +531,6 @@ void MyWidget::MemoryAllocation()
     Insulation_detection_enable_explain = new QPushButton;  //绝缘监测使能说明
     PrimaryFreq_enable_explain = new QPushButton;  //一次调频使能说明
     Inertia_enable_explain = new QPushButton;  //转动惯量使能说明
-    Load_priority_explain = new QPushButton;  //负载优先说明
     Machine_type_explain = new QPushButton;  //机器型号说明
     Machine_capacity_explain = new QPushButton;  //机器容量说明
     Output_Fre_grade_explain = new QPushButton;  //输出频率等级说明
@@ -558,7 +583,7 @@ void MyWidget::MemoryAllocation()
     DI_6_Action_explain = new QPushButton;
 
     //输出干接点1说明
-    DO_1_Enable_explain = new QPushButton;
+    /*DO_1_Enable_explain = new QPushButton;
     DO_1_NC_O_explain   = new QPushButton;
     DO_1_Action_explain = new QPushButton;
 
@@ -570,7 +595,7 @@ void MyWidget::MemoryAllocation()
     //输出干接点3说明
     DO_3_Enable_explain = new QPushButton;
     DO_3_NC_O_explain   = new QPushButton;
-    DO_3_Action_explain = new QPushButton;
+    DO_3_Action_explain = new QPushButton;*/
 
     /***************************DCAC调试**************************/
     Debug_variable_1_explain        = new QPushButton;  //调试变量1
@@ -669,7 +694,6 @@ void MyWidget::MPS_state_delete()
     delete Soft_Start_Sta_Boost;
     delete Soft_Start_Sta_Buck;
     delete Converter_Status_V;
-    delete ModeLock;
 }
 /************数据报表 释放 说明************/
 void MyWidget::Data_Report_delete()
@@ -778,8 +802,6 @@ void MyWidget::DCDC_Paramter_tab_delete()
 {
     delete Work_parttern;
     delete Boost_or_Buck;
-    delete Bat_Charging_or_discharging_Model;
-    delete DCDC_Capacity;
     delete Battery_position;
     delete Voltage_level;
     delete Current_value;
@@ -839,6 +861,7 @@ void MyWidget::SystemMessages_delete()
 /************功能设置 释放 说明************/
 void MyWidget::FunctionSet_delete()
 {
+    delete UpgradeInterface;
     delete Battery_type;
     delete BMS_Comm_type;
     delete Power_control_type;
@@ -864,7 +887,6 @@ void MyWidget::FunctionSet_delete()
     delete UserPassPort;
     delete RootPassport;
     delete Language;
-    delete System_upgrade;
     delete Sounds;
 }
 /************系统参数 释放 说明************/
@@ -881,7 +903,6 @@ void MyWidget::SystemParameter_delete()
     delete Insulation_detection_enable;
     delete PrimaryFreq_enable;
     delete Inertia_enable;
-    delete Load_priority;
     delete Machine_type;
     delete Machine_capacity;
     delete Output_Fre_grade;
@@ -902,7 +923,7 @@ void MyWidget::SystemParameter_delete()
     delete Module_min;
     delete Insulation_detection_enable_DCDC;
 }
-/************系统参数 释放 说明************/
+/************外设 释放 说明************/
 void MyWidget::ExternalDevice_delete()
 {
     delete DI_1_Enable;
@@ -923,7 +944,7 @@ void MyWidget::ExternalDevice_delete()
     delete DI_6_Enable;
     delete DI_6_NC_O;
     delete DI_6_Action;
-    delete DO_1_Enable;
+    /*delete DO_1_Enable;
     delete DO_1_NC_O;
     delete DO_1_Action;
     delete DO_2_Enable;
@@ -931,7 +952,7 @@ void MyWidget::ExternalDevice_delete()
     delete DO_2_Action;
     delete DO_3_Enable;
     delete DO_3_NC_O;
-    delete DO_3_Action;
+    delete DO_3_Action;*/
 }
 /************DCAC调试 释放 说明************/
 void MyWidget::DCAC_Debugg_delete()
@@ -1072,7 +1093,7 @@ void MyWidget::ChangeLanguage_btn_clicked()
         ui->ChangeLanguage_btn->setText(tr("Change Language"));
         qApp->installTranslator(translator);
         ui->retranslateUi(this);
-        ui->retranslateUi(mode_expelain);
+
     }
     else if(LanguageType == ENGLISH)
     {
@@ -1081,11 +1102,12 @@ void MyWidget::ChangeLanguage_btn_clicked()
         ui->ChangeLanguage_btn->setText(tr("切换语言"));
         qApp->installTranslator(translator);
         ui->retranslateUi(this);
-        ui->retranslateUi(mode_expelain);
+
     }
 
     Delete_explain();//释放空间
     mode_expelain = new OperMode(this);
+    UpgradeInterface = new UpgradeTools(this);
     UIPageInit();       //初始化界面
 }
 //操作模式新界面
@@ -1102,10 +1124,17 @@ void MyWidget::Operational_mode_clicked()
 //        this->show();
     }
 }
-//操作模式的表格控件重新关联
-void MyWidget::Operational_btn_connect()
+//升级界面
+void MyWidget::UpgradeInterface_clicked()
 {
-
+    if(UpgradeInterface->isHidden())
+    {
+        UpgradeInterface->show();
+    }
+    else
+    {
+        UpgradeInterface->hide();
+    }
 }
 //函数关联
 void MyWidget::LinkRelationship()
@@ -1113,7 +1142,8 @@ void MyWidget::LinkRelationship()
     connect(timer, SIGNAL(timeout()), this, SLOT(onTimerOut()));    //关联定时器，以便实时更新时间
 
     connect(m_menu, SIGNAL(Sent(int)), this, SLOT(My_menuAction(int))); //菜单
-    connect(Work_mode_explain, SIGNAL(clicked(bool)), this, SLOT(Operational_mode_clicked())); //
+    connect(Work_mode_explain, SIGNAL(clicked(bool)), this, SLOT(Operational_mode_clicked())); //操作模式界面关联
+    connect(System_upgrade_explain, SIGNAL(clicked(bool)), this, SLOT(UpgradeInterface_clicked())); //升级界面关联
 
     connect(AdvancedSetup_btn,SIGNAL(clicked(bool)), this, SLOT(AdvancedSetup_btn_clicked()));//高级设置
 
@@ -1129,6 +1159,7 @@ void MyWidget::LinkRelationship()
 
     connect(ui->ChangeLanguage_btn, SIGNAL(clicked(bool)), this, SLOT(ChangeLanguage_btn_clicked()));//切换语言点击槽
     connect(ui->ChangeLanguage_btn_1, SIGNAL(clicked(bool)), this, SLOT(ChangeLanguage_btn_clicked()));//切换语言点击槽_高级设置
+    connect(ui->search_le,SIGNAL(editingFinished()), this, SLOT(on_search_btn_clicked()));//搜索栏关联搜索槽，使LineEdit失去焦点或回车键回车也生效
 
 }
 //实时数据
@@ -1340,13 +1371,13 @@ void MyWidget::ModuleState_Tab()
     QStringList State_Tablist1;
     State_Tablist1  << tr("DC input breaker") << tr("DC contactor") << tr("Maintenance Bypass breaker")
                     << tr("Output breaker") << tr("Output contactor")<< tr("Grid breaker")
-                    << tr("DO1")<< tr("DO2")<< tr("DO3");
+                    << tr("Diesel generator output signal")<< tr("Reserve")<< tr("Reserve");
     QStringList State_Tablist2;
     State_Tablist2  << tr("DCAC Converter available") << tr("DC Soft start") << tr("Converter status")<< tr("Reactive power Regulation")
                     << tr("LVRT")<< tr("DI1")<< tr("DI2")<< tr("DI3")<< tr("DI4")<< tr("DI5")<< tr("DI6");
     QStringList State_Tablist3;
     State_Tablist3  << tr("Contactor status boost")<< tr("Contactor status buck")<< tr("Run mode")<< tr("DCDC Converter available")
-                    << tr("Soft start status boost")<< tr("Soft start status buck")<< tr("Converter status")<< tr("ModeLock");
+                    << tr("Soft start status boost")<< tr("Soft start status buck")<< tr("Converter status");
 
     ui->State_tableWidget->setColumnCount(6);
     ui->State_tableWidget->setRowCount(12);
@@ -1409,11 +1440,11 @@ void MyWidget::DCDCParam_tab()
     ui->DCDC_tableWidget->setColumnWidth(4,120);
     ui->DCDC_tableWidget->setColumnWidth(5,100);
     QStringList Display_Par1;
-        Display_Par1 << tr("Work parttern")<< tr("Boost or Buck") << tr("Bat Charging or discharging Model") << tr("DCDC Capacity");
+        Display_Par1 << tr("Work parttern")<< tr("Boost or Buck");
     QStringList Display_Par2;
     Display_Par2  << tr("Battery position")<<  tr("Voltage level") << tr("Current value");
     QStringList Display_Par13;
-    Display_Par13 << tr("-") << tr("-") << tr("-")<< tr("kW");
+    Display_Par13 << tr("-") << tr("-");
     QStringList Display_Par14;
     Display_Par14  << tr("-") << tr("V") << tr("A");
     for(int j = 0; j < 4; j++)
@@ -1471,6 +1502,11 @@ void MyWidget::BatterySet_Lead_tab()
     ui->Lead_Tab->setColumnWidth(3,150);
     ui->Lead_Tab->setColumnWidth(4,150);
     ui->Lead_Tab->setColumnWidth(5,50);
+
+    for(int i=0;i<9;i++)
+    {
+        ui->Lead_Tab->setRowHeight(i,40);
+    }
     ui->Lead_Tab->setEditTriggers(QAbstractItemView::NoEditTriggers);//设置不可编辑
     ui->plainTextEdit_2->setReadOnly(true);//只读
     Battery_Setup_Lead_Tab(ui->Lead_Tab);
@@ -1562,7 +1598,7 @@ void MyWidget::History()
     table_h_headers.clear();
     table_h_headers << tr("Level") << tr("Start Time") << tr("End Time") << tr("Description");
     ui->Historicalfailure_tableWidget->setColumnCount(table_h_headers.size());
-    ui->Historicalfailure_tableWidget->setRowCount(8);
+    ui->Historicalfailure_tableWidget->setRowCount(16);
     ui->Historicalfailure_tableWidget->setHorizontalHeaderLabels(table_h_headers);
     ui->Historicalfailure_tableWidget->horizontalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
     ui->Historicalfailure_tableWidget->setFrameShape(QFrame::NoFrame);//设置无边框
@@ -1582,30 +1618,30 @@ void MyWidget::History()
     Grade6_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
     Grade7_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
     Grade8_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-    StartTime_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-    StartTime2_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-    StartTime3_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-    StartTime4_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-    StartTime5_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-    StartTime6_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-    StartTime7_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-    StartTime8_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-    EndTime_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-    EndTime2_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-    EndTime3_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-    EndTime4_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-    EndTime5_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-    EndTime6_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-    EndTime7_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-    EndTime8_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-    Describe_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-    Describe2_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-    Describe3_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-    Describe4_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-    Describe5_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-    Describe6_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-    Describe7_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-    Describe8_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
+//    StartTime_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
+//    StartTime2_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
+//    StartTime3_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
+//    StartTime4_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
+//    StartTime5_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
+//    StartTime6_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
+//    StartTime7_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
+//    StartTime8_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
+//    EndTime_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
+//    EndTime2_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
+//    EndTime3_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
+//    EndTime4_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
+//    EndTime5_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
+//    EndTime6_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
+//    EndTime7_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
+//    EndTime8_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
+//    Describe_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
+//    Describe2_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
+//    Describe3_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
+//    Describe4_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
+//    Describe5_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
+//    Describe6_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
+//    Describe7_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
+//    Describe8_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
 
     HistoryRecord(ui->Historicalfailure_tableWidget);   //历史记录页说明
 }
@@ -2165,19 +2201,19 @@ void MyWidget::BatteryData_clicked(int nid)
         break;
     case 10:
         QMessageBox::question(this, tr("Allow charge power")\
-                              ,tr("This is the rechargeable power uploaded from the BMS through the CAN/485 communication protocol. The charging power of the battery cannot exceed this limit value."), tr("OK"));
+                              ,tr("This is the allowable charging power obtained by PCS from BMS through CAN/485/TCP communication protocol, or obtained by multiplying the current charging limit value uploaded from BMS through CAN/485/TCP communication protocol with the current voltage value. The battery's charging power should not exceed this limitation value."), tr("OK"));
         break;
     case 11:
         QMessageBox::question(this, tr("Allow discharge power")\
-                              ,tr("This is the discharge power uploaded from the BMS using the CAN/485 communication protocol. The discharge power of the battery cannot exceed this limit."), tr("OK"));
+                              ,tr("This is the allowable discharge power obtained by PCS from BMS through CAN/485/TCP communication protocol, or obtained by multiplying the current discharge limit value uploaded from BMS through CAN/485/TCP communication protocol with the current voltage value. The battery's discharge power should not exceed this limitation value."), tr("OK"));
         break;
     case 12:
         QMessageBox::question(this,tr ("Allow charge energy")\
-                              ,tr("This is the allowable charge amount uploaded from the BMS via the CAN/485/TCP communication protocol, the capacity of the current battery pack allowed to charge (Note: only some BMS will provide this value)."), tr("OK"));
+                              ,tr("This is the allowable charging capacity uploaded from BMS through CAN/485/TCP communication protocol. It represents the current battery pack's capacity for charging. This value is not displayed when it does not exist (Note: Only certain BMSs provide this value)."), tr("OK"));
         break;
     case 13:
         QMessageBox::question(this,tr ("Allow discharge energy")\
-                              ,tr("This is the allowable discharge from the BMS via the CAN/485/TCP communication protocol, the current capacity of the battery pack allowed to discharge (Note: only some BMS will provide this value)."), tr("OK"));
+                              ,tr("This is the allowable discharge capacity uploaded from BMS through CAN/485/TCP communication protocol. It represents the current battery pack's capacity for discharging. This value is not displayed when it does not exist (Note: Only certain BMSs provide this value)."), tr("OK"));
         break;
     case 14:
         QMessageBox::question(this, tr("Alarm level")\
@@ -2374,6 +2410,7 @@ void MyWidget::on_Alarm_btn_clicker()//显示告警信息
 {
     ui->stackedWidget->setCurrentWidget(ui->Status_page);
     ui->Run_tabWidget->setCurrentWidget(ui->RTAlarm_page);
+    QMessageBox::question(this,tr("Alarm icon"), tr("Alarm icon: It is not displayed when there is no alarm. When there is a minor alarm, a yellow icon is displayed. When there is a fault alarm, a red icon is displayed."), "OK");
 }
 //MPS数据 绘制button
 void MyWidget::MPS_Data(QTableWidget *myTable)
@@ -2926,7 +2963,7 @@ void MyWidget::MPSState(QTableWidget *myTable)
     M_Bypass_Bre->add_Specification();
     Output_Bre = new Specification(this,Output_Bre_explain, myTable, line++, column, \
                                             tr("Close"), tr("Output breaker"), \
-                                            tr("The output circuit breaker has three states: open, closed, trip; If the output circuit breaker overcurrent, the output circuit breaker will trip."));
+                                            tr("The output circuit breaker has three states: open, closed, and tripped. It can only be manually opened and closed. If there is an overcurrent in the output circuit breaker, it will trip."));
     Output_Bre->add_Specification();
     Output_Con = new Specification(this,Output_Con_explain, myTable, line++, column, \
                                             tr("Close"), tr("Output contactor"), \
@@ -2937,16 +2974,16 @@ void MyWidget::MPSState(QTableWidget *myTable)
                                             tr("The power grid circuit breaker has three states: Break, Close, Trip; The power grid circuit breaker can only be manually disconnected. If the power grid circuit breaker overflows, the power grid circuit breaker may trip."));
     Grid_Bre->add_Specification();
     DO1 = new Specification(this,DO1_explain, myTable, line++, column, \
-                                            tr("Disable"), tr("DO1"), \
-                                            tr("This is the status of the output dry contact 1, which can be enabled or disabled."));
+                                            tr("Disable"), tr("Diesel generator output signal"), \
+                                            tr("This is the status of the current chai signal, output dry contact 1, there are Enable and Disable two states, here is the most real physical hardware status."));
     DO1->add_Specification();
     DO2 = new Specification(this,DO2_explain, myTable,line++, column, \
-                                            tr("Disable"), tr("DO2"), \
-                                            tr("This is the status of the output dry contact 2, which can be enabled or disabled."));
+                                            tr("Disable"), tr("Reserve"), \
+                                            tr("This bit is reserved and has no effect. Dry contact 1 is output. The status of dry contact 2 is Enable(Enable) or Disable(Disable)."));
     DO2->add_Specification();
     DO3 = new Specification(this,DO3_explain, myTable, line++, column, \
-                                            tr("Disable"), tr("DO3"), \
-                                            tr("This is the status of the output dry contact 3, which can be enabled or disabled."));
+                                            tr("Disable"), tr("Reserve"), \
+                                            tr("This bit is reserved and has no effect. Dry contact 2 is output. The status of dry contact 2 is Enable(Enable) or Disable(Disable)."));
     DO3->add_Specification();
 
     line = 0;
@@ -2973,27 +3010,27 @@ void MyWidget::MPSState(QTableWidget *myTable)
     LVRT->add_Specification();
     DI1 = new Specification(this,DI1_explain, myTable, line++, column, \
                                             tr("Disable"), tr("DI1"), \
-                                            tr("This is the status of the input dry contact 1. The status can be Enable or Disable."));
+                                            tr("This is the status of input contactor 1, which has two states: enabled and disabled. Whether to enable it or not depends on the actual requirements set in the advanced settings."));
     DI1->add_Specification();
     DI2 = new Specification(this,DI2_explain, myTable, line++, column, \
                                             tr("Disable"), tr("DI2"), \
-                                            tr("This is the status of the input dry contact 2. The status can be Enable or Disable."));
+                                            tr("This is the status of input contactor 2, which has two states: enabled and disabled. Whether to enable it or not depends on the actual requirements set in the advanced settings."));
     DI2->add_Specification();
     DI3 = new Specification(this,DI3_explain, myTable, line++, column, \
                                             tr("Disable"), tr("DI3"), \
-                                            tr("This is the status of the input dry contact 3. The status can be Enable or Disable."));
+                                            tr("This is the status of input contactor 3, which has two states: enabled and disabled. Whether to enable it or not depends on the actual requirements set in the advanced settings."));
     DI3->add_Specification();
     DI4 = new Specification(this,DI4_explain, myTable, line++, column, \
                                             tr("Disable"), tr("DI4"), \
-                                            tr("This is the status of the input dry contact 4. The status can be Enable or Disable."));
+                                            tr("This is the status of input contactor 4, which has two states: enabled and disabled. Whether to enable it or not depends on the actual requirements set in the advanced settings."));
     DI4->add_Specification();
     DI5 = new Specification(this,DI5_explain, myTable, line++, column, \
                                             tr("Disable"), tr("DI5"), \
-                                            tr("This is the status of the input dry contact 5. The status can be Enable or Disable."));
+                                            tr("This is the status of input contactor 5, which has two states: enabled and disabled. Whether to enable it or not depends on the actual requirements set in the advanced settings."));
     DI5->add_Specification();
     DI6 = new Specification(this,DI6_explain, myTable, line++, column, \
                                             tr("Disable"), tr("DI6"), \
-                                            tr("This is the status of the input dry contact 6. The status can be Enable or Disable."));
+                                            tr("This is the status of input contactor 6, which has two states: enabled and disabled. Whether to enable it or not depends on the actual requirements set in the advanced settings."));
     DI6->add_Specification();
     line = 0;
     column += 2;
@@ -3023,80 +3060,77 @@ void MyWidget::MPSState(QTableWidget *myTable)
     Soft_Start_Sta_Buck->add_Specification();
     Converter_Status_V = new Specification(this,Converter_Status_V_explain, myTable, line++, column, \
                                             tr("Turn off"), tr("Converter Status"), \
-                                            tr("This is the working mode state of the current 'DC' module, including six states: Turn off, Standby, Constant VOL, Constant CUR, optimal power point tracking and Fault Recovery."));
+                                            tr("This is the current operating mode status of the 'DC' module, which has five states: Turnoff, Standby, Constant VOL (Constant Voltage), Constant CUR (Constant Current), and Maximum Power Point Tracking (MPPT)."));
     Converter_Status_V->add_Specification();
-    ModeLock = new Specification(this,ModeLock_explain, myTable, line++, column, \
-                                            tr("OFF"), tr("ModeLock"), \
-                                            tr("This is the lock status of the current 'DC' module, with two states: ON and OFF."));
-    ModeLock->add_Specification();
+
 
 }
 /************************DCAC参数页说明*********************/
 void MyWidget::DC_AC_Parameter_tab(QTableWidget *myTable)
 {
-    Grid_connected_mode = new Specification(this,Grid_connected_mode_explain, myTable, 0, 1, \
+    int line = 0;int column = 1;//当前解释的button行和列
+    Grid_connected_mode = new Specification(this,Grid_connected_mode_explain, myTable, line++, column, \
                                             tr("automatic"), tr("Grid connected mode of PCS"), \
                                             tr("    When automatic and off-grid is selected, it will automatically identify and switch and off-grid. When the voltage on the grid side is normal, the contactor on the grid side will close, and the machine is in grid-connected mode (PQ).When the grid is out of power, the grid side contactor will be disconnected, and the machine is in off-grid mode (VF).\n   When the grid-connected mode is selected, and the grid side voltage is normal, the grid side contactor will close, and the machine is in grid-connected mode (PQ);If the power grid loses power, the machine will give an alarm warning of the power grid low voltage.\n    When off-grid mode is selected, the machine will disconnect the grid side contactor, and the machine is in off-grid mode (VF)."));
     Grid_connected_mode->add_Specification();
 
-    Constant_power = new Specification(this,Constant_power_explain, myTable, 1, 1, \
+    Constant_power = new Specification(this,Constant_power_explain, myTable, line++, column, \
                                        tr("0"), tr("Constant power(AC)"), \
                                        tr("    This is the power setting of the AC side. The charging and discharging power of the AC side can be controlled by modifying the value of this item.When advanced Settings control power mode select constant power mode (CP_N&P), positive value indicates discharge, negative value indicates charging.\n    For example, set -5, indicating that the AC side will charge the battery with a power of -5kW, due to the loss of the inverter, the power on the DC side will be less than the power on the AC side.\n    For example, set 5, indicating that the AC side will be 5kW power output, due to the loss of the inverter, the DC side of the power will be greater than the AC side of the power."));
     Constant_power->add_Specification();
 
-    Charging_and_discharging = new Specification(this,Charging_and_discharging_explain, myTable, 2, 1, \
+    Charging_and_discharging = new Specification(this,Charging_and_discharging_explain, myTable, line++, column, \
                                                  tr("Charge"), tr("Charging and discharging"), \
                                                  tr("Reserve."));
     Charging_and_discharging->add_Specification();
 
 
-
-
-
     Work_mode_explain->setText(tr("Manual"));
-    myTable->setCellWidget(3, 1, (QWidget *)Work_mode_explain);
+    myTable->setCellWidget(line++, column, (QWidget *)Work_mode_explain);
 
 
-    Output_power_factor = new Specification(this,Output_power_factor_explain, myTable, 4, 1, \
+    Output_power_factor = new Specification(this,Output_power_factor_explain, myTable, line++, column, \
                                             tr("1"), tr("Output power factor"), \
                                             tr("    The power factor Pf can be modified. The power factor is equal to the ratio of active power and reactive power. Positive value indicates reactive power lead and negative value indicates reactive power lag.\n    The power factor is a coefficient used to measure the output efficiency of electrical equipment, and the power factor is equal to the ratio of active power to reactive power. When the output reactive power factor is selected in the advanced settings 'system Settings' page, this output power factor can be modified to control the output of active power and reactive power."));
     Output_power_factor->add_Specification();
 
-    Output_reactive_power = new Specification(this,Output_reactive_power_explain, myTable, 5, 1, \
+    Output_reactive_power = new Specification(this,Output_reactive_power_explain, myTable, line++, column, \
                                               tr("1"), tr("Output reactive power"), \
                                               tr("    This parameter can change the reactive power Q, positive value indicates reactive power lead, negative value indicates reactive power lag."));
     Output_reactive_power->add_Specification();
 
-    Constant_current = new Specification(this,Constant_current_explain, myTable, 6, 1, \
+    Constant_current = new Specification(this,Constant_current_explain, myTable, line++, column, \
                                          tr("100"), tr("Constant current"), \
                                          tr("    When the control power mode of the advanced Settings page is set to constant current (CC), modify the constant current value, then the machine will charge and discharge the battery with the current value, positive value represents discharge, negative value represents charging."));
     Constant_current->add_Specification();
 
-    Constant_voltage = new Specification(this,Constant_voltage_explain, myTable, 7, 1, \
+    Constant_voltage = new Specification(this,Constant_voltage_explain, myTable, line++, column, \
                                          tr("600"), tr("Constant voltage"), \
                                          tr("    When the control power mode of the Advanced Settings 'Function Settings' page is set to constant voltage (CV), modify the constant voltage value, the machine will operate at a constant voltage value, and the machine will be used as a constant voltage source."));
     Constant_voltage->add_Specification();
 
-    Control_mode = new Specification(this,Control_mode_explain, myTable, 0, 4, \
+    line = 0;
+    column = 4;
+    Control_mode = new Specification(this,Control_mode_explain, myTable, line++, column, \
                                      tr("Local"), tr("Control mode"), \
-                                     tr("    This is the control mode;If the local mode is selected, the dispatcher (EMS, RS485) can only monitor data but cannot control PCS. If the remote mode is selected,PCS parameter setting is disabled and the dispatcher (EMS,  RS485) can read and write data."));
+                                     tr("    This is the control mode: the dispatching machine can only monitor data through Ethernet cable, RS485 tool, and CAN tool, but cannot control the PCS.\nThe remote mode: the dispatching machine can only read and write data through Ethernet cable, RS485 tool, and CAN tool."));
     Control_mode->add_Specification();
 
 
-    Machine_number = new Specification(this,Machine_number_explain, myTable, 1, 4, \
+    Machine_number = new Specification(this,Machine_number_explain, myTable, line++, column, \
                                        tr("Master_00"), tr("Machine number"), \
                                        tr("    This is the device number, and you can choose host(Master) or slave(Slave), where master is Master_00 and Slave_01 to Slave_08 are slaves."));
     Machine_number->add_Specification();
 
-    Parallel = new Specification(this,Parallel_explain, myTable, 2, 4, \
+    Parallel = new Specification(this,Parallel_explain, myTable, line++, column, \
                                  tr("Disable"), tr("Parallel"), \
-                                 tr("Reserve."));
+                                 tr("Parallel Operation: When multiple devices are operating off-grid in parallel, this setting needs to be enabled."));
     Parallel->add_Specification();
 
-    Unbalance_power_enable = new Specification(this,Unbalance_power_enable_explain, myTable, 3, 4, \
+    Unbalance_power_enable = new Specification(this,Unbalance_power_enable_explain, myTable, line++, column, \
                                                tr("Disable"), tr("Run time enable"), \
-                                               tr("    This is to Enable the run time function. Two options are available: Enable and Disable."));
-    Unbalance_power_enable->add_Specification();//这是运行时段使能，有两项可选：使能(Enable)，禁止(Disable)\n
+                                               tr("    Runtime Period Enable: This option is used to enable the operation based on the time period and functionality specified in the automatic runtime schedule on the runtime page."));
+    Unbalance_power_enable->add_Specification();//运行时段使能：用于在自动运行页中，按时段运行表的时段和功能运行时，此项使能。
 
 }
 /************************DCDC参数页说明*********************/
@@ -3114,7 +3148,7 @@ void MyWidget::DCDC_Paramter_tab(QTableWidget *myTable)
                                       tr("This is the operation mode of 'DC' module, which has three modes: Rest, Buck and Boost. It can be modified into Rest, Buck or Boost mode according to project requirements."));
     Boost_or_Buck->add_Specification();//这是'DC'模块的运行模式，有休息(Rest)、降压(Buck)、升压(Boost)三种模式，可根据项目需求，修改成休息(Rest)、降压(Buck)或者升压(Boost)模式\n
 
-    //电池充放电模式说明
+    /*//电池充放电模式说明
     Bat_Charging_or_discharging_Model = new Specification(this,Bat_Charging_or_discharging_Model_explain, myTable, 2, 1, \
                                                           tr("Discharging"), tr("Bat Charging or discharging Model"), \
                                                           tr("This is the battery Charging and Discharging mode. There are two charging and discharging modes."));
@@ -3124,7 +3158,7 @@ void MyWidget::DCDC_Paramter_tab(QTableWidget *myTable)
     DCDC_Capacity = new Specification(this,DCDC_Capacity_explain, myTable, 3, 1, \
                                       tr("50"), tr("DCDC Capacity"), \
                                       tr("This is the capacity of the 'DC' module."));
-    DCDC_Capacity->add_Specification();//这是'DC'模块的容量\n
+    DCDC_Capacity->add_Specification();//这是'DC'模块的容量\n*/
 
     //电池位置说明
     Battery_position = new Specification(this,Battery_position_explain, myTable, 0, 4, \
@@ -3135,14 +3169,14 @@ void MyWidget::DCDC_Paramter_tab(QTableWidget *myTable)
     //电压等级说明
     Voltage_level = new Specification(this,Voltage_level_explain, myTable, 1, 4, \
                                       tr("300"), tr("Voltage level"), \
-                                      tr("This is the voltage level of the 'DC' module."));
-    Voltage_level->add_Specification();//这是'DC'模块的电压等级\n
+                                      tr("Voltage level: Reference voltage in constant voltage mode."));
+    Voltage_level->add_Specification();//电压等级：恒压模式下的参考电压
 
     //电流值说明
     Current_value = new Specification(this,Current_value_explain, myTable, 2, 4, \
                                       tr("60"), tr("Current value"), \
-                                      tr("This is the current value of the 'DC' module."));
-    Current_value->add_Specification();//这是'DC'模块的电流值\n
+                                      tr("Current value: reference current in constant current mode."));
+    Current_value->add_Specification();//电流值：恒流模式下的参考电流
 }
 
 //电池设置页说明_锂电池
@@ -3321,11 +3355,11 @@ void MyWidget::AutoOperation(QTableWidget *myTable)
     QString temp5 = tr("Power");
     QString temp6 = tr("9:00");
     QString temp7 = tr("10:00");
-    QString temp8 = tr("This is the end time at which the state started with the 'start time' will end.");
+    QString temp8 = tr("End time: The system stops automatically running when the system reaches this time.");
     QString temp9 = tr("This is the function that will perform this function during business hours, there are six to choose from, They are System for self-use, battery Batter priority, Peak shaving, Output PV power.");
     QString temp10 = tr("This is the working power, which is executed according to the working state when working in this state, the positive number is discharging, and the negative number is charging.");
-    QString temp11 = tr("This is the start time at which the specified state will begin to be entered with the specified power.");
-    QString temp12 = tr("This is' Enable ', which will enable the specified state at the specified time with the specified power, and end at the specified time.");
+    QString temp11 = tr("Start time: When the system reaches this time, it starts to run automatically.");
+    QString temp12 = tr("Select: After this function is enabled, the system automatically runs the selected function mode within the specified period.");
     QString temp13 = tr("System for self-use");
     if(Check1 != nullptr)
     {
@@ -4198,7 +4232,7 @@ void MyWidget::HistoryRecord(QTableWidget *myTable)
 {
     QString str1 = tr("0");
     QString str2 = tr("Level");
-    QString str3 = tr("This is the event alarm level. When the event alarm level is 0, it is marked red, indicating that this is the fault information.");//这是事件告警等级，当事件告警等级为0时标红，表示这是故障信息
+    QString str3 = tr("0 represents an alarm event, and this item will turn red. 1 represents a status event.");//0表示告警事件，且此项会变红，1表示状态事件
     QString str4 = tr("Start Time");
     QString str5 = tr("This is the event start time, which means that the record started appearing at this time.");//这是事件开始时间，表示这条记录从这个时间开始出现。
     QString str6 = tr("End Time");
@@ -4209,140 +4243,210 @@ void MyWidget::HistoryRecord(QTableWidget *myTable)
     QString str10 = tr("This is the event description, when there is an alarm information, the alarm information will be recorded here.");//这是事件描述，当有告警信息时，会将告警信息记录在这里。
     QString str11 = tr("Fire alarm (High temp. alarm)");//消防告警(高温告警)
     QString str12 = tr("Power Meter Comm fualttLead-acid abnormal");//电能表通讯故障
+
+    QString str13 = tr("Converter Standby.");//变换器待机
+    QString str14 = tr("The grid contactor connected");//电网接触器闭合
+    QString str15 = tr("The grid breaker connected");//电网断路器闭合
+    QString str16 = tr("The output breaker connected");//输出断路器闭合
+    QString str17 = tr("Buck not softened");//低压侧未软起
+    QString str18 = tr("Contactor off buck");//低压侧接触器断开
+    //QString str19 = tr("Turning on the converter is not allowed");//变流器开机不允许
+    QString str20 = tr("The grid breaker disconnected");//电网断路器断开
+    //QString str21 = tr("The grid contactor is disconnected");//电网接触器断开
+
+    QString str24 = tr("1");
+
     int line=0;int column=0;
+    Grade9 = new Specification(this,Grade9_explain, myTable, line++, column, \
+                                                    str24, str2, str3);
+    Grade9->add_Specification();
+    Grade10 = new Specification(this,Grade10_explain, myTable, line++, column, \
+                                                    str24, str2, str3);
+    Grade10->add_Specification();
+    Grade11 = new Specification(this,Grade11_explain, myTable, line++, column, \
+                                                    str24, str2, str3);
+    Grade11->add_Specification();
+    Grade12 = new Specification(this,Grade12_explain, myTable, line++, column, \
+                                                    str24, str2, str3);
+    Grade12->add_Specification();
+    Grade13 = new Specification(this,Grade13_explain, myTable, line++, column, \
+                                                    str24, str2, str3);
+    Grade13->add_Specification();
+    Grade14 = new Specification(this,Grade14_explain, myTable, line++, column, \
+                                                    str24, str2, str3);
+    Grade14->add_Specification();
+    Grade15 = new Specification(this,Grade15_explain, myTable, line++, column, \
+                                                    str24, str2, str3);
+    Grade15->add_Specification();
+
     Grade = new Specification(this,Grade_explain, myTable, line++, column, \
-                                                    str1, str2, \
-                                                    str3);
+                                                    str1, str2, str3);
     Grade->add_Specification();
     Grade2 = new Specification(this,Grade2_explain, myTable, line++, column, \
-                                                    str1, str2, \
-                                                    str3);
+                                                    str1, str2, str3);
     Grade2->add_Specification();
     Grade3 = new Specification(this,Grade3_explain, myTable, line++, column, \
-                                                    str1, str2, \
-                                                    str3);
+                                                    str1, str2,  str3);
     Grade3->add_Specification();
     Grade4 = new Specification(this,Grade4_explain, myTable, line++, column, \
-                                                    str1, str2, \
-                                                    str3);
+                                                    str1, str2, str3);
     Grade4->add_Specification();
     Grade5 = new Specification(this,Grade5_explain, myTable, line++, column, \
-                                                    str1, str2, \
-                                                    str3);
+                                                    str1, str2, str3);
     Grade5->add_Specification();
     Grade6 = new Specification(this,Grade6_explain, myTable, line++, column, \
-                                                    str1, str2, \
-                                                    str3);
+                                                    str1, str2, str3);
     Grade6->add_Specification();
     Grade7 = new Specification(this,Grade7_explain, myTable, line++, column, \
                                                     str1, str2, \
                                                     str3);
     Grade7->add_Specification();
     Grade8 = new Specification(this,Grade8_explain, myTable, line++, column, \
-                                                    str1, str2, \
-                                                    str3);
+                                                    str1, str2, str3);
     Grade8->add_Specification();
     line=0;
     column=1;
+    StartTime9 = new Specification(this,StartTime9_explain, myTable, line++, column, \
+                                                    "2023.7.29 14:59:56", str4, str5);
+    StartTime9->add_Specification();
+    StartTime10 = new Specification(this,StartTime10_explain, myTable, line++, column, \
+                                                    "2023.7.29 14:59:55", str4, str5);
+    StartTime10->add_Specification();
+    StartTime11 = new Specification(this,StartTime11_explain, myTable, line++, column, \
+                                                    "2023.7.29 14:59:51", str4, str5);
+    StartTime11->add_Specification();
+    StartTime12 = new Specification(this,StartTime12_explain, myTable, line++, column, \
+                                                    "2023.7.29 14:59:51", str4, str5);
+    StartTime12->add_Specification();
+    StartTime13 = new Specification(this,StartTime13_explain, myTable, line++, column, \
+                                                    "2023.7.29 14:59:50", str4, str5);
+    StartTime13->add_Specification();
+    StartTime14 = new Specification(this,StartTime14_explain, myTable, line++, column, \
+                                                    "2023.7.29 14:57:50", str4, str5);
+    StartTime14->add_Specification();
+    StartTime15 = new Specification(this,StartTime15_explain, myTable, line++, column, \
+                                                    "2023.7.29 14:57:50", str4, str5);
+    StartTime15->add_Specification();
+
     StartTime = new Specification(this,StartTime_explain, myTable, line++, column, \
-                                                    "2023.5.6 15:49:50", str4, \
-                                                    str5);
+                                                    "2023.5.6 15:49:50", str4, str5);
     StartTime->add_Specification();
     StartTime2 = new Specification(this,StartTime2_explain, myTable, line++, column, \
-                                                    "2023.5.6 15:48:18", str4, \
-                                                    str5);
+                                                    "2023.5.6 15:48:18", str4, str5);
     StartTime2->add_Specification();
     StartTime3 = new Specification(this,StartTime3_explain, myTable, line++, column, \
-                                                    "2023.5.6 15:39:3", str4, \
-                                                    str5);
+                                                    "2023.5.6 15:39:3", str4, str5);
     StartTime3->add_Specification();
     StartTime4 = new Specification(this,StartTime4_explain, myTable, line++, column, \
-                                                    "2023.5.6 15:39:3", str4, \
-                                                    str5);
+                                                    "2023.5.6 15:39:3", str4, str5);
     StartTime4->add_Specification();
     StartTime5 = new Specification(this,StartTime5_explain, myTable, line++, column, \
-                                                    "2023.5.6 15:39:3", str4, \
-                                                    str5);
+                                                    "2023.5.6 15:39:3", str4, str5);
     StartTime5->add_Specification();
     StartTime6 = new Specification(this,StartTime6_explain, myTable, line++, column, \
-                                                    "2023.5.6 15:21:56", str4, \
-                                                    str5);
+                                                    "2023.5.6 15:21:56", str4, str5);
     StartTime6->add_Specification();
     StartTime7 = new Specification(this,StartTime7_explain, myTable, line++, column, \
-                                                    "2023.5.6 15:21:38", str4, \
-                                                    str5);
+                                                    "2023.5.6 15:21:38", str4, str5);
     StartTime7->add_Specification();
     StartTime8 = new Specification(this,StartTime8_explain, myTable, line++, column, \
-                                                    "2023.5.6 15:21:38", str4, \
-                                                    str5);
+                                                    "2023.5.6 15:21:38", str4, str5);
     StartTime8->add_Specification();
     line=0;
     column=2;
+    EndTime9 = new Specification(this,EndTime9_explain, myTable, line++, column, \
+                                                    "...", str6, str7);
+    EndTime9->add_Specification();
+    EndTime10 = new Specification(this,EndTime10_explain, myTable, line++, column, \
+                                                    "...", str6, str7);
+    EndTime10->add_Specification();
+    EndTime11 = new Specification(this,EndTime11_explain, myTable, line++, column, \
+                                                    "...", str6, str7);
+    EndTime11->add_Specification();
+    EndTime12 = new Specification(this,EndTime12_explain, myTable, line++, column, \
+                                                    "...", str6, str7);
+    EndTime12->add_Specification();
+    EndTime13 = new Specification(this,EndTime13_explain, myTable, line++, column, \
+                                                    "...", str6, str7);
+    EndTime13->add_Specification();
+    EndTime14 = new Specification(this,EndTime14_explain, myTable, line++, column, \
+                                                    "...", str6, str7);
+    EndTime14->add_Specification();
+    EndTime15 = new Specification(this,EndTime15_explain, myTable, line++, column, \
+                                                    "2023.7.29 16:42:24", str6, str7);
+    EndTime15->add_Specification();
+
     EndTime = new Specification(this,EndTime_explain, myTable, line++, column, \
-                                                    "-", str6, \
-                                                    str7);
+                                                    "-", str6, str7);
     EndTime->add_Specification();
     EndTime2 = new Specification(this,EndTime2_explain, myTable, line++, column, \
-                                                    "-", str6, \
-                                                    str7);
+                                                    "-", str6, str7);
     EndTime2->add_Specification();
     EndTime3 = new Specification(this,EndTime3_explain, myTable, line++, column, \
-                                                    "...", str6, \
-                                                    str7);
+                                                    "...", str6, str7);
     EndTime3->add_Specification();
     EndTime4 = new Specification(this,EndTime4_explain, myTable, line++, column, \
-                                                    "-", str6, \
-                                                    str7);
+                                                    "-", str6, str7);
     EndTime4->add_Specification();
     EndTime5 = new Specification(this,EndTime5_explain, myTable, line++, column, \
-                                                    "...", str6, \
-                                                    str7);
+                                                    "...", str6, str7);
     EndTime5->add_Specification();
     EndTime6 = new Specification(this,EndTime6_explain, myTable, line++, column, \
-                                                    "-", str6, \
-                                                    str7);
+                                                    "-", str6, str7);
     EndTime6->add_Specification();
     EndTime7 = new Specification(this,EndTime7_explain, myTable, line++, column, \
-                                                    "-", str6, \
-                                                    str7);
+                                                    "-", str6, str7);
     EndTime7->add_Specification();
     EndTime8 = new Specification(this,EndTime8_explain, myTable, line++, column, \
-                                                    "-", str6, \
-                                                    str7);
+                                                    "-", str6, str7);
     EndTime8->add_Specification();
     line=0;
     column=3;
+    Describe9 = new Specification(this,Describe9_explain, myTable, line++, column, \
+                                                    str13, str9, str10);
+    Describe9->add_Specification();
+    Describe10 = new Specification(this,Describe10_explain, myTable, line++, column, \
+                                                    str14, str9, str10);
+    Describe10->add_Specification();
+    Describe11 = new Specification(this,Describe11_explain, myTable, line++, column, \
+                                                    str15, str9, str10);
+    Describe11->add_Specification();
+    Describe12 = new Specification(this,Describe12_explain, myTable, line++, column, \
+                                                    str16, str9, str10);
+    Describe12->add_Specification();
+    Describe13 = new Specification(this,Describe13_explain, myTable, line++, column, \
+                                                    str17, str9, str10);
+    Describe13->add_Specification();
+    Describe14 = new Specification(this,Describe14_explain, myTable, line++, column, \
+                                                    str18, str9, str10);
+    Describe14->add_Specification();
+    Describe15 = new Specification(this,Describe15_explain, myTable, line++, column, \
+                                                    str20, str9, str10);
+    Describe15->add_Specification();
+
     Describe = new Specification(this,Describe_explain, myTable, line++, column, \
-                                                    str8, str9, \
-                                                    str10);
+                                                    str8, str9, str10);
     Describe->add_Specification();
     Describe2 = new Specification(this,Describe2_explain, myTable, line++, column, \
-                                                    str8, str9, \
-                                                    str10);
+                                                    str8, str9, str10);
     Describe2->add_Specification();
     Describe3 = new Specification(this,Describe3_explain, myTable, line++, column, \
-                                                    str11, str9, \
-                                                    str10);
+                                                    str11, str9, str10);
     Describe3->add_Specification();
     Describe4 = new Specification(this,Describe4_explain, myTable, line++, column, \
-                                                    str8, str9, \
-                                                    str10);
+                                                    str8, str9, str10);
     Describe4->add_Specification();
     Describe5 = new Specification(this,Describe5_explain, myTable, line++, column, \
-                                                    str12, str9, \
-                                                    str10);
+                                                    str12, str9, str10);
     Describe5->add_Specification();
     Describe6 = new Specification(this,Describe6_explain, myTable, line++, column, \
-                                                    str8, str9, \
-                                                    str10);
+                                                    str8, str9, str10);
     Describe6->add_Specification();
     Describe7 = new Specification(this,Describe7_explain, myTable, line++, column, \
-                                                    str11, str9, \
-                                                    str10);
+                                                    str11, str9, str10);
     Describe7->add_Specification();
     Describe8 = new Specification(this,Describe8_explain, myTable, line++, column, \
-                                                    str12, str9, \
-                                                    str10);
+                                                    str12, str9, str10);
     Describe8->add_Specification();
 }
 
@@ -4442,14 +4546,14 @@ void MyWidget::FunctionSet(QTableWidget *myTable)
     //电池通信方式说明
     BMS_Comm_type = new Specification(this,BMS_Comm_type_explain, myTable, 1, 1, \
                                       "CAN", tr("BMS Comm type"), \
-                                      tr("Set the communication mode between the battery, RS485 or CAN communication or Ethernet can be selected according to the situation."));
+                                      tr("Set the communication mode between the battery, RS485 or CAN communication or Ethernet can be selected according to the situation.\n(Note: Since there is only one port for both CAN port and Ethernet port, battery communication mode and EMS communication mode cannot be selected as \"CAN\" or \"Ethernet\" at the same time)"));
     BMS_Comm_type->add_Specification();
 //    BMS_Comm_type->Opermode_btn_clicked(mode_expelain->Bat_Comm_btn);
 
     //功率控制类型说明
     Power_control_type = new Specification(this,Power_control_type_explain, myTable, 2, 1,\
                                            "CP_N&&P" , tr("Power control type"), \
-                                           tr("Set the control power mode, including constant voltage (CV), constant current (CC), constant power (CP_P), and positive and negative power (CP_N&P).\nIf constant voltage (CV) mode is selected, the converter will operate in constant voltage mode.\nIf constant current (CC) mode is selected, the converter will operate in constant current mode.\nIf you choose constant power (CP_P) or positive and negative power (CP_N&P) mode: you can set the power size at 'constant power', the value is the size of the power size, positive for discharge, negative for charging."));
+                                           tr("Set the control power mode, including constant voltage (CV), constant current (CC), constant power (CP_P), and positive and negative power (CP_N&P).\nIf constant voltage (CV) mode is selected, the converter will operate in constant voltage mode.\nIf constant current (CC) mode is selected, the converter will operate in constant current mode.\nIf you choosepositive and negative power (CP_N&P) mode: you can set the power size at 'constant power', the value is the size of the power size, positive for discharge, negative for charging.\nConstant power (CP_P) : This function is reserved and the selection is invalid."));
     Power_control_type->add_Specification();
 
     //EMS通讯方式说明
@@ -4501,8 +4605,8 @@ void MyWidget::FunctionSet(QTableWidget *myTable)
     //主机地址说明
     Host_Address = new Specification(this,Host_Address_explain, myTable, 0, 4,\
                                      "1", tr("Host Address"), \
-                                     tr("This is the device address, which defaults to 1 and can be adjusted from 1 to 255 to match the host address during EMS communication."));
-    Host_Address->add_Specification();//这是设备地址，默认值为1，可调范围在1~255之间，用于EMS通信时匹配主机地址\n
+                                     tr("This is the device address. The default value is 1 and the adjustable range is 1 to 255. It is used to match the host address during EMS communication, and use 485 to change the slave address."));
+    Host_Address->add_Specification();//这是设备地址，默认值为1，可调范围在1~255之间，用于EMS通信时匹配主机地址，使用485改从机地址
 
     //串口1说明
     serial_port_1 = new Specification(this,serial_port_1_explain, myTable, 1, 4, \
@@ -4589,10 +4693,8 @@ void MyWidget::FunctionSet(QTableWidget *myTable)
     Language->add_Specification();//设置显示屏的显示语言，可供选择为中文与英文，切换语言时系统需重启\n
 
     //系统升级说明
-    System_upgrade = new Specification(this,System_upgrade_explain, myTable, 4, 7, \
-                                       tr("upgrade"), tr("System_upgrade"), \
-                                       tr("Click to enter the system upgrade application and upgrade the system according to the upgrade document."));
-    System_upgrade->add_Specification();//点击即可进入系统升级应用程序，根据升级文档进行系统升级
+    System_upgrade_explain->setText(tr("upgrade"));
+    myTable->setCellWidget(4, 7, (QWidget *)System_upgrade_explain);
 
     //声音说明
     Sounds = new Specification(this,Sounds_explain, myTable, 5, 7, \
@@ -4655,7 +4757,7 @@ void MyWidget::SystemParameter(QTableWidget *myTable)
     //绝缘监测使能说明
     Insulation_detection_enable = new Specification(this,Insulation_detection_enable_explain, myTable, 8, 1, \
                                                     tr("prohibit"), tr("Insulation detection enable"), \
-                                                    tr("Insulation detection Enable, insulation resistance greater than 33KΩ to be able to operate normally, less than 33KΩ can not start, and to alarm, the default prohibition, the choice is to Enable, prohibit, (Note: this is generally used in large grid-connected power stations)."));
+                                                    tr("Insulation detection Enable, insulation resistance greater than 33KΩ to be able to operate normally, less than 33KΩ can not start, and to alarm, the default prohibition, the choice is to Enable, prohibit."));
     Insulation_detection_enable->add_Specification();
 
     //一次调频使能说明
@@ -4671,15 +4773,15 @@ void MyWidget::SystemParameter(QTableWidget *myTable)
     Inertia_enable->add_Specification();
 
     //负载优先说明
-    Load_priority = new Specification(this,Load_priority_explain, myTable, 11, 1, \
+    /*Load_priority = new Specification(this,Load_priority_explain, myTable, 11, 1, \
                                       tr("prohibit"), tr("Load priority"), \
                                       tr("Reserve"));
-    Load_priority->add_Specification();
+    Load_priority->add_Specification();*/
 
     //机器型号说明
     Machine_type = new Specification(this,Machine_type_explain, myTable, 0, 4, \
                                      "MPS-TS", tr("Machine type"), \
-                                     tr("Set according to the machine model on site, the factory value prevails, the default MPS-TS, but MPS and MPS-T are not optional.if you need to change, please contact customer service."));
+                                     tr("Set according to the machine model on site, the factory value prevails."));
     Machine_type->add_Specification();
 
     //机器容量说明
@@ -4702,8 +4804,8 @@ void MyWidget::SystemParameter(QTableWidget *myTable)
 
     //逆变电压等级说明
     Converter_side_vol_level = new Specification(this,Converter_side_vol_level_explain, myTable, 4, 4, \
-                                         "270:400", tr("Converter side vol level"), \
-                                                 tr("The inverter voltage level is the voltage level of the inverter, which should be set according to the transformer nameplate, subject to the factory default value, and cannot be changed at will. If you need to change, please contact customer service to confirm."));
+                                         "270:400", tr("Transformer Turns Ratio"), \
+                                                 tr("Transformer Turns Ratio: Please refer to the factory nameplate for the turns ratio setting based on the built-in transformer. If any changes are required, please contact customer service for confirmation."));
     Converter_side_vol_level->add_Specification();
 
     //输出无功方式说明
@@ -4769,20 +4871,20 @@ void MyWidget::SystemParameter(QTableWidget *myTable)
 
     //机架说明
     Machine_Type = new Specification(this,Machine_Type_explain, myTable, 3, 7, \
-                                     "Single", tr("Machine Type"), \
-                                     tr("Select single when the MPS power is less than 250kw, select more when the MPS power is greater than or equal to 250, and change the maximum and minimum number of modules."));
+                                     "DCAC", tr("Rack"), \
+                                     tr("When you select DCDC, the DCAC interface freezes, and the maximum module ID and minimum module ID take effect. You can only modify the database to restore the DCAC interface."));
     Machine_Type->add_Specification();
 
     //最大模块数说明
     Module_max = new Specification(this,Module_max_explain, myTable, 4, 7, \
                                    "2", tr("Module max"), \
-                                   tr("This is the maximum number of modules in the current system."));
-    Module_max->add_Specification();//这是当前系统的最大模块数\n
+                                   tr("This is the maximum number of modules in the current system(Note: This takes effect only when DCDC mode is selected in rack Settings.)."));
+    Module_max->add_Specification();//这是当前系统的最大模块数（备注：仅在机架设置中选择DCDC模式时生效）\n
 
     //最小模块数说明
     Module_min = new Specification(this,Module_min_explain, myTable, 5, 7, \
                                    "1", tr("Module min"), \
-                                   tr("This is the minimum number of modules in the current system."));
+                                   tr("This is the minimum number of modules in the current system(Note: This takes effect only when DCDC mode is selected in rack Settings.)."));
     Module_min->add_Specification();//这是当前系统的最小模块数\n
 
     //DCDC绝缘监测使能说明
@@ -4822,7 +4924,7 @@ void MyWidget::ExternalDevice(QTableWidget *myTable)
                                     tr("Enable"), tr("DI_6_Enable"), \
                                     tr("Enter dry contact 6. If Enable is selected, the Action is triggered when the dry contact detects that NO/NC is not set. If Disable is selected, the dry contact does not take any action when it detects that NO/NC is not set."));
     DI_6_Enable->add_Specification();
-    DO_1_Enable = new Specification(this,DO_1_Enable_explain, myTable, 6, 0, \
+    /*DO_1_Enable = new Specification(this,DO_1_Enable_explain, myTable, 6, 0, \
                                     tr("Disable"), tr("DO_1_Enable"), \
                                     tr("Output dry contact 1. If Enable is selected, the Action is triggered when the dry contact detects that NO/NC is not set. If Disable is selected, the dry contact does not take any action when it detects that NO/NC is not set."));
     DO_1_Enable->add_Specification();
@@ -4833,7 +4935,7 @@ void MyWidget::ExternalDevice(QTableWidget *myTable)
     DO_3_Enable = new Specification(this,DO_3_Enable_explain, myTable, 8, 0, \
                                     tr("Disable"), tr("DO_3_Enable"), \
                                     tr("Output dry contact 3. If Enable is selected, the Action is triggered when the dry contact detects that NO/NC is not set. If Disable is selected, the dry contact does not take any action when it detects that NO/NC is not set."));
-    DO_3_Enable->add_Specification();
+    DO_3_Enable->add_Specification();*/
 
     DI_1_NC_O = new Specification(this,DI_1_NC_O_explain, myTable, 0, 1, \
                                    "N_O", tr("DI_1_NC_O"), str);
@@ -4853,7 +4955,7 @@ void MyWidget::ExternalDevice(QTableWidget *myTable)
     DI_6_NC_O = new Specification(this,DI_6_NC_O_explain, myTable, 5, 1, \
                                    "N_O", tr("DI_6_NC_O"), str);
     DI_6_NC_O->add_Specification();
-    DO_1_NC_O = new Specification(this,DO_1_NC_O_explain, myTable, 6, 1, \
+    /*DO_1_NC_O = new Specification(this,DO_1_NC_O_explain, myTable, 6, 1, \
                                    "N_O", tr("DO_1_NC_O"), str);
     DO_1_NC_O->add_Specification();
     DO_2_NC_O = new Specification(this,DO_2_NC_O_explain, myTable, 7, 1, \
@@ -4861,7 +4963,7 @@ void MyWidget::ExternalDevice(QTableWidget *myTable)
     DO_2_NC_O->add_Specification();
     DO_3_NC_O = new Specification(this,DO_3_NC_O_explain, myTable, 8, 1, \
                                    "N_O", tr("DO_3_NC_O"), str);
-    DO_3_NC_O->add_Specification();
+    DO_3_NC_O->add_Specification();*/
 
     DI_1_Action = new Specification(this,DI_1_Action_explain, myTable, 0, 2, \
                                    tr("Shut down"), tr("DI_1_Action"), str1);
@@ -4881,7 +4983,7 @@ void MyWidget::ExternalDevice(QTableWidget *myTable)
     DI_6_Action = new Specification(this,DI_6_Action_explain, myTable, 5, 2, \
                                    tr("Shut down"), tr("DI_6_Action"), str1);
     DI_6_Action->add_Specification();
-    DO_1_Action = new Specification(this,DO_1_Action_explain, myTable, 6, 2, \
+    /*DO_1_Action = new Specification(this,DO_1_Action_explain, myTable, 6, 2, \
                                    tr("Prompt"), tr("DO_1_Action"), str1);
     DO_1_Action->add_Specification();
     DO_2_Action = new Specification(this,DO_2_Action_explain, myTable, 7, 2, \
@@ -4889,7 +4991,7 @@ void MyWidget::ExternalDevice(QTableWidget *myTable)
     DO_2_Action->add_Specification();
     DO_3_Action = new Specification(this,DO_3_Action_explain, myTable, 8, 2, \
                                    tr("Prompt"), tr("DO_3_Action"), str1);
-    DO_3_Action->add_Specification();
+    DO_3_Action->add_Specification();*/
 
 }
 /*****************DCAC调试页说明*********************/
@@ -5298,7 +5400,7 @@ void MyWidget::on_Output_OperationLog_clicked()
 void MyWidget::on_CoulombmeterReport_btn_clicked()
 {
     QMessageBox::question(this, tr("Coulombmeter report")\
-                          ,tr("Export the battery statistics. Click here to export the battery statistics to the U disk."), tr("OK"));//导出电量统计表，点击此处将会导出电量统计表到U盘里\n
+                          ,tr("Export the battery statistics. Click here to export the battery statistics to the U disk.\nThe accuracy is 0.1, which means that the obtained data multiplied by 0.1 gives the actual value."), tr("OK"));//导出电量统计表，点击此处将会导出电量统计表到U盘里.精度为0.1,即所得数据*0.1为实际的数值.
 }
 /********* 退出U盘 *********/
 void MyWidget::on_Eject_btn_clicked()
@@ -5356,22 +5458,26 @@ void MyWidget::on_radio_static_clicked()
 /*********** 选择自动分配IP地址 ************/
 void MyWidget::on_radio_dhcp_clicked()
 {
-    IPShow = false;
-    if(IPShow)
+    if(0)
     {
-        ui->ip_explain_btn->show();
-        ui->netmask_explain_btn->show();
-        ui->gateway_explain_btn->show();
-        ui->server_ip_explain_btn->show();
+        IPShow = false;
+        if(IPShow)
+        {
+            ui->ip_explain_btn->show();
+            ui->netmask_explain_btn->show();
+            ui->gateway_explain_btn->show();
+            ui->server_ip_explain_btn->show();
+        }
+        else
+        {
+            ui->ip_explain_btn->hide();
+            ui->netmask_explain_btn->hide();
+            ui->gateway_explain_btn->hide();
+            ui->server_ip_explain_btn->hide();
+        }
+        QMessageBox::question(this ,tr("DHCP"), tr("If this parameter is selected, the automatically assigned IP address is used"), tr("OK"));//如果选择此项，表示使用自动分配的IP地址 \n
     }
-    else
-    {
-        ui->ip_explain_btn->hide();
-        ui->netmask_explain_btn->hide();
-        ui->gateway_explain_btn->hide();
-        ui->server_ip_explain_btn->hide();
-    }
-    QMessageBox::question(this ,tr("DHCP"), tr("If this parameter is selected, the automatically assigned IP address is used"), tr("OK"));//如果选择此项，表示使用自动分配的IP地址\n
+
 
 }
 /****************DCDC 变流器开启*****************/
@@ -5440,7 +5546,7 @@ void MyWidget::on_search_btn_clicked()
     }
 }
 
-
+//时间显示点击
 void MyWidget::on_TimeSeting_btn_clicked()
 {
     QMessageBox::question(this ,tr("Time"), tr("Click here to modify the time displayed on the HMI."), tr("OK"));

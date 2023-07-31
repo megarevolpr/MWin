@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1502</width>
-    <height>993</height>
+    <width>1586</width>
+    <height>1168</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -45,7 +45,7 @@
           <widget class="QWidget" name="Systempage">
            <layout class="QGridLayout" name="gridLayout_2">
             <item row="0" column="0">
-             <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,1">
               <item>
                <layout class="QVBoxLayout" name="verticalLayout_3">
                 <item>

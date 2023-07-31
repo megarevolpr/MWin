@@ -4,7 +4,6 @@
 #include <QMainWindow>
 #include <QPlainTextEdit>
 #include "Specification/Specification.h"
-//#include "mywidget.h"
 
 namespace Ui {
 class OperMode;

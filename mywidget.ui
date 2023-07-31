@@ -62,7 +62,7 @@
    <item row="0" column="0">
     <widget class="QStackedWidget" name="UI_stackedWidget">
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="BasicSet_page">
       <widget class="QWidget" name="layoutWidget">
@@ -148,7 +148,7 @@ color: rgb(255, 255, 255);</string>
            </sizepolicy>
           </property>
           <property name="currentIndex">
-           <number>1</number>
+           <number>2</number>
           </property>
           <widget class="QWidget" name="UI_Parameter_page">
            <attribute name="title">
@@ -1028,7 +1028,7 @@ color: rgb(255, 255, 255);</string>
             </item>
             <item row="3" column="6">
              <property name="text">
-              <string>Machine Type</string>
+              <string>Rack</string>
              </property>
              <property name="textAlignment">
               <set>AlignCenter</set>
@@ -1065,7 +1065,7 @@ color: rgb(255, 255, 255);</string>
             </item>
             <item row="4" column="3">
              <property name="text">
-              <string>Converter side vol. level</string>
+              <string>Transformer Turns Ratio</string>
              </property>
              <property name="textAlignment">
               <set>AlignCenter</set>
@@ -1405,7 +1405,7 @@ color: rgb(255, 255, 255);</string>
             </item>
             <item row="11" column="0">
              <property name="text">
-              <string>Load priority</string>
+              <string/>
              </property>
              <property name="textAlignment">
               <set>AlignCenter</set>
@@ -1413,7 +1413,7 @@ color: rgb(255, 255, 255);</string>
             </item>
             <item row="11" column="2">
              <property name="text">
-              <string>-</string>
+              <string/>
              </property>
              <property name="textAlignment">
               <set>AlignCenter</set>
@@ -1574,12 +1574,81 @@ color: rgb(255, 255, 255);</string>
               <set>AlignCenter</set>
              </property>
             </item>
+            <item row="6" column="0">
+             <property name="text">
+              <string>Enable</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+             <property name="flags">
+              <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+             </property>
+            </item>
+            <item row="6" column="1">
+             <property name="text">
+              <string>N_O</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+             <property name="flags">
+              <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+             </property>
+            </item>
+            <item row="6" column="2">
+             <property name="text">
+              <string>Prompt</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+             <property name="flags">
+              <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+             </property>
+            </item>
             <item row="6" column="3">
              <property name="text">
               <string>Generator</string>
              </property>
              <property name="textAlignment">
               <set>AlignCenter</set>
+             </property>
+             <property name="flags">
+              <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+             </property>
+            </item>
+            <item row="7" column="0">
+             <property name="text">
+              <string>Enable</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+             <property name="flags">
+              <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+             </property>
+            </item>
+            <item row="7" column="1">
+             <property name="text">
+              <string>N_O</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+             <property name="flags">
+              <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+             </property>
+            </item>
+            <item row="7" column="2">
+             <property name="text">
+              <string>Prompt</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+             <property name="flags">
+              <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
              </property>
             </item>
             <item row="7" column="3">
@@ -1589,6 +1658,42 @@ color: rgb(255, 255, 255);</string>
              <property name="textAlignment">
               <set>AlignCenter</set>
              </property>
+             <property name="flags">
+              <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+             </property>
+            </item>
+            <item row="8" column="0">
+             <property name="text">
+              <string>Enable</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+             <property name="flags">
+              <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+             </property>
+            </item>
+            <item row="8" column="1">
+             <property name="text">
+              <string>N_O</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+             <property name="flags">
+              <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+             </property>
+            </item>
+            <item row="8" column="2">
+             <property name="text">
+              <string>Prompt</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignCenter</set>
+             </property>
+             <property name="flags">
+              <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+             </property>
             </item>
             <item row="8" column="3">
              <property name="text">
@@ -1596,6 +1701,9 @@ color: rgb(255, 255, 255);</string>
              </property>
              <property name="textAlignment">
               <set>AlignCenter</set>
+             </property>
+             <property name="flags">
+              <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
              </property>
             </item>
            </widget>
@@ -2452,6 +2560,11 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                 <height>16777215</height>
                </size>
               </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
               <property name="styleSheet">
                <string notr="true"/>
               </property>
@@ -2514,11 +2627,14 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                 <height>43</height>
                </size>
               </property>
+              <property name="focusPolicy">
+               <enum>Qt::WheelFocus</enum>
+              </property>
               <property name="autoFillBackground">
                <bool>false</bool>
               </property>
               <property name="styleSheet">
-               <string notr="true">border-image: url(:/new_ui/UI/Warning_1.png);</string>
+               <string notr="true">border-image: url(:/new_ui/UI/Warning_2.png);</string>
               </property>
               <property name="text">
                <string/>
@@ -2616,7 +2732,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <enum>QFrame::Raised</enum>
            </property>
            <property name="currentIndex">
-            <number>3</number>
+            <number>1</number>
            </property>
            <widget class="QWidget" name="Host_page">
             <widget class="QPushButton" name="Bypass_Grid_btn">
@@ -3765,7 +3881,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                 <string notr="true"/>
                </property>
                <property name="currentIndex">
-                <number>3</number>
+                <number>1</number>
                </property>
                <widget class="QWidget" name="RT_Data_page">
                 <attribute name="title">
@@ -4696,6 +4812,18 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                          <height>30</height>
                         </size>
                        </property>
+                       <property name="inputMask">
+                        <string/>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                       <property name="echoMode">
+                        <enum>QLineEdit::Normal</enum>
+                       </property>
+                       <property name="placeholderText">
+                        <string>Please enter search keywords</string>
+                       </property>
                       </widget>
                      </item>
                      <item>
@@ -5360,7 +5488,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                              </property>
                              <property name="font">
                               <font>
-                               <pointsize>12</pointsize>
+                               <pointsize>14</pointsize>
                               </font>
                              </property>
                              <property name="cursor">
@@ -5384,7 +5512,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                              </property>
                              <property name="font">
                               <font>
-                               <pointsize>11</pointsize>
+                               <pointsize>14</pointsize>
                               </font>
                              </property>
                              <property name="cursor">
@@ -5415,7 +5543,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                               <cursorShape>ArrowCursor</cursorShape>
                              </property>
                              <property name="text">
-                              <string>Charge power</string>
+                              <string>Allow charge power</string>
                              </property>
                              <property name="alignment">
                               <set>Qt::AlignCenter</set>
@@ -5439,7 +5567,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                               <cursorShape>ArrowCursor</cursorShape>
                              </property>
                              <property name="text">
-                              <string>Discharge power</string>
+                              <string>Allow discharge power</string>
                              </property>
                              <property name="alignment">
                               <set>Qt::AlignCenter</set>
@@ -5463,7 +5591,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                               <cursorShape>ArrowCursor</cursorShape>
                              </property>
                              <property name="text">
-                              <string>Charge energy</string>
+                              <string>Allow charge energy</string>
                              </property>
                              <property name="alignment">
                               <set>Qt::AlignCenter</set>
@@ -5487,7 +5615,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                               <cursorShape>ArrowCursor</cursorShape>
                              </property>
                              <property name="text">
-                              <string>Discharge energy</string>
+                              <string>Allow discharge energy</string>
                              </property>
                              <property name="alignment">
                               <set>Qt::AlignCenter</set>
@@ -6158,7 +6286,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                               <widget class="QLabel" name="label_2">
                                <property name="font">
                                 <font>
-                                 <pointsize>16</pointsize>
+                                 <pointsize>14</pointsize>
                                 </font>
                                </property>
                                <property name="text">
@@ -6173,13 +6301,13 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                               <widget class="QPushButton" name="pushButton_19">
                                <property name="minimumSize">
                                 <size>
-                                 <width>62</width>
+                                 <width>80</width>
                                  <height>48</height>
                                 </size>
                                </property>
                                <property name="maximumSize">
                                 <size>
-                                 <width>62</width>
+                                 <width>80</width>
                                  <height>48</height>
                                 </size>
                                </property>
@@ -6199,7 +6327,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                               <widget class="QLabel" name="Statuslb_1">
                                <property name="font">
                                 <font>
-                                 <pointsize>16</pointsize>
+                                 <pointsize>14</pointsize>
                                 </font>
                                </property>
                                <property name="text">
@@ -6241,9 +6369,21 @@ enable</string>
                             <layout class="QHBoxLayout" name="horizontalLayout_6">
                              <item>
                               <widget class="QLabel" name="Statuslb_2">
+                               <property name="minimumSize">
+                                <size>
+                                 <width>127</width>
+                                 <height>71</height>
+                                </size>
+                               </property>
+                               <property name="maximumSize">
+                                <size>
+                                 <width>127</width>
+                                 <height>71</height>
+                                </size>
+                               </property>
                                <property name="font">
                                 <font>
-                                 <pointsize>16</pointsize>
+                                 <pointsize>14</pointsize>
                                 </font>
                                </property>
                                <property name="text">
@@ -6259,13 +6399,13 @@ enable</string>
                               <widget class="QPushButton" name="pushButton_21">
                                <property name="minimumSize">
                                 <size>
-                                 <width>110</width>
+                                 <width>127</width>
                                  <height>71</height>
                                 </size>
                                </property>
                                <property name="maximumSize">
                                 <size>
-                                 <width>110</width>
+                                 <width>127</width>
                                  <height>71</height>
                                 </size>
                                </property>
@@ -6342,7 +6482,7 @@ enable</string>
              <item row="0" column="0">
               <widget class="QTabWidget" name="Record_tabWidget">
                <property name="currentIndex">
-                <number>0</number>
+                <number>1</number>
                </property>
                <widget class="QWidget" name="DataReport_page">
                 <attribute name="title">
@@ -7059,7 +7199,7 @@ background-color: rgb(255, 0, 0);</string>
                 <bool>false</bool>
                </property>
                <property name="currentIndex">
-                <number>2</number>
+                <number>4</number>
                </property>
                <widget class="QWidget" name="DCACParameterSet_page">
                 <attribute name="title">
@@ -7266,7 +7406,7 @@ background-color: rgb(255, 0, 0);</string>
                    </item>
                    <item row="5" column="2">
                     <property name="text">
-                     <string/>
+                     <string>-</string>
                     </property>
                     <property name="textAlignment">
                      <set>AlignCenter</set>
@@ -7341,7 +7481,7 @@ background-color: rgb(255, 0, 0);</string>
                  <item row="0" column="0">
                   <widget class="QTabWidget" name="BatterSet_tabWidget">
                    <property name="currentIndex">
-                    <number>1</number>
+                    <number>0</number>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -7349,7 +7489,7 @@ background-color: rgb(255, 0, 0);</string>
                      <height>8</height>
                     </size>
                    </property>
-                   <widget class="QWidget" name="LithiumBatterPage" native="true">
+                   <widget class="QWidget" name="LithiumBatterPage">
                     <attribute name="title">
                      <string>Lithium</string>
                     </attribute>
@@ -7572,7 +7712,7 @@ Generator turn off voltage(B1)</string>
                      </item>
                     </layout>
                    </widget>
-                   <widget class="QWidget" name="LeadBatterPage" native="true">
+                   <widget class="QWidget" name="LeadBatterPage">
                     <attribute name="title">
                      <string>Lead</string>
                     </attribute>
@@ -7704,6 +7844,9 @@ Set rule:B1 - A1 ≥ 10V</string>
                           <property name="text">
                            <string>Capacity</string>
                           </property>
+                          <property name="textAlignment">
+                           <set>AlignCenter</set>
+                          </property>
                          </item>
                          <item row="0" column="2">
                           <property name="text">
@@ -7716,6 +7859,9 @@ Set rule:B1 - A1 ≥ 10V</string>
                          <item row="0" column="3">
                           <property name="text">
                            <string>Grid off EOD</string>
+                          </property>
+                          <property name="textAlignment">
+                           <set>AlignCenter</set>
                           </property>
                          </item>
                          <item row="0" column="5">
@@ -7730,6 +7876,9 @@ Set rule:B1 - A1 ≥ 10V</string>
                           <property name="text">
                            <string>Cell number(2V)</string>
                           </property>
+                          <property name="textAlignment">
+                           <set>AlignCenter</set>
+                          </property>
                          </item>
                          <item row="1" column="2">
                           <property name="text">
@@ -7742,6 +7891,9 @@ Set rule:B1 - A1 ≥ 10V</string>
                          <item row="1" column="3">
                           <property name="text">
                            <string>Grid on EOD</string>
+                          </property>
+                          <property name="textAlignment">
+                           <set>AlignCenter</set>
                           </property>
                          </item>
                          <item row="1" column="5">
@@ -7756,6 +7908,9 @@ Set rule:B1 - A1 ≥ 10V</string>
                           <property name="text">
                            <string>Battery float voltage</string>
                           </property>
+                          <property name="textAlignment">
+                           <set>AlignCenter</set>
+                          </property>
                          </item>
                          <item row="2" column="2">
                           <property name="text">
@@ -7768,6 +7923,9 @@ Set rule:B1 - A1 ≥ 10V</string>
                          <item row="2" column="3">
                           <property name="text">
                            <string>Shutdown voltage point</string>
+                          </property>
+                          <property name="textAlignment">
+                           <set>AlignCenter</set>
                           </property>
                           <property name="background">
                            <brush brushstyle="NoBrush">
@@ -7832,6 +7990,9 @@ Set rule:B1 - A1 ≥ 10V</string>
                           <property name="text">
                            <string>Battery filling voltage</string>
                           </property>
+                          <property name="textAlignment">
+                           <set>AlignCenter</set>
+                          </property>
                          </item>
                          <item row="3" column="2">
                           <property name="text">
@@ -7844,6 +8005,9 @@ Set rule:B1 - A1 ≥ 10V</string>
                          <item row="3" column="3">
                           <property name="text">
                            <string>Mending center point</string>
+                          </property>
+                          <property name="textAlignment">
+                           <set>AlignCenter</set>
                           </property>
                           <property name="background">
                            <brush brushstyle="NoBrush">
@@ -7908,6 +8072,9 @@ Set rule:B1 - A1 ≥ 10V</string>
                           <property name="text">
                            <string>Charge limiting value</string>
                           </property>
+                          <property name="textAlignment">
+                           <set>AlignCenter</set>
+                          </property>
                          </item>
                          <item row="4" column="2">
                           <property name="text">
@@ -7920,6 +8087,9 @@ Set rule:B1 - A1 ≥ 10V</string>
                          <item row="4" column="3">
                           <property name="text">
                            <string>Temperature filling coefficient</string>
+                          </property>
+                          <property name="textAlignment">
+                           <set>AlignCenter</set>
                           </property>
                           <property name="foreground">
                            <brush brushstyle="NoBrush">
@@ -7966,6 +8136,9 @@ Set rule:B1 - A1 ≥ 10V</string>
                           <property name="text">
                            <string>Discharge limiting value</string>
                           </property>
+                          <property name="textAlignment">
+                           <set>AlignCenter</set>
+                          </property>
                          </item>
                          <item row="5" column="2">
                           <property name="text">
@@ -7978,6 +8151,9 @@ Set rule:B1 - A1 ≥ 10V</string>
                          <item row="5" column="3">
                           <property name="text">
                            <string>Mending allowable setting</string>
+                          </property>
+                          <property name="textAlignment">
+                           <set>AlignCenter</set>
                           </property>
                           <property name="foreground">
                            <brush brushstyle="NoBrush">
@@ -8024,6 +8200,9 @@ Set rule:B1 - A1 ≥ 10V</string>
                           <property name="text">
                            <string>Generator turn off voltage</string>
                           </property>
+                          <property name="textAlignment">
+                           <set>AlignCenter</set>
+                          </property>
                          </item>
                          <item row="6" column="2">
                           <property name="text">
@@ -8036,6 +8215,9 @@ Set rule:B1 - A1 ≥ 10V</string>
                          <item row="6" column="3">
                           <property name="text">
                            <string>Temperature alarm upper limit</string>
+                          </property>
+                          <property name="textAlignment">
+                           <set>AlignCenter</set>
                           </property>
                           <property name="foreground">
                            <brush brushstyle="NoBrush">
@@ -8082,6 +8264,9 @@ Set rule:B1 - A1 ≥ 10V</string>
                           <property name="text">
                            <string>Generator turn on voltage</string>
                           </property>
+                          <property name="textAlignment">
+                           <set>AlignCenter</set>
+                          </property>
                          </item>
                          <item row="7" column="2">
                           <property name="text">
@@ -8094,6 +8279,9 @@ Set rule:B1 - A1 ≥ 10V</string>
                          <item row="7" column="3">
                           <property name="text">
                            <string>Uniform charging and flushing current</string>
+                          </property>
+                          <property name="textAlignment">
+                           <set>AlignCenter</set>
                           </property>
                          </item>
                          <item row="7" column="5">
@@ -8108,6 +8296,9 @@ Set rule:B1 - A1 ≥ 10V</string>
                           <property name="text">
                            <string/>
                           </property>
+                          <property name="textAlignment">
+                           <set>AlignCenter</set>
+                          </property>
                          </item>
                          <item row="8" column="2">
                           <property name="text">
@@ -8120,6 +8311,9 @@ Set rule:B1 - A1 ≥ 10V</string>
                          <item row="8" column="3">
                           <property name="text">
                            <string>Float turn uniform charging current</string>
+                          </property>
+                          <property name="textAlignment">
+                           <set>AlignCenter</set>
                           </property>
                          </item>
                          <item row="8" column="5">
@@ -8168,96 +8362,6 @@ Set rule:B1 - A1 ≥ 10V</string>
                       <cursorShape>ArrowCursor</cursorShape>
                      </property>
                     </widget>
-                   </item>
-                   <item>
-                    <layout class="QHBoxLayout" name="horizontalLayout_24">
-                     <item>
-                      <widget class="QRadioButton" name="radioButton">
-                       <property name="sizePolicy">
-                        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-                         <horstretch>0</horstretch>
-                         <verstretch>0</verstretch>
-                        </sizepolicy>
-                       </property>
-                       <property name="cursor">
-                        <cursorShape>ArrowCursor</cursorShape>
-                       </property>
-                       <property name="text">
-                        <string>Enable</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLabel" name="label_3">
-                       <property name="cursor">
-                        <cursorShape>ArrowCursor</cursorShape>
-                       </property>
-                       <property name="text">
-                        <string>Monthly battery deep discharge date:</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLineEdit" name="lineEdit">
-                       <property name="sizePolicy">
-                        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                         <horstretch>0</horstretch>
-                         <verstretch>0</verstretch>
-                        </sizepolicy>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>100</width>
-                         <height>16777215</height>
-                        </size>
-                       </property>
-                       <property name="font">
-                        <font>
-                         <pointsize>18</pointsize>
-                        </font>
-                       </property>
-                       <property name="cursor">
-                        <cursorShape>ArrowCursor</cursorShape>
-                       </property>
-                       <property name="text">
-                        <string>20</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QPushButton" name="pushButton_add">
-                       <property name="font">
-                        <font>
-                         <pointsize>31</pointsize>
-                        </font>
-                       </property>
-                       <property name="cursor">
-                        <cursorShape>ArrowCursor</cursorShape>
-                       </property>
-                       <property name="text">
-                        <string>+</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QPushButton" name="pushButton_sub">
-                       <property name="font">
-                        <font>
-                         <pointsize>31</pointsize>
-                        </font>
-                       </property>
-                       <property name="cursor">
-                        <cursorShape>ArrowCursor</cursorShape>
-                       </property>
-                       <property name="text">
-                        <string>-</string>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
                    </item>
                   </layout>
                  </item>
@@ -8429,7 +8533,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                            <x>0</x>
                            <y>0</y>
                            <width>383</width>
-                           <height>341</height>
+                           <height>359</height>
                           </rect>
                          </property>
                          <property name="cursor">
@@ -8535,6 +8639,9 @@ Set rule:B1 - A1 ≥ 10V</string>
                            </property>
                            <property name="text">
                             <string>DHCP</string>
+                           </property>
+                           <property name="checkable">
+                            <bool>false</bool>
                            </property>
                           </widget>
                           <widget class="QRadioButton" name="radio_static">

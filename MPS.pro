@@ -19,12 +19,12 @@ TEMPLATE = app
 include         ($$PWD/UI_Menu/UI_Menu.pri)
 include         ($$PWD/Specification/Specification.pri)
 include         ($$PWD/OperMode/OperMode.pri)
-#include         ($$PWD/Operational_mode/Operational_mode.pri)
+include         ($$PWD/UpgradeTools/UpgradeTools.pri)
 
 INCLUDEPATH     +=$$PWD/Specification/
 INCLUDEPATH     +=$$PWD/UI_Menu/
 INCLUDEPATH     +=$$PWD/OperMode/
-
+INCLUDEPATH     +=$$PWD/UpgradeTools/
 
 CONFIG += c++11
 
