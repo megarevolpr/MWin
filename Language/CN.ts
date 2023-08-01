@@ -62,200 +62,200 @@
         <translation>基础设置</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="155"/>
+        <location filename="../mywidget.ui" line="160"/>
         <source>Function Setting</source>
         <translation>功能设置</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="233"/>
+        <location filename="../mywidget.ui" line="243"/>
         <location filename="../mywidget.cpp" line="4541"/>
         <source>Battery type</source>
         <translation>电池类型</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="241"/>
-        <location filename="../mywidget.ui" line="257"/>
-        <location filename="../mywidget.ui" line="273"/>
-        <location filename="../mywidget.ui" line="289"/>
-        <location filename="../mywidget.ui" line="321"/>
-        <location filename="../mywidget.ui" line="337"/>
-        <location filename="../mywidget.ui" line="374"/>
-        <location filename="../mywidget.ui" line="390"/>
-        <location filename="../mywidget.ui" line="427"/>
-        <location filename="../mywidget.ui" line="480"/>
-        <location filename="../mywidget.ui" line="496"/>
-        <location filename="../mywidget.ui" line="549"/>
-        <location filename="../mywidget.ui" line="586"/>
-        <location filename="../mywidget.ui" line="602"/>
-        <location filename="../mywidget.ui" line="703"/>
-        <location filename="../mywidget.ui" line="874"/>
-        <location filename="../mywidget.ui" line="890"/>
-        <location filename="../mywidget.ui" line="938"/>
-        <location filename="../mywidget.ui" line="991"/>
-        <location filename="../mywidget.ui" line="1044"/>
-        <location filename="../mywidget.ui" line="1097"/>
-        <location filename="../mywidget.ui" line="1113"/>
-        <location filename="../mywidget.ui" line="1129"/>
-        <location filename="../mywidget.ui" line="1150"/>
-        <location filename="../mywidget.ui" line="1166"/>
-        <location filename="../mywidget.ui" line="1182"/>
-        <location filename="../mywidget.ui" line="1203"/>
-        <location filename="../mywidget.ui" line="1219"/>
-        <location filename="../mywidget.ui" line="1272"/>
-        <location filename="../mywidget.ui" line="1288"/>
-        <location filename="../mywidget.ui" line="1320"/>
-        <location filename="../mywidget.ui" line="1336"/>
-        <location filename="../mywidget.ui" line="1368"/>
-        <location filename="../mywidget.ui" line="1384"/>
-        <location filename="../mywidget.ui" line="1440"/>
-        <location filename="../mywidget.ui" line="7265"/>
-        <location filename="../mywidget.ui" line="7281"/>
-        <location filename="../mywidget.ui" line="7313"/>
-        <location filename="../mywidget.ui" line="7329"/>
-        <location filename="../mywidget.ui" line="7345"/>
-        <location filename="../mywidget.ui" line="7361"/>
-        <location filename="../mywidget.ui" line="7377"/>
-        <location filename="../mywidget.ui" line="7393"/>
-        <location filename="../mywidget.ui" line="7409"/>
-        <location filename="../mywidget.ui" line="7885"/>
-        <location filename="../mywidget.ui" line="8065"/>
-        <location filename="../mywidget.ui" line="8129"/>
-        <location filename="../mywidget.ui" line="8193"/>
-        <location filename="../mywidget.ui" line="8257"/>
+        <location filename="../mywidget.ui" line="251"/>
+        <location filename="../mywidget.ui" line="267"/>
+        <location filename="../mywidget.ui" line="283"/>
+        <location filename="../mywidget.ui" line="299"/>
+        <location filename="../mywidget.ui" line="331"/>
+        <location filename="../mywidget.ui" line="347"/>
+        <location filename="../mywidget.ui" line="384"/>
+        <location filename="../mywidget.ui" line="400"/>
+        <location filename="../mywidget.ui" line="437"/>
+        <location filename="../mywidget.ui" line="490"/>
+        <location filename="../mywidget.ui" line="506"/>
+        <location filename="../mywidget.ui" line="559"/>
+        <location filename="../mywidget.ui" line="596"/>
+        <location filename="../mywidget.ui" line="612"/>
+        <location filename="../mywidget.ui" line="713"/>
+        <location filename="../mywidget.ui" line="889"/>
+        <location filename="../mywidget.ui" line="905"/>
+        <location filename="../mywidget.ui" line="953"/>
+        <location filename="../mywidget.ui" line="1006"/>
+        <location filename="../mywidget.ui" line="1059"/>
+        <location filename="../mywidget.ui" line="1112"/>
+        <location filename="../mywidget.ui" line="1128"/>
+        <location filename="../mywidget.ui" line="1144"/>
+        <location filename="../mywidget.ui" line="1165"/>
+        <location filename="../mywidget.ui" line="1181"/>
+        <location filename="../mywidget.ui" line="1197"/>
+        <location filename="../mywidget.ui" line="1218"/>
+        <location filename="../mywidget.ui" line="1234"/>
+        <location filename="../mywidget.ui" line="1287"/>
+        <location filename="../mywidget.ui" line="1303"/>
+        <location filename="../mywidget.ui" line="1335"/>
+        <location filename="../mywidget.ui" line="1351"/>
+        <location filename="../mywidget.ui" line="1383"/>
+        <location filename="../mywidget.ui" line="1399"/>
+        <location filename="../mywidget.ui" line="1455"/>
+        <location filename="../mywidget.ui" line="7315"/>
+        <location filename="../mywidget.ui" line="7331"/>
+        <location filename="../mywidget.ui" line="7363"/>
+        <location filename="../mywidget.ui" line="7379"/>
+        <location filename="../mywidget.ui" line="7395"/>
+        <location filename="../mywidget.ui" line="7411"/>
+        <location filename="../mywidget.ui" line="7427"/>
+        <location filename="../mywidget.ui" line="7443"/>
+        <location filename="../mywidget.ui" line="7459"/>
+        <location filename="../mywidget.ui" line="7971"/>
+        <location filename="../mywidget.ui" line="8151"/>
+        <location filename="../mywidget.ui" line="8215"/>
+        <location filename="../mywidget.ui" line="8279"/>
+        <location filename="../mywidget.ui" line="8343"/>
         <location filename="../mywidget.cpp" line="1447"/>
         <location filename="../mywidget.cpp" line="1449"/>
         <source>-</source>
         <translation>-</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="249"/>
+        <location filename="../mywidget.ui" line="259"/>
         <location filename="../mywidget.cpp" line="4607"/>
         <source>Host Address</source>
         <translation>主机地址</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="265"/>
+        <location filename="../mywidget.ui" line="275"/>
         <location filename="../mywidget.cpp" line="4673"/>
         <source>ProtocolVersion</source>
         <translation>协议版本</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="281"/>
+        <location filename="../mywidget.ui" line="291"/>
         <source>BMS Comm. type</source>
         <translation>电池通讯方式</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="297"/>
+        <location filename="../mywidget.ui" line="307"/>
         <location filename="../mywidget.cpp" line="4613"/>
         <source>serial port 1</source>
         <translation>串口1</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="305"/>
-        <location filename="../mywidget.ui" line="353"/>
-        <location filename="../mywidget.ui" line="406"/>
-        <location filename="../mywidget.ui" line="459"/>
-        <location filename="../mywidget.ui" line="512"/>
+        <location filename="../mywidget.ui" line="315"/>
+        <location filename="../mywidget.ui" line="363"/>
+        <location filename="../mywidget.ui" line="416"/>
+        <location filename="../mywidget.ui" line="469"/>
+        <location filename="../mywidget.ui" line="522"/>
         <source>bps</source>
         <translation>bps</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="313"/>
+        <location filename="../mywidget.ui" line="323"/>
         <location filename="../mywidget.cpp" line="4679"/>
         <source>UserPassPort</source>
         <translation>用户密码</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="329"/>
+        <location filename="../mywidget.ui" line="339"/>
         <location filename="../mywidget.cpp" line="4555"/>
         <source>Power control type</source>
         <translation>功率控制类型</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="345"/>
+        <location filename="../mywidget.ui" line="355"/>
         <location filename="../mywidget.cpp" line="4619"/>
         <source>serial port 2</source>
         <translation>串口2</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="361"/>
+        <location filename="../mywidget.ui" line="371"/>
         <location filename="../mywidget.cpp" line="4685"/>
         <source>RootPassport</source>
         <translation>超级权限</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="382"/>
+        <location filename="../mywidget.ui" line="392"/>
         <source>EMS Comm. type</source>
         <translation>EMS通讯方式</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="398"/>
+        <location filename="../mywidget.ui" line="408"/>
         <location filename="../mywidget.cpp" line="4625"/>
         <source>serial port 3</source>
         <translation>串口3</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="414"/>
+        <location filename="../mywidget.ui" line="424"/>
         <location filename="../mywidget.cpp" line="4691"/>
         <source>Language</source>
         <translation>语言</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="435"/>
+        <location filename="../mywidget.ui" line="445"/>
         <location filename="../mywidget.cpp" line="4568"/>
         <source>Output power limit</source>
         <translation>输出功率上限</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="443"/>
-        <location filename="../mywidget.ui" line="655"/>
-        <location filename="../mywidget.ui" line="922"/>
-        <location filename="../mywidget.ui" line="5955"/>
-        <location filename="../mywidget.ui" line="5979"/>
-        <location filename="../mywidget.ui" line="6003"/>
-        <location filename="../mywidget.ui" line="6027"/>
-        <location filename="../mywidget.ui" line="7297"/>
+        <location filename="../mywidget.ui" line="453"/>
+        <location filename="../mywidget.ui" line="665"/>
+        <location filename="../mywidget.ui" line="937"/>
+        <location filename="../mywidget.ui" line="5985"/>
+        <location filename="../mywidget.ui" line="6009"/>
+        <location filename="../mywidget.ui" line="6033"/>
+        <location filename="../mywidget.ui" line="6057"/>
+        <location filename="../mywidget.ui" line="7347"/>
         <source>kW</source>
         <translation>kW</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="451"/>
+        <location filename="../mywidget.ui" line="461"/>
         <location filename="../mywidget.cpp" line="4631"/>
         <source>serial port 4</source>
         <translation>串口4</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="467"/>
+        <location filename="../mywidget.ui" line="477"/>
         <source>System upgrade</source>
         <translation>系统升级</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="504"/>
+        <location filename="../mywidget.ui" line="514"/>
         <location filename="../mywidget.cpp" line="4637"/>
         <source>serial port 5</source>
         <translation>串口5</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="520"/>
+        <location filename="../mywidget.ui" line="530"/>
         <location filename="../mywidget.cpp" line="4701"/>
         <source>Sounds</source>
         <translation>声音</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="541"/>
+        <location filename="../mywidget.ui" line="551"/>
         <location filename="../mywidget.cpp" line="4580"/>
         <source>Charge SOC</source>
         <translation>充电SOC</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="557"/>
+        <location filename="../mywidget.ui" line="567"/>
         <location filename="../mywidget.cpp" line="4643"/>
         <source>Can port 1</source>
         <translation>CAN 1</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="565"/>
-        <location filename="../mywidget.ui" line="618"/>
+        <location filename="../mywidget.ui" line="575"/>
+        <location filename="../mywidget.ui" line="628"/>
         <source>kbps</source>
         <translation>kbps</translation>
     </message>
@@ -264,150 +264,150 @@
         <translation type="vanished">干接点</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="594"/>
+        <location filename="../mywidget.ui" line="604"/>
         <source>Discharge SOC</source>
         <translation>放电SOC</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="610"/>
+        <location filename="../mywidget.ui" line="620"/>
         <location filename="../mywidget.cpp" line="4649"/>
         <source>Can port 2</source>
         <translation>CAN 2</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="647"/>
+        <location filename="../mywidget.ui" line="657"/>
         <location filename="../mywidget.cpp" line="4594"/>
         <source>DG capacity</source>
         <translation>柴发容量</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="663"/>
+        <location filename="../mywidget.ui" line="673"/>
         <source>Relese Charge mark</source>
         <translation>释放充电标志</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="671"/>
-        <location filename="../mywidget.ui" line="1007"/>
-        <location filename="../mywidget.ui" line="1060"/>
-        <location filename="../mywidget.ui" line="5343"/>
-        <location filename="../mywidget.ui" line="5361"/>
-        <location filename="../mywidget.ui" line="8209"/>
-        <location filename="../mywidget.ui" line="8273"/>
+        <location filename="../mywidget.ui" line="681"/>
+        <location filename="../mywidget.ui" line="1022"/>
+        <location filename="../mywidget.ui" line="1075"/>
+        <location filename="../mywidget.ui" line="5373"/>
+        <location filename="../mywidget.ui" line="5391"/>
+        <location filename="../mywidget.ui" line="8295"/>
+        <location filename="../mywidget.ui" line="8359"/>
         <source>%</source>
         <translation>%</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="695"/>
+        <location filename="../mywidget.ui" line="705"/>
         <location filename="../mywidget.cpp" line="4600"/>
         <source>Energy priority</source>
         <translation>能量优先级</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="711"/>
+        <location filename="../mywidget.ui" line="721"/>
         <location filename="../mywidget.cpp" line="4661"/>
         <source>ForceCharge start</source>
         <translation>强充开启</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="719"/>
-        <location filename="../mywidget.ui" line="767"/>
-        <location filename="../mywidget.ui" line="1023"/>
-        <location filename="../mywidget.ui" line="1076"/>
-        <location filename="../mywidget.ui" line="5307"/>
-        <location filename="../mywidget.ui" line="7441"/>
-        <location filename="../mywidget.ui" line="7869"/>
-        <location filename="../mywidget.ui" line="7901"/>
-        <location filename="../mywidget.ui" line="7917"/>
-        <location filename="../mywidget.ui" line="7983"/>
-        <location filename="../mywidget.ui" line="7999"/>
+        <location filename="../mywidget.ui" line="729"/>
+        <location filename="../mywidget.ui" line="777"/>
+        <location filename="../mywidget.ui" line="1038"/>
+        <location filename="../mywidget.ui" line="1091"/>
+        <location filename="../mywidget.ui" line="5337"/>
+        <location filename="../mywidget.ui" line="7491"/>
+        <location filename="../mywidget.ui" line="7955"/>
+        <location filename="../mywidget.ui" line="7987"/>
+        <location filename="../mywidget.ui" line="8003"/>
+        <location filename="../mywidget.ui" line="8069"/>
+        <location filename="../mywidget.ui" line="8085"/>
         <location filename="../mywidget.cpp" line="1449"/>
         <source>V</source>
         <translation>V</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="759"/>
+        <location filename="../mywidget.ui" line="769"/>
         <location filename="../mywidget.cpp" line="4667"/>
         <source>ForceCharge top</source>
         <translation>强充结束</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="795"/>
+        <location filename="../mywidget.ui" line="805"/>
         <source>System parameter</source>
         <translation>系统参数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="850"/>
+        <location filename="../mywidget.ui" line="865"/>
         <location filename="../mywidget.cpp" line="4711"/>
         <source>Change rate of power</source>
         <translation>功率变化率</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="858"/>
+        <location filename="../mywidget.ui" line="873"/>
         <source>kW/s</source>
         <translation>kW/s</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="866"/>
+        <location filename="../mywidget.ui" line="881"/>
         <location filename="../mywidget.cpp" line="4783"/>
         <source>Machine type</source>
         <translation>机器型号</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="882"/>
+        <location filename="../mywidget.ui" line="897"/>
         <location filename="../mywidget.cpp" line="4856"/>
         <source>Module Number</source>
         <translation>模块数量</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="898"/>
+        <location filename="../mywidget.ui" line="913"/>
         <location filename="../mywidget.cpp" line="4717"/>
         <source>Grid frequency upper limit</source>
         <translation>电网频率变化范围上限</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="906"/>
-        <location filename="../mywidget.ui" line="954"/>
-        <location filename="../mywidget.ui" line="970"/>
+        <location filename="../mywidget.ui" line="921"/>
+        <location filename="../mywidget.ui" line="969"/>
+        <location filename="../mywidget.ui" line="985"/>
         <source>Hz</source>
         <translation>Hz</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="914"/>
+        <location filename="../mywidget.ui" line="929"/>
         <location filename="../mywidget.cpp" line="4789"/>
         <source>Machine capacity</source>
         <translation>机器容量</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="930"/>
+        <location filename="../mywidget.ui" line="945"/>
         <location filename="../mywidget.cpp" line="4862"/>
         <source>Restore factory</source>
         <translation>恢复出厂</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="946"/>
+        <location filename="../mywidget.ui" line="961"/>
         <location filename="../mywidget.cpp" line="4723"/>
         <source>Grid frequency lower limit</source>
         <translation>电网频率变化范围下限</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="962"/>
+        <location filename="../mywidget.ui" line="977"/>
         <source>Output Fre. grade</source>
         <translation>输出频率等级</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="978"/>
+        <location filename="../mywidget.ui" line="993"/>
         <location filename="../mywidget.cpp" line="4868"/>
         <source>Clear Data</source>
         <translation>清楚数据</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="999"/>
+        <location filename="../mywidget.ui" line="1014"/>
         <location filename="../mywidget.cpp" line="4729"/>
         <source>Vol protection upper limit</source>
         <translation>电压保护范围上限</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1015"/>
+        <location filename="../mywidget.ui" line="1030"/>
         <source>Output vol. level</source>
         <translation>输出电压等级</translation>
     </message>
@@ -416,7 +416,7 @@
         <translation type="vanished">机架</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1052"/>
+        <location filename="../mywidget.ui" line="1067"/>
         <location filename="../mywidget.cpp" line="4735"/>
         <source>Vol protection lower limit</source>
         <translation>电压保护范围下限</translation>
@@ -426,94 +426,94 @@
         <translation type="vanished">逆变电压等级</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1084"/>
+        <location filename="../mywidget.ui" line="1099"/>
         <location filename="../mywidget.cpp" line="4880"/>
         <source>Module max</source>
         <translation>最大模块数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1105"/>
+        <location filename="../mywidget.ui" line="1120"/>
         <location filename="../mywidget.cpp" line="4741"/>
         <source>HVRT enable</source>
         <translation>高压穿越使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1121"/>
+        <location filename="../mywidget.ui" line="1136"/>
         <location filename="../mywidget.cpp" line="4813"/>
         <source>Output reactive power mode</source>
         <translation>输出无功方式</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1137"/>
+        <location filename="../mywidget.ui" line="1152"/>
         <location filename="../mywidget.cpp" line="4886"/>
         <source>Module min</source>
         <translation>最小模块数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1158"/>
+        <location filename="../mywidget.ui" line="1173"/>
         <source>LVRT enable</source>
         <translation>低压穿越使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1174"/>
+        <location filename="../mywidget.ui" line="1189"/>
         <location filename="../mywidget.cpp" line="4819"/>
         <source>Grid recovery scheduling</source>
         <translation>电网恢复调度开机</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1190"/>
+        <location filename="../mywidget.ui" line="1205"/>
         <location filename="../mywidget.cpp" line="4892"/>
         <source>Insulation detection enable DCDC</source>
         <translation>DCDC绝缘监测使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1211"/>
+        <location filename="../mywidget.ui" line="1226"/>
         <location filename="../mywidget.cpp" line="4753"/>
         <source>AFD enable</source>
         <translation>孤岛使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1227"/>
+        <location filename="../mywidget.ui" line="1242"/>
         <location filename="../mywidget.cpp" line="4825"/>
         <source>Grid recovery time</source>
         <translation>电网恢复并网时间</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1235"/>
+        <location filename="../mywidget.ui" line="1250"/>
         <source>s</source>
         <translation>s</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1264"/>
+        <location filename="../mywidget.ui" line="1279"/>
         <location filename="../mywidget.cpp" line="4759"/>
         <source>Insulation detection enable</source>
         <translation>绝缘监测使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1280"/>
+        <location filename="../mywidget.ui" line="1295"/>
         <location filename="../mywidget.cpp" line="4831"/>
         <source>Grid connected mode of Inv</source>
         <translation>逆变器并网方式</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1312"/>
+        <location filename="../mywidget.ui" line="1327"/>
         <location filename="../mywidget.cpp" line="4765"/>
         <source>PrimaryFreq enable</source>
         <translation>一次调频使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1328"/>
+        <location filename="../mywidget.ui" line="1343"/>
         <source>PsheddingFreq</source>
         <translation>过频降载</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1360"/>
+        <location filename="../mywidget.ui" line="1375"/>
         <location filename="../mywidget.cpp" line="4771"/>
         <source>Inertia enable</source>
         <translation>转动惯量使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1376"/>
+        <location filename="../mywidget.ui" line="1391"/>
         <location filename="../mywidget.cpp" line="4844"/>
         <source>QP curve</source>
         <translation>QP曲线</translation>
@@ -523,110 +523,110 @@
         <translation type="vanished">负载优先</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1450"/>
+        <location filename="../mywidget.ui" line="1465"/>
         <source>External device</source>
         <translation>外设</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1466"/>
+        <location filename="../mywidget.ui" line="1486"/>
         <source>DI_1</source>
         <translation>DI_1</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1471"/>
+        <location filename="../mywidget.ui" line="1491"/>
         <source>DI_2</source>
         <translation>DI_2</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1476"/>
+        <location filename="../mywidget.ui" line="1496"/>
         <source>DI_3</source>
         <translation>DI_3</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1481"/>
+        <location filename="../mywidget.ui" line="1501"/>
         <source>DI_4</source>
         <translation>DI_4</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1486"/>
+        <location filename="../mywidget.ui" line="1506"/>
         <source>DI_5</source>
         <translation>DI_5</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1491"/>
+        <location filename="../mywidget.ui" line="1511"/>
         <source>DI_6</source>
         <translation>DI_6</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1496"/>
+        <location filename="../mywidget.ui" line="1516"/>
         <source>DO_1</source>
         <translation>DO_1</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1501"/>
+        <location filename="../mywidget.ui" line="1521"/>
         <source>DO_2</source>
         <translation>DO_2</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1506"/>
+        <location filename="../mywidget.ui" line="1526"/>
         <source>DO_3</source>
         <translation>DO_3</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1511"/>
+        <location filename="../mywidget.ui" line="1531"/>
         <source>Enable/Disable</source>
         <translation>使能/禁止</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1516"/>
+        <location filename="../mywidget.ui" line="1536"/>
         <source>NC/NO</source>
         <translation>NC/NO</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1521"/>
+        <location filename="../mywidget.ui" line="1541"/>
         <source>Action</source>
         <translation>动作</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1526"/>
+        <location filename="../mywidget.ui" line="1546"/>
         <source>Function description</source>
         <translation>功能描述</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1531"/>
+        <location filename="../mywidget.ui" line="1551"/>
         <source>Shut Down NO</source>
         <translation>NO关机</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1539"/>
+        <location filename="../mywidget.ui" line="1559"/>
         <source>Shut Down NC</source>
         <translation>NC关机</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1547"/>
+        <location filename="../mywidget.ui" line="1567"/>
         <source>Access Control</source>
         <translation>门禁</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1563"/>
+        <location filename="../mywidget.ui" line="1583"/>
         <source>Water logging</source>
         <translation>水浸</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1590"/>
-        <location filename="../mywidget.ui" line="1634"/>
-        <location filename="../mywidget.ui" line="1678"/>
+        <location filename="../mywidget.ui" line="1610"/>
+        <location filename="../mywidget.ui" line="1654"/>
+        <location filename="../mywidget.ui" line="1698"/>
         <source>N_O</source>
         <translation>N_O</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1612"/>
+        <location filename="../mywidget.ui" line="1632"/>
         <source>Generator</source>
         <translation>发电机</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1656"/>
-        <location filename="../mywidget.ui" line="1700"/>
+        <location filename="../mywidget.ui" line="1676"/>
+        <location filename="../mywidget.ui" line="1720"/>
         <location filename="../mywidget.cpp" line="1374"/>
         <location filename="../mywidget.cpp" line="2981"/>
         <location filename="../mywidget.cpp" line="2985"/>
@@ -634,51 +634,51 @@
         <translation>保留</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1713"/>
+        <location filename="../mywidget.ui" line="1733"/>
         <source>DCAC Debug</source>
         <translation>DCAC调试</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1767"/>
-        <location filename="../mywidget.ui" line="2256"/>
+        <location filename="../mywidget.ui" line="1792"/>
+        <location filename="../mywidget.ui" line="2286"/>
         <location filename="../mywidget.cpp" line="5003"/>
         <location filename="../mywidget.cpp" line="5229"/>
         <source>Debug variable 1</source>
         <translation>调试变量1</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1775"/>
+        <location filename="../mywidget.ui" line="1800"/>
         <source>1.5V Voltage revise</source>
         <translation>1.5V电压系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1791"/>
-        <location filename="../mywidget.ui" line="2344"/>
+        <location filename="../mywidget.ui" line="1816"/>
+        <location filename="../mywidget.ui" line="2374"/>
         <source>Inv on off flag</source>
         <translation>开关机状态字</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1804"/>
-        <location filename="../mywidget.ui" line="2280"/>
+        <location filename="../mywidget.ui" line="1829"/>
+        <location filename="../mywidget.ui" line="2310"/>
         <location filename="../mywidget.cpp" line="5009"/>
         <location filename="../mywidget.cpp" line="5235"/>
         <source>Debug variable 2</source>
         <translation>调试变量2</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1812"/>
+        <location filename="../mywidget.ui" line="1837"/>
         <source> Bus Vol. revise</source>
         <translation> 母线电压系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1828"/>
+        <location filename="../mywidget.ui" line="1853"/>
         <location filename="../mywidget.cpp" line="5159"/>
         <source>Logic state</source>
         <translation>逻辑状态字</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1841"/>
-        <location filename="../mywidget.ui" line="2304"/>
+        <location filename="../mywidget.ui" line="1866"/>
+        <location filename="../mywidget.ui" line="2334"/>
         <location filename="../mywidget.cpp" line="5015"/>
         <location filename="../mywidget.cpp" line="5241"/>
         <location filename="../mywidget.cpp" line="5247"/>
@@ -686,302 +686,302 @@
         <translation>调试变量3</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1849"/>
+        <location filename="../mywidget.ui" line="1874"/>
         <source>Grid A/AB Vol. revise</source>
         <translation>电网A相电压系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1865"/>
+        <location filename="../mywidget.ui" line="1890"/>
         <source>Inv flag</source>
         <translation>逆变状态字</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1878"/>
-        <location filename="../mywidget.ui" line="2264"/>
+        <location filename="../mywidget.ui" line="1903"/>
+        <location filename="../mywidget.ui" line="2294"/>
         <source>Debug variable 1 address</source>
         <translation>调试地址变量1</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1886"/>
+        <location filename="../mywidget.ui" line="1911"/>
         <source>Grid B/BC Vol. revise</source>
         <translation>电网B相电压系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1902"/>
+        <location filename="../mywidget.ui" line="1927"/>
         <location filename="../mywidget.cpp" line="5171"/>
         <source>Grid flag</source>
         <translation>电网状态字</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1915"/>
-        <location filename="../mywidget.ui" line="2288"/>
+        <location filename="../mywidget.ui" line="1940"/>
+        <location filename="../mywidget.ui" line="2318"/>
         <source>Debug variable 2 address</source>
         <translation>调试地址变量2</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1923"/>
+        <location filename="../mywidget.ui" line="1948"/>
         <source>Grid C/CA Vol. revise</source>
         <translation>电网C相电压系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1939"/>
+        <location filename="../mywidget.ui" line="1964"/>
         <location filename="../mywidget.cpp" line="5177"/>
         <source>Grid protect flag</source>
         <translation>电网保护状态字</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1952"/>
-        <location filename="../mywidget.ui" line="2312"/>
+        <location filename="../mywidget.ui" line="1977"/>
+        <location filename="../mywidget.ui" line="2342"/>
         <source>Debug variable 3 address</source>
         <translation>调试地址变量3</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1960"/>
+        <location filename="../mywidget.ui" line="1985"/>
         <source>Output A Cur. revise</source>
         <translation>输出A相电流系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1976"/>
-        <location filename="../mywidget.ui" line="2384"/>
+        <location filename="../mywidget.ui" line="2001"/>
+        <location filename="../mywidget.ui" line="2414"/>
         <location filename="../mywidget.cpp" line="5183"/>
         <location filename="../mywidget.cpp" line="5265"/>
         <source>PV flag</source>
         <translation>电池电压状态字</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1989"/>
-        <location filename="../mywidget.ui" line="2272"/>
+        <location filename="../mywidget.ui" line="2014"/>
+        <location filename="../mywidget.ui" line="2302"/>
         <source>Debug memery var. 1</source>
         <translation>调试内存变量1</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1997"/>
+        <location filename="../mywidget.ui" line="2022"/>
         <source>Output B Cur. revise</source>
         <translation>输出B相电流系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2013"/>
-        <location filename="../mywidget.ui" line="2360"/>
+        <location filename="../mywidget.ui" line="2038"/>
+        <location filename="../mywidget.ui" line="2390"/>
         <location filename="../mywidget.cpp" line="5189"/>
         <location filename="../mywidget.cpp" line="5259"/>
         <source>DC bus flag</source>
         <translation>母线状态字</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2026"/>
+        <location filename="../mywidget.ui" line="2051"/>
         <source>Debug memery var. 2</source>
         <translation>调试内存变量2</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2034"/>
+        <location filename="../mywidget.ui" line="2059"/>
         <source>Output C Cur. revise</source>
         <translation>输出C相电流系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2050"/>
-        <location filename="../mywidget.ui" line="2336"/>
+        <location filename="../mywidget.ui" line="2075"/>
+        <location filename="../mywidget.ui" line="2366"/>
         <location filename="../mywidget.cpp" line="5195"/>
         <location filename="../mywidget.cpp" line="5253"/>
         <source>INT main flag</source>
         <translation>中断状态字</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2063"/>
-        <location filename="../mywidget.ui" line="2296"/>
-        <location filename="../mywidget.ui" line="2320"/>
+        <location filename="../mywidget.ui" line="2088"/>
+        <location filename="../mywidget.ui" line="2326"/>
+        <location filename="../mywidget.ui" line="2350"/>
         <source>Debug memery var. 3</source>
         <translation>调试内存变量3</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2071"/>
+        <location filename="../mywidget.ui" line="2096"/>
         <source>INV A Vol. revise</source>
         <translation>逆变A相电压系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2087"/>
-        <location filename="../mywidget.ui" line="2392"/>
+        <location filename="../mywidget.ui" line="2112"/>
+        <location filename="../mywidget.ui" line="2422"/>
         <source>Parallel signal</source>
         <translation>并机状态字</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2100"/>
+        <location filename="../mywidget.ui" line="2125"/>
         <source>Input Vol. revise</source>
         <translation>输入电压系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2108"/>
+        <location filename="../mywidget.ui" line="2133"/>
         <source>INV B Vol. revise</source>
         <translation>逆变B相电压系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2124"/>
+        <location filename="../mywidget.ui" line="2149"/>
         <location filename="../mywidget.cpp" line="5207"/>
         <location filename="../mywidget.cpp" line="5325"/>
         <source>Monitor Order</source>
         <translation>监控命令字</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2137"/>
+        <location filename="../mywidget.ui" line="2162"/>
         <source>Input. Cur. revise</source>
         <translation>输入电流系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2145"/>
+        <location filename="../mywidget.ui" line="2170"/>
         <source>INV C Vol. revise</source>
         <translation>逆变C相电压系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2161"/>
+        <location filename="../mywidget.ui" line="2186"/>
         <source>BatInfor</source>
         <translation>电池信息字</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2169"/>
+        <location filename="../mywidget.ui" line="2194"/>
         <source>INV A inductance Cur. revise</source>
         <translation>逆变A相电感电流系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2177"/>
-        <location filename="../mywidget.ui" line="2400"/>
+        <location filename="../mywidget.ui" line="2202"/>
+        <location filename="../mywidget.ui" line="2430"/>
         <source>Bat state</source>
         <translation>电池状态字</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2185"/>
+        <location filename="../mywidget.ui" line="2210"/>
         <source>INV B inductance Cur. revise</source>
         <translation>逆变B相电感电流系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2193"/>
+        <location filename="../mywidget.ui" line="2218"/>
         <source>INV C inductance Cur. revise</source>
         <translation>逆变C相电感电流系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2203"/>
+        <location filename="../mywidget.ui" line="2228"/>
         <source>DCDC Debug</source>
         <translation>DCDC 调试</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2328"/>
+        <location filename="../mywidget.ui" line="2358"/>
         <source>Current ID</source>
         <translation>当前模块号</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2352"/>
+        <location filename="../mywidget.ui" line="2382"/>
         <source>Monitor order</source>
         <translation>监控命令字</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2368"/>
+        <location filename="../mywidget.ui" line="2398"/>
         <source>DCONV logic </source>
         <translation>开关机状态字2 </translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2376"/>
+        <location filename="../mywidget.ui" line="2406"/>
         <source>Bat infor</source>
         <translation>电池信息字</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2612"/>
+        <location filename="../mywidget.ui" line="2642"/>
         <source>100kW</source>
         <translation>100kW</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="3024"/>
-        <location filename="../mywidget.ui" line="3179"/>
-        <location filename="../mywidget.ui" line="3212"/>
-        <location filename="../mywidget.ui" line="3245"/>
-        <location filename="../mywidget.ui" line="3305"/>
-        <location filename="../mywidget.ui" line="3353"/>
-        <location filename="../mywidget.ui" line="3401"/>
-        <location filename="../mywidget.ui" line="3571"/>
+        <location filename="../mywidget.ui" line="3054"/>
+        <location filename="../mywidget.ui" line="3209"/>
+        <location filename="../mywidget.ui" line="3242"/>
+        <location filename="../mywidget.ui" line="3275"/>
+        <location filename="../mywidget.ui" line="3335"/>
+        <location filename="../mywidget.ui" line="3383"/>
+        <location filename="../mywidget.ui" line="3431"/>
+        <location filename="../mywidget.ui" line="3601"/>
         <source>0V</source>
         <translation>0V</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="3058"/>
-        <location filename="../mywidget.ui" line="3113"/>
-        <location filename="../mywidget.ui" line="3146"/>
-        <location filename="../mywidget.ui" line="3278"/>
-        <location filename="../mywidget.ui" line="3605"/>
+        <location filename="../mywidget.ui" line="3088"/>
+        <location filename="../mywidget.ui" line="3143"/>
+        <location filename="../mywidget.ui" line="3176"/>
+        <location filename="../mywidget.ui" line="3308"/>
+        <location filename="../mywidget.ui" line="3635"/>
         <source>0A</source>
         <translation>0A</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="3068"/>
-        <location filename="../mywidget.ui" line="3814"/>
+        <location filename="../mywidget.ui" line="3098"/>
+        <location filename="../mywidget.ui" line="3844"/>
         <source>0kW</source>
         <translation>0kW</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="3338"/>
-        <location filename="../mywidget.ui" line="3386"/>
-        <location filename="../mywidget.ui" line="3434"/>
+        <location filename="../mywidget.ui" line="3368"/>
+        <location filename="../mywidget.ui" line="3416"/>
+        <location filename="../mywidget.ui" line="3464"/>
         <source>0A </source>
         <translation>0A </translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="3632"/>
+        <location filename="../mywidget.ui" line="3662"/>
         <source>Current mode:CP</source>
         <translation>当前模式：CP</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="3645"/>
+        <location filename="../mywidget.ui" line="3675"/>
         <source>PV:</source>
         <translation>光伏：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="3658"/>
+        <location filename="../mywidget.ui" line="3688"/>
         <source>Battery charging:</source>
         <translation>电池充电量：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="3671"/>
+        <location filename="../mywidget.ui" line="3701"/>
         <source>Battery discharging:</source>
         <translation>电池放电量：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="3684"/>
-        <location filename="../mywidget.ui" line="3697"/>
-        <location filename="../mywidget.ui" line="3710"/>
-        <location filename="../mywidget.ui" line="3723"/>
-        <location filename="../mywidget.ui" line="3765"/>
-        <location filename="../mywidget.ui" line="3791"/>
+        <location filename="../mywidget.ui" line="3714"/>
+        <location filename="../mywidget.ui" line="3727"/>
+        <location filename="../mywidget.ui" line="3740"/>
+        <location filename="../mywidget.ui" line="3753"/>
+        <location filename="../mywidget.ui" line="3795"/>
+        <location filename="../mywidget.ui" line="3821"/>
         <source>0kWh</source>
         <translation>0kWh</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="3736"/>
+        <location filename="../mywidget.ui" line="3766"/>
         <source>Grid charging:</source>
         <translation>电网充电量：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="3749"/>
+        <location filename="../mywidget.ui" line="3779"/>
         <source>Load:</source>
         <translation>负载：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="3778"/>
+        <location filename="../mywidget.ui" line="3808"/>
         <source>Grid discharging:</source>
         <translation>电网放电量：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="3807"/>
+        <location filename="../mywidget.ui" line="3837"/>
         <source>Power meter</source>
         <translation>点表功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="3833"/>
+        <location filename="../mywidget.ui" line="3863"/>
         <source>SOC:</source>
         <translation>剩余电量：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4825"/>
+        <location filename="../mywidget.ui" line="4855"/>
         <source>Please enter search keywords</source>
         <translation>请输入搜索关键词</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7529"/>
+        <location filename="../mywidget.ui" line="7590"/>
         <source>A1: 
 Generator turn on voltage(A1)
 B1: 
@@ -992,7 +992,7 @@ B1:
 柴发关闭电压（B1）</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7749"/>
+        <location filename="../mywidget.ui" line="7830"/>
         <source>A1: Generator turn on voltage
 B1: Generator turn off voltage
 A1 Setting range: [250, 900]
@@ -1005,56 +1005,56 @@ B1 设定范围： [250,900]
 设定规则：B1 - A1 ≥ 10V</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1424"/>
+        <location filename="../mywidget.ui" line="1439"/>
         <source>CV Parallel</source>
         <translation>恒压并机</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="105"/>
-        <location filename="../mywidget.ui" line="2572"/>
+        <location filename="../mywidget.ui" line="2602"/>
         <location filename="../mywidget.cpp" line="1093"/>
         <source>Change Language</source>
         <translation>切换语言</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="488"/>
+        <location filename="../mywidget.ui" line="498"/>
         <source>BMS protocol</source>
         <translation>电池协议</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1031"/>
+        <location filename="../mywidget.ui" line="1046"/>
         <location filename="../mywidget.cpp" line="4874"/>
         <source>Rack</source>
         <translation>机架</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1068"/>
+        <location filename="../mywidget.ui" line="1083"/>
         <location filename="../mywidget.cpp" line="4807"/>
         <source>Transformer Turns Ratio</source>
         <translation>变压器变比</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1555"/>
+        <location filename="../mywidget.ui" line="1575"/>
         <source>ATS Signal</source>
         <translation>柴发信号</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1571"/>
+        <location filename="../mywidget.ui" line="1591"/>
         <source>Fire Fighting</source>
         <translation>消防</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="3888"/>
+        <location filename="../mywidget.ui" line="3918"/>
         <source>MPS Data</source>
         <translation>MPS数据</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4013"/>
-        <location filename="../mywidget.ui" line="4447"/>
-        <location filename="../mywidget.ui" line="4681"/>
-        <location filename="../mywidget.ui" line="4741"/>
-        <location filename="../mywidget.ui" line="7593"/>
-        <location filename="../mywidget.ui" line="8399"/>
+        <location filename="../mywidget.ui" line="4043"/>
+        <location filename="../mywidget.ui" line="4477"/>
+        <location filename="../mywidget.ui" line="4711"/>
+        <location filename="../mywidget.ui" line="4771"/>
+        <location filename="../mywidget.ui" line="7669"/>
+        <location filename="../mywidget.ui" line="8495"/>
         <location filename="../mywidget.cpp" line="3093"/>
         <location filename="../mywidget.cpp" line="3098"/>
         <location filename="../mywidget.cpp" line="4257"/>
@@ -1062,140 +1062,140 @@ B1 设定范围： [250,900]
         <translation>1</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4040"/>
-        <location filename="../mywidget.ui" line="4474"/>
-        <location filename="../mywidget.ui" line="4686"/>
-        <location filename="../mywidget.ui" line="4746"/>
-        <location filename="../mywidget.ui" line="8404"/>
+        <location filename="../mywidget.ui" line="4070"/>
+        <location filename="../mywidget.ui" line="4504"/>
+        <location filename="../mywidget.ui" line="4716"/>
+        <location filename="../mywidget.ui" line="4776"/>
+        <location filename="../mywidget.ui" line="8500"/>
         <source>2</source>
         <translation>2</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4058"/>
-        <location filename="../mywidget.ui" line="4492"/>
-        <location filename="../mywidget.ui" line="4691"/>
-        <location filename="../mywidget.ui" line="4751"/>
-        <location filename="../mywidget.ui" line="8409"/>
+        <location filename="../mywidget.ui" line="4088"/>
+        <location filename="../mywidget.ui" line="4522"/>
+        <location filename="../mywidget.ui" line="4721"/>
+        <location filename="../mywidget.ui" line="4781"/>
+        <location filename="../mywidget.ui" line="8505"/>
         <source>3</source>
         <translation>3</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4076"/>
-        <location filename="../mywidget.ui" line="4510"/>
-        <location filename="../mywidget.ui" line="4696"/>
-        <location filename="../mywidget.ui" line="4756"/>
-        <location filename="../mywidget.ui" line="8414"/>
+        <location filename="../mywidget.ui" line="4106"/>
+        <location filename="../mywidget.ui" line="4540"/>
+        <location filename="../mywidget.ui" line="4726"/>
+        <location filename="../mywidget.ui" line="4786"/>
+        <location filename="../mywidget.ui" line="8510"/>
         <source>4</source>
         <translation>4</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4094"/>
-        <location filename="../mywidget.ui" line="4528"/>
-        <location filename="../mywidget.ui" line="4701"/>
-        <location filename="../mywidget.ui" line="4761"/>
-        <location filename="../mywidget.ui" line="8419"/>
+        <location filename="../mywidget.ui" line="4124"/>
+        <location filename="../mywidget.ui" line="4558"/>
+        <location filename="../mywidget.ui" line="4731"/>
+        <location filename="../mywidget.ui" line="4791"/>
+        <location filename="../mywidget.ui" line="8515"/>
         <source>5</source>
         <translation>5</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4112"/>
-        <location filename="../mywidget.ui" line="4546"/>
-        <location filename="../mywidget.ui" line="4706"/>
-        <location filename="../mywidget.ui" line="4766"/>
-        <location filename="../mywidget.ui" line="8424"/>
+        <location filename="../mywidget.ui" line="4142"/>
+        <location filename="../mywidget.ui" line="4576"/>
+        <location filename="../mywidget.ui" line="4736"/>
+        <location filename="../mywidget.ui" line="4796"/>
+        <location filename="../mywidget.ui" line="8520"/>
         <source>6</source>
         <translation>6</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4136"/>
-        <location filename="../mywidget.ui" line="4570"/>
-        <location filename="../mywidget.ui" line="4711"/>
-        <location filename="../mywidget.ui" line="8429"/>
+        <location filename="../mywidget.ui" line="4166"/>
+        <location filename="../mywidget.ui" line="4600"/>
+        <location filename="../mywidget.ui" line="4741"/>
+        <location filename="../mywidget.ui" line="8525"/>
         <source>7</source>
         <translation>7</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4154"/>
-        <location filename="../mywidget.ui" line="4588"/>
-        <location filename="../mywidget.ui" line="4716"/>
-        <location filename="../mywidget.ui" line="8434"/>
+        <location filename="../mywidget.ui" line="4184"/>
+        <location filename="../mywidget.ui" line="4618"/>
+        <location filename="../mywidget.ui" line="4746"/>
+        <location filename="../mywidget.ui" line="8530"/>
         <source>8</source>
         <translation>8</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4172"/>
-        <location filename="../mywidget.ui" line="4606"/>
-        <location filename="../mywidget.ui" line="4721"/>
+        <location filename="../mywidget.ui" line="4202"/>
+        <location filename="../mywidget.ui" line="4636"/>
+        <location filename="../mywidget.ui" line="4751"/>
         <source>9</source>
         <translation>9</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4190"/>
-        <location filename="../mywidget.ui" line="4624"/>
-        <location filename="../mywidget.ui" line="4726"/>
+        <location filename="../mywidget.ui" line="4220"/>
+        <location filename="../mywidget.ui" line="4654"/>
+        <location filename="../mywidget.ui" line="4756"/>
         <source>10</source>
         <translation>10</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4208"/>
-        <location filename="../mywidget.ui" line="4642"/>
-        <location filename="../mywidget.ui" line="4731"/>
+        <location filename="../mywidget.ui" line="4238"/>
+        <location filename="../mywidget.ui" line="4672"/>
+        <location filename="../mywidget.ui" line="4761"/>
         <source>11</source>
         <translation>11</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4226"/>
-        <location filename="../mywidget.ui" line="4660"/>
-        <location filename="../mywidget.ui" line="4736"/>
+        <location filename="../mywidget.ui" line="4256"/>
+        <location filename="../mywidget.ui" line="4690"/>
+        <location filename="../mywidget.ui" line="4766"/>
         <source>12</source>
         <translation>12</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4317"/>
+        <location filename="../mywidget.ui" line="4347"/>
         <source>Converter</source>
         <translation>变流器</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4335"/>
+        <location filename="../mywidget.ui" line="4365"/>
         <source>PV</source>
         <translation>PV</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4353"/>
+        <location filename="../mywidget.ui" line="4383"/>
         <source>Grid</source>
         <translation>电网</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4371"/>
+        <location filename="../mywidget.ui" line="4401"/>
         <source>Load</source>
         <translation>负载</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4385"/>
+        <location filename="../mywidget.ui" line="4415"/>
         <source>MPS State</source>
         <translation>MPS 状态</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4779"/>
+        <location filename="../mywidget.ui" line="4809"/>
         <source>MPS Alarm</source>
         <translation>MPS 告警</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4844"/>
+        <location filename="../mywidget.ui" line="4874"/>
         <source>Search</source>
         <translation>搜索</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4859"/>
+        <location filename="../mywidget.ui" line="4889"/>
         <source>Battery Data</source>
         <translation>电池数据</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4925"/>
-        <location filename="../mywidget.ui" line="5474"/>
-        <location filename="../mywidget.ui" line="7815"/>
-        <location filename="../mywidget.ui" line="7830"/>
-        <location filename="../mywidget.ui" line="8439"/>
+        <location filename="../mywidget.ui" line="4955"/>
+        <location filename="../mywidget.ui" line="5504"/>
+        <location filename="../mywidget.ui" line="7901"/>
+        <location filename="../mywidget.ui" line="7916"/>
+        <location filename="../mywidget.ui" line="8535"/>
         <location filename="../mywidget.cpp" line="1274"/>
         <location filename="../mywidget.cpp" line="1309"/>
         <location filename="../mywidget.cpp" line="1345"/>
@@ -1207,53 +1207,53 @@ B1 设定范围： [250,900]
         <translation>名称</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4943"/>
+        <location filename="../mywidget.ui" line="4973"/>
         <source>Bat voltage</source>
         <translation>电池电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4961"/>
+        <location filename="../mywidget.ui" line="4991"/>
         <location filename="../mywidget.cpp" line="2167"/>
         <source>Bat current</source>
         <translation>电池电流</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4979"/>
+        <location filename="../mywidget.ui" line="5009"/>
         <location filename="../mywidget.cpp" line="2171"/>
         <source>SOC</source>
         <translation>SOC</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4997"/>
+        <location filename="../mywidget.ui" line="5027"/>
         <location filename="../mywidget.cpp" line="2175"/>
         <source>SOH</source>
         <translation>SOH</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="5015"/>
+        <location filename="../mywidget.ui" line="5045"/>
         <source>Cell voltage (max)</source>
         <translation>单体最高电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="5033"/>
+        <location filename="../mywidget.ui" line="5063"/>
         <source>Cell voltage (min)</source>
         <translation>单体最低电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="5051"/>
+        <location filename="../mywidget.ui" line="5081"/>
         <source>Cell temp. (max)</source>
         <translation>单体最高温度</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="5069"/>
+        <location filename="../mywidget.ui" line="5099"/>
         <source>Cell temp. (min)</source>
         <translation>单体最低温度</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="5109"/>
-        <location filename="../mywidget.ui" line="5706"/>
-        <location filename="../mywidget.ui" line="7820"/>
-        <location filename="../mywidget.ui" line="7835"/>
+        <location filename="../mywidget.ui" line="5139"/>
+        <location filename="../mywidget.ui" line="5736"/>
+        <location filename="../mywidget.ui" line="7906"/>
+        <location filename="../mywidget.ui" line="7921"/>
         <location filename="../mywidget.cpp" line="1238"/>
         <location filename="../mywidget.cpp" line="1274"/>
         <location filename="../mywidget.cpp" line="1309"/>
@@ -1265,71 +1265,71 @@ B1 设定范围： [250,900]
         <translation>值</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="5131"/>
-        <location filename="../mywidget.ui" line="5150"/>
-        <location filename="../mywidget.ui" line="5169"/>
-        <location filename="../mywidget.ui" line="5188"/>
-        <location filename="../mywidget.ui" line="5207"/>
-        <location filename="../mywidget.ui" line="5226"/>
-        <location filename="../mywidget.ui" line="5245"/>
-        <location filename="../mywidget.ui" line="5264"/>
-        <location filename="../mywidget.ui" line="5731"/>
-        <location filename="../mywidget.ui" line="5750"/>
-        <location filename="../mywidget.ui" line="5769"/>
-        <location filename="../mywidget.ui" line="5788"/>
-        <location filename="../mywidget.ui" line="5807"/>
-        <location filename="../mywidget.ui" line="5826"/>
-        <location filename="../mywidget.ui" line="7954"/>
-        <location filename="../mywidget.ui" line="8036"/>
-        <location filename="../mywidget.ui" line="8109"/>
-        <location filename="../mywidget.ui" line="8173"/>
-        <location filename="../mywidget.ui" line="8237"/>
+        <location filename="../mywidget.ui" line="5161"/>
+        <location filename="../mywidget.ui" line="5180"/>
+        <location filename="../mywidget.ui" line="5199"/>
+        <location filename="../mywidget.ui" line="5218"/>
+        <location filename="../mywidget.ui" line="5237"/>
+        <location filename="../mywidget.ui" line="5256"/>
+        <location filename="../mywidget.ui" line="5275"/>
+        <location filename="../mywidget.ui" line="5294"/>
+        <location filename="../mywidget.ui" line="5761"/>
+        <location filename="../mywidget.ui" line="5780"/>
+        <location filename="../mywidget.ui" line="5799"/>
+        <location filename="../mywidget.ui" line="5818"/>
+        <location filename="../mywidget.ui" line="5837"/>
+        <location filename="../mywidget.ui" line="5856"/>
+        <location filename="../mywidget.ui" line="8040"/>
+        <location filename="../mywidget.ui" line="8122"/>
+        <location filename="../mywidget.ui" line="8195"/>
+        <location filename="../mywidget.ui" line="8259"/>
+        <location filename="../mywidget.ui" line="8323"/>
         <location filename="../mywidget.cpp" line="3078"/>
         <location filename="../mywidget.cpp" line="4233"/>
         <source>0</source>
         <translation>0</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="5289"/>
-        <location filename="../mywidget.ui" line="5883"/>
-        <location filename="../mywidget.ui" line="7825"/>
-        <location filename="../mywidget.ui" line="7840"/>
+        <location filename="../mywidget.ui" line="5319"/>
+        <location filename="../mywidget.ui" line="5913"/>
+        <location filename="../mywidget.ui" line="7911"/>
+        <location filename="../mywidget.ui" line="7926"/>
         <location filename="../mywidget.cpp" line="1434"/>
         <location filename="../mywidget.cpp" line="1708"/>
         <source>Unit</source>
         <translation>单位</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="5325"/>
-        <location filename="../mywidget.ui" line="5907"/>
-        <location filename="../mywidget.ui" line="5931"/>
-        <location filename="../mywidget.ui" line="7425"/>
-        <location filename="../mywidget.ui" line="8289"/>
-        <location filename="../mywidget.ui" line="8321"/>
+        <location filename="../mywidget.ui" line="5355"/>
+        <location filename="../mywidget.ui" line="5937"/>
+        <location filename="../mywidget.ui" line="5961"/>
+        <location filename="../mywidget.ui" line="7475"/>
+        <location filename="../mywidget.ui" line="8375"/>
+        <location filename="../mywidget.ui" line="8407"/>
         <location filename="../mywidget.cpp" line="1449"/>
         <source>A</source>
         <translation>A</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="5379"/>
-        <location filename="../mywidget.ui" line="5397"/>
+        <location filename="../mywidget.ui" line="5409"/>
+        <location filename="../mywidget.ui" line="5427"/>
         <source>mV</source>
         <translation>mV</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="5415"/>
-        <location filename="../mywidget.ui" line="5433"/>
+        <location filename="../mywidget.ui" line="5445"/>
+        <location filename="../mywidget.ui" line="5463"/>
         <source>℃</source>
         <translation>℃</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="5498"/>
+        <location filename="../mywidget.ui" line="5528"/>
         <location filename="../mywidget.cpp" line="2195"/>
         <source>Charging current limite</source>
         <translation>充电电流上限</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="5522"/>
+        <location filename="../mywidget.ui" line="5552"/>
         <location filename="../mywidget.cpp" line="2199"/>
         <source>Discharging current limite</source>
         <translation>放电电流上限</translation>
@@ -1351,47 +1351,47 @@ B1 设定范围： [250,900]
         <translation type="vanished">可放电电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6099"/>
+        <location filename="../mywidget.ui" line="6129"/>
         <source>prompt:</source>
         <translation>提示：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6140"/>
+        <location filename="../mywidget.ui" line="6170"/>
         <source>Normal</source>
         <translation>正常</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6175"/>
+        <location filename="../mywidget.ui" line="6205"/>
         <source>Warnning1</source>
         <translation>告警1</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6217"/>
+        <location filename="../mywidget.ui" line="6247"/>
         <source>Warnning2</source>
         <translation>告警2</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6252"/>
+        <location filename="../mywidget.ui" line="6282"/>
         <source>Warnning3</source>
         <translation>告警3</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6293"/>
+        <location filename="../mywidget.ui" line="6323"/>
         <source>Alarm level:</source>
         <translation>告警等级：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6334"/>
+        <location filename="../mywidget.ui" line="6364"/>
         <source>Charge 
 enable</source>
         <translation>充电使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1579"/>
-        <location filename="../mywidget.ui" line="1623"/>
-        <location filename="../mywidget.ui" line="1667"/>
-        <location filename="../mywidget.ui" line="6362"/>
-        <location filename="../mywidget.ui" line="6418"/>
+        <location filename="../mywidget.ui" line="1599"/>
+        <location filename="../mywidget.ui" line="1643"/>
+        <location filename="../mywidget.ui" line="1687"/>
+        <location filename="../mywidget.ui" line="6392"/>
+        <location filename="../mywidget.ui" line="6448"/>
         <location filename="../mywidget.cpp" line="2992"/>
         <location filename="../mywidget.cpp" line="4904"/>
         <location filename="../mywidget.cpp" line="4912"/>
@@ -1402,211 +1402,211 @@ enable</source>
         <translation>使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6390"/>
+        <location filename="../mywidget.ui" line="6420"/>
         <source>Discharge 
 enable</source>
         <translation>放电使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6489"/>
+        <location filename="../mywidget.ui" line="6524"/>
         <source>Data report</source>
         <translation>数据报表</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6597"/>
+        <location filename="../mywidget.ui" line="6637"/>
         <source>yyyy-MM-dd</source>
         <translation>yyyy-MM-dd</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6629"/>
+        <location filename="../mywidget.ui" line="6669"/>
         <source>Y  -</source>
         <translation>年 -</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6648"/>
+        <location filename="../mywidget.ui" line="6688"/>
         <source>M  -</source>
         <translation>月 -</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6667"/>
+        <location filename="../mywidget.ui" line="6707"/>
         <source>D  -</source>
         <translation>日  -</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6693"/>
+        <location filename="../mywidget.ui" line="6733"/>
         <source>Y  +</source>
         <translation>年 +</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6712"/>
+        <location filename="../mywidget.ui" line="6752"/>
         <source>M  +</source>
         <translation>月 +</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6731"/>
+        <location filename="../mywidget.ui" line="6771"/>
         <source>D  +</source>
         <translation>日  +</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6747"/>
+        <location filename="../mywidget.ui" line="6787"/>
         <source>Export Data</source>
         <translation>导出数据</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6767"/>
+        <location filename="../mywidget.ui" line="6807"/>
         <source>Note:</source>
         <translation>提示：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6787"/>
+        <location filename="../mywidget.ui" line="6827"/>
         <source>Log.csv</source>
         <translation>Log.csv</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6808"/>
+        <location filename="../mywidget.ui" line="6848"/>
         <source>Out put file:</source>
         <translation>输出文件：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6829"/>
+        <location filename="../mywidget.ui" line="6869"/>
         <source>HistoryRecord.csv</source>
         <translation>HistoryRecord.csv</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6850"/>
+        <location filename="../mywidget.ui" line="6890"/>
         <source>Report.csv</source>
         <translation>Report.csv</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6885"/>
+        <location filename="../mywidget.ui" line="6925"/>
         <source>Data To Export</source>
         <translation>导出数据</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6934"/>
+        <location filename="../mywidget.ui" line="6974"/>
         <source>static:</source>
         <translation>状态：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6975"/>
+        <location filename="../mywidget.ui" line="7015"/>
         <source>udisk disconnect!</source>
         <translation>U盘未插入！</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7009"/>
+        <location filename="../mywidget.ui" line="7049"/>
         <location filename="../mywidget.cpp" line="5390"/>
         <source>HistoricalFailure</source>
         <translation>历史记录</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7032"/>
+        <location filename="../mywidget.ui" line="7072"/>
         <location filename="../mywidget.cpp" line="5396"/>
         <source>OperationLog</source>
         <translation>操作日志</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7070"/>
+        <location filename="../mywidget.ui" line="7110"/>
         <location filename="../mywidget.cpp" line="5402"/>
         <source>Coulombmeter report</source>
         <translation>电量统计表</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7099"/>
+        <location filename="../mywidget.ui" line="7139"/>
         <location filename="../mywidget.cpp" line="5408"/>
         <source>Eject Udisk</source>
         <translation>退出U盘</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7114"/>
+        <location filename="../mywidget.ui" line="7154"/>
         <source>History Record</source>
         <translation>历史记录</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7146"/>
+        <location filename="../mywidget.ui" line="7186"/>
         <source>Operation Log</source>
         <translation>操作日志</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7206"/>
+        <location filename="../mywidget.ui" line="7251"/>
         <source>DC/AC Parameter</source>
         <translation>DC/AC参数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7257"/>
+        <location filename="../mywidget.ui" line="7307"/>
         <location filename="../mywidget.cpp" line="3073"/>
         <source>Grid connected mode of PCS</source>
         <translation>PCS并网方式</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7273"/>
+        <location filename="../mywidget.ui" line="7323"/>
         <location filename="../mywidget.cpp" line="3115"/>
         <source>Control mode</source>
         <translation>控制模式</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7289"/>
+        <location filename="../mywidget.ui" line="7339"/>
         <source>Constant power (AC)</source>
         <translation>恒功率(AC)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7305"/>
+        <location filename="../mywidget.ui" line="7355"/>
         <location filename="../mywidget.cpp" line="3121"/>
         <source>Machine number</source>
         <translation>设备号</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7321"/>
+        <location filename="../mywidget.ui" line="7371"/>
         <location filename="../mywidget.cpp" line="3083"/>
         <source>Charging and discharging</source>
         <translation>充放电</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7337"/>
+        <location filename="../mywidget.ui" line="7387"/>
         <source>Parallel </source>
         <translation>并机 </translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7353"/>
+        <location filename="../mywidget.ui" line="7403"/>
         <source>Operational mode</source>
         <translation>操作模式</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7369"/>
+        <location filename="../mywidget.ui" line="7419"/>
         <location filename="../mywidget.cpp" line="3131"/>
         <source>Run time enable</source>
         <translation>运行时段使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7385"/>
+        <location filename="../mywidget.ui" line="7435"/>
         <location filename="../mywidget.cpp" line="3093"/>
         <source>Output power factor</source>
         <translation>输出功率因素</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7401"/>
+        <location filename="../mywidget.ui" line="7451"/>
         <location filename="../mywidget.cpp" line="3098"/>
         <source>Output reactive power</source>
         <translation>输出无功功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7417"/>
+        <location filename="../mywidget.ui" line="7467"/>
         <location filename="../mywidget.cpp" line="3103"/>
         <source>Constant current</source>
         <translation>恒流</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7433"/>
+        <location filename="../mywidget.ui" line="7483"/>
         <location filename="../mywidget.cpp" line="3108"/>
         <source>Constant voltage</source>
         <translation>恒压</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7453"/>
+        <location filename="../mywidget.ui" line="7503"/>
         <source>DC/DC Parameter</source>
         <translation>DC/DC参数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7463"/>
+        <location filename="../mywidget.ui" line="7519"/>
         <source>Battery setup</source>
         <translation>电池设置</translation>
     </message>
@@ -1621,52 +1621,52 @@ B1:
 浮充电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7547"/>
+        <location filename="../mywidget.ui" line="7613"/>
         <source>Power on</source>
         <translation>上电</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7560"/>
+        <location filename="../mywidget.ui" line="7631"/>
         <source>Power off</source>
         <translation>下电</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7610"/>
+        <location filename="../mywidget.ui" line="7686"/>
         <source>DOD_OnGrid(%):</source>
         <translation>并网DOD(%)：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7618"/>
+        <location filename="../mywidget.ui" line="7694"/>
         <source>DOD_OffGrid(%):</source>
         <translation>离网DOD(%)：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7626"/>
+        <location filename="../mywidget.ui" line="7702"/>
         <source>Charge Volt. upper Limit(V)</source>
         <translation>充电电压上限(V)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7634"/>
+        <location filename="../mywidget.ui" line="7710"/>
         <source>Charge Volt. upper Limit delta(V)</source>
         <translation>充电电压上限回差(V)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7642"/>
+        <location filename="../mywidget.ui" line="7718"/>
         <source>Discharge Volt. lower Limit(V)</source>
         <translation>放电电压下限(V)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7650"/>
+        <location filename="../mywidget.ui" line="7726"/>
         <source>Discharge Volt. lower Limit delta(V)</source>
         <translation>放电电压下限回差(V)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7666"/>
+        <location filename="../mywidget.ui" line="7742"/>
         <source>Charge Current Limit(A)</source>
         <translation>充电电流限制(A)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7674"/>
+        <location filename="../mywidget.ui" line="7750"/>
         <source>Discharge Current Limit(A)</source>
         <translation>放电电流限制(A)</translation>
     </message>
@@ -1679,12 +1679,12 @@ B1:
         <translation type="vanished">均充电压(V)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7682"/>
+        <location filename="../mywidget.ui" line="7758"/>
         <source>Generator turn off SOC(B1)</source>
         <translation>发电机关闭SOC(B1)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7690"/>
+        <location filename="../mywidget.ui" line="7766"/>
         <source>Generator turn on SOC(A1)</source>
         <translation>发电机开启SOC(A1)</translation>
     </message>
@@ -1713,121 +1713,121 @@ B1 - A1 ≥ 30 %
 </translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7778"/>
-        <location filename="../mywidget.ui" line="7783"/>
-        <location filename="../mywidget.ui" line="7788"/>
-        <location filename="../mywidget.ui" line="7793"/>
-        <location filename="../mywidget.ui" line="7798"/>
-        <location filename="../mywidget.ui" line="7803"/>
-        <location filename="../mywidget.ui" line="7808"/>
+        <location filename="../mywidget.ui" line="7864"/>
+        <location filename="../mywidget.ui" line="7869"/>
+        <location filename="../mywidget.ui" line="7874"/>
+        <location filename="../mywidget.ui" line="7879"/>
+        <location filename="../mywidget.ui" line="7884"/>
+        <location filename="../mywidget.ui" line="7889"/>
+        <location filename="../mywidget.ui" line="7894"/>
         <source>New Row</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7845"/>
+        <location filename="../mywidget.ui" line="7931"/>
         <location filename="../mywidget.cpp" line="3262"/>
         <source>Capacity</source>
         <translation>容量</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7853"/>
+        <location filename="../mywidget.ui" line="7939"/>
         <source>Ah</source>
         <translation>Ah</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7861"/>
+        <location filename="../mywidget.ui" line="7947"/>
         <source>Grid off EOD</source>
         <translation>离网EOD</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7877"/>
+        <location filename="../mywidget.ui" line="7963"/>
         <source>Cell number(2V)</source>
         <translation>电池节数(2V)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7893"/>
+        <location filename="../mywidget.ui" line="7979"/>
         <source>Grid on EOD</source>
         <translation>并网EOD</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7909"/>
+        <location filename="../mywidget.ui" line="7995"/>
         <location filename="../mywidget.cpp" line="3272"/>
         <source>Battery float voltage</source>
         <translation>电池浮充电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7925"/>
+        <location filename="../mywidget.ui" line="8011"/>
         <source>Shutdown voltage point</source>
         <translation>关机电压点</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7991"/>
+        <location filename="../mywidget.ui" line="8077"/>
         <location filename="../mywidget.cpp" line="3277"/>
         <source>Battery filling voltage</source>
         <translation>电池均充电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8007"/>
+        <location filename="../mywidget.ui" line="8093"/>
         <source>Mending center point</source>
         <translation>温补中心点</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8073"/>
+        <location filename="../mywidget.ui" line="8159"/>
         <source>Charge limiting value</source>
         <translation>充电限流值</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8081"/>
-        <location filename="../mywidget.ui" line="8145"/>
+        <location filename="../mywidget.ui" line="8167"/>
+        <location filename="../mywidget.ui" line="8231"/>
         <source>C</source>
         <translation>C</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8089"/>
+        <location filename="../mywidget.ui" line="8175"/>
         <source>Temperature filling coefficient</source>
         <translation>温补系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8137"/>
+        <location filename="../mywidget.ui" line="8223"/>
         <source>Discharge limiting value</source>
         <translation>放电限流值</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8153"/>
+        <location filename="../mywidget.ui" line="8239"/>
         <source>Mending allowable setting</source>
         <translation>温补允许设置</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8201"/>
+        <location filename="../mywidget.ui" line="8287"/>
         <location filename="../mywidget.cpp" line="3292"/>
         <source>Generator turn off voltage</source>
         <translation>发电机关闭电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8217"/>
+        <location filename="../mywidget.ui" line="8303"/>
         <source>Temperature alarm upper limit</source>
         <translation>温度告警上限</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8265"/>
+        <location filename="../mywidget.ui" line="8351"/>
         <location filename="../mywidget.cpp" line="3297"/>
         <source>Generator turn on voltage</source>
         <translation>发电机开启电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8281"/>
+        <location filename="../mywidget.ui" line="8367"/>
         <location filename="../mywidget.cpp" line="3337"/>
         <source>Uniform charging and flushing current</source>
         <translation>均充转浮充电流</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8313"/>
+        <location filename="../mywidget.ui" line="8399"/>
         <location filename="../mywidget.cpp" line="3342"/>
         <source>Float turn uniform charging current</source>
         <translation>浮充转均充电流</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8339"/>
+        <location filename="../mywidget.ui" line="8425"/>
         <source>Automatic operation</source>
         <translation>自动运行</translation>
     </message>
@@ -1844,211 +1844,211 @@ B1 - A1 ≥ 30 %
         <translation type="vanished">+</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8372"/>
+        <location filename="../mywidget.ui" line="8463"/>
         <source>SystemInformation</source>
         <translation>系统信息</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8380"/>
+        <location filename="../mywidget.ui" line="8471"/>
         <source>Version:</source>
         <translation>版本号：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8444"/>
+        <location filename="../mywidget.ui" line="8540"/>
         <location filename="../mywidget.cpp" line="1554"/>
         <source>Information</source>
         <translation>系统信息</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8449"/>
+        <location filename="../mywidget.ui" line="8545"/>
         <location filename="../mywidget.cpp" line="4080"/>
         <source>Monitoring software version</source>
         <translation>监控版本</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8457"/>
+        <location filename="../mywidget.ui" line="8553"/>
         <location filename="../mywidget.cpp" line="4084"/>
         <source>DCAC Protocol version</source>
         <translation>DCAC协议版本</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8465"/>
+        <location filename="../mywidget.ui" line="8561"/>
         <location filename="../mywidget.cpp" line="4088"/>
         <source>DCAC Converter software version</source>
         <translation>DCAC变流器版本号</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8473"/>
+        <location filename="../mywidget.ui" line="8569"/>
         <location filename="../mywidget.cpp" line="4092"/>
         <source>DCAC CPLD software version</source>
         <translation>DCAC CPLD软件版本</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8481"/>
+        <location filename="../mywidget.ui" line="8577"/>
         <location filename="../mywidget.cpp" line="4096"/>
         <source>DCDC Protocol version</source>
         <translation>DCDC 协议版本</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8489"/>
+        <location filename="../mywidget.ui" line="8585"/>
         <location filename="../mywidget.cpp" line="4100"/>
         <source>DCDC Converter software version</source>
         <translation>DCDC 变流器软件版本</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8497"/>
+        <location filename="../mywidget.ui" line="8593"/>
         <location filename="../mywidget.cpp" line="4104"/>
         <source>DCDC CPLD software version</source>
         <translation>DCDC CPLD软件版本</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8505"/>
+        <location filename="../mywidget.ui" line="8601"/>
         <source>SN:</source>
         <translation>SN：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8519"/>
+        <location filename="../mywidget.ui" line="8620"/>
         <source>Network:</source>
         <translation>网络：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8555"/>
+        <location filename="../mywidget.ui" line="8656"/>
         <source>interface:</source>
         <translation>接口号：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8571"/>
+        <location filename="../mywidget.ui" line="8672"/>
         <source>Port:</source>
         <translation>端口：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8590"/>
+        <location filename="../mywidget.ui" line="8691"/>
         <source>eth0</source>
         <translation>eth0</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8603"/>
+        <location filename="../mywidget.ui" line="8704"/>
         <source>502</source>
         <translation>502</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8616"/>
+        <location filename="../mywidget.ui" line="8717"/>
         <source>Apply and Reatart system</source>
         <translation>应用并重启系统</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8641"/>
+        <location filename="../mywidget.ui" line="8742"/>
         <location filename="../mywidget.cpp" line="5478"/>
         <source>DHCP</source>
         <translation>自动获取</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8657"/>
+        <location filename="../mywidget.ui" line="8758"/>
         <location filename="../mywidget.cpp" line="5456"/>
         <source>STATIC</source>
         <translation>静态</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8673"/>
+        <location filename="../mywidget.ui" line="8774"/>
         <source>ip:</source>
         <translation>地址：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8686"/>
+        <location filename="../mywidget.ui" line="8787"/>
         <source>netmask:</source>
         <translation>子网掩码：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8699"/>
+        <location filename="../mywidget.ui" line="8800"/>
         <source>gateway:</source>
         <translation>网关：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8712"/>
+        <location filename="../mywidget.ui" line="8813"/>
         <source>Server ip:</source>
         <translation>服务器IP：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8725"/>
+        <location filename="../mywidget.ui" line="8826"/>
         <source>192 . 168 . 1 . 100</source>
         <translation>192 . 168 . 1 . 100</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8738"/>
+        <location filename="../mywidget.ui" line="8839"/>
         <source>255 . 255 . 255 . 0</source>
         <translation>255 . 255 . 255 . 0</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8751"/>
+        <location filename="../mywidget.ui" line="8852"/>
         <source>192 . 168 .  1  . 1</source>
         <translation>192 . 168 .  1  . 1</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8764"/>
+        <location filename="../mywidget.ui" line="8865"/>
         <source> 192 . 168 . 1  . 200</source>
         <translation> 192 . 168 . 1  . 200</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8811"/>
+        <location filename="../mywidget.ui" line="8922"/>
         <source>DCAC converter 
  OFF</source>
         <translation>DCAC 变换器 关闭</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8853"/>
+        <location filename="../mywidget.ui" line="8969"/>
         <source>DCAC converter
  ON</source>
         <translation>DCAC 变换器 开启</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8898"/>
+        <location filename="../mywidget.ui" line="9019"/>
         <source>DCDC converter
  OFF</source>
         <translation>DCDC 变换器 关闭</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8940"/>
+        <location filename="../mywidget.ui" line="9066"/>
         <source>DCDC converter
  ON</source>
         <translation>DCDC 变换器 开启</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9034"/>
+        <location filename="../mywidget.ui" line="9160"/>
         <source>Menu</source>
         <translation>菜单</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9086"/>
+        <location filename="../mywidget.ui" line="9212"/>
         <source>Master_00 Converter turn off</source>
         <translation>主机_00 变流器关闭</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9202"/>
+        <location filename="../mywidget.ui" line="9328"/>
         <source>640V</source>
         <translation>640V</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9259"/>
+        <location filename="../mywidget.ui" line="9385"/>
         <source>780V</source>
         <translation>780V</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9298"/>
+        <location filename="../mywidget.ui" line="9424"/>
         <source>639V</source>
         <translation>639V</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9308"/>
+        <location filename="../mywidget.ui" line="9434"/>
         <source>150A</source>
         <translation>150A</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9368"/>
+        <location filename="../mywidget.ui" line="9494"/>
         <source>246A</source>
         <translation>246A</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9407"/>
+        <location filename="../mywidget.ui" line="9533"/>
         <source>202A</source>
         <translation>202A</translation>
     </message>
@@ -3176,6 +3176,27 @@ fault</source>
         <translation>告警图标：无告警时不显示，轻微告警时显示黄色图表，故障告警时显示红色图标。</translation>
     </message>
     <message>
+        <location filename="../mywidget.cpp" line="2480"/>
+        <location filename="../mywidget.cpp" line="2691"/>
+        <source>The current IGBT temperature of the MPS must not exceed 105 ° C. Otherwise, the MPS will derate and can resume full power operation at 73 ° C after derating.</source>
+        <translation>当前MPS的IGBT温度，IGBT温度不得超过105℃，否则MPS将降额运行，降额后73℃恢复可满功率运行。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2498"/>
+        <source>Leakage current: the current to the ground of the grounding wire. Leakage current below 30mA is normal. Leakage current above 30mA indicates that there is leakage.</source>
+        <translation>漏电流，接地线的对地电流，漏电流30mA以下正常，超过30mA表示存在漏电现象。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2652"/>
+        <source>The positive insulation impedance of the DCDC module is normal when the positive insulation impedance is greater than 1 Mω. When the positive insulation impedance is lower than 1 Mω, the insulation fault or potential security risks exist.</source>
+        <translation>DCDC模块的正绝缘阻抗，正绝缘阻抗大于1MΩ时正常，低于1MΩ时存在绝缘故障或潜在的安全隐患。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2718"/>
+        <source>The negative insulation impedance of the DCDC module is normal when the negative insulation impedance is greater than 1 Mω. When the negative insulation impedance is lower than 1 Mω, the insulation fault or potential security risks exist.</source>
+        <translation>DCDC模块的负绝缘阻抗，负绝缘阻抗大于1MΩ时正常，低于1MΩ时存在绝缘故障或潜在的安全隐患。</translation>
+    </message>
+    <message>
         <location filename="../mywidget.cpp" line="2953"/>
         <location filename="../mywidget.cpp" line="2957"/>
         <location filename="../mywidget.cpp" line="2961"/>
@@ -3773,7 +3794,7 @@ The accuracy is 0.1, which means that the obtained data multiplied by 0.1 gives 
         <translation type="vanished">温度告警上限，电池温度达到该值时将会告警。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7717"/>
+        <location filename="../mywidget.ui" line="7793"/>
         <source>Lead</source>
         <translation>铅酸</translation>
     </message>
@@ -3806,7 +3827,7 @@ The accuracy is 0.1, which means that the obtained data multiplied by 0.1 gives 
         <translation type="vanished">这是&apos;使能&apos;，选择后将在指定的时间以指定的功率开启指定的状态，并在指定的时间结束。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7494"/>
+        <location filename="../mywidget.ui" line="7550"/>
         <location filename="../mywidget.cpp" line="4541"/>
         <source>Lithium</source>
         <translation>锂电</translation>
@@ -4946,9 +4967,9 @@ countercurrent</source>
         <translation>输入干接点1响应动作</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1601"/>
-        <location filename="../mywidget.ui" line="1645"/>
-        <location filename="../mywidget.ui" line="1689"/>
+        <location filename="../mywidget.ui" line="1621"/>
+        <location filename="../mywidget.ui" line="1665"/>
+        <location filename="../mywidget.ui" line="1709"/>
         <location filename="../mywidget.cpp" line="4972"/>
         <location filename="../mywidget.cpp" line="4975"/>
         <location filename="../mywidget.cpp" line="4978"/>
@@ -5461,7 +5482,7 @@ countercurrent</source>
         <translation>这是通过CAN/485/TCP通讯协议从BMS上传的放电电流上限，当前电池组所允许通过的最大放电电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="5546"/>
+        <location filename="../mywidget.ui" line="5576"/>
         <location filename="../mywidget.cpp" line="2203"/>
         <source>Allow charge power</source>
         <translation>可充电功率</translation>
@@ -5471,7 +5492,7 @@ countercurrent</source>
         <translation type="vanished">这是通过CAN/485/TCP通讯协议从BMS上传的可充电功率，电池的充电功率不可超过这个限制数值。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="5570"/>
+        <location filename="../mywidget.ui" line="5600"/>
         <location filename="../mywidget.cpp" line="2207"/>
         <source>Allow discharge power</source>
         <translation>可放电功率</translation>
@@ -5481,7 +5502,7 @@ countercurrent</source>
         <translation type="vanished">这是通过CAN/485/TCP通讯协议从BMS上传的可放电功率，电池的放电功率不可超过这个限制数值。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="5594"/>
+        <location filename="../mywidget.ui" line="5624"/>
         <location filename="../mywidget.cpp" line="2211"/>
         <source>Allow charge energy</source>
         <translation>可充电电量</translation>
@@ -5491,7 +5512,7 @@ countercurrent</source>
         <translation type="vanished">这是通过CAN/485/TCP通讯协议从BMS上传的允许充电量，当前电池组允许充电的容量(注:仅部分BMS会提供这个值)。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="5618"/>
+        <location filename="../mywidget.ui" line="5648"/>
         <location filename="../mywidget.cpp" line="2215"/>
         <source>Allow discharge energy</source>
         <translation>可放电电量</translation>
@@ -5566,7 +5587,6 @@ countercurrent</source>
         <translation>当前MPS的逆变侧电流，此项为C相的电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2480"/>
         <location filename="../mywidget.cpp" line="2700"/>
         <source>The current IGBT temperature of MPS shall not exceed 105℃, otherwise PCS will run derated.</source>
         <translation>当前MPS 的IGBT温度，IGBT温度不得超过105℃，否则MPS将降额运行。</translation>
@@ -5577,9 +5597,8 @@ countercurrent</source>
         <translation>当前MPS 所处的环境温度。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2498"/>
         <source>Leakage current: the current to the ground of the grounding wire. If the value is larger, it indicates that there is leakage.</source>
-        <translation>漏电流，接地线的对地电流，如果此项较大，说明此处有漏电现象。</translation>
+        <translation type="vanished">漏电流，接地线的对地电流，如果此项较大，说明此处有漏电现象。</translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="2509"/>
@@ -5682,9 +5701,8 @@ countercurrent</source>
         <translation>当前DCDC模块低压侧的功率。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2652"/>
         <source>Positive insulation impedance of the current DCDC module.</source>
-        <translation>当前DCDC模块的正绝缘阻抗。</translation>
+        <translation type="vanished">当前DCDC模块的正绝缘阻抗。</translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="2663"/>
@@ -5722,9 +5740,8 @@ countercurrent</source>
         <translation>低压侧负母线电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2691"/>
         <source>The low voltage side of the DC module is negative for the bus voltage.</source>
-        <translation>当前DCDC模块的低压侧负母线电压。</translation>
+        <translation type="vanished">当前DCDC模块的低压侧负母线电压。</translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="2709"/>
@@ -5737,9 +5754,8 @@ countercurrent</source>
         <translation>漏电流</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2718"/>
         <source>Current leakage current of the DCDC module.</source>
-        <translation>当前DCDC模块的漏电流。</translation>
+        <translation type="vanished">当前DCDC模块的漏电流。</translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="2732"/>
@@ -5889,688 +5905,688 @@ countercurrent</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="71"/>
+        <location filename="../OperMode/opermode.ui" line="98"/>
         <source>System for self-use:
 When PV, battery, photovoltaic available.</source>
         <translation>自发自用：
 当PV、电池、光伏可用。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="119"/>
+        <location filename="../OperMode/opermode.ui" line="146"/>
         <source>A. PV gives priority to the load power supply, if the PV power is large enough, the remaining energy is provided to the battery charge, if the PV has remaining energy, the energy is returned to the grid.</source>
         <translation>A、PV优先给负载供电，如果PV功率足够大，剩余的能量提供给电池充电，如果PV还有剩余的能量，则将能量回馈到电网。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="165"/>
+        <location filename="../OperMode/opermode.ui" line="192"/>
         <source>B, PV priority to supply the load, if the PV is not enough to power the load, the battery and PV at the same time to power the load.</source>
         <translation>B、PV优先共给负载，如果PV不足以为负载供电，则电池和PV同时为负载供电。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="211"/>
+        <location filename="../OperMode/opermode.ui" line="238"/>
         <source>C, PV priority to supply the load, if the PV and battery are not enough to supply power to the load, the grid, PV, battery at the same time to supply power to the load.</source>
         <translation>C、PV优先供给负载，如果PV和电池不足以为负载供电，则电网，PV，电池同时为负载供电。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="221"/>
-        <location filename="../OperMode/opermode.ui" line="1612"/>
-        <location filename="../OperMode/opermode.ui" line="2368"/>
+        <location filename="../OperMode/opermode.ui" line="252"/>
+        <location filename="../OperMode/opermode.ui" line="1237"/>
+        <location filename="../OperMode/opermode.ui" line="2353"/>
         <source>1</source>
         <translation>1</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="226"/>
-        <location filename="../OperMode/opermode.ui" line="1617"/>
-        <location filename="../OperMode/opermode.ui" line="2373"/>
+        <location filename="../OperMode/opermode.ui" line="257"/>
+        <location filename="../OperMode/opermode.ui" line="1242"/>
+        <location filename="../OperMode/opermode.ui" line="2358"/>
         <source>2</source>
         <translation>2</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="231"/>
-        <location filename="../OperMode/opermode.ui" line="1622"/>
-        <location filename="../OperMode/opermode.ui" line="2378"/>
+        <location filename="../OperMode/opermode.ui" line="262"/>
+        <location filename="../OperMode/opermode.ui" line="1247"/>
+        <location filename="../OperMode/opermode.ui" line="2363"/>
         <source>3</source>
         <translation>3</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="236"/>
-        <location filename="../OperMode/opermode.ui" line="1627"/>
-        <location filename="../OperMode/opermode.ui" line="2383"/>
+        <location filename="../OperMode/opermode.ui" line="267"/>
+        <location filename="../OperMode/opermode.ui" line="1252"/>
+        <location filename="../OperMode/opermode.ui" line="2368"/>
         <source>4</source>
         <translation>4</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="241"/>
-        <location filename="../OperMode/opermode.ui" line="1632"/>
-        <location filename="../OperMode/opermode.ui" line="2388"/>
+        <location filename="../OperMode/opermode.ui" line="272"/>
+        <location filename="../OperMode/opermode.ui" line="1257"/>
+        <location filename="../OperMode/opermode.ui" line="2373"/>
         <source>5</source>
         <translation>5</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="246"/>
-        <location filename="../OperMode/opermode.ui" line="1637"/>
-        <location filename="../OperMode/opermode.ui" line="2393"/>
+        <location filename="../OperMode/opermode.ui" line="277"/>
+        <location filename="../OperMode/opermode.ui" line="1262"/>
+        <location filename="../OperMode/opermode.ui" line="2378"/>
         <source>6</source>
         <translation>6</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="251"/>
-        <location filename="../OperMode/opermode.ui" line="1642"/>
-        <location filename="../OperMode/opermode.ui" line="2398"/>
+        <location filename="../OperMode/opermode.ui" line="282"/>
+        <location filename="../OperMode/opermode.ui" line="1267"/>
+        <location filename="../OperMode/opermode.ui" line="2383"/>
         <source>7</source>
         <translation>7</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="256"/>
-        <location filename="../OperMode/opermode.ui" line="1647"/>
-        <location filename="../OperMode/opermode.ui" line="2403"/>
+        <location filename="../OperMode/opermode.ui" line="287"/>
+        <location filename="../OperMode/opermode.ui" line="1272"/>
+        <location filename="../OperMode/opermode.ui" line="2388"/>
         <source>8</source>
         <translation>8</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="261"/>
-        <location filename="../OperMode/opermode.ui" line="1652"/>
-        <location filename="../OperMode/opermode.ui" line="2408"/>
+        <location filename="../OperMode/opermode.ui" line="292"/>
+        <location filename="../OperMode/opermode.ui" line="1277"/>
+        <location filename="../OperMode/opermode.ui" line="2393"/>
         <source>9</source>
         <translation>9</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="266"/>
-        <location filename="../OperMode/opermode.ui" line="715"/>
-        <location filename="../OperMode/opermode.ui" line="1657"/>
-        <location filename="../OperMode/opermode.ui" line="2157"/>
-        <location filename="../OperMode/opermode.ui" line="2413"/>
-        <location filename="../OperMode/opermode.ui" line="2913"/>
+        <location filename="../OperMode/opermode.ui" line="297"/>
+        <location filename="../OperMode/opermode.ui" line="797"/>
+        <location filename="../OperMode/opermode.ui" line="1282"/>
+        <location filename="../OperMode/opermode.ui" line="1782"/>
+        <location filename="../OperMode/opermode.ui" line="2398"/>
+        <location filename="../OperMode/opermode.ui" line="2898"/>
         <source>10</source>
         <translation>10</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="271"/>
-        <location filename="../OperMode/opermode.ui" line="1662"/>
-        <location filename="../OperMode/opermode.ui" line="2418"/>
+        <location filename="../OperMode/opermode.ui" line="302"/>
+        <location filename="../OperMode/opermode.ui" line="1287"/>
+        <location filename="../OperMode/opermode.ui" line="2403"/>
         <source>11</source>
         <translation>11</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="276"/>
-        <location filename="../OperMode/opermode.ui" line="1667"/>
-        <location filename="../OperMode/opermode.ui" line="2423"/>
+        <location filename="../OperMode/opermode.ui" line="307"/>
+        <location filename="../OperMode/opermode.ui" line="1292"/>
+        <location filename="../OperMode/opermode.ui" line="2408"/>
         <source>12</source>
         <translation>12</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="281"/>
-        <location filename="../OperMode/opermode.ui" line="1672"/>
-        <location filename="../OperMode/opermode.ui" line="2428"/>
+        <location filename="../OperMode/opermode.ui" line="312"/>
+        <location filename="../OperMode/opermode.ui" line="1297"/>
+        <location filename="../OperMode/opermode.ui" line="2413"/>
         <source>13</source>
         <translation>13</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="286"/>
-        <location filename="../OperMode/opermode.ui" line="1677"/>
-        <location filename="../OperMode/opermode.ui" line="2433"/>
+        <location filename="../OperMode/opermode.ui" line="317"/>
+        <location filename="../OperMode/opermode.ui" line="1302"/>
+        <location filename="../OperMode/opermode.ui" line="2418"/>
         <source>14</source>
         <translation>14</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="291"/>
-        <location filename="../OperMode/opermode.ui" line="1682"/>
-        <location filename="../OperMode/opermode.ui" line="2438"/>
+        <location filename="../OperMode/opermode.ui" line="322"/>
+        <location filename="../OperMode/opermode.ui" line="1307"/>
+        <location filename="../OperMode/opermode.ui" line="2423"/>
         <source>15</source>
         <translation>15</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="296"/>
-        <location filename="../OperMode/opermode.ui" line="1687"/>
-        <location filename="../OperMode/opermode.ui" line="2443"/>
+        <location filename="../OperMode/opermode.ui" line="327"/>
+        <location filename="../OperMode/opermode.ui" line="1312"/>
+        <location filename="../OperMode/opermode.ui" line="2428"/>
         <source>16</source>
         <translation>16</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="301"/>
-        <location filename="../OperMode/opermode.ui" line="1692"/>
-        <location filename="../OperMode/opermode.ui" line="2448"/>
+        <location filename="../OperMode/opermode.ui" line="332"/>
+        <location filename="../OperMode/opermode.ui" line="1317"/>
+        <location filename="../OperMode/opermode.ui" line="2433"/>
         <source>17</source>
         <translation>17</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="306"/>
-        <location filename="../OperMode/opermode.ui" line="1697"/>
-        <location filename="../OperMode/opermode.ui" line="2453"/>
+        <location filename="../OperMode/opermode.ui" line="337"/>
+        <location filename="../OperMode/opermode.ui" line="1322"/>
+        <location filename="../OperMode/opermode.ui" line="2438"/>
         <source>18</source>
         <translation>18</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="311"/>
-        <location filename="../OperMode/opermode.ui" line="1702"/>
-        <location filename="../OperMode/opermode.ui" line="2458"/>
+        <location filename="../OperMode/opermode.ui" line="342"/>
+        <location filename="../OperMode/opermode.ui" line="1327"/>
+        <location filename="../OperMode/opermode.ui" line="2443"/>
         <source>19</source>
         <translation>19</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="316"/>
-        <location filename="../OperMode/opermode.ui" line="442"/>
-        <location filename="../OperMode/opermode.ui" line="1707"/>
-        <location filename="../OperMode/opermode.ui" line="1845"/>
-        <location filename="../OperMode/opermode.ui" line="2463"/>
-        <location filename="../OperMode/opermode.ui" line="2601"/>
+        <location filename="../OperMode/opermode.ui" line="347"/>
+        <location filename="../OperMode/opermode.ui" line="485"/>
+        <location filename="../OperMode/opermode.ui" line="1332"/>
+        <location filename="../OperMode/opermode.ui" line="1470"/>
+        <location filename="../OperMode/opermode.ui" line="2448"/>
+        <location filename="../OperMode/opermode.ui" line="2586"/>
         <source>20</source>
         <translation>20</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="321"/>
-        <location filename="../OperMode/opermode.ui" line="1712"/>
-        <location filename="../OperMode/opermode.ui" line="2468"/>
+        <location filename="../OperMode/opermode.ui" line="352"/>
+        <location filename="../OperMode/opermode.ui" line="1337"/>
+        <location filename="../OperMode/opermode.ui" line="2453"/>
         <source>21</source>
         <translation>21</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="326"/>
-        <location filename="../OperMode/opermode.ui" line="1717"/>
-        <location filename="../OperMode/opermode.ui" line="2473"/>
+        <location filename="../OperMode/opermode.ui" line="357"/>
+        <location filename="../OperMode/opermode.ui" line="1342"/>
+        <location filename="../OperMode/opermode.ui" line="2458"/>
         <source>22</source>
         <translation>22</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="331"/>
-        <location filename="../OperMode/opermode.ui" line="1722"/>
-        <location filename="../OperMode/opermode.ui" line="2478"/>
+        <location filename="../OperMode/opermode.ui" line="362"/>
+        <location filename="../OperMode/opermode.ui" line="1347"/>
+        <location filename="../OperMode/opermode.ui" line="2463"/>
         <source>23</source>
         <translation>23</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="336"/>
-        <location filename="../OperMode/opermode.ui" line="1727"/>
-        <location filename="../OperMode/opermode.ui" line="2483"/>
+        <location filename="../OperMode/opermode.ui" line="367"/>
+        <location filename="../OperMode/opermode.ui" line="1352"/>
+        <location filename="../OperMode/opermode.ui" line="2468"/>
         <source>24</source>
         <translation>24</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="341"/>
-        <location filename="../OperMode/opermode.ui" line="1732"/>
-        <location filename="../OperMode/opermode.ui" line="2488"/>
+        <location filename="../OperMode/opermode.ui" line="372"/>
+        <location filename="../OperMode/opermode.ui" line="1357"/>
+        <location filename="../OperMode/opermode.ui" line="2473"/>
         <source>25</source>
         <translation>25</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="346"/>
-        <location filename="../OperMode/opermode.ui" line="1737"/>
-        <location filename="../OperMode/opermode.ui" line="2493"/>
+        <location filename="../OperMode/opermode.ui" line="377"/>
+        <location filename="../OperMode/opermode.ui" line="1362"/>
+        <location filename="../OperMode/opermode.ui" line="2478"/>
         <source>Parameter name</source>
         <translation>参数名称</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="351"/>
-        <location filename="../OperMode/opermode.ui" line="1742"/>
-        <location filename="../OperMode/opermode.ui" line="2498"/>
+        <location filename="../OperMode/opermode.ui" line="382"/>
+        <location filename="../OperMode/opermode.ui" line="1367"/>
+        <location filename="../OperMode/opermode.ui" line="2483"/>
         <source>Parameter description</source>
         <translation>参数说明</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="356"/>
-        <location filename="../OperMode/opermode.ui" line="1747"/>
-        <location filename="../OperMode/opermode.ui" line="2503"/>
+        <location filename="../OperMode/opermode.ui" line="387"/>
+        <location filename="../OperMode/opermode.ui" line="1372"/>
+        <location filename="../OperMode/opermode.ui" line="2488"/>
         <source>Radius</source>
         <translation>范围</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="361"/>
-        <location filename="../OperMode/opermode.ui" line="1752"/>
-        <location filename="../OperMode/opermode.ui" line="2508"/>
+        <location filename="../OperMode/opermode.ui" line="392"/>
+        <location filename="../OperMode/opermode.ui" line="1377"/>
+        <location filename="../OperMode/opermode.ui" line="2493"/>
         <source>Default value</source>
         <translation>默认值</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="366"/>
-        <location filename="../OperMode/opermode.ui" line="1757"/>
-        <location filename="../OperMode/opermode.ui" line="2513"/>
-        <location filename="../OperMode/opermode.cpp" line="109"/>
+        <location filename="../OperMode/opermode.ui" line="397"/>
+        <location filename="../OperMode/opermode.ui" line="1382"/>
+        <location filename="../OperMode/opermode.ui" line="2498"/>
+        <location filename="../OperMode/opermode.cpp" line="111"/>
         <source>Battery type</source>
         <translation>电池类型</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="374"/>
-        <location filename="../OperMode/opermode.ui" line="379"/>
-        <location filename="../OperMode/opermode.ui" line="1765"/>
-        <location filename="../OperMode/opermode.ui" line="1773"/>
-        <location filename="../OperMode/opermode.ui" line="2521"/>
-        <location filename="../OperMode/opermode.ui" line="2529"/>
+        <location filename="../OperMode/opermode.ui" line="405"/>
+        <location filename="../OperMode/opermode.ui" line="413"/>
+        <location filename="../OperMode/opermode.ui" line="1390"/>
+        <location filename="../OperMode/opermode.ui" line="1398"/>
+        <location filename="../OperMode/opermode.ui" line="2506"/>
+        <location filename="../OperMode/opermode.ui" line="2514"/>
         <source>Lithium</source>
         <translation>锂电</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="387"/>
-        <location filename="../OperMode/opermode.ui" line="1781"/>
-        <location filename="../OperMode/opermode.ui" line="2537"/>
-        <location filename="../OperMode/opermode.cpp" line="110"/>
+        <location filename="../OperMode/opermode.ui" line="421"/>
+        <location filename="../OperMode/opermode.ui" line="1406"/>
+        <location filename="../OperMode/opermode.ui" line="2522"/>
+        <location filename="../OperMode/opermode.cpp" line="112"/>
         <source>BMS Comm.type</source>
         <translation>电池通信方式</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="395"/>
-        <location filename="../OperMode/opermode.ui" line="1789"/>
-        <location filename="../OperMode/opermode.ui" line="2545"/>
+        <location filename="../OperMode/opermode.ui" line="429"/>
+        <location filename="../OperMode/opermode.ui" line="1414"/>
+        <location filename="../OperMode/opermode.ui" line="2530"/>
         <source>CAN/485</source>
         <translation>CAN/485</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="400"/>
-        <location filename="../OperMode/opermode.ui" line="1797"/>
-        <location filename="../OperMode/opermode.ui" line="2553"/>
+        <location filename="../OperMode/opermode.ui" line="437"/>
+        <location filename="../OperMode/opermode.ui" line="1422"/>
+        <location filename="../OperMode/opermode.ui" line="2538"/>
         <source>CAN</source>
         <translation>CAN</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="408"/>
-        <location filename="../OperMode/opermode.ui" line="1805"/>
-        <location filename="../OperMode/opermode.ui" line="2561"/>
-        <location filename="../OperMode/opermode.cpp" line="111"/>
+        <location filename="../OperMode/opermode.ui" line="445"/>
+        <location filename="../OperMode/opermode.ui" line="1430"/>
+        <location filename="../OperMode/opermode.ui" line="2546"/>
+        <location filename="../OperMode/opermode.cpp" line="113"/>
         <source>EMS Comm.type</source>
         <translation>EMS通信方式</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="416"/>
-        <location filename="../OperMode/opermode.ui" line="1813"/>
-        <location filename="../OperMode/opermode.ui" line="2569"/>
+        <location filename="../OperMode/opermode.ui" line="453"/>
+        <location filename="../OperMode/opermode.ui" line="1438"/>
+        <location filename="../OperMode/opermode.ui" line="2554"/>
         <source>485/TCP</source>
         <translation>485/TCP</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="421"/>
-        <location filename="../OperMode/opermode.ui" line="1821"/>
-        <location filename="../OperMode/opermode.ui" line="2577"/>
+        <location filename="../OperMode/opermode.ui" line="461"/>
+        <location filename="../OperMode/opermode.ui" line="1446"/>
+        <location filename="../OperMode/opermode.ui" line="2562"/>
         <source>485</source>
         <translation>485485</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="429"/>
-        <location filename="../OperMode/opermode.ui" line="1829"/>
-        <location filename="../OperMode/opermode.ui" line="2585"/>
-        <location filename="../OperMode/opermode.cpp" line="112"/>
+        <location filename="../OperMode/opermode.ui" line="469"/>
+        <location filename="../OperMode/opermode.ui" line="1454"/>
+        <location filename="../OperMode/opermode.ui" line="2570"/>
+        <location filename="../OperMode/opermode.cpp" line="114"/>
         <source>Charge SOC</source>
         <translation>充电SOC</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="437"/>
-        <location filename="../OperMode/opermode.ui" line="458"/>
-        <location filename="../OperMode/opermode.ui" line="1837"/>
-        <location filename="../OperMode/opermode.ui" line="1861"/>
-        <location filename="../OperMode/opermode.ui" line="2593"/>
-        <location filename="../OperMode/opermode.ui" line="2617"/>
+        <location filename="../OperMode/opermode.ui" line="477"/>
+        <location filename="../OperMode/opermode.ui" line="501"/>
+        <location filename="../OperMode/opermode.ui" line="1462"/>
+        <location filename="../OperMode/opermode.ui" line="1486"/>
+        <location filename="../OperMode/opermode.ui" line="2578"/>
+        <location filename="../OperMode/opermode.ui" line="2602"/>
         <source>1~100</source>
         <translation>1~100</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="450"/>
-        <location filename="../OperMode/opermode.ui" line="1853"/>
-        <location filename="../OperMode/opermode.ui" line="2609"/>
-        <location filename="../OperMode/opermode.cpp" line="113"/>
+        <location filename="../OperMode/opermode.ui" line="493"/>
+        <location filename="../OperMode/opermode.ui" line="1478"/>
+        <location filename="../OperMode/opermode.ui" line="2594"/>
+        <location filename="../OperMode/opermode.cpp" line="115"/>
         <source>Discharge SOC</source>
         <translation>放电SOC</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="463"/>
-        <location filename="../OperMode/opermode.ui" line="563"/>
-        <location filename="../OperMode/opermode.ui" line="605"/>
-        <location filename="../OperMode/opermode.ui" line="1981"/>
-        <location filename="../OperMode/opermode.ui" line="2029"/>
-        <location filename="../OperMode/opermode.ui" line="2737"/>
-        <location filename="../OperMode/opermode.ui" line="2785"/>
+        <location filename="../OperMode/opermode.ui" line="509"/>
+        <location filename="../OperMode/opermode.ui" line="621"/>
+        <location filename="../OperMode/opermode.ui" line="669"/>
+        <location filename="../OperMode/opermode.ui" line="1606"/>
+        <location filename="../OperMode/opermode.ui" line="1654"/>
+        <location filename="../OperMode/opermode.ui" line="2722"/>
+        <location filename="../OperMode/opermode.ui" line="2770"/>
         <source>-</source>
         <translation>-</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="471"/>
-        <location filename="../OperMode/opermode.ui" line="1877"/>
-        <location filename="../OperMode/opermode.ui" line="2633"/>
-        <location filename="../OperMode/opermode.cpp" line="114"/>
+        <location filename="../OperMode/opermode.ui" line="517"/>
+        <location filename="../OperMode/opermode.ui" line="1502"/>
+        <location filename="../OperMode/opermode.ui" line="2618"/>
+        <location filename="../OperMode/opermode.cpp" line="116"/>
         <source>Energy priority</source>
         <translation>能量优先级</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="479"/>
-        <location filename="../OperMode/opermode.ui" line="1885"/>
-        <location filename="../OperMode/opermode.ui" line="2641"/>
+        <location filename="../OperMode/opermode.ui" line="525"/>
+        <location filename="../OperMode/opermode.ui" line="1510"/>
+        <location filename="../OperMode/opermode.ui" line="2626"/>
         <source>Bat&gt;Grid、Grid&gt;Bat</source>
         <translation>电池&gt;电网、电网&gt;电池</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="484"/>
-        <location filename="../OperMode/opermode.ui" line="1893"/>
-        <location filename="../OperMode/opermode.ui" line="2649"/>
+        <location filename="../OperMode/opermode.ui" line="533"/>
+        <location filename="../OperMode/opermode.ui" line="1518"/>
+        <location filename="../OperMode/opermode.ui" line="2634"/>
         <source>Bat&gt;Grid</source>
         <translation>电池&gt;电网</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="492"/>
-        <location filename="../OperMode/opermode.ui" line="1901"/>
-        <location filename="../OperMode/opermode.ui" line="2657"/>
-        <location filename="../OperMode/opermode.cpp" line="115"/>
+        <location filename="../OperMode/opermode.ui" line="541"/>
+        <location filename="../OperMode/opermode.ui" line="1526"/>
+        <location filename="../OperMode/opermode.ui" line="2642"/>
+        <location filename="../OperMode/opermode.cpp" line="117"/>
         <source>Grid connected mode of lnv</source>
         <translation>防逆流</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="500"/>
-        <location filename="../OperMode/opermode.ui" line="1909"/>
-        <location filename="../OperMode/opermode.ui" line="2665"/>
+        <location filename="../OperMode/opermode.ui" line="549"/>
+        <location filename="../OperMode/opermode.ui" line="1534"/>
+        <location filename="../OperMode/opermode.ui" line="2650"/>
         <source>Countercurret、Non Countercurret</source>
         <translation>可逆流/不可逆流</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="505"/>
-        <location filename="../OperMode/opermode.ui" line="1917"/>
-        <location filename="../OperMode/opermode.ui" line="2673"/>
+        <location filename="../OperMode/opermode.ui" line="557"/>
+        <location filename="../OperMode/opermode.ui" line="1542"/>
+        <location filename="../OperMode/opermode.ui" line="2658"/>
         <source>Non Countercurret</source>
         <translation>不可逆流</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="513"/>
-        <location filename="../OperMode/opermode.ui" line="1925"/>
-        <location filename="../OperMode/opermode.ui" line="2681"/>
-        <location filename="../OperMode/opermode.cpp" line="116"/>
+        <location filename="../OperMode/opermode.ui" line="565"/>
+        <location filename="../OperMode/opermode.ui" line="1550"/>
+        <location filename="../OperMode/opermode.ui" line="2666"/>
+        <location filename="../OperMode/opermode.cpp" line="118"/>
         <source>Constant power(AC)</source>
         <translation>恒功率(AC)</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="521"/>
-        <location filename="../OperMode/opermode.ui" line="1933"/>
-        <location filename="../OperMode/opermode.ui" line="2689"/>
+        <location filename="../OperMode/opermode.ui" line="573"/>
+        <location filename="../OperMode/opermode.ui" line="1558"/>
+        <location filename="../OperMode/opermode.ui" line="2674"/>
         <source>-Rated power~Rated power</source>
         <translation>-额定功率~额定功率</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="526"/>
-        <location filename="../OperMode/opermode.ui" line="778"/>
-        <location filename="../OperMode/opermode.ui" line="799"/>
-        <location filename="../OperMode/opermode.ui" line="820"/>
-        <location filename="../OperMode/opermode.ui" line="841"/>
-        <location filename="../OperMode/opermode.ui" line="1941"/>
-        <location filename="../OperMode/opermode.ui" line="2697"/>
+        <location filename="../OperMode/opermode.ui" line="581"/>
+        <location filename="../OperMode/opermode.ui" line="869"/>
+        <location filename="../OperMode/opermode.ui" line="893"/>
+        <location filename="../OperMode/opermode.ui" line="917"/>
+        <location filename="../OperMode/opermode.ui" line="941"/>
+        <location filename="../OperMode/opermode.ui" line="1566"/>
+        <location filename="../OperMode/opermode.ui" line="2682"/>
         <source>0</source>
         <translation>0</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="534"/>
-        <location filename="../OperMode/opermode.ui" line="1949"/>
-        <location filename="../OperMode/opermode.ui" line="2705"/>
-        <location filename="../OperMode/opermode.cpp" line="117"/>
+        <location filename="../OperMode/opermode.ui" line="589"/>
+        <location filename="../OperMode/opermode.ui" line="1574"/>
+        <location filename="../OperMode/opermode.ui" line="2690"/>
+        <location filename="../OperMode/opermode.cpp" line="119"/>
         <source>Charge Volt. upper Limit(V)</source>
         <translation>充电电压上限(V)</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="542"/>
-        <location filename="../OperMode/opermode.ui" line="584"/>
-        <location filename="../OperMode/opermode.ui" line="1957"/>
-        <location filename="../OperMode/opermode.ui" line="2005"/>
-        <location filename="../OperMode/opermode.ui" line="2713"/>
-        <location filename="../OperMode/opermode.ui" line="2761"/>
+        <location filename="../OperMode/opermode.ui" line="597"/>
+        <location filename="../OperMode/opermode.ui" line="645"/>
+        <location filename="../OperMode/opermode.ui" line="1582"/>
+        <location filename="../OperMode/opermode.ui" line="1630"/>
+        <location filename="../OperMode/opermode.ui" line="2698"/>
+        <location filename="../OperMode/opermode.ui" line="2746"/>
         <source>400~850</source>
         <translation>400~850</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="547"/>
-        <location filename="../OperMode/opermode.ui" line="1965"/>
-        <location filename="../OperMode/opermode.ui" line="2721"/>
+        <location filename="../OperMode/opermode.ui" line="605"/>
+        <location filename="../OperMode/opermode.ui" line="1590"/>
+        <location filename="../OperMode/opermode.ui" line="2706"/>
         <source>Battery charging cut-off voltage</source>
         <translation>电池充电截止电压</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="555"/>
-        <location filename="../OperMode/opermode.ui" line="1973"/>
-        <location filename="../OperMode/opermode.ui" line="2729"/>
-        <location filename="../OperMode/opermode.cpp" line="118"/>
+        <location filename="../OperMode/opermode.ui" line="613"/>
+        <location filename="../OperMode/opermode.ui" line="1598"/>
+        <location filename="../OperMode/opermode.ui" line="2714"/>
+        <location filename="../OperMode/opermode.cpp" line="120"/>
         <source>Charge Volt. upper Limit delta(V)</source>
         <translation>充电电压上限回差(V)</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="568"/>
-        <location filename="../OperMode/opermode.ui" line="610"/>
-        <location filename="../OperMode/opermode.ui" line="1989"/>
-        <location filename="../OperMode/opermode.ui" line="2037"/>
-        <location filename="../OperMode/opermode.ui" line="2745"/>
-        <location filename="../OperMode/opermode.ui" line="2793"/>
+        <location filename="../OperMode/opermode.ui" line="629"/>
+        <location filename="../OperMode/opermode.ui" line="677"/>
+        <location filename="../OperMode/opermode.ui" line="1614"/>
+        <location filename="../OperMode/opermode.ui" line="1662"/>
+        <location filename="../OperMode/opermode.ui" line="2730"/>
+        <location filename="../OperMode/opermode.ui" line="2778"/>
         <source>10mV</source>
         <translation>10mV</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="576"/>
-        <location filename="../OperMode/opermode.ui" line="1997"/>
-        <location filename="../OperMode/opermode.ui" line="2753"/>
-        <location filename="../OperMode/opermode.cpp" line="119"/>
+        <location filename="../OperMode/opermode.ui" line="637"/>
+        <location filename="../OperMode/opermode.ui" line="1622"/>
+        <location filename="../OperMode/opermode.ui" line="2738"/>
+        <location filename="../OperMode/opermode.cpp" line="121"/>
         <source>Discharge Volt. lower Limit(V)</source>
         <translation>放电电压下限(V)</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="589"/>
-        <location filename="../OperMode/opermode.ui" line="2013"/>
-        <location filename="../OperMode/opermode.ui" line="2769"/>
+        <location filename="../OperMode/opermode.ui" line="653"/>
+        <location filename="../OperMode/opermode.ui" line="1638"/>
+        <location filename="../OperMode/opermode.ui" line="2754"/>
         <source>Battery discharge cut-off voltage</source>
         <translation>电池放电截止电压</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="597"/>
-        <location filename="../OperMode/opermode.ui" line="2021"/>
-        <location filename="../OperMode/opermode.ui" line="2777"/>
-        <location filename="../OperMode/opermode.cpp" line="120"/>
+        <location filename="../OperMode/opermode.ui" line="661"/>
+        <location filename="../OperMode/opermode.ui" line="1646"/>
+        <location filename="../OperMode/opermode.ui" line="2762"/>
+        <location filename="../OperMode/opermode.cpp" line="122"/>
         <source>Discharge Volt. lower Limit delta(V)</source>
         <translation>放电电压下限回差(V)</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="618"/>
-        <location filename="../OperMode/opermode.ui" line="2045"/>
-        <location filename="../OperMode/opermode.ui" line="2801"/>
-        <location filename="../OperMode/opermode.cpp" line="121"/>
+        <location filename="../OperMode/opermode.ui" line="685"/>
+        <location filename="../OperMode/opermode.ui" line="1670"/>
+        <location filename="../OperMode/opermode.ui" line="2786"/>
+        <location filename="../OperMode/opermode.cpp" line="123"/>
         <source>Charge Current Limit(A)</source>
         <translation>充电电流限制(A)</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="626"/>
-        <location filename="../OperMode/opermode.ui" line="647"/>
-        <location filename="../OperMode/opermode.ui" line="2053"/>
-        <location filename="../OperMode/opermode.ui" line="2077"/>
-        <location filename="../OperMode/opermode.ui" line="2809"/>
-        <location filename="../OperMode/opermode.ui" line="2833"/>
+        <location filename="../OperMode/opermode.ui" line="693"/>
+        <location filename="../OperMode/opermode.ui" line="717"/>
+        <location filename="../OperMode/opermode.ui" line="1678"/>
+        <location filename="../OperMode/opermode.ui" line="1702"/>
+        <location filename="../OperMode/opermode.ui" line="2794"/>
+        <location filename="../OperMode/opermode.ui" line="2818"/>
         <source>0 ~ 1000</source>
         <translation>0 ~ 1000</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="631"/>
-        <location filename="../OperMode/opermode.ui" line="652"/>
-        <location filename="../OperMode/opermode.ui" line="2061"/>
-        <location filename="../OperMode/opermode.ui" line="2085"/>
-        <location filename="../OperMode/opermode.ui" line="2817"/>
-        <location filename="../OperMode/opermode.ui" line="2841"/>
+        <location filename="../OperMode/opermode.ui" line="701"/>
+        <location filename="../OperMode/opermode.ui" line="725"/>
+        <location filename="../OperMode/opermode.ui" line="1686"/>
+        <location filename="../OperMode/opermode.ui" line="1710"/>
+        <location filename="../OperMode/opermode.ui" line="2802"/>
+        <location filename="../OperMode/opermode.ui" line="2826"/>
         <source>By battery limit</source>
         <translation>根据电池限制</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="639"/>
-        <location filename="../OperMode/opermode.ui" line="2069"/>
-        <location filename="../OperMode/opermode.ui" line="2825"/>
-        <location filename="../OperMode/opermode.cpp" line="122"/>
+        <location filename="../OperMode/opermode.ui" line="709"/>
+        <location filename="../OperMode/opermode.ui" line="1694"/>
+        <location filename="../OperMode/opermode.ui" line="2810"/>
+        <location filename="../OperMode/opermode.cpp" line="124"/>
         <source>Discharge Current Limit(A)</source>
         <translation>放电电流限制(A)</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="660"/>
-        <location filename="../OperMode/opermode.ui" line="2093"/>
-        <location filename="../OperMode/opermode.ui" line="2849"/>
-        <location filename="../OperMode/opermode.cpp" line="123"/>
+        <location filename="../OperMode/opermode.ui" line="733"/>
+        <location filename="../OperMode/opermode.ui" line="1718"/>
+        <location filename="../OperMode/opermode.ui" line="2834"/>
+        <location filename="../OperMode/opermode.cpp" line="125"/>
         <source>DOD_OnGrid(%)</source>
         <translation>并网DOD</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="668"/>
-        <location filename="../OperMode/opermode.ui" line="689"/>
-        <location filename="../OperMode/opermode.ui" line="710"/>
-        <location filename="../OperMode/opermode.ui" line="731"/>
-        <location filename="../OperMode/opermode.ui" line="2101"/>
-        <location filename="../OperMode/opermode.ui" line="2125"/>
-        <location filename="../OperMode/opermode.ui" line="2149"/>
-        <location filename="../OperMode/opermode.ui" line="2173"/>
-        <location filename="../OperMode/opermode.ui" line="2857"/>
-        <location filename="../OperMode/opermode.ui" line="2881"/>
-        <location filename="../OperMode/opermode.ui" line="2905"/>
-        <location filename="../OperMode/opermode.ui" line="2929"/>
+        <location filename="../OperMode/opermode.ui" line="741"/>
+        <location filename="../OperMode/opermode.ui" line="765"/>
+        <location filename="../OperMode/opermode.ui" line="789"/>
+        <location filename="../OperMode/opermode.ui" line="813"/>
+        <location filename="../OperMode/opermode.ui" line="1726"/>
+        <location filename="../OperMode/opermode.ui" line="1750"/>
+        <location filename="../OperMode/opermode.ui" line="1774"/>
+        <location filename="../OperMode/opermode.ui" line="1798"/>
+        <location filename="../OperMode/opermode.ui" line="2842"/>
+        <location filename="../OperMode/opermode.ui" line="2866"/>
+        <location filename="../OperMode/opermode.ui" line="2890"/>
+        <location filename="../OperMode/opermode.ui" line="2914"/>
         <source>1 ~ 100</source>
         <translation>1~100</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="673"/>
-        <location filename="../OperMode/opermode.ui" line="862"/>
-        <location filename="../OperMode/opermode.ui" line="883"/>
-        <location filename="../OperMode/opermode.ui" line="2109"/>
-        <location filename="../OperMode/opermode.ui" line="2229"/>
-        <location filename="../OperMode/opermode.ui" line="2253"/>
-        <location filename="../OperMode/opermode.ui" line="2277"/>
-        <location filename="../OperMode/opermode.ui" line="2301"/>
-        <location filename="../OperMode/opermode.ui" line="2325"/>
-        <location filename="../OperMode/opermode.ui" line="2349"/>
-        <location filename="../OperMode/opermode.ui" line="2865"/>
+        <location filename="../OperMode/opermode.ui" line="749"/>
+        <location filename="../OperMode/opermode.ui" line="965"/>
+        <location filename="../OperMode/opermode.ui" line="989"/>
+        <location filename="../OperMode/opermode.ui" line="1734"/>
+        <location filename="../OperMode/opermode.ui" line="1854"/>
+        <location filename="../OperMode/opermode.ui" line="1878"/>
+        <location filename="../OperMode/opermode.ui" line="1902"/>
+        <location filename="../OperMode/opermode.ui" line="1926"/>
+        <location filename="../OperMode/opermode.ui" line="1950"/>
+        <location filename="../OperMode/opermode.ui" line="1974"/>
+        <location filename="../OperMode/opermode.ui" line="2850"/>
         <source>100</source>
         <translation>100</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="681"/>
-        <location filename="../OperMode/opermode.ui" line="2117"/>
-        <location filename="../OperMode/opermode.ui" line="2873"/>
-        <location filename="../OperMode/opermode.cpp" line="124"/>
+        <location filename="../OperMode/opermode.ui" line="757"/>
+        <location filename="../OperMode/opermode.ui" line="1742"/>
+        <location filename="../OperMode/opermode.ui" line="2858"/>
+        <location filename="../OperMode/opermode.cpp" line="126"/>
         <source>DOD_OffGrid(%)</source>
         <translation>离网DOD</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="694"/>
-        <location filename="../OperMode/opermode.ui" line="2133"/>
-        <location filename="../OperMode/opermode.ui" line="2889"/>
+        <location filename="../OperMode/opermode.ui" line="773"/>
+        <location filename="../OperMode/opermode.ui" line="1758"/>
+        <location filename="../OperMode/opermode.ui" line="2874"/>
         <source>90</source>
         <translation>90</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="702"/>
-        <location filename="../OperMode/opermode.ui" line="2141"/>
-        <location filename="../OperMode/opermode.ui" line="2897"/>
+        <location filename="../OperMode/opermode.ui" line="781"/>
+        <location filename="../OperMode/opermode.ui" line="1766"/>
+        <location filename="../OperMode/opermode.ui" line="2882"/>
         <source>Generator turn on SOC</source>
         <translation>柴发启动SOC</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="723"/>
-        <location filename="../OperMode/opermode.ui" line="2165"/>
-        <location filename="../OperMode/opermode.ui" line="2921"/>
+        <location filename="../OperMode/opermode.ui" line="805"/>
+        <location filename="../OperMode/opermode.ui" line="1790"/>
+        <location filename="../OperMode/opermode.ui" line="2906"/>
         <source>Generator turn off SOC</source>
         <translation>柴发停止SOC</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="919"/>
+        <location filename="../OperMode/opermode.ui" line="1052"/>
         <source>Battery priority: 
 	When PV, battery, photovoltaic is available.</source>
         <translation>电池优先：
     当PV、电池、光伏可用。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="125"/>
+        <location filename="../OperMode/opermode.cpp" line="127"/>
         <source>Generator turn on SOC(A1)</source>
         <translation>发电机开启SOC(A1)</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="126"/>
+        <location filename="../OperMode/opermode.cpp" line="128"/>
         <source>Generator turn off SOC(B1)</source>
         <translation>发电机关闭SOC(B1)</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="736"/>
-        <location filename="../OperMode/opermode.ui" line="2181"/>
-        <location filename="../OperMode/opermode.ui" line="2937"/>
+        <location filename="../OperMode/opermode.ui" line="821"/>
+        <location filename="../OperMode/opermode.ui" line="1806"/>
+        <location filename="../OperMode/opermode.ui" line="2922"/>
         <source>95</source>
         <translation>95</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="744"/>
-        <location filename="../OperMode/opermode.ui" line="2189"/>
-        <location filename="../OperMode/opermode.ui" line="2945"/>
-        <location filename="../OperMode/opermode.cpp" line="127"/>
+        <location filename="../OperMode/opermode.ui" line="829"/>
+        <location filename="../OperMode/opermode.ui" line="1814"/>
+        <location filename="../OperMode/opermode.ui" line="2930"/>
+        <location filename="../OperMode/opermode.cpp" line="129"/>
         <source>Maximum battery protection value(V)</source>
         <translation>电池最高单体保护值</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="752"/>
-        <location filename="../OperMode/opermode.ui" line="2197"/>
-        <location filename="../OperMode/opermode.ui" line="2953"/>
+        <location filename="../OperMode/opermode.ui" line="837"/>
+        <location filename="../OperMode/opermode.ui" line="1822"/>
+        <location filename="../OperMode/opermode.ui" line="2938"/>
         <source>3550 ~ 3650</source>
         <translation>3550~3650</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="757"/>
-        <location filename="../OperMode/opermode.ui" line="2205"/>
-        <location filename="../OperMode/opermode.ui" line="2961"/>
+        <location filename="../OperMode/opermode.ui" line="845"/>
+        <location filename="../OperMode/opermode.ui" line="1830"/>
+        <location filename="../OperMode/opermode.ui" line="2946"/>
         <source>3650</source>
         <translation>3650</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="765"/>
-        <location filename="../OperMode/opermode.ui" line="2213"/>
-        <location filename="../OperMode/opermode.ui" line="2969"/>
-        <location filename="../OperMode/opermode.cpp" line="128"/>
+        <location filename="../OperMode/opermode.ui" line="853"/>
+        <location filename="../OperMode/opermode.ui" line="1838"/>
+        <location filename="../OperMode/opermode.ui" line="2954"/>
+        <location filename="../OperMode/opermode.cpp" line="130"/>
         <source>DG_ECP</source>
         <translation>DG_ECP</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="773"/>
-        <location filename="../OperMode/opermode.ui" line="794"/>
-        <location filename="../OperMode/opermode.ui" line="815"/>
-        <location filename="../OperMode/opermode.ui" line="836"/>
-        <location filename="../OperMode/opermode.ui" line="857"/>
-        <location filename="../OperMode/opermode.ui" line="878"/>
-        <location filename="../OperMode/opermode.ui" line="2221"/>
-        <location filename="../OperMode/opermode.ui" line="2245"/>
-        <location filename="../OperMode/opermode.ui" line="2269"/>
-        <location filename="../OperMode/opermode.ui" line="2293"/>
-        <location filename="../OperMode/opermode.ui" line="2317"/>
-        <location filename="../OperMode/opermode.ui" line="2341"/>
-        <location filename="../OperMode/opermode.ui" line="2977"/>
-        <location filename="../OperMode/opermode.ui" line="3001"/>
-        <location filename="../OperMode/opermode.ui" line="3025"/>
-        <location filename="../OperMode/opermode.ui" line="3049"/>
-        <location filename="../OperMode/opermode.ui" line="3073"/>
-        <location filename="../OperMode/opermode.ui" line="3097"/>
+        <location filename="../OperMode/opermode.ui" line="861"/>
+        <location filename="../OperMode/opermode.ui" line="885"/>
+        <location filename="../OperMode/opermode.ui" line="909"/>
+        <location filename="../OperMode/opermode.ui" line="933"/>
+        <location filename="../OperMode/opermode.ui" line="957"/>
+        <location filename="../OperMode/opermode.ui" line="981"/>
+        <location filename="../OperMode/opermode.ui" line="1846"/>
+        <location filename="../OperMode/opermode.ui" line="1870"/>
+        <location filename="../OperMode/opermode.ui" line="1894"/>
+        <location filename="../OperMode/opermode.ui" line="1918"/>
+        <location filename="../OperMode/opermode.ui" line="1942"/>
+        <location filename="../OperMode/opermode.ui" line="1966"/>
+        <location filename="../OperMode/opermode.ui" line="2962"/>
+        <location filename="../OperMode/opermode.ui" line="2986"/>
+        <location filename="../OperMode/opermode.ui" line="3010"/>
+        <location filename="../OperMode/opermode.ui" line="3034"/>
+        <location filename="../OperMode/opermode.ui" line="3058"/>
+        <location filename="../OperMode/opermode.ui" line="3082"/>
         <source>0 ~ 100</source>
         <translation>0 ~ 100</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="786"/>
-        <location filename="../OperMode/opermode.ui" line="2237"/>
-        <location filename="../OperMode/opermode.ui" line="2993"/>
-        <location filename="../OperMode/opermode.cpp" line="129"/>
+        <location filename="../OperMode/opermode.ui" line="877"/>
+        <location filename="../OperMode/opermode.ui" line="1862"/>
+        <location filename="../OperMode/opermode.ui" line="2978"/>
+        <location filename="../OperMode/opermode.cpp" line="131"/>
         <source>DG_FCP</source>
         <translation>DG_FCP</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="807"/>
-        <location filename="../OperMode/opermode.ui" line="2261"/>
-        <location filename="../OperMode/opermode.ui" line="3017"/>
-        <location filename="../OperMode/opermode.cpp" line="130"/>
+        <location filename="../OperMode/opermode.ui" line="901"/>
+        <location filename="../OperMode/opermode.ui" line="1886"/>
+        <location filename="../OperMode/opermode.ui" line="3002"/>
+        <location filename="../OperMode/opermode.cpp" line="132"/>
         <source>Grid_ECP</source>
         <translation>Grid_ECP</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="828"/>
-        <location filename="../OperMode/opermode.ui" line="2285"/>
-        <location filename="../OperMode/opermode.ui" line="3041"/>
-        <location filename="../OperMode/opermode.cpp" line="131"/>
+        <location filename="../OperMode/opermode.ui" line="925"/>
+        <location filename="../OperMode/opermode.ui" line="1910"/>
+        <location filename="../OperMode/opermode.ui" line="3026"/>
+        <location filename="../OperMode/opermode.cpp" line="133"/>
         <source>Grid_FCP</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="849"/>
-        <location filename="../OperMode/opermode.ui" line="2309"/>
-        <location filename="../OperMode/opermode.ui" line="3065"/>
-        <location filename="../OperMode/opermode.cpp" line="132"/>
+        <location filename="../OperMode/opermode.ui" line="949"/>
+        <location filename="../OperMode/opermode.ui" line="1934"/>
+        <location filename="../OperMode/opermode.ui" line="3050"/>
+        <location filename="../OperMode/opermode.cpp" line="134"/>
         <source>Grid_EDP</source>
         <translation>Grid_EDP</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="870"/>
-        <location filename="../OperMode/opermode.ui" line="2333"/>
-        <location filename="../OperMode/opermode.ui" line="3089"/>
-        <location filename="../OperMode/opermode.cpp" line="133"/>
+        <location filename="../OperMode/opermode.ui" line="973"/>
+        <location filename="../OperMode/opermode.ui" line="1958"/>
+        <location filename="../OperMode/opermode.ui" line="3074"/>
+        <location filename="../OperMode/opermode.cpp" line="135"/>
         <source>Grid_FDP</source>
         <translation>Grid_FDP</translation>
     </message>
@@ -6580,67 +6596,67 @@ When PV, battery, photovoltaic available.</source>
     当PV、电池、光伏可用。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="956"/>
+        <location filename="../OperMode/opermode.ui" line="1093"/>
         <source>(1)A, PV priority to charge the battery, excess energy to the load, if there is excess energy back to the grid.</source>
         <translation>（1）A、PV优先给电池充电，多余的能量给负载，如果还有多余的能量就回馈给电网。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="1047"/>
+        <location filename="../OperMode/opermode.ui" line="1139"/>
         <source>B, PV energy is given priority to battery charging, excess energy to the load.</source>
         <translation>B、PV能量优先给电池充电，多余的能量给负载。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="1071"/>
+        <location filename="../OperMode/opermode.ui" line="1185"/>
         <source>B, when PV is not enough to supply the battery and load, the grid provides the load with surplus energy.</source>
         <translation>当PV不足以供给电池和负载时，电网给负载提供剩余能量。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="1124"/>
+        <location filename="../OperMode/opermode.ui" line="1225"/>
         <source>(2) When the grid battery is available: A, the grid charges the battery and provides energy to the load.</source>
         <translation>（2）当电网电池可用时：电网给电池充电，同时给负载提供能量。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="1158"/>
+        <location filename="../OperMode/opermode.ui" line="2039"/>
         <source>1, when the battery, PV, grid is available</source>
         <translation>1.当电池、PV、电网可用时</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="1234"/>
+        <location filename="../OperMode/opermode.ui" line="2085"/>
         <source>A. When the PV is large enough, the PV charges the battery and supplies the load at the same time, and if there is any surplus, it is returned to the grid.</source>
         <translation>A、PV足够大时， PV给电池充电，同时供给负载，如果还有剩余，则回馈给电网。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="1258"/>
+        <location filename="../OperMode/opermode.ui" line="2131"/>
         <source>B. When PV is insufficient, PV charges the battery and supplies power to the load at the same time, and the grid supplements the remaining energy.</source>
         <translation>B、当PV不足时，PV给电池充电，同时给负载供电，电网补充剩余的能量。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="1338"/>
+        <location filename="../OperMode/opermode.ui" line="2177"/>
         <source>C. When PV is insufficient and the load power is less than the power set value on the AC side, the AC side supplies the load, the remaining available power on the AC side will charge the battery, and the PV will charge the battery.</source>
         <translation>C、当PV不足时，负载功率小于交流侧功率设定值时，交流侧供给负载，交流侧剩余可用功率将会给电池充电，同时PV给电池充电。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="1362"/>
+        <location filename="../OperMode/opermode.ui" line="2223"/>
         <source>D, when the PV is insufficient, the load power is greater than the AC power, the AC power is available to power the load, and the PV makes up the remaining power to the load, if the PV is insufficient, the battery adds the remaining energy.</source>
         <translation>D、当PV不足时，负载功率大于交流侧功率时，交流侧可用功率将负载供电，同时PV给负载补足剩余的功率，如果PV不足，则电池补充剩余能量。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="1390"/>
+        <location filename="../OperMode/opermode.ui" line="2247"/>
         <source>2, when the battery, the grid is available</source>
         <translation>2.当电池、电网可用时</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="1466"/>
+        <location filename="../OperMode/opermode.ui" line="2293"/>
         <source>A. When the load power is less than the power set value on the AC side, the AC side supplies the load, and the remaining available power on the AC side will charge the battery.</source>
         <translation>A、负载功率小于交流侧功率设定值时，交流侧供给负载，交流侧剩余可用功率将会给电池充电。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="1490"/>
+        <location filename="../OperMode/opermode.ui" line="2339"/>
         <source>B. When the load power is greater than the AC power, the available power on the AC side will supply power to the load and supplement the remaining energy with the battery.</source>
         <translation>B、负载功率大于交流侧功率时，交流侧可用功率将给负载供电，同电池补充剩余能量。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="1551"/>
+        <location filename="../OperMode/opermode.ui" line="3151"/>
         <source>Battery area division:
 ECP area of action:
     Saturated area + equalization area (SOC decays from high to low to charging SOC).
@@ -6661,7 +6677,7 @@ FDP作用区域：
     放空区+均衡区域（SOC小于充电SOC，由低到高增加，到放电SOC截止）。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="1583"/>
+        <location filename="../OperMode/opermode.ui" line="3183"/>
         <source>Chaifa startup logic (for all modes) :
     The display starts to enter the firewood control logic 4 minutes after the start of the display screen. 
     If the DCAC is not running, the diesel generator will be started if the power grid fails, and the diesel generator will be shut down when the power grid recovers. 
@@ -6672,50 +6688,48 @@ FDP作用区域：
     如果DCAC处于运行状态则按照柴发启动SOC/柴发停止SOC来控制柴发。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="1605"/>
         <source>Batter priority</source>
-        <translation>电池优先</translation>
+        <translation type="vanished">电池优先</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="1869"/>
-        <location filename="../OperMode/opermode.ui" line="2625"/>
+        <location filename="../OperMode/opermode.ui" line="1494"/>
+        <location filename="../OperMode/opermode.ui" line="2610"/>
         <source>50</source>
         <translation>50</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="2361"/>
         <source>Optimal mode</source>
-        <translation>最优模式</translation>
+        <translation type="vanished">最优模式</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="2985"/>
-        <location filename="../OperMode/opermode.ui" line="3009"/>
-        <location filename="../OperMode/opermode.ui" line="3033"/>
-        <location filename="../OperMode/opermode.ui" line="3057"/>
-        <location filename="../OperMode/opermode.ui" line="3081"/>
-        <location filename="../OperMode/opermode.ui" line="3105"/>
+        <location filename="../OperMode/opermode.ui" line="2970"/>
+        <location filename="../OperMode/opermode.ui" line="2994"/>
+        <location filename="../OperMode/opermode.ui" line="3018"/>
+        <location filename="../OperMode/opermode.ui" line="3042"/>
+        <location filename="../OperMode/opermode.ui" line="3066"/>
+        <location filename="../OperMode/opermode.ui" line="3090"/>
         <source>Set according to customer requirements</source>
         <translation>根据客户要求设置</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="3147"/>
+        <location filename="../OperMode/opermode.ui" line="3222"/>
         <source>Return</source>
         <translation>返回</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="3177"/>
+        <location filename="../OperMode/opermode.ui" line="3257"/>
         <source>Battery
 AreaDivision</source>
         <translation>电池区域划分</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="3205"/>
+        <location filename="../OperMode/opermode.ui" line="3285"/>
         <source>System
 for self-use</source>
         <translation>自发自用</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="3270"/>
+        <location filename="../OperMode/opermode.ui" line="3350"/>
         <source>Optimal</source>
         <translation>最优模式</translation>
     </message>
@@ -6725,7 +6739,7 @@ for self use</source>
         <translation type="vanished">自发自用</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="3233"/>
+        <location filename="../OperMode/opermode.ui" line="3313"/>
         <source>Batter
 priority</source>
         <translation>电池优先</translation>
@@ -6887,8 +6901,8 @@ The peak-valley filling mode is used for peak-valley arbitrage.PCS can operate a
     </message>
     <message>
         <location filename="../OperMode/opermode.cpp" line="103"/>
-        <location filename="../OperMode/opermode.cpp" line="139"/>
-        <location filename="../OperMode/opermode.cpp" line="142"/>
+        <location filename="../OperMode/opermode.cpp" line="141"/>
+        <location filename="../OperMode/opermode.cpp" line="144"/>
         <source>Invalid in this mode.</source>
         <translation>该模式下无效。</translation>
     </message>
@@ -6903,117 +6917,137 @@ The peak-valley filling mode is used for peak-valley arbitrage.PCS can operate a
         <translation>该模式下不会触发保护。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="135"/>
+        <location filename="../OperMode/opermode.cpp" line="106"/>
+        <source>If the SOC is lower than this value, it is in the empty zone and FCP is executed.</source>
+        <translation>SOC低于该值，处于放空区，执行FCP。</translation>
+    </message>
+    <message>
+        <location filename="../OperMode/opermode.cpp" line="107"/>
+        <source>Disarm FCP point.</source>
+        <translation>解除FCP点。</translation>
+    </message>
+    <message>
+        <location filename="../OperMode/opermode.cpp" line="108"/>
+        <source>Control battery does not discharge.</source>
+        <translation>控制电池不放电。</translation>
+    </message>
+    <message>
+        <location filename="../OperMode/opermode.cpp" line="109"/>
+        <source>After DOD is triggered in this mode, it is not triggered in grid-connected mode and is shut down in off-network mode.</source>
+        <translation>该模式下触发DOD后，并网模式下，不会触发，离网情况下关机。</translation>
+    </message>
+    <message>
+        <location filename="../OperMode/opermode.cpp" line="137"/>
         <source>Currently, only lithium batteries are supported.</source>
         <translation>目前仅支持锂电池。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="136"/>
+        <location filename="../OperMode/opermode.cpp" line="138"/>
         <source>Set the communication mode with the battery.</source>
         <translation>设置与电池的通信方式。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="137"/>
+        <location filename="../OperMode/opermode.cpp" line="139"/>
         <source>This section describes how to set the communication mode with the EMS.</source>
         <translation>设置与EMS的通信方式。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="138"/>
+        <location filename="../OperMode/opermode.cpp" line="140"/>
         <source>In this mode, if the SOC is smaller than the charging SOC, the AC test provides a small power to maintain the charging SOC.</source>
         <translation>该模式下，如果SOC小于充电SOC，交流测提供小功率维持在充电SOC。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="140"/>
+        <location filename="../OperMode/opermode.cpp" line="142"/>
         <source>In this mode, you can choose whether to preferentially use electricity from the grid or battery.</source>
         <translation>该模式下可选择优先用电网还是优先用电池的电。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="141"/>
+        <location filename="../OperMode/opermode.cpp" line="143"/>
         <source>In this mode, you can choose whether to reverse the flow.</source>
         <translation>该模式下可选择是否可逆流。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="143"/>
+        <location filename="../OperMode/opermode.cpp" line="145"/>
         <source>Battery charging voltage cut-off point.</source>
         <translation>电池充电电压截止点。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="144"/>
+        <location filename="../OperMode/opermode.cpp" line="146"/>
         <source>Battery charge voltage back almost.</source>
         <translation>电池充电电压回差点。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="145"/>
+        <location filename="../OperMode/opermode.cpp" line="147"/>
         <source>Battery discharge voltage cut-off point.</source>
         <translation>电池放电电压截止点。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="146"/>
+        <location filename="../OperMode/opermode.cpp" line="148"/>
         <source>Battery discharge voltage back to almost.</source>
         <translation>电池放电电压回差点。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="147"/>
+        <location filename="../OperMode/opermode.cpp" line="149"/>
         <source>Limit the battery charging current point.</source>
         <translation>限制电池充电电流点。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="148"/>
+        <location filename="../OperMode/opermode.cpp" line="150"/>
         <source>Limit the battery discharge current point.</source>
         <translation>限制电池放电电流点。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="149"/>
+        <location filename="../OperMode/opermode.cpp" line="151"/>
         <source>In this mode, when the SOC is less than (100 - DOD), the battery does not discharge and does not draw power from the grid.</source>
         <translation>该模式下SOC小于（100 – DOD）时，电池不放电，也不从电网取电。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="150"/>
+        <location filename="../OperMode/opermode.cpp" line="152"/>
         <source>After DOD is triggered in this mode, no charge or shutdown is performed in grid-connected mode, and the device is shut down in off-network condition.</source>
         <translation>该模式下触发DOD后，并网模式下，不充电，不关机，离网情况下关机。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="151"/>
+        <location filename="../OperMode/opermode.cpp" line="153"/>
         <source>When SOC is less than or equal to Chaifa, start Chaifa.</source>
         <translation>SOC小于等于柴发启动SOC时，启动柴发。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="152"/>
+        <location filename="../OperMode/opermode.cpp" line="154"/>
         <source>When SOC is greater than or equal to Chaifa, turn off Chaifa.</source>
         <translation>SOC大于等于柴发启动SOC时，关闭柴发。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="153"/>
+        <location filename="../OperMode/opermode.cpp" line="155"/>
         <source>Limit the maximum voltage of the battery charging cell.</source>
         <translation>限制电池充电单体最高电压。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="154"/>
+        <location filename="../OperMode/opermode.cpp" line="156"/>
         <source>In chai-hair mode, the AC power reference value of the saturation zone and the equalization zone.</source>
         <translation>柴发模式下，饱和区和均衡区的交流侧功率参考值。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="155"/>
+        <location filename="../OperMode/opermode.cpp" line="157"/>
         <source>Power reference value of AC side of the discharge area in Chai hair mode.</source>
         <translation>柴发模式下，放空区的交流侧功率参考值。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="156"/>
+        <location filename="../OperMode/opermode.cpp" line="158"/>
         <source>In the power grid mode, the AC power reference value in the saturation zone and the equilibrium zone.</source>
         <translation>电网模式下，饱和区和均衡区的交流侧功率参考值。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="157"/>
+        <location filename="../OperMode/opermode.cpp" line="159"/>
         <source>In power grid mode, this parameter specifies the power reference value on the AC side of the vent area.</source>
         <translation>电网模式下，放空区的交流侧功率参考值。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="158"/>
+        <location filename="../OperMode/opermode.cpp" line="160"/>
         <source>The equalization zone limits the discharge power of the system to the grid side.</source>
         <translation>均衡区限制系统对电网侧的放电功率。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="159"/>
+        <location filename="../OperMode/opermode.cpp" line="161"/>
         <source>The discharge zone limits the discharge power of the system to the power grid side.</source>
         <translation>放空区限制系统对电网侧的放电功率。</translation>
     </message>

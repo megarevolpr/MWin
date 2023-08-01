@@ -247,7 +247,7 @@ public:
     /***************************DC/AC参数****************************/
     QPushButton *Grid_connected_mode_explain;//并网方式说明
     QPushButton *Constant_power_explain;     //功率说明
-    QPushButton *Charging_and_discharging_explain;  //充放电说明
+//    QPushButton *Charging_and_discharging_explain;  //充放电说明
     QPushButton *Work_mode_explain;  //工作模式说明
     QPushButton *Output_power_factor_explain;    //输出功率因素说明
     QPushButton *Output_reactive_power_explain;  //输出无功功率说明
@@ -261,7 +261,7 @@ public:
 
     Specification *Grid_connected_mode;
     Specification *Constant_power;
-    Specification *Charging_and_discharging;
+//    Specification *Charging_and_discharging;
     Specification *Work_mode;
     Specification *Output_power_factor;
     Specification *Output_reactive_power;

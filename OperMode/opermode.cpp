@@ -103,8 +103,10 @@ void OperMode::InitializeMemorySpace()
     str2 = tr("Invalid in this mode.");//该模式下无效
     str3 = tr("In this mode, the charging power of the AC side is limited.");//该模式下，限制交流侧的充电功率
     str4 = tr("Protection is not triggered in this mode.");//该模式下不会触发保护。
-    str5 = tr("");
-    str6 = tr("");
+    str5 = tr("If the SOC is lower than this value, it is in the empty zone and FCP is executed.");//SOC低于该值，处于放空区，执行FCP
+    str6 = tr("Disarm FCP point.");//解除FCP点
+    str7 = tr("Control battery does not discharge.");//控制电池不放电
+    str8 = tr("After DOD is triggered in this mode, it is not triggered in grid-connected mode and is shut down in off-network mode.");//该模式下触发DOD后，并网模式下，不会触发，离网情况下关机。
 
     Bat_Type_str = tr("Battery type");
     Bat_Comm_str = tr("BMS Comm.type");
@@ -239,8 +241,11 @@ void OperMode::Init_Tab_button()
     Init_OptTab_button(ui->OptMod_Widget);
 
     InitializeChart(ui->Paramrter_Widget);
-    InitializeChart_2(ui->BatPri_Widget);
-    InitializeChart_2(ui->OptMod_Widget);
+    InitializeChart(ui->BatPri_Widget);
+    InitializeChart(ui->OptMod_Widget);
+
+//    InitializeChart_2(ui->BatPri_Widget);
+//    InitializeChart_2(ui->OptMod_Widget);
 
 }
 //初始化表格
@@ -350,29 +355,38 @@ void OperMode::on_System_btn_clicked()
     ui->ExplainWidget->setCurrentWidget(ui->Explainpage);
     ui->ExplanationTextWidget->setCurrentWidget(ui->Systempage);
     Charge_SOC_btn_explain->ModifyText(Charge_SOC_str_Content);
+    Discharge_SOC_btn_explain->ModifyText(Discharge_SOC_str_Content);
     ConstantPower_btn_explain->ModifyText(ConstantPower_str_Content);
     DOD_OnGrid_btn_explain->ModifyText(DOD_OnGrid_str_Content);
+    DOD_OffGrid_btn_explain->ModifyText(DOD_OffGrid_str_Content);
 }
 //电池优先
 void OperMode::on_Batter_btn_clicked()
 {
     ui->ExplainWidget->setCurrentWidget(ui->Explainpage);
     ui->ExplanationTextWidget->setCurrentWidget(ui->Batterpage);
+    Charge_SOC_btn_explain->ModifyText(str2);
+    Discharge_SOC_btn_explain->ModifyText(str2);
+    ConstantPower_btn_explain->ModifyText(str3);
+    DOD_OnGrid_btn_explain->ModifyText(str4);
+    DOD_OffGrid_btn_explain->ModifyText(str8);
 }
 //最优模式
 void OperMode::on_Optimal_btn_clicked()
 {
     ui->ExplainWidget->setCurrentWidget(ui->Explainpage);
     ui->ExplanationTextWidget->setCurrentWidget(ui->Optimalpage);
+    Charge_SOC_btn_explain->ModifyText(str5);
+    Discharge_SOC_btn_explain->ModifyText(str6);
+    ConstantPower_btn_explain->ModifyText(str3);
+    DOD_OnGrid_btn_explain->ModifyText(str7);
+    DOD_OffGrid_btn_explain->ModifyText(str8);
 }
-//
+//电池区域划分
 void OperMode::on_AreaDivision_btn_clicked()
 {
     ui->ExplainWidget->setCurrentWidget(ui->Explainpage);
     ui->ExplanationTextWidget->setCurrentWidget(ui->AreaDivisionpage);
-    Charge_SOC_btn_explain->ModifyText(str2);
-    ConstantPower_btn_explain->ModifyText(str3);
-    DOD_OnGrid_btn_explain->ModifyText(str4);
 }
 
 //调整控件大小
@@ -381,18 +395,19 @@ void OperMode::resizeEvent(QResizeEvent *event)
     int x = this->frameGeometry().width(); //获取ui形成窗口宽度
     int y = this->frameGeometry().height();//获取窗口高度
 
-    ui->ExplainWidget->setGeometry(0,0,x-160,y-10);
-    ui->Explainpage->setGeometry(0,0,x-160,y-10);
+//    ui->ExplainWidget->setGeometry(0,0,x-160,y-50);
+//    ui->Explainpage->setGeometry(0,0,x-160,y-50);
 
-//    ui->Paramrter_Widget->setGeometry(0,0,x-160,y);
-    ui->BatPri_Widget->setColumnWidth(0,(x-600)*0.25);//450\650\150
-    ui->BatPri_Widget->setColumnWidth(1,(x-600)*0.21);
-    ui->BatPri_Widget->setColumnWidth(2,(x-600)*0.22);
-    ui->BatPri_Widget->setColumnWidth(3,(x-600)*0.19);
-    ui->OptMod_Widget->setColumnWidth(0,(x-600)*0.25);//450\650\150
-    ui->OptMod_Widget->setColumnWidth(1,(x-600)*0.21);
-    ui->OptMod_Widget->setColumnWidth(2,(x-600)*0.22);
-    ui->OptMod_Widget->setColumnWidth(3,(x-600)*0.19);
+//    ui->Paramrter_Widget->setGeometry(600,0,x-160,y);
+
+    ui->BatPri_Widget->setColumnWidth(0,(x-710)*0.25);//450\650\150
+    ui->BatPri_Widget->setColumnWidth(1,(x-710)*0.21);
+    ui->BatPri_Widget->setColumnWidth(2,(x-710)*0.22);
+    ui->BatPri_Widget->setColumnWidth(3,(x-710)*0.19);
+    ui->OptMod_Widget->setColumnWidth(0,(x-710)*0.25);//450\650\150
+    ui->OptMod_Widget->setColumnWidth(1,(x-710)*0.21);
+    ui->OptMod_Widget->setColumnWidth(2,(x-710)*0.22);
+    ui->OptMod_Widget->setColumnWidth(3,(x-710)*0.19);
 
     ui->Paramrter_Widget->setColumnWidth(0,(x-710)*0.25);//560\650\150
     ui->Paramrter_Widget->setColumnWidth(1,(x-710)*0.21);
@@ -530,7 +545,20 @@ void OperMode::SetExplain(QTableWidget *myWidget)
 }
 
 
+void OperMode::setAppSize(int remainH)
+{
+    //首先获取屏幕尺寸信息
+    QDesktopWidget *deskTopWidget = QApplication::desktop();
+    QRect deskRect = deskTopWidget->availableGeometry();
 
+    //设置程序尺寸(我的界面需要适应高度)
+//    int titleBarH = style()->pixelMetric(QStyle::PM_TitleBarHeight); 	// 获取标题栏高度(WIndow自带)
+    int titleBarH = 0;
+    int appH = deskRect.height() - remainH - titleBarH;
+    int appW = appH*this->width() / this->height();	//根据软件的宽高比例
+    this->setFixedSize(appW, appH);  		//注意：此处设置的高度是不包含标题栏
+    setGeometry((deskRect.width() - appW) / 2, remainH / 2 + titleBarH, appW, appH);	//设置程序窗体在桌面的显示位置
+}
 
 
 

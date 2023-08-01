@@ -62,7 +62,7 @@
    <item row="0" column="0">
     <widget class="QStackedWidget" name="UI_stackedWidget">
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="BasicSet_page">
       <widget class="QWidget" name="layoutWidget">
@@ -147,8 +147,13 @@ color: rgb(255, 255, 255);</string>
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="currentIndex">
-           <number>2</number>
+           <number>4</number>
           </property>
           <widget class="QWidget" name="UI_Parameter_page">
            <attribute name="title">
@@ -189,6 +194,11 @@ color: rgb(255, 255, 255);</string>
                 <width>16777215</width>
                 <height>410</height>
                </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
               </property>
               <property name="cursor" stdset="0">
                <cursorShape>ArrowCursor</cursorShape>
@@ -808,6 +818,11 @@ color: rgb(255, 255, 255);</string>
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
             </property>
             <property name="rowCount">
              <number>12</number>
@@ -1458,6 +1473,11 @@ color: rgb(255, 255, 255);</string>
               <height>414</height>
              </rect>
             </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
             <attribute name="horizontalHeaderDefaultSectionSize">
              <number>175</number>
             </attribute>
@@ -1726,6 +1746,11 @@ color: rgb(255, 255, 255);</string>
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
             </property>
             <property name="rowCount">
              <number>14</number>
@@ -2220,6 +2245,11 @@ color: rgb(255, 255, 255);</string>
             </property>
             <item row="0" column="0">
              <widget class="QTableWidget" name="UI_DCDC_Debug_tableWidget">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
               <property name="sizeAdjustPolicy">
                <enum>QAbstractScrollArea::AdjustIgnored</enum>
               </property>
@@ -2732,7 +2762,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <enum>QFrame::Raised</enum>
            </property>
            <property name="currentIndex">
-            <number>1</number>
+            <number>3</number>
            </property>
            <widget class="QWidget" name="Host_page">
             <widget class="QPushButton" name="Bypass_Grid_btn">
@@ -3935,7 +3965,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                         <enum>Qt::TabFocus</enum>
                        </property>
                        <property name="currentIndex">
-                        <number>1</number>
+                        <number>3</number>
                        </property>
                        <widget class="QWidget" name="Machine_page">
                         <property name="focusPolicy">
@@ -3961,7 +3991,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                           <widget class="QTableWidget" name="RT_Machine_tableWidget">
                            <property name="font">
                             <font>
-                             <pointsize>9</pointsize>
+                             <pointsize>12</pointsize>
                             </font>
                            </property>
                            <attribute name="verticalHeaderVisible">
@@ -4233,7 +4263,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                           <widget class="QTableWidget" name="RT_DCDC_tableWidget">
                            <property name="font">
                             <font>
-                             <pointsize>9</pointsize>
+                             <pointsize>12</pointsize>
                             </font>
                            </property>
                            <attribute name="verticalHeaderVisible">
@@ -4261,7 +4291,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                           <widget class="QTableWidget" name="RT_Grid_tableWidget">
                            <property name="font">
                             <font>
-                             <pointsize>9</pointsize>
+                             <pointsize>12</pointsize>
                             </font>
                            </property>
                            <attribute name="verticalHeaderVisible">
@@ -4286,7 +4316,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                           <widget class="QTableWidget" name="RT_Load_tableWidget">
                            <property name="font">
                             <font>
-                             <pointsize>9</pointsize>
+                             <pointsize>12</pointsize>
                             </font>
                            </property>
                            <attribute name="verticalHeaderVisible">
@@ -4667,7 +4697,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                       <widget class="QTableWidget" name="State_tableWidget">
                        <property name="font">
                         <font>
-                         <pointsize>9</pointsize>
+                         <pointsize>12</pointsize>
                         </font>
                        </property>
                        <attribute name="horizontalHeaderVisible">
@@ -4848,7 +4878,13 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                     </layout>
                    </item>
                    <item>
-                    <widget class="QTableWidget" name="RTAlarm_Data_page"/>
+                    <widget class="QTableWidget" name="RTAlarm_Data_page">
+                     <property name="font">
+                      <font>
+                       <pointsize>12</pointsize>
+                      </font>
+                     </property>
+                    </widget>
                    </item>
                   </layout>
                  </item>
@@ -6481,8 +6517,13 @@ enable</string>
              </property>
              <item row="0" column="0">
               <widget class="QTabWidget" name="Record_tabWidget">
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
                <property name="currentIndex">
-                <number>1</number>
+                <number>0</number>
                </property>
                <widget class="QWidget" name="DataReport_page">
                 <attribute name="title">
@@ -6586,6 +6627,11 @@ QTabBar#tabBar::tab:selected {
                          <horstretch>0</horstretch>
                          <verstretch>0</verstretch>
                         </sizepolicy>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                        </font>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
@@ -7192,6 +7238,11 @@ background-color: rgb(255, 0, 0);</string>
              </property>
              <item row="0" column="1">
               <widget class="QTabWidget" name="System_tabWidget">
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
                <property name="cursor">
                 <cursorShape>ArrowCursor</cursorShape>
                </property>
@@ -7199,7 +7250,7 @@ background-color: rgb(255, 0, 0);</string>
                 <bool>false</bool>
                </property>
                <property name="currentIndex">
-                <number>4</number>
+                <number>0</number>
                </property>
                <widget class="QWidget" name="DCACParameterSet_page">
                 <attribute name="title">
@@ -7223,6 +7274,11 @@ background-color: rgb(255, 0, 0);</string>
                  </property>
                  <item row="0" column="0">
                   <widget class="QTableWidget" name="System_Tab">
+                   <property name="font">
+                    <font>
+                     <pointsize>12</pointsize>
+                    </font>
+                   </property>
                    <property name="cursor" stdset="0">
                     <cursorShape>ArrowCursor</cursorShape>
                    </property>
@@ -7318,7 +7374,7 @@ background-color: rgb(255, 0, 0);</string>
                    </item>
                    <item row="2" column="0">
                     <property name="text">
-                     <string>Charging and discharging</string>
+                     <string>Operational mode</string>
                     </property>
                     <property name="textAlignment">
                      <set>AlignCenter</set>
@@ -7350,7 +7406,7 @@ background-color: rgb(255, 0, 0);</string>
                    </item>
                    <item row="3" column="0">
                     <property name="text">
-                     <string>Operational mode</string>
+                     <string>Output power factor</string>
                     </property>
                     <property name="textAlignment">
                      <set>AlignCenter</set>
@@ -7382,7 +7438,7 @@ background-color: rgb(255, 0, 0);</string>
                    </item>
                    <item row="4" column="0">
                     <property name="text">
-                     <string>Output power factor</string>
+                     <string>Output reactive power</string>
                     </property>
                     <property name="textAlignment">
                      <set>AlignCenter</set>
@@ -7398,7 +7454,7 @@ background-color: rgb(255, 0, 0);</string>
                    </item>
                    <item row="5" column="0">
                     <property name="text">
-                     <string>Output reactive power</string>
+                     <string>Constant current</string>
                     </property>
                     <property name="textAlignment">
                      <set>AlignCenter</set>
@@ -7406,7 +7462,7 @@ background-color: rgb(255, 0, 0);</string>
                    </item>
                    <item row="5" column="2">
                     <property name="text">
-                     <string>-</string>
+                     <string>A</string>
                     </property>
                     <property name="textAlignment">
                      <set>AlignCenter</set>
@@ -7414,7 +7470,7 @@ background-color: rgb(255, 0, 0);</string>
                    </item>
                    <item row="6" column="0">
                     <property name="text">
-                     <string>Constant current</string>
+                     <string>Constant voltage</string>
                     </property>
                     <property name="textAlignment">
                      <set>AlignCenter</set>
@@ -7422,7 +7478,7 @@ background-color: rgb(255, 0, 0);</string>
                    </item>
                    <item row="6" column="2">
                     <property name="text">
-                     <string>A</string>
+                     <string>V</string>
                     </property>
                     <property name="textAlignment">
                      <set>AlignCenter</set>
@@ -7430,7 +7486,7 @@ background-color: rgb(255, 0, 0);</string>
                    </item>
                    <item row="7" column="0">
                     <property name="text">
-                     <string>Constant voltage</string>
+                     <string/>
                     </property>
                     <property name="textAlignment">
                      <set>AlignCenter</set>
@@ -7438,7 +7494,7 @@ background-color: rgb(255, 0, 0);</string>
                    </item>
                    <item row="7" column="2">
                     <property name="text">
-                     <string>V</string>
+                     <string/>
                     </property>
                     <property name="textAlignment">
                      <set>AlignCenter</set>
@@ -7454,7 +7510,13 @@ background-color: rgb(255, 0, 0);</string>
                 </attribute>
                 <layout class="QGridLayout" name="gridLayout_5">
                  <item row="0" column="0">
-                  <widget class="QTableWidget" name="DCDC_tableWidget"/>
+                  <widget class="QTableWidget" name="DCDC_tableWidget">
+                   <property name="font">
+                    <font>
+                     <pointsize>12</pointsize>
+                    </font>
+                   </property>
+                  </widget>
                  </item>
                 </layout>
                </widget>
@@ -7481,7 +7543,7 @@ background-color: rgb(255, 0, 0);</string>
                  <item row="0" column="0">
                   <widget class="QTabWidget" name="BatterSet_tabWidget">
                    <property name="currentIndex">
-                    <number>0</number>
+                    <number>1</number>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -7525,6 +7587,11 @@ background-color: rgb(255, 0, 0);</string>
                          </item>
                          <item>
                           <widget class="QPlainTextEdit" name="plainTextEdit">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                            </font>
+                           </property>
                            <property name="plainText">
                             <string>A1: 
 Generator turn on voltage(A1)
@@ -7543,6 +7610,11 @@ Generator turn off voltage(B1)</string>
                                <verstretch>0</verstretch>
                               </sizepolicy>
                              </property>
+                             <property name="font">
+                              <font>
+                               <pointsize>12</pointsize>
+                              </font>
+                             </property>
                              <property name="text">
                               <string>Power on</string>
                              </property>
@@ -7556,6 +7628,11 @@ Generator turn off voltage(B1)</string>
                                <verstretch>0</verstretch>
                               </sizepolicy>
                              </property>
+                             <property name="font">
+                              <font>
+                               <pointsize>12</pointsize>
+                              </font>
+                             </property>
                              <property name="text">
                               <string>Power off</string>
                              </property>
@@ -7567,6 +7644,11 @@ Generator turn off voltage(B1)</string>
                        </item>
                        <item>
                         <widget class="QTableWidget" name="Lithium_Tab">
+                         <property name="font">
+                          <font>
+                           <pointsize>12</pointsize>
+                          </font>
+                         </property>
                          <property name="cursor" stdset="0">
                           <cursorShape>ArrowCursor</cursorShape>
                          </property>
@@ -7745,6 +7827,11 @@ Generator turn off voltage(B1)</string>
                          </item>
                          <item>
                           <widget class="QPlainTextEdit" name="plainTextEdit_2">
+                           <property name="font">
+                            <font>
+                             <pointsize>12</pointsize>
+                            </font>
+                           </property>
                            <property name="plainText">
                             <string>A1: Generator turn on voltage
 B1: Generator turn off voltage
@@ -7758,6 +7845,11 @@ Set rule:B1 - A1 ≥ 10V</string>
                        </item>
                        <item>
                         <widget class="QTableWidget" name="Lead_Tab">
+                         <property name="font">
+                          <font>
+                           <pointsize>12</pointsize>
+                          </font>
+                         </property>
                          <property name="rowCount">
                           <number>9</number>
                          </property>
@@ -8358,6 +8450,11 @@ Set rule:B1 - A1 ≥ 10V</string>
                   <layout class="QVBoxLayout" name="verticalLayout_25">
                    <item>
                     <widget class="QTableWidget" name="Time_tableWidget">
+                     <property name="font">
+                      <font>
+                       <pointsize>12</pointsize>
+                      </font>
+                     </property>
                      <property name="cursor" stdset="0">
                       <cursorShape>ArrowCursor</cursorShape>
                      </property>
@@ -8391,6 +8488,11 @@ Set rule:B1 - A1 ≥ 10V</string>
                       </property>
                       <item row="0" column="0">
                        <widget class="QTableWidget" name="EquipmentInfor_tableWidget">
+                        <property name="font">
+                         <font>
+                          <pointsize>12</pointsize>
+                         </font>
+                        </property>
                         <property name="cursor" stdset="0">
                          <cursorShape>ArrowCursor</cursorShape>
                         </property>
@@ -8515,6 +8617,11 @@ Set rule:B1 - A1 ≥ 10V</string>
                    </item>
                    <item>
                     <widget class="QGroupBox" name="groupBox_3">
+                     <property name="font">
+                      <font>
+                       <pointsize>12</pointsize>
+                      </font>
+                     </property>
                      <property name="title">
                       <string>Network:</string>
                      </property>
@@ -8533,7 +8640,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                            <x>0</x>
                            <y>0</y>
                            <width>383</width>
-                           <height>359</height>
+                           <height>347</height>
                           </rect>
                          </property>
                          <property name="cursor">
@@ -8780,6 +8887,11 @@ Set rule:B1 - A1 ≥ 10V</string>
             </layout>
            </widget>
            <widget class="QWidget" name="Switch_page">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
             <property name="cursor">
              <cursorShape>ArrowCursor</cursorShape>
             </property>
@@ -8803,6 +8915,11 @@ Set rule:B1 - A1 ≥ 10V</string>
                <width>100</width>
                <height>100</height>
               </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
              </property>
              <property name="cursor">
               <cursorShape>ArrowCursor</cursorShape>
@@ -8845,6 +8962,11 @@ Set rule:B1 - A1 ≥ 10V</string>
                <width>100</width>
                <height>100</height>
               </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
              </property>
              <property name="cursor">
               <cursorShape>ArrowCursor</cursorShape>
@@ -8891,6 +9013,11 @@ Set rule:B1 - A1 ≥ 10V</string>
                <height>100</height>
               </size>
              </property>
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
              <property name="cursor">
               <cursorShape>ArrowCursor</cursorShape>
              </property>
@@ -8932,6 +9059,11 @@ Set rule:B1 - A1 ≥ 10V</string>
                <width>100</width>
                <height>100</height>
               </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
              </property>
              <property name="cursor">
               <cursorShape>ArrowCursor</cursorShape>

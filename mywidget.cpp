@@ -243,7 +243,7 @@ void MyWidget::MemoryAllocation()
 
     Grid_connected_mode_explain = new QPushButton;      //PCS并离网方式说明
     Constant_power_explain  = new QPushButton;           //恒功率说明
-    Charging_and_discharging_explain = new QPushButton; //充放电说明status
+//    Charging_and_discharging_explain = new QPushButton; //充放电说明status
     Work_mode_explain = new QPushButton;                //工作模式说明
     Output_power_factor_explain = new QPushButton;      //输出功率因素说明
     Output_reactive_power_explain = new QPushButton;    //输出无功功率说明
@@ -787,7 +787,7 @@ void MyWidget::DC_AC_Parameter_tab_delete()
     delete mode_expelain;//操作模式新窗口
     delete Grid_connected_mode;
     delete Constant_power;
-    delete Charging_and_discharging;
+//    delete Charging_and_discharging;
     delete Output_power_factor;
     delete Output_reactive_power;
     delete Constant_current;
@@ -2477,8 +2477,8 @@ void MyWidget::MPS_Data(QTableWidget *myTable)
     }
     MPS_IGBT_T = new Specification(this,MPS_IGBT_T_explain, myTable, line++, column, \
                                             "0℃", tr("IGBT temperature"), \
-                                            tr("The current IGBT temperature of MPS shall not exceed 105℃, otherwise PCS will run derated."));
-    MPS_IGBT_T->add_Specification();
+                                            tr("The current IGBT temperature of the MPS must not exceed 105 ° C. Otherwise, the MPS will derate and can resume full power operation at 73 ° C after derating."));
+    MPS_IGBT_T->add_Specification();//当前MPS的IGBT温度，IGBT温度不得超过105℃，否则MPS将降额运行，降额后73℃恢复可满功率运行。
 
     if(MPS_Env_T != nullptr)
     {
@@ -2495,8 +2495,8 @@ void MyWidget::MPS_Data(QTableWidget *myTable)
     }
     MPS_Leakage_cur = new Specification(this,MPS_Leakage_cur_explain, myTable, line++, column, \
                                             "0mA", tr("Leakage current"), \
-                                            tr("Leakage current: the current to the ground of the grounding wire. If the value is larger, it indicates that there is leakage."));
-    MPS_Leakage_cur->add_Specification();
+                                            tr("Leakage current: the current to the ground of the grounding wire. Leakage current below 30mA is normal. Leakage current above 30mA indicates that there is leakage."));
+    MPS_Leakage_cur->add_Specification();//漏电流，接地线的对地电流，漏电流30mA以下正常，超过30mA表示存在漏电现象。
     line=0;
     column=3;
 
@@ -2649,8 +2649,8 @@ void MyWidget::PV_Data(QTableWidget *myTable)
     }
     PositiveInuslation = new Specification(this,PositiveInuslation_explain, myTable, line++, column, \
                                             "0kΩ", tr("PositiveInuslation"), \
-                                            tr("Positive insulation impedance of the current DCDC module."));
-    PositiveInuslation->add_Specification();
+                                            tr("The positive insulation impedance of the DCDC module is normal when the positive insulation impedance is greater than 1 Mω. When the positive insulation impedance is lower than 1 Mω, the insulation fault or potential security risks exist."));
+    PositiveInuslation->add_Specification();//DCDC模块的正绝缘阻抗，正绝缘阻抗大于1MΩ时正常，低于1MΩ时存在绝缘故障或潜在的安全隐患。
 
     line=0;
     column=3;
@@ -2688,7 +2688,7 @@ void MyWidget::PV_Data(QTableWidget *myTable)
     }
     Bus_L_vol_reduce = new Specification(this,Bus_L_vol_reduce_explain, myTable, line++, column, \
                                             "0V", tr("Bus_L_vol(-)"), \
-                                            tr("The low voltage side of the DC module is negative for the bus voltage."));
+                                            tr("The current IGBT temperature of the MPS must not exceed 105 ° C. Otherwise, the MPS will derate and can resume full power operation at 73 ° C after derating."));
     Bus_L_vol_reduce->add_Specification();
 
     if(PV_IGBT_T != nullptr)
@@ -2715,8 +2715,8 @@ void MyWidget::PV_Data(QTableWidget *myTable)
     }
     Leakage_cur = new Specification(this,Leakage_cur_explain, myTable, line++, column, \
                                             "0mA", tr("Leakage_cur"), \
-                                            tr("Current leakage current of the DCDC module."));
-    Leakage_cur->add_Specification();
+                                            tr("The negative insulation impedance of the DCDC module is normal when the negative insulation impedance is greater than 1 Mω. When the negative insulation impedance is lower than 1 Mω, the insulation fault or potential security risks exist."));
+    Leakage_cur->add_Specification();//DCDC模块的负绝缘阻抗，负绝缘阻抗大于1MΩ时正常，低于1MΩ时存在绝缘故障或潜在的安全隐患。
 }
 //电网数据 绘制button
 void MyWidget::Grid_Data(QTableWidget *myTable)
@@ -3079,10 +3079,10 @@ void MyWidget::DC_AC_Parameter_tab(QTableWidget *myTable)
                                        tr("    This is the power setting of the AC side. The charging and discharging power of the AC side can be controlled by modifying the value of this item.When advanced Settings control power mode select constant power mode (CP_N&P), positive value indicates discharge, negative value indicates charging.\n    For example, set -5, indicating that the AC side will charge the battery with a power of -5kW, due to the loss of the inverter, the power on the DC side will be less than the power on the AC side.\n    For example, set 5, indicating that the AC side will be 5kW power output, due to the loss of the inverter, the DC side of the power will be greater than the AC side of the power."));
     Constant_power->add_Specification();
 
-    Charging_and_discharging = new Specification(this,Charging_and_discharging_explain, myTable, line++, column, \
-                                                 tr("Charge"), tr("Charging and discharging"), \
-                                                 tr("Reserve."));
-    Charging_and_discharging->add_Specification();
+//    Charging_and_discharging = new Specification(this,Charging_and_discharging_explain, myTable, line++, column, \
+//                                                 tr("Charge"), tr("Charging and discharging"), \
+//                                                 tr("Reserve."));
+//    Charging_and_discharging->add_Specification();
 
 
     Work_mode_explain->setText(tr("Manual"));

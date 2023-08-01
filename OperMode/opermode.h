@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include <QPlainTextEdit>
+#include <QDesktopWidget>
+
 #include "Specification/Specification.h"
 
 namespace Ui {
@@ -121,7 +123,7 @@ public:
     QPushButton *OptMod_Grid_FDP;
 
 
-    QString str,str2,str3,str4,str5,str6;
+    QString str,str2,str3,str4,str5,str6,str7,str8;
 
     QString Bat_Type_str;
     QString Bat_Comm_str;
@@ -190,6 +192,7 @@ protected:
     void Init_OptTab_button(QTableWidget *myWidget);//初始化表格点击控件
     virtual void resizeEvent(QResizeEvent *event)override;//调整控件大小
     void SetExplain(QTableWidget *myWidget);
+    void setAppSize(int remainH);//窗口大小
 
 private slots:
     void on_Return_clicked();
