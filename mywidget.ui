@@ -153,7 +153,7 @@ color: rgb(255, 255, 255);</string>
            </font>
           </property>
           <property name="currentIndex">
-           <number>4</number>
+           <number>0</number>
           </property>
           <widget class="QWidget" name="UI_Parameter_page">
            <attribute name="title">
@@ -540,7 +540,7 @@ color: rgb(255, 255, 255);</string>
               </item>
               <item row="5" column="8">
                <property name="text">
-                <string/>
+                <string>-</string>
                </property>
                <property name="textAlignment">
                 <set>AlignCenter</set>
@@ -580,7 +580,7 @@ color: rgb(255, 255, 255);</string>
               </item>
               <item row="6" column="6">
                <property name="text">
-                <string/>
+                <string>BMS Com. Fault Time</string>
                </property>
                <property name="textAlignment">
                 <set>AlignCenter</set>
@@ -593,7 +593,7 @@ color: rgb(255, 255, 255);</string>
               </item>
               <item row="6" column="8">
                <property name="text">
-                <string>-</string>
+                <string>s</string>
                </property>
                <property name="textAlignment">
                 <set>AlignCenter</set>
@@ -633,7 +633,7 @@ color: rgb(255, 255, 255);</string>
               </item>
               <item row="7" column="6">
                <property name="text">
-                <string/>
+                <string>EMS Com. Fault Time</string>
                </property>
                <property name="textAlignment">
                 <set>AlignCenter</set>
@@ -646,7 +646,7 @@ color: rgb(255, 255, 255);</string>
               </item>
               <item row="7" column="8">
                <property name="text">
-                <string/>
+                <string>s</string>
                </property>
                <property name="textAlignment">
                 <set>AlignCenter</set>
@@ -990,7 +990,7 @@ color: rgb(255, 255, 255);</string>
             </item>
             <item row="2" column="6">
              <property name="text">
-              <string>Clear Data</string>
+              <string>Backup setup parameters</string>
              </property>
              <property name="textAlignment">
               <set>AlignCenter</set>
@@ -1043,7 +1043,7 @@ color: rgb(255, 255, 255);</string>
             </item>
             <item row="3" column="6">
              <property name="text">
-              <string>Rack</string>
+              <string>Restore backup setup parameters</string>
              </property>
              <property name="textAlignment">
               <set>AlignCenter</set>
@@ -1096,7 +1096,7 @@ color: rgb(255, 255, 255);</string>
             </item>
             <item row="4" column="6">
              <property name="text">
-              <string>Module max</string>
+              <string>Clear Data</string>
              </property>
              <property name="textAlignment">
               <set>AlignCenter</set>
@@ -1149,7 +1149,7 @@ color: rgb(255, 255, 255);</string>
             </item>
             <item row="5" column="6">
              <property name="text">
-              <string>Module min</string>
+              <string>Rack</string>
              </property>
              <property name="textAlignment">
               <set>AlignCenter</set>
@@ -1202,7 +1202,7 @@ color: rgb(255, 255, 255);</string>
             </item>
             <item row="6" column="6">
              <property name="text">
-              <string>Insulation detection enable DCDC</string>
+              <string>Module max</string>
              </property>
              <property name="textAlignment">
               <set>AlignCenter</set>
@@ -1255,7 +1255,7 @@ color: rgb(255, 255, 255);</string>
             </item>
             <item row="7" column="6">
              <property name="text">
-              <string/>
+              <string>Module min</string>
              </property>
              <property name="textAlignment">
               <set>AlignCenter</set>
@@ -1268,7 +1268,7 @@ color: rgb(255, 255, 255);</string>
             </item>
             <item row="7" column="8">
              <property name="text">
-              <string/>
+              <string>-</string>
              </property>
              <property name="textAlignment">
               <set>AlignCenter</set>
@@ -1308,7 +1308,7 @@ color: rgb(255, 255, 255);</string>
             </item>
             <item row="8" column="6">
              <property name="text">
-              <string/>
+              <string>Insulation detection enable DCDC</string>
              </property>
              <property name="textAlignment">
               <set>AlignCenter</set>
@@ -1316,7 +1316,7 @@ color: rgb(255, 255, 255);</string>
             </item>
             <item row="8" column="8">
              <property name="text">
-              <string/>
+              <string>-</string>
              </property>
              <property name="textAlignment">
               <set>AlignCenter</set>
@@ -3911,7 +3911,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                 <string notr="true"/>
                </property>
                <property name="currentIndex">
-                <number>1</number>
+                <number>3</number>
                </property>
                <widget class="QWidget" name="RT_Data_page">
                 <attribute name="title">
@@ -6499,6 +6499,11 @@ enable</string>
             </layout>
            </widget>
            <widget class="QWidget" name="Record_page">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
             <layout class="QGridLayout" name="gridLayout">
              <property name="leftMargin">
               <number>0</number>
@@ -6523,7 +6528,7 @@ enable</string>
                 </font>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>1</number>
                </property>
                <widget class="QWidget" name="DataReport_page">
                 <attribute name="title">
@@ -7188,6 +7193,11 @@ background-color: rgb(255, 0, 0);</string>
                 </layout>
                </widget>
                <widget class="QWidget" name="OperationLog_page">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
                 <attribute name="title">
                  <string>Operation Log</string>
                 </attribute>

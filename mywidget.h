@@ -664,6 +664,8 @@ public:
     QPushButton *Language_explain;  //语言说明
     QPushButton *System_upgrade_explain;    //系统升级说明
     QPushButton *Sounds_explain;    //声音说明
+    QPushButton *BmsComFaultTime_explain;
+    QPushButton *EMSComFaultModel_explain;
 
     Specification *Battery_type;
     Specification *BMS_Comm_type;
@@ -691,6 +693,8 @@ public:
     Specification *RootPassport;
     Specification *Language;
     Specification *Sounds;
+    Specification *BmsComFaultTime;
+    Specification *EMSComFaultModel;
 
     /***************************系统参数**************************/
     QPushButton *Change_rate_of_power_explain;  //功率变化率说明
@@ -718,6 +722,8 @@ public:
     QPushButton *CV_parallel_explain;  //恒压并机说明
     QPushButton *Module_Number_explain;  //模块数量说明
     QPushButton *Restore_factory_explain;  //恢复出厂说明
+    QPushButton *BackupSetParameters_explain;
+    QPushButton *RestoreBackupSetParameters_explain;
     QPushButton *Clear_Data_explain;  //清除数据说明
     QPushButton *Machine_Type_explain;  //机架说明
     QPushButton *Module_max_explain;  //最大模块数说明
@@ -751,6 +757,8 @@ public:
     Specification *CV_parallel;
     Specification *Module_Number;
     Specification *Restore_factory;
+    Specification *BackupSetParameters;
+    Specification *RestoreBackupSetParameters;
     Specification *Clear_Data;
     Specification *Machine_Type;
     Specification *Module_max;

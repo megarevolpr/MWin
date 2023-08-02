@@ -518,6 +518,8 @@ void MyWidget::MemoryAllocation()
     Language_explain = new QPushButton;  //语言说明
     System_upgrade_explain = new QPushButton;    //系统升级说明
     Sounds_explain = new QPushButton;    //声音说明
+    BmsComFaultTime_explain = new QPushButton;
+    EMSComFaultModel_explain= new QPushButton;
 
     /***************************系统参数**************************/
     Change_rate_of_power_explain = new QPushButton;  //功率变化率说明
@@ -545,6 +547,8 @@ void MyWidget::MemoryAllocation()
     CV_parallel_explain = new QPushButton;  //恒压并机说明
     Module_Number_explain = new QPushButton;  //模块数量说明
     Restore_factory_explain = new QPushButton;  //恢复出厂说明
+    BackupSetParameters_explain         = new QPushButton;
+    RestoreBackupSetParameters_explain  = new QPushButton;
     Clear_Data_explain = new QPushButton;  //清除数据说明
     Machine_Type_explain = new QPushButton;  //机架说明
     Module_max_explain = new QPushButton;  //最大模块数说明
@@ -734,6 +738,13 @@ void MyWidget::HistoryRecord_delete()
     delete Grade6;
     delete Grade7;
     delete Grade8;
+    delete Grade9;
+    delete Grade10;
+    delete Grade11;
+    delete Grade12;
+    delete Grade13;
+    delete Grade14;
+    delete Grade15;
     delete StartTime;
     delete StartTime2;
     delete StartTime3;
@@ -742,6 +753,13 @@ void MyWidget::HistoryRecord_delete()
     delete StartTime6;
     delete StartTime7;
     delete StartTime8;
+    delete StartTime9;
+    delete StartTime10;
+    delete StartTime11;
+    delete StartTime12;
+    delete StartTime13;
+    delete StartTime14;
+    delete StartTime15;
     delete EndTime;
     delete EndTime2;
     delete EndTime3;
@@ -750,6 +768,13 @@ void MyWidget::HistoryRecord_delete()
     delete EndTime6;
     delete EndTime7;
     delete EndTime8;
+    delete EndTime9;
+    delete EndTime10;
+    delete EndTime11;
+    delete EndTime12;
+    delete EndTime13;
+    delete EndTime14;
+    delete EndTime15;
     delete Describe;
     delete Describe2;
     delete Describe3;
@@ -758,6 +783,13 @@ void MyWidget::HistoryRecord_delete()
     delete Describe6;
     delete Describe7;
     delete Describe8;
+    delete Describe9;
+    delete Describe10;
+    delete Describe11;
+    delete Describe12;
+    delete Describe13;
+    delete Describe14;
+    delete Describe15;
 }
 /************操作日志 释放 说明************/
 void MyWidget::OperationLog_tab_delete()
@@ -888,6 +920,8 @@ void MyWidget::FunctionSet_delete()
     delete RootPassport;
     delete Language;
     delete Sounds;
+    delete BmsComFaultTime;
+    delete EMSComFaultModel;
 }
 /************系统参数 释放 说明************/
 void MyWidget::SystemParameter_delete()
@@ -917,6 +951,8 @@ void MyWidget::SystemParameter_delete()
     delete CV_parallel;
     delete Module_Number;
     delete Restore_factory;
+    delete BackupSetParameters;
+    delete RestoreBackupSetParameters;
     delete Clear_Data;
     delete Machine_Type;
     delete Module_max;
@@ -2275,19 +2311,19 @@ void MyWidget::SystemParam_tbnt_released()
     for(int i=0; i<11;i++)//调整功能设置、系统参数设置的列宽行高
     {
         ui->UI_Parameter_Tab->setColumnWidth(i,170);
-        ui->UI_Parameter_Tab->setRowHeight(i,38);
-        ui->UI_SystemParameter_Tab->setColumnWidth(i,170);
-        ui->UI_SystemParameter_Tab->setRowHeight(i++,42);
+        ui->UI_Parameter_Tab->setRowHeight(i,50);
+        ui->UI_SystemParameter_Tab->setColumnWidth(i,160);
+        ui->UI_SystemParameter_Tab->setRowHeight(i++,50);
 
         ui->UI_Parameter_Tab->setColumnWidth(i,90);
-        ui->UI_Parameter_Tab->setRowHeight(i,38);
-        ui->UI_SystemParameter_Tab->setColumnWidth(i,90);
-        ui->UI_SystemParameter_Tab->setRowHeight(i++,42);
+        ui->UI_Parameter_Tab->setRowHeight(i,50);
+        ui->UI_SystemParameter_Tab->setColumnWidth(i,115);
+        ui->UI_SystemParameter_Tab->setRowHeight(i++,50);
 
         ui->UI_Parameter_Tab->setColumnWidth(i,55);
-        ui->UI_Parameter_Tab->setRowHeight(i,38);
-        ui->UI_SystemParameter_Tab->setColumnWidth(i,55);
-        ui->UI_SystemParameter_Tab->setRowHeight(i,42);
+        ui->UI_Parameter_Tab->setRowHeight(i,50);
+        ui->UI_SystemParameter_Tab->setColumnWidth(i,42);
+        ui->UI_SystemParameter_Tab->setRowHeight(i,50);
     }
     for(int i=0;i<9;i++)//调整 外设 的列宽行高
     {
@@ -2348,7 +2384,6 @@ void MyWidget::on_Running_btn_clicked()  //显示变流器实时数据
     ui->Run_tabWidget->setCurrentWidget(ui->RT_Data_page);
     ui->RT_Dtata_StackedWidget->setCurrentWidget(ui->RTD_Bypass_N_page);
     ui->MPS_Data_stw->setCurrentWidget(ui->Machine_page);
-
 }
 
 void MyWidget::on_Grid_clicked() //显示电网端实时数据
@@ -2410,7 +2445,7 @@ void MyWidget::on_Alarm_btn_clicker()//显示告警信息
 {
     ui->stackedWidget->setCurrentWidget(ui->Status_page);
     ui->Run_tabWidget->setCurrentWidget(ui->RTAlarm_page);
-    QMessageBox::question(this,tr("Alarm icon"), tr("Alarm icon: It is not displayed when there is no alarm. When there is a minor alarm, a yellow icon is displayed. When there is a fault alarm, a red icon is displayed."), "OK");
+    QMessageBox::question(this,tr("Alarm icon"), tr("Alarm icon: It is not displayed when there is no alarm. When there is a minor alarm, a yellow icon is displayed. When there is a fault alarm, a red icon is displayed."), tr("OK"));
 }
 //MPS数据 绘制button
 void MyWidget::MPS_Data(QTableWidget *myTable)
@@ -3079,10 +3114,10 @@ void MyWidget::DC_AC_Parameter_tab(QTableWidget *myTable)
                                        tr("    This is the power setting of the AC side. The charging and discharging power of the AC side can be controlled by modifying the value of this item.When advanced Settings control power mode select constant power mode (CP_N&P), positive value indicates discharge, negative value indicates charging.\n    For example, set -5, indicating that the AC side will charge the battery with a power of -5kW, due to the loss of the inverter, the power on the DC side will be less than the power on the AC side.\n    For example, set 5, indicating that the AC side will be 5kW power output, due to the loss of the inverter, the DC side of the power will be greater than the AC side of the power."));
     Constant_power->add_Specification();
 
-//    Charging_and_discharging = new Specification(this,Charging_and_discharging_explain, myTable, line++, column, \
-//                                                 tr("Charge"), tr("Charging and discharging"), \
-//                                                 tr("Reserve."));
-//    Charging_and_discharging->add_Specification();
+    /*Charging_and_discharging = new Specification(this,Charging_and_discharging_explain, myTable, line++, column, \
+                                                 tr("Charge"), tr("Charging and discharging"), \
+                                                 tr("Reserve."));
+    Charging_and_discharging->add_Specification();*/
 
 
     Work_mode_explain->setText(tr("Manual"));
@@ -4572,7 +4607,7 @@ void MyWidget::FunctionSet(QTableWidget *myTable)
     //电池厂家说明
     BAT_manufacturers = new Specification(this,BAT_manufacturers_explain, myTable, 5, 1, \
                                           tr("Auto"), tr("BAT protocol"), \
-                                          tr("This is the battery protocol that parses the packets sent by the BMS according to the selected battery protocol."));
+                                          tr("Battery Protocol: This is the battery protocol that parses the packets sent by the BMS according to the selected battery protocol.\nCurrently, the following battery manufacturer protocols are supported: MEGA, LISHEN, PENGHUI, GOLD, BMSER, LANLI, SHENLAN, PAINENG, NINGDESHIDAI, SUOYING, XINGWANGDA, KUBO, GAOTE_V2, TOGOOD,PGS, WOBO, KGOOER, LIDE, PAINENG_L, WEILAN, ALPHA, TUOPU, JIEHUI, JDI, ECUBE, FARO, BGS, JDITEC, HUASU, LIGAO.\nWhen you select AUTO, the system automatically determines the battery manufacturer."));
     BAT_manufacturers->add_Specification();
 
     //充电SOC说明
@@ -4652,7 +4687,7 @@ void MyWidget::FunctionSet(QTableWidget *myTable)
 
     //释放充电标志说明
     Relese_Charge_mark = new Specification(this,Relese_Charge_mark_explain, myTable, 8, 4, \
-                                           tr("Follow battery"), tr("Release Charging Ban Sign"), \
+                                           tr("Follow\nbattery"), tr("Release Charging Ban Sign"), \
                                            tr("This is the release of the forbidden charge flag, when the battery SOC is below the selected value, there are four options: Follow battery, 95%, 90%, 85%."));
     Relese_Charge_mark->add_Specification();//这是释放禁充标志，当电池SOC低于选择值时解除禁充，有四项可选：跟随电池(Follow battery)、95%、90%、85%
 
@@ -4702,6 +4737,15 @@ void MyWidget::FunctionSet(QTableWidget *myTable)
                                tr("Set whether the display is enabled sound, which can be allowed(Allow) or prohibited(forbid)."));
     Sounds->add_Specification();//设置显示屏是否开启声音，可供选择为允许(Allow)、禁止(forbid)
 
+    BmsComFaultTime = new Specification(this,BmsComFaultTime_explain, ui->UI_Parameter_Tab, 6, 7, \
+                               tr("20"), tr("Bms Com. Fault Time"), \
+                               tr("BMS communication fault determination time: The BMS communication fault determination time refers to the BMS communication fault when the BMS communication is disconnected and the communication is not recovered after a preset period of time."));
+    BmsComFaultTime->add_Specification();
+
+    EMSComFaultModel = new Specification(this,EMSComFaultModel_explain, ui->UI_Parameter_Tab, 7, 7, \
+                               tr("120"), tr("EMS Com. Fault Model"), \
+                               tr("EMS communication fault determination time: The EMS communication fault determination time refers to the time when the communication between the EMS is disconnected and the communication is not recovered after a preset period of time."));
+    EMSComFaultModel->add_Specification();
 }
 /********************系统参数设置页说明***********************/
 void MyWidget::SystemParameter(QTableWidget *myTable)
@@ -4863,32 +4907,41 @@ void MyWidget::SystemParameter(QTableWidget *myTable)
                                         tr("Restore the factory default Settings."));
     Restore_factory->add_Specification();
 
+    BackupSetParameters = new Specification(this,BackupSetParameters_explain, ui->UI_SystemParameter_Tab,2, 7, \
+                                        tr("Backup\nSettings"), tr("Backup Set Parameters"), \
+                                        tr("Backup setting parameters: Backup setting parameters refers to backing up the parameters set on the current device so that the backup parameter Settings can be restored when needed."));
+    BackupSetParameters->add_Specification();
+
+    RestoreBackupSetParameters = new Specification(this,RestoreBackupSetParameters_explain, ui->UI_SystemParameter_Tab,3, 7, \
+                                        tr("Restore\nBackup"), tr("Restore Backup Set Parameters"), \
+                                        tr("Restore backup setting parameters: Restore backup setting parameters means to restore the device to the last backup setting parameters and restart the device."));
+    RestoreBackupSetParameters->add_Specification();
     //清除数据说明
-    Clear_Data = new Specification(this,Clear_Data_explain, myTable, 2, 7, \
+    Clear_Data = new Specification(this,Clear_Data_explain, myTable, 4, 7, \
                                    tr("Clear"), tr("Clear Data"), \
                                    tr("Clear previous recorded data and operation data of the system."));
     Clear_Data->add_Specification();
 
     //机架说明
-    Machine_Type = new Specification(this,Machine_Type_explain, myTable, 3, 7, \
+    Machine_Type = new Specification(this,Machine_Type_explain, myTable, 5, 7, \
                                      "DCAC", tr("Rack"), \
                                      tr("When you select DCDC, the DCAC interface freezes, and the maximum module ID and minimum module ID take effect. You can only modify the database to restore the DCAC interface."));
     Machine_Type->add_Specification();
 
     //最大模块数说明
-    Module_max = new Specification(this,Module_max_explain, myTable, 4, 7, \
+    Module_max = new Specification(this,Module_max_explain, myTable, 6, 7, \
                                    "2", tr("Module max"), \
                                    tr("This is the maximum number of modules in the current system(Note: This takes effect only when DCDC mode is selected in rack Settings.)."));
     Module_max->add_Specification();//这是当前系统的最大模块数（备注：仅在机架设置中选择DCDC模式时生效）\n
 
     //最小模块数说明
-    Module_min = new Specification(this,Module_min_explain, myTable, 5, 7, \
+    Module_min = new Specification(this,Module_min_explain, myTable, 7, 7, \
                                    "1", tr("Module min"), \
                                    tr("This is the minimum number of modules in the current system(Note: This takes effect only when DCDC mode is selected in rack Settings.)."));
     Module_min->add_Specification();//这是当前系统的最小模块数\n
 
     //DCDC绝缘监测使能说明
-    Insulation_detection_enable_DCDC = new Specification(this,Insulation_detection_enable_DCDC_explain, myTable, 6, 7, \
+    Insulation_detection_enable_DCDC = new Specification(this,Insulation_detection_enable_DCDC_explain, myTable, 8, 7, \
                                                          tr("Disable"), tr("Insulation detection enable DCDC"), \
                                                          tr("This is the DCDC insulation monitoring Enable setting, with two options: enable (Enable), Disable (Disable),(Note: The default disable)."));
     Insulation_detection_enable_DCDC->add_Specification();//这是DCDC绝缘监测使能设置，有两项可选：允许(Enable)、禁止(Disable),(注：默认禁止)
