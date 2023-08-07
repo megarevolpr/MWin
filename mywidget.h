@@ -46,6 +46,8 @@
 #include <QTimer>
 #include <QButtonGroup>
 #include <QTranslator>
+#include <QMenu>
+#include <QApplication>
 
 #include "Menu.h"
 #include "Specification/Specification.h"

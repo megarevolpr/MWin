@@ -5,17 +5,7 @@
 #include "UI_Menu/Menu.h"
 
 
-#include <QMenu>
 
-//#include <QTime>
-//#include <QDate>
-//#include <QDateTime>
-//#include <QTimer>
-//#include <qlistview.h>
-
-//#include <QDebug>
-//#include <QMessageBox>
-//#include <QButtonGroup>
 
 #define CHINESE     0
 #define ENGLISH     1
@@ -25,6 +15,8 @@ MyWidget::MyWidget(QWidget *parent) :
     ui(new Ui::MyWidget)
 {
     LanguageType = CHINESE; //开机默认为中文
+
+
 
     ui->setupUi(this);
 //    setFixedSize(800,562);//固定窗口大小
@@ -41,9 +33,6 @@ MyWidget::MyWidget(QWidget *parent) :
 
 MyWidget::~MyWidget()
 {
-
-
-
     delete ui;
 }
 
@@ -2129,7 +2118,7 @@ void MyWidget::on_UI_MenuBtn_clicked()
 void MyWidget::onTimerOut()
 {
     QDateTime time = QDateTime::currentDateTime();
-    QString str = time.toString("yyyy-MM-dd HH:mm:ss");
+    QString str = time.toString("dd-MM-yyyy HH:mm:ss");
     ui->TimeSeting_btn->setText(str);
 }
 
