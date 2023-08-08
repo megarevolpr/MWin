@@ -7578,7 +7578,7 @@ enable</string>
                 </font>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>1</number>
                </property>
                <widget class="QWidget" name="DataReport_page">
                 <attribute name="title">
@@ -7850,10 +7850,10 @@ QTabBar#tabBar::tab:selected {
                 <widget class="QWidget" name="layoutWidget_7">
                  <property name="geometry">
                   <rect>
-                   <x>240</x>
+                   <x>210</x>
                    <y>20</y>
-                   <width>457</width>
-                   <height>311</height>
+                   <width>551</width>
+                   <height>361</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_32" stretch="1,1">
@@ -7927,7 +7927,7 @@ QTabBar#tabBar::tab:selected {
                       <cursorShape>ArrowCursor</cursorShape>
                      </property>
                      <property name="text">
-                      <string>HistoryRecord.csv</string>
+                      <string>Record.csv</string>
                      </property>
                     </widget>
                     <widget class="QLabel" name="label_35">
@@ -7935,7 +7935,7 @@ QTabBar#tabBar::tab:selected {
                       <rect>
                        <x>40</x>
                        <y>100</y>
-                       <width>121</width>
+                       <width>181</width>
                        <height>31</height>
                       </rect>
                      </property>
@@ -8032,7 +8032,7 @@ QTabBar#tabBar::tab:selected {
                            </font>
                           </property>
                           <property name="text">
-                           <string>static:</string>
+                           <string>status:</string>
                           </property>
                          </widget>
                         </item>
@@ -8073,7 +8073,7 @@ border-style: solid;
 border-color: rgb(255, 170, 0);</string>
                           </property>
                           <property name="text">
-                           <string>udisk disconnect!</string>
+                           <string>u disk disconnect!</string>
                           </property>
                          </widget>
                         </item>
@@ -8107,7 +8107,7 @@ border-color: rgb(0, 157, 235);
 </string>
                           </property>
                           <property name="text">
-                           <string>HistoricalFailure</string>
+                           <string>History Records</string>
                           </property>
                          </widget>
                         </item>
@@ -8130,7 +8130,7 @@ border-style: solid;
 border-color: rgb(255, 170, 0);</string>
                           </property>
                           <property name="text">
-                           <string>OperationLog</string>
+                           <string>Operation Log</string>
                           </property>
                          </widget>
                         </item>
@@ -8168,7 +8168,7 @@ border-color: rgb(85, 230, 0);
 background-color: rgb(85, 255, 0);</string>
                           </property>
                           <property name="text">
-                           <string>Coulombmeter report</string>
+                           <string>Electricity Statistical Table</string>
                           </property>
                          </widget>
                         </item>
@@ -8197,7 +8197,7 @@ border-color: rgb(230, 0, 0);
 background-color: rgb(255, 0, 0);</string>
                           </property>
                           <property name="text">
-                           <string>Eject Udisk</string>
+                           <string>Eject U disk</string>
                           </property>
                          </widget>
                         </item>

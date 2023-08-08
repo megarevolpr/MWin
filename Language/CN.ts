@@ -1002,6 +1002,11 @@
         <translation>可放电量</translation>
     </message>
     <message>
+        <location filename="../mywidget.ui" line="8035"/>
+        <source>status:</source>
+        <translation>状态：</translation>
+    </message>
+    <message>
         <location filename="../mywidget.ui" line="8656"/>
         <source>A1: 
 Generator turn on voltage(A1)
@@ -1473,31 +1478,37 @@ enable</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="7730"/>
+        <location filename="../mywidget.cpp" line="5408"/>
         <source>Y  -</source>
         <translation>年 -</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="7749"/>
+        <location filename="../mywidget.cpp" line="5420"/>
         <source>M  -</source>
         <translation>月 -</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="7768"/>
+        <location filename="../mywidget.cpp" line="5432"/>
         <source>D  -</source>
         <translation>日  -</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="7794"/>
+        <location filename="../mywidget.cpp" line="5414"/>
         <source>Y  +</source>
         <translation>年 +</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="7813"/>
+        <location filename="../mywidget.cpp" line="5426"/>
         <source>M  +</source>
         <translation>月 +</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="7832"/>
+        <location filename="../mywidget.cpp" line="5438"/>
         <source>D  +</source>
         <translation>日  +</translation>
     </message>
@@ -1522,9 +1533,8 @@ enable</source>
         <translation>输出文件：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7930"/>
         <source>HistoryRecord.csv</source>
-        <translation>HistoryRecord.csv</translation>
+        <translation type="vanished">HistoryRecord.csv</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="7951"/>
@@ -1537,36 +1547,30 @@ enable</source>
         <translation>导出数据</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8035"/>
         <source>static:</source>
-        <translation>状态：</translation>
+        <translation type="vanished">状态：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8076"/>
         <source>udisk disconnect!</source>
-        <translation>U盘未插入！</translation>
+        <translation type="vanished">U盘未插入！</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8110"/>
         <location filename="../mywidget.cpp" line="5444"/>
         <source>HistoricalFailure</source>
         <translation>历史记录</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8133"/>
         <location filename="../mywidget.cpp" line="5450"/>
         <source>OperationLog</source>
         <translation>操作日志</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8171"/>
         <location filename="../mywidget.cpp" line="5456"/>
         <source>Coulombmeter report</source>
         <translation>电量统计表</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="8200"/>
-        <location filename="../mywidget.cpp" line="5462"/>
         <source>Eject Udisk</source>
         <translation>退出U盘</translation>
     </message>
@@ -1576,6 +1580,7 @@ enable</source>
         <translation>历史记录</translation>
     </message>
     <message>
+        <location filename="../mywidget.ui" line="8133"/>
         <location filename="../mywidget.ui" line="8252"/>
         <source>Operation Log</source>
         <translation>操作日志</translation>
@@ -1703,6 +1708,26 @@ enable</source>
         <source>Discharging 
 enable</source>
         <translation>放电使能</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.ui" line="7930"/>
+        <source>Record.csv</source>
+        <translation>Record.csv</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.ui" line="8076"/>
+        <source>u disk disconnect!</source>
+        <translation>U盘未插入！</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.ui" line="8110"/>
+        <source>History Records</source>
+        <translation>导出历史记录</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.ui" line="8171"/>
+        <source>Electricity Statistical Table</source>
+        <translation>电量统计表</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="8501"/>
@@ -4149,10 +4174,25 @@ Backup</source>
         <translation>查看下一日的数据。</translation>
     </message>
     <message>
+        <location filename="../mywidget.cpp" line="5445"/>
+        <source>Export History Records, click here to export the history records to a U disk. The exported file will be named Record.csv, and it needs to be opened with Excel.</source>
+        <translation>导出历史记录，点击此处将会导出历史记录到U盘里,导出到U盘的文件为Record.csv，此文件需要用Excel打开。</translation>
+    </message>
+    <message>
         <location filename="../mywidget.cpp" line="5457"/>
         <source>Export the battery statistics. Click here to export the battery statistics to the U disk.
 The accuracy is 0.1, which means that the obtained data multiplied by 0.1 gives the actual value.</source>
         <translation>导出电量统计表，点击此处将会导出电量统计表到U盘里。精度为0.1,即所得数据*0.1为实际的数值。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="5462"/>
+        <source>Eject U disk</source>
+        <translation>退出U盘</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="5463"/>
+        <source>Eject U disk.</source>
+        <translation>退出U盘。</translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="5606"/>
@@ -5644,9 +5684,8 @@ countercurrent</source>
         <translation type="vanished">查看下一日的数据，点击后将显示当前日的下一日的数据。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="5445"/>
         <source>To export history records, click here to export history records to the USB flash drive. The file exported to the USB flash drive is HistoryRecord.csv, which needs to be opened with Excel.</source>
-        <translation>导出历史记录，点击此处将会导出历史记录到U盘里,导出到U盘的文件为HistoryRecord.csv，此文件需要用Excel打开。</translation>
+        <translation type="vanished">导出历史记录，点击此处将会导出历史记录到U盘里,导出到U盘的文件为HistoryRecord.csv，此文件需要用Excel打开。</translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="5451"/>
@@ -5658,9 +5697,8 @@ countercurrent</source>
         <translation type="vanished">导出电量统计表，点击此处将会导出电量统计表到U盘里。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="5463"/>
         <source>Exit the U disk and unmount the U disk mounted to the display control to ensure that the data in the U disk will not be damaged.</source>
-        <translation>退出U盘，将挂载到显控的U盘取消挂载，以保证U盘数据不会损坏。</translation>
+        <translation type="vanished">退出U盘，将挂载到显控的U盘取消挂载，以保证U盘数据不会损坏。</translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="5468"/>

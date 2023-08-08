@@ -1354,31 +1354,37 @@ Set rule:B1 - A1 ≥ 10V</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="7730"/>
+        <location filename="../mywidget.cpp" line="5408"/>
         <source>Y  -</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="7749"/>
+        <location filename="../mywidget.cpp" line="5420"/>
         <source>M  -</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="7768"/>
+        <location filename="../mywidget.cpp" line="5432"/>
         <source>D  -</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="7794"/>
+        <location filename="../mywidget.cpp" line="5414"/>
         <source>Y  +</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="7813"/>
+        <location filename="../mywidget.cpp" line="5426"/>
         <source>M  +</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="7832"/>
+        <location filename="../mywidget.cpp" line="5438"/>
         <source>D  +</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1403,11 +1409,6 @@ Set rule:B1 - A1 ≥ 10V</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7930"/>
-        <source>HistoryRecord.csv</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../mywidget.ui" line="7951"/>
         <source>Report.csv</source>
         <translation type="unfinished"></translation>
@@ -1418,36 +1419,22 @@ Set rule:B1 - A1 ≥ 10V</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8035"/>
-        <source>static:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.ui" line="8076"/>
-        <source>udisk disconnect!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.ui" line="8110"/>
         <location filename="../mywidget.cpp" line="5444"/>
         <source>HistoricalFailure</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8133"/>
         <location filename="../mywidget.cpp" line="5450"/>
         <source>OperationLog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8171"/>
         <location filename="../mywidget.cpp" line="5456"/>
         <source>Coulombmeter report</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="8200"/>
-        <location filename="../mywidget.cpp" line="5462"/>
         <source>Eject Udisk</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1457,8 +1444,14 @@ Set rule:B1 - A1 ≥ 10V</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../mywidget.ui" line="8133"/>
         <location filename="../mywidget.ui" line="8252"/>
         <source>Operation Log</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.ui" line="8035"/>
+        <source>status:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1589,6 +1582,26 @@ enable</source>
         <location filename="../mywidget.ui" line="7476"/>
         <source>Discharging 
 enable</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.ui" line="7930"/>
+        <source>Record.csv</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.ui" line="8076"/>
+        <source>u disk disconnect!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.ui" line="8110"/>
+        <source>History Records</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.ui" line="8171"/>
+        <source>Electricity Statistical Table</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3322,6 +3335,21 @@ enable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../mywidget.cpp" line="5445"/>
+        <source>Export History Records, click here to export the history records to a U disk. The exported file will be named Record.csv, and it needs to be opened with Excel.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="5462"/>
+        <source>Eject U disk</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="5463"/>
+        <source>Eject U disk.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mywidget.cpp" line="5606"/>
         <source>Time</source>
         <translation type="unfinished"></translation>
@@ -4994,18 +5022,8 @@ Backup</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="5445"/>
-        <source>To export history records, click here to export history records to the USB flash drive. The file exported to the USB flash drive is HistoryRecord.csv, which needs to be opened with Excel.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../mywidget.cpp" line="5451"/>
         <source>Export operation log. Click here to export operation log to U disk.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="5463"/>
-        <source>Exit the U disk and unmount the U disk mounted to the display control to ensure that the data in the U disk will not be damaged.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

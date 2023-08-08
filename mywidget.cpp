@@ -5441,26 +5441,26 @@ void MyWidget::on_Add_D_clicked()
 /********* 导出历史记录 *********/
 void MyWidget::on_OutPut_historyFailuer_clicked()
 {
-    QMessageBox::question(this, tr("HistoricalFailure")\
-                          ,tr("To export history records, click here to export history records to the USB flash drive. The file exported to the USB flash drive is HistoryRecord.csv, which needs to be opened with Excel."), tr("OK"));//导出历史记录，点击此处将会导出历史记录到U盘里,导出到U盘的文件为HistoryRecord.csv，此文件需要用Excel打开
+    QMessageBox::question(this, tr("History Records")\
+                          ,tr("Export History Records, click here to export the history records to a U disk. The exported file will be named Record.csv, and it needs to be opened with Excel."), tr("OK"));//导出历史记录，点击此处将会导出历史记录到U盘里,导出到U盘的文件为Record.csv，此文件需要用Excel打开
 }
 /********* 导出操作日志 *********/
 void MyWidget::on_Output_OperationLog_clicked()
 {
     QMessageBox::question(this, tr("OperationLog")\
-                          ,tr("Export operation log. Click here to export operation log to U disk."), tr("OK"));//导出操作日志，点击此处将会导出操作日志到U盘里\n
+                          ,tr("Export operation log. Click here to export operation log to U disk."), tr("OK"));
 }
 /********* 导出电量统计表 *********/
 void MyWidget::on_CoulombmeterReport_btn_clicked()
 {
-    QMessageBox::question(this, tr("Coulombmeter report")\
+    QMessageBox::question(this, tr("Electricity Statistical Table")\
                           ,tr("Export the battery statistics. Click here to export the battery statistics to the U disk.\nThe accuracy is 0.1, which means that the obtained data multiplied by 0.1 gives the actual value."), tr("OK"));//导出电量统计表，点击此处将会导出电量统计表到U盘里.精度为0.1,即所得数据*0.1为实际的数值.
 }
 /********* 退出U盘 *********/
 void MyWidget::on_Eject_btn_clicked()
 {
-    QMessageBox::question(this, tr("Eject Udisk")\
-                          ,tr("Exit the U disk and unmount the U disk mounted to the display control to ensure that the data in the U disk will not be damaged."), tr("OK"));//退出U盘，将挂载到显控的U盘取消挂载，以保证U盘数据不会损坏\n
+    QMessageBox::question(this, tr("Eject U disk")\
+                          ,tr("Eject U disk."), tr("OK"));
 }
 /*********选中第一个模块*********/
 void MyWidget::on_RTS_module_1_clicked()
