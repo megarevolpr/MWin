@@ -2764,7 +2764,7 @@ Language</string>
             <enum>QFrame::Raised</enum>
            </property>
            <property name="currentIndex">
-            <number>1</number>
+            <number>2</number>
            </property>
            <widget class="QWidget" name="Host_page">
             <widget class="QPushButton" name="Bypass_Grid_btn">
@@ -4188,7 +4188,7 @@ Language</string>
                 <string notr="true"/>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>3</number>
                </property>
                <widget class="QWidget" name="RT_Data_page">
                 <attribute name="title">
@@ -6629,7 +6629,7 @@ QPushButton:!checked {
                               <cursorShape>ArrowCursor</cursorShape>
                              </property>
                              <property name="text">
-                              <string>Allow charging power</string>
+                              <string>Allowable charging power</string>
                              </property>
                              <property name="alignment">
                               <set>Qt::AlignCenter</set>
@@ -6653,7 +6653,7 @@ QPushButton:!checked {
                               <cursorShape>ArrowCursor</cursorShape>
                              </property>
                              <property name="text">
-                              <string>Allow discharging power</string>
+                              <string>Allowable discharging power</string>
                              </property>
                              <property name="alignment">
                               <set>Qt::AlignCenter</set>
@@ -6677,7 +6677,7 @@ QPushButton:!checked {
                               <cursorShape>ArrowCursor</cursorShape>
                              </property>
                              <property name="text">
-                              <string>Allow charging energy</string>
+                              <string>Allowable charging energy</string>
                              </property>
                              <property name="alignment">
                               <set>Qt::AlignCenter</set>
@@ -6701,7 +6701,7 @@ QPushButton:!checked {
                               <cursorShape>ArrowCursor</cursorShape>
                              </property>
                              <property name="text">
-                              <string>Allow discharging energy</string>
+                              <string>Allowable discharging energy</string>
                              </property>
                              <property name="alignment">
                               <set>Qt::AlignCenter</set>
@@ -7578,7 +7578,7 @@ enable</string>
                 </font>
                </property>
                <property name="currentIndex">
-                <number>1</number>
+                <number>0</number>
                </property>
                <widget class="QWidget" name="DataReport_page">
                 <attribute name="title">
@@ -8310,7 +8310,7 @@ background-color: rgb(255, 0, 0);</string>
                 <bool>false</bool>
                </property>
                <property name="currentIndex">
-                <number>4</number>
+                <number>0</number>
                </property>
                <widget class="QWidget" name="DCACParameterSet_page">
                 <attribute name="title">

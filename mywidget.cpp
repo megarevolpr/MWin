@@ -1405,7 +1405,7 @@ void MyWidget::ModuleState_Tab()
                     << tr("Contactor status buck")<< tr("Contactor status boost")<< tr("Converter status");
 
     ui->State_tableWidget->setColumnCount(6);
-    ui->State_tableWidget->setRowCount(11);
+    ui->State_tableWidget->setRowCount(12);
     ui->State_tableWidget->horizontalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
     ui->State_tableWidget->verticalHeader()->setVisible(false);//设置垂直头不可见
     ui->State_tableWidget->setFrameShape(QFrame::NoFrame);//设置无边框
@@ -1440,7 +1440,7 @@ void MyWidget::ModuleState_Tab()
         ui->State_tableWidget->setItem(i, 4, new QTableWidgetItem(State_Tablist3.at(i)));
         ui->State_tableWidget->item(i, 4)->setTextAlignment(Qt::AlignCenter);
     }
-    for (int i = 0; i < 11; ++i) {
+    for (int i = 0; i < 12; ++i) {
         ui->State_tableWidget->setRowHeight(i, 45);
     }
     MPSState(ui->State_tableWidget); //MPS状态说明
@@ -1591,8 +1591,8 @@ void MyWidget::Information_tbnt_released()
 void MyWidget::Data_Report()
 {
     QStringList ReportData_Tablist;
-    ReportData_Tablist  << tr("PV power generation") << tr("Load discharge") << tr("Battery charge")
-                        << tr("Battery discharge") << tr("Grid charge")<< tr("Grid discharge");
+    ReportData_Tablist  << tr("PV power generation") << tr("Load electricity consumption") << tr("Battery charge")
+                        << tr("Battery discharge") << tr("Grid buy")<< tr("Grid sell");
     QStringList time_str;
     time_str<< tr(" ") << tr("Day(kWh)") << tr("Month(kWh)") << tr("Year(kWh)") << tr("Total(kWh)");
     ui->Report_tableWidget->setColumnCount(time_str.size());
@@ -1614,8 +1614,11 @@ void MyWidget::Data_Report()
     {
         ui->Report_tableWidget->setItem(i, 0, new QTableWidgetItem(ReportData_Tablist.at(i)));
         ui->Report_tableWidget->item(i, 0)->setTextAlignment(Qt::AlignCenter);
+        ui->Report_tableWidget->setRowHeight(i, 45);
     }
-
+//    for (int i = 0; i < 12; ++i) {
+//        ui->State_tableWidget->setRowHeight(i, 45);
+//    }
     DataReportMessages(ui->Report_tableWidget); //数据报表页说明
 }
 
@@ -2189,71 +2192,71 @@ void MyWidget::BatteryData_clicked(int nid)
     switch (nid) {
     case 0:
         QMessageBox::question(this, tr("Bat volage")\
-                              ,tr("This is the total battery pressure of the battery pack uploaded from the BMS via the CAN/485/TCP communication protocol."), tr("OK"));
+                              ,tr("Total voltage of the battery uploaded by BMS."), tr("OK"));
         break;
     case 1:
         QMessageBox::question(this, tr("Bat current")\
-                              ,tr("This is the total current of the battery pack uploaded from the BMS via the CAN/485/TCP communication protocol."), tr("OK"));
+                              ,tr("Total current of the battery uploaded by BMS."), tr("OK"));
         break;
     case 2:
         QMessageBox::question(this, tr("SOC")\
-                              ,tr("This is the SOC of the battery pack uploaded from the BMS via the CAN/485/TCP communication protocol, that is, the percentage of the current battery remaining."), tr("OK"));
+                              ,tr("Battery SOC uploaded by BMS refers to the current remaining battery capacity percentage."), tr("OK"));
         break;
     case 3:
         QMessageBox::question(this, tr("SOH")\
-                              ,tr("This is the SOH of the battery pack uploaded from the BMS through the CAN/485/TCP communication protocol, the percentage of the current capacity of the battery pack to the factory capacity, that is, the health of the battery."), tr("OK"));
+                              ,tr("Battery SOH uploaded from BMS, the percentage of available capacity after full charge compared to the rated capacity."), tr("OK"));
         break;
     case 4:
         QMessageBox::question(this, tr("Cell voltage(max)")\
-                              ,tr("This is the maximum voltage of the cell uploaded from the BMS via the CAN/485/TCP communication protocol, that is, the maximum voltage of all cell cells at present."), tr("OK"));
+                              ,tr("The highest voltage of single cell uploaded by BMS."), tr("OK"));
         break;
     case 5:
         QMessageBox::question(this, tr("Cell voltage(min)")\
-                              ,tr("This is the lowest voltage of the cell uploaded from the BMS via the CAN/485/TCP communication protocol, that is, the lowest voltage of all battery cells at present."), tr("OK"));
+                              ,tr("The lowest voltage of single cell uploaded by BMS."), tr("OK"));
         break;
     case 6:
         QMessageBox::question(this, tr("Cell temp.(max)")\
-                              ,tr("This is the highest temperature of the cell uploaded from the BMS via the CAN/485/TCP communication protocol, that is, the highest temperature of all battery cells at present."), tr("OK"));
+                              ,tr("The highest temperature of single cell uploaded by BMS."), tr("OK"));
         break;
     case 7:
         QMessageBox::question(this, tr("Cell temp.(min)")\
-                              ,tr("This is the lowest temperature of the cell uploaded from the BMS via the CAN/485/TCP communication protocol, that is, the lowest temperature of all battery cells at present."), tr("OK"));
+                              ,tr("The lowest temperature of single cell uploaded by BMS."), tr("OK"));
         break;
     case 8:
-        QMessageBox::question(this, tr("Charging current limite")\
-                              ,tr("This is the upper limit of the charging current uploaded from the BMS via the CAN/485/TCP communication protocol, the maximum charging current allowed by the current battery pack (Note: when charging the end, PCS will limit the current according to the actual current)."), tr("OK"));
+        QMessageBox::question(this, tr("Charging current limit")\
+                              ,tr("The limit of charging current uploaded by BMS."), tr("OK"));
         break;
     case 9:
-        QMessageBox::question(this, tr("Discharging current limite")\
-                              ,tr("This is the upper limit of the discharge current uploaded from the BMS via the CAN/485/TCP communication protocol, the maximum discharge current allowed by the current battery pack."), tr("OK"));
+        QMessageBox::question(this, tr("Discharging current limit")\
+                              ,tr("The limit of discharging current uploaded by BMS."), tr("OK"));
         break;
     case 10:
-        QMessageBox::question(this, tr("Allow charge power")\
-                              ,tr("This is the allowable charging power obtained by PCS from BMS through CAN/485/TCP communication protocol, or obtained by multiplying the current charging limit value uploaded from BMS through CAN/485/TCP communication protocol with the current voltage value. The battery's charging power should not exceed this limitation value."), tr("OK"));
+        QMessageBox::question(this, tr("Allowable charging power")\
+                              ,tr("The allowable charging power uploaded by BMS."), tr("OK"));
         break;
     case 11:
-        QMessageBox::question(this, tr("Allow discharge power")\
-                              ,tr("This is the allowable discharge power obtained by PCS from BMS through CAN/485/TCP communication protocol, or obtained by multiplying the current discharge limit value uploaded from BMS through CAN/485/TCP communication protocol with the current voltage value. The battery's discharge power should not exceed this limitation value."), tr("OK"));
+        QMessageBox::question(this, tr("Allowable discharging power")\
+                              ,tr("The allowable discharging power uploaded by BMS."), tr("OK"));
         break;
     case 12:
-        QMessageBox::question(this,tr ("Allow charge energy")\
-                              ,tr("This is the allowable charging capacity uploaded from BMS through CAN/485/TCP communication protocol. It represents the current battery pack's capacity for charging. This value is not displayed when it does not exist (Note: Only certain BMSs provide this value)."), tr("OK"));
+        QMessageBox::question(this,tr ("Allowable charging energy")\
+                              ,tr("The allowable charging capacity uploaded by BMS."), tr("OK"));
         break;
     case 13:
-        QMessageBox::question(this,tr ("Allow discharge energy")\
-                              ,tr("This is the allowable discharge capacity uploaded from BMS through CAN/485/TCP communication protocol. It represents the current battery pack's capacity for discharging. This value is not displayed when it does not exist (Note: Only certain BMSs provide this value)."), tr("OK"));
+        QMessageBox::question(this,tr ("Allowable discharging energy")\
+                              ,tr("The allowable discharging capacity uploaded by BMS."), tr("OK"));
         break;
     case 14:
         QMessageBox::question(this, tr("Alarm level")\
-                              ,tr("This is the alarm level icon. The color is changed according to the alarm level uploaded by the BMS. The alarm level is green for normal alarms, yellow for primary alarms, orange for secondary alarms, and red for tertiary alarms.If the alarm is Level 1 or Level 2, PCS does not respond.If the alarm is Level 3, the PCS shuts down."), tr("OK"));
+                              ,tr("Alarm levels uploaded from BMS, level one alarm is yellow, level two alarm is orange, and level three alarm is red;\nBy default, the converter does not respond to level one and level two alarms, but shuts down in response to level three alarms."), tr("OK"));
         break;
     case 15:
-        QMessageBox::question(this, tr("Charge enable")\
-                              ,tr("This is the current battery status uploaded by BMS via CAN/485/TCP. Enable indicates that the battery can be charged. Disable indicates that the battery cannot be charged."), tr("OK"));
+        QMessageBox::question(this, tr("Charging enable")\
+                              ,tr("Battery Status Uploaded by BMS: Enable indicates the battery is allowed to charge, Disable indicates the battery is not allowed to charge."), tr("OK"));
         break;
     case 16:
-        QMessageBox::question(this, tr("Discharge enable")\
-                              ,tr("This is the current state of the battery uploaded by the BMS via the CAN/485/TCP protocol. Enable indicates that the battery can be discharged. Disable indicates that the battery cannot be discharged."), tr("OK"));
+        QMessageBox::question(this, tr("Discharging enable")\
+                              ,tr("Battery Status Uploaded by BMS: Enable indicates the battery is allowed to discharge, Disable indicates the battery is not allowed to discharge."), tr("OK"));
         break;
     default:
         break;
@@ -4149,114 +4152,114 @@ void MyWidget::DataReportMessages(QTableWidget *myTable)
     int line=0, column=1;
     PV_power_generation_Day = new Specification(this,PV_power_generation_Day_explain, myTable, line, column++, \
                                             "0", tr("PV power generation Day"), \
-                                            tr("This is the electricity generation of photovoltaic today."));
+                                            tr("Today's photovoltaic power generation."));
     PV_power_generation_Day->add_Specification();
     PV_power_generation_Month = new Specification(this,PV_power_generation_Month_explain, myTable, line, column++, \
                                             "0", tr("PV power generation Month"), \
-                                            tr("This is the amount of photovoltaic power generated this month."));
+                                            tr("Monthly photovoltaic power generation."));
     PV_power_generation_Month->add_Specification();
     PV_power_generation_Year = new Specification(this,PV_power_generation_Year_explain, myTable, line, column++, \
                                             "0", tr("PV power generation Year"), \
-                                            tr("This is how much photovoltaic will produce this year."));
+                                            tr("Annual photovoltaic power generation."));
     PV_power_generation_Year->add_Specification();
     PV_power_generation_Total = new Specification(this,PV_power_generation_Total_explain, myTable, line, column++, \
                                              "0", tr("PV power generation Total"), \
-                                             tr("This is the total amount of photovoltaic power produced."));
+                                             tr("Total photovoltaic power generation."));
     PV_power_generation_Total->add_Specification();
 
     line++;
     column = 1;
     Load_Discharge_Day = new Specification(this,Load_Discharge_Day_explain, myTable, line, column++, \
-                                            "0", tr("Load Discharge Day"), \
-                                            tr("This is the electricity consumption of the load today."));
+                                            "0", tr("Daily load electricity consumption "), \
+                                            tr("Today's electricity consumption of the load."));
     Load_Discharge_Day->add_Specification();
     Load_Discharge_Month = new Specification(this,Load_Discharge_Month_explain, myTable, line, column++, \
-                                            "0", tr("Load Discharge Month"), \
-                                            tr("This is the electricity consumption of the load this month."));
+                                            "0", tr("Monthly load electricity consumption"), \
+                                            tr("Monthly electricity consumption of the load."));
     Load_Discharge_Month->add_Specification();
     Load_Discharge_Year = new Specification(this,Load_Discharge_Year_explain, myTable, line, column++, \
-                                            "0", tr("Load Discharge Year"), \
-                                            tr("This is how much electricity the load is using this year."));
+                                            "0", tr("Annual load electricity consumption"), \
+                                            tr("Annual electricity consumption of the load."));
     Load_Discharge_Year->add_Specification();
     Load_Discharge_Total = new Specification(this,Load_Discharge_Total_explain, myTable, line, column++, \
-                                            "0", tr("Load Discharge Total"), \
-                                            tr("This is the total power consumption of the load."));
+                                            "0", tr("Total load electricity consumption"), \
+                                            tr("Total electricity consumption of the load."));
     Load_Discharge_Total->add_Specification();
 
     line++;
     column = 1;
     Battery_Charge_Day = new Specification(this,Battery_Charge_Day_explain, myTable, line, column++, \
                                             "0", tr("Battery Charge Day"), \
-                                            tr("This is the charging capacity of the battery today."));
+                                            tr("Today's battery charging."));
     Battery_Charge_Day->add_Specification();
     Battery_Charge_Month = new Specification(this,Battery_Charge_Month_explain, myTable, line, column++, \
                                             "0", tr("Battery Discharge Month"), \
-                                            tr("This is how much the battery has been charged for the month."));
+                                            tr("Monthly battery charging."));
     Battery_Charge_Month->add_Specification();
     Battery_Charge_Year = new Specification(this,Battery_Charge_Year_explain, myTable, line, column++, \
                                             "0", tr("Battery Discharge Year"), \
-                                            tr("This is how much the battery has been charged this year."));
+                                            tr("Annual battery charging."));
     Battery_Charge_Year->add_Specification();
     Battery_Charge_Total = new Specification(this,Battery_Charge_Total_explain, myTable, line, column++, \
                                             "0", tr("Battery Discharge Total"), \
-                                            tr("This is the total charge of the battery."));
+                                            tr("Total battery charging."));
     Battery_Charge_Total->add_Specification();
 
     line++;
     column = 1;
     Battery_Discharge_Day = new Specification(this,Battery_Discharge_Day_explain, myTable, line, column++, \
                                             "0", tr("Battery Charge Day"), \
-                                            tr("This is the discharging capacity of the battery today."));
+                                            tr("Today's battery discharging."));
     Battery_Discharge_Day->add_Specification();
     Battery_Discharge_Month = new Specification(this,Battery_Discharge_Month_explain, myTable, line, column++, \
                                             "0", tr("Battery Discharge Month"), \
-                                            tr("This is how much the battery has been discharged for the month."));
+                                            tr("Monthly battery discharging."));
     Battery_Discharge_Month->add_Specification();
     Battery_Discharge_Year = new Specification(this,Battery_Discharge_Year_explain, myTable, line, column++, \
                                             "0", tr("Battery Discharge Year"), \
-                                            tr("This is how much the battery has been discharged this year."));
+                                            tr("Annual battery discharging."));
     Battery_Discharge_Year->add_Specification();
     Battery_Discharge_Total = new Specification(this,Battery_Discharge_Total_explain, myTable, line, column++, \
                                             "0", tr("Battery Discharge Total"), \
-                                            tr("This is the total discharge of the battery."));
+                                            tr("Total battery discharging."));
     Battery_Discharge_Total->add_Specification();
 
     line++;
     column = 1;
     Grid_Charge_Day = new Specification(this,Grid_Charge_Day_explain, myTable, line, column++, \
-                                            "0", tr("Grid Charge Day"), \
-                                            tr("This is the amount of charging from the grid today."));
+                                            "0", tr("Grid buy Day"), \
+                                            tr("Today's electricity buy from the grid."));
     Grid_Charge_Day->add_Specification();
     Grid_Charge_Month = new Specification(this,Grid_Charge_Month_explain, myTable, line, column++, \
-                                            "0", tr("Grid Charge Month"), \
-                                            tr("This is the amount of charging from the grid for the month."));
+                                            "0", tr("Grid buy Month"), \
+                                            tr("Monthly electricity buy from the grid."));
     Grid_Charge_Month->add_Specification();
     Grid_Charge_Year = new Specification(this,Grid_Charge_Year_explain, myTable, line, column++, \
-                                            "0", tr("Grid Charge Year"), \
-                                            tr("This is the amount of charging from the grid this year."));
+                                            "0", tr("Grid buy Year"), \
+                                            tr("Annual electricity buy from the grid."));
     Grid_Charge_Year->add_Specification();
     Grid_Charge_Total = new Specification(this,Grid_Charge_Total_explain, myTable, line, column++, \
-                                            "0", tr("Grid Charge Total"), \
-                                            tr("This is the total amount of charge from the grid."));
+                                            "0", tr("Grid buy Total"), \
+                                            tr("Total electricity buy from the grid."));
     Grid_Charge_Total->add_Specification();
 
     line++;
     column = 1;
     Grid_Discharge_Day = new Specification(this,Grid_Discharge_Day_explain, myTable, line, column++, \
-                                            "0", tr("Grid Charge Day"), \
-                                            tr("This is the amount of energy being discharged into the grid today."));
+                                            "0", tr("Grid sell Day"), \
+                                            tr("Today's electricity sell to the grid."));
     Grid_Discharge_Day->add_Specification();
     Grid_Discharge_Month = new Specification(this,Grid_Discharge_Month_explain, myTable, line, column++, \
-                                            "0", tr("Grid Charge Month"), \
-                                            tr("This is the amount of electricity discharged into the grid this month."));
+                                            "0", tr("Grid sell Month"), \
+                                            tr("Monthly electricity sell to the grid."));
     Grid_Discharge_Month->add_Specification();
     Grid_Discharge_Year = new Specification(this,Grid_Discharge_Year_explain, myTable, line, column++, \
-                                            "0", tr("Grid Charge Year"), \
-                                            tr("This is the amount of energy that has been discharged into the grid this year."));
+                                            "0", tr("Grid sell Year"), \
+                                            tr("Annual electricity sell to the grid."));
     Grid_Discharge_Year->add_Specification();
     Grid_Discharge_Total = new Specification(this,Grid_Discharge_Total_explain, myTable, line, column++, \
-                                            "0", tr("Grid Charge Total"), \
-                                            tr("This is the total amount of discharge to the grid."));
+                                            "0", tr("Grid sell Total"), \
+                                            tr("Total electricity sell to the grid."));
     Grid_Discharge_Total->add_Specification();
 }
 
@@ -5402,38 +5405,38 @@ void MyWidget::on_RTD_module_2_clicked()
 /********* 点击Y- *********/
 void MyWidget::on_Subtract_Y_clicked()
 {
-    QMessageBox::question(this, "Y-"\
-                          ,tr("To view the previous year's data, click on it to display the previous year's data for the current displayed year."), tr("OK"));
+    QMessageBox::question(this, tr("Y  -")\
+                          ,tr("To view the data for the previous year."), tr("OK"));
 }
 /********* 点击Y+ *********/
 void MyWidget::on_Add_Y_clicked()
 {
-    QMessageBox::question(this, "Y+"\
-                          ,tr("To view the data for the next year, click on it to display the data for the next year of the current displayed year."), tr("OK"));
+    QMessageBox::question(this, tr("Y  +")\
+                          ,tr("To view the data for the next year."), tr("OK"));
 }
 /********* 点击M- *********/
 void MyWidget::on_Subtract_M_clicked()
 {
-    QMessageBox::question(this, "M-"\
-                          ,tr("To view the data of the previous month, click on it to display the data of the previous month of the current displayed month."), tr("OK"));
+    QMessageBox::question(this, tr("M  -")\
+                          ,tr("To view the data of the previous month."), tr("OK"));
 }
 /********* 点击M+ *********/
 void MyWidget::on_Add_M_clicked()
 {
-    QMessageBox::question(this, "M+"\
-                          ,tr("To view the data for the next month, click to display the data for the next month of the current displayed month."), tr("OK"));
+    QMessageBox::question(this, tr("M  +")\
+                          ,tr("To view the data for the next month."), tr("OK"));
 }
 /********* 点击D- *********/
 void MyWidget::on_Subtract_D_clicked()
 {
-    QMessageBox::question(this, "D-"\
-                          ,tr("To view the data of the previous day. Click to display the data of the previous day of the current day."), tr("OK"));
+    QMessageBox::question(this, tr("D  -")\
+                          ,tr("To view the data of the previous day."), tr("OK"));
 }
 /********* 点击D+ *********/
 void MyWidget::on_Add_D_clicked()
 {
-    QMessageBox::question(this, "D+"\
-                          ,tr("To view the data of the next day. Click to display the data of the next day of the current day."), tr("OK"));
+    QMessageBox::question(this, tr("D  +")\
+                          ,tr("To view the data of the next day."), tr("OK"));
 }
 /********* 导出历史记录 *********/
 void MyWidget::on_OutPut_historyFailuer_clicked()
