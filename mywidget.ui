@@ -4621,9 +4621,9 @@ Language</string>
                             <colorrole role="WindowText">
                              <brush brushstyle="SolidPattern">
                               <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
+                               <red>255</red>
+                               <green>255</green>
+                               <blue>255</blue>
                               </color>
                              </brush>
                             </colorrole>
@@ -4636,39 +4636,12 @@ Language</string>
                               </color>
                              </brush>
                             </colorrole>
-                            <colorrole role="Light">
+                            <colorrole role="Text">
                              <brush brushstyle="SolidPattern">
                               <color alpha="255">
                                <red>255</red>
                                <green>255</green>
                                <blue>255</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="Dark">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>170</green>
-                               <blue>255</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="Mid">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>170</green>
-                               <blue>255</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="Text">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
                               </color>
                              </brush>
                             </colorrole>
@@ -4696,24 +4669,6 @@ Language</string>
                                <red>31</red>
                                <green>133</green>
                                <blue>227</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="HighlightedText">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="AlternateBase">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>170</green>
-                               <blue>255</blue>
                               </color>
                              </brush>
                             </colorrole>
@@ -4722,9 +4677,9 @@ Language</string>
                             <colorrole role="WindowText">
                              <brush brushstyle="SolidPattern">
                               <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
+                               <red>255</red>
+                               <green>255</green>
+                               <blue>255</blue>
                               </color>
                              </brush>
                             </colorrole>
@@ -4737,39 +4692,12 @@ Language</string>
                               </color>
                              </brush>
                             </colorrole>
-                            <colorrole role="Light">
+                            <colorrole role="Text">
                              <brush brushstyle="SolidPattern">
                               <color alpha="255">
                                <red>255</red>
                                <green>255</green>
                                <blue>255</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="Dark">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>170</green>
-                               <blue>255</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="Mid">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>170</green>
-                               <blue>255</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="Text">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
                               </color>
                              </brush>
                             </colorrole>
@@ -4797,24 +4725,6 @@ Language</string>
                                <red>31</red>
                                <green>133</green>
                                <blue>227</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="HighlightedText">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="AlternateBase">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>170</green>
-                               <blue>255</blue>
                               </color>
                              </brush>
                             </colorrole>
@@ -4823,8 +4733,8 @@ Language</string>
                             <colorrole role="WindowText">
                              <brush brushstyle="SolidPattern">
                               <color alpha="255">
-                               <red>0</red>
-                               <green>170</green>
+                               <red>255</red>
+                               <green>255</green>
                                <blue>255</blue>
                               </color>
                              </brush>
@@ -4838,7 +4748,7 @@ Language</string>
                               </color>
                              </brush>
                             </colorrole>
-                            <colorrole role="Light">
+                            <colorrole role="Text">
                              <brush brushstyle="SolidPattern">
                               <color alpha="255">
                                <red>255</red>
@@ -4847,38 +4757,11 @@ Language</string>
                               </color>
                              </brush>
                             </colorrole>
-                            <colorrole role="Dark">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>170</green>
-                               <blue>255</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="Mid">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>170</green>
-                               <blue>255</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="Text">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>170</green>
-                               <blue>255</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
                             <colorrole role="ButtonText">
                              <brush brushstyle="SolidPattern">
                               <color alpha="255">
-                               <red>0</red>
-                               <green>170</green>
+                               <red>255</red>
+                               <green>255</green>
                                <blue>255</blue>
                               </color>
                              </brush>
@@ -4898,24 +4781,6 @@ Language</string>
                                <red>31</red>
                                <green>133</green>
                                <blue>227</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="HighlightedText">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="AlternateBase">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>170</green>
-                               <blue>255</blue>
                               </color>
                              </brush>
                             </colorrole>
@@ -4928,7 +4793,14 @@ Language</string>
                           </font>
                          </property>
                          <property name="styleSheet">
-                          <string notr="true">background-color: rgb(31, 133, 227);</string>
+                          <string notr="true">QPushButton:checked {
+	background-color: rgb(85, 170, 255);
+	color: rgb(0, 0, 0);
+}
+QPushButton:!checked {
+    background-color: rgb(31, 133, 227);
+	color: rgb(255, 255, 255);
+}</string>
                          </property>
                          <property name="text">
                           <string>Converter</string>
@@ -4958,12 +4830,30 @@ Language</string>
                          <property name="palette">
                           <palette>
                            <active>
+                            <colorrole role="WindowText">
+                             <brush brushstyle="SolidPattern">
+                              <color alpha="255">
+                               <red>255</red>
+                               <green>255</green>
+                               <blue>255</blue>
+                              </color>
+                             </brush>
+                            </colorrole>
                             <colorrole role="Button">
                              <brush brushstyle="SolidPattern">
                               <color alpha="255">
                                <red>31</red>
                                <green>133</green>
                                <blue>227</blue>
+                              </color>
+                             </brush>
+                            </colorrole>
+                            <colorrole role="Text">
+                             <brush brushstyle="SolidPattern">
+                              <color alpha="255">
+                               <red>255</red>
+                               <green>255</green>
+                               <blue>255</blue>
                               </color>
                              </brush>
                             </colorrole>
@@ -4991,35 +4881,35 @@ Language</string>
                                <red>31</red>
                                <green>133</green>
                                <blue>227</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="Highlight">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>170</green>
-                               <blue>255</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="HighlightedText">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
                               </color>
                              </brush>
                             </colorrole>
                            </active>
                            <inactive>
+                            <colorrole role="WindowText">
+                             <brush brushstyle="SolidPattern">
+                              <color alpha="255">
+                               <red>255</red>
+                               <green>255</green>
+                               <blue>255</blue>
+                              </color>
+                             </brush>
+                            </colorrole>
                             <colorrole role="Button">
                              <brush brushstyle="SolidPattern">
                               <color alpha="255">
                                <red>31</red>
                                <green>133</green>
                                <blue>227</blue>
+                              </color>
+                             </brush>
+                            </colorrole>
+                            <colorrole role="Text">
+                             <brush brushstyle="SolidPattern">
+                              <color alpha="255">
+                               <red>255</red>
+                               <green>255</green>
+                               <blue>255</blue>
                               </color>
                              </brush>
                             </colorrole>
@@ -5050,26 +4940,17 @@ Language</string>
                               </color>
                              </brush>
                             </colorrole>
-                            <colorrole role="Highlight">
+                           </inactive>
+                           <disabled>
+                            <colorrole role="WindowText">
                              <brush brushstyle="SolidPattern">
                               <color alpha="255">
-                               <red>0</red>
-                               <green>170</green>
+                               <red>255</red>
+                               <green>255</green>
                                <blue>255</blue>
                               </color>
                              </brush>
                             </colorrole>
-                            <colorrole role="HighlightedText">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                           </inactive>
-                           <disabled>
                             <colorrole role="Button">
                              <brush brushstyle="SolidPattern">
                               <color alpha="255">
@@ -5079,12 +4960,21 @@ Language</string>
                               </color>
                              </brush>
                             </colorrole>
+                            <colorrole role="Text">
+                             <brush brushstyle="SolidPattern">
+                              <color alpha="255">
+                               <red>255</red>
+                               <green>255</green>
+                               <blue>255</blue>
+                              </color>
+                             </brush>
+                            </colorrole>
                             <colorrole role="ButtonText">
                              <brush brushstyle="SolidPattern">
                               <color alpha="255">
-                               <red>120</red>
-                               <green>120</green>
-                               <blue>120</blue>
+                               <red>255</red>
+                               <green>255</green>
+                               <blue>255</blue>
                               </color>
                              </brush>
                             </colorrole>
@@ -5103,24 +4993,6 @@ Language</string>
                                <red>31</red>
                                <green>133</green>
                                <blue>227</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="Highlight">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>120</green>
-                               <blue>215</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="HighlightedText">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
                               </color>
                              </brush>
                             </colorrole>
@@ -5133,7 +5005,14 @@ Language</string>
                           </font>
                          </property>
                          <property name="styleSheet">
-                          <string notr="true">background-color: rgb(31, 133, 227);</string>
+                          <string notr="true">QPushButton:checked {
+	background-color: rgb(85, 170, 255);
+	color: rgb(0, 0, 0);
+}
+QPushButton:!checked {
+    background-color: rgb(31, 133, 227);
+	color: rgb(255, 255, 255);
+}</string>
                          </property>
                          <property name="text">
                           <string>PV</string>
@@ -5163,12 +5042,30 @@ Language</string>
                          <property name="palette">
                           <palette>
                            <active>
+                            <colorrole role="WindowText">
+                             <brush brushstyle="SolidPattern">
+                              <color alpha="255">
+                               <red>255</red>
+                               <green>255</green>
+                               <blue>255</blue>
+                              </color>
+                             </brush>
+                            </colorrole>
                             <colorrole role="Button">
                              <brush brushstyle="SolidPattern">
                               <color alpha="255">
                                <red>31</red>
                                <green>133</green>
                                <blue>227</blue>
+                              </color>
+                             </brush>
+                            </colorrole>
+                            <colorrole role="Text">
+                             <brush brushstyle="SolidPattern">
+                              <color alpha="255">
+                               <red>255</red>
+                               <green>255</green>
+                               <blue>255</blue>
                               </color>
                              </brush>
                             </colorrole>
@@ -5196,35 +5093,35 @@ Language</string>
                                <red>31</red>
                                <green>133</green>
                                <blue>227</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="Highlight">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>170</green>
-                               <blue>255</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="HighlightedText">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
                               </color>
                              </brush>
                             </colorrole>
                            </active>
                            <inactive>
+                            <colorrole role="WindowText">
+                             <brush brushstyle="SolidPattern">
+                              <color alpha="255">
+                               <red>255</red>
+                               <green>255</green>
+                               <blue>255</blue>
+                              </color>
+                             </brush>
+                            </colorrole>
                             <colorrole role="Button">
                              <brush brushstyle="SolidPattern">
                               <color alpha="255">
                                <red>31</red>
                                <green>133</green>
                                <blue>227</blue>
+                              </color>
+                             </brush>
+                            </colorrole>
+                            <colorrole role="Text">
+                             <brush brushstyle="SolidPattern">
+                              <color alpha="255">
+                               <red>255</red>
+                               <green>255</green>
+                               <blue>255</blue>
                               </color>
                              </brush>
                             </colorrole>
@@ -5255,26 +5152,17 @@ Language</string>
                               </color>
                              </brush>
                             </colorrole>
-                            <colorrole role="Highlight">
+                           </inactive>
+                           <disabled>
+                            <colorrole role="WindowText">
                              <brush brushstyle="SolidPattern">
                               <color alpha="255">
-                               <red>0</red>
-                               <green>170</green>
+                               <red>255</red>
+                               <green>255</green>
                                <blue>255</blue>
                               </color>
                              </brush>
                             </colorrole>
-                            <colorrole role="HighlightedText">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                           </inactive>
-                           <disabled>
                             <colorrole role="Button">
                              <brush brushstyle="SolidPattern">
                               <color alpha="255">
@@ -5284,12 +5172,21 @@ Language</string>
                               </color>
                              </brush>
                             </colorrole>
+                            <colorrole role="Text">
+                             <brush brushstyle="SolidPattern">
+                              <color alpha="255">
+                               <red>255</red>
+                               <green>255</green>
+                               <blue>255</blue>
+                              </color>
+                             </brush>
+                            </colorrole>
                             <colorrole role="ButtonText">
                              <brush brushstyle="SolidPattern">
                               <color alpha="255">
-                               <red>120</red>
-                               <green>120</green>
-                               <blue>120</blue>
+                               <red>255</red>
+                               <green>255</green>
+                               <blue>255</blue>
                               </color>
                              </brush>
                             </colorrole>
@@ -5308,24 +5205,6 @@ Language</string>
                                <red>31</red>
                                <green>133</green>
                                <blue>227</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="Highlight">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>120</green>
-                               <blue>215</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="HighlightedText">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
                               </color>
                              </brush>
                             </colorrole>
@@ -5338,7 +5217,14 @@ Language</string>
                           </font>
                          </property>
                          <property name="styleSheet">
-                          <string notr="true">background-color: rgb(31, 133, 227);</string>
+                          <string notr="true">QPushButton:checked {
+	background-color: rgb(85, 170, 255);
+	color: rgb(0, 0, 0);
+}
+QPushButton:!checked {
+    background-color: rgb(31, 133, 227);
+	color: rgb(255, 255, 255);
+}</string>
                          </property>
                          <property name="text">
                           <string>Grid</string>
@@ -5368,12 +5254,30 @@ Language</string>
                          <property name="palette">
                           <palette>
                            <active>
+                            <colorrole role="WindowText">
+                             <brush brushstyle="SolidPattern">
+                              <color alpha="255">
+                               <red>255</red>
+                               <green>255</green>
+                               <blue>255</blue>
+                              </color>
+                             </brush>
+                            </colorrole>
                             <colorrole role="Button">
                              <brush brushstyle="SolidPattern">
                               <color alpha="255">
                                <red>31</red>
                                <green>133</green>
                                <blue>227</blue>
+                              </color>
+                             </brush>
+                            </colorrole>
+                            <colorrole role="Text">
+                             <brush brushstyle="SolidPattern">
+                              <color alpha="255">
+                               <red>255</red>
+                               <green>255</green>
+                               <blue>255</blue>
                               </color>
                              </brush>
                             </colorrole>
@@ -5401,35 +5305,35 @@ Language</string>
                                <red>31</red>
                                <green>133</green>
                                <blue>227</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="Highlight">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>170</green>
-                               <blue>255</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="HighlightedText">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
                               </color>
                              </brush>
                             </colorrole>
                            </active>
                            <inactive>
+                            <colorrole role="WindowText">
+                             <brush brushstyle="SolidPattern">
+                              <color alpha="255">
+                               <red>255</red>
+                               <green>255</green>
+                               <blue>255</blue>
+                              </color>
+                             </brush>
+                            </colorrole>
                             <colorrole role="Button">
                              <brush brushstyle="SolidPattern">
                               <color alpha="255">
                                <red>31</red>
                                <green>133</green>
                                <blue>227</blue>
+                              </color>
+                             </brush>
+                            </colorrole>
+                            <colorrole role="Text">
+                             <brush brushstyle="SolidPattern">
+                              <color alpha="255">
+                               <red>255</red>
+                               <green>255</green>
+                               <blue>255</blue>
                               </color>
                              </brush>
                             </colorrole>
@@ -5460,26 +5364,17 @@ Language</string>
                               </color>
                              </brush>
                             </colorrole>
-                            <colorrole role="Highlight">
+                           </inactive>
+                           <disabled>
+                            <colorrole role="WindowText">
                              <brush brushstyle="SolidPattern">
                               <color alpha="255">
-                               <red>0</red>
-                               <green>170</green>
+                               <red>255</red>
+                               <green>255</green>
                                <blue>255</blue>
                               </color>
                              </brush>
                             </colorrole>
-                            <colorrole role="HighlightedText">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                           </inactive>
-                           <disabled>
                             <colorrole role="Button">
                              <brush brushstyle="SolidPattern">
                               <color alpha="255">
@@ -5489,12 +5384,21 @@ Language</string>
                               </color>
                              </brush>
                             </colorrole>
+                            <colorrole role="Text">
+                             <brush brushstyle="SolidPattern">
+                              <color alpha="255">
+                               <red>255</red>
+                               <green>255</green>
+                               <blue>255</blue>
+                              </color>
+                             </brush>
+                            </colorrole>
                             <colorrole role="ButtonText">
                              <brush brushstyle="SolidPattern">
                               <color alpha="255">
-                               <red>120</red>
-                               <green>120</green>
-                               <blue>120</blue>
+                               <red>255</red>
+                               <green>255</green>
+                               <blue>255</blue>
                               </color>
                              </brush>
                             </colorrole>
@@ -5513,24 +5417,6 @@ Language</string>
                                <red>31</red>
                                <green>133</green>
                                <blue>227</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="Highlight">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>120</green>
-                               <blue>215</blue>
-                              </color>
-                             </brush>
-                            </colorrole>
-                            <colorrole role="HighlightedText">
-                             <brush brushstyle="SolidPattern">
-                              <color alpha="255">
-                               <red>0</red>
-                               <green>0</green>
-                               <blue>0</blue>
                               </color>
                              </brush>
                             </colorrole>
@@ -5543,7 +5429,14 @@ Language</string>
                           </font>
                          </property>
                          <property name="styleSheet">
-                          <string notr="true">background-color: rgb(31, 133, 227);</string>
+                          <string notr="true">QPushButton:checked {
+	background-color: rgb(85, 170, 255);
+	color: rgb(0, 0, 0);
+}
+QPushButton:!checked {
+    background-color: rgb(31, 133, 227);
+	color: rgb(255, 255, 255);
+}</string>
                          </property>
                          <property name="text">
                           <string>Load</string>
