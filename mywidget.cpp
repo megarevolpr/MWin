@@ -1616,9 +1616,6 @@ void MyWidget::Data_Report()
         ui->Report_tableWidget->item(i, 0)->setTextAlignment(Qt::AlignCenter);
         ui->Report_tableWidget->setRowHeight(i, 45);
     }
-//    for (int i = 0; i < 12; ++i) {
-//        ui->State_tableWidget->setRowHeight(i, 45);
-//    }
     DataReportMessages(ui->Report_tableWidget); //数据报表页说明
 }
 
@@ -1629,7 +1626,7 @@ void MyWidget::History()
     table_h_headers.clear();
     table_h_headers << tr("Level") << tr("Start Time") << tr("End Time") << tr("Description");
     ui->Historicalfailure_tableWidget->setColumnCount(table_h_headers.size());
-    ui->Historicalfailure_tableWidget->setRowCount(16);
+    ui->Historicalfailure_tableWidget->setRowCount(15);
     ui->Historicalfailure_tableWidget->setHorizontalHeaderLabels(table_h_headers);
     ui->Historicalfailure_tableWidget->horizontalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
     ui->Historicalfailure_tableWidget->setFrameShape(QFrame::NoFrame);//设置无边框
@@ -1649,30 +1646,11 @@ void MyWidget::History()
     Grade6_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
     Grade7_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
     Grade8_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-//    StartTime_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-//    StartTime2_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-//    StartTime3_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-//    StartTime4_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-//    StartTime5_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-//    StartTime6_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-//    StartTime7_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-//    StartTime8_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-//    EndTime_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-//    EndTime2_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-//    EndTime3_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-//    EndTime4_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-//    EndTime5_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-//    EndTime6_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-//    EndTime7_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-//    EndTime8_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-//    Describe_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-//    Describe2_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-//    Describe3_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-//    Describe4_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-//    Describe5_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-//    Describe6_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-//    Describe7_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
-//    Describe8_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
+
+    for (int i = 0; i < 15; ++i)
+    {
+        ui->Historicalfailure_tableWidget->setRowHeight(i, 40);
+    }
 
     HistoryRecord(ui->Historicalfailure_tableWidget);   //历史记录页说明
 }
@@ -1684,14 +1662,20 @@ void MyWidget::OperationLog()
     Ope_headers.clear();
     Ope_headers << tr("Modification Time") << tr("Record Event");
     ui->Operation_tableWidget->setColumnCount(Ope_headers.size());
-    ui->Operation_tableWidget->setRowCount(12);
+    ui->Operation_tableWidget->setRowCount(9);
     ui->Operation_tableWidget->setHorizontalHeaderLabels(Ope_headers);
+    ui->Operation_tableWidget->horizontalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
     ui->Operation_tableWidget->setFrameShape(QFrame::NoFrame);//设置无边框
     ui->Operation_tableWidget->setShowGrid(true);//设置显示格子
     ui->Operation_tableWidget->setSelectionBehavior(QAbstractItemView::SelectItems);//每次选择一行
     ui->Operation_tableWidget->setEditTriggers(QAbstractItemView::SelectedClicked);//单机修改
     ui->Operation_tableWidget->setColumnWidth(0,260);
     ui->Operation_tableWidget->horizontalHeader()->setStretchLastSection(true);
+
+    for (int i = 0; i < 9; ++i)
+    {
+        ui->Operation_tableWidget->setRowHeight(i, 40);
+    }
 
     OperationLog_tab(ui->Operation_tableWidget);    //操作日志页说明
 }
