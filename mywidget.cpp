@@ -1682,7 +1682,7 @@ void MyWidget::OperationLog()
 {
     QStringList Ope_headers;
     Ope_headers.clear();
-    Ope_headers << tr("ModificationTime") << tr("RecordEvent");
+    Ope_headers << tr("Modification Time") << tr("Record Event");
     ui->Operation_tableWidget->setColumnCount(Ope_headers.size());
     ui->Operation_tableWidget->setRowCount(12);
     ui->Operation_tableWidget->setHorizontalHeaderLabels(Ope_headers);
@@ -4270,16 +4270,14 @@ void MyWidget::HistoryRecord(QTableWidget *myTable)
     QString str2 = tr("Level");
     QString str3 = tr("0 represents an alarm event, and this item will turn red. 1 represents a status event.");//0表示告警事件，且此项会变红，1表示状态事件
     QString str4 = tr("Start Time");
-    QString str5 = tr("This is the event start time, which means that the record started appearing at this time.");//这是事件开始时间，表示这条记录从这个时间开始出现。
+    QString str5 = tr("Event start time.");//事件开始时间。
     QString str6 = tr("End Time");
-    QString str7 = tr("This is the event end time, which means the end time of this record,'... 'means no end time.");//这是事件结束时间，表示这条记录的结束时间,...'表示无结束时间。
-
+    QString str7 = tr("Event end time: '... 'indicates that there is no end time,'-' indicates that the event is in progress.");//19.事件结束时间：表示这条记录的结束时间，'...'表示无结束时间,'-'表示事件正在进行。
     QString str8 = tr("CAN communication failure");
-    QString str9 = tr("Description");//描述
-    QString str10 = tr("This is the event description, when there is an alarm information, the alarm information will be recorded here.");//这是事件描述，当有告警信息时，会将告警信息记录在这里。
+    QString str9 = tr("event description");//事件描述
+    QString str10 = tr("event description.");//事件描述。
     QString str11 = tr("Fire alarm (High temp. alarm)");//消防告警(高温告警)
     QString str12 = tr("Power Meter Comm fualttLead-acid abnormal");//电能表通讯故障
-
     QString str13 = tr("Converter Standby.");//变换器待机
     QString str14 = tr("The grid contactor connected");//电网接触器闭合
     QString str15 = tr("The grid breaker connected");//电网断路器闭合
@@ -4343,50 +4341,50 @@ void MyWidget::HistoryRecord(QTableWidget *myTable)
     line=0;
     column=1;
     StartTime9 = new Specification(this,StartTime9_explain, myTable, line++, column, \
-                                                    "2023.7.29 14:59:56", str4, str5);
+                                                    "29-7-2023 14:59:56", str4, str5);
     StartTime9->add_Specification();
     StartTime10 = new Specification(this,StartTime10_explain, myTable, line++, column, \
-                                                    "2023.7.29 14:59:55", str4, str5);
+                                                    "29-7-2023 14:59:55", str4, str5);
     StartTime10->add_Specification();
     StartTime11 = new Specification(this,StartTime11_explain, myTable, line++, column, \
-                                                    "2023.7.29 14:59:51", str4, str5);
+                                                    "29-7-2023 14:59:51", str4, str5);
     StartTime11->add_Specification();
     StartTime12 = new Specification(this,StartTime12_explain, myTable, line++, column, \
-                                                    "2023.7.29 14:59:51", str4, str5);
+                                                    "29-7-2023 14:59:51", str4, str5);
     StartTime12->add_Specification();
     StartTime13 = new Specification(this,StartTime13_explain, myTable, line++, column, \
-                                                    "2023.7.29 14:59:50", str4, str5);
+                                                    "29-7-2023 14:59:50", str4, str5);
     StartTime13->add_Specification();
     StartTime14 = new Specification(this,StartTime14_explain, myTable, line++, column, \
-                                                    "2023.7.29 14:57:50", str4, str5);
+                                                    "29-7-2023 14:57:50", str4, str5);
     StartTime14->add_Specification();
     StartTime15 = new Specification(this,StartTime15_explain, myTable, line++, column, \
-                                                    "2023.7.29 14:57:50", str4, str5);
+                                                    "29-7-2023 14:57:50", str4, str5);
     StartTime15->add_Specification();
 
     StartTime = new Specification(this,StartTime_explain, myTable, line++, column, \
-                                                    "2023.5.6 15:49:50", str4, str5);
+                                                    "6-5-2023 15:49:50", str4, str5);
     StartTime->add_Specification();
     StartTime2 = new Specification(this,StartTime2_explain, myTable, line++, column, \
-                                                    "2023.5.6 15:48:18", str4, str5);
+                                                    "6-5-2023 15:48:18", str4, str5);
     StartTime2->add_Specification();
     StartTime3 = new Specification(this,StartTime3_explain, myTable, line++, column, \
-                                                    "2023.5.6 15:39:3", str4, str5);
+                                                    "6-5-2023 15:39:3", str4, str5);
     StartTime3->add_Specification();
     StartTime4 = new Specification(this,StartTime4_explain, myTable, line++, column, \
-                                                    "2023.5.6 15:39:3", str4, str5);
+                                                    "6-5-2023 15:39:3", str4, str5);
     StartTime4->add_Specification();
     StartTime5 = new Specification(this,StartTime5_explain, myTable, line++, column, \
-                                                    "2023.5.6 15:39:3", str4, str5);
+                                                    "6-5-2023 15:39:3", str4, str5);
     StartTime5->add_Specification();
     StartTime6 = new Specification(this,StartTime6_explain, myTable, line++, column, \
-                                                    "2023.5.6 15:21:56", str4, str5);
+                                                    "6-5-2023 15:21:56", str4, str5);
     StartTime6->add_Specification();
     StartTime7 = new Specification(this,StartTime7_explain, myTable, line++, column, \
-                                                    "2023.5.6 15:21:38", str4, str5);
+                                                    "6-5-2023 15:21:38", str4, str5);
     StartTime7->add_Specification();
     StartTime8 = new Specification(this,StartTime8_explain, myTable, line++, column, \
-                                                    "2023.5.6 15:21:38", str4, str5);
+                                                    "6-5-2023 15:21:38", str4, str5);
     StartTime8->add_Specification();
     line=0;
     column=2;
@@ -4409,7 +4407,7 @@ void MyWidget::HistoryRecord(QTableWidget *myTable)
                                                     "...", str6, str7);
     EndTime14->add_Specification();
     EndTime15 = new Specification(this,EndTime15_explain, myTable, line++, column, \
-                                                    "2023.7.29 16:42:24", str6, str7);
+                                                    "29-7-2023 16:42:24", str6, str7);
     EndTime15->add_Specification();
 
     EndTime = new Specification(this,EndTime_explain, myTable, line++, column, \
@@ -4489,45 +4487,45 @@ void MyWidget::HistoryRecord(QTableWidget *myTable)
 //操作日志 绘制button
 void MyWidget::OperationLog_tab(QTableWidget *myTable)
 {
-    QString str = tr("ModificationTime");
+    QString str = tr("Modification Time");
     QString str1 = tr("Time when the system Settings are modified.");
-    QString str2 = tr("RecordEvent");
-    QString str3 = tr("Here is a record of the operation when a change is made to the system Settings.");
+    QString str2 = tr("Record Event");//事件记录
+    QString str3 = tr("System settings operation records.");
     int line=0;int column=0;
     ModificationTime = new Specification(this,ModificationTime_explain, myTable, line++, column, \
-                                                    "2023-05-12 11:32:45", str, \
+                                                    "12-05-2023 11:32:45", str, \
                                                     str1);
     ModificationTime->add_Specification();
     ModificationTime2 = new Specification(this,ModificationTime2_explain, myTable, line++, column, \
-                                                    "2023-05-12 11:32:33", str, \
+                                                    "12-05-2023 11:32:33", str, \
                                                     str1);
     ModificationTime2->add_Specification();
     ModificationTime3 = new Specification(this,ModificationTime3_explain, myTable, line++, column, \
-                                                    "2023-05-11 19:29:24", str, \
+                                                    "11-05-2023 19:29:24", str, \
                                                     str1);
     ModificationTime3->add_Specification();
     ModificationTime4 = new Specification(this,ModificationTime4_explain, myTable, line++, column, \
-                                                    "2023-05-11 19:29:21", str, \
+                                                    "11-05-2023 19:29:21", str, \
                                                     str1);
     ModificationTime4->add_Specification();
     ModificationTime5 = new Specification(this,ModificationTime5_explain, myTable, line++, column, \
-                                                    "2023-05-11 19:29:10", str, \
+                                                    "11-05-2023 19:29:10", str, \
                                                     str1);
     ModificationTime5->add_Specification();
     ModificationTime6 = new Specification(this,ModificationTime6_explain, myTable, line++, column, \
-                                                    "2023-05-11 19:29:07", str, \
+                                                    "11-05-2023 19:29:07", str, \
                                                     str1);
     ModificationTime6->add_Specification();
     ModificationTime9 = new Specification(this,ModificationTime9_explain, myTable, line++, column, \
-                                                    "2023-05-11 11:20:58", str, \
+                                                    "11-05-2023 11:20:58", str, \
                                                     str1);
     ModificationTime9->add_Specification();
     ModificationTime11 = new Specification(this,ModificationTime11_explain, myTable, line++, column, \
-                                                    "2023-05-11 11:02:18", str, \
+                                                    "11-05-2023 11:02:18", str, \
                                                     str1);
     ModificationTime11->add_Specification();
     ModificationTime12 = new Specification(this,ModificationTime12_explain, myTable, line++, column, \
-                                                    "2023-05-11 11:02:14", str, \
+                                                    "11-05-2023 11:02:14", str, \
                                                     str1);
     ModificationTime12->add_Specification();
     line=0;
