@@ -1396,7 +1396,7 @@ void MyWidget::ModuleState_Tab()
     QStringList State_Tablist1;
     State_Tablist1  << tr("DC input breaker") << tr("DC contactor") << tr("Maintenance Bypass breaker")
                     << tr("Output breaker") << tr("Output contactor")<< tr("Grid breaker")
-                    << tr("Start Diesel Generator Signal")<< tr("Reserved")<< tr("Reserved");
+                    << tr("Start Diesel Generator Signal")<< tr("D02")<< tr("D03");
     QStringList State_Tablist2;
     State_Tablist2  << tr("DCAC Converter available") << tr("DC Soft start") << tr("Converter status")<< tr("Reactive power Regulation")
                     << tr("LVRT")<< tr("DI1")<< tr("DI2")<< tr("DI3")<< tr("DI4")<< tr("DI5")<< tr("DI6");
@@ -1405,7 +1405,7 @@ void MyWidget::ModuleState_Tab()
                     << tr("Contactor status buck")<< tr("Contactor status boost")<< tr("Converter status");
 
     ui->State_tableWidget->setColumnCount(6);
-    ui->State_tableWidget->setRowCount(12);
+    ui->State_tableWidget->setRowCount(11);
     ui->State_tableWidget->horizontalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
     ui->State_tableWidget->verticalHeader()->setVisible(false);//设置垂直头不可见
     ui->State_tableWidget->setFrameShape(QFrame::NoFrame);//设置无边框
@@ -1439,6 +1439,9 @@ void MyWidget::ModuleState_Tab()
     {
         ui->State_tableWidget->setItem(i, 4, new QTableWidgetItem(State_Tablist3.at(i)));
         ui->State_tableWidget->item(i, 4)->setTextAlignment(Qt::AlignCenter);
+    }
+    for (int i = 0; i < 11; ++i) {
+        ui->State_tableWidget->setRowHeight(i, 45);
     }
     MPSState(ui->State_tableWidget); //MPS状态说明
 }
@@ -2979,116 +2982,118 @@ void MyWidget::MPSState(QTableWidget *myTable)
     int line = 0;int column = 1;//当前解释的button行和列
     DC_input_Bre = new Specification(this,DC_input_Bre_explain, myTable, line++, column, \
                                             tr("Closed"), tr("DC input breaker"), \
-                                            "Dc circuit breaker has three states: open, closed, trip; If the DC circuit breaker is overcurrent, the DC circuit breaker will trip.");
+                                            tr("There are two states for a DC circuit breaker: open, closed."));
     DC_input_Bre->add_Specification();
     DC_Con = new Specification(this,DC_Con_explain, myTable, line++, column, \
                                tr("Closed"), tr("DC contactor"), \
-                               tr("DC contactor has two states: Break, Close; When the DC side is soft Break, the DC contactor is closed. When the DC side of the battery is disconnected, the DC bus voltage drops to a certain voltage, and the DC contactor is disconnected."));
-    DC_Con->add_Specification();
+                               tr("The DC contactor has two states: open and closed. After the soft start of the DC side is completed, the DC contactor closes. When the DC side of the battery is disconnected and the voltage of the DC bus drops to a certain level, the DC contactor opens."));
+    DC_Con->add_Specification();//直流接触器有两种状态:断开、闭合:当直流侧软启完成后，直流接触器闭合;当电池直流侧断开，直流母线电压下降到一定电压，直流接触器断开。
+
     M_Bypass_Bre = new Specification(this,M_Bypass_Bre_explain, myTable, line++, column, \
                                             tr("Closed"), tr("Maintenance Bypass Breaker"), \
-                                            tr("Maintenance bypass circuit breaker has two states: Break, Close; This circuit breaker is only used for machine maintenance, if necessary, please contact the maintenance personnel."));
-    M_Bypass_Bre->add_Specification();
+                                            tr("There are two states for the maintenance bypass circuit breaker: Open, Closed. This circuit breaker is only used for machine maintenance. If maintenance is required, please contact the maintenance personnel."));
+    M_Bypass_Bre->add_Specification();//维修旁路断路器有两种状态:断开、团合;此断路器仅用于机器维护，如需维护，请联系维护人员。
+
     Output_Bre = new Specification(this,Output_Bre_explain, myTable, line++, column, \
                                             tr("Closed"), tr("Output breaker"), \
-                                            tr("The output circuit breaker has three states: open, closed, and tripped. It can only be manually opened and closed. If there is an overcurrent in the output circuit breaker, it will trip."));
+                                            tr("The output circuit breaker has two states: open, closed. It can only be manually opened and closed. If there is an overcurrent in the output circuit breaker, it will trip."));
     Output_Bre->add_Specification();
     Output_Con = new Specification(this,Output_Con_explain, myTable, line++, column, \
                                             tr("Closed"), tr("Output contactor"), \
-                                            tr("The output contactor has two states: Break, Close; When the DC side soft opening is completed, the output contactor is closed; When the converter is turned off, the output contactor is disconnected."));
+                                            tr("The output contactor has two states: Open, Closed. The output contactor closes after the soft start on the inv. side is completed. The output contactor opens when the converter is shut down."));
     Output_Con->add_Specification();
     Grid_Bre = new Specification(this,Grid_Bre_explain, myTable, line++, column, \
                                             tr("Closed"), tr("Grid breaker"), \
-                                            tr("The power grid circuit breaker has three states: Break, Close, Trip; The power grid circuit breaker can only be manually disconnected. If the power grid circuit breaker overflows, the power grid circuit breaker may trip."));
+                                            tr("The power grid circuit breaker has two states: Break, Close; The power grid circuit breaker can only be manually disconnected. If the power grid circuit breaker overflows, the power grid circuit breaker may trip."));
     Grid_Bre->add_Specification();
     DO1 = new Specification(this,DO1_explain, myTable, line++, column, \
-                                            tr("Disable"), tr("Diesel generator output signal"), \
-                                            tr("This is the status of the current chai signal, output dry contact 1, there are Enable and Disable two states, here is the most real physical hardware status."));
+                                            tr("Disable"), tr("Start Diesel Generator Signal"), \
+                                            tr("Signal to start the diesel generator, start the diesel generator when enabled, stop the diesel generator when disabled."));
     DO1->add_Specification();
     DO2 = new Specification(this,DO2_explain, myTable,line++, column, \
-                                            tr("Disable"), tr("Reserve"), \
-                                            tr("This bit is reserved and has no effect. Dry contact 1 is output. The status of dry contact 2 is Enable(Enable) or Disable(Disable)."));
+                                            tr("Disable"), tr("DO2"), \
+                                            tr("Dry contact 2 is output."));
     DO2->add_Specification();
     DO3 = new Specification(this,DO3_explain, myTable, line++, column, \
-                                            tr("Disable"), tr("Reserve"), \
-                                            tr("This bit is reserved and has no effect. Dry contact 2 is output. The status of dry contact 2 is Enable(Enable) or Disable(Disable)."));
+                                            tr("Disable"), tr("DO3"), \
+                                            tr("Dry contact 3 is output."));
     DO3->add_Specification();
 
     line = 0;
     column += 2;
     DCAC_Conver_avail = new Specification(this,DCAC_Conver_avail_explain, myTable, line++, column, \
                                             tr("Enable"), tr("DCAC Converter available"), \
-                                            tr("The converter can be enabled in two states: enable and disable; If the internal self-test of the machine is no problem, the converter is enabled; Otherwise the converter is prohibited."));
+                                            tr("The converter has two states: enabled,disabled. The converter is enabled when the self-check is successful. Otherwise, the converter is disabled."));
     DCAC_Conver_avail->add_Specification();
     DC_Soft_Start = new Specification(this,DC_Soft_Start_explain, myTable, line++, column, \
                                             tr("Not starting"), tr("DC Soft start"), \
-                                            tr("The DC Soft boot has three states: Soft starting, complete, and Not starting. Soft start means that when the converter is started, it gradually accelerates or decelerates the device to the normal operating state by controlling the change of current or voltage, so as to reduce the current shock and voltage peak in the circuit, protect the circuit components and reduce the mechanical damage of the device. Soft start can increase device life, reduce energy consumption, and improve system efficiency."));
+                                            tr("There are three states for DC soft start: Not starting, Soft starting, and Complete. Soft start refers to the process in which the converter charges the busbar with the battery during startup, causing the busbar voltage to rise close to the battery voltage."));
     DC_Soft_Start->add_Specification();
     Converter_Status = new Specification(this,Converter_Status_explain, myTable, line++, column, \
                                             tr("OFF"), tr("Converter Status"), \
-                                            tr("There are eight converter states:Shut down, Soft start, Grid-ON Charge, Grid-ON Discharge, Grid-OFF Discharge, Drop and Connected,Standby, Grid-OFF Charge."));
+                                            tr("Converter states include: OFF, AC Soft start, Grid-ON Charge, Grid-ON Discharge, Grid-OFF Discharge, Derating grid-on, Standby and Grid-OFF Charge."));
     Converter_Status->add_Specification();
     Reactive_P_Reg = new Specification(this,Reactive_P_Reg_explain, myTable, line++, column, \
                                             tr("Disable"), tr("Reactive power Regulation"), \
-                                            tr("There are three types of reactive power regulation: Disable, Pf regulation, and Q regulation."));
+                                            tr("There are three types of reactive power regulation: Disable,PF regulation, and  regulation."));
     Reactive_P_Reg->add_Specification();
     LVRT = new Specification(this,LVRT_explain, myTable, line++, column, \
                                             tr("LVRT"), tr("LVRT"), \
-                                            tr("This is the current state of low voltage crossing (LVRT). Low voltage crossing refers to the ability to withstand a certain limit of low voltage of the grid within a certain period of time without exiting the operation. There are two states here, namely Non and LVRT."));
+                                            tr("LVRT states : enabled , disabled."));
     LVRT->add_Specification();
     DI1 = new Specification(this,DI1_explain, myTable, line++, column, \
                                             tr("Disable"), tr("DI1"), \
-                                            tr("This is the status of input contactor 1, which has two states: enabled and disabled. Whether to enable it or not depends on the actual requirements set in the advanced settings."));
+                                            tr("Input dry contact 1 status: Enabled, Disabled."));
     DI1->add_Specification();
     DI2 = new Specification(this,DI2_explain, myTable, line++, column, \
                                             tr("Disable"), tr("DI2"), \
-                                            tr("This is the status of input contactor 2, which has two states: enabled and disabled. Whether to enable it or not depends on the actual requirements set in the advanced settings."));
+                                            tr("Input dry contact 2 status: Enabled, Disabled."));
     DI2->add_Specification();
     DI3 = new Specification(this,DI3_explain, myTable, line++, column, \
                                             tr("Disable"), tr("DI3"), \
-                                            tr("This is the status of input contactor 3, which has two states: enabled and disabled. Whether to enable it or not depends on the actual requirements set in the advanced settings."));
+                                            tr("Input dry contact 3 status: Enabled, Disabled."));
     DI3->add_Specification();
     DI4 = new Specification(this,DI4_explain, myTable, line++, column, \
                                             tr("Disable"), tr("DI4"), \
-                                            tr("This is the status of input contactor 4, which has two states: enabled and disabled. Whether to enable it or not depends on the actual requirements set in the advanced settings."));
+                                            tr("Input dry contact 4 status: Enabled, Disabled."));
     DI4->add_Specification();
     DI5 = new Specification(this,DI5_explain, myTable, line++, column, \
                                             tr("Disable"), tr("DI5"), \
-                                            tr("This is the status of input contactor 5, which has two states: enabled and disabled. Whether to enable it or not depends on the actual requirements set in the advanced settings."));
+                                            tr("Input dry contact 5 status: Enabled, Disabled."));
     DI5->add_Specification();
     DI6 = new Specification(this,DI6_explain, myTable, line++, column, \
                                             tr("Disable"), tr("DI6"), \
-                                            tr("This is the status of input contactor 6, which has two states: enabled and disabled. Whether to enable it or not depends on the actual requirements set in the advanced settings."));
+                                            tr("Input dry contact 6 status: Enabled, Disabled."));
     DI6->add_Specification();
     line = 0;
     column += 2;
     DCDC_Converter_ava = new Specification(this,DCDC_Converter_ava_explain, myTable, line++, column, \
                                             tr("Disable"), tr("DCDC Converter available"), \
-                                            tr("The DC converter can be enabled in two states: Enable and disable. If the internal self-test of the machine is no problem, the DC converter is enabled. Otherwise, the DC converter is prohibited."));
+                                            tr("The converter has two states: enabled,disabled. The converter is enabled when the self-check is successful. Otherwise, the converter is disabled."));
     DCDC_Converter_ava->add_Specification();
     Run_mode = new Specification(this,Run_mode_explain, myTable, line++, column, \
                                             tr("Buck"), tr("Run mode"), \
-                                            tr("This is the current 'DC' module operation mode, there are Buck (Buck), Boost (Boost) two states."));
+                                            tr("DCDC module operating modes: Boost, Buck."));
     Run_mode->add_Specification();
     Soft_Start_Sta_Boost = new Specification(this,Soft_Start_Sta_Boost_explain, myTable, line++, column, \
-                                            tr("Not starting"), tr("Soft Start Status Boost"), \
-                                            tr("This is the current high voltage side soft start state of the 'DC' module. There are three states: Not starting, Soft start, and Soft Start completion."));
+                                            tr("Not\nstarting"), tr("Soft Start Status Boost"), \
+                                            tr("High-voltage side soft start states: Not started, Soft start in progress, Soft start completed."));
     Soft_Start_Sta_Boost->add_Specification();
     Soft_Start_Sta_Buck = new Specification(this,Soft_Start_Sta_Buck_explain, myTable, line++, column, \
-                                            tr("Not starting"), tr("Soft Start Status Buck"), \
-                                            tr("This is the soft start state of the low voltage side of the current 'DC' module. There are three states: Not starting, Soft start, and Soft Start completion."));
+                                            tr("Not\nstarting"), tr("Soft Start Status Buck"), \
+                                            tr("Low-voltage side soft start states: Not started, Soft start in progress, Soft start completed."));
     Soft_Start_Sta_Buck->add_Specification();
     Contator_Sta_Boost = new Specification(this,Contator_Sta_Boost_explain, myTable, line++, column, \
-                                            tr("open"), tr("Contator Status Boost"), \
+                                            tr("Open"), tr("Contator Status Boost"), \
                                             tr("DC module high voltage contactor has two states: open, closed; When there is voltage on the high voltage side, close the high voltage contactor; Otherwise, the high voltage contactor is disconnected."));
     Contator_Sta_Boost->add_Specification();
     Contator_Sta_Buck = new Specification(this,Contator_Sta_Buck_explain, myTable, line++, column, \
-                                            tr("open"), tr("Contator Status Buck"), \
+                                            tr("Open"), tr("Contator Status Buck"), \
                                             tr("DC module low voltage contactor has two states: open, closed; When there is voltage on the low voltage side, close the contactor on the low voltage side; Otherwise, the low pressure contactor is disconnected."));
     Contator_Sta_Buck->add_Specification();  
     Converter_Status_V = new Specification(this,Converter_Status_V_explain, myTable, line++, column, \
                                             tr("Turn off"), tr("Converter Status"), \
-                                            tr("This is the current operating mode status of the 'DC' module, which has five states: Turnoff, Standby, Constant VOL (Constant Voltage), Constant CUR (Constant Current), and Maximum Power Point Tracking (MPPT)."));
+                                            tr("DCDC module operation modes states: OFF, Standby, Constant Voltage, Constant Current, Maximum Power Point Tracking."));
     Converter_Status_V->add_Specification();
 
 
