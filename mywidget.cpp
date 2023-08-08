@@ -28,7 +28,6 @@ MyWidget::MyWidget(QWidget *parent) :
     MemoryAllocation(); //初始化内存空间
     UIPageInit();       //初始化界面
     LinkRelationship();//函数关联
-
 }
 
 MyWidget::~MyWidget()
@@ -1241,8 +1240,8 @@ void MyWidget::RecordPage()
 void MyWidget::MPS_Data_Tab()
 {
     QStringList Converter_Tablist1;
-    Converter_Tablist1  << tr("Voltage(AB)") << tr("Voltage(BC)") << tr("Voltage(CA)")
-                        << tr("Current(A)") << tr("Current(B)")<< tr("Current(C)")
+    Converter_Tablist1  << tr("Inv. Voltage(AB)") << tr("Inv. Voltage(BC)") << tr("Inv. Voltage(CA)")
+                        << tr("Inv. Current(A)") << tr("Inv. Current(B)")<< tr("Inv. Current(C)")
                         << tr("IGBT temperature") << tr("Env. temperature") << tr("Leakage current");
     QStringList Converter_Tablist2;
     Converter_Tablist2  << tr("PV voltage") << tr("PV current") << tr("PV power")
@@ -1280,11 +1279,11 @@ void MyWidget::MPS_Data_Tab()
     /***************************************************************************************************/
 
     QStringList PV_Tablist1;
-    PV_Tablist1  << tr("Voltage_H") << tr("Current_H") << tr("Power_H")
-                        << tr("Voltage_L") << tr("Current_L")<< tr("Power_L")<< tr("PositiveInuslation");
+    PV_Tablist1  << tr("PV Voltage H") << tr("PV Current H") << tr("PV Power H")
+                        << tr("PV Voltage L") << tr("PV Current L")<< tr("PV Power L")<< tr("Leakage current");
     QStringList PV_Tablist2;
     PV_Tablist2  << tr("Bus_H_Vol(+)") << tr("Bus_H_Vol(-)") << tr("Bus_L_Vol(+)")<< tr("Bus_L_Vol(-)")
-                 << tr("IGBT Temperature")<< tr("NegativeInuslation")<< tr("Leakage current");
+                 << tr("IGBT Temperature")<< tr("PositiveInuslation")<< tr("NegativeInuslation");
     ui->RT_DCDC_tableWidget->setColumnCount(4);
     ui->RT_DCDC_tableWidget->setRowCount(PV_Tablist1.size());
     ui->RT_DCDC_tableWidget->horizontalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
@@ -1315,8 +1314,8 @@ void MyWidget::MPS_Data_Tab()
     }
     /***************************************************************************************************/
     QStringList RT_Grid_Tablist1;
-    RT_Grid_Tablist1  << tr("Voltage(AB)") << tr("Voltage(BC)") << tr("Voltage(CA)")
-                        << tr("Current(A)") << tr("Current(B)")<< tr("Current(C)");
+    RT_Grid_Tablist1  << tr("Grid Voltage(AB)") << tr("Grid Voltage(BC)") << tr("Grid Voltage(CA)")
+                        << tr("Grid Current(A)") << tr("Grid Current(B)")<< tr("Grid Current(C)");
     QStringList RT_Grid_Tablist2;
     RT_Grid_Tablist2  << tr("Active power") << tr("Reactive power") << tr("Apparent power")<< tr("Power factor")
                         << tr("Frequency");
@@ -1351,8 +1350,8 @@ void MyWidget::MPS_Data_Tab()
     /***************************************************************************************************/
 
     QStringList Load_Tablist1;
-    Load_Tablist1  << tr("Voltage(AB)") << tr("Voltage(BC)") << tr("Voltage(CA)")
-                   << tr("Current(A)") << tr("Current(B)")<< tr("Current(C)");
+    Load_Tablist1  << tr("Load Voltage(AB)") << tr("Load Voltage(BC)") << tr("Load Voltage(CA)")
+                   << tr("Load Current(A)") << tr("Load Current(B)")<< tr("Load Current(C)");
     QStringList Load_Tablist2;
     Load_Tablist2  << tr("Active power") << tr("Reactive power") << tr("Apparent power")<< tr("Power factor")
                    << tr("Frequency");
@@ -1388,6 +1387,7 @@ void MyWidget::MPS_Data_Tab()
     PV_Data(ui->RT_DCDC_tableWidget);
     Grid_Data(ui->RT_Grid_tableWidget);
     Load_Data(ui->RT_Load_tableWidget);
+
 }
 
 //MPS状态表初始化
@@ -1396,13 +1396,13 @@ void MyWidget::ModuleState_Tab()
     QStringList State_Tablist1;
     State_Tablist1  << tr("DC input breaker") << tr("DC contactor") << tr("Maintenance Bypass breaker")
                     << tr("Output breaker") << tr("Output contactor")<< tr("Grid breaker")
-                    << tr("Diesel generator output signal")<< tr("Reserve")<< tr("Reserve");
+                    << tr("Start Diesel Generator Signal")<< tr("Reserved")<< tr("Reserved");
     QStringList State_Tablist2;
     State_Tablist2  << tr("DCAC Converter available") << tr("DC Soft start") << tr("Converter status")<< tr("Reactive power Regulation")
                     << tr("LVRT")<< tr("DI1")<< tr("DI2")<< tr("DI3")<< tr("DI4")<< tr("DI5")<< tr("DI6");
     QStringList State_Tablist3;
-    State_Tablist3  << tr("Contactor status boost")<< tr("Contactor status buck")<< tr("Run mode")<< tr("DCDC Converter available")
-                    << tr("Soft start status boost")<< tr("Soft start status buck")<< tr("Converter status");
+    State_Tablist3  << tr("DCDC Converter available")<< tr("Run mode")<< tr("Soft start status boost")<< tr("Soft start status buck")
+                    << tr("Contactor status buck")<< tr("Contactor status boost")<< tr("Converter status");
 
     ui->State_tableWidget->setColumnCount(6);
     ui->State_tableWidget->setRowCount(12);
@@ -2373,6 +2373,7 @@ void MyWidget::on_Running_btn_clicked()  //显示变流器实时数据
     ui->Run_tabWidget->setCurrentWidget(ui->RT_Data_page);
     ui->RT_Dtata_StackedWidget->setCurrentWidget(ui->RTD_Bypass_N_page);
     ui->MPS_Data_stw->setCurrentWidget(ui->Machine_page);
+    ui->RTD_Converter->click();
 }
 
 void MyWidget::on_Grid_clicked() //显示电网端实时数据
@@ -2381,6 +2382,7 @@ void MyWidget::on_Grid_clicked() //显示电网端实时数据
     ui->Run_tabWidget->setCurrentWidget(ui->RT_Data_page);
     ui->RT_Dtata_StackedWidget->setCurrentWidget(ui->RTD_Bypass_N_page);
     ui->MPS_Data_stw->setCurrentWidget(ui->Grid_page);
+    ui->RTD_Grid->click();
 }
 
 void MyWidget::on_Load_clicked() //显示负载端实时数据
@@ -2389,6 +2391,7 @@ void MyWidget::on_Load_clicked() //显示负载端实时数据
     ui->Run_tabWidget->setCurrentWidget(ui->RT_Data_page);
     ui->RT_Dtata_StackedWidget->setCurrentWidget(ui->RTD_Bypass_N_page);
     ui->MPS_Data_stw->setCurrentWidget(ui->Load_page);
+    ui->RTD_Load->click();
 }
 
 void MyWidget::on_PV_clicked()//显示PV端实时数据
@@ -2397,6 +2400,7 @@ void MyWidget::on_PV_clicked()//显示PV端实时数据
     ui->Run_tabWidget->setCurrentWidget(ui->RT_Data_page);
     ui->RT_Dtata_StackedWidget->setCurrentWidget(ui->RTD_Bypass_N_page);
     ui->MPS_Data_stw->setCurrentWidget(ui->DC_page);
+    ui->RTD_DC->click();
 }
 
 void MyWidget::on_Batt_btn_released()//显示电池信息
@@ -2446,8 +2450,8 @@ void MyWidget::MPS_Data(QTableWidget *myTable)
         delete MPS_vol_AB;
     }
     MPS_vol_AB = new Specification(this,MPS_vol_AB_explain, myTable, line++, column, \
-                                            "0V", tr("voltage(AB)"), \
-                                            tr("The inverter side voltage of the current MPS is the phase voltage between phase A and phase B."));
+                                            "0V", tr("Inv. voltage(AB)"), \
+                                            tr("Inv. side AB line voltage."));
     MPS_vol_AB->add_Specification();
 
     if(MPS_vol_BC != nullptr)
@@ -2455,8 +2459,8 @@ void MyWidget::MPS_Data(QTableWidget *myTable)
         delete MPS_vol_BC;
     }
     MPS_vol_BC = new Specification(this,MPS_vol_BC_explain, myTable, line++, column, \
-                                            "0V", "tr(voltage(BC))", \
-                                            tr("The inverter side voltage of the current MPS is the phase voltage between phase B and phase C."));
+                                            "0V", tr("Inv. voltage(BC)"), \
+                                            tr("Inv. side BC line voltage."));
     MPS_vol_BC->add_Specification();
 
     if(MPS_vol_CA != nullptr)
@@ -2464,8 +2468,8 @@ void MyWidget::MPS_Data(QTableWidget *myTable)
         delete MPS_vol_CA;
     }
     MPS_vol_CA = new Specification(this,MPS_vol_CA_explain, myTable, line++, column, \
-                                            "0V", tr("voltage(AC)"), \
-                                            tr("The inverter side voltage of the current MPS is the phase voltage between phase A and phase C."));
+                                            "0V", tr("Inv. voltage(CA)"), \
+                                            tr("Inv. side CA line voltage."));
     MPS_vol_CA->add_Specification();
 
     if(MPS_cur_A != nullptr)
@@ -2473,8 +2477,8 @@ void MyWidget::MPS_Data(QTableWidget *myTable)
         delete MPS_cur_A;
     }
     MPS_cur_A = new Specification(this,MPS_cur_A_explain, myTable, line++, column, \
-                                            "0A", tr("current(A)"), \
-                                           tr("The current of the inverter side of the current MPS is the current of phase A."));
+                                            "0A", tr("Inv. current(A)"), \
+                                           tr("Inv. side A phase current."));
     MPS_cur_A->add_Specification();
 
     if(MPS_cur_B != nullptr)
@@ -2482,8 +2486,8 @@ void MyWidget::MPS_Data(QTableWidget *myTable)
         delete MPS_cur_B;
     }
     MPS_cur_B = new Specification(this,MPS_cur_B_explain, myTable, line++, column, \
-                                            "0A", tr("current(B)"), \
-                                            tr("The current of the inverter side of the current MPS is the current of phase B."));
+                                            "0A", tr("Inv. current(B)"), \
+                                            tr("Inv. side B phase current."));
     MPS_cur_B->add_Specification();
 
     if(MPS_cur_C != nullptr)
@@ -2491,8 +2495,8 @@ void MyWidget::MPS_Data(QTableWidget *myTable)
         delete MPS_cur_C;
     }
     MPS_cur_C = new Specification(this,MPS_cur_C_explain, myTable, line++, column, \
-                                            "0A", tr("current(C)"), \
-                                            tr("The current of the inverter side of the current MPS is the current of phase C."));
+                                            "0A", tr("Inv. current(C)"), \
+                                            tr("Inv. side C phase current."));
     MPS_cur_C->add_Specification();
 
     if(MPS_IGBT_T != nullptr)
@@ -2501,8 +2505,8 @@ void MyWidget::MPS_Data(QTableWidget *myTable)
     }
     MPS_IGBT_T = new Specification(this,MPS_IGBT_T_explain, myTable, line++, column, \
                                             "0℃", tr("IGBT temperature"), \
-                                            tr("The current IGBT temperature of the MPS must not exceed 105 ° C. Otherwise, the MPS will derate and can resume full power operation at 73 ° C after derating."));
-    MPS_IGBT_T->add_Specification();//当前MPS的IGBT温度，IGBT温度不得超过105℃，否则MPS将降额运行，降额后73℃恢复可满功率运行。
+                                            tr("The IGBT temperature of the converter: The IGBT temperature must not exceed 102°C. Otherwise, the converter will operate at a reduced capacity. It will resume full power operation when the temperature drops to 73°C."));
+    MPS_IGBT_T->add_Specification();//变流器的IGBT温度：IGBT温度不得超过102℃，否则变流器将降额运行，降额后73℃恢复可满功率运行。
 
     if(MPS_Env_T != nullptr)
     {
@@ -2510,7 +2514,7 @@ void MyWidget::MPS_Data(QTableWidget *myTable)
     }
     MPS_Env_T = new Specification(this,MPS_Env_T_explain, myTable, line++, column, \
                                             "0℃", tr("Environment temperature"), \
-                                            tr("The ambient temperature of the current MPS."));
+                                            tr("The ambient temperature."));
     MPS_Env_T->add_Specification();
 
     if(MPS_Leakage_cur != nullptr)
@@ -2519,8 +2523,8 @@ void MyWidget::MPS_Data(QTableWidget *myTable)
     }
     MPS_Leakage_cur = new Specification(this,MPS_Leakage_cur_explain, myTable, line++, column, \
                                             "0mA", tr("Leakage current"), \
-                                            tr("Leakage current: the current to the ground of the grounding wire. Leakage current below 30mA is normal. Leakage current above 30mA indicates that there is leakage."));
-    MPS_Leakage_cur->add_Specification();//漏电流，接地线的对地电流，漏电流30mA以下正常，超过30mA表示存在漏电现象。
+                                            tr("Leakage current: The leakage current should not exceed 300mA (≤30kVA power converter), or 10mA/kVA (>30kVA power converter)."));
+    MPS_Leakage_cur->add_Specification();//漏电流：漏电流应不大于300mA (≤30kVA 变流器)，或10mA/kVA(>30kVA变流器)
     line=0;
     column=3;
 
@@ -2530,7 +2534,7 @@ void MyWidget::MPS_Data(QTableWidget *myTable)
     }
     PV_vol = new Specification(this,PV_vol_explain, myTable, line++, column, \
                                             "0V", tr("PV voltage"), \
-                                            tr("Total voltage on the PV side collected by the current MPS."));
+                                            tr("Display the voltage of each PV in turn."));
     PV_vol->add_Specification();
 
     if(PV_cur != nullptr)
@@ -2539,7 +2543,7 @@ void MyWidget::MPS_Data(QTableWidget *myTable)
     }
     PV_cur = new Specification(this,PV_cur_explain, myTable, line++, column, \
                                             "0A", tr("PV current"), \
-                                            tr("Total current on the PV side collected by MPS."));
+                                            tr("Total current on the PV side of the converter."));
     PV_cur->add_Specification();
 
     if(PV_power != nullptr)
@@ -2548,7 +2552,7 @@ void MyWidget::MPS_Data(QTableWidget *myTable)
     }
     PV_power = new Specification(this,PV_power_explain, myTable, line++, column, \
                                             "0kW", tr("PV power"), \
-                                            tr("The PV side power is obtained by multiplying the total voltage and total current calculated in the current MPS."));
+                                            tr("Total power on the PV side of the converter."));
     PV_power->add_Specification();
 
     if(Batter_vol != nullptr)
@@ -2557,7 +2561,7 @@ void MyWidget::MPS_Data(QTableWidget *myTable)
     }
     Batter_vol = new Specification(this,Batter_vol_explain, myTable, line++, column, \
                                             "0V", tr("Battery voltage"), \
-                                            tr("The current MPS samples the battery voltage from the connected battery."));
+                                            tr("converter battery side voltage."));
     Batter_vol->add_Specification();
 
     if(Batter_cur != nullptr)
@@ -2566,7 +2570,7 @@ void MyWidget::MPS_Data(QTableWidget *myTable)
     }
     Batter_cur = new Specification(this,Batter_cur_explain, myTable, line++, column, \
                                             "0A", tr("Battery current"), \
-                                            tr("Battery current sampled by the MPS from the connected battery."));
+                                            tr("converter battery side current."));
     Batter_cur->add_Specification();
 
     if(Batter_power != nullptr)
@@ -2575,7 +2579,7 @@ void MyWidget::MPS_Data(QTableWidget *myTable)
     }
     Batter_power = new Specification(this,Batter_power_explain, myTable, line++, column, \
                                             "0kW", tr("Battery power"), \
-                                            tr("At present, MPS calculates the product of battery voltage and battery current to obtain battery power."));
+                                            tr("converter battery side power."));
     Batter_power->add_Specification();
 
     if(Bus_vol != nullptr)
@@ -2584,7 +2588,7 @@ void MyWidget::MPS_Data(QTableWidget *myTable)
     }
     Bus_vol = new Specification(this,Bus_vol_explain, myTable, line++, column, \
                                             "0V", tr("Bus voltage"), \
-                                            tr("The current bus voltage sampled by MPS from the bus side."));
+                                            tr("converter bus voltage."));
     Bus_vol->add_Specification();
 
     if(Bus_cur != nullptr)
@@ -2593,7 +2597,7 @@ void MyWidget::MPS_Data(QTableWidget *myTable)
     }
     Bus_cur = new Specification(this,Bus_cur_explain, myTable, line++, column, \
                                             "0V", tr("Bus current"), \
-                                            tr("Current bus current sampled by MPS from the bus side."));
+                                            tr("converter bus current."));
     Bus_cur->add_Specification();
 }
 //PV数据 绘制button
@@ -2619,8 +2623,8 @@ void MyWidget::PV_Data(QTableWidget *myTable)
     }
     PV_vol_H = new Specification(this,PV_vol_H_explain, myTable, line++, column, \
                                             "0V", tr("Voltage H"), \
-                                            tr("Current voltage of the high voltage side of the DCDC module."));
-    PV_vol_H->add_Specification();
+                                            tr("Voltage on the high voltage side of the DCDC module."));
+    PV_vol_H->add_Specification();//当前DCDC模块高压侧电压
 
     if(PV_cur_H != nullptr)
     {
@@ -2628,7 +2632,7 @@ void MyWidget::PV_Data(QTableWidget *myTable)
     }
     PV_cur_H = new Specification(this,PV_cur_H_explain, myTable, line++, column, \
                                             "0A", tr("Current H"), \
-                                            tr("Current of the high voltage side of the DCDC module."));
+                                            tr("Current on the high voltage side of the DCDC module."));
     PV_cur_H->add_Specification();
 
     if(PV_power_H != nullptr)
@@ -2637,7 +2641,7 @@ void MyWidget::PV_Data(QTableWidget *myTable)
     }
     PV_power_H = new Specification(this,PV_power_H_explain, myTable,line++, column, \
                                             "0kW", tr("Power H"), \
-                                            tr("Power of the high voltage side of the DCDC module."));
+                                            tr("Power on the high voltage side of the DCDC module."));
     PV_power_H->add_Specification();
 
     if(PV_vol_L != nullptr)
@@ -2646,7 +2650,7 @@ void MyWidget::PV_Data(QTableWidget *myTable)
     }
     PV_vol_L = new Specification(this,PV_vol_L_explain, myTable, line++, column, \
                                             "0V", tr("Voltage L"), \
-                                            tr("Voltage of the low voltage side of the DCDC module."));
+                                            tr("Voltage on the low voltage side of the DCDC module."));
     PV_vol_L->add_Specification();
 
     if(PV_cur_L != nullptr)
@@ -2655,7 +2659,7 @@ void MyWidget::PV_Data(QTableWidget *myTable)
     }
     PV_cur_L = new Specification(this,PV_cur_L_explain, myTable,line++, column, \
                                             "0A", tr("Current L"), \
-                                            tr("Current of the low-voltage side of the DCDC module."));
+                                            tr("Current on the low-voltage side of the DCDC module."));
     PV_cur_L->add_Specification();
 
     if(PV_power_L != nullptr)
@@ -2664,17 +2668,19 @@ void MyWidget::PV_Data(QTableWidget *myTable)
     }
     PV_power_L = new Specification(this,PV_power_L_explain, myTable, line++, column, \
                                             "0kW", tr("Power L"), \
-                                            tr("Power of the low voltage side of the DCDC module."));
+                                            tr("Power on the low voltage side of the DCDC module."));
     PV_power_L->add_Specification();
 
-    if(PositiveInuslation != nullptr)
+
+    if(Leakage_cur != nullptr)
     {
-        delete PositiveInuslation;
+        delete Leakage_cur;
     }
-    PositiveInuslation = new Specification(this,PositiveInuslation_explain, myTable, line++, column, \
-                                            "0kΩ", tr("PositiveInuslation"), \
-                                            tr("The positive insulation impedance of the DCDC module is normal when the positive insulation impedance is greater than 1 Mω. When the positive insulation impedance is lower than 1 Mω, the insulation fault or potential security risks exist."));
-    PositiveInuslation->add_Specification();//DCDC模块的正绝缘阻抗，正绝缘阻抗大于1MΩ时正常，低于1MΩ时存在绝缘故障或潜在的安全隐患。
+    Leakage_cur = new Specification(this,Leakage_cur_explain, myTable, line++, column, \
+                                            "0mA", tr("Leakage cur"), \
+                                            tr("Leakage current: The leakage current should not exceed 300mA (≤30kVA power converter), or 10mA/kVA (>30kVA power converter)."));
+    Leakage_cur->add_Specification();
+
 
     line=0;
     column=3;
@@ -2684,8 +2690,8 @@ void MyWidget::PV_Data(QTableWidget *myTable)
         delete Bus_H_vol_add;
     }
     Bus_H_vol_add = new Specification(this,Bus_H_vol_add_explain, myTable, line++, column, \
-                                            "0V", tr("Bus_H_vol(+)"), \
-                                            tr("Positive bus voltage of the high voltage side of the DC module."));
+                                            "0V", tr("Bus H vol(+)"), \
+                                            tr("Positive bus voltage on the high voltage side of the DCDC module."));
     Bus_H_vol_add->add_Specification();
 
     if(Bus_H_vol_reduce != nullptr)
@@ -2693,8 +2699,8 @@ void MyWidget::PV_Data(QTableWidget *myTable)
         delete Bus_H_vol_reduce;
     }
     Bus_H_vol_reduce = new Specification(this,Bus_H_vol_reduce_explain, myTable, line++, column, \
-                                            "0V", tr("Bus_H_vol(-)"), \
-                                            tr("The current high voltage side of the DC module is negative for the bus voltage."));
+                                            "0V", tr("Bus H vol(-)"), \
+                                            tr("Negative bus voltage on the high voltage side of the DCDC module."));
     Bus_H_vol_reduce->add_Specification();
 
     if(Bus_L_vol_add != nullptr)
@@ -2702,8 +2708,8 @@ void MyWidget::PV_Data(QTableWidget *myTable)
         delete Bus_L_vol_add;
     }
     Bus_L_vol_add = new Specification(this,Bus_L_vol_add_explain, myTable, line++, column, \
-                                            "0V", tr("Bus_L_vol(+)"), \
-                                            tr("Positive bus voltage of the low voltage side of the DC module."));
+                                            "0V", tr("Bus L vol(+)"), \
+                                            tr("Positive bus voltage on the low voltage side of the DCDC module."));
     Bus_L_vol_add->add_Specification();
 
     if(Bus_L_vol_reduce != nullptr)
@@ -2711,8 +2717,8 @@ void MyWidget::PV_Data(QTableWidget *myTable)
         delete Bus_L_vol_reduce;
     }
     Bus_L_vol_reduce = new Specification(this,Bus_L_vol_reduce_explain, myTable, line++, column, \
-                                            "0V", tr("Bus_L_vol(-)"), \
-                                            tr("The current IGBT temperature of the MPS must not exceed 105 ° C. Otherwise, the MPS will derate and can resume full power operation at 73 ° C after derating."));
+                                            "0V", tr("Bus L vol(-)"), \
+                                            tr("Negative bus voltage on the low voltage side of the DCDC module."));
     Bus_L_vol_reduce->add_Specification();
 
     if(PV_IGBT_T != nullptr)
@@ -2721,26 +2727,26 @@ void MyWidget::PV_Data(QTableWidget *myTable)
     }
     PV_IGBT_T = new Specification(this,PV_IGBT_T_explain, myTable, line++, column, \
                                             "0℃", tr("IGBT Temperature"), \
-                                            tr("The current IGBT temperature of MPS shall not exceed 105℃, otherwise PCS will run derated."));
+                                            tr("The IGBT temperature of the converter: The IGBT temperature must not exceed 102°C. Otherwise, the converter will operate at a reduced capacity. It will resume full power operation when the temperature drops to 73°C."));
     PV_IGBT_T->add_Specification();
-
+    if(PositiveInuslation != nullptr)
+    {
+        delete PositiveInuslation;
+    }
+    PositiveInuslation = new Specification(this,PositiveInuslation_explain, myTable, line++, column, \
+                                            "0kΩ", tr("Positive Inuslation"), \
+                                            tr("The positive insulation impedance of the DCDC module is normal when the positive insulation impedance is greater than 33kΩ. When the positive insulation impedance is lower than 33kΩ, the insulation fault or potential security risks exist."));
+    PositiveInuslation->add_Specification();//DCDC模块的正绝缘阻抗，正绝缘阻抗大于33kΩ时正常，低于33kΩ时存在绝缘故障或潜在的安全隐患。
     if(NegativeInuslation != nullptr)
     {
         delete NegativeInuslation;
     }
     NegativeInuslation = new Specification(this,NegativeInuslation_explain, myTable, line++, column, \
-                                            "0kΩ", tr("NegativeInuslation"), \
-                                            tr("Negative insulation impedance of the current DCDC module."));
-    NegativeInuslation->add_Specification();
+                                            "0kΩ", tr("Negative Inuslation"), \
+                                            tr("The negative insulation impedance of the DCDC module is normal when the negative insulation impedance is greater than 33kΩ. When the negative insulation impedance is lower than 33kΩ, the insulation fault or negative security risks exist."));
+    NegativeInuslation->add_Specification();//DCDC模块的负绝缘阻抗，负绝缘阻抗大于33kΩ时正常，低于33kΩ时存在绝缘故障或潜在的安全隐患
 
-    if(Leakage_cur != nullptr)
-    {
-        delete Leakage_cur;
-    }
-    Leakage_cur = new Specification(this,Leakage_cur_explain, myTable, line++, column, \
-                                            "0mA", tr("Leakage_cur"), \
-                                            tr("The negative insulation impedance of the DCDC module is normal when the negative insulation impedance is greater than 1 Mω. When the negative insulation impedance is lower than 1 Mω, the insulation fault or potential security risks exist."));
-    Leakage_cur->add_Specification();//DCDC模块的负绝缘阻抗，负绝缘阻抗大于1MΩ时正常，低于1MΩ时存在绝缘故障或潜在的安全隐患。
+
 }
 //电网数据 绘制button
 void MyWidget::Grid_Data(QTableWidget *myTable)
@@ -2752,8 +2758,8 @@ void MyWidget::Grid_Data(QTableWidget *myTable)
         delete Grid_vol_AB;
     }
     Grid_vol_AB = new Specification(this,Grid_vol_AB_explain, myTable, line++, column, \
-                                            "0V", tr("Voltage(AB)"), \
-                                            tr("The grid side voltage of the current MPS, this item is the phase voltage between phase A and phase B."));
+                                            "0V", tr("Grid Voltage(AB)"), \
+                                            tr("Grid side AB line voltage."));
     Grid_vol_AB->add_Specification();
 
     if(Grid_vol_BC != nullptr)
@@ -2761,8 +2767,8 @@ void MyWidget::Grid_Data(QTableWidget *myTable)
         delete Grid_vol_BC;
     }
     Grid_vol_BC = new Specification(this,Grid_vol_BC_explain, myTable, line++, column, \
-                                            "0V", tr("Voltage(BC)"), \
-                                            tr("The grid side voltage of the current MPS, this item is the phase voltage between phase B and phase C."));
+                                            "0V", tr("Grid Voltage(BC)"), \
+                                            tr("Grid side BC line voltage."));
     Grid_vol_BC->add_Specification();
 
     if(Grid_vol_CA != nullptr)
@@ -2770,8 +2776,8 @@ void MyWidget::Grid_Data(QTableWidget *myTable)
         delete Grid_vol_CA;
     }
     Grid_vol_CA = new Specification(this,Grid_vol_CA_explain, myTable,line++, column, \
-                                            "0V", tr("Voltage(CA)"), \
-                                            tr("The grid side voltage of the current MPS, this item is the phase voltage between phase A and phase C."));
+                                            "0V", tr("Grid Voltage(CA)"), \
+                                            tr("Grid side CA line voltage."));
     Grid_vol_CA->add_Specification();
 
     if(Grid_cur_A != nullptr)
@@ -2779,8 +2785,8 @@ void MyWidget::Grid_Data(QTableWidget *myTable)
         delete Grid_cur_A;
     }
     Grid_cur_A = new Specification(this,Grid_cur_A_explain, myTable, line++, column, \
-                                            "0A", tr("Current(A)"), \
-                                            tr("The current on the grid side of MPS, this item is the current of phase A."));
+                                            "0A", tr("Grid Current(A)"), \
+                                            tr("Grid side A phase current."));
     Grid_cur_A->add_Specification();
 
     if(Grid_cur_B != nullptr)
@@ -2788,8 +2794,8 @@ void MyWidget::Grid_Data(QTableWidget *myTable)
         delete Grid_cur_B;
     }
     Grid_cur_B = new Specification(this,Grid_cur_B_explain, myTable, line++, column, \
-                                            "0A", tr("Current(B)"), \
-                                            tr("The current on the grid side of MPS, this item is the current of phase B."));
+                                            "0A", tr("Grid Current(B)"), \
+                                            tr("Grid side B phase current."));
     Grid_cur_B->add_Specification();
 
     if(Grid_cur_C != nullptr)
@@ -2797,8 +2803,8 @@ void MyWidget::Grid_Data(QTableWidget *myTable)
         delete Grid_cur_C;
     }
     Grid_cur_C = new Specification(this,Grid_cur_C_explain, myTable, line++, column, \
-                                            "0A", tr("Current(C)"), \
-                                            tr("The current on the grid side of MPS, this item is the current of phase C."));
+                                            "0A", tr("Grid Current(C)"), \
+                                            tr("Grid side C phase current."));
     Grid_cur_C->add_Specification();
 
     line=0;
@@ -2810,7 +2816,7 @@ void MyWidget::Grid_Data(QTableWidget *myTable)
     }
     Grid_active_power = new Specification(this,Grid_active_power_explain, myTable, line++, column, \
                                             "0kW", tr("Active power"), \
-                                            tr("Current active power (P) on the grid side of MPS."));
+                                            tr("Grid side active power (P)."));
     Grid_active_power->add_Specification();
 
     if(Grid_reactive_power != nullptr)
@@ -2819,7 +2825,7 @@ void MyWidget::Grid_Data(QTableWidget *myTable)
     }
     Grid_reactive_power = new Specification(this,Grid_reactive_power_explain, myTable, line++, column, \
                                             "0Kvar", tr("Reactive power"), \
-                                            tr("Current reactive power (Q) on the grid side of MPS."));
+                                            tr("Grid side reactive power (Q)."));
     Grid_reactive_power->add_Specification();
 
     if(Grid_apparent_power != nullptr)
@@ -2828,7 +2834,7 @@ void MyWidget::Grid_Data(QTableWidget *myTable)
     }
     Grid_apparent_power = new Specification(this,Grid_apparent_power_explain, myTable, line++, column, \
                                             "0kVA", tr("Apparent power"), \
-                                            tr("Current MPS grid side view power (S), S= √((P^2+Q^2))."));
+                                            tr("Grid side view power (S)."));
     Grid_apparent_power->add_Specification();
 
     if(Grid_power_factor != nullptr)
@@ -2837,18 +2843,16 @@ void MyWidget::Grid_Data(QTableWidget *myTable)
     }
     Grid_power_factor = new Specification(this,Grid_power_factor_explain, myTable, line++, column, \
                                             "0", tr("Power factor"), \
-                                            tr("Grid side power factor (Pf) of the current MPS, Pf = P/S."));
+                                            tr("Grid side power factor (Pf)."));
     Grid_power_factor->add_Specification();
-
     if(Grid_Frequency != nullptr)
     {
         delete Grid_Frequency;
     }
     Grid_Frequency = new Specification(this,Grid_Frequency_explain, myTable, line++, column, \
                                             "0Hz", tr("Frequency"), \
-                                            tr("Current MPS collection of power grid frequency."));
+                                            tr("Grid side frequency."));
     Grid_Frequency->add_Specification();
-
 }
 //负载数据 绘制button
 void MyWidget::Load_Data(QTableWidget *myTable)
@@ -2860,8 +2864,8 @@ void MyWidget::Load_Data(QTableWidget *myTable)
         delete Load_vol_AB;
     }
     Load_vol_AB = new Specification(this,Load_vol_AB_explain, myTable, line++, column, \
-                                            "0V", tr("Voltage(AB)"), \
-                                            tr("The load side voltage of the current MPS, this item is the phase voltage between phase A and phase B."));
+                                            "0V", tr("Load Voltage(AB)"), \
+                                            tr("Load side AB line voltage."));
     Load_vol_AB->add_Specification();
 
     if(Load_vol_BC != nullptr)
@@ -2869,8 +2873,8 @@ void MyWidget::Load_Data(QTableWidget *myTable)
         delete Load_vol_BC;
     }
     Load_vol_BC = new Specification(this,Load_vol_BC_explain, myTable, line++, column, \
-                                            "0V", tr("Voltage(BC)"), \
-                                            tr("The load side voltage of the current MPS, this item is the phase voltage between phase B and phase C."));
+                                            "0V", tr("Load Voltage(BC)"), \
+                                            tr("Load side BC line voltage."));
     Load_vol_BC->add_Specification();
 
     if(Load_vol_CA != nullptr)
@@ -2878,8 +2882,8 @@ void MyWidget::Load_Data(QTableWidget *myTable)
         delete Load_vol_CA;
     }
     Load_vol_CA = new Specification(this,Load_vol_CA_explain, myTable, line++, column, \
-                                            "0V", tr("Voltage(CA)"), \
-                                            tr("The load side voltage of the current MPS, this item is the phase voltage between phase A and phase C."));
+                                            "0V", tr("Load Voltage(CA)"), \
+                                            tr("Load side CA line voltage."));
     Load_vol_CA->add_Specification();
 
     if(Load_cur_A != nullptr)
@@ -2887,8 +2891,8 @@ void MyWidget::Load_Data(QTableWidget *myTable)
         delete Load_cur_A;
     }
     Load_cur_A = new Specification(this,Load_cur_A_explain, myTable, line++, column, \
-                                            "0A", tr("Current(A)"), \
-                                            tr("The current on the load side of MPS, this item is the current of phase A."));
+                                            "0A", tr("Load Current(A)"), \
+                                            tr("Load side A phase current."));
     Load_cur_A->add_Specification();
 
     if(Load_cur_B != nullptr)
@@ -2896,8 +2900,8 @@ void MyWidget::Load_Data(QTableWidget *myTable)
         delete Load_cur_B;
     }
     Load_cur_B = new Specification(this,Load_cur_B_explain, myTable, line++, column, \
-                                            "0A", tr("Current(B)"), \
-                                            tr("The current at the load side of MPS is the current of phase B."));
+                                            "0A", tr("Load Current(B)"), \
+                                            tr("Load side B phase current."));
     Load_cur_B->add_Specification();
 
     if(Load_cur_C != nullptr)
@@ -2905,8 +2909,8 @@ void MyWidget::Load_Data(QTableWidget *myTable)
         delete Load_cur_C;
     }
     Load_cur_C = new Specification(this,Load_cur_C_explain, myTable, line++, column, \
-                                            "0A", tr("Current(C)"), \
-                                            tr("The current at the load side of MPS is the current of phase C."));
+                                            "0A", tr("Load Current(C)"), \
+                                            tr("Load side C phase current."));
     Load_cur_C->add_Specification();
 
     line=0;
@@ -2918,7 +2922,7 @@ void MyWidget::Load_Data(QTableWidget *myTable)
     }
     Load_active_power = new Specification(this,Load_active_power_explain, myTable, line++, column, \
                                             "0kW", tr("Active power"), \
-                                            tr("Current MPS active power (P) on load side."));
+                                            tr("Load side active power (P)."));
     Load_active_power->add_Specification();
 
     if(Load_reactive_power != nullptr)
@@ -2927,7 +2931,7 @@ void MyWidget::Load_Data(QTableWidget *myTable)
     }
     Load_reactive_power = new Specification(this,Load_reactive_power_explain, myTable, line++, column, \
                                             "0Kvar", tr("Reactive power"), \
-                                            tr("Reactive power (Q) on the load side of current MPS."));
+                                            tr("Load side reactive power (Q)."));
     Load_reactive_power->add_Specification();
 
     if(Load_apparent_power != nullptr)
@@ -2936,7 +2940,7 @@ void MyWidget::Load_Data(QTableWidget *myTable)
     }
     Load_apparent_power = new Specification(this,Load_apparent_power_explain, myTable, line++, column, \
                                             "0kVA", tr("Apparent power"), \
-                                            tr("Current MPS load side view at power (S), S= √((P^2+Q^2))."));
+                                            tr("Load side view power (S)."));
     Load_apparent_power->add_Specification();
 
     if(Load_power_factor != nullptr)
@@ -2945,7 +2949,7 @@ void MyWidget::Load_Data(QTableWidget *myTable)
     }
     Load_power_factor = new Specification(this,Load_power_factor_explain, myTable, line++, column, \
                                             "0", tr("Power factor"), \
-                                           tr("The load side power factor (Pf) of the current MPS, Pf = P/S."));
+                                           tr("Load side power factor (Pf)."));
     Load_power_factor->add_Specification();
 
     if(Load_Frequency != nullptr)
@@ -2954,7 +2958,7 @@ void MyWidget::Load_Data(QTableWidget *myTable)
     }
     Load_Frequency = new Specification(this,Load_Frequency_explain, myTable, line++, column, \
                                             "0Hz", tr("Frequency"), \
-                                            tr("Current MPS collection of power load frequency."));
+                                            tr("Load side frequency."));
     Load_Frequency->add_Specification();
 }
 //MPS状态 绘制button
@@ -2974,27 +2978,27 @@ void MyWidget::MPSState(QTableWidget *myTable)
 
     int line = 0;int column = 1;//当前解释的button行和列
     DC_input_Bre = new Specification(this,DC_input_Bre_explain, myTable, line++, column, \
-                                            tr("Close"), tr("DC input breaker"), \
+                                            tr("Closed"), tr("DC input breaker"), \
                                             "Dc circuit breaker has three states: open, closed, trip; If the DC circuit breaker is overcurrent, the DC circuit breaker will trip.");
     DC_input_Bre->add_Specification();
     DC_Con = new Specification(this,DC_Con_explain, myTable, line++, column, \
-                               tr("Close"), tr("DC contactor"), \
+                               tr("Closed"), tr("DC contactor"), \
                                tr("DC contactor has two states: Break, Close; When the DC side is soft Break, the DC contactor is closed. When the DC side of the battery is disconnected, the DC bus voltage drops to a certain voltage, and the DC contactor is disconnected."));
     DC_Con->add_Specification();
     M_Bypass_Bre = new Specification(this,M_Bypass_Bre_explain, myTable, line++, column, \
-                                            tr("Close"), tr("Maintenance Bypass Breaker"), \
+                                            tr("Closed"), tr("Maintenance Bypass Breaker"), \
                                             tr("Maintenance bypass circuit breaker has two states: Break, Close; This circuit breaker is only used for machine maintenance, if necessary, please contact the maintenance personnel."));
     M_Bypass_Bre->add_Specification();
     Output_Bre = new Specification(this,Output_Bre_explain, myTable, line++, column, \
-                                            tr("Close"), tr("Output breaker"), \
+                                            tr("Closed"), tr("Output breaker"), \
                                             tr("The output circuit breaker has three states: open, closed, and tripped. It can only be manually opened and closed. If there is an overcurrent in the output circuit breaker, it will trip."));
     Output_Bre->add_Specification();
     Output_Con = new Specification(this,Output_Con_explain, myTable, line++, column, \
-                                            tr("Close"), tr("Output contactor"), \
+                                            tr("Closed"), tr("Output contactor"), \
                                             tr("The output contactor has two states: Break, Close; When the DC side soft opening is completed, the output contactor is closed; When the converter is turned off, the output contactor is disconnected."));
     Output_Con->add_Specification();
     Grid_Bre = new Specification(this,Grid_Bre_explain, myTable, line++, column, \
-                                            tr("Close"), tr("Grid breaker"), \
+                                            tr("Closed"), tr("Grid breaker"), \
                                             tr("The power grid circuit breaker has three states: Break, Close, Trip; The power grid circuit breaker can only be manually disconnected. If the power grid circuit breaker overflows, the power grid circuit breaker may trip."));
     Grid_Bre->add_Specification();
     DO1 = new Specification(this,DO1_explain, myTable, line++, column, \
@@ -3058,22 +3062,14 @@ void MyWidget::MPSState(QTableWidget *myTable)
     DI6->add_Specification();
     line = 0;
     column += 2;
-    Contator_Sta_Boost = new Specification(this,Contator_Sta_Boost_explain, myTable, line++, column, \
-                                            tr("OFF"), tr("Contator Status Boost"), \
-                                            tr("DC module high voltage contactor has two states: open, closed; When there is voltage on the high voltage side, close the high voltage contactor; Otherwise, the high voltage contactor is disconnected."));
-    Contator_Sta_Boost->add_Specification();
-    Contator_Sta_Buck = new Specification(this,Contator_Sta_Buck_explain, myTable, line++, column, \
-                                            tr("OFF"), tr("Contator Status Buck"), \
-                                            tr("DC module low voltage contactor has two states: open, closed; When there is voltage on the low voltage side, close the contactor on the low voltage side; Otherwise, the low pressure contactor is disconnected."));
-    Contator_Sta_Buck->add_Specification();
-    Run_mode = new Specification(this,Run_mode_explain, myTable, line++, column, \
-                                            tr("Buck"), tr("Run mode"), \
-                                            tr("This is the current 'DC' module operation mode, there are Buck (Buck), Boost (Boost) two states."));
-    Run_mode->add_Specification();
     DCDC_Converter_ava = new Specification(this,DCDC_Converter_ava_explain, myTable, line++, column, \
                                             tr("Disable"), tr("DCDC Converter available"), \
                                             tr("The DC converter can be enabled in two states: Enable and disable. If the internal self-test of the machine is no problem, the DC converter is enabled. Otherwise, the DC converter is prohibited."));
     DCDC_Converter_ava->add_Specification();
+    Run_mode = new Specification(this,Run_mode_explain, myTable, line++, column, \
+                                            tr("Buck"), tr("Run mode"), \
+                                            tr("This is the current 'DC' module operation mode, there are Buck (Buck), Boost (Boost) two states."));
+    Run_mode->add_Specification();
     Soft_Start_Sta_Boost = new Specification(this,Soft_Start_Sta_Boost_explain, myTable, line++, column, \
                                             tr("Not starting"), tr("Soft Start Status Boost"), \
                                             tr("This is the current high voltage side soft start state of the 'DC' module. There are three states: Not starting, Soft start, and Soft Start completion."));
@@ -3082,6 +3078,14 @@ void MyWidget::MPSState(QTableWidget *myTable)
                                             tr("Not starting"), tr("Soft Start Status Buck"), \
                                             tr("This is the soft start state of the low voltage side of the current 'DC' module. There are three states: Not starting, Soft start, and Soft Start completion."));
     Soft_Start_Sta_Buck->add_Specification();
+    Contator_Sta_Boost = new Specification(this,Contator_Sta_Boost_explain, myTable, line++, column, \
+                                            tr("open"), tr("Contator Status Boost"), \
+                                            tr("DC module high voltage contactor has two states: open, closed; When there is voltage on the high voltage side, close the high voltage contactor; Otherwise, the high voltage contactor is disconnected."));
+    Contator_Sta_Boost->add_Specification();
+    Contator_Sta_Buck = new Specification(this,Contator_Sta_Buck_explain, myTable, line++, column, \
+                                            tr("open"), tr("Contator Status Buck"), \
+                                            tr("DC module low voltage contactor has two states: open, closed; When there is voltage on the low voltage side, close the contactor on the low voltage side; Otherwise, the low pressure contactor is disconnected."));
+    Contator_Sta_Buck->add_Specification();  
     Converter_Status_V = new Specification(this,Converter_Status_V_explain, myTable, line++, column, \
                                             tr("Turn off"), tr("Converter Status"), \
                                             tr("This is the current operating mode status of the 'DC' module, which has five states: Turnoff, Standby, Constant VOL (Constant Voltage), Constant CUR (Constant Current), and Maximum Power Point Tracking (MPPT)."));
