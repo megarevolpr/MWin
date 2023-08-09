@@ -245,7 +245,7 @@ void MyWidget::MemoryAllocation()
     /***************************DC/AC参数**********************************/
     Work_parttern_explain = new QPushButton;                     //DCDC工作模式说明
     Boost_or_Buck_explain = new QPushButton;                     //升/降压说明
-    Battery_position_explain = new QPushButton;                  //电池位置说明
+//    Battery_position_explain = new QPushButton;                  //电池位置说明
     Voltage_level_explain = new QPushButton;                     //电压等级说明
     Current_value_explain = new QPushButton;                     //电流值说明
 
@@ -822,7 +822,7 @@ void MyWidget::DCDC_Paramter_tab_delete()
 {
     delete Work_parttern;
     delete Boost_or_Buck;
-    delete Battery_position;
+//    delete Battery_position;
     delete Voltage_level;
     delete Current_value;
 }
@@ -1449,7 +1449,7 @@ void MyWidget::ModuleState_Tab()
 void MyWidget::DCDCParam_tab()
 {
     ui->DCDC_tableWidget->setColumnCount(6);
-    ui->DCDC_tableWidget->setRowCount(4);
+    ui->DCDC_tableWidget->setRowCount(2);
     ui->DCDC_tableWidget->horizontalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
     ui->DCDC_tableWidget->verticalHeader()->setVisible(false);//设置垂直头不可见
     ui->DCDC_tableWidget->setFrameShape(QFrame::NoFrame);//设置无边框
@@ -1468,13 +1468,13 @@ void MyWidget::DCDCParam_tab()
     ui->DCDC_tableWidget->setColumnWidth(4,120);
     ui->DCDC_tableWidget->setColumnWidth(5,100);
     QStringList Display_Par1;
-        Display_Par1 << tr("Work parttern")<< tr("Boost or Buck");
+    Display_Par1 << tr("Work parttern")<< tr("Boost or Buck");
     QStringList Display_Par2;
-    Display_Par2  << tr("Battery position")<<  tr("Voltage level") << tr("Current value");
+    Display_Par2  <<  tr("DC CV Value") << tr("DC CC Value");
     QStringList Display_Par13;
     Display_Par13 << tr("-") << tr("-");
     QStringList Display_Par14;
-    Display_Par14  << tr("-") << tr("V") << tr("A");
+    Display_Par14 << tr("V") << tr("A");
     for(int j = 0; j < 4; j++)
     {
         if(j == 0)
@@ -1510,6 +1510,10 @@ void MyWidget::DCDCParam_tab()
             }
         }
     }
+    for (int i = 0; i < 2; ++i)
+    {
+        ui->DCDC_tableWidget->setRowHeight(i, 45);
+    }
     DCDC_Paramter_tab(ui->DCDC_tableWidget);    //DCDC参数页说明
 }
 //电池设置初始化_锂电池
@@ -1519,21 +1523,27 @@ void MyWidget::BatterySet_tab()
     ui->Lithium_Tab->setColumnWidth(1,350);
     ui->Lithium_Tab->setEditTriggers(QAbstractItemView::NoEditTriggers);//设置不可编辑
     ui->plainTextEdit->setReadOnly(true);//只读
+
+    for(int i=0;i<10;i++)
+    {
+        ui->Lithium_Tab->setRowHeight(i,45);
+    }
+
     Battery_Setup_Tab(ui->Lithium_Tab);
 }
 //电池设置表初始化_铅酸
 void MyWidget::BatterySet_Lead_tab()
 {
-    ui->Lead_Tab->setColumnWidth(0,150);
-    ui->Lead_Tab->setColumnWidth(1,150);
+    ui->Lead_Tab->setColumnWidth(0,180);
+    ui->Lead_Tab->setColumnWidth(1,120);
     ui->Lead_Tab->setColumnWidth(2,50);
-    ui->Lead_Tab->setColumnWidth(3,150);
-    ui->Lead_Tab->setColumnWidth(4,150);
+    ui->Lead_Tab->setColumnWidth(3,180);
+    ui->Lead_Tab->setColumnWidth(4,120);
     ui->Lead_Tab->setColumnWidth(5,50);
 
-    for(int i=0;i<9;i++)
+    for(int i=0;i<10;i++)
     {
-        ui->Lead_Tab->setRowHeight(i,40);
+        ui->Lead_Tab->setRowHeight(i,45);
     }
     ui->Lead_Tab->setEditTriggers(QAbstractItemView::NoEditTriggers);//设置不可编辑
     ui->plainTextEdit_2->setReadOnly(true);//只读
@@ -1545,21 +1555,22 @@ void MyWidget::BatterySet_Lead_tab()
 void MyWidget::RunTimeSet_tab()
 {
     QStringList time_str;
-    time_str<< tr("Check") << tr("StartTime") << tr("EndTime") << tr("Features") << tr("Power");
+    time_str<< tr("Check") <<tr("")<< tr("StartTime") << tr("EndTime") << tr("Features") << tr("Power(kw)");
     ui->Time_tableWidget->setColumnCount(time_str.size());
     ui->Time_tableWidget->setRowCount(20);
     ui->Time_tableWidget->setHorizontalHeaderLabels(time_str);
     ui->Time_tableWidget->horizontalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
     ui->Time_tableWidget->verticalHeader()->setVisible(false);//设置垂直头不可见
     ui->Time_tableWidget->setFrameShape(QFrame::NoFrame);//设置无边框
+    ui->Time_tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);//设置不可编辑
     ui->Time_tableWidget->setShowGrid(true);//设置显示格子
     ui->Time_tableWidget->setSelectionBehavior(QAbstractItemView::SelectItems);//每次选择一行
-    ui->Time_tableWidget->setEditTriggers(QAbstractItemView::SelectedClicked);//单机修改
     ui->Time_tableWidget->setColumnWidth(0,50);
     ui->Time_tableWidget->setColumnWidth(1,180);
     ui->Time_tableWidget->setColumnWidth(2,180);
     ui->Time_tableWidget->setColumnWidth(3,180);
-    ui->Time_tableWidget->horizontalHeader()->setStretchLastSection(4);
+    ui->Time_tableWidget->setColumnWidth(4,180);
+    ui->Time_tableWidget->horizontalHeader()->setStretchLastSection(5);
 
     AutoOperation(ui->Time_tableWidget);    //自动运行页说明
 }
@@ -1579,9 +1590,9 @@ void MyWidget::Information_tbnt_released()
 
     //将设备信息显示到LCD上
     QStringList List4;
-    List4 << tr("Name") << tr("Information") ;
+    List4 << tr("Name") << tr("System Information") ;
     ui->EquipmentInfor_tableWidget->setHorizontalHeaderLabels(List4);
-    ui->EquipmentInfor_tableWidget->setColumnWidth(0,300);
+    ui->EquipmentInfor_tableWidget->setColumnWidth(0,280);
     ui->EquipmentInfor_tableWidget->horizontalHeader()->setStretchLastSection(1);//自动占用剩余空间
 
     SystemMessages(ui->EquipmentInfor_tableWidget);//系统信息页说明
@@ -3150,17 +3161,17 @@ void MyWidget::DC_AC_Parameter_tab(QTableWidget *myTable)
 /************************DCDC参数页说明*********************/
 void MyWidget::DCDC_Paramter_tab(QTableWidget *myTable)
 {
+    int line = 0;int column = 1;//当前解释的button行和列
     //DCDC工作模式说明
-    Work_parttern = new Specification(this,Work_parttern_explain, myTable, 0, 1, \
+    Work_parttern = new Specification(this,Work_parttern_explain, myTable, line++, column, \
                                       tr("MPPT"), tr("Work parttern"), \
-                                      tr("This is the working mode of 'DC' module, which has four states: Rest (Rest), constant voltage (CV), constant current (CC) and tracking optimal power point (MPPT)."));
-    Work_parttern->add_Specification();//这是'DC'模块的工作模式，有休息(Rest)、恒压(CV)、恒流(CC)、追踪最佳功率点(MPPT)四种状态\n
-
+                                      tr("DCDC module working modes include standby, constant voltage (CV), constant current (CC), and maximum power point tracking (MPPT)."));
+    Work_parttern->add_Specification();//
     //升/降压说明
-    Boost_or_Buck = new Specification(this,Boost_or_Buck_explain, myTable, 1, 1, \
+    Boost_or_Buck = new Specification(this,Boost_or_Buck_explain, myTable, line++, column, \
                                       tr("Buck"), tr("Boost or Buck"), \
-                                      tr("This is the operation mode of 'DC' module, which has three modes: Rest, Buck and Boost. It can be modified into Rest, Buck or Boost mode according to project requirements."));
-    Boost_or_Buck->add_Specification();//这是'DC'模块的运行模式，有休息(Rest)、降压(Buck)、升压(Boost)三种模式，可根据项目需求，修改成休息(Rest)、降压(Buck)或者升压(Boost)模式\n
+                                      tr("DCDC module operating modes: Buck, Boost."));
+    Boost_or_Buck->add_Specification();//
 
     /*//电池充放电模式说明
     Bat_Charging_or_discharging_Model = new Specification(this,Bat_Charging_or_discharging_Model_explain, myTable, 2, 1, \
@@ -3173,23 +3184,24 @@ void MyWidget::DCDC_Paramter_tab(QTableWidget *myTable)
                                       tr("50"), tr("DCDC Capacity"), \
                                       tr("This is the capacity of the 'DC' module."));
     DCDC_Capacity->add_Specification();//这是'DC'模块的容量\n*/
-
+    line = 0;
+    column = 4;
     //电池位置说明
-    Battery_position = new Specification(this,Battery_position_explain, myTable, 0, 4, \
+    /*Battery_position = new Specification(this,Battery_position_explain, myTable, 0, 4, \
                                          tr("LowSide"), tr("Battery position"), \
                                          tr("This is the position of the current battery, which needs to be selected according to the operation mode of the 'DC' module currently selected. If Buck is selected, select the LowSide. If Boost is selected, select HightSide. If Rest is selected, please select NON."));
-    Battery_position->add_Specification();//这是当前电池所处位置，需要根据当前选择的'DC'模块运行模式来进行选择；如果选择了降压(Buck)，请选择低压侧(LowSide)；如果选择了升压(Boost)，请选择高压侧(HightSide)；如果选择了休息(Rest)，请选择无(NON)\n
+    Battery_position->add_Specification();//*/
 
     //电压等级说明
-    Voltage_level = new Specification(this,Voltage_level_explain, myTable, 1, 4, \
-                                      tr("300"), tr("Voltage level"), \
-                                      tr("Voltage level: Reference voltage in constant voltage mode."));
+    Voltage_level = new Specification(this,Voltage_level_explain, myTable, line++, column, \
+                                      tr("300"), tr("DC CV Value"), \
+                                      tr("DC Constant Voltage Value: Constant voltage target, range 200V-850V."));
     Voltage_level->add_Specification();//电压等级：恒压模式下的参考电压
 
     //电流值说明
-    Current_value = new Specification(this,Current_value_explain, myTable, 2, 4, \
-                                      tr("60"), tr("Current value"), \
-                                      tr("Current value: reference current in constant current mode."));
+    Current_value = new Specification(this,Current_value_explain, myTable, line++, column, \
+                                      tr("60"), tr("DC CC Value"), \
+                                      tr("DC Constant Current Value: Constant current target, range (0A - 120A) * n (n is the number of online modules)."));
     Current_value->add_Specification();//电流值：恒流模式下的参考电流
 }
 
@@ -3198,71 +3210,71 @@ void MyWidget::Battery_Setup_Tab(QTableWidget *myTable)
 {
     //并网DOD说明
     DOD_OnGrid = new Specification(this,DOD_OnGrid_explain, myTable, 0, 1, \
-                                   "90", tr("DOD_OnGrid"), \
-                                   tr("Grid-connected DOD, the depth of discharge allowed in grid-connected mode."));
+                                   "90", tr("Grid-on DOD"), \
+                                   tr("Grid-on DOD, allowable depth of discharge in grid-on mode."));
     DOD_OnGrid->add_Specification();
 //    DOD_OnGrid->Opermode_btn_clicked(mode_expelain->DOD_OnGrid_btn);
 
     //离网DOD说明
     DOD_OffGrid = new Specification(this,DOD_OffGrid_explain, myTable, 1, 1, \
-                                    "90", tr("DOD_OffGrid"), \
-                                    tr("Off-network DOD: Discharge depth allowed in off-network mode."));
+                                    "90", tr("Grid-off DOD"), \
+                                    tr("Grid-off DOD, allowable depth of discharge in grid-off mode."));
     DOD_OffGrid->add_Specification();
 //    DOD_OffGrid->Opermode_btn_clicked(mode_expelain->DOD_OffGrid_btn);
 
     //充电电压上限说明
     Charge_Volt_Upper_Limit = new Specification(this,Charge_Volt_Upper_Limit_explain, myTable, 2, 1, \
-                                               "792", tr("Charge_Vol_Up_Limit"), \
-                                                tr("This is the upper limit of the charging voltage. When the total battery voltage reaches this value during charging, the PCS will enter the constant voltage mode to prevent the battery from overcharging."));
+                                               "792", tr("Charging voltage upper limit"), \
+                                                tr("Charging voltage upper limit: When the battery total voltage reaches this value during charging, the converter will shut down."));
     Charge_Volt_Upper_Limit->add_Specification();
 //    Charge_Volt_Upper_Limit->Opermode_btn_clicked(mode_expelain->Charge_upper_Limit);
 
     //充电电压上限回差说明
     Charge_Volt_upper_Limit_delta = new Specification(this,Charge_Volt_upper_Limit_delta_explain, myTable, 3, 1, \
                                                       "10", tr("Charge Volt upper Limit delta"), \
-                                                      tr("Upper return difference of charging voltage: When the total battery voltage reaches the upper limit of charging voltage during battery charging, the constant voltage mode is removed when the total battery voltage is lower than the upper limit of charging voltage minus the return difference."));
+                                                      tr("Charging voltage upper limit hysteresis: When the battery is charging, if the battery total voltage reaches the charging voltage upper limit, the converter will shut down. When the battery total voltage drops below the charging voltage upper limit minus the hysteresis value, the converter will automatically turn on."));
     Charge_Volt_upper_Limit_delta->add_Specification();
 //    Charge_Volt_upper_Limit_delta->Opermode_btn_clicked(mode_expelain->Charge_Limit_delta_btn);
 
     //放电电压限制说明
     Disc_Volt_lower_Limit = new Specification(this,Disc_Volt_lower_Limit_explain, myTable, 4, 1, \
                                               "616", tr("Disc_Vol_lower_Limit"), \
-                                              tr("Lower limit of discharge voltage. When the total battery voltage reaches this value during discharge, MPS will enter the constant voltage mode to prevent battery overdischarge."));
+                                              tr("Discharge voltage lower limit: When the battery total voltage reaches this value during discharge, the converter will shut down."));
     Disc_Volt_lower_Limit->add_Specification();
 //    Disc_Volt_lower_Limit->Opermode_btn_clicked(mode_expelain->Disharge_Lower_Limit);
 
     //放电电压下限回差说明
     Discharge_Volt_upper_Limit_delta = new Specification(this,Discharge_Volt_upper_Limit_delta_explain, myTable, 5, 1, \
                                                          "10", tr("Discharge Volt upper Limit delta"), \
-                                                         tr("When the battery is discharging and the total voltage of the battery reaches the lower limit of the discharge voltage, MPS enters the constant voltage mode. When the total voltage of the battery rises to the lower limit of the discharge voltage and the return difference value is added, the constant voltage mode is removed."));
+                                                         tr("Discharge voltage lower limit hysteresis: When the battery is discharging, if the battery total voltage drops below the discharge voltage lower limit, the converter will shut down. When the battery total voltage exceeds the discharge voltage lower limit plus the hysteresis value, the converter will automatically turn on."));
     Discharge_Volt_upper_Limit_delta->add_Specification();
 //    Discharge_Volt_upper_Limit_delta->Opermode_btn_clicked(mode_expelain->Disharge_Limit_delta_btn);
 
     //充电电流限制说明
     Charge_Current_Limit = new Specification(this,Charge_Current_Limit_explain, myTable, 6, 1, \
                                              "240", tr("Charge Current Limit"), \
-                                             tr("Upper limit of charging current, which is the maximum current allowed on the DC side of PCS to prevent charging overcurrent."));
+                                             tr("Charging current limit: The maximum allowable current on the battery side to prevent overcurrent during charging."));
     Charge_Current_Limit->add_Specification();
 //    Charge_Current_Limit->Opermode_btn_clicked(mode_expelain->Charge_Current_btn);
 
     //放电电流限制说明
     Discharge_Current_Limit = new Specification(this,Discharge_Current_Limit_explain, myTable, 7, 1, \
                                                 "240", tr("Discharge Current Limit"), \
-                                                tr("The upper limit of discharge current, which is the maximum current allowed to discharge on the DC side of PCS to prevent discharge from overcurrent."));
+                                                tr("Discharging current limit: The maximum allowable current on the battery side to prevent overcurrent during discharging."));
     Discharge_Current_Limit->add_Specification();
 //    Discharge_Current_Limit->Opermode_btn_clicked(mode_expelain->Discharge_Current_Limit_btn);
 
     //柴发关闭SOC说明
     Gen_turn_off_SOC = new Specification(this,Gen_turn_off_SOC_explain, myTable, 8, 1, \
-                                         "85", tr("Gen_turn_off_SOC"), \
-                                         tr("When the specified SCO value is reached, the diesel generator shuts down."));
+                                         "85", tr("Generator turn off SOC"), \
+                                         tr("When the specified SOC is reached, the diesel generator shuts down."));
     Gen_turn_off_SOC->add_Specification();
 //    Gen_turn_off_SOC->Opermode_btn_clicked(mode_expelain->Generator_turn_off_SOC_btn);
 
     //柴发开启SOC说明
     Gen_turn_on_SOC = new Specification(this,Gen_turn_on_SOC_explain, myTable, 9, 1, \
-                                        "25", tr("Gen_turn_on_SOC"), \
-                                        tr("When the specified SOC value is reached, the diesel generator starts."));
+                                        "25", tr("Generator turn on SOC"), \
+                                        tr("When the specified SOC is reached, the diesel generator starts."));
     Gen_turn_on_SOC->add_Specification();
 //    Gen_turn_on_SOC->Opermode_btn_clicked(mode_expelain->Generator_turn_on_SOC_btn);
 
@@ -3279,7 +3291,7 @@ void MyWidget::Battery_Setup_Lead_Tab(QTableWidget *myTable)
     //电池节数
     Cell_number_2V = new Specification(this,Cell_number_2V_explain, myTable, 1, 1, \
                                         "0", tr("Cell_number_2V"), \
-                                        tr("The number of cells connected in a battery stack."));
+                                        tr("The number of battery cells connected in series in the battery stack (based on a 2V unit)."));
     Cell_number_2V->add_Specification();
     //浮充电压
     Bat_float_vol = new Specification(this,Bat_float_vol_explain, myTable, 2, 1, \
@@ -3293,33 +3305,33 @@ void MyWidget::Battery_Setup_Lead_Tab(QTableWidget *myTable)
     Bat_filling_vol->add_Specification();
     //充电限流值
     Charge_limiting_value = new Specification(this,Charge_limiting_value_explain, myTable, 4, 1, \
-                                        "0", tr("Charge_limiting_value"), \
-                                        tr("Upper limit of charging current, which is the maximum current allowed on the DC side of PCS to prevent charging overcurrent."));
+                                        "0", tr("Charge limiting value"), \
+                                        tr("Charging Current Limit: The maximum allowable current on the battery side to prevent overcurrent during charging. (Upper limit: 0.25C)"));
     Charge_limiting_value->add_Specification();
     //放电限流值
     Discharge_limiting_value = new Specification(this,Discharge_limiting_value_explain, myTable, 5, 1, \
-                                        "0", tr("Discharge_limiting_value"), \
-                                        tr("The upper limit of discharge current, which is the maximum current allowed to discharge on the DC side of PCS to prevent discharge from overcurrent."));
+                                        "0", tr("Discharge limiting value"), \
+                                        tr("Discharge Current Limit: The maximum allowable current on the battery side to prevent overcurrent during discharge. (Upper limit: 0.5C)"));
     Discharge_limiting_value->add_Specification();
     //发电机关闭SOC
     Generator_turn_off_SOC_B1 = new Specification(this,Generator_turn_off_SOC_B1_explain, myTable, 6, 1, \
                                         "0", tr("Generator turn off voltage"), \
-                                        tr("Generator shutdown voltage."));
+                                        tr("Generator Shutdown Voltage: When the specified voltage is reached, the diesel generator will shut down."));
     Generator_turn_off_SOC_B1->add_Specification();
     //发电机开启SOC
     Generator_turn_on_SOC_A1 = new Specification(this,Generator_turn_on_SOC_A1_explain, myTable, 7, 1, \
                                         "0", tr("Generator turn on voltage"), \
-                                        tr("Generator opening voltage."));
+                                        tr("Generator Start Voltage: When the specified voltage is reached, the diesel generator will start up."));
     Generator_turn_on_SOC_A1->add_Specification();
     //离网EOD
     Grid_off_EOD = new Specification(this,Grid_off_EOD_explain, myTable, 0, 4, \
-                                        "0", tr("Grid_off_EOD"), \
-                                        tr("Off-grid discharge cut-off voltage."));
+                                        "0", tr("Grid-off EOD"), \
+                                        tr("Grid-off discharge cut-off voltage."));
     Grid_off_EOD->add_Specification();//
     //并网EOD
     Grid_on_EOD = new Specification(this,Grid_on_EOD_explain, myTable, 1, 4, \
-                                        "0", tr("Grid_on_EOD"), \
-                                        tr("Grid-connected discharge cut-off voltage."));
+                                        "0", tr("Grid-on EOD"), \
+                                        tr("Grid-on discharge cut-off voltage."));
     Grid_on_EOD->add_Specification();//
     /*/关机电压点
     Shutdown_voltage_point = new Specification(this,Shutdown_voltage_point_explain, myTable, 2, 4, \
@@ -3346,15 +3358,15 @@ void MyWidget::Battery_Setup_Lead_Tab(QTableWidget *myTable)
                                         "0", tr("Temperature_alarm_upper_limit"), \
                                         tr("Temperature Alarm upper limit. An alarm is generated when the battery temperature reaches this threshold."));
     Temperature_alarm_upper_limit->add_Specification();//温度告警上限，电池温度达到该值时将会告警*/
-    //浮充转均充电流
+    //均充转浮充电流
     Uniform_To_Flushing_current = new Specification(this,Uniform_To_Flushing_current_explain, myTable, 7, 4, \
                                         "0", tr("Uniform charging and flushing current"), \
-                                        tr("This is uniform charging and flushing current."));
+                                        tr("Uniform charging to flushing current: Upper limit of 0.025C."));
     Uniform_To_Flushing_current->add_Specification();//
-    //均充转浮充电流
+    //浮充转均充电流
     Flushing_To_Uniform_current = new Specification(this,Flushing_To_Uniform_current_explain, myTable, 8, 4, \
                                         "0", tr("Float turn uniform charging current"), \
-                                        tr("This is float turn uniform charging current."));
+                                        tr("Float turn to uniform charging current: Upper limit of 0.15C."));
     Flushing_To_Uniform_current->add_Specification();//
 }
 
@@ -3370,601 +3382,611 @@ void MyWidget::AutoOperation(QTableWidget *myTable)
     QString temp6 = tr("9:00");
     QString temp7 = tr("10:00");
     QString temp8 = tr("End time: The system stops automatically running when the system reaches this time.");
-    QString temp9 = tr("This is the function that will perform this function during business hours, there are six to choose from, They are System for self-use, battery Batter priority, Peak shaving, Output PV power.");
-    QString temp10 = tr("This is the working power, which is executed according to the working state when working in this state, the positive number is discharging, and the negative number is charging.");
+    QString temp9 = tr("This is the function that will perform this function during business hours, there are six to choose from, They are System for self-use, battery Batter priority, Peak shaving, Output PV power,Economic model.");
+    QString temp10 = tr("Working Power: Only effective in peak shaving mode. Positive values indicate discharging, while negative values indicate charging.");
     QString temp11 = tr("Start time: When the system reaches this time, it starts to run automatically.");
     QString temp12 = tr("Select: After this function is enabled, the system automatically runs the selected function mode within the specified period.");
     QString temp13 = tr("System for self-use");
+    int line = 0;int column = 0;//当前解释的button行和列
+
     if(Check1 != nullptr)
     {
         delete Check1;
     }
-    Check1 = new Specification(this,Check1_explain, ui->Time_tableWidget, 0, 0, "√", temp1, temp12);
+    Check1 = new Specification(this,Check1_explain, ui->Time_tableWidget, line++, column, "√", temp1, temp12);
     Check1->add_Specification();
 
     if(Check2 != nullptr)
     {
         delete Check2;
     }
-    Check2 = new Specification(this,Check2_explain, ui->Time_tableWidget, 1, 0, "√", temp1, temp12);
+    Check2 = new Specification(this,Check2_explain, ui->Time_tableWidget, line++, column, "√", temp1, temp12);
     Check2->add_Specification();
 
     if(Check3 != nullptr)
     {
         delete Check3;
     }
-    Check3 = new Specification(this,Check3_explain, ui->Time_tableWidget, 2, 0, "√", temp1, temp12);
+    Check3 = new Specification(this,Check3_explain, ui->Time_tableWidget, line++, column, "√", temp1, temp12);
     Check3->add_Specification();
 
     if(Check4 != nullptr)
     {
         delete Check4;
     }
-    Check4 = new Specification(this,Check4_explain, ui->Time_tableWidget, 3, 0, "√", temp1, temp12);
+    Check4 = new Specification(this,Check4_explain, ui->Time_tableWidget, line++, column, "√", temp1, temp12);
     Check4->add_Specification();
 
     if(Check5 != nullptr)
     {
         delete Check5;
     }
-    Check5 = new Specification(this,Check5_explain, ui->Time_tableWidget, 4, 0, "√", temp1, temp12);
+    Check5 = new Specification(this,Check5_explain, ui->Time_tableWidget, line++, column, "√", temp1, temp12);
     Check5->add_Specification();
 
     if(Check6 != nullptr)
     {
         delete Check6;
     }
-    Check6 = new Specification(this,Check6_explain, ui->Time_tableWidget, 5, 0, "", temp1, temp12);
+    Check6 = new Specification(this,Check6_explain, ui->Time_tableWidget, line++, column, "", temp1, temp12);
     Check6->add_Specification();
 
     if(Check7 != nullptr)
     {
         delete Check7;
     }
-    Check7 = new Specification(this,Check7_explain, ui->Time_tableWidget, 6, 0, "", temp1, temp12);
+    Check7 = new Specification(this,Check7_explain, ui->Time_tableWidget, line++, column, "", temp1, temp12);
     Check7->add_Specification();
 
     if(Check8 != nullptr)
     {
         delete Check8;
     }
-    Check8 = new Specification(this,Check8_explain, ui->Time_tableWidget, 7, 0, "", temp1, temp12);
+    Check8 = new Specification(this,Check8_explain, ui->Time_tableWidget, line++, column, "", temp1, temp12);
     Check8->add_Specification();
 
     if(Check9 != nullptr)
     {
         delete Check9;
     }
-    Check9 = new Specification(this,Check9_explain, ui->Time_tableWidget, 8, 0, "", temp1, temp12);
+    Check9 = new Specification(this,Check9_explain, ui->Time_tableWidget, line++, column, "", temp1, temp12);
     Check9->add_Specification();
 
     if(Check10 != nullptr)
     {
         delete Check10;
     }
-    Check10 = new Specification(this,Check10_explain, ui->Time_tableWidget, 9, 0, "", temp1, temp12);
+    Check10 = new Specification(this,Check10_explain, ui->Time_tableWidget, line++, column, "", temp1, temp12);
     Check10->add_Specification();
 
     if(Check11 != nullptr)
     {
         delete Check11;
     }
-    Check11 = new Specification(this,Check11_explain, ui->Time_tableWidget, 10, 0, "", temp1, temp12);
+    Check11 = new Specification(this,Check11_explain, ui->Time_tableWidget, line++, column, "", temp1, temp12);
     Check11->add_Specification();
 
     if(Check11 != nullptr)
     {
         delete Check12;
     }
-    Check12 = new Specification(this,Check12_explain, ui->Time_tableWidget, 11, 0, "", temp1, temp12);
+    Check12 = new Specification(this,Check12_explain, ui->Time_tableWidget, line++, column, "", temp1, temp12);
     Check12->add_Specification();
 
     if(Check13 != nullptr)
     {
         delete Check13;
     }
-    Check13 = new Specification(this,Check13_explain, ui->Time_tableWidget, 12, 0, "", temp1, temp12);
+    Check13 = new Specification(this,Check13_explain, ui->Time_tableWidget, line++, column, "", temp1, temp12);
     Check13->add_Specification();
 
     if(Check14 != nullptr)
     {
         delete Check14;
     }
-    Check14 = new Specification(this,Check14_explain, ui->Time_tableWidget, 13, 0, "", temp1, temp12);
+    Check14 = new Specification(this,Check14_explain, ui->Time_tableWidget, line++, column, "", temp1, temp12);
     Check14->add_Specification();
 
     if(Check15 != nullptr)
     {
         delete Check15;
     }
-    Check15 = new Specification(this,Check15_explain, ui->Time_tableWidget, 14, 0, "", temp1, temp12);
+    Check15 = new Specification(this,Check15_explain, ui->Time_tableWidget, line++, column, "", temp1, temp12);
     Check15->add_Specification();
 
     if(Check16 != nullptr)
     {
         delete Check16;
     }
-    Check16 = new Specification(this,Check16_explain, ui->Time_tableWidget, 15, 0, "", temp1, temp12);
+    Check16 = new Specification(this,Check16_explain, ui->Time_tableWidget, line++, column, "", temp1, temp12);
     Check16->add_Specification();
 
     if(Check17 != nullptr)
     {
         delete Check17;
     }
-    Check17 = new Specification(this,Check17_explain, ui->Time_tableWidget, 16, 0, "", temp1, temp12);
+    Check17 = new Specification(this,Check17_explain, ui->Time_tableWidget, line++, column, "", temp1, temp12);
     Check17->add_Specification();
 
     if(Check18 != nullptr)
     {
         delete Check18;
     }
-    Check18 = new Specification(this,Check18_explain, ui->Time_tableWidget, 17, 0, "", temp1, temp12);
+    Check18 = new Specification(this,Check18_explain, ui->Time_tableWidget, line++, column, "", temp1, temp12);
     Check18->add_Specification();
 
     if(Check19 != nullptr)
     {
         delete Check19;
     }
-    Check19 = new Specification(this,Check19_explain, ui->Time_tableWidget, 18, 0, "", temp1, temp12);
+    Check19 = new Specification(this,Check19_explain, ui->Time_tableWidget, line++, column, "", temp1, temp12);
     Check19->add_Specification();
 
     if(Check20 != nullptr)
     {
         delete Check20;
     }
-    Check20 = new Specification(this,Check20_explain, ui->Time_tableWidget, 19, 0, "", temp1, temp12);
+    Check20 = new Specification(this,Check20_explain, ui->Time_tableWidget, line++, column, "", temp1, temp12);
     Check20->add_Specification();
 
+    line = 0;
+    column = 2;
 
     if(Start_T1 != nullptr)
     {
         delete Start_T1;
     }
-    Start_T1 = new Specification(this,Start_T1_explain, ui->Time_tableWidget, 0, 1, temp6, temp2, temp11);
+    Start_T1 = new Specification(this,Start_T1_explain, ui->Time_tableWidget, line++, column, temp6, temp2, temp11);
     Start_T1->add_Specification();
 
     if(Start_T2 != nullptr)
     {
         delete Start_T2;
     }
-    Start_T2 = new Specification(this,Start_T2_explain, ui->Time_tableWidget, 1, 1, temp6, temp2, temp11);
+    Start_T2 = new Specification(this,Start_T2_explain, ui->Time_tableWidget, line++, column, temp6, temp2, temp11);
     Start_T2->add_Specification();
 
     if(Start_T3 != nullptr)
     {
         delete Start_T3;
     }
-    Start_T3 = new Specification(this,Start_T3_explain, ui->Time_tableWidget, 2, 1, temp6, temp2, temp11);
+    Start_T3 = new Specification(this,Start_T3_explain, ui->Time_tableWidget, line++, column, temp6, temp2, temp11);
     Start_T3->add_Specification();
 
     if(Start_T4 != nullptr)
     {
         delete Start_T4;
     }
-    Start_T4 = new Specification(this,Start_T4_explain, ui->Time_tableWidget, 3, 1, temp6, temp2, temp11);
+    Start_T4 = new Specification(this,Start_T4_explain, ui->Time_tableWidget, line++, column, temp6, temp2, temp11);
     Start_T4->add_Specification();
 
     if(Start_T5 != nullptr)
     {
         delete Start_T5;
     }
-    Start_T5 = new Specification(this,Start_T5_explain, ui->Time_tableWidget, 4, 1, temp6, temp2, temp11);
+    Start_T5 = new Specification(this,Start_T5_explain, ui->Time_tableWidget, line++, column, temp6, temp2, temp11);
     Start_T5->add_Specification();
 
     if(Start_T6 != nullptr)
     {
         delete Start_T6;
     }
-    Start_T6 = new Specification(this,Start_T6_explain, ui->Time_tableWidget, 5, 1, temp6, temp2, temp11);
+    Start_T6 = new Specification(this,Start_T6_explain, ui->Time_tableWidget, line++, column, temp6, temp2, temp11);
     Start_T6->add_Specification();
 
     if(Start_T7 != nullptr)
     {
         delete Start_T7;
     }
-    Start_T7 = new Specification(this,Start_T7_explain, ui->Time_tableWidget, 6, 1, temp6, temp2, temp11);
+    Start_T7 = new Specification(this,Start_T7_explain, ui->Time_tableWidget, line++, column, temp6, temp2, temp11);
     Start_T7->add_Specification();
 
     if(Start_T8 != nullptr)
     {
         delete Start_T8;
     }
-    Start_T8 = new Specification(this,Start_T8_explain, ui->Time_tableWidget, 7, 1, temp6, temp2, temp11);
+    Start_T8 = new Specification(this,Start_T8_explain, ui->Time_tableWidget, line++, column, temp6, temp2, temp11);
     Start_T8->add_Specification();
 
     if(Start_T9 != nullptr)
     {
         delete Start_T9;
     }
-    Start_T9 = new Specification(this,Start_T9_explain, ui->Time_tableWidget, 8, 1, temp6, temp2, temp11);
+    Start_T9 = new Specification(this,Start_T9_explain, ui->Time_tableWidget, line++, column, temp6, temp2, temp11);
     Start_T9->add_Specification();
 
     if(Start_T10 != nullptr)
     {
         delete Start_T10;
     }
-    Start_T10 = new Specification(this,Start_T10_explain, ui->Time_tableWidget, 9, 1, temp6, temp2, temp11);
+    Start_T10 = new Specification(this,Start_T10_explain, ui->Time_tableWidget, line++, column, temp6, temp2, temp11);
     Start_T10->add_Specification();
 
     if(Start_T11 != nullptr)
     {
         delete Start_T11;
     }
-    Start_T11 = new Specification(this,Start_T11_explain, ui->Time_tableWidget, 10, 1, temp6, temp2, temp11);
+    Start_T11 = new Specification(this,Start_T11_explain, ui->Time_tableWidget, line++, column, temp6, temp2, temp11);
     Start_T11->add_Specification();
 
     if(Start_T12 != nullptr)
     {
         delete Start_T12;
     }
-    Start_T12 = new Specification(this,Start_T12_explain, ui->Time_tableWidget, 11, 1, temp6, temp2, temp11);
+    Start_T12 = new Specification(this,Start_T12_explain, ui->Time_tableWidget, line++, column, temp6, temp2, temp11);
     Start_T12->add_Specification();
 
     if(Start_T13 != nullptr)
     {
         delete Start_T13;
     }
-    Start_T13 = new Specification(this,Start_T13_explain, ui->Time_tableWidget, 12, 1, temp6, temp2, temp11);
+    Start_T13 = new Specification(this,Start_T13_explain, ui->Time_tableWidget, line++, column, temp6, temp2, temp11);
     Start_T13->add_Specification();
 
     if(Start_T14 != nullptr)
     {
         delete Start_T14;
     }
-    Start_T14 = new Specification(this,Start_T14_explain, ui->Time_tableWidget, 13, 1, temp6, temp2, temp11);
+    Start_T14 = new Specification(this,Start_T14_explain, ui->Time_tableWidget, line++, column, temp6, temp2, temp11);
     Start_T14->add_Specification();
 
     if(Start_T15 != nullptr)
     {
         delete Start_T15;
     }
-    Start_T15 = new Specification(this,Start_T15_explain, ui->Time_tableWidget, 14, 1, temp6, temp2, temp11);
+    Start_T15 = new Specification(this,Start_T15_explain, ui->Time_tableWidget, line++, column, temp6, temp2, temp11);
     Start_T15->add_Specification();
 
     if(Start_T16 != nullptr)
     {
         delete Start_T16;
     }
-    Start_T16 = new Specification(this,Start_T16_explain, ui->Time_tableWidget, 15, 1, temp6, temp2, temp11);
+    Start_T16 = new Specification(this,Start_T16_explain, ui->Time_tableWidget, line++, column, temp6, temp2, temp11);
     Start_T16->add_Specification();
 
     if(Start_T17 != nullptr)
     {
         delete Start_T17;
     }
-    Start_T17 = new Specification(this,Start_T17_explain, ui->Time_tableWidget, 16, 1, temp6, temp2, temp11);
+    Start_T17 = new Specification(this,Start_T17_explain, ui->Time_tableWidget, line++, column, temp6, temp2, temp11);
     Start_T17->add_Specification();
 
     if(Start_T18 != nullptr)
     {
         delete Start_T18;
     }
-    Start_T18 = new Specification(this,Start_T18_explain, ui->Time_tableWidget, 17, 1, temp6, temp2, temp11);
+    Start_T18 = new Specification(this,Start_T18_explain, ui->Time_tableWidget, line++, column, temp6, temp2, temp11);
     Start_T18->add_Specification();
 
     if(Start_T19 != nullptr)
     {
         delete Start_T19;
     }
-    Start_T19 = new Specification(this,Start_T19_explain, ui->Time_tableWidget, 18, 1, temp6, temp2, temp11);
+    Start_T19 = new Specification(this,Start_T19_explain, ui->Time_tableWidget, line++, column, temp6, temp2, temp11);
     Start_T19->add_Specification();
 
     if(Start_T20 != nullptr)
     {
         delete Start_T20;
     }
-    Start_T20 = new Specification(this,Start_T20_explain, ui->Time_tableWidget, 19, 1, temp6, temp2, temp11);
+    Start_T20 = new Specification(this,Start_T20_explain, ui->Time_tableWidget, line++, column, temp6, temp2, temp11);
     Start_T20->add_Specification();
 
+    line = 0;
+    column = 3;
 
     if(End_T1 != nullptr)
     {
         delete End_T1;
     }
-    End_T1 = new Specification(this,End_T1_explain, ui->Time_tableWidget, 0, 2, temp7, temp3, temp8);
+    End_T1 = new Specification(this,End_T1_explain, ui->Time_tableWidget, line++, column, temp7, temp3, temp8);
     End_T1->add_Specification();
 
     if(End_T2 != nullptr)
     {
         delete End_T2;
     }
-    End_T2 = new Specification(this,End_T2_explain, ui->Time_tableWidget, 1, 2, temp7, temp3, temp8);
+    End_T2 = new Specification(this,End_T2_explain, ui->Time_tableWidget, line++, column, temp7, temp3, temp8);
     End_T2->add_Specification();
 
     if(End_T3 != nullptr)
     {
         delete End_T3;
     }
-    End_T3 = new Specification(this,End_T3_explain, ui->Time_tableWidget, 2, 2, temp7, temp3, temp8);
+    End_T3 = new Specification(this,End_T3_explain, ui->Time_tableWidget, line++, column, temp7, temp3, temp8);
     End_T3->add_Specification();
 
     if(End_T4 != nullptr)
     {
         delete End_T4;
     }
-    End_T4 = new Specification(this,End_T4_explain, ui->Time_tableWidget, 3, 2, temp7, temp3, temp8);
+    End_T4 = new Specification(this,End_T4_explain, ui->Time_tableWidget, line++, column, temp7, temp3, temp8);
     End_T4->add_Specification();
 
     if(End_T5 != nullptr)
     {
         delete End_T5;
     }
-    End_T5 = new Specification(this,End_T5_explain, ui->Time_tableWidget, 4, 2, temp7, temp3, temp8);
+    End_T5 = new Specification(this,End_T5_explain, ui->Time_tableWidget, line++, column, temp7, temp3, temp8);
     End_T5->add_Specification();
 
     if(End_T6 != nullptr)
     {
         delete End_T6;
     }
-    End_T6 = new Specification(this,End_T6_explain, ui->Time_tableWidget, 5, 2, temp7, temp3, temp8);
+    End_T6 = new Specification(this,End_T6_explain, ui->Time_tableWidget, line++, column, temp7, temp3, temp8);
     End_T6->add_Specification();
 
     if(End_T7 != nullptr)
     {
         delete End_T7;
     }
-    End_T7 = new Specification(this,End_T7_explain, ui->Time_tableWidget, 6, 2, temp7, temp3, temp8);
+    End_T7 = new Specification(this,End_T7_explain, ui->Time_tableWidget, line++, column, temp7, temp3, temp8);
     End_T7->add_Specification();
 
     if(End_T8 != nullptr)
     {
         delete End_T8;
     }
-    End_T8 = new Specification(this,End_T8_explain, ui->Time_tableWidget, 7, 2, temp7, temp3, temp8);
+    End_T8 = new Specification(this,End_T8_explain, ui->Time_tableWidget, line++, column, temp7, temp3, temp8);
     End_T8->add_Specification();
 
     if(End_T9 != nullptr)
     {
         delete End_T9;
     }
-    End_T9 = new Specification(this,End_T9_explain, ui->Time_tableWidget, 8, 2, temp7, temp3, temp8);
+    End_T9 = new Specification(this,End_T9_explain, ui->Time_tableWidget, line++, column, temp7, temp3, temp8);
     End_T9->add_Specification();
 
     if(End_T10 != nullptr)
     {
         delete End_T10;
     }
-    End_T10 = new Specification(this,End_T10_explain, ui->Time_tableWidget, 9, 2, temp7, temp3, temp8);
+    End_T10 = new Specification(this,End_T10_explain, ui->Time_tableWidget, line++, column, temp7, temp3, temp8);
     End_T10->add_Specification();
 
     if(End_T11 != nullptr)
     {
         delete End_T11;
     }
-    End_T11 = new Specification(this,End_T11_explain, ui->Time_tableWidget, 10, 2, temp7, temp3, temp8);
+    End_T11 = new Specification(this,End_T11_explain, ui->Time_tableWidget, line++, column, temp7, temp3, temp8);
     End_T11->add_Specification();
 
     if(End_T12 != nullptr)
     {
         delete End_T12;
     }
-    End_T12 = new Specification(this,End_T12_explain, ui->Time_tableWidget, 11, 2, temp7, temp3, temp8);
+    End_T12 = new Specification(this,End_T12_explain, ui->Time_tableWidget, line++, column, temp7, temp3, temp8);
     End_T12->add_Specification();
 
     if(End_T13 != nullptr)
     {
         delete End_T13;
     }
-    End_T13 = new Specification(this,End_T13_explain, ui->Time_tableWidget, 12, 2, temp7, temp3, temp8);
+    End_T13 = new Specification(this,End_T13_explain, ui->Time_tableWidget, line++, column, temp7, temp3, temp8);
     End_T13->add_Specification();
 
     if(End_T14 != nullptr)
     {
         delete End_T14;
     }
-    End_T14 = new Specification(this,End_T14_explain, ui->Time_tableWidget, 13, 2, temp7, temp3, temp8);
+    End_T14 = new Specification(this,End_T14_explain, ui->Time_tableWidget, line++, column, temp7, temp3, temp8);
     End_T14->add_Specification();
 
     if(End_T15 != nullptr)
     {
         delete End_T15;
     }
-    End_T15 = new Specification(this,End_T15_explain, ui->Time_tableWidget, 14, 2, temp7, temp3, temp8);
+    End_T15 = new Specification(this,End_T15_explain, ui->Time_tableWidget, line++, column, temp7, temp3, temp8);
     End_T15->add_Specification();
 
     if(End_T16 != nullptr)
     {
         delete End_T16;
     }
-    End_T16 = new Specification(this,End_T16_explain, ui->Time_tableWidget, 15, 2, temp7, temp3, temp8);
+    End_T16 = new Specification(this,End_T16_explain, ui->Time_tableWidget, line++, column, temp7, temp3, temp8);
     End_T16->add_Specification();
 
     if(End_T17 != nullptr)
     {
         delete End_T17;
     }
-    End_T17 = new Specification(this,End_T17_explain, ui->Time_tableWidget, 16, 2, temp7, temp3, temp8);
+    End_T17 = new Specification(this,End_T17_explain, ui->Time_tableWidget, line++, column, temp7, temp3, temp8);
     End_T17->add_Specification();
 
     if(End_T18 != nullptr)
     {
         delete End_T18;
     }
-    End_T18 = new Specification(this,End_T18_explain, ui->Time_tableWidget, 17, 2, temp7, temp3, temp8);
+    End_T18 = new Specification(this,End_T18_explain, ui->Time_tableWidget, line++, column, temp7, temp3, temp8);
     End_T18->add_Specification();
 
     if(End_T19 != nullptr)
     {
         delete End_T19;
     }
-    End_T19 = new Specification(this,End_T19_explain, ui->Time_tableWidget, 18, 2, temp7, temp3, temp8);
+    End_T19 = new Specification(this,End_T19_explain, ui->Time_tableWidget, line++, column, temp7, temp3, temp8);
     End_T19->add_Specification();
 
     if(End_T20 != nullptr)
     {
         delete End_T20;
     }
-    End_T20 = new Specification(this,End_T20_explain, ui->Time_tableWidget, 19, 2, temp7, temp3, temp8);
+    End_T20 = new Specification(this,End_T20_explain, ui->Time_tableWidget, line++, column, temp7, temp3, temp8);
     End_T20->add_Specification();
 
+    line = 0;
+    column = 4;
 
     if(State1 != nullptr)
     {
         delete State1;
     }
-    State1 = new Specification(this,State1_explain, ui->Time_tableWidget, 0, 3,temp13, temp4, temp9);
+    State1 = new Specification(this,State1_explain, ui->Time_tableWidget, line++, column,temp13, temp4, temp9);
     State1->add_Specification();
 
     if(State2 != nullptr)
     {
         delete State2;
     }
-    State2 = new Specification(this,State2_explain, ui->Time_tableWidget, 1, 3,temp13, temp4, temp9);
+    State2 = new Specification(this,State2_explain, ui->Time_tableWidget, line++, column,temp13, temp4, temp9);
     State2->add_Specification();
 
     if(State3 != nullptr)
     {
         delete State3;
     }
-    State3 = new Specification(this,State3_explain, ui->Time_tableWidget, 2, 3,temp13, temp4, temp9);
+    State3 = new Specification(this,State3_explain, ui->Time_tableWidget, line++, column,temp13, temp4, temp9);
     State3->add_Specification();
 
     if(State4 != nullptr)
     {
         delete State4;
     }
-    State4 = new Specification(this,State4_explain, ui->Time_tableWidget, 3, 3,temp13, temp4, temp9);
+    State4 = new Specification(this,State4_explain, ui->Time_tableWidget, line++, column,temp13, temp4, temp9);
     State4->add_Specification();
 
     if(State5 != nullptr)
     {
         delete State5;
     }
-    State5 = new Specification(this,State5_explain, ui->Time_tableWidget, 4, 3, temp13, temp4, temp9);
+    State5 = new Specification(this,State5_explain, ui->Time_tableWidget, line++, column, temp13, temp4, temp9);
     State5->add_Specification();
 
     if(State6 != nullptr)
     {
         delete State6;
     }
-    State6 = new Specification(this,State6_explain, ui->Time_tableWidget, 5, 3,temp13, temp4, temp9);
+    State6 = new Specification(this,State6_explain, ui->Time_tableWidget, line++, column,temp13, temp4, temp9);
     State6->add_Specification();
 
     if(State7 != nullptr)
     {
         delete State7;
     }
-    State7 = new Specification(this,State7_explain, ui->Time_tableWidget, 6, 3, temp13, temp4, temp9);
+    State7 = new Specification(this,State7_explain, ui->Time_tableWidget, line++, column, temp13, temp4, temp9);
     State7->add_Specification();
 
     if(State8 != nullptr)
     {
         delete State8;
     }
-    State8 = new Specification(this,State8_explain, ui->Time_tableWidget, 7, 3, temp13, temp4, temp9);
+    State8 = new Specification(this,State8_explain, ui->Time_tableWidget, line++, column, temp13, temp4, temp9);
     State8->add_Specification();
 
     if(State9 != nullptr)
     {
         delete State9;
     }
-    State9 = new Specification(this,State9_explain, ui->Time_tableWidget, 8, 3, temp13, temp4, temp9);
+    State9 = new Specification(this,State9_explain, ui->Time_tableWidget, line++, column, temp13, temp4, temp9);
     State9->add_Specification();
 
     if(State10 != nullptr)
     {
         delete State10;
     }
-    State10 = new Specification(this,State10_explain, ui->Time_tableWidget, 9, 3, temp13, temp4, temp9);
+    State10 = new Specification(this,State10_explain, ui->Time_tableWidget, line++, column, temp13, temp4, temp9);
     State10->add_Specification();
 
     if(State11 != nullptr)
     {
         delete State11;
     }
-    State11 = new Specification(this,State11_explain, ui->Time_tableWidget, 10, 3, temp13, temp4, temp9);
+    State11 = new Specification(this,State11_explain, ui->Time_tableWidget, line++, column, temp13, temp4, temp9);
     State11->add_Specification();
 
     if(State12 != nullptr)
     {
         delete State12;
     }
-    State12 = new Specification(this,State12_explain, ui->Time_tableWidget, 11, 3, temp13, temp4, temp9);
+    State12 = new Specification(this,State12_explain, ui->Time_tableWidget, line++, column, temp13, temp4, temp9);
     State12->add_Specification();
 
     if(State13 != nullptr)
     {
         delete State13;
     }
-    State13 = new Specification(this,State13_explain, ui->Time_tableWidget, 12, 3, temp13, temp4, temp9);
+    State13 = new Specification(this,State13_explain, ui->Time_tableWidget, line++, column, temp13, temp4, temp9);
     State13->add_Specification();
 
     if(State14 != nullptr)
     {
         delete State14;
     }
-    State14 = new Specification(this,State14_explain, ui->Time_tableWidget, 13, 3, temp13, temp4, temp9);
+    State14 = new Specification(this,State14_explain, ui->Time_tableWidget, line++, column, temp13, temp4, temp9);
     State14->add_Specification();
 
     if(State15 != nullptr)
     {
         delete State15;
     }
-    State15 = new Specification(this,State15_explain, ui->Time_tableWidget, 14, 3, temp13, temp4, temp9);
+    State15 = new Specification(this,State15_explain, ui->Time_tableWidget, line++, column, temp13, temp4, temp9);
     State15->add_Specification();
 
     if(State16 != nullptr)
     {
         delete State16;
     }
-    State16 = new Specification(this,State16_explain, ui->Time_tableWidget, 15, 3, temp13, temp4, temp9);
+    State16 = new Specification(this,State16_explain, ui->Time_tableWidget, line++, column, temp13, temp4, temp9);
     State16->add_Specification();
 
     if(State17 != nullptr)
     {
         delete State17;
     }
-    State17 = new Specification(this,State17_explain, ui->Time_tableWidget, 16, 3, temp13, temp4, temp9);
+    State17 = new Specification(this,State17_explain, ui->Time_tableWidget, line++, column, temp13, temp4, temp9);
     State17->add_Specification();
 
     if(State18 != nullptr)
     {
         delete State18;
     }
-    State18 = new Specification(this,State18_explain, ui->Time_tableWidget, 17, 3, temp13, temp4, temp9);
+    State18 = new Specification(this,State18_explain, ui->Time_tableWidget, line++, column, temp13, temp4, temp9);
     State18->add_Specification();
 
     if(State19 != nullptr)
     {
         delete State19;
     }
-    State19 = new Specification(this,State19_explain, ui->Time_tableWidget, 18, 3, temp13, temp4, temp9);
+    State19 = new Specification(this,State19_explain, ui->Time_tableWidget, line++, column, temp13, temp4, temp9);
     State19->add_Specification();
 
     if(State20 != nullptr)
     {
         delete State20;
     }
-    State20 = new Specification(this,State20_explain, ui->Time_tableWidget, 19, 3, temp13, temp4, temp9);
+    State20 = new Specification(this,State20_explain, ui->Time_tableWidget, line++, column, temp13, temp4, temp9);
     State20->add_Specification();
 
+    line = 0;
+    column = 5;
 
     if(Power1 != nullptr)
     {
         delete Power1;
     }
-    Power1 = new Specification(this,Power1_explain, ui->Time_tableWidget, 0, 4, "10", temp5, temp10);
+    Power1 = new Specification(this,Power1_explain, ui->Time_tableWidget, line++, column, "10", temp5, temp10);
     Power1->add_Specification();
 
     if(Power2 != nullptr)
     {
         delete Power2;
     }
-    Power2 = new Specification(this,Power2_explain, ui->Time_tableWidget, 1, 4, "10", temp5, temp10);
+    Power2 = new Specification(this,Power2_explain, ui->Time_tableWidget, line++, column, "10", temp5, temp10);
     Power2->add_Specification();
 
     if(Power3 != nullptr)
     {
         delete Power3;
     }
-    Power3 = new Specification(this,Power3_explain, ui->Time_tableWidget, 2, 4, "10", temp5, temp10);
+    Power3 = new Specification(this,Power3_explain, ui->Time_tableWidget, line++, column, "10", temp5, temp10);
     Power3->add_Specification();
 
     if(Power4 != nullptr)
     {
         delete Power4;
     }
-    Power4 = new Specification(this,Power4_explain, ui->Time_tableWidget, 3, 4, "10", temp5, temp10);
+    Power4 = new Specification(this,Power4_explain, ui->Time_tableWidget, line++, column, "10", temp5, temp10);
     Power4->add_Specification();
 
 
@@ -3972,14 +3994,14 @@ void MyWidget::AutoOperation(QTableWidget *myTable)
     {
         delete Power5;
     }
-    Power5 = new Specification(this,Power5_explain, ui->Time_tableWidget, 4, 4, "10", temp5, temp10);
+    Power5 = new Specification(this,Power5_explain, ui->Time_tableWidget, line++, column, "10", temp5, temp10);
     Power5->add_Specification();
 
     if(Power6 != nullptr)
     {
         delete Power6;
     }
-    Power6 = new Specification(this,Power6_explain, ui->Time_tableWidget, 5, 4, "10", temp5, temp10);
+    Power6 = new Specification(this,Power6_explain, ui->Time_tableWidget, line++, column, "10", temp5, temp10);
     Power6->add_Specification();
 
 
@@ -3987,14 +4009,14 @@ void MyWidget::AutoOperation(QTableWidget *myTable)
     {
         delete Power7;
     }
-    Power7 = new Specification(this,Power7_explain, ui->Time_tableWidget, 6, 4, "10", temp5, temp10);
+    Power7 = new Specification(this,Power7_explain, ui->Time_tableWidget, line++, column, "10", temp5, temp10);
     Power7->add_Specification();
 
     if(Power8 != nullptr)
     {
         delete Power8;
     }
-    Power8 = new Specification(this,Power8_explain, ui->Time_tableWidget, 7, 4, "10", temp5, temp10);
+    Power8 = new Specification(this,Power8_explain, ui->Time_tableWidget, line++, column, "10", temp5, temp10);
     Power8->add_Specification();
 
 
@@ -4002,14 +4024,14 @@ void MyWidget::AutoOperation(QTableWidget *myTable)
     {
         delete Power9;
     }
-    Power9 = new Specification(this,Power9_explain, ui->Time_tableWidget, 8, 4, "10", temp5, temp10);
+    Power9 = new Specification(this,Power9_explain, ui->Time_tableWidget, line++, column, "10", temp5, temp10);
     Power9->add_Specification();
 
     if(Power10 != nullptr)
     {
         delete Power10;
     }
-    Power10 = new Specification(this,Power10_explain, ui->Time_tableWidget, 9, 4, "10", temp5, temp10);
+    Power10 = new Specification(this,Power10_explain, ui->Time_tableWidget, line++, column, "10", temp5, temp10);
     Power10->add_Specification();
 
 
@@ -4017,14 +4039,14 @@ void MyWidget::AutoOperation(QTableWidget *myTable)
     {
         delete Power11;
     }
-    Power11 = new Specification(this,Power11_explain, ui->Time_tableWidget, 10, 4, "10", temp5, temp10);
+    Power11 = new Specification(this,Power11_explain, ui->Time_tableWidget, line++, column, "10", temp5, temp10);
     Power11->add_Specification();
 
     if(Power12 != nullptr)
     {
         delete Power12;
     }
-    Power12 = new Specification(this,Power12_explain, ui->Time_tableWidget, 11, 4, "10", temp5, temp10);
+    Power12 = new Specification(this,Power12_explain, ui->Time_tableWidget, line++, column, "10", temp5, temp10);
     Power12->add_Specification();
 
 
@@ -4032,14 +4054,14 @@ void MyWidget::AutoOperation(QTableWidget *myTable)
     {
         delete Power13;
     }
-    Power13 = new Specification(this,Power13_explain, ui->Time_tableWidget, 12, 4, "10", temp5, temp10);
+    Power13 = new Specification(this,Power13_explain, ui->Time_tableWidget, line++, column, "10", temp5, temp10);
     Power13->add_Specification();
 
     if(Power14 != nullptr)
     {
         delete Power14;
     }
-    Power14 = new Specification(this,Power14_explain, ui->Time_tableWidget, 13, 4, "10", temp5, temp10);
+    Power14 = new Specification(this,Power14_explain, ui->Time_tableWidget, line++, column, "10", temp5, temp10);
     Power14->add_Specification();
 
 
@@ -4047,14 +4069,14 @@ void MyWidget::AutoOperation(QTableWidget *myTable)
     {
         delete Power15;
     }
-    Power15 = new Specification(this,Power15_explain, ui->Time_tableWidget, 14, 4, "10", temp5, temp10);
+    Power15 = new Specification(this,Power15_explain, ui->Time_tableWidget, line++, column, "10", temp5, temp10);
     Power15->add_Specification();
 
     if(Power16 != nullptr)
     {
         delete Power16;
     }
-    Power16 = new Specification(this,Power16_explain, ui->Time_tableWidget, 15, 4, "10", temp5, temp10);
+    Power16 = new Specification(this,Power16_explain, ui->Time_tableWidget, line++, column, "10", temp5, temp10);
     Power16->add_Specification();
 
 
@@ -4062,28 +4084,28 @@ void MyWidget::AutoOperation(QTableWidget *myTable)
     {
         delete Power17;
     }
-    Power17 = new Specification(this,Power17_explain, ui->Time_tableWidget, 16, 4, "10", temp5, temp10);
+    Power17 = new Specification(this,Power17_explain, ui->Time_tableWidget, line++, column, "10", temp5, temp10);
     Power17->add_Specification();
 
     if(Power18 != nullptr)
     {
         delete Power18;
     }
-    Power18 = new Specification(this,Power18_explain, ui->Time_tableWidget, 17, 4, "10", temp5, temp10);
+    Power18 = new Specification(this,Power18_explain, ui->Time_tableWidget, line++, column, "10", temp5, temp10);
     Power18->add_Specification();
 
     if(Power19 != nullptr)
     {
         delete Power19;
     }
-    Power19 = new Specification(this,Power19_explain, ui->Time_tableWidget, 18, 4, "10", temp5, temp10);
+    Power19 = new Specification(this,Power19_explain, ui->Time_tableWidget, line++, column, "10", temp5, temp10);
     Power19->add_Specification();
 
     if(Power20 != nullptr)
     {
         delete Power20;
     }
-    Power20 = new Specification(this,Power20_explain, ui->Time_tableWidget, 19, 4, "10", temp5, temp10);
+    Power20 = new Specification(this,Power20_explain, ui->Time_tableWidget, line++, column, "10", temp5, temp10);
     Power20->add_Specification();
 }
 //系统消息 绘制button
@@ -5456,14 +5478,14 @@ void MyWidget::on_UI_Complete_Btn_clicked()//退出高级设置
 /********* 电池上电 *********/
 void MyWidget::on_Battery_PowerOn_clicked()
 {
-    QMessageBox::question(this , tr("Power On"), \
-                          tr("When the battery is powered on, this item can give the BMS instructions to close the contactor (Note: only some BMS manufacturers support this function)."), tr("OK"));
+    QMessageBox::question(this , tr("Battery power-on"), \
+                          tr("Battery power-on: This function allows the BMS to send a command to close the contactor (Note: this feature is only supported by some BMS manufacturers)."), tr("OK"));
 }
 /********* 电池下电 *********/
 void MyWidget::on_Battery_PowerOff_clicked()
 {
-    QMessageBox::question(this , tr("Power Off"), \
-                          tr("Battery power off, this item can give the BMS to disconnect the contactor command (note: only some BMS manufacturers support this function)."), tr("OK"));
+    QMessageBox::question(this , tr("Battery power-off"), \
+                          tr("Battery power-off: This function allows the BMS to send a command to open the contactor (Note: this feature is only supported by some BMS manufacturers)."), tr("OK"));
 }
 /************混合模式使能*************/
 void MyWidget::on_Hybrid_mode_Button_clicked()
