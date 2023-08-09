@@ -2764,7 +2764,7 @@ Language</string>
             <enum>QFrame::Raised</enum>
            </property>
            <property name="currentIndex">
-            <number>2</number>
+            <number>3</number>
            </property>
            <widget class="QWidget" name="Host_page">
             <widget class="QPushButton" name="Bypass_Grid_btn">
@@ -8370,7 +8370,7 @@ background-color: rgb(255, 0, 0);</string>
                    <column/>
                    <item row="0" column="0">
                     <property name="text">
-                     <string>Grid connected mode of PCS</string>
+                     <string>Grid conected mode of the converter </string>
                     </property>
                     <property name="textAlignment">
                      <set>AlignCenter</set>
@@ -8434,7 +8434,7 @@ background-color: rgb(255, 0, 0);</string>
                    </item>
                    <item row="2" column="0">
                     <property name="text">
-                     <string>Operational mode</string>
+                     <string>Working mode</string>
                     </property>
                     <property name="textAlignment">
                      <set>AlignCenter</set>
@@ -8482,7 +8482,7 @@ background-color: rgb(255, 0, 0);</string>
                    </item>
                    <item row="3" column="3">
                     <property name="text">
-                     <string>Run time enable</string>
+                     <string/>
                     </property>
                     <property name="textAlignment">
                      <set>AlignCenter</set>
@@ -9488,7 +9488,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                </widget>
                <widget class="QWidget" name="Automatic_page">
                 <attribute name="title">
-                 <string>Automatic operation</string>
+                 <string>Hybrid Mode</string>
                 </attribute>
                 <layout class="QGridLayout" name="gridLayout_35">
                  <property name="leftMargin">
@@ -9519,6 +9519,43 @@ Set rule:B1 - A1 ≥ 10V</string>
                       <cursorShape>ArrowCursor</cursorShape>
                      </property>
                     </widget>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_26">
+                     <item>
+                      <widget class="QLabel" name="label_3">
+                       <property name="text">
+                        <string>Hybrid Mode Enable：</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="Hybrid_mode_Button">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>45</height>
+                        </size>
+                       </property>
+                       <property name="text">
+                        <string>Disable</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_16">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                    </layout>
                    </item>
                   </layout>
                  </item>

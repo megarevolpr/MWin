@@ -258,7 +258,7 @@ public:
     QPushButton *Control_mode_explain;  //控制模式说明
     QPushButton *Machine_number_explain;    //设备号说明
     QPushButton *Parallel_explain;  //并机说明
-    QPushButton *Unbalance_power_enable_explain;    //功率不平衡使能说明
+//    QPushButton *Unbalance_power_enable_explain;    //功率不平衡使能说明
 
 
     Specification *Grid_connected_mode;
@@ -272,7 +272,7 @@ public:
     Specification *Control_mode;
     Specification *Machine_number;
     Specification *Parallel;
-    Specification *Unbalance_power_enable;
+//    Specification *Unbalance_power_enable;
     /***************************DC参数****************************/
     QPushButton *Work_parttern_explain; //DCDC工作模式说明
     QPushButton *Boost_or_Buck_explain; //升/降压说明
@@ -1100,6 +1100,8 @@ private slots:
     void on_pushButton_sub_clicked();
 
     void on_TimeSeting_btn_clicked();
+
+    void on_Hybrid_mode_Button_clicked();
 
 private:
     Ui::MyWidget *ui;
