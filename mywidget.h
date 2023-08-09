@@ -719,6 +719,7 @@ public:
     QPushButton *Grid_recovery_scheduling_explain;  //电网恢复调度开机说明
     QPushButton *Grid_recovery_time_explain;  //电网恢复并网时间说明
     QPushButton *Grid_connected_mode_of_Inv_explain;  //逆变器并网方式说明
+    QPushButton *System_Anti_Reverse_Flow_explain;  //系统防逆流
     QPushButton *Pshedding_Freq_explain;  //过频降载说明
     QPushButton *QP_curve_explain;  //QP曲线说明
     QPushButton *CV_parallel_explain;  //恒压并机说明
@@ -754,6 +755,7 @@ public:
     Specification *Grid_recovery_scheduling;
     Specification *Grid_recovery_time;
     Specification *Grid_connected_mode_of_Inv;
+    Specification *System_Anti_Reverse_Flow;  //系统防逆流
     Specification *Pshedding_Freq;
     Specification *QP_curve;
     Specification *CV_parallel;

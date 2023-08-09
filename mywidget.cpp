@@ -530,6 +530,7 @@ void MyWidget::MemoryAllocation()
     Grid_recovery_scheduling_explain = new QPushButton;  //电网恢复调度开机说明
     Grid_recovery_time_explain = new QPushButton;  //电网恢复并网时间说明
     Grid_connected_mode_of_Inv_explain = new QPushButton;  //逆变器并网方式说明
+    System_Anti_Reverse_Flow_explain = new QPushButton;
     Pshedding_Freq_explain = new QPushButton;  //过频降载说明
     QP_curve_explain = new QPushButton;  //QP曲线说明
     CV_parallel_explain = new QPushButton;  //恒压并机说明
@@ -934,6 +935,7 @@ void MyWidget::SystemParameter_delete()
     delete Grid_recovery_scheduling;
     delete Grid_recovery_time;
     delete Grid_connected_mode_of_Inv;
+    delete System_Anti_Reverse_Flow;
     delete Pshedding_Freq;
     delete QP_curve;
     delete CV_parallel;
@@ -2187,7 +2189,7 @@ void MyWidget::My_menuAction(int Index)
         case MACHINESTANDBY:
             {
                 m_menu->hide();
-                QMessageBox::question(this, tr("Stand-by"), tr("This is the converter standby switch. Click the converter to enter the standby state"), tr("OK"));
+                QMessageBox::question(this, tr("Stand-by"), tr("The converter standby switch. Click the converter to enter the standby state"), tr("OK"));
             }//这是变流器待机开关，点击后变流器进入待机状态
             break;
         case MACHINEOPEN:
@@ -2323,17 +2325,23 @@ void MyWidget::SystemParam_tbnt_released()
     for(int i=0; i<11;i++)//调整功能设置、系统参数设置的列宽行高
     {
         ui->UI_Parameter_Tab->setColumnWidth(i,170);
-        ui->UI_Parameter_Tab->setRowHeight(i,50);
-        ui->UI_SystemParameter_Tab->setColumnWidth(i,160);
-        ui->UI_SystemParameter_Tab->setRowHeight(i++,50);
+        ui->UI_Parameter_Tab->setRowHeight(i++,50);
+
 
         ui->UI_Parameter_Tab->setColumnWidth(i,90);
-        ui->UI_Parameter_Tab->setRowHeight(i,50);
-        ui->UI_SystemParameter_Tab->setColumnWidth(i,115);
-        ui->UI_SystemParameter_Tab->setRowHeight(i++,50);
+        ui->UI_Parameter_Tab->setRowHeight(i++,50);
+
 
         ui->UI_Parameter_Tab->setColumnWidth(i,55);
         ui->UI_Parameter_Tab->setRowHeight(i,50);
+
+    }
+    for(int i=0; i<13;i++)
+    {
+        ui->UI_SystemParameter_Tab->setColumnWidth(i,160);
+        ui->UI_SystemParameter_Tab->setRowHeight(i++,50);
+        ui->UI_SystemParameter_Tab->setColumnWidth(i,115);
+        ui->UI_SystemParameter_Tab->setRowHeight(i++,50);
         ui->UI_SystemParameter_Tab->setColumnWidth(i,42);
         ui->UI_SystemParameter_Tab->setRowHeight(i,50);
     }
@@ -4782,68 +4790,69 @@ void MyWidget::SystemParameter(QTableWidget *myTable)
 {
     //功率变化率说明
     Change_rate_of_power = new Specification(this,Change_rate_of_power_explain, myTable, 0, 1, \
-                                             "20", tr("Change rate of power"), \
-                                             tr("How fast the power changes per unit time."));
+                                             "20", tr("Power change rate"), \
+                                             tr("Power change rate: the rate at which power changes within a second ."));
     Change_rate_of_power->add_Specification();
 
     //电网频率变化范围上限说明
     Grid_frequency_upper_limit = new Specification(this,Grid_frequency_upper_limit_explain, myTable, 1, 1, \
-                                                   "0.2", tr("Grid frequency upper limit"), \
-                                                   tr("The upper limit of the frequency range allowed on the AC side is 0.2, 0.5, 1, and 3."));
+                                                   "0.2", tr("Upper limit of power grid frequency variation range"), \
+                                                   tr("Upper limit of power grid frequency variation range: The maximum range of frequency variation allowed on the AC side, which can be selected as 0.2, 0.5, 1, 5."));
     Grid_frequency_upper_limit->add_Specification();
 
     //电网频率变化范围下限说明
     Grid_frequency_lower_limit = new Specification(this,Grid_frequency_lower_limit_explain, myTable, 2, 1, \
-                                                   "-0.5", tr("Grid frequency lower limit"), \
-                                                   tr("The lower limit of the frequency range allowed on the AC side can be selected as -0.2, -0.5, -1, or -3."));
+                                                   "-0.5", tr("Lower limit of power grid frequency variation range"), \
+                                                   tr("Lower limit of power grid frequency variation range: The maximum range of frequency variation allowed on the AC side, which can be selected as-0.5, -1, -2, -5."));
     Grid_frequency_lower_limit->add_Specification();
 
     //电压保护范围上限说明
     Vol_protection_upper_limit = new Specification(this,Vol_protection_upper_limit_explain, myTable, 3, 1, \
                                                    "+15", tr("Vol protection upper limit"), \
-                                                   tr("The upper limit of the voltage range allowed on the AC side can be +10, +15, +20, or +30."));
+                                                   tr("Upper limit of voltage protection range: The maximum range of voltage variation allowed on the AC side, which can be selected as 10, 15, 20."));
     Vol_protection_upper_limit->add_Specification();
 
     //电压保护范围下限说明
     Vol_protection_lower_limit = new Specification(this,Vol_protection_lower_limit_explain, myTable, 4, 1, \
                                                    "-15", tr("Vol protection lower limit"), \
-                                                   tr("The lower limit of the voltage variation range allowed on the AC side can be -10, -15, -20, or -30."));
+                                                   tr("Lower limit of voltage protection range: The minimum range of voltage variation allowed on the AC side, which can be selected as -10, -15, -20."));
     Vol_protection_lower_limit->add_Specification();
 
     //高穿使能说明
     HVRT_enable = new Specification(this,HVRT_enable_explain, myTable, 5, 1, \
                                                     tr("prohibit"), tr("HVRT enable"), \
-                                    tr("This is the high voltage crossing (HVRT) Enable, enable the device will not stop because of a short period of high voltage, the option is to Enable, prohibit, (note: this is generally used in large grid-connected power stations)."));
+                                    tr("High voltage ride through(HVRT) enablement: Enable, Disable. (Note: This option is generally used in large grid-on power stations.)"));
     HVRT_enable->add_Specification();
 
     //低穿使能说明
     LVRT_enable = new Specification(this,LVRT_enable_explain, myTable, 6, 1, \
                                     tr("prohibit"), "LVRT enable", \
-                                    tr("This is the low voltage crossing (LVRT) Enable, enable the device will not stop because of a short period of low voltage, the option is to Enable, prohibit, (note: this is generally used in large grid-connected power stations)."));
+                                    tr("Low voltage ride through(LVRT) enablement: Enable, Disable. (Note: This option is generally used in large grid-on power stations.)"));
     LVRT_enable->add_Specification();
 
     //孤岛使能说明
     AFD_enable = new Specification(this,AFD_enable_explain, myTable, 7, 1, \
                                    tr("prohibit"), tr("AFD enable"), \
-                                   tr("Prevent islanding effect, When the detection of the island effect (in the photovoltaic grid-connected system, when the power failure occurs in the large power grid, the photovoltaic grid-connected inverter power generation and the local load on the low-voltage side of the grid if the power is just matched, it is easy to appear self-sufficient maintenance power state, resulting in the 'island' phenomenon, thereby endangering the safety of maintenance personnel), the inverter automatically shut down, and the option is allowed Enable, prohibit, (Note: this is generally used in large grid-connected power stations)."));
+                                   tr("Prevent islanding effect. When islanding effect is detected (in a photovoltaic grid-on system, when a power outage occurs in the main grid, and the PV grid-connected converter generates power that matches the local load on the low-voltage side of the grid, it can easily sustain power generation independently, resulting in an 'island' phenomenon, which endangers the safety of maintenance personnel), the converter automatically shuts down. The options for this feature can be set as 'Enable' or 'prohibited'.\
+(Note: This option is generally used in large grid-on power stations.)"));
     AFD_enable->add_Specification();
 
     //绝缘监测使能说明
     Insulation_detection_enable = new Specification(this,Insulation_detection_enable_explain, myTable, 8, 1, \
                                                     tr("prohibit"), tr("Insulation detection enable"), \
-                                                    tr("Insulation detection Enable, insulation resistance greater than 33KΩ to be able to operate normally, less than 33KΩ can not start, and to alarm, the default prohibition, the choice is to Enable, prohibit."));
+                                                    tr("Insulation detection enable, the insulation resistance should be greater than 33KΩ for normal start-up and operation. If it is less than 33KΩ, it should not start, and an alarm should be triggered. By default, it is disabled, but can be set as 'Enable' or 'prohibited'."));
     Insulation_detection_enable->add_Specification();
 
     //一次调频使能说明
     PrimaryFreq_enable = new Specification(this,PrimaryFreq_enable_explain, myTable, 9, 1, \
                                            tr("prohibit"), tr("PrimaryFreq enable"), \
-                                           tr("When the frequency of the power grid deviates from the rated value, the power grid frequency is maintained stable by controlling the increase or decrease of the active power, which can be selected to Enable, prohibit, (Note: this is generally used in large grid-connected power stations)."));
+                                           tr("Primary frequency control enable: When the grid frequency deviates from the rated value, the active power is controlled to increase or decrease in order to maintain the grid frequency at the rated value. It can be selected as enabled or disabled. (Note: This option is generally used in large grid-on power stations.)"));
     PrimaryFreq_enable->add_Specification();
 
     //转动惯量使能说明
     Inertia_enable = new Specification(this,Inertia_enable_explain, myTable, 10, 1, \
                                        tr("prohibit"), tr("Inertia enable"), \
-                                       tr("Moment of inertia Enable, can be selected to Enable, prohibit, (Note: this is generally used in large grid-connected power stations)."));
+                                       tr("Rotational inertia enable: It can be selected as enabled or disabled. (Note: This option is generally used in large grid-on power stations.)"));
     Inertia_enable->add_Specification();
 
     //负载优先说明
@@ -4855,80 +4864,86 @@ void MyWidget::SystemParameter(QTableWidget *myTable)
     //机器型号说明
     Machine_type = new Specification(this,Machine_type_explain, myTable, 0, 4, \
                                      "MPS-TS", tr("Machine type"), \
-                                     tr("Set according to the machine model on site, the factory value prevails."));
+                                     tr("Converter Model: As per factory settings, generally not modifiable."));
     Machine_type->add_Specification();
 
     //机器容量说明
     Machine_capacity = new Specification(this,Machine_capacity_explain, myTable, 1, 4, \
                                      "100", tr("Machine capacity"), \
-                                         tr("The rated capacity of PCS is subject to the ex-factory value and cannot be changed."));
+                                         tr("The rated capacity of the converter shall be based on the factory value and cannot be changed."));
     Machine_capacity->add_Specification();
 
     //输出频率等级说明
     Output_Fre_grade = new Specification(this,Output_Fre_grade_explain, myTable, 2, 4, \
                                          "50", tr("Output Fre grade"), \
-                                         tr("Set the output frequency level, the default is 50Hz, generally 50Hz or 60Hz, can be fine-tuned according to the project."));
+                                         tr("Output Frequency Level: Default 50Hz, typically 50Hz or 60Hz."));
     Output_Fre_grade->add_Specification();
 
     //输出电压等级说明
     Output_vol_level = new Specification(this,Output_vol_level_explain, myTable, 3, 4, \
                                          "400", tr("Output vol level"), \
-                                         tr("The voltage level is changed according to the actual local power grid voltage. The voltage level is subject to delivery. If you need to change it, contact customer service for confirmation."));
+                                         tr("Output Voltage Level: As per factory settings, generally not modifiable."));
     Output_vol_level->add_Specification();
 
     //逆变电压等级说明
     Converter_side_vol_level = new Specification(this,Converter_side_vol_level_explain, myTable, 4, 4, \
                                          "270:400", tr("Transformer Turns Ratio"), \
-                                                 tr("Transformer Turns Ratio: Please refer to the factory nameplate for the turns ratio setting based on the built-in transformer. If any changes are required, please contact customer service for confirmation."));
+                                                 tr("Transformer Voltage Ratio: To be determined by the factory nameplate, not modifiable."));
     Converter_side_vol_level->add_Specification();
 
     //输出无功方式说明
     Output_reactive_power_mode = new Specification(this,Output_reactive_power_mode_explain, myTable, 5, 4, \
                                                    tr("Non adjustable"), tr("Output reactive power mode"), \
-                                                   tr("Output reactive mode, the default is not adjustable, can be selected as power factor (Pf), reactive power (Q), Non adjustable."));
+                                                   tr("Reactive Power Output Mode: Default non-adjustable, options include Power Factor, Reactive Power, non-adjustable."));
     Output_reactive_power_mode->add_Specification();
 
     //电网恢复调度开机说明
     Grid_recovery_scheduling = new Specification(this,Grid_recovery_scheduling_explain, myTable, 6, 4, \
                                                  tr("Not Allow"), tr("Grid recovery scheduling"), \
-                                                 tr("This is the power grid recovery scheduling startup Settings, there are two options: Allow (Allow), Not allow (Not Allow), the setting is invalid."));
-    Grid_recovery_scheduling->add_Specification();//这是电网恢复调度开机设置，有两项可选：允许(Allow)、不允许(Not Allow),设置无效
+                                                 tr("The power grid recovery scheduling startup Settings, there are two options: Allow (Allow), Not allow (Not Allow), the setting is invalid."));
+    Grid_recovery_scheduling->add_Specification();//电网恢复调度开机设置，有两项可选：允许(Allow)、不允许(Not Allow),设置无效
 
     //电网恢复并网时间说明
     Grid_recovery_time = new Specification(this, Grid_recovery_time_explain, myTable, 7, 4, \
                                            "0", tr("Grid recovery time"), \
-                                           tr("This is the grid restoration and grid connection time, when the grid restoration and dispatching start-up allows, according to the actual demand can be set."));
-    Grid_recovery_time->add_Specification();//这是电网恢复并网时间，当电网恢复调度开机允许时，根据实际需求设置即可
+                                           tr("Grid Restoration and Grid-on Time: When grid restoration scheduling allows for startup, it can be set according to actual requirements."));
+    Grid_recovery_time->add_Specification();//
 
     //逆变器并网方式说明
     Grid_connected_mode_of_Inv = new Specification(this,Grid_connected_mode_of_Inv_explain, myTable, 8, 4, \
-                                                   tr("Non\ncountercurrent"), tr("Grid connected mode of Inv"), \
-                                                   tr("Set the grid-connected mode of the inverter, which can be countercurrent, that is, DC can be converted into AC power and then incorporated into the power grid; Irreversible means that the current on the DC side does not flow to the grid. The default value can be Countercurrent. The options can be countercurrent or Non countercurrent. With the local grid qualification, it can be changed to 'countercurrent'; When using Prevent countercurrent mode, you can change to 'countercurrent'."));
+                                                   tr("Non\ncountercurrent"), tr("Converter Anti-Reverse Flow"), \
+                                                   tr("Converter Anti-Reverse Flow: Enable, Disable;\
+\nEnabling prevents converter current from flowing into the grid, while Disabling allows converter current to flow into the grid."));
     Grid_connected_mode_of_Inv->add_Specification();
-//    Grid_connected_mode_of_Inv->Opermode_btn_clicked(mode_expelain->Anti_reflux_btn);
+
+    System_Anti_Reverse_Flow = new Specification(this,System_Anti_Reverse_Flow_explain, myTable, 9, 4, \
+                                                   tr("Non\ncountercurrent"), tr("System Anti-Reverse Flow"), \
+                                                   tr("System Anti-Reverse Flow: Enable, Disable;\
+\nEnabling prevents system current from flowing into the grid, while Disabling allows system current to flow into the grid."));
+    System_Anti_Reverse_Flow->add_Specification();
 
     //过频降载说明
-    Pshedding_Freq = new Specification(this,Pshedding_Freq_explain, myTable, 9, 4, \
+    Pshedding_Freq = new Specification(this,Pshedding_Freq_explain, myTable, 10, 4, \
                                        tr("prohibit"), tr("Pshedding Freq"), \
-                                       tr("This is the overfrequency load reduction setting, there are two options: allow (Enable), do not allow (prohibit),(note: used in large grid-connected power stations)."));
+                                       tr("Over-frequency load shedding: It can be selected as enabled or disabled. (Note: This option is generally used in large grid-on power stations.)"));
     Pshedding_Freq->add_Specification();//这是过频降载设置，有两项可选：允许(Enable)、不允许(prohibit),(注：在大型并网电站使用）
 
     //QP曲线说明
-    QP_curve = new Specification(this,QP_curve_explain, myTable, 10, 4, \
+    QP_curve = new Specification(this,QP_curve_explain, myTable, 11, 4, \
                                  tr("prohibit"), tr("QP curve"), \
-                                 tr("This is the QP curve setting, with two options: Enable (Enable), prohibit (prohibit),(note: used in large grid-connected power stations)."));
+                                 tr("QP curve: It can be selected as enabled or disabled. (Note: This option is generally used in large grid-on power stations.)"));
     QP_curve->add_Specification();//这是QP曲线设置，有两项可选：允许(Enable)、不允许(prohibit),(注：在大型并网电站使用）
 
     //恒压并机说明
-    CV_parallel = new Specification(this,CV_parallel_explain, myTable, 11, 4, \
+    CV_parallel = new Specification(this,CV_parallel_explain, myTable, 12, 4, \
                                     tr("prohibit"), tr("CV parallel"), \
-                                    tr("Constant voltage parallel Enable, you can choose to Enable, prohibit, (Note: this setting is used in constant voltage parallel mode)."));
+                                    tr("Constant voltage parallel operation enable: It can be selected as enabled or disabled.  (Note: This option is generally used in large grid-on power stations.)"));
     CV_parallel->add_Specification();
 
     //模块数量说明
     Module_Number = new Specification(this,Module_Number_explain, myTable, 0, 7, \
                                       "1", tr("Module Number"), \
-                                      tr("Number of modules for PCS, default 1(invalid setting)."));
+                                      tr("Number of modules, default 1(invalid setting)."));
     Module_Number->add_Specification();
 
     //恢复出厂说明
@@ -4938,7 +4953,7 @@ void MyWidget::SystemParameter(QTableWidget *myTable)
     Restore_factory->add_Specification();
 
     BackupSetParameters = new Specification(this,BackupSetParameters_explain, ui->UI_SystemParameter_Tab,2, 7, \
-                                        tr("Backup\nSettings"), tr("Backup Set Parameters"), \
+                                        tr("Backup"), tr("Backup Set Parameters"), \
                                         tr("Backup setting parameters: Backup setting parameters refers to backing up the parameters set on the current device so that the backup parameter Settings can be restored when needed."));
     BackupSetParameters->add_Specification();
 
@@ -4961,20 +4976,20 @@ void MyWidget::SystemParameter(QTableWidget *myTable)
     //最大模块数说明
     Module_max = new Specification(this,Module_max_explain, myTable, 6, 7, \
                                    "2", tr("Module max"), \
-                                   tr("This is the maximum number of modules in the current system(Note: This takes effect only when DCDC mode is selected in rack Settings.)."));
-    Module_max->add_Specification();//这是当前系统的最大模块数（备注：仅在机架设置中选择DCDC模式时生效）\n
+                                   tr("Maximum Module Count for Current Chassis. (Note: Only effective when selecting DCDC mode in chassis settings.)"));
+    Module_max->add_Specification();//
 
     //最小模块数说明
     Module_min = new Specification(this,Module_min_explain, myTable, 7, 7, \
                                    "1", tr("Module min"), \
-                                   tr("This is the minimum number of modules in the current system(Note: This takes effect only when DCDC mode is selected in rack Settings.)."));
-    Module_min->add_Specification();//这是当前系统的最小模块数\n
+                                   tr("Minimum Module Count for Current Chassis. (Note: Only effective when selecting DCDC mode in chassis settings.)"));
+    Module_min->add_Specification();//
 
     //DCDC绝缘监测使能说明
     Insulation_detection_enable_DCDC = new Specification(this,Insulation_detection_enable_DCDC_explain, myTable, 8, 7, \
                                                          tr("Disable"), tr("Insulation detection enable DCDC"), \
-                                                         tr("This is the DCDC insulation monitoring Enable setting, with two options: enable (Enable), Disable (Disable),(Note: The default disable)."));
-    Insulation_detection_enable_DCDC->add_Specification();//这是DCDC绝缘监测使能设置，有两项可选：允许(Enable)、禁止(Disable),(注：默认禁止)
+                                                         tr("DCDC Isolation Monitoring Enable: Enable, Disable. (Note: Default is Disable)"));
+    Insulation_detection_enable_DCDC->add_Specification();//
 
 }
 /***********************外设页说明********************/
@@ -4982,30 +4997,31 @@ void MyWidget::ExternalDevice(QTableWidget *myTable)
 {
     QString str = tr("Normally closed circuit (NC) or normally open circuit (NO) according to field Settings.");
     QString str1 = tr("When the dry contact is enabled and an abnormal signal is received, the device performs the selected action.");
+    QString str2 = tr("When the dry contact is enabled, the device will perform the selected action when there is a change in the signal.");
 
     DI_1_Enable = new Specification(this,DI_1_Enable_explain, myTable, 0, 0, \
                                     tr("Enable"), tr("DI_1_Enable"), \
-                                    tr("Enter dry contact 1. If Enable is selected, the Action is triggered when the dry contact detects that NO/NC is not set. If Disable is selected, the dry contact does not take any action when it detects that NO/NC is not set."));
+                                    str2);
     DI_1_Enable->add_Specification();
     DI_2_Enable = new Specification(this,DI_2_Enable_explain, myTable, 1, 0, \
                                     tr("Disable"), tr("DI_2_Enable"), \
-                                    tr("Enter dry contact 2. If Enable is selected, the Action is triggered when the dry contact detects that NO/NC is not set. If Disable is selected, the dry contact does not take any action when it detects that NO/NC is not set."));
+                                    str2);
     DI_2_Enable->add_Specification();
     DI_3_Enable = new Specification(this,DI_3_Enable_explain, myTable, 2, 0, \
                                     tr("Enable"), tr("DI_3_Enable"), \
-                                    tr("Enter dry contact 3. If Enable is selected, the Action is triggered when the dry contact detects that NO/NC is not set. If Disable is selected, the dry contact does not take any action when it detects that NO/NC is not set."));
+                                    str2);
     DI_3_Enable->add_Specification();
     DI_4_Enable = new Specification(this,DI_4_Enable_explain, myTable, 3, 0, \
                                     tr("Enable"), tr("DI_4_Enable"), \
-                                    tr("Enter dry contact 4. If Enable is selected, the Action is triggered when the dry contact detects that NO/NC is not set. If Disable is selected, the dry contact does not take any action when it detects that NO/NC is not set."));
+                                    str2);
     DI_4_Enable->add_Specification();
     DI_5_Enable = new Specification(this,DI_5_Enable_explain, myTable, 4, 0, \
                                     tr("Enable"), tr("DI_5_Enable"), \
-                                    tr("Enter dry contact 5. If Enable is selected, the Action is triggered when the dry contact detects that NO/NC is not set. If Disable is selected, the dry contact does not take any action when it detects that NO/NC is not set."));
+                                    str2);
     DI_5_Enable->add_Specification();
     DI_6_Enable = new Specification(this,DI_6_Enable_explain, myTable, 5, 0, \
                                     tr("Enable"), tr("DI_6_Enable"), \
-                                    tr("Enter dry contact 6. If Enable is selected, the Action is triggered when the dry contact detects that NO/NC is not set. If Disable is selected, the dry contact does not take any action when it detects that NO/NC is not set."));
+                                    str2);
     DI_6_Enable->add_Specification();
     /*DO_1_Enable = new Specification(this,DO_1_Enable_explain, myTable, 6, 0, \
                                     tr("Disable"), tr("DO_1_Enable"), \
@@ -5572,22 +5588,22 @@ void MyWidget::on_radio_dhcp_clicked()
 /****************DCDC 变流器开启*****************/
 void MyWidget::on_Switch_on_Inv_clicked()
 {
-    QMessageBox::question(this, tr("Turn on"), tr("This is the DCDC converter turn on the switch, click to turn on the DCDC converter."), tr("OK"));
+    QMessageBox::question(this, tr("Turn on"), tr("The switch to turn on the DCDC converter, click to activate the DCDC converter."), tr("OK"));
 }//这是DCDC变流器打开开关,点击后开启DCDC变流器\n
 /****************DCDC 变流器关闭*****************/
 void MyWidget::on_Switch_off_Inv_clicked()
 {
-    QMessageBox::question(this, tr("Turn off"), tr("This is the DCDC converter off switch. Click to turn off the DCDC converter."), tr("OK"));
+    QMessageBox::question(this, tr("Turn off"), tr("The switch to turn off the DCDC converter, click to deactivate the DCDC converter."), tr("OK"));
 }//这是DCDC变流器关闭开关，点击后关闭DCDC变流器\n
 /****************DCAC 变流器开启*****************/
 void MyWidget::on_Switch_on_clicked()
 {
-    QMessageBox::question(this, tr("Turn on"), tr("This is the DCAC converter turn on the switch, click to turn on the DCAC converter."), tr("OK"));
+    QMessageBox::question(this, tr("Turn on"), tr("The switch to turn on the DCAC converter, click to activate the DCAC converter."), tr("OK"));
 }//这是DCAC变流器打开开关,点击后开启DCAC变流器\n
 /****************DCAC 变流器关闭*****************/
 void MyWidget::on_Switch_off_clicked()
 {
-    QMessageBox::question(this, tr("Turn off"), tr("This is the DCAC converter off switch. Click to turn off the DCAC converter."), tr("OK"));
+    QMessageBox::question(this, tr("Turn off"), tr("The switch to turn off the DCAC converter, click to deactivate the DCAC converter."), tr("OK"));
 }//这是DCAC变流器关闭开关，点击后关闭DCAC变流器\n
 //每月深度放电日期+
 void MyWidget::on_pushButton_add_clicked()
