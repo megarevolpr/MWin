@@ -62,7 +62,7 @@
    <item row="0" column="0">
     <widget class="QStackedWidget" name="UI_stackedWidget">
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="BasicSet_page">
       <widget class="QWidget" name="layoutWidget">
@@ -102,7 +102,8 @@
 </string>
             </property>
             <property name="text">
-             <string>Change Language</string>
+             <string>Change
+Language</string>
             </property>
            </widget>
           </item>
@@ -204,7 +205,7 @@ color: rgb(255, 255, 255);</string>
                <cursorShape>ArrowCursor</cursorShape>
               </property>
               <property name="rowCount">
-               <number>11</number>
+               <number>10</number>
               </property>
               <property name="columnCount">
                <number>9</number>
@@ -218,7 +219,6 @@ color: rgb(255, 255, 255);</string>
               <attribute name="verticalHeaderVisible">
                <bool>false</bool>
               </attribute>
-              <row/>
               <row/>
               <row/>
               <row/>
@@ -256,7 +256,7 @@ color: rgb(255, 255, 255);</string>
               </item>
               <item row="0" column="3">
                <property name="text">
-                <string>Host Address</string>
+                <string>Serial Communication Address</string>
                </property>
                <property name="textAlignment">
                 <set>AlignCenter</set>
@@ -304,7 +304,7 @@ color: rgb(255, 255, 255);</string>
               </item>
               <item row="1" column="3">
                <property name="text">
-                <string>serial port 1</string>
+                <string>serial port 2</string>
                </property>
                <property name="textAlignment">
                 <set>AlignCenter</set>
@@ -320,7 +320,7 @@ color: rgb(255, 255, 255);</string>
               </item>
               <item row="1" column="6">
                <property name="text">
-                <string>UserPassPort</string>
+                <string>User password</string>
                </property>
                <property name="textAlignment">
                 <set>AlignCenter</set>
@@ -352,7 +352,7 @@ color: rgb(255, 255, 255);</string>
               </item>
               <item row="2" column="3">
                <property name="text">
-                <string>serial port 2</string>
+                <string>serial port 3</string>
                </property>
                <property name="textAlignment">
                 <set>AlignCenter</set>
@@ -368,7 +368,7 @@ color: rgb(255, 255, 255);</string>
               </item>
               <item row="2" column="6">
                <property name="text">
-                <string>RootPassport</string>
+                <string>Admin password</string>
                </property>
                <property name="textAlignment">
                 <set>AlignCenter</set>
@@ -405,7 +405,7 @@ color: rgb(255, 255, 255);</string>
               </item>
               <item row="3" column="3">
                <property name="text">
-                <string>serial port 3</string>
+                <string>serial port 4</string>
                </property>
                <property name="textAlignment">
                 <set>AlignCenter</set>
@@ -458,7 +458,7 @@ color: rgb(255, 255, 255);</string>
               </item>
               <item row="4" column="3">
                <property name="text">
-                <string>serial port 4</string>
+                <string>serial port 5</string>
                </property>
                <property name="textAlignment">
                 <set>AlignCenter</set>
@@ -511,7 +511,7 @@ color: rgb(255, 255, 255);</string>
               </item>
               <item row="5" column="3">
                <property name="text">
-                <string>serial port 5</string>
+                <string>serial port 6</string>
                </property>
                <property name="textAlignment">
                 <set>AlignCenter</set>
@@ -670,7 +670,7 @@ color: rgb(255, 255, 255);</string>
               </item>
               <item row="8" column="3">
                <property name="text">
-                <string>Relese Charge mark</string>
+                <string>Release Prohibited Charging Flag</string>
                </property>
                <property name="textAlignment">
                 <set>AlignCenter</set>
@@ -718,7 +718,7 @@ color: rgb(255, 255, 255);</string>
               </item>
               <item row="9" column="3">
                <property name="text">
-                <string>ForceCharge start</string>
+                <string/>
                </property>
                <property name="textAlignment">
                 <set>AlignCenter</set>
@@ -726,7 +726,7 @@ color: rgb(255, 255, 255);</string>
               </item>
               <item row="9" column="5">
                <property name="text">
-                <string>V</string>
+                <string/>
                </property>
                <property name="textAlignment">
                 <set>AlignCenter</set>
@@ -741,54 +741,6 @@ color: rgb(255, 255, 255);</string>
                </property>
               </item>
               <item row="9" column="8">
-               <property name="text">
-                <string/>
-               </property>
-               <property name="textAlignment">
-                <set>AlignCenter</set>
-               </property>
-              </item>
-              <item row="10" column="0">
-               <property name="text">
-                <string/>
-               </property>
-               <property name="textAlignment">
-                <set>AlignCenter</set>
-               </property>
-              </item>
-              <item row="10" column="2">
-               <property name="text">
-                <string/>
-               </property>
-               <property name="textAlignment">
-                <set>AlignCenter</set>
-               </property>
-              </item>
-              <item row="10" column="3">
-               <property name="text">
-                <string>ForceCharge top</string>
-               </property>
-               <property name="textAlignment">
-                <set>AlignCenter</set>
-               </property>
-              </item>
-              <item row="10" column="5">
-               <property name="text">
-                <string>V</string>
-               </property>
-               <property name="textAlignment">
-                <set>AlignCenter</set>
-               </property>
-              </item>
-              <item row="10" column="6">
-               <property name="text">
-                <string/>
-               </property>
-               <property name="textAlignment">
-                <set>AlignCenter</set>
-               </property>
-              </item>
-              <item row="10" column="8">
                <property name="text">
                 <string/>
                </property>
@@ -7578,7 +7530,7 @@ enable</string>
                 </font>
                </property>
                <property name="currentIndex">
-                <number>2</number>
+                <number>1</number>
                </property>
                <widget class="QWidget" name="DataReport_page">
                 <attribute name="title">
@@ -8715,7 +8667,7 @@ power-off</string>
                           <cursorShape>ArrowCursor</cursorShape>
                          </property>
                          <property name="rowCount">
-                          <number>11</number>
+                          <number>12</number>
                          </property>
                          <property name="columnCount">
                           <number>2</number>
@@ -8737,6 +8689,7 @@ power-off</string>
                            <string>1</string>
                           </property>
                          </row>
+                         <row/>
                          <row/>
                          <row/>
                          <row/>
@@ -8844,7 +8797,15 @@ power-off</string>
                          </item>
                          <item row="10" column="0">
                           <property name="text">
-                           <string/>
+                           <string>ForceCharge On(V)</string>
+                          </property>
+                          <property name="textAlignment">
+                           <set>AlignCenter</set>
+                          </property>
+                         </item>
+                         <item row="11" column="0">
+                          <property name="text">
+                           <string>ForceCharge Off(V)</string>
                           </property>
                           <property name="textAlignment">
                            <set>AlignCenter</set>

@@ -6,7 +6,9 @@ UpgradeTools::UpgradeTools(QWidget *parent) :
     ui(new Ui::UpgradeTools)
 {
     ui->setupUi(this);
+    ui->tabWidget->removeTab(1);//将索引号为1的MEGA从菜单移除
     Init_MemorySpace();
+
 
 }
 
@@ -54,52 +56,67 @@ void UpgradeTools::UpgradeButton_clicked(int nid)
 {
     switch (nid) {
     case 0:
-        QMessageBox::question(this, tr("DCDC")\
-                              ,tr("After inserting the USB flash drive and detecting the DCDC upgrade program DCDC_Update.hex,click to upgrade the corresponding DCDC module based on the displayed module number."), tr("OK"));
-        break;//在插入U盘并检查到有DCDC升级程序DCDC_Update.hex后，点击将按照上面显示的模块号升级对应的DCDC模块。
+        QMessageBox::question(this, tr("DCDC Upgrade")\
+                              ,tr("DCDC Upgrade: Insert a u disk and check for the presence of the DCDC upgrade program 'DCDC_Update.hex'. Click on DCDC, and then upgrade the corresponding DCDC module according to the selected module number above.\
+                                \n(Note: Before upgrading the DCDC, ensure that the ship mode switch on the DCDC module is set to the OFF position.)"), tr("OK"));
+        break;//
     case 1:
-        QMessageBox::question(this, tr("DCAC")\
-                              ,tr("After inserting the USB flash drive and detecting the DCAC upgrade program DCAC_Update.hex,click to upgrade DCAC.\nYou need to press the EPO during the upgrade."), tr("OK"));
-        break;//在插入U盘并检查到有DCAC升级程序DCAC_Update.hex后，点击将升级DCAC。\n升级过程中需要按下EPO。
+        QMessageBox::question(this, tr("DCAC Upgrade")\
+                              ,tr("DCAC Upgrade: Insert the u disk and check if there is a DCAC upgrade program called 'DCAC_Update.hex'. Click to upgrade the DCAC.\
+                                \n(Note: Press the EPO button before upgrading.)"), tr("OK"));
+        break;//。
     case 2:
         QMessageBox::question(this, tr("Monitor")\
-                              ,tr("After inserting the USB flash drive and checking that there is a Monitor upgrade program monitor.hex, click to upgrade the monitor program."), tr("OK"));
+                              ,tr("After inserting the u disk and checking that there is a Monitor upgrade program 'Monitor.hex', click to upgrade the monitor program."), tr("OK"));
         break;//在插入U盘并检查到有监控升级程序Monitor.hex后，点击将升级监控程序。
     case 3:
         QMessageBox::question(this, tr("Backup")\
-                              ,tr("Click to back up the upgrade program."), tr("OK"));
+                              ,tr("Backup: Click to backup the current program files."), tr("OK"));
         break;//点击将对升级程序进行备份。
     case 4:
         QMessageBox::question(this, tr("Restore")\
-                              ,tr("Click to restore to the already backed up program."), tr("OK"));
+                              ,tr("Restore: Restore to the most recent backup program files."), tr("OK"));
         break;//点击将恢复到已经备份好程序
     case 5:
-        QMessageBox::question(this, tr("Apply and restart")\
-                              ,tr("Click to restart."), tr("OK"));
+        {
+            int reply = QMessageBox::question(this, tr("Apply and restart")\
+                                  ,tr("Click to restart."), tr("Previous Page"),tr("OK"));
+            if(reply == 0)
+            {
+                this->hide();
+            }
+        }
         break;//点击后将进行重启
     case 6:
         QMessageBox::question(this, tr("Baud Rate")\
-                              ,tr("This is the baud rate setting, there are 125k and 500k two baud rate options, the default 500k."), tr("OK"));
-        break;//这是波特率设置，有125k后500k两种波特率选择，默认500k。
+                              ,tr("Baud Rate: Default is 500k and cannot be modified."), tr("OK"));
+        break;//
     case 7:
         QMessageBox::question(this, tr("Monitor")\
-                              ,tr("After inserting the USB flash drive and checking that there is a Monitor upgrade program monitor.hex, click to upgrade the monitor program."), tr("OK"));
+                              ,tr("After inserting the u disk and checking that there is a Monitor upgrade program 'Monitor.hex', click to upgrade the monitor program."), tr("OK"));
         break;
     case 8:
         QMessageBox::question(this, tr("Backup")\
-                              ,tr("Click to back up the upgrade program."), tr("OK"));
+                              ,tr("Backup: Click to backup the current program files."), tr("OK"));
         break;
     case 9:
         QMessageBox::question(this, tr("Restore")\
-                              ,tr("Click to restore to the already backed up program."), tr("OK"));
+                              ,tr("Restore: Restore to the most recent backup program files."), tr("OK"));
         break;
     case 10:
-        QMessageBox::question(this, tr("PCS")\
-                              ,tr("After inserting the USB flash drive and checking that there is DCAC update program DSPUpdate.hex, click to upgrade DSP.\nYou need to press the EPO during the upgrade."), tr("OK"));
-        break;//在插入U盘并检查到有DCAC升级程序DSPUpdate.hex后，点击将升级DSP。\n升级过程中需要按下EPO。
+        QMessageBox::question(this, tr("DSP Upgrade")\
+                              ,tr("DSP Upgrade: Insert the u disk and check if there is a DSP upgrade program called 'DSPUpdate.hex'. Click to upgrade the DSP.\
+                                \n(Note: Press the EPO button before upgrading.))"), tr("OK"));
+        break;//
     case 11:
-        QMessageBox::question(this, tr("Restart")\
-                              ,tr("Click to restart."), tr("OK"));
+        {
+            int reply = QMessageBox::question(this, tr("Restart")\
+                                  ,tr("Click to restart."), tr("Previous Page"),tr("OK"));
+            if(reply == 0)
+            {
+                this->hide();
+            }
+        }
         break;
     case 12:
         QMessageBox::question(this, tr("Monitor.hex")\

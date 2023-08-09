@@ -263,6 +263,8 @@ void MyWidget::MemoryAllocation()
 //    Equalized_charge_explain = new QPushButton;   //均充电压说明
     Gen_turn_off_SOC_explain = new QPushButton;    //柴发关闭SOC说明
     Gen_turn_on_SOC_explain = new QPushButton;     //柴发开启SOC说明
+    ForceCharge_start_explain = new QPushButton; //强充开启说明
+    ForceCharge_top_explain = new QPushButton;   // 强充结束说明
 
     /***************************电池设置 铅酸****************************/
 
@@ -498,8 +500,6 @@ void MyWidget::MemoryAllocation()
     Can_port_1_explain = new QPushButton;    //CAN1说明
     Can_port_2_explain = new QPushButton;    //CAN2说明
     Relese_Charge_mark_explain = new QPushButton;    //释放充电标志说明
-    ForceCharge_start_explain = new QPushButton; //强充开启说明
-    ForceCharge_top_explain = new QPushButton;   // 强充结束说明
     ProtocolVersion_explain = new QPushButton;   //协议版本说明
     UserPassPort_explain = new QPushButton;  //用户密码说明
     RootPassport_explain = new QPushButton;  //超级权限说明
@@ -839,6 +839,8 @@ void MyWidget::Battery_Setup_Tab_delete()
     delete Discharge_Current_Limit;
     delete Gen_turn_off_SOC;
     delete Gen_turn_on_SOC;
+    delete ForceCharge_start;
+    delete ForceCharge_top;
 }
 /************铅酸电池设置 释放 说明************/
 void MyWidget::Battery_Setup_Lead_Tab_delete()
@@ -901,8 +903,6 @@ void MyWidget::FunctionSet_delete()
     delete Can_port_1;
     delete Can_port_2;
     delete Relese_Charge_mark;
-    delete ForceCharge_start;
-    delete ForceCharge_top;
     delete ProtocolVersion;
     delete UserPassPort;
     delete RootPassport;
@@ -1151,14 +1151,26 @@ void MyWidget::Operational_mode_clicked()
 //升级界面
 void MyWidget::UpgradeInterface_clicked()
 {
-    if(UpgradeInterface->isHidden())
+    int reply = QMessageBox::question(this, tr("Upgrade prompt")\
+                          ,tr("1. Make sure to press the EPO button before upgrading.\
+                              \n2. Before upgrading the DCDC, switch off the ship-type switch of the DCDC module."), tr("Return"),tr("OK"));
+    if (reply == 0)
     {
-        UpgradeInterface->show();
+        // 点击了"Cancel"按钮的处理逻辑
+        return ;
+
+    } else if (reply == 1) {
+        // 点击了"OK"按钮的处理逻辑
+        if(UpgradeInterface->isHidden())
+        {
+            UpgradeInterface->show();
+        }
+        else
+        {
+            UpgradeInterface->hide();
+        }
     }
-    else
-    {
-        UpgradeInterface->hide();
-    }
+
 }
 //函数关联
 void MyWidget::LinkRelationship()
@@ -1456,7 +1468,6 @@ void MyWidget::DCDCParam_tab()
     ui->DCDC_tableWidget->setShowGrid(true);//设置显示格子
     ui->DCDC_tableWidget->setSelectionBehavior(QAbstractItemView::SelectItems);//每次选择一行
     ui->DCDC_tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);//设置不可编辑
-    ui->DCDC_tableWidget->setEditTriggers(QAbstractItemView::SelectedClicked);//单机修改
 
     QStringList List5;
     List5 << tr("Name") << tr("Value") << tr("Unit") << tr("Name") << tr("Value")<< tr("Unit");
@@ -1524,7 +1535,7 @@ void MyWidget::BatterySet_tab()
     ui->Lithium_Tab->setEditTriggers(QAbstractItemView::NoEditTriggers);//设置不可编辑
     ui->plainTextEdit->setReadOnly(true);//只读
 
-    for(int i=0;i<10;i++)
+    for(int i=0;i<12;i++)
     {
         ui->Lithium_Tab->setRowHeight(i,45);
     }
@@ -1572,6 +1583,11 @@ void MyWidget::RunTimeSet_tab()
     ui->Time_tableWidget->setColumnWidth(4,180);
     ui->Time_tableWidget->horizontalHeader()->setStretchLastSection(5);
 
+    for(int i=0;i<20;i++)
+    {
+        ui->Time_tableWidget->setRowHeight(i,35);
+    }
+
     AutoOperation(ui->Time_tableWidget);    //自动运行页说明
 }
 
@@ -1594,6 +1610,11 @@ void MyWidget::Information_tbnt_released()
     ui->EquipmentInfor_tableWidget->setHorizontalHeaderLabels(List4);
     ui->EquipmentInfor_tableWidget->setColumnWidth(0,280);
     ui->EquipmentInfor_tableWidget->horizontalHeader()->setStretchLastSection(1);//自动占用剩余空间
+
+    for(int i=0;i<8;i++)
+    {
+        ui->EquipmentInfor_tableWidget->setRowHeight(i,35);
+    }
 
     SystemMessages(ui->EquipmentInfor_tableWidget);//系统信息页说明
 }
@@ -3277,6 +3298,17 @@ void MyWidget::Battery_Setup_Tab(QTableWidget *myTable)
                                         tr("When the specified SOC is reached, the diesel generator starts."));
     Gen_turn_on_SOC->add_Specification();
 //    Gen_turn_on_SOC->Opermode_btn_clicked(mode_expelain->Generator_turn_on_SOC_btn);
+    //强充开启说明
+    ForceCharge_start = new Specification(this,ForceCharge_start_explain, myTable, 10, 1, \
+                                          "2.85", tr("Force Charge On"), \
+                                          tr("Forced Charging On: When the cell voltage drops below this value, the converter switches to Battery Priority Mode, and the AC side charges the battery with a power of 10kW."));
+    ForceCharge_start->add_Specification();
+
+    // 强充结束说明
+    ForceCharge_top = new Specification(this,ForceCharge_top_explain, myTable, 11, 1, \
+                                        "3.2", tr("ForceCharge Off"), \
+                                        tr("Forced Charging Off: When the cell voltage exceeds this value, the converter exits Battery Priority Mode and returns to the mode before Forced Charging was enabled."));
+    ForceCharge_top->add_Specification();
 
 }
 //电池设置页说明_铅酸电池
@@ -4573,152 +4605,151 @@ void MyWidget::FunctionSet(QTableWidget *myTable)
     //电池类型说明
     Battery_type = new Specification(this,Battery_type_explain, myTable, 0, 1, \
                                      tr("Lithium"), tr("Battery type"), \
-                                     tr("Choose the battery type according to the actual situation, there are two types of Lithium and LeadAcid to choose from."));
+                                     tr("Battery Types: Lithium, Lead-Acid."));
     Battery_type->add_Specification();
 //    Battery_type->Opermode_btn_clicked(mode_expelain->Bat_Type_btn);
 
     //电池通信方式说明
     BMS_Comm_type = new Specification(this,BMS_Comm_type_explain, myTable, 1, 1, \
                                       "CAN", tr("BMS Comm type"), \
-                                      tr("Set the communication mode between the battery, RS485 or CAN communication or Ethernet can be selected according to the situation.\n(Note: Since there is only one port for both CAN port and Ethernet port, battery communication mode and EMS communication mode cannot be selected as \"CAN\" or \"Ethernet\" at the same time)"));
+                                      tr("Battery Communication Modes: None, RS485, CAN, Ethernet. (Note: Due to the fact that CAN and Ethernet both have only one port, the battery communication mode and EMS communication mode cannot be selected as \"CAN\" or \"Ethernet\" simultaneously.)"));
     BMS_Comm_type->add_Specification();
 //    BMS_Comm_type->Opermode_btn_clicked(mode_expelain->Bat_Comm_btn);
 
     //功率控制类型说明
     Power_control_type = new Specification(this,Power_control_type_explain, myTable, 2, 1,\
                                            "CP_N&&P" , tr("Power control type"), \
-                                           tr("Set the control power mode, including constant voltage (CV), constant current (CC), constant power (CP_P), and positive and negative power (CP_N&P).\nIf constant voltage (CV) mode is selected, the converter will operate in constant voltage mode.\nIf constant current (CC) mode is selected, the converter will operate in constant current mode.\nIf you choosepositive and negative power (CP_N&P) mode: you can set the power size at 'constant power', the value is the size of the power size, positive for discharge, negative for charging.\nConstant power (CP_P) : This function is reserved and the selection is invalid."));
+                                           tr("Constant Voltage (CV) mode: The converter will operate in constant voltage mode on the DC side.\nConstant Current (CC) mode: The converter will operate in constant current mode on the DC side.\nConstant Power AC (CP_AC) mode: The power level can be set at \"constant power.\" The value represents the power level, positive for discharge and negative for charge. For example, setting it to -5 means that the AC side will charge the battery with a power of 5 kW. Due to converter losses, the DC side power will be lower than the AC side power in this case. Conversely, setting it to 5 means that the AC side will output power at 5 kW. Due to converter losses, the DC side power will be higher than the AC side power in this case.\nReserved."));
     Power_control_type->add_Specification();
 
     //EMS通讯方式说明
     EMS_Comm_type = new Specification(this,EMS_Comm_type_explain, myTable, 3, 1, \
                                       "RS485", tr("EMS Comm type"), \
-                                      tr("You CAN set the communication mode of the EMS, including RS485,CAN, and Ethernet. Select one communication mode that can be read and written remotely, and the other two communication modes can be read only."));
+                                      tr("EMS communication methods: RS485, CAN, Ethernet.\nThe setting communication methods are readable and writable in remote mode, and only readable in local mode. The unselected communication methods are only readable in both remote and local mode."));
     EMS_Comm_type->add_Specification();
 //    EMS_Comm_type->Opermode_btn_clicked(mode_expelain->EMS_Comm_btn);
 
     //输出功率上限说明
     Output_power_limit = new Specification(this,Output_power_limit_explain, myTable, 4, 1,\
                                            "100", tr("Output power limit"), \
-                                           tr("HMI Limits the range of power Settings on the AC side."));
+                                           tr("Output Power Limit: Restricts the upper limit of the set value for the power on the AC side of the converter."));
     Output_power_limit->add_Specification();
 
     //电池厂家说明
     BAT_manufacturers = new Specification(this,BAT_manufacturers_explain, myTable, 5, 1, \
                                           tr("Auto"), tr("BAT protocol"), \
-                                          tr("Battery Protocol: This is the battery protocol that parses the packets sent by the BMS according to the selected battery protocol.\nCurrently, the following battery manufacturer protocols are supported: MEGA, LISHEN, PENGHUI, GOLD, BMSER, LANLI, SHENLAN, PAINENG, NINGDESHIDAI, SUOYING, XINGWANGDA, KUBO, GAOTE_V2, TOGOOD,PGS, WOBO, KGOOER, LIDE, PAINENG_L, WEILAN, ALPHA, TUOPU, JIEHUI, JDI, ECUBE, FARO, BGS, JDITEC, HUASU, LIGAO.\nWhen you select AUTO, the system automatically determines the battery manufacturer."));
+                                          tr("Battery Protocol: Parse the messages sent by BMS based on the selected battery protocol.\
+                                             \nCurrently supported battery manufacturer protocols include:\
+MEGA, LISHEN, GREATPOWER, GOLD, BMSER, LANLI, SLANPOWER, PYLON, CATL, SUOYING, XINGWANGDA, KUBO, GOLD_V2, TOGOOD, GROUP_STANDARD, WOBOYUAN, KGOOER, LD, PYLON_L, VILION, TUOPU,JDI.\
+                                            \nSelect AUTO to automatically detect the battery manufacturer protocol."));
     BAT_manufacturers->add_Specification();
 
     //充电SOC说明
     Charge_SOC = new Specification(this,Charge_SOC_explain, myTable, 6, 1, \
                                           "20", tr("Charge SOC"), \
-                                          tr("This is the charging SOC. When the battery SOC is below 20%, the battery will start charging until the charging reaches the discharging SOC before allowing the battery to discharge again."));
-    Charge_SOC->add_Specification();//这是充电SOC，当电池SOC低于20%时，电池将启动充电，直到充电达到放电SOC，才允许电池再次放电\n
+                                          tr("Charging SOC:\
+                                             \n (1) At the self-use mode, when the battery SOC is lower than the charging SOC, the converter maintains the battery SOC at this value.\
+                                             \n (2) At the battery priority mode, the ECP or FCP state is determined based on the current SOC.\
+                                             \n (3) At the optimal mode, when the battery SOC is lower than the charging SOC, the converter enters the FCP state and starts charging the battery. When the current SOC is greater than or equal to the discharge SOC, the converter exits the FCP state and enters the ECP state."));
+    Charge_SOC->add_Specification();//
 //    Charge_SOC->Opermode_btn_clicked(mode_expelain->Charge_SOC_btn);
 
     //放电SOC说明
     Disharge_SOC = new Specification(this,Disharge_SOC_explain, myTable, 7, 1, \
                                           "50", tr("Disharge SOC"), \
-                                          tr("This is the discharge SOC. When the battery SOC is lower than the charging SOC, after the battery starts charging, it will be charged to the discharge SOC (50%) before allowing the battery to discharge again."));
-    Disharge_SOC->add_Specification();//这是放电SOC，当电池SOC低于充电SOC，电池启动充电后，电池将充电至放电SOC(50%)时，才允许电池再次放电\n
+                                          tr("Discharge SOC: When the SOC is greater than the discharge SOC, the FCP state is released."));
+    Disharge_SOC->add_Specification();//
 //    Disharge_SOC->Opermode_btn_clicked(mode_expelain->Discharge_SOC_btn);
 
     //柴发容量说明
     DG_capacity = new Specification(this,DG_capacity_explain, myTable, 8, 1, \
                                     "100", tr("DG capacity"), \
-                                    tr("This is the maximum allowable input power of diesel generator, which shall not exceed the model capacity."));
-    DG_capacity->add_Specification();//这是柴油发电机的允许输入最大功率，不得超过机型容量\n
+                                    tr("Diesel Generator: Rated Power of the Diesel Generator."));
+    DG_capacity->add_Specification();//
 
     //能量优先级说明
     Energy_priority = new Specification(this,Energy_priority_explain, myTable, 9, 1, \
                                         tr("Bat>Grid"), tr("Energy priority"), \
-                                        tr("Energy priority: In automatic self-use mode, if you choose Battery > power grid, the battery is preferred to power the load. If you choose Grid > Battery, power is supplied to the power grid first."));
+                                        tr("Energy Priority: In the self-use mode,\
+                                        when selecting battery priority over the grid, the load is powered by the battery as a priority.\
+                                        When selecting the grid priority over the battery, the load is powered by the grid as a priority."));
     Energy_priority->add_Specification();
 //    Energy_priority->Opermode_btn_clicked(mode_expelain->Energy_priority_btn);
 
     //主机地址说明
     Host_Address = new Specification(this,Host_Address_explain, myTable, 0, 4,\
-                                     "1", tr("Host Address"), \
-                                     tr("This is the device address. The default value is 1 and the adjustable range is 1 to 255. It is used to match the host address during EMS communication, and use 485 to change the slave address."));
-    Host_Address->add_Specification();//这是设备地址，默认值为1，可调范围在1~255之间，用于EMS通信时匹配主机地址，使用485改从机地址
+                                     "1", tr("Serial Communication Address"), \
+                                     tr("Serial Communication Address: The default value is 1, adjustable range is between 1 and 255, used for matching address during serial communication."));
+    Host_Address->add_Specification();//
 
     //串口1说明
     serial_port_1 = new Specification(this,serial_port_1_explain, myTable, 1, 4, \
-                                      "9600", tr("serial port 1"), \
-                                      tr("This is serial port 1, there are six options, namely 1200, 2400, 4800, 9600, 19200, 38400, serial port 1 default baud rate is 9600 BPS, eight data bits, no check, one stop bit(8, N, 1)."));
-    serial_port_1->add_Specification();//这是串口1，有六项可供选择，分别是1200、2400、4800、9600、19200、38400，串口1默认波特率是9600bps,八个数据位，无校验，一个停止位（8，N，1）
+                                      "9600", tr("serial port 2"), \
+                                      tr("Serial Port 2 has six selectable baud rates: 1200, 2400, 4800, 9600, 19200, and 38400.\
+                                         The default baud rate for Serial Port 2 is 9600 bps, with eight data bits, no parity, and one stop bit (8-N-1)."));
+    serial_port_1->add_Specification();//
 
     //串口2说明
     serial_port_2 = new Specification(this,serial_port_2_explain, myTable, 2, 4, \
-                                      "9600", tr("serial port 2"), \
-                                      tr("This is serial port 2, there are six options, namely 1200, 2400, 4800, 9600, 19200, 38400, serial port 2 default baud rate is 9600 BPS, eight data bits, no check, one stop bit(8, N, 1)."));
+                                      "9600", tr("serial port 3"), \
+                                      tr("Serial Port 3 has six selectable baud rates: 1200, 2400, 4800, 9600, 19200, and 38400. The default baud rate for Serial Port 3 is 9600 bps, with eight data bits, no parity, and one stop bit (8-N-1)."));
     serial_port_2->add_Specification();
 
     //串口3说明
     serial_port_3 = new Specification(this,serial_port_3_explain, myTable, 3, 4, \
-                                      "9600", tr("serial port 3"), \
-                                      tr("This is serial port 3, there are six options, namely 1200, 2400, 4800, 9600, 19200, 38400, serial port 3 default baud rate is 9600 BPS, eight data bits, no check, one stop bit(8, N, 1)."));
+                                      "9600", tr("serial port 4"), \
+                                      tr("Serial Port 4 has six selectable baud rates: 1200, 2400, 4800, 9600, 19200, and 38400. The default baud rate for Serial Port 4 is 9600 bps, with eight data bits, no parity, and one stop bit (8-N-1)."));
     serial_port_3->add_Specification();
 
     //串口4说明
     serial_port_4 = new Specification(this,serial_port_4_explain, myTable, 4, 4, \
-                                      "9600", tr("serial port 4"), \
-                                      tr("This is serial port 4, there are six options, namely 1200, 2400, 4800, 9600, 19200, 38400, serial port 4 default baud rate is 9600 BPS, eight data bits, no check, one stop bit(8, N, 1)."));
+                                      "9600", tr("serial port 5"), \
+                                      tr("Serial Port 5 has six selectable baud rates: 1200, 2400, 4800, 9600, 19200, and 38400. The default baud rate for Serial Port 5 is 9600 bps, with eight data bits, no parity, and one stop bit (8-N-1)."));
     serial_port_4->add_Specification();
 
     //串口5说明
     serial_port_5 = new Specification(this,serial_port_5_explain, myTable, 5, 4, \
-                                      "9600", tr("serial port 5"), \
-                                      tr("This is serial port 5, there are six options, namely 1200, 2400, 4800, 9600, 19200, 38400, serial port 5 default baud rate is 9600 BPS, eight data bits, no check, one stop bit(8, N, 1)."));
+                                      "9600", tr("serial port 6"), \
+                                      tr("Serial Port 6 has six selectable baud rates: 1200, 2400, 4800, 9600, 19200, and 38400. The default baud rate for Serial Port 6 is 9600 bps, with eight data bits, no parity, and one stop bit (8-N-1)."));
     serial_port_5->add_Specification();
 
     //CAN1说明
     Can_port_1 = new Specification(this,Can_port_1_explain, myTable, 6, 4, \
                                    "500", tr("Can port 1"), \
-                                   tr("This is the CAN1 port, the baud rate of PCS internal communication, the default baud rate is 500kbps, eight data bits, no check, one stop bit(8, N, 1)."));
-    Can_port_1->add_Specification();//这是CAN1端口，PCS内部通讯的波特率，默认波特率500kbps,八个数据位，无校验，一个停止位（8，N，1）
+                                   tr("CAN1 Port: The baud rate for internal communication is 500 kbps by default and cannot be modified."));
+    Can_port_1->add_Specification();//
 
     //CAN2说明
     Can_port_2 = new Specification(this,Can_port_2_explain, myTable, 7, 4, \
                                    "250", tr("Can port 2"), \
-                                   tr("This is the CAN2 port, the baud rate of communication between PCS and BMS, the default baud rate is 125, eight data bits, no check, one stop bit (8, N, 1)."));
-    Can_port_2->add_Specification();//这是CAN2端口，PCS与BMS通信的波特率，默认波特率125，八个数据位，无校验，一个停止位（8，N，1）
+                                   tr("CAN2 Port: Optional baud rates for the CAN2 port include 100, 125, 250, 500, and 800 kbps, with a default baud rate of 500 kbps."));
+    Can_port_2->add_Specification();//
 
     //释放充电标志说明
     Relese_Charge_mark = new Specification(this,Relese_Charge_mark_explain, myTable, 8, 4, \
-                                           tr("Follow\nbattery"), tr("Release Charging Ban Sign"), \
-                                           tr("This is the release of the forbidden charge flag, when the battery SOC is below the selected value, there are four options: Follow battery, 95%, 90%, 85%."));
-    Relese_Charge_mark->add_Specification();//这是释放禁充标志，当电池SOC低于选择值时解除禁充，有四项可选：跟随电池(Follow battery)、95%、90%、85%
+                                           tr("Follow\nbattery"), tr("Release Prohibited Charging Flag"), \
+                                           tr("When the battery SOC is below the selected value, there are four options: Follow battery, 95%, 90%, 85%."));
+    Relese_Charge_mark->add_Specification();//电池SOC低于选择值时解除禁充，有四项可选：跟随电池(Follow battery)、95%、90%、85%
 
-    //强充开启说明
-    ForceCharge_start = new Specification(this,ForceCharge_start_explain, myTable, 9, 4, \
-                                          "2.85", tr("ForceCharge start"), \
-                                          tr("When the minimum battery voltage is lower than this value, switch to the battery priority mode first, and the AC side will charge the battery with 10kw power."));
-    ForceCharge_start->add_Specification();
 
-    // 强充结束说明
-    ForceCharge_top = new Specification(this,ForceCharge_top_explain, myTable, 10, 4, \
-                                        "3.2", tr("ForceCharge top"), \
-                                        tr("When the maximum battery voltage is higher than this value, exit the battery priority mode and return to the pre-strong charge mode."));
-    ForceCharge_top->add_Specification();
 
     //协议版本说明
     ProtocolVersion = new Specification(this,ProtocolVersion_explain, myTable, 0, 7, \
                                         "V1.0", tr("ProtocolVersion"), \
-                                        tr("This is the protocol version number, which is used to view the current protocol version. The protocol version number defaults to V1.0."));
-    ProtocolVersion->add_Specification();//这是协议版本号，用于查看当前协议版本,协议版本号默认为V1.0
+                                        tr("Protocol version: View the current protocol version. The default protocol version number is V1.0."));
+    ProtocolVersion->add_Specification();//
 
     //用户密码说明
     UserPassPort = new Specification(this,UserPassPort_explain, myTable, 1, 7, \
-                                     "123456", tr("UserPassPort"), \
-                                     tr("This is the user password, you can reset the user password, the default user password 123456, (note: User password must be six digits)."));
-    UserPassPort->add_Specification();//这是用户密码，可供重新设置用户密码，默认用户密码123456,(注：用户密码必须为六位数)
+                                     "123456", tr("User password"), \
+                                     tr("User password: Available for resetting the user password. The default user password is 123456. (Note: The user password must be six digits.)"));
+    UserPassPort->add_Specification();//
 
     //超级权限说明
     RootPassport = new Specification(this,RootPassport_explain, myTable, 2, 7,\
-                                     "888888", tr("RootPassport"), \
-                                     tr("This is the super permission password, you can reset the super permission password, the default super permission password 888888, (Note: super permission password must be six digits)."));
-    RootPassport->add_Specification();//这是超级权限密码，可供重新设置超级权限密码，默认超级权限密码888888,(注超级权限密码必须为六位数）
+                                     "888888", tr("Admin password"), \
+                                     tr("Admin password: Available for resetting the admin password. The default admin password is 888888. (Note: The admin password must be six digits.)"));
+    RootPassport->add_Specification();//
 
     //语言说明
     Language = new Specification(this,Language_explain, myTable, 3, 7, \
@@ -4734,7 +4765,7 @@ void MyWidget::FunctionSet(QTableWidget *myTable)
     Sounds = new Specification(this,Sounds_explain, myTable, 5, 7, \
                                tr("Allow"), tr("Sounds"), \
                                tr("Set whether the display is enabled sound, which can be allowed(Allow) or prohibited(forbid)."));
-    Sounds->add_Specification();//设置显示屏是否开启声音，可供选择为允许(Allow)、禁止(forbid)
+    Sounds->add_Specification();//设置显示屏是否开启声音，可供选择为允许、禁止
 
     BmsComFaultTime = new Specification(this,BmsComFaultTime_explain, ui->UI_Parameter_Tab, 6, 7, \
                                tr("20"), tr("Bms Com. Fault Time"), \
