@@ -511,7 +511,13 @@ void MyWidget::MemoryAllocation()
     System_upgrade_explain = new QPushButton;    //系统升级说明
     Sounds_explain = new QPushButton;    //声音说明
     BmsComFaultTime_explain = new QPushButton;
-    EMSComFaultModel_explain= new QPushButton;
+    EMSComFaultModel_explain = new QPushButton;
+    DG_ECP_explain = new QPushButton;
+    DG_FCP_explain = new QPushButton;
+    Grid_ECP_explain = new QPushButton;
+    Grid_FCP_explain = new QPushButton;
+    Grid_EDP_explain = new QPushButton;
+    Grid_FDP_explain = new QPushButton;
 
     /***************************系统参数**************************/
     Change_rate_of_power_explain = new QPushButton;  //功率变化率说明
@@ -531,7 +537,7 @@ void MyWidget::MemoryAllocation()
     Output_vol_level_explain = new QPushButton;  //输出电压等级说明
     Converter_side_vol_level_explain = new QPushButton;  //逆变电压等级说明
     Output_reactive_power_mode_explain = new QPushButton;  //输出无功方式说明
-    Grid_recovery_scheduling_explain = new QPushButton;  //电网恢复调度开机说明
+//    Grid_recovery_scheduling_explain = new QPushButton;  //电网恢复调度开机说明
     Grid_recovery_time_explain = new QPushButton;  //电网恢复并网时间说明
     Grid_connected_mode_of_Inv_explain = new QPushButton;  //逆变器并网方式说明
     System_Anti_Reverse_Flow_explain = new QPushButton;
@@ -917,6 +923,12 @@ void MyWidget::FunctionSet_delete()
     delete Sounds;
     delete BmsComFaultTime;
     delete EMSComFaultModel;
+    delete DG_ECP_explain;
+    delete DG_FCP_explain;
+    delete Grid_ECP_explain;
+    delete Grid_FCP_explain;
+    delete Grid_EDP_explain;
+    delete Grid_FDP_explain;
 }
 /************系统参数 释放 说明************/
 void MyWidget::SystemParameter_delete()
@@ -938,7 +950,7 @@ void MyWidget::SystemParameter_delete()
     delete Output_vol_level;
     delete Converter_side_vol_level;
     delete Output_reactive_power_mode;
-    delete Grid_recovery_scheduling;
+//    delete Grid_recovery_scheduling;
     delete Grid_recovery_time;
     delete Grid_connected_mode_of_Inv;
     delete System_Anti_Reverse_Flow;
@@ -2164,9 +2176,17 @@ void MyWidget::on_UI_MenuBtn_clicked()
 /***********时间显示**********/
 void MyWidget::onTimerOut()
 {
-    QDateTime time = QDateTime::currentDateTime();
-    QString str = time.toString("dd-MM-yyyy HH:mm:ss");
-    ui->TimeSeting_btn->setText(str);
+    if(LanguageType == 1)
+    {
+        QDateTime time = QDateTime::currentDateTime();
+        QString str = time.toString("dd-MM-yyyy HH:mm:ss");
+        ui->TimeSeting_btn->setText(str);
+    }
+    else {
+        QDateTime time = QDateTime::currentDateTime();
+        QString str = time.toString("yyyy-MM-dd HH:mm:ss");
+        ui->TimeSeting_btn->setText(str);
+    }
 }
 
 /***************************************************************
@@ -2344,7 +2364,7 @@ void MyWidget::SystemlnformationVer_clicked(int nid)
 /*************绘制高级设置界面**************/
 void MyWidget::SystemParam_tbnt_released()
 {
-    for(int i=0; i<11;i++)//调整功能设置、系统参数设置的列宽行高
+    for(int i=0; i<13;i++)//调整功能设置、系统参数设置的列宽行高
     {
         ui->UI_Parameter_Tab->setColumnWidth(i,170);
         ui->UI_Parameter_Tab->setRowHeight(i++,50);
@@ -3450,7 +3470,7 @@ void MyWidget::AutoOperation(QTableWidget *myTable)
     QString temp12 = tr("Select: After this function is enabled, the system automatically runs the selected function mode within the specified period.");
     QString temp13 = tr("System for self-use");
     QString temp14 = tr("Peak price");//峰
-    QString temp15 = tr("In the peak shaving and valley filling mode, select 'Peak' periods and 'Valley' periods based on electricity prices.");//
+    QString temp15 = tr("In the peak shaving and valley filling mode, select 'Peak price' periods and 'Valley price' periods based on electricity prices.");//
     QString temp16 = tr("Peak-Valley");//峰-谷
     int line = 0;int column = 0;//当前解释的button行和列
 
@@ -4547,100 +4567,199 @@ void MyWidget::HistoryRecord(QTableWidget *myTable)
     Grade8->add_Specification();
     line=0;
     column=1;
-    StartTime9 = new Specification(this,StartTime9_explain, myTable, line++, column, \
-                                                    "29-7-2023 14:59:56", str4, str5);
-    StartTime9->add_Specification();
-    StartTime10 = new Specification(this,StartTime10_explain, myTable, line++, column, \
-                                                    "29-7-2023 14:59:55", str4, str5);
-    StartTime10->add_Specification();
-    StartTime11 = new Specification(this,StartTime11_explain, myTable, line++, column, \
-                                                    "29-7-2023 14:59:51", str4, str5);
-    StartTime11->add_Specification();
-    StartTime12 = new Specification(this,StartTime12_explain, myTable, line++, column, \
-                                                    "29-7-2023 14:59:51", str4, str5);
-    StartTime12->add_Specification();
-    StartTime13 = new Specification(this,StartTime13_explain, myTable, line++, column, \
-                                                    "29-7-2023 14:59:50", str4, str5);
-    StartTime13->add_Specification();
-    StartTime14 = new Specification(this,StartTime14_explain, myTable, line++, column, \
-                                                    "29-7-2023 14:57:50", str4, str5);
-    StartTime14->add_Specification();
-    StartTime15 = new Specification(this,StartTime15_explain, myTable, line++, column, \
-                                                    "29-7-2023 14:57:50", str4, str5);
-    StartTime15->add_Specification();
+    if(LanguageType==0)
+    {
+        StartTime9 = new Specification(this,StartTime9_explain, myTable, line++, column, \
+                                                        "2023-7-29 14:59:56", str4, str5);
+        StartTime9->add_Specification();
+        StartTime10 = new Specification(this,StartTime10_explain, myTable, line++, column, \
+                                                        "2023-7-29 14:59:55", str4, str5);
+        StartTime10->add_Specification();
+        StartTime11 = new Specification(this,StartTime11_explain, myTable, line++, column, \
+                                                        "2023-7-29 14:59:51", str4, str5);
+        StartTime11->add_Specification();
+        StartTime12 = new Specification(this,StartTime12_explain, myTable, line++, column, \
+                                                        "2023-7-29 14:59:51", str4, str5);
+        StartTime12->add_Specification();
+        StartTime13 = new Specification(this,StartTime13_explain, myTable, line++, column, \
+                                                        "2023-7-29 14:59:50", str4, str5);
+        StartTime13->add_Specification();
+        StartTime14 = new Specification(this,StartTime14_explain, myTable, line++, column, \
+                                                        "2023-7-29 14:57:50", str4, str5);
+        StartTime14->add_Specification();
+        StartTime15 = new Specification(this,StartTime15_explain, myTable, line++, column, \
+                                                        "2023-7-29 14:57:50", str4, str5);
+        StartTime15->add_Specification();
 
-    StartTime = new Specification(this,StartTime_explain, myTable, line++, column, \
-                                                    "6-5-2023 15:49:50", str4, str5);
-    StartTime->add_Specification();
-    StartTime2 = new Specification(this,StartTime2_explain, myTable, line++, column, \
-                                                    "6-5-2023 15:48:18", str4, str5);
-    StartTime2->add_Specification();
-    StartTime3 = new Specification(this,StartTime3_explain, myTable, line++, column, \
-                                                    "6-5-2023 15:39:3", str4, str5);
-    StartTime3->add_Specification();
-    StartTime4 = new Specification(this,StartTime4_explain, myTable, line++, column, \
-                                                    "6-5-2023 15:39:3", str4, str5);
-    StartTime4->add_Specification();
-    StartTime5 = new Specification(this,StartTime5_explain, myTable, line++, column, \
-                                                    "6-5-2023 15:39:3", str4, str5);
-    StartTime5->add_Specification();
-    StartTime6 = new Specification(this,StartTime6_explain, myTable, line++, column, \
-                                                    "6-5-2023 15:21:56", str4, str5);
-    StartTime6->add_Specification();
-    StartTime7 = new Specification(this,StartTime7_explain, myTable, line++, column, \
-                                                    "6-5-2023 15:21:38", str4, str5);
-    StartTime7->add_Specification();
-    StartTime8 = new Specification(this,StartTime8_explain, myTable, line++, column, \
-                                                    "6-5-2023 15:21:38", str4, str5);
-    StartTime8->add_Specification();
-    line=0;
-    column=2;
-    EndTime9 = new Specification(this,EndTime9_explain, myTable, line++, column, \
-                                                    "...", str6, str7);
-    EndTime9->add_Specification();
-    EndTime10 = new Specification(this,EndTime10_explain, myTable, line++, column, \
-                                                    "...", str6, str7);
-    EndTime10->add_Specification();
-    EndTime11 = new Specification(this,EndTime11_explain, myTable, line++, column, \
-                                                    "...", str6, str7);
-    EndTime11->add_Specification();
-    EndTime12 = new Specification(this,EndTime12_explain, myTable, line++, column, \
-                                                    "...", str6, str7);
-    EndTime12->add_Specification();
-    EndTime13 = new Specification(this,EndTime13_explain, myTable, line++, column, \
-                                                    "...", str6, str7);
-    EndTime13->add_Specification();
-    EndTime14 = new Specification(this,EndTime14_explain, myTable, line++, column, \
-                                                    "...", str6, str7);
-    EndTime14->add_Specification();
-    EndTime15 = new Specification(this,EndTime15_explain, myTable, line++, column, \
-                                                    "29-7-2023 16:42:24", str6, str7);
-    EndTime15->add_Specification();
+        StartTime = new Specification(this,StartTime_explain, myTable, line++, column, \
+                                                        "2023-5-6 15:49:50", str4, str5);
+        StartTime->add_Specification();
+        StartTime2 = new Specification(this,StartTime2_explain, myTable, line++, column, \
+                                                        "2023-5-6 15:48:18", str4, str5);
+        StartTime2->add_Specification();
+        StartTime3 = new Specification(this,StartTime3_explain, myTable, line++, column, \
+                                                        "2023-5-6 15:39:3", str4, str5);
+        StartTime3->add_Specification();
+        StartTime4 = new Specification(this,StartTime4_explain, myTable, line++, column, \
+                                                        "2023-5-6 15:39:3", str4, str5);
+        StartTime4->add_Specification();
+        StartTime5 = new Specification(this,StartTime5_explain, myTable, line++, column, \
+                                                        "2023-5-6 15:39:3", str4, str5);
+        StartTime5->add_Specification();
+        StartTime6 = new Specification(this,StartTime6_explain, myTable, line++, column, \
+                                                        "2023-5-6 15:21:56", str4, str5);
+        StartTime6->add_Specification();
+        StartTime7 = new Specification(this,StartTime7_explain, myTable, line++, column, \
+                                                        "2023-5-6 15:21:38", str4, str5);
+        StartTime7->add_Specification();
+        StartTime8 = new Specification(this,StartTime8_explain, myTable, line++, column, \
+                                                        "2023-5-6 15:21:38", str4, str5);
+        StartTime8->add_Specification();
+        line=0;
+        column=2;
+        EndTime9 = new Specification(this,EndTime9_explain, myTable, line++, column, \
+                                                        "...", str6, str7);
+        EndTime9->add_Specification();
+        EndTime10 = new Specification(this,EndTime10_explain, myTable, line++, column, \
+                                                        "...", str6, str7);
+        EndTime10->add_Specification();
+        EndTime11 = new Specification(this,EndTime11_explain, myTable, line++, column, \
+                                                        "...", str6, str7);
+        EndTime11->add_Specification();
+        EndTime12 = new Specification(this,EndTime12_explain, myTable, line++, column, \
+                                                        "...", str6, str7);
+        EndTime12->add_Specification();
+        EndTime13 = new Specification(this,EndTime13_explain, myTable, line++, column, \
+                                                        "...", str6, str7);
+        EndTime13->add_Specification();
+        EndTime14 = new Specification(this,EndTime14_explain, myTable, line++, column, \
+                                                        "...", str6, str7);
+        EndTime14->add_Specification();
+        EndTime15 = new Specification(this,EndTime15_explain, myTable, line++, column, \
+                                                        "2023-7-29 16:42:24", str6, str7);
+        EndTime15->add_Specification();
 
-    EndTime = new Specification(this,EndTime_explain, myTable, line++, column, \
-                                                    "-", str6, str7);
-    EndTime->add_Specification();
-    EndTime2 = new Specification(this,EndTime2_explain, myTable, line++, column, \
-                                                    "-", str6, str7);
-    EndTime2->add_Specification();
-    EndTime3 = new Specification(this,EndTime3_explain, myTable, line++, column, \
-                                                    "...", str6, str7);
-    EndTime3->add_Specification();
-    EndTime4 = new Specification(this,EndTime4_explain, myTable, line++, column, \
-                                                    "-", str6, str7);
-    EndTime4->add_Specification();
-    EndTime5 = new Specification(this,EndTime5_explain, myTable, line++, column, \
-                                                    "...", str6, str7);
-    EndTime5->add_Specification();
-    EndTime6 = new Specification(this,EndTime6_explain, myTable, line++, column, \
-                                                    "-", str6, str7);
-    EndTime6->add_Specification();
-    EndTime7 = new Specification(this,EndTime7_explain, myTable, line++, column, \
-                                                    "-", str6, str7);
-    EndTime7->add_Specification();
-    EndTime8 = new Specification(this,EndTime8_explain, myTable, line++, column, \
-                                                    "-", str6, str7);
-    EndTime8->add_Specification();
+        EndTime = new Specification(this,EndTime_explain, myTable, line++, column, \
+                                                        "-", str6, str7);
+        EndTime->add_Specification();
+        EndTime2 = new Specification(this,EndTime2_explain, myTable, line++, column, \
+                                                        "-", str6, str7);
+        EndTime2->add_Specification();
+        EndTime3 = new Specification(this,EndTime3_explain, myTable, line++, column, \
+                                                        "...", str6, str7);
+        EndTime3->add_Specification();
+        EndTime4 = new Specification(this,EndTime4_explain, myTable, line++, column, \
+                                                        "-", str6, str7);
+        EndTime4->add_Specification();
+        EndTime5 = new Specification(this,EndTime5_explain, myTable, line++, column, \
+                                                        "...", str6, str7);
+        EndTime5->add_Specification();
+        EndTime6 = new Specification(this,EndTime6_explain, myTable, line++, column, \
+                                                        "-", str6, str7);
+        EndTime6->add_Specification();
+        EndTime7 = new Specification(this,EndTime7_explain, myTable, line++, column, \
+                                                        "-", str6, str7);
+        EndTime7->add_Specification();
+        EndTime8 = new Specification(this,EndTime8_explain, myTable, line++, column, \
+                                                        "-", str6, str7);
+        EndTime8->add_Specification();
+    }
+    else {
+        StartTime9 = new Specification(this,StartTime9_explain, myTable, line++, column, \
+                                                        "29-7-2023 14:59:56", str4, str5);
+        StartTime9->add_Specification();
+        StartTime10 = new Specification(this,StartTime10_explain, myTable, line++, column, \
+                                                        "29-7-2023 14:59:55", str4, str5);
+        StartTime10->add_Specification();
+        StartTime11 = new Specification(this,StartTime11_explain, myTable, line++, column, \
+                                                        "29-7-2023 14:59:51", str4, str5);
+        StartTime11->add_Specification();
+        StartTime12 = new Specification(this,StartTime12_explain, myTable, line++, column, \
+                                                        "29-7-2023 14:59:51", str4, str5);
+        StartTime12->add_Specification();
+        StartTime13 = new Specification(this,StartTime13_explain, myTable, line++, column, \
+                                                        "29-7-2023 14:59:50", str4, str5);
+        StartTime13->add_Specification();
+        StartTime14 = new Specification(this,StartTime14_explain, myTable, line++, column, \
+                                                        "29-7-2023 14:57:50", str4, str5);
+        StartTime14->add_Specification();
+        StartTime15 = new Specification(this,StartTime15_explain, myTable, line++, column, \
+                                                        "29-7-2023 14:57:50", str4, str5);
+        StartTime15->add_Specification();
+
+        StartTime = new Specification(this,StartTime_explain, myTable, line++, column, \
+                                                        "6-5-2023 15:49:50", str4, str5);
+        StartTime->add_Specification();
+        StartTime2 = new Specification(this,StartTime2_explain, myTable, line++, column, \
+                                                        "6-5-2023 15:48:18", str4, str5);
+        StartTime2->add_Specification();
+        StartTime3 = new Specification(this,StartTime3_explain, myTable, line++, column, \
+                                                        "6-5-2023 15:39:3", str4, str5);
+        StartTime3->add_Specification();
+        StartTime4 = new Specification(this,StartTime4_explain, myTable, line++, column, \
+                                                        "6-5-2023 15:39:3", str4, str5);
+        StartTime4->add_Specification();
+        StartTime5 = new Specification(this,StartTime5_explain, myTable, line++, column, \
+                                                        "6-5-2023 15:39:3", str4, str5);
+        StartTime5->add_Specification();
+        StartTime6 = new Specification(this,StartTime6_explain, myTable, line++, column, \
+                                                        "6-5-2023 15:21:56", str4, str5);
+        StartTime6->add_Specification();
+        StartTime7 = new Specification(this,StartTime7_explain, myTable, line++, column, \
+                                                        "6-5-2023 15:21:38", str4, str5);
+        StartTime7->add_Specification();
+        StartTime8 = new Specification(this,StartTime8_explain, myTable, line++, column, \
+                                                        "6-5-2023 15:21:38", str4, str5);
+        StartTime8->add_Specification();
+        line=0;
+        column=2;
+        EndTime9 = new Specification(this,EndTime9_explain, myTable, line++, column, \
+                                                        "...", str6, str7);
+        EndTime9->add_Specification();
+        EndTime10 = new Specification(this,EndTime10_explain, myTable, line++, column, \
+                                                        "...", str6, str7);
+        EndTime10->add_Specification();
+        EndTime11 = new Specification(this,EndTime11_explain, myTable, line++, column, \
+                                                        "...", str6, str7);
+        EndTime11->add_Specification();
+        EndTime12 = new Specification(this,EndTime12_explain, myTable, line++, column, \
+                                                        "...", str6, str7);
+        EndTime12->add_Specification();
+        EndTime13 = new Specification(this,EndTime13_explain, myTable, line++, column, \
+                                                        "...", str6, str7);
+        EndTime13->add_Specification();
+        EndTime14 = new Specification(this,EndTime14_explain, myTable, line++, column, \
+                                                        "...", str6, str7);
+        EndTime14->add_Specification();
+        EndTime15 = new Specification(this,EndTime15_explain, myTable, line++, column, \
+                                                        "29-7-2023 16:42:24", str6, str7);
+        EndTime15->add_Specification();
+
+        EndTime = new Specification(this,EndTime_explain, myTable, line++, column, \
+                                                        "-", str6, str7);
+        EndTime->add_Specification();
+        EndTime2 = new Specification(this,EndTime2_explain, myTable, line++, column, \
+                                                        "-", str6, str7);
+        EndTime2->add_Specification();
+        EndTime3 = new Specification(this,EndTime3_explain, myTable, line++, column, \
+                                                        "...", str6, str7);
+        EndTime3->add_Specification();
+        EndTime4 = new Specification(this,EndTime4_explain, myTable, line++, column, \
+                                                        "-", str6, str7);
+        EndTime4->add_Specification();
+        EndTime5 = new Specification(this,EndTime5_explain, myTable, line++, column, \
+                                                        "...", str6, str7);
+        EndTime5->add_Specification();
+        EndTime6 = new Specification(this,EndTime6_explain, myTable, line++, column, \
+                                                        "-", str6, str7);
+        EndTime6->add_Specification();
+        EndTime7 = new Specification(this,EndTime7_explain, myTable, line++, column, \
+                                                        "-", str6, str7);
+        EndTime7->add_Specification();
+        EndTime8 = new Specification(this,EndTime8_explain, myTable, line++, column, \
+                                                        "-", str6, str7);
+        EndTime8->add_Specification();
+    }
     line=0;
     column=3;
     Describe9 = new Specification(this,Describe9_explain, myTable, line++, column, \
@@ -4699,42 +4818,83 @@ void MyWidget::OperationLog_tab(QTableWidget *myTable)
     QString str2 = tr("Record Event");//事件记录
     QString str3 = tr("System settings operation records.");
     int line=0;int column=0;
-    ModificationTime = new Specification(this,ModificationTime_explain, myTable, line++, column, \
-                                                    "12-05-2023 11:32:45", str, \
-                                                    str1);
-    ModificationTime->add_Specification();
-    ModificationTime2 = new Specification(this,ModificationTime2_explain, myTable, line++, column, \
-                                                    "12-05-2023 11:32:33", str, \
-                                                    str1);
-    ModificationTime2->add_Specification();
-    ModificationTime3 = new Specification(this,ModificationTime3_explain, myTable, line++, column, \
-                                                    "11-05-2023 19:29:24", str, \
-                                                    str1);
-    ModificationTime3->add_Specification();
-    ModificationTime4 = new Specification(this,ModificationTime4_explain, myTable, line++, column, \
-                                                    "11-05-2023 19:29:21", str, \
-                                                    str1);
-    ModificationTime4->add_Specification();
-    ModificationTime5 = new Specification(this,ModificationTime5_explain, myTable, line++, column, \
-                                                    "11-05-2023 19:29:10", str, \
-                                                    str1);
-    ModificationTime5->add_Specification();
-    ModificationTime6 = new Specification(this,ModificationTime6_explain, myTable, line++, column, \
-                                                    "11-05-2023 19:29:07", str, \
-                                                    str1);
-    ModificationTime6->add_Specification();
-    ModificationTime9 = new Specification(this,ModificationTime9_explain, myTable, line++, column, \
-                                                    "11-05-2023 11:20:58", str, \
-                                                    str1);
-    ModificationTime9->add_Specification();
-    ModificationTime11 = new Specification(this,ModificationTime11_explain, myTable, line++, column, \
-                                                    "11-05-2023 11:02:18", str, \
-                                                    str1);
-    ModificationTime11->add_Specification();
-    ModificationTime12 = new Specification(this,ModificationTime12_explain, myTable, line++, column, \
-                                                    "11-05-2023 11:02:14", str, \
-                                                    str1);
-    ModificationTime12->add_Specification();
+    if(LanguageType == 0)
+    {
+        ModificationTime = new Specification(this,ModificationTime_explain, myTable, line++, column, \
+                                                        "2023-05-12 11:32:45", str, \
+                                                        str1);
+        ModificationTime->add_Specification();
+        ModificationTime2 = new Specification(this,ModificationTime2_explain, myTable, line++, column, \
+                                                        "2023-05-12 11:32:33", str, \
+                                                        str1);
+        ModificationTime2->add_Specification();
+        ModificationTime3 = new Specification(this,ModificationTime3_explain, myTable, line++, column, \
+                                                        "2023-05-11 19:29:24", str, \
+                                                        str1);
+        ModificationTime3->add_Specification();
+        ModificationTime4 = new Specification(this,ModificationTime4_explain, myTable, line++, column, \
+                                                        "2023-05-11 19:29:21", str, \
+                                                        str1);
+        ModificationTime4->add_Specification();
+        ModificationTime5 = new Specification(this,ModificationTime5_explain, myTable, line++, column, \
+                                                        "2023-05-11 19:29:10", str, \
+                                                        str1);
+        ModificationTime5->add_Specification();
+        ModificationTime6 = new Specification(this,ModificationTime6_explain, myTable, line++, column, \
+                                                        "2023-05-11 19:29:07", str, \
+                                                        str1);
+        ModificationTime6->add_Specification();
+        ModificationTime9 = new Specification(this,ModificationTime9_explain, myTable, line++, column, \
+                                                        "2023-05-11 11:20:58", str, \
+                                                        str1);
+        ModificationTime9->add_Specification();
+        ModificationTime11 = new Specification(this,ModificationTime11_explain, myTable, line++, column, \
+                                                        "2023-05-11 11:02:18", str, \
+                                                        str1);
+        ModificationTime11->add_Specification();
+        ModificationTime12 = new Specification(this,ModificationTime12_explain, myTable, line++, column, \
+                                                        "2023-05-11 11:02:14", str, \
+                                                        str1);
+        ModificationTime12->add_Specification();
+    }
+    else {
+        ModificationTime = new Specification(this,ModificationTime_explain, myTable, line++, column, \
+                                                        "12-05-2023 11:32:45", str, \
+                                                        str1);
+        ModificationTime->add_Specification();
+        ModificationTime2 = new Specification(this,ModificationTime2_explain, myTable, line++, column, \
+                                                        "12-05-2023 11:32:33", str, \
+                                                        str1);
+        ModificationTime2->add_Specification();
+        ModificationTime3 = new Specification(this,ModificationTime3_explain, myTable, line++, column, \
+                                                        "11-05-2023 19:29:24", str, \
+                                                        str1);
+        ModificationTime3->add_Specification();
+        ModificationTime4 = new Specification(this,ModificationTime4_explain, myTable, line++, column, \
+                                                        "11-05-2023 19:29:21", str, \
+                                                        str1);
+        ModificationTime4->add_Specification();
+        ModificationTime5 = new Specification(this,ModificationTime5_explain, myTable, line++, column, \
+                                                        "11-05-2023 19:29:10", str, \
+                                                        str1);
+        ModificationTime5->add_Specification();
+        ModificationTime6 = new Specification(this,ModificationTime6_explain, myTable, line++, column, \
+                                                        "11-05-2023 19:29:07", str, \
+                                                        str1);
+        ModificationTime6->add_Specification();
+        ModificationTime9 = new Specification(this,ModificationTime9_explain, myTable, line++, column, \
+                                                        "11-05-2023 11:20:58", str, \
+                                                        str1);
+        ModificationTime9->add_Specification();
+        ModificationTime11 = new Specification(this,ModificationTime11_explain, myTable, line++, column, \
+                                                        "11-05-2023 11:02:18", str, \
+                                                        str1);
+        ModificationTime11->add_Specification();
+        ModificationTime12 = new Specification(this,ModificationTime12_explain, myTable, line++, column, \
+                                                        "11-05-2023 11:02:14", str, \
+                                                        str1);
+        ModificationTime12->add_Specification();
+    }
     line=0;
     column=1;
     EventRecord = new Specification(this,EventRecord_explain, myTable, line++, column, \
@@ -4951,6 +5111,36 @@ MEGA, LISHEN, GREATPOWER, GOLD, BMSER, LANLI, SLANPOWER, PYLON, CATL, SUOYING, X
                                tr("120"), tr("EMS Com. Fault Model"), \
                                tr("EMS communication fault determination time: The EMS communication fault determination time refers to the time when the communication between the EMS is disconnected and the communication is not recovered after a preset period of time."));
     EMSComFaultModel->add_Specification();
+
+    DG_ECP = new Specification(this,DG_ECP_explain, ui->UI_Parameter_Tab, 8, 7, \
+                               tr("0"), tr("DG ECP"), \
+                               tr("In chai-hair mode, the AC power reference value of the saturation zone and the equalization zone."));
+    DG_ECP->add_Specification();
+
+    DG_FCP = new Specification(this,DG_FCP_explain, ui->UI_Parameter_Tab, 9, 7, \
+                               tr("0"), tr("DG FCP"), \
+                               tr("Power reference value of AC side of the discharge area in Chai hair mode."));
+    DG_FCP->add_Specification();
+
+    Grid_ECP = new Specification(this,Grid_ECP_explain, ui->UI_Parameter_Tab, 10, 7, \
+                               tr("0"), tr("Grid ECP"), \
+                               tr("In the power grid mode, the AC power reference value in the saturation zone and the equilibrium zone."));
+    Grid_ECP->add_Specification();
+
+    Grid_FCP = new Specification(this,Grid_FCP_explain, ui->UI_Parameter_Tab, 11, 7, \
+                               tr("0"), tr("Grid FCP"), \
+                               tr("In power grid mode, this parameter specifies the power reference value on the AC side of the vent area."));
+    Grid_FCP->add_Specification();
+
+    Grid_EDP = new Specification(this,Grid_EDP_explain, ui->UI_Parameter_Tab, 12, 7, \
+                               tr("0"), tr("Grid EDP"), \
+                               tr("The equalization zone limits the discharge power of the system to the grid side."));
+    Grid_EDP->add_Specification();
+
+    Grid_FDP = new Specification(this,Grid_FDP_explain, ui->UI_Parameter_Tab, 13, 7, \
+                               tr("0"), tr("Grid FDP"), \
+                               tr("The discharge zone limits the discharge power of the system to the power grid side."));
+    Grid_FDP->add_Specification();
 }
 /********************系统参数设置页说明***********************/
 void MyWidget::SystemParameter(QTableWidget *myTable)
@@ -5065,44 +5255,44 @@ void MyWidget::SystemParameter(QTableWidget *myTable)
     Output_reactive_power_mode->add_Specification();
 
     //电网恢复调度开机说明
-    Grid_recovery_scheduling = new Specification(this,Grid_recovery_scheduling_explain, myTable, 6, 4, \
+    /*Grid_recovery_scheduling = new Specification(this,Grid_recovery_scheduling_explain, myTable, 6, 4, \
                                                  tr("Not Allow"), tr("Grid recovery scheduling"), \
                                                  tr("The power grid recovery scheduling startup Settings, there are two options: Allow (Allow), Not allow (Not Allow), the setting is invalid."));
-    Grid_recovery_scheduling->add_Specification();//电网恢复调度开机设置，有两项可选：允许(Allow)、不允许(Not Allow),设置无效
+    Grid_recovery_scheduling->add_Specification();//电网恢复调度开机设置，有两项可选：允许(Allow)、不允许(Not Allow),设置无效*/
 
     //电网恢复并网时间说明
-    Grid_recovery_time = new Specification(this, Grid_recovery_time_explain, myTable, 7, 4, \
+    Grid_recovery_time = new Specification(this, Grid_recovery_time_explain, myTable, 6, 4, \
                                            "0", tr("Grid recovery time"), \
-                                           tr("Grid Restoration and Grid-on Time: When grid restoration scheduling allows for startup, it can be set according to actual requirements."));
+                                           tr("Grid restoration time: reserved function, setting invalid."));
     Grid_recovery_time->add_Specification();//
 
     //逆变器并网方式说明
-    Grid_connected_mode_of_Inv = new Specification(this,Grid_connected_mode_of_Inv_explain, myTable, 8, 4, \
+    Grid_connected_mode_of_Inv = new Specification(this,Grid_connected_mode_of_Inv_explain, myTable, 7, 4, \
                                                    tr("Non\ncountercurrent"), tr("Converter Anti-Reverse Flow"), \
                                                    tr("Converter Anti-Reverse Flow: Enable, Disable;\
 \nEnabling prevents converter current from flowing into the grid, while Disabling allows converter current to flow into the grid."));
     Grid_connected_mode_of_Inv->add_Specification();
 
-    System_Anti_Reverse_Flow = new Specification(this,System_Anti_Reverse_Flow_explain, myTable, 9, 4, \
+    System_Anti_Reverse_Flow = new Specification(this,System_Anti_Reverse_Flow_explain, myTable, 8, 4, \
                                                    tr("Non\ncountercurrent"), tr("System Anti-Reverse Flow"), \
                                                    tr("System Anti-Reverse Flow: Enable, Disable;\
 \nEnabling prevents system current from flowing into the grid, while Disabling allows system current to flow into the grid."));
     System_Anti_Reverse_Flow->add_Specification();
 
     //过频降载说明
-    Pshedding_Freq = new Specification(this,Pshedding_Freq_explain, myTable, 10, 4, \
+    Pshedding_Freq = new Specification(this,Pshedding_Freq_explain, myTable, 9, 4, \
                                        tr("prohibit"), tr("Pshedding Freq"), \
                                        tr("Over-frequency load shedding: It can be selected as enabled or disabled. (Note: This option is generally used in large grid-on power stations.)"));
     Pshedding_Freq->add_Specification();//这是过频降载设置，有两项可选：允许(Enable)、不允许(prohibit),(注：在大型并网电站使用）
 
     //QP曲线说明
-    QP_curve = new Specification(this,QP_curve_explain, myTable, 11, 4, \
+    QP_curve = new Specification(this,QP_curve_explain, myTable, 10, 4, \
                                  tr("prohibit"), tr("QP curve"), \
                                  tr("QP curve: It can be selected as enabled or disabled. (Note: This option is generally used in large grid-on power stations.)"));
     QP_curve->add_Specification();//这是QP曲线设置，有两项可选：允许(Enable)、不允许(prohibit),(注：在大型并网电站使用）
 
     //恒压并机说明
-    CV_parallel = new Specification(this,CV_parallel_explain, myTable, 12, 4, \
+    CV_parallel = new Specification(this,CV_parallel_explain, myTable, 11, 4, \
                                     tr("prohibit"), tr("CV parallel"), \
                                     tr("Constant voltage parallel operation enable: It can be selected as enabled or disabled.  (Note: This option is generally used in large grid-on power stations.)"));
     CV_parallel->add_Specification();

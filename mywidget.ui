@@ -62,7 +62,7 @@
    <item row="0" column="0">
     <widget class="QStackedWidget" name="UI_stackedWidget">
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="BasicSet_page">
       <widget class="QWidget" name="layoutWidget">
@@ -161,7 +161,7 @@ color: rgb(255, 255, 255);</string>
            </font>
           </property>
           <property name="currentIndex">
-           <number>2</number>
+           <number>0</number>
           </property>
           <widget class="QWidget" name="UI_Parameter_page">
            <attribute name="title">
@@ -212,7 +212,7 @@ color: rgb(255, 255, 255);</string>
                <cursorShape>ArrowCursor</cursorShape>
               </property>
               <property name="rowCount">
-               <number>10</number>
+               <number>14</number>
               </property>
               <property name="columnCount">
                <number>9</number>
@@ -226,6 +226,10 @@ color: rgb(255, 255, 255);</string>
               <attribute name="verticalHeaderVisible">
                <bool>false</bool>
               </attribute>
+              <row/>
+              <row/>
+              <row/>
+              <row/>
               <row/>
               <row/>
               <row/>
@@ -693,7 +697,7 @@ color: rgb(255, 255, 255);</string>
               </item>
               <item row="8" column="6">
                <property name="text">
-                <string/>
+                <string>DG ECP</string>
                </property>
                <property name="textAlignment">
                 <set>AlignCenter</set>
@@ -701,7 +705,7 @@ color: rgb(255, 255, 255);</string>
               </item>
               <item row="8" column="8">
                <property name="text">
-                <string/>
+                <string>kW</string>
                </property>
                <property name="textAlignment">
                 <set>AlignCenter</set>
@@ -741,7 +745,7 @@ color: rgb(255, 255, 255);</string>
               </item>
               <item row="9" column="6">
                <property name="text">
-                <string/>
+                <string>DG FCP</string>
                </property>
                <property name="textAlignment">
                 <set>AlignCenter</set>
@@ -749,7 +753,71 @@ color: rgb(255, 255, 255);</string>
               </item>
               <item row="9" column="8">
                <property name="text">
-                <string/>
+                <string>kW</string>
+               </property>
+               <property name="textAlignment">
+                <set>AlignCenter</set>
+               </property>
+              </item>
+              <item row="10" column="6">
+               <property name="text">
+                <string>Grid ECP</string>
+               </property>
+               <property name="textAlignment">
+                <set>AlignCenter</set>
+               </property>
+              </item>
+              <item row="10" column="8">
+               <property name="text">
+                <string>kW</string>
+               </property>
+               <property name="textAlignment">
+                <set>AlignCenter</set>
+               </property>
+              </item>
+              <item row="11" column="6">
+               <property name="text">
+                <string>Grid FCP</string>
+               </property>
+               <property name="textAlignment">
+                <set>AlignCenter</set>
+               </property>
+              </item>
+              <item row="11" column="8">
+               <property name="text">
+                <string>kW</string>
+               </property>
+               <property name="textAlignment">
+                <set>AlignCenter</set>
+               </property>
+              </item>
+              <item row="12" column="6">
+               <property name="text">
+                <string>Grid EDP</string>
+               </property>
+               <property name="textAlignment">
+                <set>AlignCenter</set>
+               </property>
+              </item>
+              <item row="12" column="8">
+               <property name="text">
+                <string>kW</string>
+               </property>
+               <property name="textAlignment">
+                <set>AlignCenter</set>
+               </property>
+              </item>
+              <item row="13" column="6">
+               <property name="text">
+                <string>Grid FDP</string>
+               </property>
+               <property name="textAlignment">
+                <set>AlignCenter</set>
+               </property>
+              </item>
+              <item row="13" column="8">
+               <property name="text">
+                <string>kW</string>
                </property>
                <property name="textAlignment">
                 <set>AlignCenter</set>
@@ -784,7 +852,7 @@ color: rgb(255, 255, 255);</string>
              </font>
             </property>
             <property name="rowCount">
-             <number>13</number>
+             <number>12</number>
             </property>
             <property name="columnCount">
              <number>9</number>
@@ -798,7 +866,6 @@ color: rgb(255, 255, 255);</string>
             <attribute name="verticalHeaderVisible">
              <bool>false</bool>
             </attribute>
-            <row/>
             <row/>
             <row/>
             <row/>
@@ -1146,7 +1213,7 @@ color: rgb(255, 255, 255);</string>
             </item>
             <item row="6" column="3">
              <property name="text">
-              <string>Grid recovery scheduling</string>
+              <string>Grid recovery time</string>
              </property>
              <property name="textAlignment">
               <set>AlignCenter</set>
@@ -1154,7 +1221,7 @@ color: rgb(255, 255, 255);</string>
             </item>
             <item row="6" column="5">
              <property name="text">
-              <string>-</string>
+              <string>s</string>
              </property>
              <property name="textAlignment">
               <set>AlignCenter</set>
@@ -1199,7 +1266,7 @@ color: rgb(255, 255, 255);</string>
             </item>
             <item row="7" column="3">
              <property name="text">
-              <string>Grid recovery time</string>
+              <string>Converter Anti-Reverse Flow</string>
              </property>
              <property name="textAlignment">
               <set>AlignCenter</set>
@@ -1207,7 +1274,7 @@ color: rgb(255, 255, 255);</string>
             </item>
             <item row="7" column="5">
              <property name="text">
-              <string>s</string>
+              <string>-</string>
              </property>
              <property name="textAlignment">
               <set>AlignCenter</set>
@@ -1252,7 +1319,7 @@ color: rgb(255, 255, 255);</string>
             </item>
             <item row="8" column="3">
              <property name="text">
-              <string>Converter Anti-Reverse Flow</string>
+              <string>System Anti-Reverse Flow</string>
              </property>
              <property name="textAlignment">
               <set>AlignCenter</set>
@@ -1300,7 +1367,7 @@ color: rgb(255, 255, 255);</string>
             </item>
             <item row="9" column="3">
              <property name="text">
-              <string>System Anti-Reverse Flow</string>
+              <string>PsheddingFreq</string>
              </property>
              <property name="textAlignment">
               <set>AlignCenter</set>
@@ -1348,7 +1415,7 @@ color: rgb(255, 255, 255);</string>
             </item>
             <item row="10" column="3">
              <property name="text">
-              <string>PsheddingFreq</string>
+              <string>QP curve</string>
              </property>
              <property name="textAlignment">
               <set>AlignCenter</set>
@@ -1396,7 +1463,7 @@ color: rgb(255, 255, 255);</string>
             </item>
             <item row="11" column="3">
              <property name="text">
-              <string>QP curve</string>
+              <string>CV Parallel</string>
              </property>
              <property name="textAlignment">
               <set>AlignCenter</set>
@@ -1411,22 +1478,6 @@ color: rgb(255, 255, 255);</string>
              </property>
             </item>
             <item row="11" column="5">
-             <property name="text">
-              <string>-</string>
-             </property>
-             <property name="textAlignment">
-              <set>AlignCenter</set>
-             </property>
-            </item>
-            <item row="12" column="3">
-             <property name="text">
-              <string>CV Parallel</string>
-             </property>
-             <property name="textAlignment">
-              <set>AlignCenter</set>
-             </property>
-            </item>
-            <item row="12" column="5">
              <property name="text">
               <string>-</string>
              </property>
@@ -2740,7 +2791,7 @@ Language</string>
             <enum>QFrame::Raised</enum>
            </property>
            <property name="currentIndex">
-            <number>1</number>
+            <number>0</number>
            </property>
            <widget class="QWidget" name="Host_page">
             <widget class="QPushButton" name="Bypass_Grid_btn">
@@ -4165,7 +4216,7 @@ Language</string>
                 <string notr="true"/>
                </property>
                <property name="currentIndex">
-                <number>2</number>
+                <number>3</number>
                </property>
                <widget class="QWidget" name="RT_Data_page">
                 <attribute name="title">

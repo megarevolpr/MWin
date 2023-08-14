@@ -677,6 +677,13 @@ public:
     QPushButton *Sounds_explain;    //声音说明
     QPushButton *BmsComFaultTime_explain;
     QPushButton *EMSComFaultModel_explain;
+    QPushButton *DG_ECP_explain;
+    QPushButton *DG_FCP_explain;
+    QPushButton *Grid_ECP_explain;
+    QPushButton *Grid_FCP_explain;
+    QPushButton *Grid_EDP_explain;
+    QPushButton *Grid_FDP_explain;
+
 
     Specification *Battery_type;
     Specification *BMS_Comm_type;
@@ -706,6 +713,12 @@ public:
     Specification *Sounds;
     Specification *BmsComFaultTime;
     Specification *EMSComFaultModel;
+    Specification *DG_ECP;
+    Specification *DG_FCP;
+    Specification *Grid_ECP;
+    Specification *Grid_FCP;
+    Specification *Grid_EDP;
+    Specification *Grid_FDP;
 
     /***************************系统参数**************************/
     QPushButton *Change_rate_of_power_explain;  //功率变化率说明
@@ -725,7 +738,7 @@ public:
     QPushButton *Output_vol_level_explain;  //输出电压等级说明
     QPushButton *Converter_side_vol_level_explain;  //逆变电压等级说明
     QPushButton *Output_reactive_power_mode_explain;  //输出无功方式说明
-    QPushButton *Grid_recovery_scheduling_explain;  //电网恢复调度开机说明
+//    QPushButton *Grid_recovery_scheduling_explain;  //电网恢复调度开机说明
     QPushButton *Grid_recovery_time_explain;  //电网恢复并网时间说明
     QPushButton *Grid_connected_mode_of_Inv_explain;  //逆变器并网方式说明
     QPushButton *System_Anti_Reverse_Flow_explain;  //系统防逆流
@@ -761,7 +774,7 @@ public:
     Specification *Output_vol_level;
     Specification *Converter_side_vol_level;
     Specification *Output_reactive_power_mode;
-    Specification *Grid_recovery_scheduling;
+//    Specification *Grid_recovery_scheduling;
     Specification *Grid_recovery_time;
     Specification *Grid_connected_mode_of_Inv;
     Specification *System_Anti_Reverse_Flow;  //系统防逆流

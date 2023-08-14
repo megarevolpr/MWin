@@ -196,42 +196,41 @@ automatically and reset time</source>
         <location filename="../mywidget.ui" line="566"/>
         <location filename="../mywidget.ui" line="619"/>
         <location filename="../mywidget.ui" line="720"/>
-        <location filename="../mywidget.ui" line="849"/>
-        <location filename="../mywidget.ui" line="865"/>
-        <location filename="../mywidget.ui" line="913"/>
-        <location filename="../mywidget.ui" line="966"/>
-        <location filename="../mywidget.ui" line="1019"/>
-        <location filename="../mywidget.ui" line="1072"/>
-        <location filename="../mywidget.ui" line="1088"/>
-        <location filename="../mywidget.ui" line="1104"/>
-        <location filename="../mywidget.ui" line="1125"/>
-        <location filename="../mywidget.ui" line="1141"/>
-        <location filename="../mywidget.ui" line="1157"/>
-        <location filename="../mywidget.ui" line="1178"/>
-        <location filename="../mywidget.ui" line="1194"/>
-        <location filename="../mywidget.ui" line="1231"/>
-        <location filename="../mywidget.ui" line="1247"/>
-        <location filename="../mywidget.ui" line="1263"/>
-        <location filename="../mywidget.ui" line="1279"/>
-        <location filename="../mywidget.ui" line="1295"/>
-        <location filename="../mywidget.ui" line="1311"/>
-        <location filename="../mywidget.ui" line="1343"/>
-        <location filename="../mywidget.ui" line="1359"/>
-        <location filename="../mywidget.ui" line="1415"/>
-        <location filename="../mywidget.ui" line="1431"/>
-        <location filename="../mywidget.ui" line="8397"/>
-        <location filename="../mywidget.ui" line="8413"/>
-        <location filename="../mywidget.ui" line="8445"/>
-        <location filename="../mywidget.ui" line="8461"/>
-        <location filename="../mywidget.ui" line="8477"/>
-        <location filename="../mywidget.ui" line="8493"/>
-        <location filename="../mywidget.ui" line="8509"/>
-        <location filename="../mywidget.ui" line="8525"/>
-        <location filename="../mywidget.ui" line="9064"/>
-        <location filename="../mywidget.ui" line="9244"/>
-        <location filename="../mywidget.ui" line="9308"/>
-        <location filename="../mywidget.ui" line="9372"/>
-        <location filename="../mywidget.ui" line="9436"/>
+        <location filename="../mywidget.ui" line="848"/>
+        <location filename="../mywidget.ui" line="864"/>
+        <location filename="../mywidget.ui" line="912"/>
+        <location filename="../mywidget.ui" line="965"/>
+        <location filename="../mywidget.ui" line="1018"/>
+        <location filename="../mywidget.ui" line="1071"/>
+        <location filename="../mywidget.ui" line="1087"/>
+        <location filename="../mywidget.ui" line="1103"/>
+        <location filename="../mywidget.ui" line="1124"/>
+        <location filename="../mywidget.ui" line="1140"/>
+        <location filename="../mywidget.ui" line="1177"/>
+        <location filename="../mywidget.ui" line="1193"/>
+        <location filename="../mywidget.ui" line="1209"/>
+        <location filename="../mywidget.ui" line="1230"/>
+        <location filename="../mywidget.ui" line="1246"/>
+        <location filename="../mywidget.ui" line="1262"/>
+        <location filename="../mywidget.ui" line="1278"/>
+        <location filename="../mywidget.ui" line="1294"/>
+        <location filename="../mywidget.ui" line="1310"/>
+        <location filename="../mywidget.ui" line="1342"/>
+        <location filename="../mywidget.ui" line="1358"/>
+        <location filename="../mywidget.ui" line="1414"/>
+        <location filename="../mywidget.ui" line="8380"/>
+        <location filename="../mywidget.ui" line="8396"/>
+        <location filename="../mywidget.ui" line="8428"/>
+        <location filename="../mywidget.ui" line="8444"/>
+        <location filename="../mywidget.ui" line="8460"/>
+        <location filename="../mywidget.ui" line="8476"/>
+        <location filename="../mywidget.ui" line="8492"/>
+        <location filename="../mywidget.ui" line="8508"/>
+        <location filename="../mywidget.ui" line="9047"/>
+        <location filename="../mywidget.ui" line="9227"/>
+        <location filename="../mywidget.ui" line="9291"/>
+        <location filename="../mywidget.ui" line="9355"/>
+        <location filename="../mywidget.ui" line="9419"/>
         <location filename="../mywidget.cpp" line="1510"/>
         <source>-</source>
         <translation>-</translation>
@@ -310,12 +309,12 @@ automatically and reset time</source>
     <message>
         <location filename="../mywidget.ui" line="460"/>
         <location filename="../mywidget.ui" line="672"/>
-        <location filename="../mywidget.ui" line="897"/>
-        <location filename="../mywidget.ui" line="7057"/>
-        <location filename="../mywidget.ui" line="7081"/>
-        <location filename="../mywidget.ui" line="7105"/>
-        <location filename="../mywidget.ui" line="7129"/>
-        <location filename="../mywidget.ui" line="8429"/>
+        <location filename="../mywidget.ui" line="896"/>
+        <location filename="../mywidget.ui" line="7040"/>
+        <location filename="../mywidget.ui" line="7064"/>
+        <location filename="../mywidget.ui" line="7088"/>
+        <location filename="../mywidget.ui" line="7112"/>
+        <location filename="../mywidget.ui" line="8412"/>
         <source>kW</source>
         <translation>kW</translation>
     </message>
@@ -387,10 +386,10 @@ automatically and reset time</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="688"/>
-        <location filename="../mywidget.ui" line="982"/>
-        <location filename="../mywidget.ui" line="1035"/>
-        <location filename="../mywidget.ui" line="6445"/>
-        <location filename="../mywidget.ui" line="6463"/>
+        <location filename="../mywidget.ui" line="981"/>
+        <location filename="../mywidget.ui" line="1034"/>
+        <location filename="../mywidget.ui" line="6428"/>
+        <location filename="../mywidget.ui" line="6446"/>
         <source>%</source>
         <translation>%</translation>
     </message>
@@ -405,17 +404,17 @@ automatically and reset time</source>
         <translation type="vanished">强充开启</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="998"/>
-        <location filename="../mywidget.ui" line="1051"/>
-        <location filename="../mywidget.ui" line="6409"/>
-        <location filename="../mywidget.ui" line="8557"/>
-        <location filename="../mywidget.ui" line="9048"/>
-        <location filename="../mywidget.ui" line="9080"/>
-        <location filename="../mywidget.ui" line="9096"/>
-        <location filename="../mywidget.ui" line="9162"/>
-        <location filename="../mywidget.ui" line="9178"/>
-        <location filename="../mywidget.ui" line="9388"/>
-        <location filename="../mywidget.ui" line="9452"/>
+        <location filename="../mywidget.ui" line="997"/>
+        <location filename="../mywidget.ui" line="1050"/>
+        <location filename="../mywidget.ui" line="6392"/>
+        <location filename="../mywidget.ui" line="8540"/>
+        <location filename="../mywidget.ui" line="9031"/>
+        <location filename="../mywidget.ui" line="9063"/>
+        <location filename="../mywidget.ui" line="9079"/>
+        <location filename="../mywidget.ui" line="9145"/>
+        <location filename="../mywidget.ui" line="9161"/>
+        <location filename="../mywidget.ui" line="9371"/>
+        <location filename="../mywidget.ui" line="9435"/>
         <location filename="../mywidget.cpp" line="1512"/>
         <source>V</source>
         <translation>V</translation>
@@ -434,18 +433,18 @@ automatically and reset time</source>
         <translation type="vanished">功率变化率</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="833"/>
+        <location filename="../mywidget.ui" line="832"/>
         <source>kW/s</source>
         <translation>kW/s</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="841"/>
+        <location filename="../mywidget.ui" line="840"/>
         <location filename="../mywidget.cpp" line="5033"/>
         <source>Machine type</source>
         <translation>机器型号</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="857"/>
+        <location filename="../mywidget.ui" line="856"/>
         <location filename="../mywidget.cpp" line="5112"/>
         <source>Module Number</source>
         <translation>模块数量</translation>
@@ -455,20 +454,20 @@ automatically and reset time</source>
         <translation type="vanished">电网频率变化范围上限</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="881"/>
-        <location filename="../mywidget.ui" line="929"/>
-        <location filename="../mywidget.ui" line="945"/>
+        <location filename="../mywidget.ui" line="880"/>
+        <location filename="../mywidget.ui" line="928"/>
+        <location filename="../mywidget.ui" line="944"/>
         <source>Hz</source>
         <translation>Hz</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="889"/>
+        <location filename="../mywidget.ui" line="888"/>
         <location filename="../mywidget.cpp" line="5039"/>
         <source>Machine capacity</source>
         <translation>机器容量</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="905"/>
+        <location filename="../mywidget.ui" line="904"/>
         <location filename="../mywidget.cpp" line="5118"/>
         <source>Restore factory</source>
         <translation>恢复出厂</translation>
@@ -478,24 +477,24 @@ automatically and reset time</source>
         <translation type="vanished">电网频率变化范围下限</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="937"/>
+        <location filename="../mywidget.ui" line="936"/>
         <source>Output Fre. grade</source>
         <translation>输出频率等级</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1059"/>
+        <location filename="../mywidget.ui" line="1058"/>
         <location filename="../mywidget.cpp" line="5133"/>
         <source>Clear Data</source>
         <translation>清楚数据</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="974"/>
+        <location filename="../mywidget.ui" line="973"/>
         <location filename="../mywidget.cpp" line="4978"/>
         <source>Vol protection upper limit</source>
         <translation>电压保护范围上限</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="990"/>
+        <location filename="../mywidget.ui" line="989"/>
         <source>Output vol. level</source>
         <translation>输出电压等级</translation>
     </message>
@@ -504,7 +503,7 @@ automatically and reset time</source>
         <translation type="vanished">机架</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1027"/>
+        <location filename="../mywidget.ui" line="1026"/>
         <location filename="../mywidget.cpp" line="4984"/>
         <source>Vol protection lower limit</source>
         <translation>电压保护范围下限</translation>
@@ -514,54 +513,52 @@ automatically and reset time</source>
         <translation type="vanished">逆变电压等级</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1165"/>
+        <location filename="../mywidget.ui" line="1164"/>
         <location filename="../mywidget.cpp" line="5145"/>
         <source>Module max</source>
         <translation>最大模块数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1080"/>
+        <location filename="../mywidget.ui" line="1079"/>
         <location filename="../mywidget.cpp" line="4990"/>
         <source>HVRT enable</source>
         <translation>高压穿越使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1096"/>
+        <location filename="../mywidget.ui" line="1095"/>
         <location filename="../mywidget.cpp" line="5063"/>
         <source>Output reactive power mode</source>
         <translation>输出无功方式</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1218"/>
+        <location filename="../mywidget.ui" line="1217"/>
         <location filename="../mywidget.cpp" line="5151"/>
         <source>Module min</source>
         <translation>最小模块数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1133"/>
+        <location filename="../mywidget.ui" line="1132"/>
         <source>LVRT enable</source>
         <translation>低压穿越使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1149"/>
-        <location filename="../mywidget.cpp" line="5069"/>
         <source>Grid recovery scheduling</source>
-        <translation>电网恢复调度开机</translation>
+        <translation type="vanished">电网恢复调度开机</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1271"/>
+        <location filename="../mywidget.ui" line="1270"/>
         <location filename="../mywidget.cpp" line="5157"/>
         <source>Insulation detection enable DCDC</source>
         <translation>DCDC绝缘监测使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1186"/>
+        <location filename="../mywidget.ui" line="1185"/>
         <location filename="../mywidget.cpp" line="5002"/>
         <source>AFD enable</source>
         <translation>孤岛使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1202"/>
+        <location filename="../mywidget.ui" line="1148"/>
         <location filename="../mywidget.cpp" line="5075"/>
         <source>Grid recovery time</source>
         <translation>电网恢复并网时间</translation>
@@ -569,12 +566,12 @@ automatically and reset time</source>
     <message>
         <location filename="../mywidget.ui" line="603"/>
         <location filename="../mywidget.ui" line="656"/>
-        <location filename="../mywidget.ui" line="1210"/>
+        <location filename="../mywidget.ui" line="1156"/>
         <source>s</source>
         <translation>s</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1239"/>
+        <location filename="../mywidget.ui" line="1238"/>
         <location filename="../mywidget.cpp" line="5009"/>
         <source>Insulation detection enable</source>
         <translation>绝缘监测使能</translation>
@@ -584,24 +581,24 @@ automatically and reset time</source>
         <translation type="vanished">逆变器并网方式</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1287"/>
+        <location filename="../mywidget.ui" line="1286"/>
         <location filename="../mywidget.cpp" line="5015"/>
         <source>PrimaryFreq enable</source>
         <translation>一次调频使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1351"/>
+        <location filename="../mywidget.ui" line="1302"/>
         <source>PsheddingFreq</source>
         <translation>过频降载</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1335"/>
+        <location filename="../mywidget.ui" line="1334"/>
         <location filename="../mywidget.cpp" line="5021"/>
         <source>Inertia enable</source>
         <translation>转动惯量使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1399"/>
+        <location filename="../mywidget.ui" line="1350"/>
         <location filename="../mywidget.cpp" line="5100"/>
         <source>QP curve</source>
         <translation>QP曲线</translation>
@@ -611,72 +608,72 @@ automatically and reset time</source>
         <translation type="vanished">负载优先</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1441"/>
+        <location filename="../mywidget.ui" line="1424"/>
         <source>External device</source>
         <translation>外设</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1462"/>
+        <location filename="../mywidget.ui" line="1445"/>
         <source>DI_1</source>
         <translation>DI_1</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1467"/>
+        <location filename="../mywidget.ui" line="1450"/>
         <source>DI_2</source>
         <translation>DI_2</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1472"/>
+        <location filename="../mywidget.ui" line="1455"/>
         <source>DI_3</source>
         <translation>DI_3</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1477"/>
+        <location filename="../mywidget.ui" line="1460"/>
         <source>DI_4</source>
         <translation>DI_4</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1482"/>
+        <location filename="../mywidget.ui" line="1465"/>
         <source>DI_5</source>
         <translation>DI_5</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1487"/>
+        <location filename="../mywidget.ui" line="1470"/>
         <source>DI_6</source>
         <translation>DI_6</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1492"/>
+        <location filename="../mywidget.ui" line="1475"/>
         <source>DO_1</source>
         <translation>DO_1</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1497"/>
+        <location filename="../mywidget.ui" line="1480"/>
         <source>DO_2</source>
         <translation>DO_2</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1502"/>
+        <location filename="../mywidget.ui" line="1485"/>
         <source>DO_3</source>
         <translation>DO_3</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1507"/>
+        <location filename="../mywidget.ui" line="1490"/>
         <source>Enable/Disable</source>
         <translation>使能/禁止</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1512"/>
+        <location filename="../mywidget.ui" line="1495"/>
         <source>NC/NO</source>
         <translation>NC/NO</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1517"/>
+        <location filename="../mywidget.ui" line="1500"/>
         <source>Action</source>
         <translation>动作</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1522"/>
+        <location filename="../mywidget.ui" line="1505"/>
         <source>Function description</source>
         <translation>功能描述</translation>
     </message>
@@ -689,24 +686,24 @@ automatically and reset time</source>
         <translation type="vanished">NC关机</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1543"/>
+        <location filename="../mywidget.ui" line="1526"/>
         <source>Access Control</source>
         <translation>门禁</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1559"/>
+        <location filename="../mywidget.ui" line="1542"/>
         <source>Water logging</source>
         <translation>水浸</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1586"/>
-        <location filename="../mywidget.ui" line="1630"/>
-        <location filename="../mywidget.ui" line="1674"/>
+        <location filename="../mywidget.ui" line="1569"/>
+        <location filename="../mywidget.ui" line="1613"/>
+        <location filename="../mywidget.ui" line="1657"/>
         <source>N_O</source>
         <translation>N_O</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1608"/>
+        <location filename="../mywidget.ui" line="1591"/>
         <source>Generator</source>
         <translation>发电机</translation>
     </message>
@@ -715,51 +712,51 @@ automatically and reset time</source>
         <translation type="vanished">保留</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1709"/>
+        <location filename="../mywidget.ui" line="1692"/>
         <source>DCAC Debug</source>
         <translation>DCAC调试</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1768"/>
-        <location filename="../mywidget.ui" line="2262"/>
+        <location filename="../mywidget.ui" line="1751"/>
+        <location filename="../mywidget.ui" line="2245"/>
         <location filename="../mywidget.cpp" line="5271"/>
         <location filename="../mywidget.cpp" line="5497"/>
         <source>Debug variable 1</source>
         <translation>调试变量1</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1776"/>
+        <location filename="../mywidget.ui" line="1759"/>
         <source>1.5V Voltage revise</source>
         <translation>1.5V电压系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1792"/>
-        <location filename="../mywidget.ui" line="2350"/>
+        <location filename="../mywidget.ui" line="1775"/>
+        <location filename="../mywidget.ui" line="2333"/>
         <source>Inv on off flag</source>
         <translation>开关机状态字</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1805"/>
-        <location filename="../mywidget.ui" line="2286"/>
+        <location filename="../mywidget.ui" line="1788"/>
+        <location filename="../mywidget.ui" line="2269"/>
         <location filename="../mywidget.cpp" line="5277"/>
         <location filename="../mywidget.cpp" line="5503"/>
         <source>Debug variable 2</source>
         <translation>调试变量2</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1813"/>
+        <location filename="../mywidget.ui" line="1796"/>
         <source> Bus Vol. revise</source>
         <translation> 母线电压系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1829"/>
+        <location filename="../mywidget.ui" line="1812"/>
         <location filename="../mywidget.cpp" line="5427"/>
         <source>Logic state</source>
         <translation>逻辑状态字</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1842"/>
-        <location filename="../mywidget.ui" line="2310"/>
+        <location filename="../mywidget.ui" line="1825"/>
+        <location filename="../mywidget.ui" line="2293"/>
         <location filename="../mywidget.cpp" line="5283"/>
         <location filename="../mywidget.cpp" line="5509"/>
         <location filename="../mywidget.cpp" line="5515"/>
@@ -767,215 +764,215 @@ automatically and reset time</source>
         <translation>调试变量3</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1850"/>
+        <location filename="../mywidget.ui" line="1833"/>
         <source>Grid A/AB Vol. revise</source>
         <translation>电网A相电压系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1866"/>
+        <location filename="../mywidget.ui" line="1849"/>
         <source>Inv flag</source>
         <translation>逆变状态字</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1879"/>
-        <location filename="../mywidget.ui" line="2270"/>
+        <location filename="../mywidget.ui" line="1862"/>
+        <location filename="../mywidget.ui" line="2253"/>
         <source>Debug variable 1 address</source>
         <translation>调试地址变量1</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1887"/>
+        <location filename="../mywidget.ui" line="1870"/>
         <source>Grid B/BC Vol. revise</source>
         <translation>电网B相电压系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1903"/>
+        <location filename="../mywidget.ui" line="1886"/>
         <location filename="../mywidget.cpp" line="5439"/>
         <source>Grid flag</source>
         <translation>电网状态字</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1916"/>
-        <location filename="../mywidget.ui" line="2294"/>
+        <location filename="../mywidget.ui" line="1899"/>
+        <location filename="../mywidget.ui" line="2277"/>
         <source>Debug variable 2 address</source>
         <translation>调试地址变量2</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1924"/>
+        <location filename="../mywidget.ui" line="1907"/>
         <source>Grid C/CA Vol. revise</source>
         <translation>电网C相电压系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1940"/>
+        <location filename="../mywidget.ui" line="1923"/>
         <location filename="../mywidget.cpp" line="5445"/>
         <source>Grid protect flag</source>
         <translation>电网保护状态字</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1953"/>
-        <location filename="../mywidget.ui" line="2318"/>
+        <location filename="../mywidget.ui" line="1936"/>
+        <location filename="../mywidget.ui" line="2301"/>
         <source>Debug variable 3 address</source>
         <translation>调试地址变量3</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1961"/>
+        <location filename="../mywidget.ui" line="1944"/>
         <source>Output A Cur. revise</source>
         <translation>输出A相电流系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1977"/>
-        <location filename="../mywidget.ui" line="2390"/>
+        <location filename="../mywidget.ui" line="1960"/>
+        <location filename="../mywidget.ui" line="2373"/>
         <location filename="../mywidget.cpp" line="5451"/>
         <location filename="../mywidget.cpp" line="5533"/>
         <source>PV flag</source>
         <translation>电池电压状态字</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1990"/>
-        <location filename="../mywidget.ui" line="2278"/>
+        <location filename="../mywidget.ui" line="1973"/>
+        <location filename="../mywidget.ui" line="2261"/>
         <source>Debug memery var. 1</source>
         <translation>调试内存变量1</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1998"/>
+        <location filename="../mywidget.ui" line="1981"/>
         <source>Output B Cur. revise</source>
         <translation>输出B相电流系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2014"/>
-        <location filename="../mywidget.ui" line="2366"/>
+        <location filename="../mywidget.ui" line="1997"/>
+        <location filename="../mywidget.ui" line="2349"/>
         <location filename="../mywidget.cpp" line="5457"/>
         <location filename="../mywidget.cpp" line="5527"/>
         <source>DC bus flag</source>
         <translation>母线状态字</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2027"/>
+        <location filename="../mywidget.ui" line="2010"/>
         <source>Debug memery var. 2</source>
         <translation>调试内存变量2</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2035"/>
+        <location filename="../mywidget.ui" line="2018"/>
         <source>Output C Cur. revise</source>
         <translation>输出C相电流系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2051"/>
-        <location filename="../mywidget.ui" line="2342"/>
+        <location filename="../mywidget.ui" line="2034"/>
+        <location filename="../mywidget.ui" line="2325"/>
         <location filename="../mywidget.cpp" line="5463"/>
         <location filename="../mywidget.cpp" line="5521"/>
         <source>INT main flag</source>
         <translation>中断状态字</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2064"/>
-        <location filename="../mywidget.ui" line="2302"/>
-        <location filename="../mywidget.ui" line="2326"/>
+        <location filename="../mywidget.ui" line="2047"/>
+        <location filename="../mywidget.ui" line="2285"/>
+        <location filename="../mywidget.ui" line="2309"/>
         <source>Debug memery var. 3</source>
         <translation>调试内存变量3</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2072"/>
+        <location filename="../mywidget.ui" line="2055"/>
         <source>INV A Vol. revise</source>
         <translation>逆变A相电压系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2088"/>
-        <location filename="../mywidget.ui" line="2398"/>
+        <location filename="../mywidget.ui" line="2071"/>
+        <location filename="../mywidget.ui" line="2381"/>
         <source>Parallel signal</source>
         <translation>并机状态字</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2101"/>
+        <location filename="../mywidget.ui" line="2084"/>
         <source>Input Vol. revise</source>
         <translation>输入电压系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2109"/>
+        <location filename="../mywidget.ui" line="2092"/>
         <source>INV B Vol. revise</source>
         <translation>逆变B相电压系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2125"/>
+        <location filename="../mywidget.ui" line="2108"/>
         <location filename="../mywidget.cpp" line="5475"/>
         <location filename="../mywidget.cpp" line="5593"/>
         <source>Monitor Order</source>
         <translation>监控命令字</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2138"/>
+        <location filename="../mywidget.ui" line="2121"/>
         <source>Input. Cur. revise</source>
         <translation>输入电流系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2146"/>
+        <location filename="../mywidget.ui" line="2129"/>
         <source>INV C Vol. revise</source>
         <translation>逆变C相电压系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2162"/>
+        <location filename="../mywidget.ui" line="2145"/>
         <source>BatInfor</source>
         <translation>电池信息字</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2170"/>
+        <location filename="../mywidget.ui" line="2153"/>
         <source>INV A inductance Cur. revise</source>
         <translation>逆变A相电感电流系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2178"/>
-        <location filename="../mywidget.ui" line="2406"/>
+        <location filename="../mywidget.ui" line="2161"/>
+        <location filename="../mywidget.ui" line="2389"/>
         <source>Bat state</source>
         <translation>电池状态字</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2186"/>
+        <location filename="../mywidget.ui" line="2169"/>
         <source>INV B inductance Cur. revise</source>
         <translation>逆变B相电感电流系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2194"/>
+        <location filename="../mywidget.ui" line="2177"/>
         <source>INV C inductance Cur. revise</source>
         <translation>逆变C相电感电流系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2204"/>
+        <location filename="../mywidget.ui" line="2187"/>
         <source>DCDC Debug</source>
         <translation>DCDC 调试</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2334"/>
+        <location filename="../mywidget.ui" line="2317"/>
         <source>Current ID</source>
         <translation>当前模块号</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2358"/>
+        <location filename="../mywidget.ui" line="2341"/>
         <source>Monitor order</source>
         <translation>监控命令字</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2374"/>
+        <location filename="../mywidget.ui" line="2357"/>
         <source>DCONV logic </source>
         <translation>开关机状态字2 </translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2382"/>
+        <location filename="../mywidget.ui" line="2365"/>
         <source>Bat infor</source>
         <translation>电池信息字</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="5882"/>
+        <location filename="../mywidget.ui" line="5865"/>
         <source>Please click on &apos;Alarm Information&apos; to enter the query interface
 and view the details of the alarm information you have encountered.</source>
         <translation>请点击&apos;告警信息&apos;，进入查询界面，查看您所遇到的告警信息的详情。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="5911"/>
+        <location filename="../mywidget.ui" line="5894"/>
         <source>Alarm
 Information</source>
         <translation>告警信息</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8672"/>
+        <location filename="../mywidget.ui" line="8655"/>
         <source>A1: 
 Generator turn on SOC(A1)
 B1: 
@@ -986,39 +983,39 @@ B1:
 柴发关闭SOC（B1）</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8695"/>
+        <location filename="../mywidget.ui" line="8678"/>
         <source>Battery
 power-on</source>
         <translation>电池上电</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8714"/>
+        <location filename="../mywidget.ui" line="8697"/>
         <source>Battery
 power-off</source>
         <translation>电池下电</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8864"/>
+        <location filename="../mywidget.ui" line="8847"/>
         <source>ForceCharge On(V)</source>
         <translation>强充开启（V）</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8872"/>
+        <location filename="../mywidget.ui" line="8855"/>
         <source>ForceCharge Off(V)</source>
         <translation>强充结束（V）</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9518"/>
+        <location filename="../mywidget.ui" line="9501"/>
         <source>Hybrid Mode</source>
         <translation>混合模式</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9568"/>
+        <location filename="../mywidget.ui" line="9551"/>
         <source>Hybrid Mode Enable：</source>
         <translation>混合模式使能：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10409"/>
+        <location filename="../mywidget.ui" line="10392"/>
         <source>M_01 Converter turn off</source>
         <translation>M_01 变流器关闭</translation>
     </message>
@@ -1027,67 +1024,67 @@ power-off</source>
         <translation type="vanished">100kW</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="3255"/>
-        <location filename="../mywidget.ui" line="3429"/>
-        <location filename="../mywidget.ui" line="3485"/>
-        <location filename="../mywidget.ui" line="3575"/>
-        <location filename="../mywidget.ui" line="3688"/>
-        <location filename="../mywidget.ui" line="3888"/>
-        <location filename="../mywidget.ui" line="3990"/>
-        <location filename="../mywidget.ui" line="4024"/>
+        <location filename="../mywidget.ui" line="3238"/>
+        <location filename="../mywidget.ui" line="3412"/>
+        <location filename="../mywidget.ui" line="3468"/>
+        <location filename="../mywidget.ui" line="3558"/>
+        <location filename="../mywidget.ui" line="3671"/>
+        <location filename="../mywidget.ui" line="3871"/>
+        <location filename="../mywidget.ui" line="3973"/>
+        <location filename="../mywidget.ui" line="4007"/>
         <source>0V</source>
         <translation>0V</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="3290"/>
-        <location filename="../mywidget.ui" line="3723"/>
-        <location filename="../mywidget.ui" line="3922"/>
-        <location filename="../mywidget.ui" line="3956"/>
-        <location filename="../mywidget.ui" line="4058"/>
+        <location filename="../mywidget.ui" line="3273"/>
+        <location filename="../mywidget.ui" line="3706"/>
+        <location filename="../mywidget.ui" line="3905"/>
+        <location filename="../mywidget.ui" line="3939"/>
+        <location filename="../mywidget.ui" line="4041"/>
         <source>0A</source>
         <translation>0A</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="3312"/>
-        <location filename="../mywidget.ui" line="4099"/>
+        <location filename="../mywidget.ui" line="3295"/>
+        <location filename="../mywidget.ui" line="4082"/>
         <source>0kW</source>
         <translation>0kW</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="3463"/>
-        <location filename="../mywidget.ui" line="3519"/>
-        <location filename="../mywidget.ui" line="3553"/>
+        <location filename="../mywidget.ui" line="3446"/>
+        <location filename="../mywidget.ui" line="3502"/>
+        <location filename="../mywidget.ui" line="3536"/>
         <source>0A </source>
         <translation>0A </translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2850"/>
-        <location filename="../mywidget.ui" line="10456"/>
+        <location filename="../mywidget.ui" line="2833"/>
+        <location filename="../mywidget.ui" line="10439"/>
         <source>Current mode:CP</source>
         <translation>当前模式：CP</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="3129"/>
+        <location filename="../mywidget.ui" line="3112"/>
         <source>PV:</source>
         <translation>光伏：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="3090"/>
+        <location filename="../mywidget.ui" line="3073"/>
         <source>Battery charging:</source>
         <translation>电池充电量：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="3103"/>
+        <location filename="../mywidget.ui" line="3086"/>
         <source>Battery discharging:</source>
         <translation>电池放电量：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2918"/>
-        <location filename="../mywidget.ui" line="2957"/>
-        <location filename="../mywidget.ui" line="2970"/>
-        <location filename="../mywidget.ui" line="3077"/>
-        <location filename="../mywidget.ui" line="3116"/>
-        <location filename="../mywidget.ui" line="3142"/>
+        <location filename="../mywidget.ui" line="2901"/>
+        <location filename="../mywidget.ui" line="2940"/>
+        <location filename="../mywidget.ui" line="2953"/>
+        <location filename="../mywidget.ui" line="3060"/>
+        <location filename="../mywidget.ui" line="3099"/>
+        <location filename="../mywidget.ui" line="3125"/>
         <source>0kWh</source>
         <translation>0kWh</translation>
     </message>
@@ -1096,7 +1093,7 @@ power-off</source>
         <translation type="vanished">电网充电量：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2983"/>
+        <location filename="../mywidget.ui" line="2966"/>
         <source>Load:</source>
         <translation>负载：</translation>
     </message>
@@ -1105,12 +1102,12 @@ power-off</source>
         <translation type="vanished">电网放电量：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4080"/>
+        <location filename="../mywidget.ui" line="4063"/>
         <source>Power meter</source>
         <translation>电表功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="3741"/>
+        <location filename="../mywidget.ui" line="3724"/>
         <source>SOC:</source>
         <translation>剩余电量：</translation>
     </message>
@@ -1119,31 +1116,31 @@ power-off</source>
         <translation type="vanished">请输入搜索关键词</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6648"/>
+        <location filename="../mywidget.ui" line="6631"/>
         <location filename="../mywidget.cpp" line="2275"/>
         <source>Allowable charging power</source>
         <translation>可充电功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6672"/>
+        <location filename="../mywidget.ui" line="6655"/>
         <location filename="../mywidget.cpp" line="2279"/>
         <source>Allowable discharging power</source>
         <translation>可放电功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6696"/>
+        <location filename="../mywidget.ui" line="6679"/>
         <location filename="../mywidget.cpp" line="2283"/>
         <source>Allowable charging energy</source>
         <translation>可充电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6720"/>
+        <location filename="../mywidget.ui" line="6703"/>
         <location filename="../mywidget.cpp" line="2287"/>
         <source>Allowable discharging energy</source>
         <translation>可放电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8051"/>
+        <location filename="../mywidget.ui" line="8034"/>
         <source>status:</source>
         <translation>状态：</translation>
     </message>
@@ -1158,7 +1155,7 @@ B1:
 柴发关闭电压（B1）</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8923"/>
+        <location filename="../mywidget.ui" line="8906"/>
         <source>A1: Generator turn on voltage
 B1: Generator turn off voltage
 A1 Setting range: [250, 900]
@@ -1171,7 +1168,7 @@ B1 设定范围： [250,900]
 设定规则：B1 - A1 ≥ 10V</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1423"/>
+        <location filename="../mywidget.ui" line="1398"/>
         <source>CV Parallel</source>
         <translation>恒压并机</translation>
     </message>
@@ -1186,13 +1183,13 @@ B1 设定范围： [250,900]
         <translation>电池协议</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1112"/>
+        <location filename="../mywidget.ui" line="1111"/>
         <location filename="../mywidget.cpp" line="5139"/>
         <source>Rack</source>
         <translation>机架</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1043"/>
+        <location filename="../mywidget.ui" line="1042"/>
         <location filename="../mywidget.cpp" line="5057"/>
         <source>Transformer Turns Ratio</source>
         <translation>变压器变比</translation>
@@ -1208,49 +1205,49 @@ B1 设定范围： [250,900]
         <translation>EMS通信故障判定时间</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="953"/>
+        <location filename="../mywidget.ui" line="952"/>
         <source>Backup setup parameters</source>
         <translation>备份设置参数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1006"/>
+        <location filename="../mywidget.ui" line="1005"/>
         <source>Restore backup setup parameters</source>
         <translation>恢复备份设置参数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1551"/>
+        <location filename="../mywidget.ui" line="1534"/>
         <source>ATS Signal</source>
         <translation>柴发信号</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1567"/>
+        <location filename="../mywidget.ui" line="1550"/>
         <source>Fire Fighting</source>
         <translation>消防</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="106"/>
-        <location filename="../mywidget.ui" line="2662"/>
+        <location filename="../mywidget.ui" line="2645"/>
         <source>Change
 Language</source>
         <translation>切换语言</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2687"/>
+        <location filename="../mywidget.ui" line="2670"/>
         <source>100kW-TS</source>
         <translation>100kW-TS</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2931"/>
+        <location filename="../mywidget.ui" line="2914"/>
         <source>Grid sell:</source>
         <translation>电网卖电量：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2944"/>
+        <location filename="../mywidget.ui" line="2927"/>
         <source>Grid buy:</source>
         <translation>电网购电量：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="3757"/>
+        <location filename="../mywidget.ui" line="3740"/>
         <source>0%</source>
         <translation>0%</translation>
     </message>
@@ -1259,12 +1256,12 @@ Language</source>
         <translation type="vanished">MPS数据</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4297"/>
-        <location filename="../mywidget.ui" line="5519"/>
-        <location filename="../mywidget.ui" line="5753"/>
-        <location filename="../mywidget.ui" line="5813"/>
-        <location filename="../mywidget.ui" line="8753"/>
-        <location filename="../mywidget.ui" line="9631"/>
+        <location filename="../mywidget.ui" line="4280"/>
+        <location filename="../mywidget.ui" line="5502"/>
+        <location filename="../mywidget.ui" line="5736"/>
+        <location filename="../mywidget.ui" line="5796"/>
+        <location filename="../mywidget.ui" line="8736"/>
+        <location filename="../mywidget.ui" line="9614"/>
         <location filename="../mywidget.cpp" line="3170"/>
         <location filename="../mywidget.cpp" line="3175"/>
         <location filename="../mywidget.cpp" line="4498"/>
@@ -1272,111 +1269,111 @@ Language</source>
         <translation>1</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4324"/>
-        <location filename="../mywidget.ui" line="5546"/>
-        <location filename="../mywidget.ui" line="5758"/>
-        <location filename="../mywidget.ui" line="5818"/>
-        <location filename="../mywidget.ui" line="9636"/>
+        <location filename="../mywidget.ui" line="4307"/>
+        <location filename="../mywidget.ui" line="5529"/>
+        <location filename="../mywidget.ui" line="5741"/>
+        <location filename="../mywidget.ui" line="5801"/>
+        <location filename="../mywidget.ui" line="9619"/>
         <source>2</source>
         <translation>2</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4342"/>
-        <location filename="../mywidget.ui" line="5564"/>
-        <location filename="../mywidget.ui" line="5763"/>
-        <location filename="../mywidget.ui" line="5823"/>
-        <location filename="../mywidget.ui" line="9641"/>
+        <location filename="../mywidget.ui" line="4325"/>
+        <location filename="../mywidget.ui" line="5547"/>
+        <location filename="../mywidget.ui" line="5746"/>
+        <location filename="../mywidget.ui" line="5806"/>
+        <location filename="../mywidget.ui" line="9624"/>
         <source>3</source>
         <translation>3</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4360"/>
-        <location filename="../mywidget.ui" line="5582"/>
-        <location filename="../mywidget.ui" line="5768"/>
-        <location filename="../mywidget.ui" line="5828"/>
-        <location filename="../mywidget.ui" line="9646"/>
+        <location filename="../mywidget.ui" line="4343"/>
+        <location filename="../mywidget.ui" line="5565"/>
+        <location filename="../mywidget.ui" line="5751"/>
+        <location filename="../mywidget.ui" line="5811"/>
+        <location filename="../mywidget.ui" line="9629"/>
         <source>4</source>
         <translation>4</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4378"/>
-        <location filename="../mywidget.ui" line="5600"/>
-        <location filename="../mywidget.ui" line="5773"/>
-        <location filename="../mywidget.ui" line="5833"/>
-        <location filename="../mywidget.ui" line="9651"/>
+        <location filename="../mywidget.ui" line="4361"/>
+        <location filename="../mywidget.ui" line="5583"/>
+        <location filename="../mywidget.ui" line="5756"/>
+        <location filename="../mywidget.ui" line="5816"/>
+        <location filename="../mywidget.ui" line="9634"/>
         <source>5</source>
         <translation>5</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4396"/>
-        <location filename="../mywidget.ui" line="5618"/>
-        <location filename="../mywidget.ui" line="5778"/>
-        <location filename="../mywidget.ui" line="5838"/>
-        <location filename="../mywidget.ui" line="9656"/>
+        <location filename="../mywidget.ui" line="4379"/>
+        <location filename="../mywidget.ui" line="5601"/>
+        <location filename="../mywidget.ui" line="5761"/>
+        <location filename="../mywidget.ui" line="5821"/>
+        <location filename="../mywidget.ui" line="9639"/>
         <source>6</source>
         <translation>6</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4420"/>
-        <location filename="../mywidget.ui" line="5642"/>
-        <location filename="../mywidget.ui" line="5783"/>
-        <location filename="../mywidget.ui" line="9661"/>
+        <location filename="../mywidget.ui" line="4403"/>
+        <location filename="../mywidget.ui" line="5625"/>
+        <location filename="../mywidget.ui" line="5766"/>
+        <location filename="../mywidget.ui" line="9644"/>
         <source>7</source>
         <translation>7</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4438"/>
-        <location filename="../mywidget.ui" line="5660"/>
-        <location filename="../mywidget.ui" line="5788"/>
-        <location filename="../mywidget.ui" line="9666"/>
+        <location filename="../mywidget.ui" line="4421"/>
+        <location filename="../mywidget.ui" line="5643"/>
+        <location filename="../mywidget.ui" line="5771"/>
+        <location filename="../mywidget.ui" line="9649"/>
         <source>8</source>
         <translation>8</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4456"/>
-        <location filename="../mywidget.ui" line="5678"/>
-        <location filename="../mywidget.ui" line="5793"/>
+        <location filename="../mywidget.ui" line="4439"/>
+        <location filename="../mywidget.ui" line="5661"/>
+        <location filename="../mywidget.ui" line="5776"/>
         <source>9</source>
         <translation>9</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4474"/>
-        <location filename="../mywidget.ui" line="5696"/>
-        <location filename="../mywidget.ui" line="5798"/>
+        <location filename="../mywidget.ui" line="4457"/>
+        <location filename="../mywidget.ui" line="5679"/>
+        <location filename="../mywidget.ui" line="5781"/>
         <source>10</source>
         <translation>10</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4492"/>
-        <location filename="../mywidget.ui" line="5714"/>
-        <location filename="../mywidget.ui" line="5803"/>
+        <location filename="../mywidget.ui" line="4475"/>
+        <location filename="../mywidget.ui" line="5697"/>
+        <location filename="../mywidget.ui" line="5786"/>
         <source>11</source>
         <translation>11</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4510"/>
-        <location filename="../mywidget.ui" line="5732"/>
-        <location filename="../mywidget.ui" line="5808"/>
+        <location filename="../mywidget.ui" line="4493"/>
+        <location filename="../mywidget.ui" line="5715"/>
+        <location filename="../mywidget.ui" line="5791"/>
         <source>12</source>
         <translation>12</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4787"/>
+        <location filename="../mywidget.ui" line="4770"/>
         <source>Converter</source>
         <translation>变流器</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="5003"/>
+        <location filename="../mywidget.ui" line="4986"/>
         <source>PV</source>
         <translation>PV</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="5219"/>
+        <location filename="../mywidget.ui" line="5202"/>
         <source>Grid</source>
         <translation>电网</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="5434"/>
+        <location filename="../mywidget.ui" line="5417"/>
         <source>Load</source>
         <translation>负载</translation>
     </message>
@@ -1393,16 +1390,16 @@ Language</source>
         <translation type="vanished">搜索</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="5937"/>
+        <location filename="../mywidget.ui" line="5920"/>
         <source>Battery Data</source>
         <translation>电池数据</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6014"/>
-        <location filename="../mywidget.ui" line="6576"/>
-        <location filename="../mywidget.ui" line="8994"/>
-        <location filename="../mywidget.ui" line="9009"/>
-        <location filename="../mywidget.ui" line="9671"/>
+        <location filename="../mywidget.ui" line="5997"/>
+        <location filename="../mywidget.ui" line="6559"/>
+        <location filename="../mywidget.ui" line="8977"/>
+        <location filename="../mywidget.ui" line="8992"/>
+        <location filename="../mywidget.ui" line="9654"/>
         <location filename="../mywidget.cpp" line="1323"/>
         <location filename="../mywidget.cpp" line="1362"/>
         <location filename="../mywidget.cpp" line="1402"/>
@@ -1414,53 +1411,53 @@ Language</source>
         <translation>名称</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6033"/>
+        <location filename="../mywidget.ui" line="6016"/>
         <source>Bat voltage</source>
         <translation>电池电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6052"/>
+        <location filename="../mywidget.ui" line="6035"/>
         <location filename="../mywidget.cpp" line="2239"/>
         <source>Bat current</source>
         <translation>电池电流</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6071"/>
+        <location filename="../mywidget.ui" line="6054"/>
         <location filename="../mywidget.cpp" line="2243"/>
         <source>SOC</source>
         <translation>SOC</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6090"/>
+        <location filename="../mywidget.ui" line="6073"/>
         <location filename="../mywidget.cpp" line="2247"/>
         <source>SOH</source>
         <translation>SOH</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6109"/>
+        <location filename="../mywidget.ui" line="6092"/>
         <source>Cell voltage (max)</source>
         <translation>单体最高电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6128"/>
+        <location filename="../mywidget.ui" line="6111"/>
         <source>Cell voltage (min)</source>
         <translation>单体最低电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6147"/>
+        <location filename="../mywidget.ui" line="6130"/>
         <source>Cell temp. (max)</source>
         <translation>单体最高温度</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6166"/>
+        <location filename="../mywidget.ui" line="6149"/>
         <source>Cell temp. (min)</source>
         <translation>单体最低温度</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6206"/>
-        <location filename="../mywidget.ui" line="6808"/>
-        <location filename="../mywidget.ui" line="8999"/>
-        <location filename="../mywidget.ui" line="9014"/>
+        <location filename="../mywidget.ui" line="6189"/>
+        <location filename="../mywidget.ui" line="6791"/>
+        <location filename="../mywidget.ui" line="8982"/>
+        <location filename="../mywidget.ui" line="8997"/>
         <location filename="../mywidget.cpp" line="1283"/>
         <location filename="../mywidget.cpp" line="1323"/>
         <location filename="../mywidget.cpp" line="1362"/>
@@ -1472,58 +1469,58 @@ Language</source>
         <translation>值</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6233"/>
-        <location filename="../mywidget.ui" line="6252"/>
-        <location filename="../mywidget.ui" line="6271"/>
-        <location filename="../mywidget.ui" line="6290"/>
-        <location filename="../mywidget.ui" line="6309"/>
-        <location filename="../mywidget.ui" line="6328"/>
-        <location filename="../mywidget.ui" line="6347"/>
-        <location filename="../mywidget.ui" line="6366"/>
-        <location filename="../mywidget.ui" line="6833"/>
-        <location filename="../mywidget.ui" line="6852"/>
-        <location filename="../mywidget.ui" line="6871"/>
-        <location filename="../mywidget.ui" line="6890"/>
-        <location filename="../mywidget.ui" line="6909"/>
-        <location filename="../mywidget.ui" line="6928"/>
-        <location filename="../mywidget.ui" line="9133"/>
-        <location filename="../mywidget.ui" line="9215"/>
-        <location filename="../mywidget.ui" line="9288"/>
-        <location filename="../mywidget.ui" line="9352"/>
-        <location filename="../mywidget.ui" line="9416"/>
+        <location filename="../mywidget.ui" line="6216"/>
+        <location filename="../mywidget.ui" line="6235"/>
+        <location filename="../mywidget.ui" line="6254"/>
+        <location filename="../mywidget.ui" line="6273"/>
+        <location filename="../mywidget.ui" line="6292"/>
+        <location filename="../mywidget.ui" line="6311"/>
+        <location filename="../mywidget.ui" line="6330"/>
+        <location filename="../mywidget.ui" line="6349"/>
+        <location filename="../mywidget.ui" line="6816"/>
+        <location filename="../mywidget.ui" line="6835"/>
+        <location filename="../mywidget.ui" line="6854"/>
+        <location filename="../mywidget.ui" line="6873"/>
+        <location filename="../mywidget.ui" line="6892"/>
+        <location filename="../mywidget.ui" line="6911"/>
+        <location filename="../mywidget.ui" line="9116"/>
+        <location filename="../mywidget.ui" line="9198"/>
+        <location filename="../mywidget.ui" line="9271"/>
+        <location filename="../mywidget.ui" line="9335"/>
+        <location filename="../mywidget.ui" line="9399"/>
         <location filename="../mywidget.cpp" line="3161"/>
         <location filename="../mywidget.cpp" line="4476"/>
         <source>0</source>
         <translation>0</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6391"/>
-        <location filename="../mywidget.ui" line="6985"/>
-        <location filename="../mywidget.ui" line="9004"/>
-        <location filename="../mywidget.ui" line="9019"/>
+        <location filename="../mywidget.ui" line="6374"/>
+        <location filename="../mywidget.ui" line="6968"/>
+        <location filename="../mywidget.ui" line="8987"/>
+        <location filename="../mywidget.ui" line="9002"/>
         <location filename="../mywidget.cpp" line="1497"/>
         <location filename="../mywidget.cpp" line="1780"/>
         <source>Unit</source>
         <translation>单位</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6427"/>
-        <location filename="../mywidget.ui" line="7009"/>
-        <location filename="../mywidget.ui" line="7033"/>
-        <location filename="../mywidget.ui" line="8541"/>
+        <location filename="../mywidget.ui" line="6410"/>
+        <location filename="../mywidget.ui" line="6992"/>
+        <location filename="../mywidget.ui" line="7016"/>
+        <location filename="../mywidget.ui" line="8524"/>
         <location filename="../mywidget.cpp" line="1512"/>
         <source>A</source>
         <translation>A</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6481"/>
-        <location filename="../mywidget.ui" line="6499"/>
+        <location filename="../mywidget.ui" line="6464"/>
+        <location filename="../mywidget.ui" line="6482"/>
         <source>mV</source>
         <translation>mV</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6517"/>
-        <location filename="../mywidget.ui" line="6535"/>
+        <location filename="../mywidget.ui" line="6500"/>
+        <location filename="../mywidget.ui" line="6518"/>
         <source>℃</source>
         <translation>℃</translation>
     </message>
@@ -1552,12 +1549,12 @@ Language</source>
         <translation type="vanished">可放电电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7201"/>
+        <location filename="../mywidget.ui" line="7184"/>
         <source>prompt:</source>
         <translation>提示：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7242"/>
+        <location filename="../mywidget.ui" line="7225"/>
         <source>Normal</source>
         <translation>正常</translation>
     </message>
@@ -1574,7 +1571,7 @@ Language</source>
         <translation type="vanished">告警3</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7395"/>
+        <location filename="../mywidget.ui" line="7378"/>
         <source>Alarm level:</source>
         <translation>告警等级：</translation>
     </message>
@@ -1584,11 +1581,11 @@ enable</source>
         <translation type="vanished">充电使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1575"/>
-        <location filename="../mywidget.ui" line="1619"/>
-        <location filename="../mywidget.ui" line="1663"/>
-        <location filename="../mywidget.ui" line="7464"/>
-        <location filename="../mywidget.ui" line="7520"/>
+        <location filename="../mywidget.ui" line="1558"/>
+        <location filename="../mywidget.ui" line="1602"/>
+        <location filename="../mywidget.ui" line="1646"/>
+        <location filename="../mywidget.ui" line="7447"/>
+        <location filename="../mywidget.ui" line="7503"/>
         <location filename="../mywidget.cpp" line="3075"/>
         <location filename="../mywidget.cpp" line="5172"/>
         <location filename="../mywidget.cpp" line="5180"/>
@@ -1604,68 +1601,68 @@ enable</source>
         <translation type="vanished">放电使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7601"/>
+        <location filename="../mywidget.ui" line="7584"/>
         <source>Data report</source>
         <translation>数据报表</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7714"/>
+        <location filename="../mywidget.ui" line="7697"/>
         <source>yyyy-MM-dd</source>
         <translation>yyyy-MM-dd</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7746"/>
+        <location filename="../mywidget.ui" line="7729"/>
         <location filename="../mywidget.cpp" line="5622"/>
         <source>Y  -</source>
         <translation>年 -</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7765"/>
+        <location filename="../mywidget.ui" line="7748"/>
         <location filename="../mywidget.cpp" line="5634"/>
         <source>M  -</source>
         <translation>月 -</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7784"/>
+        <location filename="../mywidget.ui" line="7767"/>
         <location filename="../mywidget.cpp" line="5646"/>
         <source>D  -</source>
         <translation>日  -</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7810"/>
+        <location filename="../mywidget.ui" line="7793"/>
         <location filename="../mywidget.cpp" line="5628"/>
         <source>Y  +</source>
         <translation>年 +</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7829"/>
+        <location filename="../mywidget.ui" line="7812"/>
         <location filename="../mywidget.cpp" line="5640"/>
         <source>M  +</source>
         <translation>月 +</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7848"/>
+        <location filename="../mywidget.ui" line="7831"/>
         <location filename="../mywidget.cpp" line="5652"/>
         <source>D  +</source>
         <translation>日  +</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7864"/>
+        <location filename="../mywidget.ui" line="7847"/>
         <source>Export Data</source>
         <translation>导出数据</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7884"/>
+        <location filename="../mywidget.ui" line="7867"/>
         <source>Note:</source>
         <translation>提示：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7904"/>
+        <location filename="../mywidget.ui" line="7887"/>
         <source>Log.csv</source>
         <translation>Log.csv</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7925"/>
+        <location filename="../mywidget.ui" line="7908"/>
         <source>Out put file:</source>
         <translation>输出文件：</translation>
     </message>
@@ -1674,12 +1671,12 @@ enable</source>
         <translation type="vanished">HistoryRecord.csv</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7967"/>
+        <location filename="../mywidget.ui" line="7950"/>
         <source>Report.csv</source>
         <translation>Report.csv</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8002"/>
+        <location filename="../mywidget.ui" line="7985"/>
         <source>Data To Export</source>
         <translation>导出数据</translation>
     </message>
@@ -1709,18 +1706,18 @@ enable</source>
         <translation type="vanished">退出U盘</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8231"/>
+        <location filename="../mywidget.ui" line="8214"/>
         <source>History Record</source>
         <translation>历史记录</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8149"/>
-        <location filename="../mywidget.ui" line="8268"/>
+        <location filename="../mywidget.ui" line="8132"/>
+        <location filename="../mywidget.ui" line="8251"/>
         <source>Operation Log</source>
         <translation>操作日志</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8333"/>
+        <location filename="../mywidget.ui" line="8316"/>
         <source>DC/AC Parameter</source>
         <translation>DC/AC参数</translation>
     </message>
@@ -1729,18 +1726,18 @@ enable</source>
         <translation type="vanished">PCS并网方式</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8405"/>
+        <location filename="../mywidget.ui" line="8388"/>
         <location filename="../mywidget.cpp" line="3192"/>
         <source>Control mode</source>
         <translation>控制模式</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8421"/>
+        <location filename="../mywidget.ui" line="8404"/>
         <source>Constant power (AC)</source>
         <translation>恒功率(AC)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8437"/>
+        <location filename="../mywidget.ui" line="8420"/>
         <location filename="../mywidget.cpp" line="3197"/>
         <source>Machine number</source>
         <translation>设备号</translation>
@@ -1750,7 +1747,7 @@ enable</source>
         <translation type="vanished">充放电</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8469"/>
+        <location filename="../mywidget.ui" line="8452"/>
         <source>Parallel </source>
         <translation>并机 </translation>
     </message>
@@ -1763,34 +1760,34 @@ enable</source>
         <translation type="vanished">运行时段使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8485"/>
+        <location filename="../mywidget.ui" line="8468"/>
         <location filename="../mywidget.cpp" line="3170"/>
         <source>Output power factor</source>
         <translation>输出功率因素</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4172"/>
+        <location filename="../mywidget.ui" line="4155"/>
         <source>Converter Data</source>
         <translation>变流器数据</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="5457"/>
+        <location filename="../mywidget.ui" line="5440"/>
         <source>Converter State</source>
         <translation>变流器状态</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="5851"/>
+        <location filename="../mywidget.ui" line="5834"/>
         <source>Converter Alarm</source>
         <translation>变流器告警</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6600"/>
+        <location filename="../mywidget.ui" line="6583"/>
         <location filename="../mywidget.cpp" line="2267"/>
         <source>Charging current limit</source>
         <translation>充电电流限制</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6624"/>
+        <location filename="../mywidget.ui" line="6607"/>
         <location filename="../mywidget.cpp" line="2271"/>
         <source>Discharging current limit</source>
         <translation>放电电流限制</translation>
@@ -1812,84 +1809,84 @@ enable</source>
         <translation type="vanished">可放电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7277"/>
+        <location filename="../mywidget.ui" line="7260"/>
         <source>Level1</source>
         <translation>一级告警</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7319"/>
+        <location filename="../mywidget.ui" line="7302"/>
         <source>Level2</source>
         <translation>二级告警</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7354"/>
+        <location filename="../mywidget.ui" line="7337"/>
         <source>Level3</source>
         <translation>三级告警</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7436"/>
+        <location filename="../mywidget.ui" line="7419"/>
         <source>Charging 
 enable</source>
         <translation>充电使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7492"/>
+        <location filename="../mywidget.ui" line="7475"/>
         <source>Discharging 
 enable</source>
         <translation>放电使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7946"/>
+        <location filename="../mywidget.ui" line="7929"/>
         <source>Record.csv</source>
         <translation>Record.csv</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8092"/>
+        <location filename="../mywidget.ui" line="8075"/>
         <source>u disk disconnect!</source>
         <translation>U盘未插入！</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8126"/>
+        <location filename="../mywidget.ui" line="8109"/>
         <location filename="../mywidget.cpp" line="5658"/>
         <source>History Records</source>
         <translation>导出历史记录</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8187"/>
+        <location filename="../mywidget.ui" line="8170"/>
         <location filename="../mywidget.cpp" line="5670"/>
         <source>Electricity Statistical Table</source>
         <translation>电量统计表</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8453"/>
+        <location filename="../mywidget.ui" line="8436"/>
         <source>Working mode</source>
         <translation>工作模式</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8517"/>
+        <location filename="../mywidget.ui" line="8500"/>
         <location filename="../mywidget.cpp" line="3175"/>
         <source>Output reactive power</source>
         <translation>输出无功功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8533"/>
+        <location filename="../mywidget.ui" line="8516"/>
         <location filename="../mywidget.cpp" line="3180"/>
         <source>Constant current</source>
         <translation>恒流</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8549"/>
+        <location filename="../mywidget.ui" line="8532"/>
         <location filename="../mywidget.cpp" line="3185"/>
         <source>Constant voltage</source>
         <translation>恒压</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8585"/>
+        <location filename="../mywidget.ui" line="8568"/>
         <source>DC/DC Parameter</source>
         <translation>DC/DC参数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8601"/>
+        <location filename="../mywidget.ui" line="8584"/>
         <source>Battery setup</source>
         <translation>电池设置</translation>
     </message>
@@ -1912,42 +1909,42 @@ B1:
         <translation type="vanished">下电</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8771"/>
+        <location filename="../mywidget.ui" line="8754"/>
         <source>DOD_OnGrid(%):</source>
         <translation>并网DOD(%)：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8779"/>
+        <location filename="../mywidget.ui" line="8762"/>
         <source>DOD_OffGrid(%):</source>
         <translation>离网DOD(%)：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8787"/>
+        <location filename="../mywidget.ui" line="8770"/>
         <source>Charge Volt. upper Limit(V)</source>
         <translation>充电电压上限(V)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8795"/>
+        <location filename="../mywidget.ui" line="8778"/>
         <source>Charge Volt. upper Limit delta(V)</source>
         <translation>充电电压上限回差(V)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8803"/>
+        <location filename="../mywidget.ui" line="8786"/>
         <source>Discharge Volt. lower Limit(V)</source>
         <translation>放电电压下限(V)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8811"/>
+        <location filename="../mywidget.ui" line="8794"/>
         <source>Discharge Volt. lower Limit delta(V)</source>
         <translation>放电电压下限回差(V)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8827"/>
+        <location filename="../mywidget.ui" line="8810"/>
         <source>Charge Current Limit(A)</source>
         <translation>充电电流限制(A)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8835"/>
+        <location filename="../mywidget.ui" line="8818"/>
         <source>Discharge Current Limit(A)</source>
         <translation>放电电流限制(A)</translation>
     </message>
@@ -1960,12 +1957,12 @@ B1:
         <translation type="vanished">均充电压(V)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8843"/>
+        <location filename="../mywidget.ui" line="8826"/>
         <source>Generator turn off SOC(B1)</source>
         <translation>发电机关闭SOC(B1)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8851"/>
+        <location filename="../mywidget.ui" line="8834"/>
         <source>Generator turn on SOC(A1)</source>
         <translation>发电机开启SOC(A1)</translation>
     </message>
@@ -1994,119 +1991,119 @@ B1 - A1 ≥ 30 %
 </translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8957"/>
-        <location filename="../mywidget.ui" line="8962"/>
-        <location filename="../mywidget.ui" line="8967"/>
-        <location filename="../mywidget.ui" line="8972"/>
-        <location filename="../mywidget.ui" line="8977"/>
-        <location filename="../mywidget.ui" line="8982"/>
-        <location filename="../mywidget.ui" line="8987"/>
+        <location filename="../mywidget.ui" line="8940"/>
+        <location filename="../mywidget.ui" line="8945"/>
+        <location filename="../mywidget.ui" line="8950"/>
+        <location filename="../mywidget.ui" line="8955"/>
+        <location filename="../mywidget.ui" line="8960"/>
+        <location filename="../mywidget.ui" line="8965"/>
+        <location filename="../mywidget.ui" line="8970"/>
         <source>New Row</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9024"/>
+        <location filename="../mywidget.ui" line="9007"/>
         <location filename="../mywidget.cpp" line="3350"/>
         <source>Capacity</source>
         <translation>容量</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9032"/>
+        <location filename="../mywidget.ui" line="9015"/>
         <source>Ah</source>
         <translation>Ah</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9040"/>
+        <location filename="../mywidget.ui" line="9023"/>
         <source>Grid off EOD</source>
         <translation>离网EOD</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9056"/>
+        <location filename="../mywidget.ui" line="9039"/>
         <source>Cell number(2V)</source>
         <translation>电池节数(2V)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9072"/>
+        <location filename="../mywidget.ui" line="9055"/>
         <source>Grid on EOD</source>
         <translation>并网EOD</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9088"/>
+        <location filename="../mywidget.ui" line="9071"/>
         <location filename="../mywidget.cpp" line="3360"/>
         <source>Battery float voltage</source>
         <translation>电池浮充电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9104"/>
+        <location filename="../mywidget.ui" line="9087"/>
         <source>Shutdown voltage point</source>
         <translation>关机电压点</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9170"/>
+        <location filename="../mywidget.ui" line="9153"/>
         <location filename="../mywidget.cpp" line="3365"/>
         <source>Battery filling voltage</source>
         <translation>电池均充电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9186"/>
+        <location filename="../mywidget.ui" line="9169"/>
         <source>Mending center point</source>
         <translation>温补中心点</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9252"/>
+        <location filename="../mywidget.ui" line="9235"/>
         <location filename="../mywidget.cpp" line="3370"/>
         <source>Charge limiting value</source>
         <translation>充电限流值</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9260"/>
-        <location filename="../mywidget.ui" line="9324"/>
-        <location filename="../mywidget.ui" line="9468"/>
-        <location filename="../mywidget.ui" line="9500"/>
+        <location filename="../mywidget.ui" line="9243"/>
+        <location filename="../mywidget.ui" line="9307"/>
+        <location filename="../mywidget.ui" line="9451"/>
+        <location filename="../mywidget.ui" line="9483"/>
         <source>C</source>
         <translation>C</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9268"/>
+        <location filename="../mywidget.ui" line="9251"/>
         <source>Temperature filling coefficient</source>
         <translation>温补系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9316"/>
+        <location filename="../mywidget.ui" line="9299"/>
         <location filename="../mywidget.cpp" line="3375"/>
         <source>Discharge limiting value</source>
         <translation>放电限流值</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9332"/>
+        <location filename="../mywidget.ui" line="9315"/>
         <source>Mending allowable setting</source>
         <translation>温补允许设置</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9380"/>
+        <location filename="../mywidget.ui" line="9363"/>
         <location filename="../mywidget.cpp" line="3380"/>
         <source>Generator turn off voltage</source>
         <translation>发电机关闭电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9396"/>
+        <location filename="../mywidget.ui" line="9379"/>
         <source>Temperature alarm upper limit</source>
         <translation>温度告警上限</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9444"/>
+        <location filename="../mywidget.ui" line="9427"/>
         <location filename="../mywidget.cpp" line="3385"/>
         <source>Generator turn on voltage</source>
         <translation>发电机开启电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9460"/>
+        <location filename="../mywidget.ui" line="9443"/>
         <location filename="../mywidget.cpp" line="3425"/>
         <source>Uniform charging and flushing current</source>
         <translation>均充转浮充电流</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9492"/>
+        <location filename="../mywidget.ui" line="9475"/>
         <location filename="../mywidget.cpp" line="3430"/>
         <source>Float turn uniform charging current</source>
         <translation>浮充转均充电流</translation>
@@ -2129,12 +2126,12 @@ B1 - A1 ≥ 30 %
         <translation type="vanished">+</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9599"/>
+        <location filename="../mywidget.ui" line="9582"/>
         <source>SystemInformation</source>
         <translation>系统信息</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9607"/>
+        <location filename="../mywidget.ui" line="9590"/>
         <source>Version:</source>
         <translation>版本号：</translation>
     </message>
@@ -2182,37 +2179,37 @@ B1 - A1 ≥ 30 %
         <translation type="vanished">SN：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9761"/>
+        <location filename="../mywidget.ui" line="9744"/>
         <source>Network:</source>
         <translation>网络：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9823"/>
+        <location filename="../mywidget.ui" line="9806"/>
         <source>interface:</source>
         <translation>接口号：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9870"/>
+        <location filename="../mywidget.ui" line="9853"/>
         <source>Port:</source>
         <translation>端口：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9845"/>
+        <location filename="../mywidget.ui" line="9828"/>
         <source>eth0</source>
         <translation>eth0</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9892"/>
+        <location filename="../mywidget.ui" line="9875"/>
         <source>502</source>
         <translation>502</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10059"/>
+        <location filename="../mywidget.ui" line="10042"/>
         <source>Apply and Reatart system</source>
         <translation>应用并重启系统</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9922"/>
+        <location filename="../mywidget.ui" line="9905"/>
         <location filename="../mywidget.cpp" line="5752"/>
         <source>DHCP</source>
         <translation>自动获取</translation>
@@ -2236,161 +2233,161 @@ B1 - A1 ≥ 30 %
         <translation>释放禁充标志</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="825"/>
+        <location filename="../mywidget.ui" line="824"/>
         <location filename="../mywidget.cpp" line="4960"/>
         <source>Power change rate</source>
         <translation>功率变化率</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="873"/>
+        <location filename="../mywidget.ui" line="872"/>
         <source>ULFV</source>
         <translation>电网频率变化范围上限</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="921"/>
+        <location filename="../mywidget.ui" line="920"/>
         <source>LLFV</source>
         <translation>电网频率变化范围下限</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1255"/>
+        <location filename="../mywidget.ui" line="1201"/>
         <location filename="../mywidget.cpp" line="5081"/>
         <source>Converter Anti-Reverse Flow</source>
         <translation>变流器防逆流</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1303"/>
+        <location filename="../mywidget.ui" line="1254"/>
         <location filename="../mywidget.cpp" line="5087"/>
         <source>System Anti-Reverse Flow</source>
         <translation>系统防逆流</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1527"/>
+        <location filename="../mywidget.ui" line="1510"/>
         <source>Dry Contact EPO</source>
         <translation>干接点EPO</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1535"/>
+        <location filename="../mywidget.ui" line="1518"/>
         <source>Dry Contact Shutdown</source>
         <translation>干接点关机</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9676"/>
+        <location filename="../mywidget.ui" line="9659"/>
         <location filename="../mywidget.cpp" line="1633"/>
         <source>System Information</source>
         <translation>系统信息</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9681"/>
+        <location filename="../mywidget.ui" line="9664"/>
         <source>    Monitoring software version</source>
         <translation>    监控版本</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9694"/>
+        <location filename="../mywidget.ui" line="9677"/>
         <source>    DCAC Protocol version</source>
         <translation>    DCAC协议版本</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9702"/>
+        <location filename="../mywidget.ui" line="9685"/>
         <source>    DCAC Converter software version</source>
         <translation>    DCAC变流器版本</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9710"/>
+        <location filename="../mywidget.ui" line="9693"/>
         <source>    DCAC CPLD software version</source>
         <translation>    DCAC CPLD软件版本</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9718"/>
+        <location filename="../mywidget.ui" line="9701"/>
         <source>    DCDC Protocol version</source>
         <translation>    DCDC 协议版本</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9726"/>
+        <location filename="../mywidget.ui" line="9709"/>
         <source>    DCDC Converter software version</source>
         <translation>    DCDC 变流器软件版本</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9734"/>
+        <location filename="../mywidget.ui" line="9717"/>
         <source>    DCDC CPLD software version</source>
         <translation>    DCDC CPLD软件版本</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9742"/>
+        <location filename="../mywidget.ui" line="9725"/>
         <source>    SN:</source>
         <translation>    SN:</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9938"/>
+        <location filename="../mywidget.ui" line="9921"/>
         <location filename="../mywidget.cpp" line="5730"/>
         <source>STATIC</source>
         <translation>静态</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9954"/>
+        <location filename="../mywidget.ui" line="9937"/>
         <source>ip:</source>
         <translation>地址：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9967"/>
+        <location filename="../mywidget.ui" line="9950"/>
         <source>netmask:</source>
         <translation>子网掩码：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9980"/>
+        <location filename="../mywidget.ui" line="9963"/>
         <source>gateway:</source>
         <translation>网关：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9993"/>
+        <location filename="../mywidget.ui" line="9976"/>
         <source>Server ip:</source>
         <translation>服务器IP：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10006"/>
+        <location filename="../mywidget.ui" line="9989"/>
         <source>192 . 168 . 1 . 100</source>
         <translation>192 . 168 . 1 . 100</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10019"/>
+        <location filename="../mywidget.ui" line="10002"/>
         <source>255 . 255 . 255 . 0</source>
         <translation>255 . 255 . 255 . 0</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10032"/>
+        <location filename="../mywidget.ui" line="10015"/>
         <source>192 . 168 .  1  . 1</source>
         <translation>192 . 168 .  1  . 1</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10045"/>
+        <location filename="../mywidget.ui" line="10028"/>
         <source> 192 . 168 . 1  . 200</source>
         <translation> 192 . 168 . 1  . 200</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10118"/>
+        <location filename="../mywidget.ui" line="10101"/>
         <source>DCAC converter 
  OFF</source>
         <translation>DCAC 变换器 关闭</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10165"/>
+        <location filename="../mywidget.ui" line="10148"/>
         <source>DCAC converter
  ON</source>
         <translation>DCAC 变换器 开启</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10215"/>
+        <location filename="../mywidget.ui" line="10198"/>
         <source>DCDC converter
  OFF</source>
         <translation>DCDC 变换器 关闭</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10262"/>
+        <location filename="../mywidget.ui" line="10245"/>
         <source>DCDC converter
  ON</source>
         <translation>DCDC 变换器 开启</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10356"/>
+        <location filename="../mywidget.ui" line="10339"/>
         <source>Menu</source>
         <translation>菜单</translation>
     </message>
@@ -2399,32 +2396,32 @@ B1 - A1 ≥ 30 %
         <translation type="vanished">主机_00 变流器关闭</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10529"/>
+        <location filename="../mywidget.ui" line="10512"/>
         <source>640V</source>
         <translation>640V</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10586"/>
+        <location filename="../mywidget.ui" line="10569"/>
         <source>780V</source>
         <translation>780V</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10625"/>
+        <location filename="../mywidget.ui" line="10608"/>
         <source>639V</source>
         <translation>639V</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10635"/>
+        <location filename="../mywidget.ui" line="10618"/>
         <source>150A</source>
         <translation>150A</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10695"/>
+        <location filename="../mywidget.ui" line="10678"/>
         <source>246A</source>
         <translation>246A</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10734"/>
+        <location filename="../mywidget.ui" line="10717"/>
         <source>202A</source>
         <translation>202A</translation>
     </message>
@@ -3466,9 +3463,8 @@ By default, the converter does not respond to level one and level two alarms, bu
         <translation>峰价</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3453"/>
         <source>In the peak shaving and valley filling mode, select &apos;Peak&apos; periods and &apos;Valley&apos; periods based on electricity prices.</source>
-        <translation>在削峰填谷模式下，根据电价选择‘峰价’时段、‘谷价’时段。</translation>
+        <translation type="vanished">在削峰填谷模式下，根据电价选择‘峰价’时段、‘谷价’时段。</translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="4783"/>
@@ -3673,14 +3669,12 @@ Select AUTO to automatically detect the battery manufacturer protocol.</source>
         <translation>输出无功方式：默认不可调节，可供选择为功率因数、无功功率、不可调节。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="5070"/>
         <source>The power grid recovery scheduling startup Settings, there are two options: Allow (Allow), Not allow (Not Allow), the setting is invalid.</source>
-        <translation>电网恢复调度开机设置，有两项可选：允许、不允许,设置无效。</translation>
+        <translation type="vanished">电网恢复调度开机设置，有两项可选：允许、不允许,设置无效。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="5076"/>
         <source>Grid Restoration and Grid-on Time: When grid restoration scheduling allows for startup, it can be set according to actual requirements.</source>
-        <translation>电网恢复并网时间：电网恢复调度开机允许时，根据实际需求设置即可。</translation>
+        <translation type="vanished">电网恢复并网时间：电网恢复调度开机允许时，根据实际需求设置即可。</translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="5082"/>
@@ -3956,7 +3950,7 @@ starting</source>
         <translation type="vanished">电网断路器有三种状态： 断开、闭合、脱扣；只能手动断开，如果电网断路器过流，电网断路器会发生脱扣。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9587"/>
+        <location filename="../mywidget.ui" line="9570"/>
         <location filename="../mywidget.cpp" line="3060"/>
         <location filename="../mywidget.cpp" line="3064"/>
         <location filename="../mywidget.cpp" line="3068"/>
@@ -4485,6 +4479,11 @@ Discharge)、降额并网(Drop and Connected)、待机(Standby)、离网充电(G
         <translation>电网断路器断开</translation>
     </message>
     <message>
+        <location filename="../mywidget.cpp" line="5076"/>
+        <source>Grid restoration time: reserved function, setting invalid.</source>
+        <translation>电网恢复并网：预留功能，设置无效。</translation>
+    </message>
+    <message>
         <location filename="../mywidget.cpp" line="1720"/>
         <location filename="../mywidget.cpp" line="4699"/>
         <source>Record Event</source>
@@ -4497,7 +4496,7 @@ Discharge)、降额并网(Drop and Connected)、待机(Standby)、离网充电(G
         <translation>修改时间</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8389"/>
+        <location filename="../mywidget.ui" line="8372"/>
         <location filename="../mywidget.cpp" line="3156"/>
         <source>Grid conected mode of the converter </source>
         <translation>变流器并网方式 </translation>
@@ -4962,7 +4961,7 @@ The accuracy is 0.1, which means that the obtained data multiplied by 0.1 gives 
         <translation>导出电量统计表，点击此处将会导出电量统计表到U盘里。精度为0.1,即所得数据*0.1为实际的数值。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8216"/>
+        <location filename="../mywidget.ui" line="8199"/>
         <location filename="../mywidget.cpp" line="5676"/>
         <source>Eject U disk</source>
         <translation>退出U盘</translation>
@@ -5079,7 +5078,7 @@ The accuracy is 0.1, which means that the obtained data multiplied by 0.1 gives 
         <translation type="vanished">温度告警上限，电池温度达到该值时将会告警。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8886"/>
+        <location filename="../mywidget.ui" line="8869"/>
         <source>Lead</source>
         <translation>铅酸</translation>
     </message>
@@ -5112,7 +5111,7 @@ The accuracy is 0.1, which means that the obtained data multiplied by 0.1 gives 
         <translation type="vanished">这是&apos;使能&apos;，选择后将在指定的时间以指定的功率开启指定的状态，并在指定的时间结束。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8632"/>
+        <location filename="../mywidget.ui" line="8615"/>
         <location filename="../mywidget.cpp" line="4782"/>
         <source>Lithium</source>
         <translation>锂电</translation>
@@ -5531,6 +5530,11 @@ The remote mode: the dispatching machine can only read and write data through Et
         <location filename="../mywidget.cpp" line="3450"/>
         <source>Select: After this function is enabled, the system automatically runs the selected function mode within the specified period.</source>
         <translation>选择：使能后，系统将按照设置的时间段自动运行选择的功能模式。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3453"/>
+        <source>In the peak shaving and valley filling mode, select &apos;Peak price&apos; periods and &apos;Valley price&apos; periods based on electricity prices.</source>
+        <translation>在削峰填谷模式下，根据电价选择‘峰价’时段、‘谷价’时段。</translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="4324"/>
@@ -5967,9 +5971,8 @@ The remote mode: the dispatching machine can only read and write data through Et
         <translation type="vanished">输出无功方式，默认不可调节，可供选择为功率因数(Pf)、无功功率(Q)、不可调节(Non adjustable)。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="5069"/>
         <source>Not Allow</source>
-        <translation>不允许</translation>
+        <translation type="vanished">不允许</translation>
     </message>
     <message>
         <source>This is the power grid recovery scheduling startup Settings, there are two options: Allow (Allow), Not allow (Not Allow), the setting is invalid.</source>
@@ -6209,9 +6212,9 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation>输入干接点1响应动作</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1597"/>
-        <location filename="../mywidget.ui" line="1641"/>
-        <location filename="../mywidget.ui" line="1685"/>
+        <location filename="../mywidget.ui" line="1580"/>
+        <location filename="../mywidget.ui" line="1624"/>
+        <location filename="../mywidget.ui" line="1668"/>
         <location filename="../mywidget.cpp" line="5240"/>
         <location filename="../mywidget.cpp" line="5243"/>
         <location filename="../mywidget.cpp" line="5246"/>
@@ -6764,8 +6767,8 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation>启动柴发信号</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="1652"/>
-        <location filename="../mywidget.ui" line="1696"/>
+        <location filename="../mywidget.ui" line="1635"/>
+        <location filename="../mywidget.ui" line="1679"/>
         <source>Reserved</source>
         <translation>预留</translation>
     </message>
