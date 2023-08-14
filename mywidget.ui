@@ -1649,7 +1649,7 @@ color: rgb(255, 255, 255);</string>
             </item>
             <item row="7" column="3">
              <property name="text">
-              <string>Reserve</string>
+              <string>Reserved</string>
              </property>
              <property name="textAlignment">
               <set>AlignCenter</set>
@@ -1693,7 +1693,7 @@ color: rgb(255, 255, 255);</string>
             </item>
             <item row="8" column="3">
              <property name="text">
-              <string>Reserve</string>
+              <string>Reserved</string>
              </property>
              <property name="textAlignment">
               <set>AlignCenter</set>
@@ -2740,7 +2740,7 @@ Language</string>
             <enum>QFrame::Raised</enum>
            </property>
            <property name="currentIndex">
-            <number>0</number>
+            <number>1</number>
            </property>
            <widget class="QWidget" name="Host_page">
             <widget class="QPushButton" name="Bypass_Grid_btn">
@@ -4157,6 +4157,7 @@ Language</string>
               <widget class="QTabWidget" name="Run_tabWidget">
                <property name="font">
                 <font>
+                 <family>宋体</family>
                  <pointsize>14</pointsize>
                 </font>
                </property>
@@ -4164,7 +4165,7 @@ Language</string>
                 <string notr="true"/>
                </property>
                <property name="currentIndex">
-                <number>3</number>
+                <number>2</number>
                </property>
                <widget class="QWidget" name="RT_Data_page">
                 <attribute name="title">
@@ -4218,7 +4219,7 @@ Language</string>
                         <enum>Qt::TabFocus</enum>
                        </property>
                        <property name="currentIndex">
-                        <number>0</number>
+                        <number>1</number>
                        </property>
                        <widget class="QWidget" name="Machine_page">
                         <property name="focusPolicy">
@@ -4776,7 +4777,11 @@ Language</string>
 QPushButton:!checked {
     background-color: rgb(31, 133, 227);
 	color: rgb(255, 255, 255);
-}</string>
+}
+QPushButton::hover{
+	color: rgb(0, 0, 0);
+ }
+</string>
                          </property>
                          <property name="text">
                           <string>Converter</string>
@@ -4785,7 +4790,7 @@ QPushButton:!checked {
                           <bool>true</bool>
                          </property>
                          <property name="checked">
-                          <bool>true</bool>
+                          <bool>false</bool>
                          </property>
                          <property name="autoRepeat">
                           <bool>false</bool>
@@ -4988,7 +4993,11 @@ QPushButton:!checked {
 QPushButton:!checked {
     background-color: rgb(31, 133, 227);
 	color: rgb(255, 255, 255);
-}</string>
+}
+QPushButton::hover{
+	color: rgb(0, 0, 0);
+ }
+</string>
                          </property>
                          <property name="text">
                           <string>PV</string>
@@ -5200,7 +5209,11 @@ QPushButton:!checked {
 QPushButton:!checked {
     background-color: rgb(31, 133, 227);
 	color: rgb(255, 255, 255);
-}</string>
+}
+QPushButton::hover{
+	color: rgb(0, 0, 0);
+ }
+</string>
                          </property>
                          <property name="text">
                           <string>Grid</string>
@@ -5412,7 +5425,10 @@ QPushButton:!checked {
 QPushButton:!checked {
     background-color: rgb(31, 133, 227);
 	color: rgb(255, 255, 255);
-}</string>
+}
+QPushButton::hover{
+	color: rgb(0, 0, 0);
+ }</string>
                          </property>
                          <property name="text">
                           <string>Load</string>
@@ -5855,62 +5871,62 @@ QPushButton:!checked {
                    <item>
                     <layout class="QHBoxLayout" name="horizontalLayout_30">
                      <item>
-                      <widget class="QLineEdit" name="search_le">
-                       <property name="minimumSize">
-                        <size>
-                         <width>860</width>
-                         <height>30</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>860</width>
-                         <height>30</height>
-                        </size>
-                       </property>
-                       <property name="inputMask">
-                        <string/>
+                      <widget class="QLabel" name="label_34">
+                       <property name="font">
+                        <font>
+                         <family>宋体</family>
+                         <pointsize>15</pointsize>
+                        </font>
                        </property>
                        <property name="text">
-                        <string/>
+                        <string>Please click on 'Alarm Information' to enter the query interface
+and view the details of the alarm information you have encountered.</string>
                        </property>
-                       <property name="echoMode">
-                        <enum>QLineEdit::Normal</enum>
-                       </property>
-                       <property name="placeholderText">
-                        <string>Please enter search keywords</string>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
                        </property>
                       </widget>
                      </item>
                      <item>
                       <widget class="QPushButton" name="search_btn">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
                        <property name="minimumSize">
                         <size>
                          <width>110</width>
-                         <height>30</height>
+                         <height>0</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
                          <width>110</width>
-                         <height>30</height>
+                         <height>16777215</height>
                         </size>
                        </property>
                        <property name="text">
-                        <string>Search</string>
+                        <string>Alarm
+Information</string>
                        </property>
                       </widget>
                      </item>
                     </layout>
                    </item>
                    <item>
-                    <widget class="QTableWidget" name="RTAlarm_Data_page">
-                     <property name="font">
-                      <font>
-                       <pointsize>12</pointsize>
-                      </font>
+                    <spacer name="verticalSpacer">
+                     <property name="orientation">
+                      <enum>Qt::Vertical</enum>
                      </property>
-                    </widget>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>20</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                    </spacer>
                    </item>
                   </layout>
                  </item>
@@ -5938,10 +5954,20 @@ QPushButton:!checked {
                  </property>
                  <item row="0" column="0">
                   <widget class="QStackedWidget" name="BAT_stackedWidget">
+                   <property name="font">
+                    <font>
+                     <family>宋体</family>
+                    </font>
+                   </property>
                    <property name="currentIndex">
                     <number>0</number>
                    </property>
                    <widget class="QWidget" name="BAT_Lithium_page">
+                    <property name="font">
+                     <font>
+                      <family>宋体</family>
+                     </font>
+                    </property>
                     <layout class="QGridLayout" name="gridLayout_17">
                      <property name="leftMargin">
                       <number>0</number>
@@ -5974,6 +6000,7 @@ QPushButton:!checked {
                             <widget class="QLabel" name="BATName1">
                              <property name="font">
                               <font>
+                               <family>宋体</family>
                                <pointsize>14</pointsize>
                               </font>
                              </property>
@@ -5995,6 +6022,7 @@ QPushButton:!checked {
                             <widget class="QLabel" name="BatAnalog_1">
                              <property name="font">
                               <font>
+                               <family>宋体</family>
                                <pointsize>14</pointsize>
                               </font>
                              </property>
@@ -6013,6 +6041,7 @@ QPushButton:!checked {
                             <widget class="QLabel" name="BatAnalog_2">
                              <property name="font">
                               <font>
+                               <family>宋体</family>
                                <pointsize>14</pointsize>
                               </font>
                              </property>
@@ -6031,6 +6060,7 @@ QPushButton:!checked {
                             <widget class="QLabel" name="BatAnalog_3">
                              <property name="font">
                               <font>
+                               <family>宋体</family>
                                <pointsize>14</pointsize>
                               </font>
                              </property>
@@ -6049,6 +6079,7 @@ QPushButton:!checked {
                             <widget class="QLabel" name="BatAnalog_4">
                              <property name="font">
                               <font>
+                               <family>宋体</family>
                                <pointsize>14</pointsize>
                               </font>
                              </property>
@@ -6067,6 +6098,7 @@ QPushButton:!checked {
                             <widget class="QLabel" name="BatAnalog_5">
                              <property name="font">
                               <font>
+                               <family>宋体</family>
                                <pointsize>14</pointsize>
                               </font>
                              </property>
@@ -6085,6 +6117,7 @@ QPushButton:!checked {
                             <widget class="QLabel" name="BatAnalog_6">
                              <property name="font">
                               <font>
+                               <family>宋体</family>
                                <pointsize>14</pointsize>
                               </font>
                              </property>
@@ -6103,6 +6136,7 @@ QPushButton:!checked {
                             <widget class="QLabel" name="BatAnalog_7">
                              <property name="font">
                               <font>
+                               <family>宋体</family>
                                <pointsize>14</pointsize>
                               </font>
                              </property>
@@ -6121,6 +6155,7 @@ QPushButton:!checked {
                             <widget class="QLabel" name="BatAnalog_8">
                              <property name="font">
                               <font>
+                               <family>宋体</family>
                                <pointsize>14</pointsize>
                               </font>
                              </property>
@@ -6188,6 +6223,11 @@ QPushButton:!checked {
                                <width>70</width>
                                <height>42</height>
                               </size>
+                             </property>
+                             <property name="font">
+                              <font>
+                               <family>宋体</family>
+                              </font>
                              </property>
                              <property name="text">
                               <string>0</string>
@@ -8286,7 +8326,7 @@ background-color: rgb(255, 0, 0);</string>
                 <bool>false</bool>
                </property>
                <property name="currentIndex">
-                <number>2</number>
+                <number>0</number>
                </property>
                <widget class="QWidget" name="DCACParameterSet_page">
                 <attribute name="title">
@@ -9734,8 +9774,8 @@ Set rule:B1 - A1 ≥ 10V</string>
                           <rect>
                            <x>0</x>
                            <y>0</y>
-                           <width>383</width>
-                           <height>347</height>
+                           <width>16</width>
+                           <height>16</height>
                           </rect>
                          </property>
                          <property name="cursor">
@@ -10366,7 +10406,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                  <string notr="true">color: rgb(255, 255, 255);</string>
                 </property>
                 <property name="text">
-                 <string>Master_00 Converter turn off</string>
+                 <string>M_01 Converter turn off</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
@@ -10405,6 +10445,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                 </property>
                 <property name="font">
                  <font>
+                  <family>新宋体</family>
                   <pointsize>14</pointsize>
                  </font>
                 </property>
@@ -10412,7 +10453,10 @@ Set rule:B1 - A1 ≥ 10V</string>
                  <string notr="true">color: rgb(255, 255, 255);</string>
                 </property>
                 <property name="text">
-                 <string/>
+                 <string>Current mode:CP</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
                 </property>
                </widget>
               </item>

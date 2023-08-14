@@ -20,11 +20,13 @@ include         ($$PWD/UI_Menu/UI_Menu.pri)
 include         ($$PWD/Specification/Specification.pri)
 include         ($$PWD/OperMode/OperMode.pri)
 include         ($$PWD/UpgradeTools/UpgradeTools.pri)
+include         ($$PWD/FaultTableInterface/FaultTableInterface.pri)
 
 INCLUDEPATH     +=$$PWD/Specification/
 INCLUDEPATH     +=$$PWD/UI_Menu/
 INCLUDEPATH     +=$$PWD/OperMode/
 INCLUDEPATH     +=$$PWD/UpgradeTools/
+INCLUDEPATH     +=$$PWD/FaultTableInterface/
 
 CONFIG += c++11
 
@@ -41,7 +43,8 @@ TRANSLATIONS += \
     $$PWD/Language/EN.ts
 
 RESOURCES += image.qrc \
-            language.qrc
+            language.qrc \
+    faultdescription.qrc
 
 DISTFILES += \
     Language/CN.ts \

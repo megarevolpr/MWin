@@ -63,6 +63,7 @@ void MyWidget::MemoryAllocation()
     m_menu = new Menu(this);
     mode_expelain = new OperMode(this);
     UpgradeInterface = new UpgradeTools(this);
+    FaultTable = new FaultTableInterface(this,LanguageType);
     /************************实时数据******************************/
     //变流器
     MPS_vol_AB_explain      = new QPushButton;
@@ -296,6 +297,14 @@ void MyWidget::MemoryAllocation()
     Check16_explain= new QPushButton;Check17_explain= new QPushButton;Check18_explain= new QPushButton;
     Check19_explain= new QPushButton;Check20_explain= new QPushButton;
 
+    Peak1_explain = new QPushButton;Peak2_explain= new QPushButton;Peak3_explain= new QPushButton;
+    Peak4_explain= new QPushButton;Peak5_explain= new QPushButton;Peak6_explain= new QPushButton;
+    Peak7_explain= new QPushButton;Peak8_explain= new QPushButton;Peak9_explain= new QPushButton;
+    Peak10_explain= new QPushButton;Peak11_explain= new QPushButton;Peak12_explain= new QPushButton;
+    Peak13_explain= new QPushButton;Peak14_explain= new QPushButton;Peak15_explain= new QPushButton;
+    Peak16_explain= new QPushButton;Peak17_explain= new QPushButton;Peak18_explain= new QPushButton;
+    Peak19_explain= new QPushButton;Peak20_explain= new QPushButton;
+
     Start_T1_explain = new QPushButton;Start_T2_explain= new QPushButton;Start_T3_explain= new QPushButton;
     Start_T4_explain= new QPushButton;Start_T5_explain= new QPushButton;Start_T6_explain= new QPushButton;
     Start_T7_explain= new QPushButton;Start_T8_explain= new QPushButton;Start_T9_explain= new QPushButton;
@@ -328,17 +337,12 @@ void MyWidget::MemoryAllocation()
     Power16_explain= new QPushButton;Power17_explain= new QPushButton;Power18_explain= new QPushButton;
     Power19_explain= new QPushButton;Power20_explain= new QPushButton;
 
-    Check1 = nullptr;
-    Check2 = nullptr;
-    Check3 = nullptr;
-    Check4 = nullptr;
-    Check5 = nullptr;
-    Check6 = nullptr;
-    Check7 = nullptr;
-    Check8 = nullptr;
-    Check9 = nullptr;
-    Check10 = nullptr;
-    Check11 = nullptr;Check12 = nullptr;Check13 = nullptr;Check14 = nullptr;Check15 = nullptr;Check16 = nullptr;Check17 = nullptr;Check18 = nullptr;Check19 = nullptr;Check20 = nullptr;
+    Check1 = nullptr;Check2 = nullptr;Check3 = nullptr;Check4 = nullptr; Check5 = nullptr;Check6 = nullptr;Check7 = nullptr;Check8 = nullptr;Check9 = nullptr;
+    Check10 = nullptr;Check11 = nullptr;Check12 = nullptr;Check13 = nullptr;Check14 = nullptr;Check15 = nullptr;Check16 = nullptr;Check17 = nullptr;
+    Check18 = nullptr;Check19 = nullptr;Check20 = nullptr;
+    Peak1 = nullptr;Peak2 = nullptr;Peak3 = nullptr;Peak4 = nullptr; Peak5 = nullptr;Peak6 = nullptr;Peak7 = nullptr;Peak8 = nullptr;Peak9 = nullptr;
+    Peak10 = nullptr;Peak11 = nullptr;Peak12 = nullptr;Peak13 = nullptr;Peak14 = nullptr;Peak15 = nullptr;Peak16 = nullptr;Peak17 = nullptr;
+    Peak18 = nullptr;Peak19 = nullptr;Peak20 = nullptr;
     Start_T1 = nullptr;Start_T2 = nullptr;Start_T3 = nullptr;Start_T4 = nullptr;Start_T5 = nullptr;Start_T6 = nullptr;Start_T7 = nullptr;Start_T8 = nullptr;Start_T9 = nullptr;Start_T10 = nullptr;
     Start_T11 = nullptr;Start_T12 = nullptr;Start_T13 = nullptr;Start_T14 = nullptr;Start_T15 = nullptr;Start_T16 = nullptr;Start_T17 = nullptr;Start_T18 = nullptr;Start_T19 = nullptr;Start_T20 = nullptr;
     End_T1 = nullptr;End_T2 = nullptr;End_T3 = nullptr;End_T4 = nullptr;End_T5 = nullptr;End_T6 = nullptr;End_T7 = nullptr;End_T8 = nullptr;End_T9 = nullptr;End_T10 = nullptr;
@@ -658,6 +662,8 @@ void MyWidget::MemoryAllocation()
 /************MPS状态释放说明弹窗的空间***************/
 void MyWidget::MPS_state_delete()
 {
+    delete FaultTable;
+
     delete DC_input_Bre;
     delete DC_Con;
     delete M_Bypass_Bre;
@@ -1134,6 +1140,7 @@ void MyWidget::ChangeLanguage_btn_clicked()
     Delete_explain();//释放空间
     mode_expelain = new OperMode(this);
     UpgradeInterface = new UpgradeTools(this);
+    FaultTable = new FaultTableInterface(this,LanguageType);
     UIPageInit();       //初始化界面
 }
 //操作模式新界面
@@ -1197,7 +1204,7 @@ void MyWidget::LinkRelationship()
 
     connect(ui->ChangeLanguage_btn, SIGNAL(clicked(bool)), this, SLOT(ChangeLanguage_btn_clicked()));//切换语言点击槽
     connect(ui->ChangeLanguage_btn_1, SIGNAL(clicked(bool)), this, SLOT(ChangeLanguage_btn_clicked()));//切换语言点击槽_高级设置
-    connect(ui->search_le,SIGNAL(editingFinished()), this, SLOT(on_search_btn_clicked()));//搜索栏关联搜索槽，使LineEdit失去焦点或回车键回车也生效
+//    connect(ui->search_le,SIGNAL(editingFinished()), this, SLOT(on_search_btn_clicked()));//搜索栏关联搜索槽，使LineEdit失去焦点或回车键回车也生效
 
 }
 //实时数据
@@ -1205,7 +1212,7 @@ void MyWidget::RunStatePage()
 {
     MPS_Data_Tab();//MPS数据初始化
     ModuleState_Tab();//MPS状态表初始化
-    RTAlarm();//告警信息初始化
+//    RTAlarm();//告警信息初始化
 }
 
 //系统设置
@@ -1290,6 +1297,10 @@ void MyWidget::MPS_Data_Tab()
         ui->RT_Machine_tableWidget->setItem(i, 2, new QTableWidgetItem(Converter_Tablist2.at(i)));
         ui->RT_Machine_tableWidget->item(i, 2)->setTextAlignment(Qt::AlignCenter);
     }
+    for(int i=0;i<9;i++)
+    {
+        ui->RT_Machine_tableWidget->setRowHeight(i,42);
+    }
     /***************************************************************************************************/
 
     QStringList PV_Tablist1;
@@ -1326,13 +1337,17 @@ void MyWidget::MPS_Data_Tab()
         ui->RT_DCDC_tableWidget->setItem(i, 2, new QTableWidgetItem(PV_Tablist2.at(i)));
         ui->RT_DCDC_tableWidget->item(i, 2)->setTextAlignment(Qt::AlignCenter);
     }
+    for(int i=0;i<7;i++)
+    {
+        ui->RT_DCDC_tableWidget->setRowHeight(i,45);
+    }
     /***************************************************************************************************/
     QStringList RT_Grid_Tablist1;
     RT_Grid_Tablist1  << tr("Grid Voltage(AB)") << tr("Grid Voltage(BC)") << tr("Grid Voltage(CA)")
                         << tr("Grid Current(A)") << tr("Grid Current(B)")<< tr("Grid Current(C)");
     QStringList RT_Grid_Tablist2;
-    RT_Grid_Tablist2  << tr("Active power") << tr("Reactive power") << tr("Apparent power")<< tr("Power factor")
-                        << tr("Frequency");
+    RT_Grid_Tablist2  << tr("Grid active power") << tr("Grid reactive power") << tr("Grid apparent power")<< tr("Grid power factor")
+                        << tr("Grid frequency");
     ui->RT_Grid_tableWidget->setColumnCount(4);
     ui->RT_Grid_tableWidget->setRowCount(RT_Grid_Tablist1.size());
     ui->RT_Grid_tableWidget->horizontalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
@@ -1361,14 +1376,18 @@ void MyWidget::MPS_Data_Tab()
         ui->RT_Grid_tableWidget->setItem(i, 2, new QTableWidgetItem(RT_Grid_Tablist2.at(i)));
         ui->RT_Grid_tableWidget->item(i, 2)->setTextAlignment(Qt::AlignCenter);
     }
+    for(int i=0;i<6;i++)
+    {
+        ui->RT_Grid_tableWidget->setRowHeight(i,45);
+    }
     /***************************************************************************************************/
 
     QStringList Load_Tablist1;
     Load_Tablist1  << tr("Load Voltage(AB)") << tr("Load Voltage(BC)") << tr("Load Voltage(CA)")
                    << tr("Load Current(A)") << tr("Load Current(B)")<< tr("Load Current(C)");
     QStringList Load_Tablist2;
-    Load_Tablist2  << tr("Active power") << tr("Reactive power") << tr("Apparent power")<< tr("Power factor")
-                   << tr("Frequency");
+    Load_Tablist2  << tr("Load active power") << tr("Load reactive power") << tr("Load apparent power")<< tr("Load power factor")
+                   << tr("Load frequency");
     ui->RT_Load_tableWidget->setColumnCount(4);
     ui->RT_Load_tableWidget->setRowCount(Load_Tablist1.size());
     ui->RT_Load_tableWidget->horizontalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
@@ -1401,7 +1420,10 @@ void MyWidget::MPS_Data_Tab()
     PV_Data(ui->RT_DCDC_tableWidget);
     Grid_Data(ui->RT_Grid_tableWidget);
     Load_Data(ui->RT_Load_tableWidget);
-
+    for(int i=0;i<6;i++)
+    {
+        ui->RT_Load_tableWidget->setRowHeight(i,45);
+    }
 }
 
 //MPS状态表初始化
@@ -1568,7 +1590,7 @@ void MyWidget::BatterySet_Lead_tab()
 void MyWidget::RunTimeSet_tab()
 {
     QStringList time_str;
-    time_str<< tr("Check") <<tr("")<< tr("StartTime") << tr("EndTime") << tr("Features") << tr("Power(kw)");
+    time_str<< tr("Check") <<tr("Peak-Valley")<< tr("StartTime") << tr("EndTime") << tr("Features") << tr("Power(kw)");
     ui->Time_tableWidget->setColumnCount(time_str.size());
     ui->Time_tableWidget->setRowCount(20);
     ui->Time_tableWidget->setHorizontalHeaderLabels(time_str);
@@ -1717,7 +1739,7 @@ void MyWidget::OperationLog()
 }
 
 //告警信息绘表
-void MyWidget::RTAlarm()
+/*void MyWidget::RTAlarm()
 {
     ui->RTAlarm_Data_page->setColumnCount(5);
     ui->RTAlarm_Data_page->setRowCount(28);
@@ -1741,7 +1763,7 @@ void MyWidget::RTAlarm()
     ui->RTAlarm_Data_page->setHorizontalHeaderLabels(RTAlarm_Title);
 
     PCS_Alarm_information_table();  //展示PCS故障信息表
-}
+}*/
 /*************DCAC参数*************/
 void MyWidget::UserParam_tab()
 {
@@ -1779,7 +1801,7 @@ void MyWidget::UserParam_tab()
 }
 
 //展示PCS故障信息表
-void MyWidget::PCS_Alarm_information_table()
+/*void MyWidget::PCS_Alarm_information_table()
 {
     ui->RTAlarm_Data_page->setRowHeight(0, 110);
     QStringList RTAlarm_List;
@@ -2116,7 +2138,7 @@ void MyWidget::PCS_Alarm_information_table()
         ui->RTAlarm_Data_page->setItem(27, i, new QTableWidgetItem(RTAlarm_List.at(i)));
         ui->RTAlarm_Data_page->item(27, i)->setTextAlignment(Qt::AlignCenter);
     }
-}
+}*/
 
 //显示菜单
 void MyWidget::on_UI_MenuBtn_clicked()
@@ -2846,8 +2868,8 @@ void MyWidget::Grid_Data(QTableWidget *myTable)
         delete Grid_active_power;
     }
     Grid_active_power = new Specification(this,Grid_active_power_explain, myTable, line++, column, \
-                                            "0kW", tr("Active power"), \
-                                            tr("Grid side active power (P)."));
+                                            "0kW", tr("Grid active power"), \
+                                            tr("Active power P on the grid side of the converter."));
     Grid_active_power->add_Specification();
 
     if(Grid_reactive_power != nullptr)
@@ -2855,8 +2877,8 @@ void MyWidget::Grid_Data(QTableWidget *myTable)
         delete Grid_reactive_power;
     }
     Grid_reactive_power = new Specification(this,Grid_reactive_power_explain, myTable, line++, column, \
-                                            "0Kvar", tr("Reactive power"), \
-                                            tr("Grid side reactive power (Q)."));
+                                            "0Kvar", tr("Grid reactive power"), \
+                                            tr("Reactive power Q on the grid side of the converter."));
     Grid_reactive_power->add_Specification();
 
     if(Grid_apparent_power != nullptr)
@@ -2864,8 +2886,8 @@ void MyWidget::Grid_Data(QTableWidget *myTable)
         delete Grid_apparent_power;
     }
     Grid_apparent_power = new Specification(this,Grid_apparent_power_explain, myTable, line++, column, \
-                                            "0kVA", tr("Apparent power"), \
-                                            tr("Grid side view power (S)."));
+                                            "0kVA", tr("Grid apparent power"), \
+                                            tr("Apparent power S on the grid side of the converter."));
     Grid_apparent_power->add_Specification();
 
     if(Grid_power_factor != nullptr)
@@ -2873,16 +2895,16 @@ void MyWidget::Grid_Data(QTableWidget *myTable)
         delete Grid_power_factor;
     }
     Grid_power_factor = new Specification(this,Grid_power_factor_explain, myTable, line++, column, \
-                                            "0", tr("Power factor"), \
-                                            tr("Grid side power factor (Pf)."));
+                                            "0", tr("Grid power factor"), \
+                                            tr("Power factor PF on the grid side of the converter."));
     Grid_power_factor->add_Specification();
     if(Grid_Frequency != nullptr)
     {
         delete Grid_Frequency;
     }
     Grid_Frequency = new Specification(this,Grid_Frequency_explain, myTable, line++, column, \
-                                            "0Hz", tr("Frequency"), \
-                                            tr("Grid side frequency."));
+                                            "0Hz", tr("Grid frequency"), \
+                                            tr("Frequency on the grid side of the converter."));
     Grid_Frequency->add_Specification();
 }
 //负载数据 绘制button
@@ -2952,8 +2974,8 @@ void MyWidget::Load_Data(QTableWidget *myTable)
         delete Load_active_power;
     }
     Load_active_power = new Specification(this,Load_active_power_explain, myTable, line++, column, \
-                                            "0kW", tr("Active power"), \
-                                            tr("Load side active power (P)."));
+                                            "0kW", tr("Load active power"), \
+                                            tr("Active power P on the load side of the converter."));
     Load_active_power->add_Specification();
 
     if(Load_reactive_power != nullptr)
@@ -2961,8 +2983,8 @@ void MyWidget::Load_Data(QTableWidget *myTable)
         delete Load_reactive_power;
     }
     Load_reactive_power = new Specification(this,Load_reactive_power_explain, myTable, line++, column, \
-                                            "0Kvar", tr("Reactive power"), \
-                                            tr("Load side reactive power (Q)."));
+                                            "0Kvar", tr("Load reactive power"), \
+                                            tr("Reactive power Q on the load side of the converter."));
     Load_reactive_power->add_Specification();
 
     if(Load_apparent_power != nullptr)
@@ -2970,8 +2992,8 @@ void MyWidget::Load_Data(QTableWidget *myTable)
         delete Load_apparent_power;
     }
     Load_apparent_power = new Specification(this,Load_apparent_power_explain, myTable, line++, column, \
-                                            "0kVA", tr("Apparent power"), \
-                                            tr("Load side view power (S)."));
+                                            "0kVA", tr("Load apparent power"), \
+                                            tr("Apparent power S on the load side of the converter."));
     Load_apparent_power->add_Specification();
 
     if(Load_power_factor != nullptr)
@@ -2979,8 +3001,8 @@ void MyWidget::Load_Data(QTableWidget *myTable)
         delete Load_power_factor;
     }
     Load_power_factor = new Specification(this,Load_power_factor_explain, myTable, line++, column, \
-                                            "0", tr("Power factor"), \
-                                           tr("Load side power factor (Pf)."));
+                                            "0", tr("Load power factor"), \
+                                           tr("Power factor PF on the load side of the converter."));
     Load_power_factor->add_Specification();
 
     if(Load_Frequency != nullptr)
@@ -2988,8 +3010,8 @@ void MyWidget::Load_Data(QTableWidget *myTable)
         delete Load_Frequency;
     }
     Load_Frequency = new Specification(this,Load_Frequency_explain, myTable, line++, column, \
-                                            "0Hz", tr("Frequency"), \
-                                            tr("Load side frequency."));
+                                            "0Hz", tr("Load frequency"), \
+                                            tr("Frequency on the load side of the converter."));
     Load_Frequency->add_Specification();
 }
 //MPS状态 绘制button
@@ -3009,30 +3031,30 @@ void MyWidget::MPSState(QTableWidget *myTable)
 
     int line = 0;int column = 1;//当前解释的button行和列
     DC_input_Bre = new Specification(this,DC_input_Bre_explain, myTable, line++, column, \
-                                            tr("Closed"), tr("DC input breaker"), \
-                                            tr("There are two states for a DC circuit breaker: open, closed."));
+                                            tr("On"), tr("DC input breaker"), \
+                                            tr("There are two states for a DC circuit breaker: On, Off."));
     DC_input_Bre->add_Specification();
     DC_Con = new Specification(this,DC_Con_explain, myTable, line++, column, \
-                               tr("Closed"), tr("DC contactor"), \
-                               tr("The DC contactor has two states: open and closed. After the soft start of the DC side is completed, the DC contactor closes. When the DC side of the battery is disconnected and the voltage of the DC bus drops to a certain level, the DC contactor opens."));
+                               tr("On"), tr("DC contactor"), \
+                               tr("The DC contactor has two states: On, Off. After the soft start of the DC side is completed, the DC contactor closes. When the DC side of the battery is disconnected and the voltage of the DC bus drops to a certain level, the DC contactor opens."));
     DC_Con->add_Specification();//直流接触器有两种状态:断开、闭合:当直流侧软启完成后，直流接触器闭合;当电池直流侧断开，直流母线电压下降到一定电压，直流接触器断开。
 
     M_Bypass_Bre = new Specification(this,M_Bypass_Bre_explain, myTable, line++, column, \
-                                            tr("Closed"), tr("Maintenance Bypass Breaker"), \
-                                            tr("There are two states for the maintenance bypass circuit breaker: Open, Closed. This circuit breaker is only used for machine maintenance. If maintenance is required, please contact the maintenance personnel."));
-    M_Bypass_Bre->add_Specification();//维修旁路断路器有两种状态:断开、团合;此断路器仅用于机器维护，如需维护，请联系维护人员。
+                                            tr("On"), tr("Maintenance Bypass Breaker"), \
+                                            tr("There are two states for the maintenance bypass circuit breaker: On, Off. This circuit breaker is only used for machine maintenance. If maintenance is required, please contact the maintenance personnel."));
+    M_Bypass_Bre->add_Specification();//维修旁路断路器有两种状态:断开、闭合;此断路器仅用于机器维护，如需维护，请联系维护人员。
 
     Output_Bre = new Specification(this,Output_Bre_explain, myTable, line++, column, \
-                                            tr("Closed"), tr("Output breaker"), \
-                                            tr("The output circuit breaker has two states: open, closed. It can only be manually opened and closed. If there is an overcurrent in the output circuit breaker, it will trip."));
+                                            tr("On"), tr("Output breaker"), \
+                                            tr("The output circuit breaker has two states: On, Off. It can only be manually opened and closed. If there is an overcurrent in the output circuit breaker, it will trip."));
     Output_Bre->add_Specification();
     Output_Con = new Specification(this,Output_Con_explain, myTable, line++, column, \
-                                            tr("Closed"), tr("Output contactor"), \
-                                            tr("The output contactor has two states: Open, Closed. The output contactor closes after the soft start on the inv. side is completed. The output contactor opens when the converter is shut down."));
+                                            tr("On"), tr("Output contactor"), \
+                                            tr("The output contactor has two states: On, Off. The output contactor closes after the soft start on the inv. side is completed. The output contactor opens when the converter is shut down."));
     Output_Con->add_Specification();
     Grid_Bre = new Specification(this,Grid_Bre_explain, myTable, line++, column, \
-                                            tr("Closed"), tr("Grid breaker"), \
-                                            tr("The power grid circuit breaker has two states: Break, Close; The power grid circuit breaker can only be manually disconnected. If the power grid circuit breaker overflows, the power grid circuit breaker may trip."));
+                                            tr("On"), tr("Grid breaker"), \
+                                            tr("The power grid circuit breaker has two states: On, Off; The power grid circuit breaker can only be manually disconnected. If the power grid circuit breaker overflows, the power grid circuit breaker may trip."));
     Grid_Bre->add_Specification();
     DO1 = new Specification(this,DO1_explain, myTable, line++, column, \
                                             tr("Disable"), tr("Start Diesel Generator Signal"), \
@@ -3112,12 +3134,12 @@ void MyWidget::MPSState(QTableWidget *myTable)
                                             tr("Low-voltage side soft start states: Not started, Soft start in progress, Soft start completed."));
     Soft_Start_Sta_Buck->add_Specification();
     Contator_Sta_Boost = new Specification(this,Contator_Sta_Boost_explain, myTable, line++, column, \
-                                            tr("Open"), tr("Contator Status Boost"), \
-                                            tr("DC module high voltage contactor has two states: open, closed; When there is voltage on the high voltage side, close the high voltage contactor; Otherwise, the high voltage contactor is disconnected."));
+                                            tr("Off"), tr("Contator Status Boost"), \
+                                            tr("DC module high voltage contactor has two states: On, Off; When there is voltage on the high voltage side, close the high voltage contactor; Otherwise, the high voltage contactor is disconnected."));
     Contator_Sta_Boost->add_Specification();
     Contator_Sta_Buck = new Specification(this,Contator_Sta_Buck_explain, myTable, line++, column, \
-                                            tr("Open"), tr("Contator Status Buck"), \
-                                            tr("DC module low voltage contactor has two states: open, closed; When there is voltage on the low voltage side, close the contactor on the low voltage side; Otherwise, the low pressure contactor is disconnected."));
+                                            tr("On"), tr("Contator Status Buck"), \
+                                            tr("DC module low voltage contactor has two states: On, Off; When there is voltage on the low voltage side, close the contactor on the low voltage side; Otherwise, the low pressure contactor is disconnected."));
     Contator_Sta_Buck->add_Specification();  
     Converter_Status_V = new Specification(this,Converter_Status_V_explain, myTable, line++, column, \
                                             tr("Turn off"), tr("Converter Status"), \
@@ -3422,11 +3444,14 @@ void MyWidget::AutoOperation(QTableWidget *myTable)
     QString temp6 = tr("9:00");
     QString temp7 = tr("10:00");
     QString temp8 = tr("End time: The system stops automatically running when the system reaches this time.");
-    QString temp9 = tr("This is the function that will perform this function during business hours, there are six to choose from, They are System for self-use, battery Batter priority, Peak shaving, Output PV power,Economic model.");
+    QString temp9 = tr("The function that will perform this function during business hours, there are six to choose from, They are System for self-use, battery Batter priority, Peak shaving, Output PV power,Economic model.");
     QString temp10 = tr("Working Power: Only effective in peak shaving mode. Positive values indicate discharging, while negative values indicate charging.");
     QString temp11 = tr("Start time: When the system reaches this time, it starts to run automatically.");
     QString temp12 = tr("Select: After this function is enabled, the system automatically runs the selected function mode within the specified period.");
     QString temp13 = tr("System for self-use");
+    QString temp14 = tr("Peak price");//峰
+    QString temp15 = tr("In the peak shaving and valley filling mode, select 'Peak' periods and 'Valley' periods based on electricity prices.");//
+    QString temp16 = tr("Peak-Valley");//峰-谷
     int line = 0;int column = 0;//当前解释的button行和列
 
     if(Check1 != nullptr)
@@ -3568,6 +3593,148 @@ void MyWidget::AutoOperation(QTableWidget *myTable)
     }
     Check20 = new Specification(this,Check20_explain, ui->Time_tableWidget, line++, column, "", temp1, temp12);
     Check20->add_Specification();
+
+    line = 0;column = 1;//当前解释的button行和列
+
+    if(Peak1 != nullptr)
+    {
+        delete Peak1;
+    }
+    Peak1 = new Specification(this,Peak1_explain, ui->Time_tableWidget, line++, column, temp14, temp16, temp15);
+    Peak1->add_Specification();
+
+    if(Peak2 != nullptr)
+    {
+        delete Peak2;
+    }
+    Peak2 = new Specification(this,Peak2_explain, ui->Time_tableWidget, line++, column, temp14, temp16, temp15);
+    Peak2->add_Specification();
+
+    if(Peak3 != nullptr)
+    {
+        delete Peak3;
+    }
+    Peak3 = new Specification(this,Peak3_explain, ui->Time_tableWidget, line++, column, temp14, temp16, temp15);
+    Peak3->add_Specification();
+
+    if(Peak4 != nullptr)
+    {
+        delete Peak4;
+    }
+    Peak4 = new Specification(this,Peak4_explain, ui->Time_tableWidget, line++, column, temp14, temp16, temp15);
+    Peak4->add_Specification();
+
+    if(Peak5 != nullptr)
+    {
+        delete Peak5;
+    }
+    Peak5 = new Specification(this,Peak5_explain, ui->Time_tableWidget, line++, column, temp14, temp16, temp15);
+    Peak5->add_Specification();
+
+    if(Peak6 != nullptr)
+    {
+        delete Peak6;
+    }
+    Peak6 = new Specification(this,Peak6_explain, ui->Time_tableWidget, line++, column, temp14, temp16, temp15);
+    Peak6->add_Specification();
+
+    if(Peak7 != nullptr)
+    {
+        delete Peak7;
+    }
+    Peak7 = new Specification(this,Peak7_explain, ui->Time_tableWidget, line++, column, temp14, temp16, temp15);
+    Peak7->add_Specification();
+
+    if(Peak8 != nullptr)
+    {
+        delete Peak8;
+    }
+    Peak8 = new Specification(this,Peak8_explain, ui->Time_tableWidget, line++, column, temp14, temp16, temp15);
+    Peak8->add_Specification();
+
+    if(Peak9 != nullptr)
+    {
+        delete Peak9;
+    }
+    Peak9 = new Specification(this,Peak9_explain, ui->Time_tableWidget, line++, column, temp14, temp16, temp15);
+    Peak9->add_Specification();
+
+    if(Peak10 != nullptr)
+    {
+        delete Peak10;
+    }
+    Peak10 = new Specification(this,Peak10_explain, ui->Time_tableWidget, line++, column, temp14, temp16, temp15);
+    Peak10->add_Specification();
+
+    if(Peak11 != nullptr)
+    {
+        delete Peak11;
+    }
+    Peak11 = new Specification(this,Peak11_explain, ui->Time_tableWidget, line++, column, temp14, temp16, temp15);
+    Peak11->add_Specification();
+
+    if(Peak11 != nullptr)
+    {
+        delete Peak12;
+    }
+    Peak12 = new Specification(this,Peak12_explain, ui->Time_tableWidget, line++, column, temp14, temp16, temp15);
+    Peak12->add_Specification();
+
+    if(Peak13 != nullptr)
+    {
+        delete Peak13;
+    }
+    Peak13 = new Specification(this,Peak13_explain, ui->Time_tableWidget, line++, column, temp14, temp16, temp15);
+    Peak13->add_Specification();
+
+    if(Peak14 != nullptr)
+    {
+        delete Peak14;
+    }
+    Peak14 = new Specification(this,Peak14_explain, ui->Time_tableWidget, line++, column, temp14, temp16, temp15);
+    Peak14->add_Specification();
+
+    if(Peak15 != nullptr)
+    {
+        delete Peak15;
+    }
+    Peak15 = new Specification(this,Peak15_explain, ui->Time_tableWidget, line++, column, temp14, temp16, temp15);
+    Peak15->add_Specification();
+
+    if(Peak16 != nullptr)
+    {
+        delete Peak16;
+    }
+    Peak16 = new Specification(this,Peak16_explain, ui->Time_tableWidget, line++, column, temp14, temp16, temp15);
+    Peak16->add_Specification();
+
+    if(Peak17 != nullptr)
+    {
+        delete Peak17;
+    }
+    Peak17 = new Specification(this,Peak17_explain, ui->Time_tableWidget, line++, column, temp14, temp16, temp15);
+    Peak17->add_Specification();
+
+    if(Peak18 != nullptr)
+    {
+        delete Peak18;
+    }
+    Peak18 = new Specification(this,Peak18_explain, ui->Time_tableWidget, line++, column, temp14, temp16, temp15);
+    Peak18->add_Specification();
+
+    if(Peak19 != nullptr)
+    {
+        delete Peak19;
+    }
+    Peak19 = new Specification(this,Peak19_explain, ui->Time_tableWidget, line++, column, temp14, temp16, temp15);
+    Peak19->add_Specification();
+
+    if(Peak20 != nullptr)
+    {
+        delete Peak20;
+    }
+    Peak20 = new Specification(this,Peak20_explain, ui->Time_tableWidget, line++, column, temp14, temp16, temp15);
+    Peak20->add_Specification();
 
     line = 0;
     column = 2;
@@ -4996,8 +5163,10 @@ void MyWidget::SystemParameter(QTableWidget *myTable)
 void MyWidget::ExternalDevice(QTableWidget *myTable)
 {
     QString str = tr("Normally closed circuit (NC) or normally open circuit (NO) according to field Settings.");
-    QString str1 = tr("When the dry contact is enabled and an abnormal signal is received, the device performs the selected action.");
-    QString str2 = tr("When the dry contact is enabled, the device will perform the selected action when there is a change in the signal.");
+    QString str1 = tr("When the dry contact is enabled, the device will perform the selected action when there is a change in the signal.");
+    QString str2 = tr("Input Dry Contact: \
+                      \nEnabled: Triggers the Action when the dry contact detects a state other than the specified NO/NC.\
+                      \nDisabled: No action is taken when the dry contact detects a state other than the specified NO/NC.");
 
     DI_1_Enable = new Specification(this,DI_1_Enable_explain, myTable, 0, 0, \
                                     tr("Enable"), tr("DI_1_Enable"), \
@@ -5620,7 +5789,15 @@ void MyWidget::on_pushButton_sub_clicked()
  ***************************************************************/
 void MyWidget::on_search_btn_clicked()
 {
-    QString search = ui->search_le->text();
+    if(FaultTable->isHidden())
+    {
+        FaultTable->show();
+    }
+    else
+    {
+        FaultTable->hide();
+    }
+    /*QString search = ui->search_le->text();
     int row=ui->RTAlarm_Data_page->rowCount();
 
     if (search == "")   //判断搜索框是否是空，如果是空就显示所有行
@@ -5648,7 +5825,7 @@ void MyWidget::on_search_btn_clicked()
                 ui->RTAlarm_Data_page->setRowHidden(item.at(i)->row(),false);//恢复对应的行
             }
         }
-    }
+    }*/
 }
 
 //时间显示点击

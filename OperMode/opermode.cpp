@@ -164,6 +164,7 @@ void OperMode::InitializeMemorySpace()
 void OperMode::InitializeChart(QTableWidget *myWidget)
 {
     myWidget->verticalHeader()->setVisible(false);//设置垂直头不可见
+    myWidget->horizontalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
     myWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);//设置不可编辑
     ui->PVEidt->setReadOnly(true);//只读
     ui->PV_A_Edit->setReadOnly(true);
@@ -207,6 +208,7 @@ void OperMode::InitializeChart(QTableWidget *myWidget)
 void OperMode::InitializeChart_2(QTableWidget *myWidget)
 {
     myWidget->verticalHeader()->setVisible(false);//设置垂直头不可见
+    myWidget->horizontalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
     myWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);//设置不可编辑
 
     ui->BatteryAreaEdit->setReadOnly(true);//只读

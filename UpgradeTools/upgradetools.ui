@@ -24,7 +24,7 @@
        <bool>true</bool>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <property name="usesScrollButtons">
        <bool>false</bool>
@@ -230,7 +230,7 @@ color: rgb(97, 0, 167);</string>
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
               <property name="text">
-               <string>DCDC</string>
+               <string>DCDC Upgrade</string>
               </property>
              </widget>
             </item>
@@ -251,7 +251,7 @@ color: rgb(97, 0, 167);</string>
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
               <property name="text">
-               <string>DCAC</string>
+               <string>DCAC Upgrade</string>
               </property>
              </widget>
             </item>
@@ -729,7 +729,7 @@ color: rgb(97, 0, 167);</string>
                <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
               <property name="text">
-               <string>PCS</string>
+               <string>DSP Upgrade</string>
               </property>
              </widget>
             </item>

@@ -40,7 +40,7 @@
         <item row="0" column="1">
          <widget class="QStackedWidget" name="ExplanationTextWidget">
           <property name="currentIndex">
-           <number>0</number>
+           <number>3</number>
           </property>
           <widget class="QWidget" name="Systempage">
            <layout class="QHBoxLayout" name="horizontalLayout_6">
@@ -3265,8 +3265,7 @@ FDP action area:
         </property>
         <property name="styleSheet">
          <string notr="true">background-color: rgb(31, 133, 227);
-QToolButton{&quot;border:1px solid rgba(255,255,255,0);&quot;}
-QToolButton::hover{&quot;border:1px solid rgb(123,123,123);&quot;}</string>
+</string>
         </property>
         <property name="text">
          <string>Battery

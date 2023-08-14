@@ -53,6 +53,7 @@
 #include "Specification/Specification.h"
 #include "OperMode.h"
 #include "upgradetools.h"
+#include "FaultTableInterface.h"
 
 namespace Ui {
 class MyWidget;
@@ -70,6 +71,7 @@ public:
     OperMode *mode_expelain;
     UpgradeTools *UpgradeInterface;
     QPushButton *AdvancedSetup_btn;//高级设置入口
+    FaultTableInterface *FaultTable;
     /************************实时数据******************************/
     //变流器
     QPushButton *MPS_vol_AB_explain;
@@ -366,6 +368,11 @@ public:
     QPushButton *Check11_explain,*Check12_explain,*Check13_explain,*Check14_explain,*Check15_explain;
     QPushButton *Check16_explain,*Check17_explain,*Check18_explain,*Check19_explain,*Check20_explain;
 
+    QPushButton *Peak1_explain,*Peak2_explain,*Peak3_explain,*Peak4_explain,*Peak5_explain;
+    QPushButton *Peak6_explain,*Peak7_explain,*Peak8_explain,*Peak9_explain,*Peak10_explain;
+    QPushButton *Peak11_explain,*Peak12_explain,*Peak13_explain,*Peak14_explain,*Peak15_explain;
+    QPushButton *Peak16_explain,*Peak17_explain,*Peak18_explain,*Peak19_explain,*Peak20_explain;
+
     //开始时间
     QPushButton *Start_T1_explain,*Start_T2_explain,*Start_T3_explain,*Start_T4_explain,*Start_T5_explain;
     QPushButton *Start_T6_explain,*Start_T7_explain,*Start_T8_explain,*Start_T9_explain,*Start_T10_explain;
@@ -393,6 +400,8 @@ public:
 
     Specification *Check1,*Check2,*Check3,*Check4,*Check5,*Check6,*Check7,*Check8,*Check9,*Check10;
     Specification *Check11,*Check12,*Check13,*Check14,*Check15,*Check16,*Check17,*Check18,*Check19,*Check20;
+    Specification *Peak1,*Peak2,*Peak3,*Peak4,*Peak5,*Peak6,*Peak7,*Peak8,*Peak9,*Peak10;
+    Specification *Peak11,*Peak12,*Peak13,*Peak14,*Peak15,*Peak16,*Peak17,*Peak18,*Peak19,*Peak20;
     Specification *Start_T1,*Start_T2,*Start_T3,*Start_T4,*Start_T5,*Start_T6,*Start_T7,*Start_T8,*Start_T9,*Start_T10;
     Specification *Start_T11,*Start_T12,*Start_T13,*Start_T14,*Start_T15,*Start_T16,*Start_T17,*Start_T18,*Start_T19,*Start_T20;
     Specification *End_T1,*End_T2,*End_T3,*End_T4,*End_T5,*End_T6,*End_T7,*End_T8,*End_T9,*End_T10;
