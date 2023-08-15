@@ -11,7 +11,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 DEFINES += QT_DEPRECATED_WARNINGS
 #QT      += network
 
-TARGET = MPSWin
+TARGET = MPS_V1.3
 TEMPLATE = app
 
 

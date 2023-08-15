@@ -122,17 +122,17 @@ void OperMode::InitializeMemorySpace()
     Disharge_Limit_delta_str = tr("Discharge Volt. lower Limit delta(V)");
     Charge_Current_str = tr("Charge Current Limit(A)");
     Discharge_Current_Limit_str = tr("Discharge Current Limit(A)");
-    DOD_OnGrid_str = tr("DOD_OnGrid(%)");
-    DOD_OffGrid_str = tr("DOD_OffGrid(%)");
+    DOD_OnGrid_str = tr("DOD OnGrid(%)");
+    DOD_OffGrid_str = tr("DOD OffGrid(%)");
     Generator_turn_on_SOC_str = tr("Generator turn on SOC(A1)");
     Generator_turn_off_SOC_str = tr("Generator turn off SOC(B1)");
     Max_Bat_protection_str = tr("Maximum battery protection value(V)");
-    DG_ECP_str = tr("DG_ECP");
-    DG_FCP_str = tr("DG_FCP");
-    Grid_ECP_str = tr("Grid_ECP");
-    Grid_FCP_str = tr("Grid_FCP");
-    Grid_EDP_str = tr("Grid_EDP");
-    Grid_FDP_str = tr("Grid_FDP");
+    DG_ECP_str = tr("DG ECP");
+    DG_FCP_str = tr("DG FCP");
+    Grid_ECP_str = tr("Grid ECP");
+    Grid_FCP_str = tr("Grid FCP");
+    Grid_EDP_str = tr("Grid EDP");
+    Grid_FDP_str = tr("Grid FDP");
 
     Bat_Type_str_Content = tr("Currently, only lithium batteries are supported.");
     Bat_Comm_str_Content = tr("Set the communication mode with the battery.");
@@ -188,18 +188,18 @@ void OperMode::InitializeChart(QTableWidget *myWidget)
 
     for(int i=0;i<25;i++)
     {
-        if(i==6)
-        {
-            myWidget->setRowHeight(i,60);
-        }
-        else if(i==7)
-        {
-            myWidget->setRowHeight(i,80);
-        }
-        else
-        {
-            myWidget->setRowHeight(i,42);
-        }
+//        if(i==6)
+//        {
+//            myWidget->setRowHeight(i,60);
+//        }
+//        else if(i==7)
+//        {
+//            myWidget->setRowHeight(i,80);
+//        }
+//        else
+//        {
+            myWidget->setRowHeight(i,45);
+//        }
 
     }
 
@@ -546,7 +546,7 @@ void OperMode::SetExplain(QTableWidget *myWidget)
     Grid_FDP_explain->Opermode_btn_clicked(Grid_FDP);
 }
 
-
+//设置窗口初始大小
 void OperMode::setAppSize(int remainH)
 {
     //首先获取屏幕尺寸信息

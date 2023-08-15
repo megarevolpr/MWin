@@ -923,12 +923,12 @@ void MyWidget::FunctionSet_delete()
     delete Sounds;
     delete BmsComFaultTime;
     delete EMSComFaultModel;
-    delete DG_ECP_explain;
-    delete DG_FCP_explain;
-    delete Grid_ECP_explain;
-    delete Grid_FCP_explain;
-    delete Grid_EDP_explain;
-    delete Grid_FDP_explain;
+    delete DG_ECP;
+    delete DG_FCP;
+    delete Grid_ECP;
+    delete Grid_FCP;
+    delete Grid_EDP;
+    delete Grid_FDP;
 }
 /************系统参数 释放 说明************/
 void MyWidget::SystemParameter_delete()
@@ -1602,7 +1602,7 @@ void MyWidget::BatterySet_Lead_tab()
 void MyWidget::RunTimeSet_tab()
 {
     QStringList time_str;
-    time_str<< tr("Check") <<tr("Peak-Valley")<< tr("StartTime") << tr("EndTime") << tr("Features") << tr("Power(kw)");
+    time_str<< tr("Check") <<tr("Peak-Flat-Valley")<< tr("StartTime") << tr("EndTime") << tr("Features") << tr("Power(kW)");
     ui->Time_tableWidget->setColumnCount(time_str.size());
     ui->Time_tableWidget->setRowCount(20);
     ui->Time_tableWidget->setHorizontalHeaderLabels(time_str);
@@ -1631,7 +1631,7 @@ void MyWidget::RunTimeSet_tab()
 void MyWidget::Information_tbnt_released()
 {
     ui->EquipmentInfor_tableWidget->setColumnCount(2);
-    ui->EquipmentInfor_tableWidget->setRowCount(9);
+    ui->EquipmentInfor_tableWidget->setRowCount(8);
     ui->EquipmentInfor_tableWidget->horizontalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
     ui->EquipmentInfor_tableWidget->verticalHeader()->setVisible(false);//设置垂直头不可见
     ui->EquipmentInfor_tableWidget->setFrameShape(QFrame::NoFrame);//设置无边框
@@ -1649,7 +1649,7 @@ void MyWidget::Information_tbnt_released()
 
     for(int i=0;i<8;i++)
     {
-        ui->EquipmentInfor_tableWidget->setRowHeight(i,35);
+        ui->EquipmentInfor_tableWidget->setRowHeight(i,40);
     }
 
     SystemMessages(ui->EquipmentInfor_tableWidget);//系统信息页说明
@@ -3470,8 +3470,8 @@ void MyWidget::AutoOperation(QTableWidget *myTable)
     QString temp12 = tr("Select: After this function is enabled, the system automatically runs the selected function mode within the specified period.");
     QString temp13 = tr("System for self-use");
     QString temp14 = tr("Peak price");//峰
-    QString temp15 = tr("In the peak shaving and valley filling mode, select 'Peak price' periods and 'Valley price' periods based on electricity prices.");//
-    QString temp16 = tr("Peak-Valley");//峰-谷
+    QString temp15 = tr("In the peak shaving and valley filling mode, select 'Peak price' periods,'Flat price' periods and 'Valley price' periods based on electricity prices.");//
+    QString temp16 = tr("Peak-Flat-Valley");//峰-平-谷
     int line = 0;int column = 0;//当前解释的button行和列
 
     if(Check1 != nullptr)

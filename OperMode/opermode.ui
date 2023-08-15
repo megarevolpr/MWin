@@ -20,7 +20,7 @@
    <enum>Qt::DefaultContextMenu</enum>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Working mode</string>
   </property>
   <property name="toolTipDuration">
    <number>-10</number>

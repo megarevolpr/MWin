@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>UpgradeTools</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
@@ -394,7 +394,7 @@ border-color: rgb(255, 255, 255);</string>
         <bool>true</bool>
        </property>
        <attribute name="title">
-        <string>MEGA</string>
+        <string>PCS</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_3">
         <item row="0" column="0">

@@ -38,7 +38,7 @@
    <enum>Qt::DefaultContextMenu</enum>
   </property>
   <property name="windowTitle">
-   <string>MyWidget</string>
+   <string>MPS</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(255, 255, 255);</string>
@@ -210,6 +210,9 @@ color: rgb(255, 255, 255);</string>
               </property>
               <property name="cursor" stdset="0">
                <cursorShape>ArrowCursor</cursorShape>
+              </property>
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
               </property>
               <property name="rowCount">
                <number>14</number>
@@ -850,6 +853,9 @@ color: rgb(255, 255, 255);</string>
              <font>
               <pointsize>12</pointsize>
              </font>
+            </property>
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
             </property>
             <property name="rowCount">
              <number>12</number>
@@ -1505,6 +1511,9 @@ color: rgb(255, 255, 255);</string>
               <pointsize>12</pointsize>
              </font>
             </property>
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
+            </property>
             <attribute name="horizontalHeaderDefaultSectionSize">
              <number>175</number>
             </attribute>
@@ -1778,6 +1787,9 @@ color: rgb(255, 255, 255);</string>
              <font>
               <pointsize>12</pointsize>
              </font>
+            </property>
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
             </property>
             <property name="rowCount">
              <number>14</number>
@@ -2280,6 +2292,9 @@ color: rgb(255, 255, 255);</string>
               <property name="sizeAdjustPolicy">
                <enum>QAbstractScrollArea::AdjustIgnored</enum>
               </property>
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
               <property name="rowCount">
                <number>7</number>
               </property>
@@ -2735,7 +2750,7 @@ Language</string>
                <string notr="true">color: rgb(255, 255, 255);</string>
               </property>
               <property name="text">
-               <string>100kW-TS</string>
+               <string>100kW - TS</string>
               </property>
              </widget>
             </item>
@@ -2791,7 +2806,7 @@ Language</string>
             <enum>QFrame::Raised</enum>
            </property>
            <property name="currentIndex">
-            <number>0</number>
+            <number>3</number>
            </property>
            <widget class="QWidget" name="Host_page">
             <widget class="QPushButton" name="Bypass_Grid_btn">
@@ -7645,7 +7660,7 @@ enable</string>
                 </font>
                </property>
                <property name="currentIndex">
-                <number>1</number>
+                <number>0</number>
                </property>
                <widget class="QWidget" name="DataReport_page">
                 <attribute name="title">
@@ -8409,6 +8424,9 @@ background-color: rgb(255, 0, 0);</string>
                    <property name="cursor" stdset="0">
                     <cursorShape>ArrowCursor</cursorShape>
                    </property>
+                   <property name="editTriggers">
+                    <set>QAbstractItemView::NoEditTriggers</set>
+                   </property>
                    <property name="rowCount">
                     <number>8</number>
                    </property>
@@ -8557,7 +8575,7 @@ background-color: rgb(255, 0, 0);</string>
                    </item>
                    <item row="3" column="5">
                     <property name="text">
-                     <string>-</string>
+                     <string/>
                     </property>
                     <property name="textAlignment">
                      <set>AlignCenter</set>
@@ -8642,6 +8660,9 @@ background-color: rgb(255, 0, 0);</string>
                     <font>
                      <pointsize>12</pointsize>
                     </font>
+                   </property>
+                   <property name="editTriggers">
+                    <set>QAbstractItemView::NoEditTriggers</set>
                    </property>
                   </widget>
                  </item>
@@ -8780,6 +8801,9 @@ power-off</string>
                          </property>
                          <property name="cursor" stdset="0">
                           <cursorShape>ArrowCursor</cursorShape>
+                         </property>
+                         <property name="editTriggers">
+                          <set>QAbstractItemView::NoEditTriggers</set>
                          </property>
                          <property name="rowCount">
                           <number>12</number>
@@ -9596,12 +9620,15 @@ Set rule:B1 - A1 ≥ 10V</string>
                      <property name="cursor" stdset="0">
                       <cursorShape>ArrowCursor</cursorShape>
                      </property>
+                     <property name="editTriggers">
+                      <set>QAbstractItemView::NoEditTriggers</set>
+                     </property>
                     </widget>
                    </item>
                    <item>
                     <layout class="QHBoxLayout" name="horizontalLayout_26">
                      <item>
-                      <spacer name="horizontalSpacer_16">
+                      <spacer name="horizontalSpacer_17">
                        <property name="orientation">
                         <enum>Qt::Horizontal</enum>
                        </property>
@@ -9677,6 +9704,9 @@ Set rule:B1 - A1 ≥ 10V</string>
                         <property name="cursor" stdset="0">
                          <cursorShape>ArrowCursor</cursorShape>
                         </property>
+                        <property name="editTriggers">
+                         <set>QAbstractItemView::NoEditTriggers</set>
+                        </property>
                         <row>
                          <property name="text">
                           <string>1</string>
@@ -9729,7 +9759,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                         </column>
                         <item row="0" column="0">
                          <property name="text">
-                          <string>    Monitoring software version</string>
+                          <string>   Monitoring software version</string>
                          </property>
                          <property name="textAlignment">
                           <set>AlignLeading|AlignVCenter</set>
@@ -9742,7 +9772,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                         </item>
                         <item row="1" column="0">
                          <property name="text">
-                          <string>    DCAC Protocol version</string>
+                          <string>   DCAC Protocol version</string>
                          </property>
                          <property name="textAlignment">
                           <set>AlignLeading|AlignVCenter</set>
@@ -9750,7 +9780,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                         </item>
                         <item row="2" column="0">
                          <property name="text">
-                          <string>    DCAC Converter software version</string>
+                          <string>   DCAC Converter software version</string>
                          </property>
                          <property name="textAlignment">
                           <set>AlignLeading|AlignVCenter</set>
@@ -9758,15 +9788,20 @@ Set rule:B1 - A1 ≥ 10V</string>
                         </item>
                         <item row="3" column="0">
                          <property name="text">
-                          <string>    DCAC CPLD software version</string>
+                          <string>   DCAC CPLD software version</string>
                          </property>
                          <property name="textAlignment">
                           <set>AlignLeading|AlignVCenter</set>
                          </property>
                         </item>
+                        <item row="3" column="1">
+                         <property name="text">
+                          <string/>
+                         </property>
+                        </item>
                         <item row="4" column="0">
                          <property name="text">
-                          <string>    DCDC Protocol version</string>
+                          <string>   DCDC Protocol version</string>
                          </property>
                          <property name="textAlignment">
                           <set>AlignLeading|AlignVCenter</set>
@@ -9774,7 +9809,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                         </item>
                         <item row="5" column="0">
                          <property name="text">
-                          <string>    DCDC Converter software version</string>
+                          <string>   DCDC Converter software version</string>
                          </property>
                          <property name="textAlignment">
                           <set>AlignLeading|AlignVCenter</set>
@@ -9782,7 +9817,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                         </item>
                         <item row="6" column="0">
                          <property name="text">
-                          <string>    DCDC CPLD software version</string>
+                          <string>   DCDC CPLD software version</string>
                          </property>
                          <property name="textAlignment">
                           <set>AlignLeading|AlignVCenter</set>
@@ -9790,7 +9825,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                         </item>
                         <item row="7" column="0">
                          <property name="text">
-                          <string>    SN:</string>
+                          <string>   SN:</string>
                          </property>
                          <property name="textAlignment">
                           <set>AlignLeading|AlignVCenter</set>
@@ -9825,8 +9860,8 @@ Set rule:B1 - A1 ≥ 10V</string>
                           <rect>
                            <x>0</x>
                            <y>0</y>
-                           <width>16</width>
-                           <height>16</height>
+                           <width>383</width>
+                           <height>347</height>
                           </rect>
                          </property>
                          <property name="cursor">
