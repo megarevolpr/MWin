@@ -3231,7 +3231,19 @@ FDP action area:
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(31, 133, 227);</string>
+         <string notr="true">QPushButton:checked {
+	border:2px solid rgb(27, 120, 205);
+	background-color: rgb(27, 120, 205);
+}
+QPushButton:!checked {
+	color: rgb(255, 255, 255);
+	background-color: rgb(85, 170, 255);
+	border:2px solid rgb(85, 170, 255);
+}
+QPushButton::hover{
+	color: rgb(0, 0, 0);
+ }
+</string>
         </property>
         <property name="text">
          <string>Return</string>
@@ -3264,7 +3276,18 @@ FDP action area:
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(31, 133, 227);
+         <string notr="true">QPushButton:checked {
+	border:2px solid rgb(27, 120, 205);
+	background-color: rgb(27, 120, 205);
+}
+QPushButton:!checked {
+	color: rgb(255, 255, 255);
+	background-color: rgb(85, 170, 255);
+	border:2px solid rgb(85, 170, 255);
+}
+QPushButton::hover{
+	color: rgb(0, 0, 0);
+ }
 </string>
         </property>
         <property name="text">
@@ -3293,7 +3316,19 @@ AreaDivision</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(31, 133, 227);</string>
+         <string notr="true">QPushButton:checked {
+	border:2px solid rgb(27, 120, 205);
+	background-color: rgb(27, 120, 205);
+}
+QPushButton:!checked {
+	color: rgb(255, 255, 255);
+	background-color: rgb(85, 170, 255);
+	border:2px solid rgb(85, 170, 255);
+}
+QPushButton::hover{
+	color: rgb(0, 0, 0);
+ }
+</string>
         </property>
         <property name="text">
          <string>System
@@ -3321,7 +3356,19 @@ for self-use</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(31, 133, 227);</string>
+         <string notr="true">QPushButton:checked {
+	border:2px solid rgb(27, 120, 205);
+	background-color: rgb(27, 120, 205);
+}
+QPushButton:!checked {
+	color: rgb(255, 255, 255);
+	background-color: rgb(85, 170, 255);
+	border:2px solid rgb(85, 170, 255);
+}
+QPushButton::hover{
+	color: rgb(0, 0, 0);
+ }
+</string>
         </property>
         <property name="text">
          <string>Batter
@@ -3358,7 +3405,19 @@ priority</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(31, 133, 227);</string>
+         <string notr="true">QPushButton:checked {
+	border:2px solid rgb(27, 120, 205);
+	background-color: rgb(27, 120, 205);
+}
+QPushButton:!checked {
+	color: rgb(255, 255, 255);
+	background-color: rgb(85, 170, 255);
+	border:2px solid rgb(85, 170, 255);
+}
+QPushButton::hover{
+	color: rgb(0, 0, 0);
+ }
+</string>
         </property>
         <property name="text">
          <string>Optimal</string>

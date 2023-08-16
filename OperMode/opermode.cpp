@@ -10,8 +10,7 @@ OperMode::OperMode(QWidget *parent) :
     InitializeMemorySpace();
 
     Init_Tab_button();
-
-
+    ui->AreaDivision_btn->click();
 }
 
 OperMode::~OperMode()

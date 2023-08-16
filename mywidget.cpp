@@ -266,6 +266,14 @@ void MyWidget::MemoryAllocation()
     Gen_turn_on_SOC_explain = new QPushButton;     //柴发开启SOC说明
     ForceCharge_start_explain = new QPushButton; //强充开启说明
     ForceCharge_top_explain = new QPushButton;   // 强充结束说明
+    Relese_Charge_mark_explain = new QPushButton;    //释放充电标志说明
+    DOD_Protection_Release_SOC_explain = new QPushButton;//DOD保护解除SOC
+    Cell_Voltage_max_explain = new QPushButton;//最高单体电压
+    Cell_Voltage_max_delta_explain = new QPushButton;//最高单体电压回差
+    Cell_Voltage_min_explain = new QPushButton;//最低单体电压
+    Cell_Voltage_min_delta_explain = new QPushButton;//最低单体电压回差
+    DCAC_cell_protect_explain = new QPushButton;//DCAC单体保护电压
+    DCAC_cell_delta_explain = new QPushButton;//DCAC单体保护电压回差
 
     /***************************电池设置 铅酸****************************/
 
@@ -503,7 +511,6 @@ void MyWidget::MemoryAllocation()
     serial_port_5_explain = new QPushButton; //串口5说明
     Can_port_1_explain = new QPushButton;    //CAN1说明
     Can_port_2_explain = new QPushButton;    //CAN2说明
-    Relese_Charge_mark_explain = new QPushButton;    //释放充电标志说明
     ProtocolVersion_explain = new QPushButton;   //协议版本说明
     UserPassPort_explain = new QPushButton;  //用户密码说明
     RootPassport_explain = new QPushButton;  //超级权限说明
@@ -540,7 +547,7 @@ void MyWidget::MemoryAllocation()
 //    Grid_recovery_scheduling_explain = new QPushButton;  //电网恢复调度开机说明
     Grid_recovery_time_explain = new QPushButton;  //电网恢复并网时间说明
     Grid_connected_mode_of_Inv_explain = new QPushButton;  //逆变器并网方式说明
-    System_Anti_Reverse_Flow_explain = new QPushButton;
+
     Pshedding_Freq_explain = new QPushButton;  //过频降载说明
     QP_curve_explain = new QPushButton;  //QP曲线说明
     CV_parallel_explain = new QPushButton;  //恒压并机说明
@@ -854,6 +861,14 @@ void MyWidget::Battery_Setup_Tab_delete()
     delete Gen_turn_on_SOC;
     delete ForceCharge_start;
     delete ForceCharge_top;
+    delete Relese_Charge_mark;
+    delete DOD_Protection_Release_SOC;//DOD保护解除SOC
+    delete Cell_Voltage_max;//最高单体电压
+    delete Cell_Voltage_max_delta;//最高单体电压回差
+    delete Cell_Voltage_min;//最低单体电压
+    delete Cell_Voltage_min_delta;//最低单体电压回差
+    delete DCAC_cell_protect;//DCAC单体保护电压
+    delete DCAC_cell_delta;//DCAC单体保护电压回差
 }
 /************铅酸电池设置 释放 说明************/
 void MyWidget::Battery_Setup_Lead_Tab_delete()
@@ -915,7 +930,6 @@ void MyWidget::FunctionSet_delete()
     delete serial_port_5;
     delete Can_port_1;
     delete Can_port_2;
-    delete Relese_Charge_mark;
     delete ProtocolVersion;
     delete UserPassPort;
     delete RootPassport;
@@ -953,7 +967,7 @@ void MyWidget::SystemParameter_delete()
 //    delete Grid_recovery_scheduling;
     delete Grid_recovery_time;
     delete Grid_connected_mode_of_Inv;
-    delete System_Anti_Reverse_Flow;
+
     delete Pshedding_Freq;
     delete QP_curve;
     delete CV_parallel;
@@ -1450,7 +1464,7 @@ void MyWidget::ModuleState_Tab()
                     << tr("LVRT")<< tr("DI1")<< tr("DI2")<< tr("DI3")<< tr("DI4")<< tr("DI5")<< tr("DI6");
     QStringList State_Tablist3;
     State_Tablist3  << tr("DCDC Converter available")<< tr("Run mode")<< tr("Soft start status boost")<< tr("Soft start status buck")
-                    << tr("Contactor status buck")<< tr("Contactor status boost")<< tr("Converter status");
+                    << tr("Contactor status boost")<< tr("Contactor status buck")<< tr("Converter status");
 
     ui->State_tableWidget->setColumnCount(6);
     ui->State_tableWidget->setRowCount(12);
@@ -1566,12 +1580,14 @@ void MyWidget::DCDCParam_tab()
 //电池设置初始化_锂电池
 void MyWidget::BatterySet_tab()
 {
-    ui->Lithium_Tab->setColumnWidth(0,350);
-    ui->Lithium_Tab->setColumnWidth(1,350);
+    ui->Lithium_Tab->setColumnWidth(0,270);
+    ui->Lithium_Tab->setColumnWidth(1,80);
+    ui->Lithium_Tab->setColumnWidth(2,270);
+    ui->Lithium_Tab->setColumnWidth(3,80);
     ui->Lithium_Tab->setEditTriggers(QAbstractItemView::NoEditTriggers);//设置不可编辑
     ui->plainTextEdit->setReadOnly(true);//只读
 
-    for(int i=0;i<12;i++)
+    for(int i=0;i<10;i++)
     {
         ui->Lithium_Tab->setRowHeight(i,45);
     }
@@ -2596,7 +2612,7 @@ void MyWidget::MPS_Data(QTableWidget *myTable)
     }
     MPS_Leakage_cur = new Specification(this,MPS_Leakage_cur_explain, myTable, line++, column, \
                                             "0mA", tr("Leakage current"), \
-                                            tr("Leakage current: The leakage current should not exceed 300mA (≤30kVA power converter), or 10mA/kVA (>30kVA power converter)."));
+                                            tr("Leakage current: The leakage current should not exceed 300mA (≤30kVA power converter), or 10mA/kVA (＞30kVA power converter)."));
     MPS_Leakage_cur->add_Specification();//漏电流：漏电流应不大于300mA (≤30kVA 变流器)，或10mA/kVA(>30kVA变流器)
     line=0;
     column=3;
@@ -3066,7 +3082,7 @@ void MyWidget::MPSState(QTableWidget *myTable)
 
     Output_Bre = new Specification(this,Output_Bre_explain, myTable, line++, column, \
                                             tr("On"), tr("Output breaker"), \
-                                            tr("The output circuit breaker has two states: On, Off. It can only be manually opened and closed. If there is an overcurrent in the output circuit breaker, it will trip."));
+                                            tr("The output circuit breaker has two states: On, Off.The Output breaker can only be manually disconnected."));
     Output_Bre->add_Specification();
     Output_Con = new Specification(this,Output_Con_explain, myTable, line++, column, \
                                             tr("On"), tr("Output contactor"), \
@@ -3074,7 +3090,7 @@ void MyWidget::MPSState(QTableWidget *myTable)
     Output_Con->add_Specification();
     Grid_Bre = new Specification(this,Grid_Bre_explain, myTable, line++, column, \
                                             tr("On"), tr("Grid breaker"), \
-                                            tr("The power grid circuit breaker has two states: On, Off; The power grid circuit breaker can only be manually disconnected. If the power grid circuit breaker overflows, the power grid circuit breaker may trip."));
+                                            tr("The power grid circuit breaker has two states: On, Off;The power grid circuit breaker can only be manually disconnected."));
     Grid_Bre->add_Specification();
     DO1 = new Specification(this,DO1_explain, myTable, line++, column, \
                                             tr("Disable"), tr("Start Diesel Generator Signal"), \
@@ -3108,8 +3124,8 @@ void MyWidget::MPSState(QTableWidget *myTable)
                                             tr("There are three types of reactive power regulation: Disable,PF regulation, and  regulation."));
     Reactive_P_Reg->add_Specification();
     LVRT = new Specification(this,LVRT_explain, myTable, line++, column, \
-                                            tr("LVRT"), tr("LVRT"), \
-                                            tr("LVRT states : enabled , disabled."));
+                                            tr("Enable"), tr("LVRT"), \
+                                            tr("LVRT states : Enable , Disabled."));
     LVRT->add_Specification();
     DI1 = new Specification(this,DI1_explain, myTable, line++, column, \
                                             tr("Disable"), tr("DI1"), \
@@ -3163,7 +3179,7 @@ void MyWidget::MPSState(QTableWidget *myTable)
     Contator_Sta_Buck->add_Specification();  
     Converter_Status_V = new Specification(this,Converter_Status_V_explain, myTable, line++, column, \
                                             tr("Turn off"), tr("Converter Status"), \
-                                            tr("DCDC module operation modes states: OFF, Standby, Constant Voltage, Constant Current, Maximum Power Point Tracking."));
+                                            tr("DCDC module operation modes states: OFF, Standby, Constant Voltage, Constant Current, MPPT."));
     Converter_Status_V->add_Specification();
 
 
@@ -3279,86 +3295,129 @@ void MyWidget::DCDC_Paramter_tab(QTableWidget *myTable)
 //电池设置页说明_锂电池
 void MyWidget::Battery_Setup_Tab(QTableWidget *myTable)
 {
+    int line = 0;int column = 1;//当前解释的button行和列
     //并网DOD说明
-    DOD_OnGrid = new Specification(this,DOD_OnGrid_explain, myTable, 0, 1, \
+    DOD_OnGrid = new Specification(this,DOD_OnGrid_explain, myTable, line++, column, \
                                    "90", tr("Grid-on DOD"), \
                                    tr("Grid-on DOD, allowable depth of discharge in grid-on mode."));
     DOD_OnGrid->add_Specification();
-//    DOD_OnGrid->Opermode_btn_clicked(mode_expelain->DOD_OnGrid_btn);
 
     //离网DOD说明
-    DOD_OffGrid = new Specification(this,DOD_OffGrid_explain, myTable, 1, 1, \
+    DOD_OffGrid = new Specification(this,DOD_OffGrid_explain, myTable, line++, column, \
                                     "90", tr("Grid-off DOD"), \
                                     tr("Grid-off DOD, allowable depth of discharge in grid-off mode."));
     DOD_OffGrid->add_Specification();
-//    DOD_OffGrid->Opermode_btn_clicked(mode_expelain->DOD_OffGrid_btn);
+
+    DOD_Protection_Release_SOC = new Specification(this,DOD_Protection_Release_SOC_explain, myTable, line++, column, \
+                                    "50", tr("DOD Protection Release SOC"), \
+                                    tr("."));
+    DOD_Protection_Release_SOC->add_Specification();
 
     //充电电压上限说明
-    Charge_Volt_Upper_Limit = new Specification(this,Charge_Volt_Upper_Limit_explain, myTable, 2, 1, \
+    Charge_Volt_Upper_Limit = new Specification(this,Charge_Volt_Upper_Limit_explain, myTable, line++, column, \
                                                "792", tr("Charging voltage upper limit"), \
                                                 tr("Charging voltage upper limit: When the battery total voltage reaches this value during charging, the converter will shut down."));
     Charge_Volt_Upper_Limit->add_Specification();
 //    Charge_Volt_Upper_Limit->Opermode_btn_clicked(mode_expelain->Charge_upper_Limit);
 
     //充电电压上限回差说明
-    Charge_Volt_upper_Limit_delta = new Specification(this,Charge_Volt_upper_Limit_delta_explain, myTable, 3, 1, \
+    Charge_Volt_upper_Limit_delta = new Specification(this,Charge_Volt_upper_Limit_delta_explain, myTable, line++, column, \
                                                       "10", tr("Charge Volt upper Limit delta"), \
                                                       tr("Charging voltage upper limit hysteresis: When the battery is charging, if the battery total voltage reaches the charging voltage upper limit, the converter will shut down. When the battery total voltage drops below the charging voltage upper limit minus the hysteresis value, the converter will automatically turn on."));
     Charge_Volt_upper_Limit_delta->add_Specification();
 //    Charge_Volt_upper_Limit_delta->Opermode_btn_clicked(mode_expelain->Charge_Limit_delta_btn);
 
     //放电电压限制说明
-    Disc_Volt_lower_Limit = new Specification(this,Disc_Volt_lower_Limit_explain, myTable, 4, 1, \
+    Disc_Volt_lower_Limit = new Specification(this,Disc_Volt_lower_Limit_explain, myTable, line++, column, \
                                               "616", tr("Disc_Vol_lower_Limit"), \
                                               tr("Discharge voltage lower limit: When the battery total voltage reaches this value during discharge, the converter will shut down."));
     Disc_Volt_lower_Limit->add_Specification();
 //    Disc_Volt_lower_Limit->Opermode_btn_clicked(mode_expelain->Disharge_Lower_Limit);
 
     //放电电压下限回差说明
-    Discharge_Volt_upper_Limit_delta = new Specification(this,Discharge_Volt_upper_Limit_delta_explain, myTable, 5, 1, \
+    Discharge_Volt_upper_Limit_delta = new Specification(this,Discharge_Volt_upper_Limit_delta_explain, myTable, line++, column, \
                                                          "10", tr("Discharge Volt upper Limit delta"), \
                                                          tr("Discharge voltage lower limit hysteresis: When the battery is discharging, if the battery total voltage drops below the discharge voltage lower limit, the converter will shut down. When the battery total voltage exceeds the discharge voltage lower limit plus the hysteresis value, the converter will automatically turn on."));
     Discharge_Volt_upper_Limit_delta->add_Specification();
 //    Discharge_Volt_upper_Limit_delta->Opermode_btn_clicked(mode_expelain->Disharge_Limit_delta_btn);
 
     //充电电流限制说明
-    Charge_Current_Limit = new Specification(this,Charge_Current_Limit_explain, myTable, 6, 1, \
+    Charge_Current_Limit = new Specification(this,Charge_Current_Limit_explain, myTable, line++, column, \
                                              "240", tr("Charge Current Limit"), \
                                              tr("Charging current limit: The maximum allowable current on the battery side to prevent overcurrent during charging."));
     Charge_Current_Limit->add_Specification();
 //    Charge_Current_Limit->Opermode_btn_clicked(mode_expelain->Charge_Current_btn);
 
     //放电电流限制说明
-    Discharge_Current_Limit = new Specification(this,Discharge_Current_Limit_explain, myTable, 7, 1, \
+    Discharge_Current_Limit = new Specification(this,Discharge_Current_Limit_explain, myTable, line++, column, \
                                                 "240", tr("Discharge Current Limit"), \
                                                 tr("Discharging current limit: The maximum allowable current on the battery side to prevent overcurrent during discharging."));
     Discharge_Current_Limit->add_Specification();
 //    Discharge_Current_Limit->Opermode_btn_clicked(mode_expelain->Discharge_Current_Limit_btn);
 
+    //释放充电标志说明
+    Relese_Charge_mark = new Specification(this,Relese_Charge_mark_explain, myTable, line++, column, \
+                                           tr("Follow\nbattery"), tr("Release Prohibited Charging Flag"), \
+                                           tr("When the battery SOC is below the selected value, there are four options: Follow battery, 95%, 90%, 85%."));
+    Relese_Charge_mark->add_Specification();//电池SOC低于选择值时解除禁充，有四项可选：跟随电池(Follow battery)、95%、90%、85%
+
+    line = 0;
+    column = 3;
+
     //柴发关闭SOC说明
-    Gen_turn_off_SOC = new Specification(this,Gen_turn_off_SOC_explain, myTable, 8, 1, \
+    Gen_turn_off_SOC = new Specification(this,Gen_turn_off_SOC_explain, myTable, line++, column, \
                                          "85", tr("Generator turn off SOC"), \
                                          tr("When the specified SOC is reached, the diesel generator shuts down."));
     Gen_turn_off_SOC->add_Specification();
-//    Gen_turn_off_SOC->Opermode_btn_clicked(mode_expelain->Generator_turn_off_SOC_btn);
 
     //柴发开启SOC说明
-    Gen_turn_on_SOC = new Specification(this,Gen_turn_on_SOC_explain, myTable, 9, 1, \
+    Gen_turn_on_SOC = new Specification(this,Gen_turn_on_SOC_explain, myTable, line++, column, \
                                         "25", tr("Generator turn on SOC"), \
                                         tr("When the specified SOC is reached, the diesel generator starts."));
     Gen_turn_on_SOC->add_Specification();
-//    Gen_turn_on_SOC->Opermode_btn_clicked(mode_expelain->Generator_turn_on_SOC_btn);
+
+    DOD_OffGrid->add_Specification();
+
+    Cell_Voltage_max = new Specification(this,Cell_Voltage_max_explain, myTable, line++, column, \
+                                    "3600", tr("Cell Voltage max"), \
+                                    tr("."));
+    Cell_Voltage_max->add_Specification();
+
+    Cell_Voltage_max_delta = new Specification(this,Cell_Voltage_max_delta_explain, myTable, line++, column, \
+                                    "3300", tr("Cell Voltage max delta"), \
+                                    tr("."));
+    Cell_Voltage_max_delta->add_Specification();
+
+    Cell_Voltage_min = new Specification(this,Cell_Voltage_min_explain, myTable, line++, column, \
+                                    "2800", tr("Cell Voltage min"), \
+                                    tr("."));
+    Cell_Voltage_min->add_Specification();
+
+    Cell_Voltage_min_delta = new Specification(this,Cell_Voltage_min_delta_explain, myTable, line++, column, \
+                                    "3300", tr("Cell Voltage min delta"), \
+                                    tr("."));
+    Cell_Voltage_min_delta->add_Specification();
+
     //强充开启说明
-    ForceCharge_start = new Specification(this,ForceCharge_start_explain, myTable, 10, 1, \
+    ForceCharge_start = new Specification(this,ForceCharge_start_explain, myTable, line++, column, \
                                           "2.85", tr("Force Charge On"), \
                                           tr("Forced Charging On: When the cell voltage drops below this value, the converter switches to Battery Priority Mode, and the AC side charges the battery with a power of 10kW."));
     ForceCharge_start->add_Specification();
 
     // 强充结束说明
-    ForceCharge_top = new Specification(this,ForceCharge_top_explain, myTable, 11, 1, \
+    ForceCharge_top = new Specification(this,ForceCharge_top_explain, myTable, line++, column, \
                                         "3.2", tr("ForceCharge Off"), \
                                         tr("Forced Charging Off: When the cell voltage exceeds this value, the converter exits Battery Priority Mode and returns to the mode before Forced Charging was enabled."));
     ForceCharge_top->add_Specification();
+
+    DCAC_cell_protect = new Specification(this,DCAC_cell_protect_explain, myTable, line++, column, \
+                                    "3650", tr("DCAC cell protect"), \
+                                    tr("."));
+    DCAC_cell_protect->add_Specification();
+    DCAC_cell_delta = new Specification(this,DCAC_cell_delta_explain, myTable, line++, column, \
+                                    "50", tr("DCAC cell delta"), \
+                                    tr("."));
+    DCAC_cell_delta->add_Specification();
 
 }
 //电池设置页说明_铅酸电池
@@ -4953,7 +5012,7 @@ void MyWidget::FunctionSet(QTableWidget *myTable)
 
     //功率控制类型说明
     Power_control_type = new Specification(this,Power_control_type_explain, myTable, 2, 1,\
-                                           "CP_N&&P" , tr("Power control type"), \
+                                           "CP_AC" , tr("Power control type"), \
                                            tr("Constant Voltage (CV) mode: The converter will operate in constant voltage mode on the DC side.\nConstant Current (CC) mode: The converter will operate in constant current mode on the DC side.\nConstant Power AC (CP_AC) mode: The power level can be set at \"constant power.\" The value represents the power level, positive for discharge and negative for charge. For example, setting it to -5 means that the AC side will charge the battery with a power of 5 kW. Due to converter losses, the DC side power will be lower than the AC side power in this case. Conversely, setting it to 5 means that the AC side will output power at 5 kW. Due to converter losses, the DC side power will be higher than the AC side power in this case.\nReserved."));
     Power_control_type->add_Specification();
 
@@ -5060,11 +5119,7 @@ MEGA, LISHEN, GREATPOWER, GOLD, BMSER, LANLI, SLANPOWER, PYLON, CATL, SUOYING, X
                                    tr("CAN2 Port: Optional baud rates for the CAN2 port include 100, 125, 250, 500, and 800 kbps, with a default baud rate of 500 kbps."));
     Can_port_2->add_Specification();//
 
-    //释放充电标志说明
-    Relese_Charge_mark = new Specification(this,Relese_Charge_mark_explain, myTable, 8, 4, \
-                                           tr("Follow\nbattery"), tr("Release Prohibited Charging Flag"), \
-                                           tr("When the battery SOC is below the selected value, there are four options: Follow battery, 95%, 90%, 85%."));
-    Relese_Charge_mark->add_Specification();//电池SOC低于选择值时解除禁充，有四项可选：跟随电池(Follow battery)、95%、90%、85%
+
 
 
 
@@ -5268,31 +5323,26 @@ void MyWidget::SystemParameter(QTableWidget *myTable)
 
     //逆变器并网方式说明
     Grid_connected_mode_of_Inv = new Specification(this,Grid_connected_mode_of_Inv_explain, myTable, 7, 4, \
-                                                   tr("Non\ncountercurrent"), tr("Converter Anti-Reverse Flow"), \
+                                                   tr("Disable"), tr("Converter Anti-Reverse Flow"), \
                                                    tr("Converter Anti-Reverse Flow: Enable, Disable;\
 \nEnabling prevents converter current from flowing into the grid, while Disabling allows converter current to flow into the grid."));
     Grid_connected_mode_of_Inv->add_Specification();
 
-    System_Anti_Reverse_Flow = new Specification(this,System_Anti_Reverse_Flow_explain, myTable, 8, 4, \
-                                                   tr("Non\ncountercurrent"), tr("System Anti-Reverse Flow"), \
-                                                   tr("System Anti-Reverse Flow: Enable, Disable;\
-\nEnabling prevents system current from flowing into the grid, while Disabling allows system current to flow into the grid."));
-    System_Anti_Reverse_Flow->add_Specification();
 
     //过频降载说明
-    Pshedding_Freq = new Specification(this,Pshedding_Freq_explain, myTable, 9, 4, \
+    Pshedding_Freq = new Specification(this,Pshedding_Freq_explain, myTable, 8, 4, \
                                        tr("prohibit"), tr("Pshedding Freq"), \
                                        tr("Over-frequency load shedding: It can be selected as enabled or disabled. (Note: This option is generally used in large grid-on power stations.)"));
     Pshedding_Freq->add_Specification();//这是过频降载设置，有两项可选：允许(Enable)、不允许(prohibit),(注：在大型并网电站使用）
 
     //QP曲线说明
-    QP_curve = new Specification(this,QP_curve_explain, myTable, 10, 4, \
+    QP_curve = new Specification(this,QP_curve_explain, myTable, 9, 4, \
                                  tr("prohibit"), tr("QP curve"), \
                                  tr("QP curve: It can be selected as enabled or disabled. (Note: This option is generally used in large grid-on power stations.)"));
     QP_curve->add_Specification();//这是QP曲线设置，有两项可选：允许(Enable)、不允许(prohibit),(注：在大型并网电站使用）
 
     //恒压并机说明
-    CV_parallel = new Specification(this,CV_parallel_explain, myTable, 11, 4, \
+    CV_parallel = new Specification(this,CV_parallel_explain, myTable, 10, 4, \
                                     tr("prohibit"), tr("CV parallel"), \
                                     tr("Constant voltage parallel operation enable: It can be selected as enabled or disabled.  (Note: This option is generally used in large grid-on power stations.)"));
     CV_parallel->add_Specification();
@@ -5327,7 +5377,8 @@ void MyWidget::SystemParameter(QTableWidget *myTable)
     //机架说明
     Machine_Type = new Specification(this,Machine_Type_explain, myTable, 5, 7, \
                                      "DCAC", tr("Rack"), \
-                                     tr("When you select DCDC, the DCAC interface freezes, and the maximum module ID and minimum module ID take effect. You can only modify the database to restore the DCAC interface."));
+                                     tr("When you select DCDC, the DCAC interface freezes, and the maximum module ID and minimum module ID take effect.(Note: You can only modify the database to restore the DCAC interface.)\
+As per factory settings, generally not modifiable."));
     Machine_Type->add_Specification();
 
     //最大模块数说明

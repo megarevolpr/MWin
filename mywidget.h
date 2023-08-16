@@ -307,7 +307,16 @@ public:
 //    QPushButton *Equalized_charge_explain;   //均充电压说明
     QPushButton *Gen_turn_off_SOC_explain;    //柴发关闭SOC说明
     QPushButton *Gen_turn_on_SOC_explain;     //柴发开启SOC说明
-
+    QPushButton *Relese_Charge_mark_explain;    //释放充电标志说明
+    QPushButton *ForceCharge_start_explain; //强充开启说明
+    QPushButton *ForceCharge_top_explain;   // 强充结束说明
+    QPushButton *DOD_Protection_Release_SOC_explain;//DOD保护解除SOC
+    QPushButton *Cell_Voltage_max_explain;//最高单体电压
+    QPushButton *Cell_Voltage_max_delta_explain;//最高单体电压回差
+    QPushButton *Cell_Voltage_min_explain;//最低单体电压
+    QPushButton *Cell_Voltage_min_delta_explain;//最低单体电压回差
+    QPushButton *DCAC_cell_protect_explain;//DCAC单体保护电压
+    QPushButton *DCAC_cell_delta_explain;//DCAC单体保护电压回差
 
     Specification *DOD_OnGrid;
     Specification *DOD_OffGrid;
@@ -321,6 +330,16 @@ public:
 //    Specification *Equalized_charge;
     Specification *Gen_turn_off_SOC;
     Specification *Gen_turn_on_SOC;
+    Specification *Relese_Charge_mark;
+    Specification *ForceCharge_start;
+    Specification *ForceCharge_top;
+    Specification *DOD_Protection_Release_SOC;//DOD保护解除SOC
+    Specification *Cell_Voltage_max;//最高单体电压
+    Specification *Cell_Voltage_max_delta;//最高单体电压回差
+    Specification *Cell_Voltage_min;//最低单体电压
+    Specification *Cell_Voltage_min_delta;//最低单体电压回差
+    Specification *DCAC_cell_protect;//DCAC单体保护电压
+    Specification *DCAC_cell_delta;//DCAC单体保护电压回差
 
 
     /***************************电池设置-铅酸****************************/
@@ -341,6 +360,7 @@ public:
     QPushButton *Temperature_alarm_upper_limit_explain;*/
     QPushButton *Uniform_To_Flushing_current_explain;
     QPushButton *Flushing_To_Uniform_current_explain;
+
 
 
     Specification *Capacity;
@@ -666,9 +686,7 @@ public:
     QPushButton *serial_port_5_explain; //串口5说明
     QPushButton *Can_port_1_explain;    //CAN1说明
     QPushButton *Can_port_2_explain;    //CAN2说明
-    QPushButton *Relese_Charge_mark_explain;    //释放充电标志说明
-    QPushButton *ForceCharge_start_explain; //强充开启说明
-    QPushButton *ForceCharge_top_explain;   // 强充结束说明
+
     QPushButton *ProtocolVersion_explain;   //协议版本说明
     QPushButton *UserPassPort_explain;  //用户密码说明
     QPushButton *RootPassport_explain;  //超级权限说明
@@ -683,8 +701,6 @@ public:
     QPushButton *Grid_FCP_explain;
     QPushButton *Grid_EDP_explain;
     QPushButton *Grid_FDP_explain;
-
-
     Specification *Battery_type;
     Specification *BMS_Comm_type;
     Specification *Power_control_type;
@@ -703,9 +719,6 @@ public:
     Specification *serial_port_5;
     Specification *Can_port_1;
     Specification *Can_port_2;
-    Specification *Relese_Charge_mark;
-    Specification *ForceCharge_start;
-    Specification *ForceCharge_top;
     Specification *ProtocolVersion;
     Specification *UserPassPort;
     Specification *RootPassport;
@@ -741,7 +754,7 @@ public:
 //    QPushButton *Grid_recovery_scheduling_explain;  //电网恢复调度开机说明
     QPushButton *Grid_recovery_time_explain;  //电网恢复并网时间说明
     QPushButton *Grid_connected_mode_of_Inv_explain;  //逆变器并网方式说明
-    QPushButton *System_Anti_Reverse_Flow_explain;  //系统防逆流
+
     QPushButton *Pshedding_Freq_explain;  //过频降载说明
     QPushButton *QP_curve_explain;  //QP曲线说明
     QPushButton *CV_parallel_explain;  //恒压并机说明
@@ -777,7 +790,7 @@ public:
 //    Specification *Grid_recovery_scheduling;
     Specification *Grid_recovery_time;
     Specification *Grid_connected_mode_of_Inv;
-    Specification *System_Anti_Reverse_Flow;  //系统防逆流
+
     Specification *Pshedding_Freq;
     Specification *QP_curve;
     Specification *CV_parallel;
