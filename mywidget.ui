@@ -62,7 +62,7 @@
    <item row="0" column="0">
     <widget class="QStackedWidget" name="UI_stackedWidget">
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="BasicSet_page">
       <widget class="QWidget" name="layoutWidget">
@@ -2806,1398 +2806,1545 @@ Language</string>
             <enum>QFrame::Raised</enum>
            </property>
            <property name="currentIndex">
-            <number>3</number>
+            <number>0</number>
            </property>
            <widget class="QWidget" name="Host_page">
-            <widget class="QPushButton" name="Bypass_Grid_btn">
-             <property name="geometry">
-              <rect>
-               <x>740</x>
-               <y>300</y>
-               <width>130</width>
-               <height>120</height>
-              </rect>
-             </property>
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>130</width>
-               <height>120</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>130</width>
-               <height>120</height>
-              </size>
-             </property>
-             <property name="cursor">
-              <cursorShape>ArrowCursor</cursorShape>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-image: url(:/new_ui/UI/3.png);</string>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-            </widget>
-            <widget class="QPushButton" name="Bypass_Batt_btn">
-             <property name="geometry">
-              <rect>
-               <x>150</x>
-               <y>320</y>
-               <width>101</width>
-               <height>111</height>
-              </rect>
-             </property>
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>101</width>
-               <height>111</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>101</width>
-               <height>111</height>
-              </size>
-             </property>
-             <property name="sizeIncrement">
-              <size>
-               <width>0</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="cursor">
-              <cursorShape>ArrowCursor</cursorShape>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-image: url(:/new_ui/UI/DCBat1.png);</string>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-             <property name="iconSize">
-              <size>
-               <width>64</width>
-               <height>64</height>
-              </size>
-             </property>
-            </widget>
-            <widget class="QLabel" name="CurrentMode_lb">
-             <property name="geometry">
-              <rect>
-               <x>427</x>
-               <y>260</y>
-               <width>81</width>
-               <height>48</height>
-              </rect>
-             </property>
-             <property name="font">
-              <font>
-               <pointsize>14</pointsize>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color: rgb(255, 255, 255);</string>
-             </property>
-             <property name="text">
-              <string>Current mode:CP</string>
-             </property>
-            </widget>
-            <widget class="QWidget" name="horizontalLayoutWidget_3">
-             <property name="geometry">
-              <rect>
-               <x>740</x>
-               <y>10</y>
-               <width>231</width>
-               <height>191</height>
-              </rect>
-             </property>
-             <layout class="QHBoxLayout" name="horizontalLayout_32">
-              <item>
-               <layout class="QVBoxLayout" name="verticalLayout_23">
-                <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_31">
-                  <item>
-                   <widget class="QPushButton" name="Bypass_Load_Btn">
-                    <property name="minimumSize">
-                     <size>
-                      <width>151</width>
-                      <height>91</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>151</width>
-                      <height>91</height>
-                     </size>
-                    </property>
-                    <property name="cursor">
-                     <cursorShape>ArrowCursor</cursorShape>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">border-image: url(:/new_ui/UI/house.png);</string>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <spacer name="horizontalSpacer">
-                    <property name="orientation">
-                     <enum>Qt::Horizontal</enum>
-                    </property>
-                    <property name="sizeHint" stdset="0">
-                     <size>
-                      <width>40</width>
-                      <height>20</height>
-                     </size>
-                    </property>
-                   </spacer>
-                  </item>
-                 </layout>
-                </item>
-                <item>
-                 <layout class="QGridLayout" name="gridLayout_3">
-                  <item row="3" column="1">
-                   <widget class="QLabel" name="Host_Grid_Dis_lb">
-                    <property name="font">
-                     <font>
-                      <family>新宋体</family>
-                      <pointsize>10</pointsize>
-                     </font>
-                    </property>
-                    <property name="text">
-                     <string>0kWh</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="3" column="0">
-                   <widget class="QLabel" name="label_22">
-                    <property name="font">
-                     <font>
-                      <family>新宋体</family>
-                      <pointsize>10</pointsize>
-                     </font>
-                    </property>
-                    <property name="text">
-                     <string>Grid sell:</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="2" column="0">
-                   <widget class="QLabel" name="label_13">
-                    <property name="font">
-                     <font>
-                      <family>新宋体</family>
-                      <pointsize>10</pointsize>
-                     </font>
-                    </property>
-                    <property name="text">
-                     <string>Grid buy:</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="1">
-                   <widget class="QLabel" name="Host_Load_Gen_lb">
-                    <property name="font">
-                     <font>
-                      <family>新宋体</family>
-                      <pointsize>10</pointsize>
-                     </font>
-                    </property>
-                    <property name="text">
-                     <string>0kWh</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="2" column="1">
-                   <widget class="QLabel" name="Host_Grid_Cha_lb">
-                    <property name="font">
-                     <font>
-                      <family>新宋体</family>
-                      <pointsize>10</pointsize>
-                     </font>
-                    </property>
-                    <property name="text">
-                     <string>0kWh</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="0">
-                   <widget class="QLabel" name="label_14">
-                    <property name="font">
-                     <font>
-                      <family>新宋体</family>
-                      <pointsize>10</pointsize>
-                     </font>
-                    </property>
-                    <property name="text">
-                     <string>Load:</string>
-                    </property>
-                    <property name="alignment">
-                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </item>
-               </layout>
-              </item>
-             </layout>
-            </widget>
-            <widget class="QWidget" name="verticalLayoutWidget_3">
-             <property name="geometry">
-              <rect>
-               <x>0</x>
-               <y>10</y>
-               <width>261</width>
-               <height>185</height>
-              </rect>
-             </property>
-             <layout class="QVBoxLayout" name="verticalLayout_30">
-              <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_33">
-                <item>
-                 <spacer name="horizontalSpacer_8">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="PV_btn">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="minimumSize">
-                   <size>
-                    <width>121</width>
-                    <height>101</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>121</width>
-                    <height>101</height>
-                   </size>
-                  </property>
-                  <property name="sizeIncrement">
-                   <size>
-                    <width>0</width>
-                    <height>0</height>
-                   </size>
-                  </property>
-                  <property name="cursor">
-                   <cursorShape>ArrowCursor</cursorShape>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">border-image: url(:/new_ui/UI/PV.png);</string>
-                  </property>
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="iconSize">
-                   <size>
-                    <width>64</width>
-                    <height>64</height>
-                   </size>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QGridLayout" name="gridLayout_6">
-                <item row="1" column="2">
-                 <widget class="QLabel" name="Host_BAT_Cha_lb">
-                  <property name="font">
-                   <font>
-                    <family>新宋体</family>
-                    <pointsize>10</pointsize>
-                   </font>
-                  </property>
-                  <property name="text">
-                   <string>0kWh</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="1" column="1">
-                 <widget class="QLabel" name="label_5">
-                  <property name="font">
-                   <font>
-                    <family>新宋体</family>
-                    <pointsize>10</pointsize>
-                   </font>
-                  </property>
-                  <property name="text">
-                   <string>Battery charging:</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="2" column="1">
-                 <widget class="QLabel" name="label_6">
-                  <property name="font">
-                   <font>
-                    <family>新宋体</family>
-                    <pointsize>10</pointsize>
-                   </font>
-                  </property>
-                  <property name="text">
-                   <string>Battery discharging:</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="2" column="2">
-                 <widget class="QLabel" name="Host_BAT_Dis_lb">
-                  <property name="font">
-                   <font>
-                    <family>新宋体</family>
-                    <pointsize>10</pointsize>
-                   </font>
-                  </property>
-                  <property name="text">
-                   <string>0kWh</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="1">
-                 <widget class="QLabel" name="label_4">
-                  <property name="font">
-                   <font>
-                    <family>新宋体</family>
-                    <pointsize>10</pointsize>
-                   </font>
-                  </property>
-                  <property name="text">
-                   <string>PV:</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="2">
-                 <widget class="QLabel" name="Host_PV_Gen_lb">
-                  <property name="font">
-                   <font>
-                    <family>新宋体</family>
-                    <pointsize>10</pointsize>
-                   </font>
-                  </property>
-                  <property name="text">
-                   <string>0kWh</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="0">
-                 <spacer name="horizontalSpacer_13">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item row="1" column="0">
-                 <spacer name="horizontalSpacer_14">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item row="2" column="0">
-                 <spacer name="horizontalSpacer_15">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-               </layout>
-              </item>
-             </layout>
-            </widget>
-            <widget class="QWidget" name="verticalLayoutWidget">
-             <property name="geometry">
-              <rect>
-               <x>260</x>
-               <y>10</y>
-               <width>471</width>
-               <height>421</height>
-              </rect>
-             </property>
-             <layout class="QVBoxLayout" name="verticalLayout_14">
-              <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_36">
-                <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_35">
-                  <item>
-                   <layout class="QVBoxLayout" name="verticalLayout_37">
-                    <item>
-                     <widget class="QLabel" name="PV_bar_1">
-                      <property name="minimumSize">
-                       <size>
-                        <width>150</width>
-                        <height>18</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>150</width>
-                        <height>18</height>
-                       </size>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">border-image: url(:/new_ui/UI/ProcessBar2-01.png);</string>
-                      </property>
-                      <property name="text">
-                       <string/>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QLabel" name="PV_voltage_lb">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>16777215</width>
-                        <height>16777215</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>新宋体</family>
-                        <pointsize>12</pointsize>
-                       </font>
-                      </property>
-                      <property name="cursor">
-                       <cursorShape>ArrowCursor</cursorShape>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">border-image:url();
+            <layout class="QGridLayout" name="gridLayout_41">
+             <item row="0" column="0">
+              <layout class="QHBoxLayout" name="horizontalLayout_45">
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_36">
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_30">
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_33">
+                     <item>
+                      <spacer name="horizontalSpacer_8">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="PV_btn">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>121</width>
+                         <height>101</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>121</width>
+                         <height>101</height>
+                        </size>
+                       </property>
+                       <property name="sizeIncrement">
+                        <size>
+                         <width>0</width>
+                         <height>0</height>
+                        </size>
+                       </property>
+                       <property name="cursor">
+                        <cursorShape>ArrowCursor</cursorShape>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border-image: url(:/new_ui/UI/PV.png);</string>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                       <property name="iconSize">
+                        <size>
+                         <width>64</width>
+                         <height>64</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QGridLayout" name="gridLayout_6">
+                     <item row="0" column="1">
+                      <widget class="QLabel" name="label_4">
+                       <property name="font">
+                        <font>
+                         <family>新宋体</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>PV:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="0">
+                      <spacer name="horizontalSpacer_13">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item row="0" column="2">
+                      <widget class="QLabel" name="Host_PV_Gen_lb">
+                       <property name="font">
+                        <font>
+                         <family>新宋体</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>0kWh</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <spacer name="verticalSpacer_2">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_35">
+                   <item>
+                    <layout class="QGridLayout" name="gridLayout_39">
+                     <item row="0" column="2">
+                      <widget class="QLabel" name="Host_BAT_Cha_lb">
+                       <property name="font">
+                        <font>
+                         <family>新宋体</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>0kWh</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLabel" name="label_5">
+                       <property name="font">
+                        <font>
+                         <family>新宋体</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Battery charging:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QLabel" name="label_6">
+                       <property name="font">
+                        <font>
+                         <family>新宋体</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Battery discharging:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="2">
+                      <widget class="QLabel" name="Host_BAT_Dis_lb">
+                       <property name="font">
+                        <font>
+                         <family>新宋体</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>0kWh</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="0">
+                      <spacer name="horizontalSpacer_14">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item row="1" column="0">
+                      <spacer name="horizontalSpacer_15">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_42">
+                     <item>
+                      <spacer name="horizontalSpacer_16">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="Bypass_Batt_btn">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>101</width>
+                         <height>111</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>101</width>
+                         <height>111</height>
+                        </size>
+                       </property>
+                       <property name="sizeIncrement">
+                        <size>
+                         <width>0</width>
+                         <height>0</height>
+                        </size>
+                       </property>
+                       <property name="cursor">
+                        <cursorShape>ArrowCursor</cursorShape>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border-image: url(:/new_ui/UI/DCBat1.png);</string>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                       <property name="iconSize">
+                        <size>
+                         <width>64</width>
+                         <height>64</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_14">
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_36">
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_35">
+                     <item>
+                      <layout class="QVBoxLayout" name="verticalLayout_37">
+                       <item>
+                        <widget class="QLabel" name="PV_bar_1">
+                         <property name="minimumSize">
+                          <size>
+                           <width>150</width>
+                           <height>15</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>150</width>
+                           <height>15</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border-image: url(:/new_ui/UI/ProcessBar2-01.png);</string>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="PV_voltage_lb">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>新宋体</family>
+                           <pointsize>10</pointsize>
+                          </font>
+                         </property>
+                         <property name="cursor">
+                          <cursorShape>ArrowCursor</cursorShape>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border-image:url();
 </string>
-                      </property>
-                      <property name="text">
-                       <string>0V</string>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignCenter</set>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QLabel" name="PV_current_lb">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>16777215</width>
-                        <height>16777215</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>新宋体</family>
-                        <pointsize>12</pointsize>
-                       </font>
-                      </property>
-                      <property name="cursor">
-                       <cursorShape>ArrowCursor</cursorShape>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">border-image:url();
+                         </property>
+                         <property name="text">
+                          <string>0V</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="PV_current_lb">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>新宋体</family>
+                           <pointsize>10</pointsize>
+                          </font>
+                         </property>
+                         <property name="cursor">
+                          <cursorShape>ArrowCursor</cursorShape>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border-image:url();
 </string>
-                      </property>
-                      <property name="text">
-                       <string>0A</string>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignCenter</set>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QLabel" name="PV_power_lb">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>新宋体</family>
-                        <pointsize>12</pointsize>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>0kW</string>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignCenter</set>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </item>
-                  <item>
-                   <widget class="QLabel" name="PV_bar_2">
-                    <property name="minimumSize">
-                     <size>
-                      <width>18</width>
-                      <height>110</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>18</width>
-                      <height>110</height>
-                     </size>
-                    </property>
-                    <property name="cursor">
-                     <cursorShape>ArrowCursor</cursorShape>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">border-image: url(:/new_ui/UI/DCBar1-02.png);</string>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </item>
-                <item>
-                 <spacer name="horizontalSpacer_7">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_34">
-                  <item>
-                   <widget class="QLabel" name="Load_bar_2">
-                    <property name="minimumSize">
-                     <size>
-                      <width>18</width>
-                      <height>110</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>18</width>
-                      <height>110</height>
-                     </size>
-                    </property>
-                    <property name="cursor">
-                     <cursorShape>BlankCursor</cursorShape>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">border-image: url(:/new_ui/UI/DCBar2-02 .png);</string>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <layout class="QVBoxLayout" name="verticalLayout_31">
-                    <item>
-                     <widget class="QLabel" name="Load_bar_1">
-                      <property name="minimumSize">
-                       <size>
-                        <width>150</width>
-                        <height>18</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>150</width>
-                        <height>16</height>
-                       </size>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">border-image: url(:/new_ui/UI/ProcessBar2-01.png);</string>
-                      </property>
-                      <property name="text">
-                       <string/>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <layout class="QGridLayout" name="gridLayout_21" columnstretch="0,0">
-                      <item row="3" column="0">
-                       <widget class="QLabel" name="Load_Vc_lb">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <family>新宋体</family>
-                          <pointsize>10</pointsize>
-                         </font>
-                        </property>
-                        <property name="text">
-                         <string>0V</string>
-                        </property>
-                        <property name="alignment">
-                         <set>Qt::AlignCenter</set>
-                        </property>
-                       </widget>
-                      </item>
-                      <item row="2" column="1">
-                       <widget class="QLabel" name="Load_Curr_B">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="maximumSize">
-                         <size>
-                          <width>16777215</width>
-                          <height>16777215</height>
-                         </size>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <family>新宋体</family>
-                          <pointsize>10</pointsize>
-                         </font>
-                        </property>
-                        <property name="cursor">
-                         <cursorShape>ArrowCursor</cursorShape>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">border-image:url();</string>
-                        </property>
-                        <property name="text">
-                         <string>0A </string>
-                        </property>
-                        <property name="alignment">
-                         <set>Qt::AlignCenter</set>
-                        </property>
-                       </widget>
-                      </item>
-                      <item row="2" column="0">
-                       <widget class="QLabel" name="Load_Vb_lb">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <family>新宋体</family>
-                          <pointsize>10</pointsize>
-                         </font>
-                        </property>
-                        <property name="text">
-                         <string>0V</string>
-                        </property>
-                        <property name="alignment">
-                         <set>Qt::AlignCenter</set>
-                        </property>
-                       </widget>
-                      </item>
-                      <item row="3" column="1">
-                       <widget class="QLabel" name="Load_Curr_C">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="maximumSize">
-                         <size>
-                          <width>16777215</width>
-                          <height>16777215</height>
-                         </size>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <family>新宋体</family>
-                          <pointsize>10</pointsize>
-                         </font>
-                        </property>
-                        <property name="cursor">
-                         <cursorShape>ArrowCursor</cursorShape>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">border-image:url();</string>
-                        </property>
-                        <property name="text">
-                         <string>0A </string>
-                        </property>
-                        <property name="alignment">
-                         <set>Qt::AlignCenter</set>
-                        </property>
-                       </widget>
-                      </item>
-                      <item row="1" column="1">
-                       <widget class="QLabel" name="Load_Curr_A">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="maximumSize">
-                         <size>
-                          <width>16777215</width>
-                          <height>16777215</height>
-                         </size>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <family>新宋体</family>
-                          <pointsize>10</pointsize>
-                         </font>
-                        </property>
-                        <property name="cursor">
-                         <cursorShape>ArrowCursor</cursorShape>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">border-image:url();</string>
-                        </property>
-                        <property name="text">
-                         <string>0A </string>
-                        </property>
-                        <property name="alignment">
-                         <set>Qt::AlignCenter</set>
-                        </property>
-                       </widget>
-                      </item>
-                      <item row="1" column="0">
-                       <widget class="QLabel" name="Load_Va_lb">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <family>新宋体</family>
-                          <pointsize>10</pointsize>
-                         </font>
-                        </property>
-                        <property name="text">
-                         <string>0V</string>
-                        </property>
-                        <property name="alignment">
-                         <set>Qt::AlignCenter</set>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
-                    </item>
-                   </layout>
-                  </item>
-                 </layout>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_39">
-                <item>
-                 <spacer name="horizontalSpacer_9">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="Bypass_Running_btn">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="minimumSize">
-                   <size>
-                    <width>161</width>
-                    <height>141</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>151</width>
-                    <height>131</height>
-                   </size>
-                  </property>
-                  <property name="cursor">
-                   <cursorShape>ArrowCursor</cursorShape>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">border-image: url(:/new_ui/UI/MPS.png);</string>
-                  </property>
-                  <property name="text">
-                   <string/>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <spacer name="horizontalSpacer_12">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_38">
-                <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_24">
-                  <item>
-                   <layout class="QVBoxLayout" name="verticalLayout_2">
-                    <property name="spacing">
-                     <number>7</number>
-                    </property>
-                    <item>
-                     <widget class="QLabel" name="BattVolt_label">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>16777215</width>
-                        <height>16777215</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>新宋体</family>
-                        <pointsize>10</pointsize>
-                       </font>
-                      </property>
-                      <property name="cursor">
-                       <cursorShape>ArrowCursor</cursorShape>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">border-image:url();
+                         </property>
+                         <property name="text">
+                          <string>0A</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="PV_power_lb">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>新宋体</family>
+                           <pointsize>10</pointsize>
+                          </font>
+                         </property>
+                         <property name="text">
+                          <string>0kW</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="PV_bar_2">
+                       <property name="minimumSize">
+                        <size>
+                         <width>15</width>
+                         <height>110</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>15</width>
+                         <height>130</height>
+                        </size>
+                       </property>
+                       <property name="cursor">
+                        <cursorShape>ArrowCursor</cursorShape>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border-image: url(:/new_ui/UI/DCBar1-02.png);</string>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_7">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_34">
+                     <item>
+                      <widget class="QLabel" name="Load_bar_2">
+                       <property name="minimumSize">
+                        <size>
+                         <width>15</width>
+                         <height>110</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>15</width>
+                         <height>130</height>
+                        </size>
+                       </property>
+                       <property name="cursor">
+                        <cursorShape>BlankCursor</cursorShape>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border-image: url(:/new_ui/UI/DCBar2-02 .png);</string>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <layout class="QVBoxLayout" name="verticalLayout_31">
+                       <item>
+                        <widget class="QLabel" name="Load_bar_1">
+                         <property name="minimumSize">
+                          <size>
+                           <width>150</width>
+                           <height>15</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>150</width>
+                           <height>15</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border-image: url(:/new_ui/UI/ProcessBar2-01.png);</string>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <layout class="QGridLayout" name="gridLayout_21" columnstretch="0,0">
+                         <item row="3" column="0">
+                          <widget class="QLabel" name="Load_Vc_lb">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <family>新宋体</family>
+                             <pointsize>10</pointsize>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>0V</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="2" column="1">
+                          <widget class="QLabel" name="Load_Curr_B">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>16777215</width>
+                             <height>16777215</height>
+                            </size>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <family>新宋体</family>
+                             <pointsize>10</pointsize>
+                            </font>
+                           </property>
+                           <property name="cursor">
+                            <cursorShape>ArrowCursor</cursorShape>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">border-image:url();</string>
+                           </property>
+                           <property name="text">
+                            <string>0A </string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="2" column="0">
+                          <widget class="QLabel" name="Load_Vb_lb">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <family>新宋体</family>
+                             <pointsize>10</pointsize>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>0V</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="3" column="1">
+                          <widget class="QLabel" name="Load_Curr_C">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>16777215</width>
+                             <height>16777215</height>
+                            </size>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <family>新宋体</family>
+                             <pointsize>10</pointsize>
+                            </font>
+                           </property>
+                           <property name="cursor">
+                            <cursorShape>ArrowCursor</cursorShape>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">border-image:url();</string>
+                           </property>
+                           <property name="text">
+                            <string>0A </string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="1" column="1">
+                          <widget class="QLabel" name="Load_Curr_A">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>16777215</width>
+                             <height>16777215</height>
+                            </size>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <family>新宋体</family>
+                             <pointsize>10</pointsize>
+                            </font>
+                           </property>
+                           <property name="cursor">
+                            <cursorShape>ArrowCursor</cursorShape>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">border-image:url();</string>
+                           </property>
+                           <property name="text">
+                            <string>0A </string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="1" column="0">
+                          <widget class="QLabel" name="Load_Va_lb">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <family>新宋体</family>
+                             <pointsize>10</pointsize>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>0V</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_39">
+                   <item>
+                    <spacer name="horizontalSpacer_9">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="Bypass_Running_btn">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>161</width>
+                       <height>141</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>151</width>
+                       <height>131</height>
+                      </size>
+                     </property>
+                     <property name="cursor">
+                      <cursorShape>ArrowCursor</cursorShape>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">border-image: url(:/new_ui/UI/MPS.png);</string>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_12">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_38">
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_24">
+                     <item>
+                      <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,1,1,1,1">
+                       <property name="spacing">
+                        <number>7</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="BattVolt_label">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>新宋体</family>
+                           <pointsize>10</pointsize>
+                          </font>
+                         </property>
+                         <property name="cursor">
+                          <cursorShape>ArrowCursor</cursorShape>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border-image:url();
 </string>
-                      </property>
-                      <property name="text">
-                       <string>0V</string>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignCenter</set>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QLabel" name="BattCurrent_label">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>16777215</width>
-                        <height>16777215</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>新宋体</family>
-                        <pointsize>10</pointsize>
-                       </font>
-                      </property>
-                      <property name="cursor">
-                       <cursorShape>ArrowCursor</cursorShape>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">border-image:url();
+                         </property>
+                         <property name="text">
+                          <string>0V</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="BattCurrent_label">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>新宋体</family>
+                           <pointsize>10</pointsize>
+                          </font>
+                         </property>
+                         <property name="cursor">
+                          <cursorShape>ArrowCursor</cursorShape>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border-image:url();
 </string>
-                      </property>
-                      <property name="text">
-                       <string>0A</string>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignCenter</set>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <layout class="QHBoxLayout" name="horizontalLayout_12">
-                      <item>
-                       <widget class="QLabel" name="SOC_text_bypass">
-                        <property name="font">
-                         <font>
-                          <family>新宋体</family>
-                          <pointsize>10</pointsize>
-                         </font>
-                        </property>
-                        <property name="text">
-                         <string>SOC:</string>
-                        </property>
-                        <property name="alignment">
-                         <set>Qt::AlignCenter</set>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QLabel" name="SOC_lb">
-                        <property name="font">
-                         <font>
-                          <family>新宋体</family>
-                          <pointsize>10</pointsize>
-                         </font>
-                        </property>
-                        <property name="text">
-                         <string>0%</string>
-                        </property>
-                        <property name="alignment">
-                         <set>Qt::AlignCenter</set>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
-                    </item>
-                    <item>
-                     <widget class="QLabel" name="Bat_bar_1">
-                      <property name="minimumSize">
-                       <size>
-                        <width>150</width>
-                        <height>18</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>150</width>
-                        <height>18</height>
-                       </size>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">border-image: url(:/new_ui/UI/ProcessBar2-01.png);</string>
-                      </property>
-                      <property name="text">
-                       <string/>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </item>
-                  <item>
-                   <widget class="QLabel" name="Bat_bar_2">
-                    <property name="minimumSize">
-                     <size>
-                      <width>18</width>
-                      <height>110</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>18</width>
-                      <height>110</height>
-                     </size>
-                    </property>
-                    <property name="cursor">
-                     <cursorShape>ArrowCursor</cursorShape>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">border-image: url(:/new_ui/UI/DCBar2-01 .png);</string>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </item>
-                <item>
-                 <spacer name="horizontalSpacer_2">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_37">
-                  <item>
-                   <widget class="QLabel" name="Grid_bar_2">
-                    <property name="minimumSize">
-                     <size>
-                      <width>18</width>
-                      <height>110</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>18</width>
-                      <height>110</height>
-                     </size>
-                    </property>
-                    <property name="cursor">
-                     <cursorShape>ArrowCursor</cursorShape>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">border-image: url(:/new_ui/UI/DCBar2-02 .png);</string>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <layout class="QVBoxLayout" name="verticalLayout_34">
-                    <item>
-                     <layout class="QGridLayout" name="gridLayout_20" columnstretch="1,0">
-                      <item row="2" column="0">
-                       <widget class="QLabel" name="Grid_Vc_lb">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="maximumSize">
-                         <size>
-                          <width>80</width>
-                          <height>30</height>
-                         </size>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <family>新宋体</family>
-                          <pointsize>10</pointsize>
-                         </font>
-                        </property>
-                        <property name="cursor">
-                         <cursorShape>ArrowCursor</cursorShape>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">border-image:url();</string>
-                        </property>
-                        <property name="text">
-                         <string>0V</string>
-                        </property>
-                        <property name="alignment">
-                         <set>Qt::AlignCenter</set>
-                        </property>
-                       </widget>
-                      </item>
-                      <item row="2" column="1">
-                       <widget class="QLabel" name="Grid_Curr_C">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="maximumSize">
-                         <size>
-                          <width>80</width>
-                          <height>30</height>
-                         </size>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <family>新宋体</family>
-                          <pointsize>10</pointsize>
-                         </font>
-                        </property>
-                        <property name="cursor">
-                         <cursorShape>ArrowCursor</cursorShape>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">border-image:url();</string>
-                        </property>
-                        <property name="text">
-                         <string>0A</string>
-                        </property>
-                        <property name="alignment">
-                         <set>Qt::AlignCenter</set>
-                        </property>
-                       </widget>
-                      </item>
-                      <item row="0" column="1">
-                       <widget class="QLabel" name="Grid_Curr_A">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="maximumSize">
-                         <size>
-                          <width>80</width>
-                          <height>30</height>
-                         </size>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <family>新宋体</family>
-                          <pointsize>10</pointsize>
-                         </font>
-                        </property>
-                        <property name="cursor">
-                         <cursorShape>ArrowCursor</cursorShape>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">border-image:url();</string>
-                        </property>
-                        <property name="text">
-                         <string>0A</string>
-                        </property>
-                        <property name="alignment">
-                         <set>Qt::AlignCenter</set>
-                        </property>
-                       </widget>
-                      </item>
-                      <item row="0" column="0">
-                       <widget class="QLabel" name="Grid_Va_lb">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="maximumSize">
-                         <size>
-                          <width>80</width>
-                          <height>30</height>
-                         </size>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <family>新宋体</family>
-                          <pointsize>10</pointsize>
-                         </font>
-                        </property>
-                        <property name="cursor">
-                         <cursorShape>ArrowCursor</cursorShape>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">border-image:url();</string>
-                        </property>
-                        <property name="text">
-                         <string>0V</string>
-                        </property>
-                        <property name="alignment">
-                         <set>Qt::AlignCenter</set>
-                        </property>
-                       </widget>
-                      </item>
-                      <item row="1" column="0">
-                       <widget class="QLabel" name="Grid_Vb_lb">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="maximumSize">
-                         <size>
-                          <width>80</width>
-                          <height>30</height>
-                         </size>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <family>新宋体</family>
-                          <pointsize>10</pointsize>
-                         </font>
-                        </property>
-                        <property name="cursor">
-                         <cursorShape>ArrowCursor</cursorShape>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">border-image:url();</string>
-                        </property>
-                        <property name="text">
-                         <string>0V</string>
-                        </property>
-                        <property name="alignment">
-                         <set>Qt::AlignCenter</set>
-                        </property>
-                       </widget>
-                      </item>
-                      <item row="1" column="1">
-                       <widget class="QLabel" name="Grid_Curr_B">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="maximumSize">
-                         <size>
-                          <width>80</width>
-                          <height>30</height>
-                         </size>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <family>新宋体</family>
-                          <pointsize>10</pointsize>
-                         </font>
-                        </property>
-                        <property name="cursor">
-                         <cursorShape>ArrowCursor</cursorShape>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">border-image:url();</string>
-                        </property>
-                        <property name="text">
-                         <string>0A</string>
-                        </property>
-                        <property name="alignment">
-                         <set>Qt::AlignCenter</set>
-                        </property>
-                       </widget>
-                      </item>
-                      <item row="3" column="0">
-                       <widget class="QLabel" name="label_7">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <family>新宋体</family>
-                          <pointsize>10</pointsize>
-                         </font>
-                        </property>
-                        <property name="text">
-                         <string>Power meter</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item row="3" column="1">
-                       <widget class="QLabel" name="PowerMeter_val">
-                        <property name="sizePolicy">
-                         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                          <horstretch>0</horstretch>
-                          <verstretch>0</verstretch>
-                         </sizepolicy>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <family>新宋体</family>
-                          <pointsize>10</pointsize>
-                         </font>
-                        </property>
-                        <property name="text">
-                         <string>0kW</string>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
-                    </item>
-                    <item>
-                     <widget class="QLabel" name="Grid_bar_1">
-                      <property name="minimumSize">
-                       <size>
-                        <width>150</width>
-                        <height>18</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>150</width>
-                        <height>18</height>
-                       </size>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">border-image: url(:/new_ui/UI/ProcessBar1-02.png);</string>
-                      </property>
-                      <property name="text">
-                       <string/>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </item>
-                 </layout>
-                </item>
-               </layout>
-              </item>
-             </layout>
-            </widget>
+                         </property>
+                         <property name="text">
+                          <string>0A</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_12">
+                         <item>
+                          <widget class="QLabel" name="SOC_text_bypass">
+                           <property name="font">
+                            <font>
+                             <family>新宋体</family>
+                             <pointsize>10</pointsize>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>SOC:</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="SOC_lb">
+                           <property name="font">
+                            <font>
+                             <family>新宋体</family>
+                             <pointsize>10</pointsize>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>0%</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="Bat_bar_1">
+                         <property name="minimumSize">
+                          <size>
+                           <width>150</width>
+                           <height>15</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>150</width>
+                           <height>15</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border-image: url(:/new_ui/UI/ProcessBar2-01.png);</string>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <spacer name="verticalSpacer_6">
+                         <property name="orientation">
+                          <enum>Qt::Vertical</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>20</width>
+                           <height>40</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <layout class="QVBoxLayout" name="verticalLayout_41">
+                       <item>
+                        <widget class="QLabel" name="Bat_bar_2">
+                         <property name="minimumSize">
+                          <size>
+                           <width>15</width>
+                           <height>110</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>15</width>
+                           <height>110</height>
+                          </size>
+                         </property>
+                         <property name="cursor">
+                          <cursorShape>ArrowCursor</cursorShape>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border-image: url(:/new_ui/UI/DCBar2-02 .png);</string>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <spacer name="verticalSpacer_5">
+                         <property name="orientation">
+                          <enum>Qt::Vertical</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>20</width>
+                           <height>40</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_2">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_37">
+                     <item>
+                      <layout class="QVBoxLayout" name="verticalLayout_40">
+                       <item>
+                        <widget class="QLabel" name="Grid_bar_2">
+                         <property name="minimumSize">
+                          <size>
+                           <width>15</width>
+                           <height>110</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>15</width>
+                           <height>110</height>
+                          </size>
+                         </property>
+                         <property name="cursor">
+                          <cursorShape>ArrowCursor</cursorShape>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border-image: url(:/new_ui/UI/DCBar2-02 .png);</string>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <spacer name="verticalSpacer_4">
+                         <property name="orientation">
+                          <enum>Qt::Vertical</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>20</width>
+                           <height>40</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <layout class="QVBoxLayout" name="verticalLayout_34" stretch="4,1,1">
+                       <item>
+                        <layout class="QGridLayout" name="gridLayout_20" columnstretch="1,0">
+                         <item row="2" column="0">
+                          <widget class="QLabel" name="Grid_Vc_lb">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>80</width>
+                             <height>30</height>
+                            </size>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <family>新宋体</family>
+                             <pointsize>10</pointsize>
+                            </font>
+                           </property>
+                           <property name="cursor">
+                            <cursorShape>ArrowCursor</cursorShape>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">border-image:url();</string>
+                           </property>
+                           <property name="text">
+                            <string>0V</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="2" column="1">
+                          <widget class="QLabel" name="Grid_Curr_C">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>80</width>
+                             <height>30</height>
+                            </size>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <family>新宋体</family>
+                             <pointsize>10</pointsize>
+                            </font>
+                           </property>
+                           <property name="cursor">
+                            <cursorShape>ArrowCursor</cursorShape>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">border-image:url();</string>
+                           </property>
+                           <property name="text">
+                            <string>0A</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="0" column="1">
+                          <widget class="QLabel" name="Grid_Curr_A">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>80</width>
+                             <height>30</height>
+                            </size>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <family>新宋体</family>
+                             <pointsize>10</pointsize>
+                            </font>
+                           </property>
+                           <property name="cursor">
+                            <cursorShape>ArrowCursor</cursorShape>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">border-image:url();</string>
+                           </property>
+                           <property name="text">
+                            <string>0A</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="0" column="0">
+                          <widget class="QLabel" name="Grid_Va_lb">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>80</width>
+                             <height>30</height>
+                            </size>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <family>新宋体</family>
+                             <pointsize>10</pointsize>
+                            </font>
+                           </property>
+                           <property name="cursor">
+                            <cursorShape>ArrowCursor</cursorShape>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">border-image:url();</string>
+                           </property>
+                           <property name="text">
+                            <string>0V</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="1" column="0">
+                          <widget class="QLabel" name="Grid_Vb_lb">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>80</width>
+                             <height>30</height>
+                            </size>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <family>新宋体</family>
+                             <pointsize>10</pointsize>
+                            </font>
+                           </property>
+                           <property name="cursor">
+                            <cursorShape>ArrowCursor</cursorShape>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">border-image:url();</string>
+                           </property>
+                           <property name="text">
+                            <string>0V</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="1" column="1">
+                          <widget class="QLabel" name="Grid_Curr_B">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>80</width>
+                             <height>30</height>
+                            </size>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <family>新宋体</family>
+                             <pointsize>10</pointsize>
+                            </font>
+                           </property>
+                           <property name="cursor">
+                            <cursorShape>ArrowCursor</cursorShape>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">border-image:url();</string>
+                           </property>
+                           <property name="text">
+                            <string>0A</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="Grid_bar_1">
+                         <property name="minimumSize">
+                          <size>
+                           <width>150</width>
+                           <height>15</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>150</width>
+                           <height>15</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border-image: url(:/new_ui/UI/ProcessBar1-02.png);</string>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_44">
+                         <item>
+                          <widget class="QLabel" name="label_7">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="minimumSize">
+                            <size>
+                             <width>0</width>
+                             <height>20</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>16777215</width>
+                             <height>20</height>
+                            </size>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <family>新宋体</family>
+                             <pointsize>10</pointsize>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>Power meter</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="PowerMeter_val">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>16777215</width>
+                             <height>20</height>
+                            </size>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <family>新宋体</family>
+                             <pointsize>10</pointsize>
+                            </font>
+                           </property>
+                           <property name="text">
+                            <string>0kW</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="verticalLayout_39">
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_32">
+                   <item>
+                    <layout class="QVBoxLayout" name="verticalLayout_23">
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_31">
+                       <item>
+                        <widget class="QPushButton" name="Bypass_Load_Btn">
+                         <property name="minimumSize">
+                          <size>
+                           <width>151</width>
+                           <height>91</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>151</width>
+                           <height>91</height>
+                          </size>
+                         </property>
+                         <property name="cursor">
+                          <cursorShape>ArrowCursor</cursorShape>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border-image: url(:/new_ui/UI/house.png);</string>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <spacer name="horizontalSpacer">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <layout class="QGridLayout" name="gridLayout_3">
+                       <item row="1" column="1">
+                        <widget class="QLabel" name="Host_Load_Gen_lb">
+                         <property name="font">
+                          <font>
+                           <family>新宋体</family>
+                           <pointsize>10</pointsize>
+                          </font>
+                         </property>
+                         <property name="text">
+                          <string>0kWh</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="0">
+                        <widget class="QLabel" name="label_14">
+                         <property name="font">
+                          <font>
+                           <family>新宋体</family>
+                           <pointsize>10</pointsize>
+                          </font>
+                         </property>
+                         <property name="text">
+                          <string>Load:</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="2">
+                        <spacer name="horizontalSpacer_21">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <spacer name="verticalSpacer_3">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_38">
+                   <item>
+                    <layout class="QGridLayout" name="gridLayout_40">
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_13">
+                       <property name="font">
+                        <font>
+                         <family>新宋体</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Grid buy:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QLabel" name="Host_Grid_Dis_lb">
+                       <property name="font">
+                        <font>
+                         <family>新宋体</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>0kWh</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLabel" name="Host_Grid_Cha_lb">
+                       <property name="font">
+                        <font>
+                         <family>新宋体</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>0kWh</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="2">
+                      <spacer name="horizontalSpacer_20">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item row="0" column="2">
+                      <spacer name="horizontalSpacer_19">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QLabel" name="label_22">
+                       <property name="font">
+                        <font>
+                         <family>新宋体</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Grid sell:</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_43">
+                     <item>
+                      <widget class="QPushButton" name="Bypass_Grid_btn">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>130</width>
+                         <height>120</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>130</width>
+                         <height>120</height>
+                        </size>
+                       </property>
+                       <property name="cursor">
+                        <cursorShape>ArrowCursor</cursorShape>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border-image: url(:/new_ui/UI/3.png);</string>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_18">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+            </layout>
            </widget>
            <widget class="QWidget" name="Status_page">
             <property name="cursor">
@@ -10539,7 +10686,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                  <string notr="true">color: rgb(255, 255, 255);</string>
                 </property>
                 <property name="text">
-                 <string>Current mode:CP</string>
+                 <string>Converter2 Turn off</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
