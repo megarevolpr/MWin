@@ -1140,6 +1140,10 @@ private slots:
 
     void on_Hybrid_mode_Button_clicked();
 
+    void on_Converter_State_btn_clicked();
+
+    void on_DCDC_Module_State_btn_clicked();
+
 private:
     Ui::MyWidget *ui;
     QButtonGroup *pButton_BatteryData;

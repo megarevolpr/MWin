@@ -7,9 +7,9 @@ OperMode::OperMode(QWidget *parent) :
 {
     ui->setupUi(this);
     setWindowState(Qt::WindowMaximized); // 最大化
-    InitializeMemorySpace();
+    InitializeMemorySpace();//初始化内存空间
 
-    Init_Tab_button();
+    Init_Tab_button();//绘表
     ui->AreaDivision_btn->click();
 }
 
@@ -187,37 +187,10 @@ void OperMode::InitializeChart(QTableWidget *myWidget)
 
     for(int i=0;i<25;i++)
     {
-//        if(i==6)
-//        {
-//            myWidget->setRowHeight(i,60);
-//        }
-//        else if(i==7)
-//        {
-//            myWidget->setRowHeight(i,80);
-//        }
-//        else
-//        {
-            myWidget->setRowHeight(i,45);
-//        }
-
-    }
-
-}
-
-void OperMode::InitializeChart_2(QTableWidget *myWidget)
-{
-    myWidget->verticalHeader()->setVisible(false);//设置垂直头不可见
-    myWidget->horizontalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
-    myWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);//设置不可编辑
-
-    ui->BatteryAreaEdit->setReadOnly(true);//只读
-    ui->ChaifaLogicEdit->setReadOnly(true);
-
-    for(int i=0;i<25;i++)
-    {
-        myWidget->setRowHeight(i,42);
+        myWidget->setRowHeight(i,50);
     }
 }
+
 //初始化表格点击控件
 void OperMode::Init_Tab_button()
 {
@@ -237,19 +210,15 @@ void OperMode::Init_Tab_button()
          );
 
 
-    Init_SysTab_button(ui->Paramrter_Widget);
+    Init_SysTab_button(ui->Paramrter_Widget);//填充内容
     Init_BatTab_button(ui->BatPri_Widget);
     Init_OptTab_button(ui->OptMod_Widget);
 
     InitializeChart(ui->Paramrter_Widget);
     InitializeChart(ui->BatPri_Widget);
     InitializeChart(ui->OptMod_Widget);
-
-//    InitializeChart_2(ui->BatPri_Widget);
-//    InitializeChart_2(ui->OptMod_Widget);
-
 }
-//初始化表格
+//初始化表格 自发自用
 void OperMode::Init_SysTab_button(QTableWidget *myWidget)
 {
     myWidget->setCellWidget(0, 1, (QWidget *)Bat_Type_btn);
@@ -279,7 +248,7 @@ void OperMode::Init_SysTab_button(QTableWidget *myWidget)
     myWidget->setCellWidget(24, 1, (QWidget *)Grid_FDP);
 
 }
-//初始化表格
+//初始化表格 电池优先
 void OperMode::Init_BatTab_button(QTableWidget *myWidget)
 {
     myWidget->setCellWidget(0, 1, (QWidget *)BatPri_Bat_Type_btn);
@@ -310,7 +279,7 @@ void OperMode::Init_BatTab_button(QTableWidget *myWidget)
 
 
 }
-//初始化表格
+//初始化表格 最优模式
 void OperMode::Init_OptTab_button(QTableWidget *myWidget)
 {
     myWidget->setCellWidget(0, 1, (QWidget *)OptMod_Bat_Type_btn);

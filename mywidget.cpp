@@ -3310,7 +3310,7 @@ void MyWidget::Battery_Setup_Tab(QTableWidget *myTable)
 
     DOD_Protection_Release_SOC = new Specification(this,DOD_Protection_Release_SOC_explain, myTable, line++, column, \
                                     "50", tr("DOD Protection Release SOC"), \
-                                    tr("."));
+                                    tr("DOD Protection Release SOC: When the DOD protection is activated, the current SOC reaches the set SOC value, and the DOD protection is released, allowing the battery to continue discharging."));
     DOD_Protection_Release_SOC->add_Specification();
 
     //充电电压上限说明
@@ -3376,26 +3376,24 @@ void MyWidget::Battery_Setup_Tab(QTableWidget *myTable)
                                         tr("When the specified SOC is reached, the diesel generator starts."));
     Gen_turn_on_SOC->add_Specification();
 
-    DOD_OffGrid->add_Specification();
-
     Cell_Voltage_max = new Specification(this,Cell_Voltage_max_explain, myTable, line++, column, \
                                     "3600", tr("Cell Voltage max"), \
-                                    tr("."));
+                                    tr("Charging is prohibited when the highest single cell voltage reaches this value to prevent overcharging."));
     Cell_Voltage_max->add_Specification();
 
     Cell_Voltage_max_delta = new Specification(this,Cell_Voltage_max_delta_explain, myTable, line++, column, \
                                     "3300", tr("Cell Voltage max delta"), \
-                                    tr("."));
+                                    tr("After triggering the protection for the highest single cell voltage, charging is resumed when the current highest single cell voltage falls below this value."));
     Cell_Voltage_max_delta->add_Specification();
 
     Cell_Voltage_min = new Specification(this,Cell_Voltage_min_explain, myTable, line++, column, \
                                     "2800", tr("Cell Voltage min"), \
-                                    tr("."));
+                                    tr("Discharging is prohibited when the lowest single cell voltage reaches this value to prevent over-discharging.."));
     Cell_Voltage_min->add_Specification();
 
     Cell_Voltage_min_delta = new Specification(this,Cell_Voltage_min_delta_explain, myTable, line++, column, \
                                     "3300", tr("Cell Voltage min delta"), \
-                                    tr("."));
+                                    tr("After triggering the protection for the lowest single cell voltage, discharging is resumed when the current lowest single cell voltage exceeds this value."));
     Cell_Voltage_min_delta->add_Specification();
 
     //强充开启说明
@@ -3412,11 +3410,11 @@ void MyWidget::Battery_Setup_Tab(QTableWidget *myTable)
 
     DCAC_cell_protect = new Specification(this,DCAC_cell_protect_explain, myTable, line++, column, \
                                     "3650", tr("DCAC cell protect"), \
-                                    tr("."));
+                                    tr("Reserved function, settings are invalid."));
     DCAC_cell_protect->add_Specification();
     DCAC_cell_delta = new Specification(this,DCAC_cell_delta_explain, myTable, line++, column, \
                                     "50", tr("DCAC cell delta"), \
-                                    tr("."));
+                                    tr("Reserved function, settings are invalid."));
     DCAC_cell_delta->add_Specification();
 
 }
@@ -5377,8 +5375,8 @@ void MyWidget::SystemParameter(QTableWidget *myTable)
     //机架说明
     Machine_Type = new Specification(this,Machine_Type_explain, myTable, 5, 7, \
                                      "DCAC", tr("Rack"), \
-                                     tr("When you select DCDC, the DCAC interface freezes, and the maximum module ID and minimum module ID take effect.(Note: You can only modify the database to restore the DCAC interface.)\
-As per factory settings, generally not modifiable."));
+                                     tr("When you select DCDC, the DCAC interface freezes, and the maximum module ID and minimum module ID take effect.You can only modify the database to restore the DCAC interface.\
+(Note:As per factory settings, generally not modifiable.)"));
     Machine_Type->add_Specification();
 
     //最大模块数说明
@@ -5999,22 +5997,22 @@ void MyWidget::on_radio_dhcp_clicked()
 void MyWidget::on_Switch_on_Inv_clicked()
 {
     QMessageBox::question(this, tr("Turn on"), tr("The switch to turn on the DCDC converter, click to activate the DCDC converter."), tr("OK"));
-}//这是DCDC变流器打开开关,点击后开启DCDC变流器\n
+}
 /****************DCDC 变流器关闭*****************/
 void MyWidget::on_Switch_off_Inv_clicked()
 {
     QMessageBox::question(this, tr("Turn off"), tr("The switch to turn off the DCDC converter, click to deactivate the DCDC converter."), tr("OK"));
-}//这是DCDC变流器关闭开关，点击后关闭DCDC变流器\n
+}
 /****************DCAC 变流器开启*****************/
 void MyWidget::on_Switch_on_clicked()
 {
     QMessageBox::question(this, tr("Turn on"), tr("The switch to turn on the DCAC converter, click to activate the DCAC converter."), tr("OK"));
-}//这是DCAC变流器打开开关,点击后开启DCAC变流器\n
+}
 /****************DCAC 变流器关闭*****************/
 void MyWidget::on_Switch_off_clicked()
 {
     QMessageBox::question(this, tr("Turn off"), tr("The switch to turn off the DCAC converter, click to deactivate the DCAC converter."), tr("OK"));
-}//这是DCAC变流器关闭开关，点击后关闭DCAC变流器\n
+}
 //每月深度放电日期+
 void MyWidget::on_pushButton_add_clicked()
 {
@@ -6025,6 +6023,17 @@ void MyWidget::on_pushButton_sub_clicked()
 {
     QMessageBox::question(this, tr("Date -"), tr("Clicking will move the monthly deep discharge date forward by one day."), tr("OK"));
 }
+/****************变流器当前状态*****************/
+void MyWidget::on_Converter_State_btn_clicked()
+{
+    QMessageBox::question(this, tr("Converter State"), tr("Display the current status of the DCAC converter."), tr("OK"));
+}
+/****************DCDC模块状态*****************/
+void MyWidget::on_DCDC_Module_State_btn_clicked()
+{
+    QMessageBox::question(this, tr("DCDC Module State"), tr("Rotate to display the status of each online DCDC module."), tr("OK"));
+}
+
 /***************************************************************
  * 故障信息表搜索功能
  ***************************************************************/
@@ -6074,5 +6083,3 @@ void MyWidget::on_TimeSeting_btn_clicked()
 {
     QMessageBox::question(this ,tr("Time"), tr("Click here to modify the time displayed on the HMI."), tr("OK"));
 }
-
-

@@ -86,7 +86,7 @@
                       <property name="maximumSize">
                        <size>
                         <width>560</width>
-                        <height>50</height>
+                        <height>16777215</height>
                        </size>
                       </property>
                       <property name="font">
@@ -180,7 +180,7 @@ background-color: rgb(170, 255, 255);</string>
                       <property name="maximumSize">
                        <size>
                         <width>560</width>
-                        <height>70</height>
+                        <height>16777215</height>
                        </size>
                       </property>
                       <property name="font">
@@ -2018,9 +2018,9 @@ background-color: rgb(170, 255, 255);</string>
                  <property name="geometry">
                   <rect>
                    <x>0</x>
-                   <y>0</y>
+                   <y>-991</y>
                    <width>581</width>
-                   <height>1678</height>
+                   <height>1988</height>
                   </rect>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_3">
@@ -2037,7 +2037,7 @@ background-color: rgb(170, 255, 255);</string>
                       <property name="maximumSize">
                        <size>
                         <width>16777215</width>
-                        <height>40</height>
+                        <height>16777215</height>
                        </size>
                       </property>
                       <property name="font">
@@ -2055,13 +2055,13 @@ background-color: rgb(170, 255, 255);</string>
                       <property name="minimumSize">
                        <size>
                         <width>560</width>
-                        <height>150</height>
+                        <height>190</height>
                        </size>
                       </property>
                       <property name="maximumSize">
                        <size>
                         <width>560</width>
-                        <height>150</height>
+                        <height>190</height>
                        </size>
                       </property>
                       <property name="styleSheet">
@@ -2083,7 +2083,7 @@ background-color: rgb(170, 255, 255);</string>
                       <property name="maximumSize">
                        <size>
                         <width>560</width>
-                        <height>100</height>
+                        <height>16777215</height>
                        </size>
                       </property>
                       <property name="font">
@@ -2101,13 +2101,13 @@ background-color: rgb(170, 255, 255);</string>
                       <property name="minimumSize">
                        <size>
                         <width>560</width>
-                        <height>150</height>
+                        <height>190</height>
                        </size>
                       </property>
                       <property name="maximumSize">
                        <size>
                         <width>560</width>
-                        <height>150</height>
+                        <height>190</height>
                        </size>
                       </property>
                       <property name="styleSheet">
@@ -2128,8 +2128,8 @@ background-color: rgb(170, 255, 255);</string>
                       </property>
                       <property name="maximumSize">
                        <size>
-                        <width>560</width>
-                        <height>100</height>
+                        <width>16777215</width>
+                        <height>16777215</height>
                        </size>
                       </property>
                       <property name="font">
@@ -2147,13 +2147,13 @@ background-color: rgb(170, 255, 255);</string>
                       <property name="minimumSize">
                        <size>
                         <width>560</width>
-                        <height>150</height>
+                        <height>190</height>
                        </size>
                       </property>
                       <property name="maximumSize">
                        <size>
                         <width>560</width>
-                        <height>150</height>
+                        <height>190</height>
                        </size>
                       </property>
                       <property name="styleSheet">
@@ -2169,13 +2169,13 @@ background-color: rgb(170, 255, 255);</string>
                       <property name="minimumSize">
                        <size>
                         <width>560</width>
-                        <height>100</height>
+                        <height>120</height>
                        </size>
                       </property>
                       <property name="maximumSize">
                        <size>
-                        <width>560</width>
-                        <height>100</height>
+                        <width>16777215</width>
+                        <height>16777215</height>
                        </size>
                       </property>
                       <property name="font">
@@ -2193,13 +2193,13 @@ background-color: rgb(170, 255, 255);</string>
                       <property name="minimumSize">
                        <size>
                         <width>560</width>
-                        <height>150</height>
+                        <height>190</height>
                        </size>
                       </property>
                       <property name="maximumSize">
                        <size>
                         <width>560</width>
-                        <height>150</height>
+                        <height>190</height>
                        </size>
                       </property>
                       <property name="styleSheet">
@@ -2215,13 +2215,13 @@ background-color: rgb(170, 255, 255);</string>
                       <property name="minimumSize">
                        <size>
                         <width>560</width>
-                        <height>100</height>
+                        <height>120</height>
                        </size>
                       </property>
                       <property name="maximumSize">
                        <size>
-                        <width>560</width>
-                        <height>100</height>
+                        <width>16777215</width>
+                        <height>16777215</height>
                        </size>
                       </property>
                       <property name="font">
@@ -2239,13 +2239,13 @@ background-color: rgb(170, 255, 255);</string>
                       <property name="minimumSize">
                        <size>
                         <width>0</width>
-                        <height>40</height>
+                        <height>50</height>
                        </size>
                       </property>
                       <property name="maximumSize">
                        <size>
-                        <width>16777215</width>
-                        <height>40</height>
+                        <width>560</width>
+                        <height>16777215</height>
                        </size>
                       </property>
                       <property name="font">
@@ -2263,12 +2263,12 @@ background-color: rgb(170, 255, 255);</string>
                       <property name="minimumSize">
                        <size>
                         <width>560</width>
-                        <height>150</height>
+                        <height>190</height>
                        </size>
                       </property>
                       <property name="maximumSize">
                        <size>
-                        <width>560</width>
+                        <width>190</width>
                         <height>150</height>
                        </size>
                       </property>
@@ -2285,13 +2285,13 @@ background-color: rgb(170, 255, 255);</string>
                       <property name="minimumSize">
                        <size>
                         <width>560</width>
-                        <height>100</height>
+                        <height>120</height>
                        </size>
                       </property>
                       <property name="maximumSize">
                        <size>
                         <width>560</width>
-                        <height>100</height>
+                        <height>16777215</height>
                        </size>
                       </property>
                       <property name="font">
@@ -2309,13 +2309,13 @@ background-color: rgb(170, 255, 255);</string>
                       <property name="minimumSize">
                        <size>
                         <width>560</width>
-                        <height>150</height>
+                        <height>190</height>
                        </size>
                       </property>
                       <property name="maximumSize">
                        <size>
                         <width>560</width>
-                        <height>150</height>
+                        <height>190</height>
                        </size>
                       </property>
                       <property name="styleSheet">
@@ -2337,7 +2337,7 @@ background-color: rgb(170, 255, 255);</string>
                       <property name="maximumSize">
                        <size>
                         <width>560</width>
-                        <height>100</height>
+                        <height>16777215</height>
                        </size>
                       </property>
                       <property name="font">
@@ -3162,6 +3162,9 @@ background-color: rgb(170, 255, 255);</string>
                     <pointsize>14</pointsize>
                    </font>
                   </property>
+                  <property name="readOnly">
+                   <bool>true</bool>
+                  </property>
                   <property name="plainText">
                    <string>Battery area division:
 ECP area of action:
@@ -3193,6 +3196,9 @@ FDP action area:
                    <font>
                     <pointsize>14</pointsize>
                    </font>
+                  </property>
+                  <property name="readOnly">
+                   <bool>true</bool>
                   </property>
                   <property name="plainText">
                    <string>Chaifa startup logic (for all modes) :
@@ -3272,7 +3278,8 @@ QPushButton::hover{
         </property>
         <property name="font">
          <font>
-          <pointsize>13</pointsize>
+          <family>宋体</family>
+          <pointsize>14</pointsize>
          </font>
         </property>
         <property name="styleSheet">
@@ -3312,7 +3319,8 @@ AreaDivision</string>
         </property>
         <property name="font">
          <font>
-          <pointsize>13</pointsize>
+          <family>宋体</family>
+          <pointsize>14</pointsize>
          </font>
         </property>
         <property name="styleSheet">
@@ -3352,7 +3360,8 @@ for self-use</string>
         </property>
         <property name="font">
          <font>
-          <pointsize>13</pointsize>
+          <family>宋体</family>
+          <pointsize>14</pointsize>
          </font>
         </property>
         <property name="styleSheet">
@@ -3401,7 +3410,8 @@ priority</string>
         </property>
         <property name="font">
          <font>
-          <pointsize>13</pointsize>
+          <family>宋体</family>
+          <pointsize>14</pointsize>
          </font>
         </property>
         <property name="styleSheet">
