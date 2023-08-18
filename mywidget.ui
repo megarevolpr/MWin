@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>981</width>
-    <height>562</height>
+    <width>988</width>
+    <height>604</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -27,8 +27,8 @@
   </property>
   <property name="maximumSize">
    <size>
-    <width>981</width>
-    <height>562</height>
+    <width>16777215</width>
+    <height>16777215</height>
    </size>
   </property>
   <property name="cursor">
@@ -2528,7 +2528,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
         <number>0</number>
        </property>
        <item row="0" column="0">
-        <layout class="QVBoxLayout" name="verticalLayout" stretch="3,0,4">
+        <layout class="QVBoxLayout" name="verticalLayout" stretch="1,10,1">
          <property name="spacing">
           <number>1</number>
          </property>
@@ -2555,7 +2555,10 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
            <property name="styleSheet">
             <string notr="true">background-color: rgb(31, 133, 227);</string>
            </property>
-           <layout class="QGridLayout" name="gridLayout_2">
+           <layout class="QHBoxLayout" name="horizontalLayout_46">
+            <property name="spacing">
+             <number>0</number>
+            </property>
             <property name="leftMargin">
              <number>0</number>
             </property>
@@ -2568,166 +2571,179 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
             <property name="bottomMargin">
              <number>0</number>
             </property>
-            <property name="spacing">
-             <number>0</number>
-            </property>
-            <item row="0" column="5">
-             <widget class="QPushButton" name="TimeSeting_btn">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>323</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <pointsize>20</pointsize>
-               </font>
-              </property>
-              <property name="cursor">
-               <cursorShape>ArrowCursor</cursorShape>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">color: rgb(255, 255, 255);</string>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-              <property name="autoDefault">
-               <bool>false</bool>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="4">
-             <widget class="QPushButton" name="Alarm_Button">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>50</width>
-                <height>43</height>
-               </size>
-              </property>
-              <property name="focusPolicy">
-               <enum>Qt::WheelFocus</enum>
-              </property>
-              <property name="autoFillBackground">
-               <bool>false</bool>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">border-image: url(:/new_ui/UI/Warning_2.png);</string>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-              <property name="iconSize">
-               <size>
-                <width>64</width>
-                <height>64</height>
-               </size>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="3">
-             <spacer name="horizontalSpacer_10">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeType">
-               <enum>QSizePolicy::Preferred</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>144</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item row="0" column="0">
-             <widget class="QPushButton" name="ChangeLanguage_btn">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>110</width>
-                <height>43</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>133</width>
-                <height>16777215</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <family>新宋体</family>
-                <pointsize>12</pointsize>
-               </font>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">color: rgb(255, 255, 255);</string>
-              </property>
-              <property name="text">
-               <string>Change
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_48" stretch="3,5,4,4,1,5">
+              <item>
+               <widget class="QPushButton" name="ChangeLanguage_btn">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>133</width>
+                  <height>48</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>新宋体</family>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color: rgb(255, 255, 255);</string>
+                </property>
+                <property name="text">
+                 <string>Change
 Language</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="2">
-             <widget class="QLabel" name="UI_captye">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="font">
-               <font>
-                <pointsize>18</pointsize>
-               </font>
-              </property>
-              <property name="cursor">
-               <cursorShape>ArrowCursor</cursorShape>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">color: rgb(255, 255, 255);</string>
-              </property>
-              <property name="text">
-               <string>100kW - TS</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="1">
-             <spacer name="horizontalSpacer_3">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeType">
-               <enum>QSizePolicy::Expanding</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>145</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_3">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Expanding</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>145</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QLabel" name="UI_captye">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>180</width>
+                  <height>48</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>18</pointsize>
+                 </font>
+                </property>
+                <property name="cursor">
+                 <cursorShape>ArrowCursor</cursorShape>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color: rgb(255, 255, 255);</string>
+                </property>
+                <property name="text">
+                 <string>100kW - TS</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_10">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Preferred</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>144</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="Alarm_Button">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>43</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::WheelFocus</enum>
+                </property>
+                <property name="autoFillBackground">
+                 <bool>false</bool>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border-image: url(:/new_ui/UI/Warning_2.png);</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>64</width>
+                  <height>64</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="TimeSeting_btn">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>323</width>
+                  <height>48</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>20</pointsize>
+                 </font>
+                </property>
+                <property name="cursor">
+                 <cursorShape>ArrowCursor</cursorShape>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color: rgb(255, 255, 255);</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="autoDefault">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </item>
            </layout>
           </widget>
@@ -2765,16 +2781,16 @@ Language</string>
             <enum>QFrame::Raised</enum>
            </property>
            <property name="currentIndex">
-            <number>4</number>
+            <number>1</number>
            </property>
            <widget class="QWidget" name="Host_page">
             <layout class="QGridLayout" name="gridLayout_41">
              <item row="0" column="0">
               <layout class="QHBoxLayout" name="horizontalLayout_45">
                <item>
-                <layout class="QVBoxLayout" name="verticalLayout_36">
+                <layout class="QVBoxLayout" name="verticalLayout_36" stretch="2,1,2">
                  <item>
-                  <layout class="QVBoxLayout" name="verticalLayout_30">
+                  <layout class="QVBoxLayout" name="verticalLayout_30" stretch="5,1">
                    <item>
                     <layout class="QHBoxLayout" name="horizontalLayout_33">
                      <item>
@@ -2806,8 +2822,8 @@ Language</string>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>121</width>
-                         <height>101</height>
+                         <width>16777215</width>
+                         <height>16777215</height>
                         </size>
                        </property>
                        <property name="sizeIncrement">
@@ -2839,11 +2855,11 @@ Language</string>
                     <layout class="QGridLayout" name="gridLayout_6">
                      <item row="0" column="1">
                       <widget class="QLabel" name="label_4">
-                       <property name="font">
-                        <font>
-                         <family>新宋体</family>
-                         <pointsize>10</pointsize>
-                        </font>
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
                        </property>
                        <property name="text">
                         <string>PV:</string>
@@ -2865,11 +2881,11 @@ Language</string>
                      </item>
                      <item row="0" column="2">
                       <widget class="QLabel" name="Host_PV_Gen_lb">
-                       <property name="font">
-                        <font>
-                         <family>新宋体</family>
-                         <pointsize>10</pointsize>
-                        </font>
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
                        </property>
                        <property name="text">
                         <string>0kWh</string>
@@ -2894,16 +2910,16 @@ Language</string>
                   </spacer>
                  </item>
                  <item>
-                  <layout class="QVBoxLayout" name="verticalLayout_35">
+                  <layout class="QVBoxLayout" name="verticalLayout_35" stretch="1,3">
                    <item>
                     <layout class="QGridLayout" name="gridLayout_39">
                      <item row="0" column="2">
                       <widget class="QLabel" name="Host_BAT_Cha_lb">
-                       <property name="font">
-                        <font>
-                         <family>新宋体</family>
-                         <pointsize>10</pointsize>
-                        </font>
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
                        </property>
                        <property name="text">
                         <string>0kWh</string>
@@ -2912,11 +2928,11 @@ Language</string>
                      </item>
                      <item row="0" column="1">
                       <widget class="QLabel" name="label_5">
-                       <property name="font">
-                        <font>
-                         <family>新宋体</family>
-                         <pointsize>10</pointsize>
-                        </font>
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
                        </property>
                        <property name="text">
                         <string>Battery charging:</string>
@@ -2925,11 +2941,11 @@ Language</string>
                      </item>
                      <item row="1" column="1">
                       <widget class="QLabel" name="label_6">
-                       <property name="font">
-                        <font>
-                         <family>新宋体</family>
-                         <pointsize>10</pointsize>
-                        </font>
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
                        </property>
                        <property name="text">
                         <string>Battery discharging:</string>
@@ -2938,11 +2954,11 @@ Language</string>
                      </item>
                      <item row="1" column="2">
                       <widget class="QLabel" name="Host_BAT_Dis_lb">
-                       <property name="font">
-                        <font>
-                         <family>新宋体</family>
-                         <pointsize>10</pointsize>
-                        </font>
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
                        </property>
                        <property name="text">
                         <string>0kWh</string>
@@ -2978,7 +2994,7 @@ Language</string>
                     </layout>
                    </item>
                    <item>
-                    <layout class="QHBoxLayout" name="horizontalLayout_42">
+                    <layout class="QHBoxLayout" name="horizontalLayout_42" stretch="5,3">
                      <item>
                       <spacer name="horizontalSpacer_16">
                        <property name="orientation">
@@ -3008,8 +3024,8 @@ Language</string>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>101</width>
-                         <height>111</height>
+                         <width>16777215</width>
+                         <height>16777215</height>
                         </size>
                        </property>
                        <property name="sizeIncrement">
@@ -3042,13 +3058,16 @@ Language</string>
                 </layout>
                </item>
                <item>
-                <layout class="QVBoxLayout" name="verticalLayout_14">
+                <layout class="QVBoxLayout" name="verticalLayout_14" stretch="0,0,0">
                  <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_36">
+                  <layout class="QHBoxLayout" name="horizontalLayout_36" stretch="0,0,0">
                    <item>
-                    <layout class="QHBoxLayout" name="horizontalLayout_35">
+                    <layout class="QHBoxLayout" name="horizontalLayout_35" stretch="3,0">
+                     <property name="spacing">
+                      <number>0</number>
+                     </property>
                      <item>
-                      <layout class="QVBoxLayout" name="verticalLayout_37">
+                      <layout class="QVBoxLayout" name="verticalLayout_37" stretch="1,2,2,2">
                        <item>
                         <widget class="QLabel" name="PV_bar_1">
                          <property name="minimumSize">
@@ -3059,8 +3078,8 @@ Language</string>
                          </property>
                          <property name="maximumSize">
                           <size>
-                           <width>150</width>
-                           <height>15</height>
+                           <width>16777215</width>
+                           <height>20</height>
                           </size>
                          </property>
                          <property name="styleSheet">
@@ -3084,12 +3103,6 @@ Language</string>
                            <width>16777215</width>
                            <height>16777215</height>
                           </size>
-                         </property>
-                         <property name="font">
-                          <font>
-                           <family>新宋体</family>
-                           <pointsize>10</pointsize>
-                          </font>
                          </property>
                          <property name="cursor">
                           <cursorShape>ArrowCursor</cursorShape>
@@ -3120,12 +3133,6 @@ Language</string>
                            <height>16777215</height>
                           </size>
                          </property>
-                         <property name="font">
-                          <font>
-                           <family>新宋体</family>
-                           <pointsize>10</pointsize>
-                          </font>
-                         </property>
                          <property name="cursor">
                           <cursorShape>ArrowCursor</cursorShape>
                          </property>
@@ -3149,12 +3156,6 @@ Language</string>
                            <verstretch>0</verstretch>
                           </sizepolicy>
                          </property>
-                         <property name="font">
-                          <font>
-                           <family>新宋体</family>
-                           <pointsize>10</pointsize>
-                          </font>
-                         </property>
                          <property name="text">
                           <string>0kW</string>
                          </property>
@@ -3166,29 +3167,39 @@ Language</string>
                       </layout>
                      </item>
                      <item>
-                      <widget class="QLabel" name="PV_bar_2">
-                       <property name="minimumSize">
-                        <size>
-                         <width>15</width>
-                         <height>110</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>15</width>
-                         <height>130</height>
-                        </size>
-                       </property>
-                       <property name="cursor">
-                        <cursorShape>ArrowCursor</cursorShape>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">border-image: url(:/new_ui/UI/DCBar1-02.png);</string>
-                       </property>
-                       <property name="text">
-                        <string/>
-                       </property>
-                      </widget>
+                      <layout class="QVBoxLayout" name="verticalLayout_42">
+                       <item>
+                        <widget class="QLabel" name="PV_bar_2">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="minimumSize">
+                          <size>
+                           <width>20</width>
+                           <height>110</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="cursor">
+                          <cursorShape>ArrowCursor</cursorShape>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border-image: url(:/new_ui/UI/DCBar1-02.png);</string>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
                      </item>
                     </layout>
                    </item>
@@ -3211,14 +3222,14 @@ Language</string>
                       <widget class="QLabel" name="Load_bar_2">
                        <property name="minimumSize">
                         <size>
-                         <width>15</width>
+                         <width>20</width>
                          <height>110</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>15</width>
-                         <height>130</height>
+                         <width>16777215</width>
+                         <height>16777215</height>
                         </size>
                        </property>
                        <property name="cursor">
@@ -3233,7 +3244,7 @@ Language</string>
                       </widget>
                      </item>
                      <item>
-                      <layout class="QVBoxLayout" name="verticalLayout_31">
+                      <layout class="QVBoxLayout" name="verticalLayout_31" stretch="1,6">
                        <item>
                         <widget class="QLabel" name="Load_bar_1">
                          <property name="minimumSize">
@@ -3244,8 +3255,8 @@ Language</string>
                          </property>
                          <property name="maximumSize">
                           <size>
-                           <width>150</width>
-                           <height>15</height>
+                           <width>16777215</width>
+                           <height>20</height>
                           </size>
                          </property>
                          <property name="styleSheet">
@@ -3265,12 +3276,6 @@ Language</string>
                              <horstretch>0</horstretch>
                              <verstretch>0</verstretch>
                             </sizepolicy>
-                           </property>
-                           <property name="font">
-                            <font>
-                             <family>新宋体</family>
-                             <pointsize>10</pointsize>
-                            </font>
                            </property>
                            <property name="text">
                             <string>0V</string>
@@ -3294,12 +3299,6 @@ Language</string>
                              <height>16777215</height>
                             </size>
                            </property>
-                           <property name="font">
-                            <font>
-                             <family>新宋体</family>
-                             <pointsize>10</pointsize>
-                            </font>
-                           </property>
                            <property name="cursor">
                             <cursorShape>ArrowCursor</cursorShape>
                            </property>
@@ -3322,12 +3321,6 @@ Language</string>
                              <verstretch>0</verstretch>
                             </sizepolicy>
                            </property>
-                           <property name="font">
-                            <font>
-                             <family>新宋体</family>
-                             <pointsize>10</pointsize>
-                            </font>
-                           </property>
                            <property name="text">
                             <string>0V</string>
                            </property>
@@ -3349,12 +3342,6 @@ Language</string>
                              <width>16777215</width>
                              <height>16777215</height>
                             </size>
-                           </property>
-                           <property name="font">
-                            <font>
-                             <family>新宋体</family>
-                             <pointsize>10</pointsize>
-                            </font>
                            </property>
                            <property name="cursor">
                             <cursorShape>ArrowCursor</cursorShape>
@@ -3384,12 +3371,6 @@ Language</string>
                              <height>16777215</height>
                             </size>
                            </property>
-                           <property name="font">
-                            <font>
-                             <family>新宋体</family>
-                             <pointsize>10</pointsize>
-                            </font>
-                           </property>
                            <property name="cursor">
                             <cursorShape>ArrowCursor</cursorShape>
                            </property>
@@ -3412,12 +3393,6 @@ Language</string>
                              <verstretch>0</verstretch>
                             </sizepolicy>
                            </property>
-                           <property name="font">
-                            <font>
-                             <family>新宋体</family>
-                             <pointsize>10</pointsize>
-                            </font>
-                           </property>
                            <property name="text">
                             <string>0V</string>
                            </property>
@@ -3435,7 +3410,7 @@ Language</string>
                   </layout>
                  </item>
                  <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_39">
+                  <layout class="QHBoxLayout" name="horizontalLayout_39" stretch="1,2,1">
                    <item>
                     <spacer name="horizontalSpacer_9">
                      <property name="orientation">
@@ -3465,8 +3440,8 @@ Language</string>
                      </property>
                      <property name="maximumSize">
                       <size>
-                       <width>151</width>
-                       <height>131</height>
+                       <width>16777215</width>
+                       <height>16777215</height>
                       </size>
                      </property>
                      <property name="cursor">
@@ -3496,13 +3471,13 @@ Language</string>
                   </layout>
                  </item>
                  <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_38">
+                  <layout class="QHBoxLayout" name="horizontalLayout_38" stretch="1,1,1">
                    <item>
                     <layout class="QHBoxLayout" name="horizontalLayout_24">
                      <item>
-                      <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,1,1,1,1">
+                      <layout class="QVBoxLayout" name="verticalLayout_2" stretch="2,2,2,1,1">
                        <property name="spacing">
-                        <number>7</number>
+                        <number>0</number>
                        </property>
                        <item>
                         <widget class="QLabel" name="BattVolt_label">
@@ -3517,12 +3492,6 @@ Language</string>
                            <width>16777215</width>
                            <height>16777215</height>
                           </size>
-                         </property>
-                         <property name="font">
-                          <font>
-                           <family>新宋体</family>
-                           <pointsize>10</pointsize>
-                          </font>
                          </property>
                          <property name="cursor">
                           <cursorShape>ArrowCursor</cursorShape>
@@ -3553,12 +3522,6 @@ Language</string>
                            <height>16777215</height>
                           </size>
                          </property>
-                         <property name="font">
-                          <font>
-                           <family>新宋体</family>
-                           <pointsize>10</pointsize>
-                          </font>
-                         </property>
                          <property name="cursor">
                           <cursorShape>ArrowCursor</cursorShape>
                          </property>
@@ -3578,12 +3541,6 @@ Language</string>
                         <layout class="QHBoxLayout" name="horizontalLayout_12">
                          <item>
                           <widget class="QLabel" name="SOC_text_bypass">
-                           <property name="font">
-                            <font>
-                             <family>新宋体</family>
-                             <pointsize>10</pointsize>
-                            </font>
-                           </property>
                            <property name="text">
                             <string>SOC:</string>
                            </property>
@@ -3594,12 +3551,6 @@ Language</string>
                          </item>
                          <item>
                           <widget class="QLabel" name="SOC_lb">
-                           <property name="font">
-                            <font>
-                             <family>新宋体</family>
-                             <pointsize>10</pointsize>
-                            </font>
-                           </property>
                            <property name="text">
                             <string>0%</string>
                            </property>
@@ -3620,8 +3571,8 @@ Language</string>
                          </property>
                          <property name="maximumSize">
                           <size>
-                           <width>150</width>
-                           <height>15</height>
+                           <width>16777215</width>
+                           <height>20</height>
                           </size>
                          </property>
                          <property name="styleSheet">
@@ -3633,22 +3584,28 @@ Language</string>
                         </widget>
                        </item>
                        <item>
-                        <spacer name="verticalSpacer_6">
-                         <property name="orientation">
-                          <enum>Qt::Vertical</enum>
+                        <widget class="QLabel" name="label_37">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
                          </property>
-                         <property name="sizeHint" stdset="0">
+                         <property name="minimumSize">
                           <size>
-                           <width>20</width>
-                           <height>40</height>
+                           <width>0</width>
+                           <height>20</height>
                           </size>
                          </property>
-                        </spacer>
+                         <property name="text">
+                          <string/>
+                         </property>
+                        </widget>
                        </item>
                       </layout>
                      </item>
                      <item>
-                      <layout class="QVBoxLayout" name="verticalLayout_41">
+                      <layout class="QVBoxLayout" name="verticalLayout_41" stretch="3,1">
                        <item>
                         <widget class="QLabel" name="Bat_bar_2">
                          <property name="minimumSize">
@@ -3659,8 +3616,8 @@ Language</string>
                          </property>
                          <property name="maximumSize">
                           <size>
-                           <width>15</width>
-                           <height>110</height>
+                           <width>16777215</width>
+                           <height>16777215</height>
                           </size>
                          </property>
                          <property name="cursor">
@@ -3707,7 +3664,7 @@ Language</string>
                    <item>
                     <layout class="QHBoxLayout" name="horizontalLayout_37">
                      <item>
-                      <layout class="QVBoxLayout" name="verticalLayout_40">
+                      <layout class="QVBoxLayout" name="verticalLayout_40" stretch="3,1">
                        <item>
                         <widget class="QLabel" name="Grid_bar_2">
                          <property name="minimumSize">
@@ -3718,8 +3675,8 @@ Language</string>
                          </property>
                          <property name="maximumSize">
                           <size>
-                           <width>15</width>
-                           <height>110</height>
+                           <width>16777215</width>
+                           <height>16777215</height>
                           </size>
                          </property>
                          <property name="cursor">
@@ -3749,9 +3706,12 @@ Language</string>
                       </layout>
                      </item>
                      <item>
-                      <layout class="QVBoxLayout" name="verticalLayout_34" stretch="4,1,1">
+                      <layout class="QVBoxLayout" name="verticalLayout_34" stretch="6,1,1">
+                       <property name="spacing">
+                        <number>0</number>
+                       </property>
                        <item>
-                        <layout class="QGridLayout" name="gridLayout_20" columnstretch="1,0">
+                        <layout class="QGridLayout" name="gridLayout_20" columnstretch="0,0">
                          <item row="2" column="0">
                           <widget class="QLabel" name="Grid_Vc_lb">
                            <property name="sizePolicy">
@@ -3762,15 +3722,9 @@ Language</string>
                            </property>
                            <property name="maximumSize">
                             <size>
-                             <width>80</width>
-                             <height>30</height>
+                             <width>16777215</width>
+                             <height>16777215</height>
                             </size>
-                           </property>
-                           <property name="font">
-                            <font>
-                             <family>新宋体</family>
-                             <pointsize>10</pointsize>
-                            </font>
                            </property>
                            <property name="cursor">
                             <cursorShape>ArrowCursor</cursorShape>
@@ -3796,15 +3750,9 @@ Language</string>
                            </property>
                            <property name="maximumSize">
                             <size>
-                             <width>80</width>
-                             <height>30</height>
+                             <width>16777215</width>
+                             <height>16777215</height>
                             </size>
-                           </property>
-                           <property name="font">
-                            <font>
-                             <family>新宋体</family>
-                             <pointsize>10</pointsize>
-                            </font>
                            </property>
                            <property name="cursor">
                             <cursorShape>ArrowCursor</cursorShape>
@@ -3830,15 +3778,9 @@ Language</string>
                            </property>
                            <property name="maximumSize">
                             <size>
-                             <width>80</width>
-                             <height>30</height>
+                             <width>16777215</width>
+                             <height>16777215</height>
                             </size>
-                           </property>
-                           <property name="font">
-                            <font>
-                             <family>新宋体</family>
-                             <pointsize>10</pointsize>
-                            </font>
                            </property>
                            <property name="cursor">
                             <cursorShape>ArrowCursor</cursorShape>
@@ -3864,15 +3806,9 @@ Language</string>
                            </property>
                            <property name="maximumSize">
                             <size>
-                             <width>80</width>
-                             <height>30</height>
+                             <width>16777215</width>
+                             <height>16777215</height>
                             </size>
-                           </property>
-                           <property name="font">
-                            <font>
-                             <family>新宋体</family>
-                             <pointsize>10</pointsize>
-                            </font>
                            </property>
                            <property name="cursor">
                             <cursorShape>ArrowCursor</cursorShape>
@@ -3898,15 +3834,9 @@ Language</string>
                            </property>
                            <property name="maximumSize">
                             <size>
-                             <width>80</width>
-                             <height>30</height>
+                             <width>16777215</width>
+                             <height>16777215</height>
                             </size>
-                           </property>
-                           <property name="font">
-                            <font>
-                             <family>新宋体</family>
-                             <pointsize>10</pointsize>
-                            </font>
                            </property>
                            <property name="cursor">
                             <cursorShape>ArrowCursor</cursorShape>
@@ -3932,15 +3862,9 @@ Language</string>
                            </property>
                            <property name="maximumSize">
                             <size>
-                             <width>80</width>
-                             <height>30</height>
+                             <width>16777215</width>
+                             <height>16777215</height>
                             </size>
-                           </property>
-                           <property name="font">
-                            <font>
-                             <family>新宋体</family>
-                             <pointsize>10</pointsize>
-                            </font>
                            </property>
                            <property name="cursor">
                             <cursorShape>ArrowCursor</cursorShape>
@@ -3968,8 +3892,8 @@ Language</string>
                          </property>
                          <property name="maximumSize">
                           <size>
-                           <width>150</width>
-                           <height>15</height>
+                           <width>16777215</width>
+                           <height>20</height>
                           </size>
                          </property>
                          <property name="styleSheet">
@@ -3981,7 +3905,7 @@ Language</string>
                         </widget>
                        </item>
                        <item>
-                        <layout class="QHBoxLayout" name="horizontalLayout_44">
+                        <layout class="QHBoxLayout" name="horizontalLayout_44" stretch="10,10">
                          <item>
                           <widget class="QLabel" name="label_7">
                            <property name="sizePolicy">
@@ -3999,14 +3923,8 @@ Language</string>
                            <property name="maximumSize">
                             <size>
                              <width>16777215</width>
-                             <height>20</height>
+                             <height>16777215</height>
                             </size>
-                           </property>
-                           <property name="font">
-                            <font>
-                             <family>新宋体</family>
-                             <pointsize>10</pointsize>
-                            </font>
                            </property>
                            <property name="text">
                             <string>Power meter</string>
@@ -4027,14 +3945,8 @@ Language</string>
                            <property name="maximumSize">
                             <size>
                              <width>16777215</width>
-                             <height>20</height>
+                             <height>16777215</height>
                             </size>
-                           </property>
-                           <property name="font">
-                            <font>
-                             <family>新宋体</family>
-                             <pointsize>10</pointsize>
-                            </font>
                            </property>
                            <property name="text">
                             <string>0kW</string>
@@ -4055,15 +3967,21 @@ Language</string>
                 </layout>
                </item>
                <item>
-                <layout class="QVBoxLayout" name="verticalLayout_39">
+                <layout class="QVBoxLayout" name="verticalLayout_39" stretch="2,1,2">
                  <item>
                   <layout class="QHBoxLayout" name="horizontalLayout_32">
                    <item>
-                    <layout class="QVBoxLayout" name="verticalLayout_23">
+                    <layout class="QVBoxLayout" name="verticalLayout_23" stretch="5,1">
                      <item>
                       <layout class="QHBoxLayout" name="horizontalLayout_31">
                        <item>
                         <widget class="QPushButton" name="Bypass_Load_Btn">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
                          <property name="minimumSize">
                           <size>
                            <width>151</width>
@@ -4072,8 +3990,8 @@ Language</string>
                          </property>
                          <property name="maximumSize">
                           <size>
-                           <width>151</width>
-                           <height>91</height>
+                           <width>16777215</width>
+                           <height>16777215</height>
                           </size>
                          </property>
                          <property name="cursor">
@@ -4106,11 +4024,11 @@ Language</string>
                       <layout class="QGridLayout" name="gridLayout_3">
                        <item row="1" column="1">
                         <widget class="QLabel" name="Host_Load_Gen_lb">
-                         <property name="font">
-                          <font>
-                           <family>新宋体</family>
-                           <pointsize>10</pointsize>
-                          </font>
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
                          </property>
                          <property name="text">
                           <string>0kWh</string>
@@ -4119,11 +4037,11 @@ Language</string>
                        </item>
                        <item row="1" column="0">
                         <widget class="QLabel" name="label_14">
-                         <property name="font">
-                          <font>
-                           <family>新宋体</family>
-                           <pointsize>10</pointsize>
-                          </font>
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
                          </property>
                          <property name="text">
                           <string>Load:</string>
@@ -4166,16 +4084,16 @@ Language</string>
                   </spacer>
                  </item>
                  <item>
-                  <layout class="QVBoxLayout" name="verticalLayout_38">
+                  <layout class="QVBoxLayout" name="verticalLayout_38" stretch="1,3">
                    <item>
                     <layout class="QGridLayout" name="gridLayout_40">
                      <item row="0" column="0">
                       <widget class="QLabel" name="label_13">
-                       <property name="font">
-                        <font>
-                         <family>新宋体</family>
-                         <pointsize>10</pointsize>
-                        </font>
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
                        </property>
                        <property name="text">
                         <string>Grid buy:</string>
@@ -4184,11 +4102,11 @@ Language</string>
                      </item>
                      <item row="1" column="1">
                       <widget class="QLabel" name="Host_Grid_Dis_lb">
-                       <property name="font">
-                        <font>
-                         <family>新宋体</family>
-                         <pointsize>10</pointsize>
-                        </font>
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
                        </property>
                        <property name="text">
                         <string>0kWh</string>
@@ -4197,11 +4115,11 @@ Language</string>
                      </item>
                      <item row="0" column="1">
                       <widget class="QLabel" name="Host_Grid_Cha_lb">
-                       <property name="font">
-                        <font>
-                         <family>新宋体</family>
-                         <pointsize>10</pointsize>
-                        </font>
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
                        </property>
                        <property name="text">
                         <string>0kWh</string>
@@ -4236,11 +4154,11 @@ Language</string>
                      </item>
                      <item row="1" column="0">
                       <widget class="QLabel" name="label_22">
-                       <property name="font">
-                        <font>
-                         <family>新宋体</family>
-                         <pointsize>10</pointsize>
-                        </font>
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
                        </property>
                        <property name="text">
                         <string>Grid sell:</string>
@@ -4250,7 +4168,7 @@ Language</string>
                     </layout>
                    </item>
                    <item>
-                    <layout class="QHBoxLayout" name="horizontalLayout_43">
+                    <layout class="QHBoxLayout" name="horizontalLayout_43" stretch="1,1">
                      <item>
                       <widget class="QPushButton" name="Bypass_Grid_btn">
                        <property name="sizePolicy">
@@ -4267,8 +4185,8 @@ Language</string>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>130</width>
-                         <height>120</height>
+                         <width>16777215</width>
+                         <height>16777215</height>
                         </size>
                        </property>
                        <property name="cursor">
@@ -4337,7 +4255,7 @@ Language</string>
                 <string notr="true"/>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>3</number>
                </property>
                <widget class="QWidget" name="RT_Data_page">
                 <attribute name="title">
@@ -6016,7 +5934,7 @@ Information</string>
                      <item row="0" column="0">
                       <layout class="QHBoxLayout" name="horizontalLayout_14" stretch="3,3,2">
                        <item>
-                        <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="3,0,1">
+                        <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="3,1,1">
                          <property name="spacing">
                           <number>3</number>
                          </property>
@@ -6202,24 +6120,12 @@ Information</string>
                           </layout>
                          </item>
                          <item>
-                          <layout class="QVBoxLayout" name="verticalLayout_16">
+                          <layout class="QVBoxLayout" name="verticalLayout_16" stretch="1,1,1,1,1,1,1,1,1">
                            <property name="spacing">
                             <number>3</number>
                            </property>
                            <item>
                             <widget class="QLabel" name="BatValue1">
-                             <property name="minimumSize">
-                              <size>
-                               <width>70</width>
-                               <height>42</height>
-                              </size>
-                             </property>
-                             <property name="maximumSize">
-                              <size>
-                               <width>70</width>
-                               <height>42</height>
-                              </size>
-                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>
@@ -6241,13 +6147,13 @@ Information</string>
                            </item>
                            <item>
                             <widget class="QPushButton" name="pushButton">
-                             <property name="minimumSize">
-                              <size>
-                               <width>70</width>
-                               <height>42</height>
-                              </size>
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
                              </property>
-                             <property name="maximumSize">
+                             <property name="minimumSize">
                               <size>
                                <width>70</width>
                                <height>42</height>
@@ -6265,13 +6171,13 @@ Information</string>
                            </item>
                            <item>
                             <widget class="QPushButton" name="pushButton_2">
-                             <property name="minimumSize">
-                              <size>
-                               <width>70</width>
-                               <height>42</height>
-                              </size>
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
                              </property>
-                             <property name="maximumSize">
+                             <property name="minimumSize">
                               <size>
                                <width>70</width>
                                <height>42</height>
@@ -6284,13 +6190,13 @@ Information</string>
                            </item>
                            <item>
                             <widget class="QPushButton" name="pushButton_3">
-                             <property name="minimumSize">
-                              <size>
-                               <width>70</width>
-                               <height>42</height>
-                              </size>
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
                              </property>
-                             <property name="maximumSize">
+                             <property name="minimumSize">
                               <size>
                                <width>70</width>
                                <height>42</height>
@@ -6303,13 +6209,13 @@ Information</string>
                            </item>
                            <item>
                             <widget class="QPushButton" name="pushButton_4">
-                             <property name="minimumSize">
-                              <size>
-                               <width>70</width>
-                               <height>42</height>
-                              </size>
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
                              </property>
-                             <property name="maximumSize">
+                             <property name="minimumSize">
                               <size>
                                <width>70</width>
                                <height>42</height>
@@ -6322,13 +6228,13 @@ Information</string>
                            </item>
                            <item>
                             <widget class="QPushButton" name="pushButton_5">
-                             <property name="minimumSize">
-                              <size>
-                               <width>70</width>
-                               <height>42</height>
-                              </size>
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
                              </property>
-                             <property name="maximumSize">
+                             <property name="minimumSize">
                               <size>
                                <width>70</width>
                                <height>42</height>
@@ -6341,13 +6247,13 @@ Information</string>
                            </item>
                            <item>
                             <widget class="QPushButton" name="pushButton_6">
-                             <property name="minimumSize">
-                              <size>
-                               <width>70</width>
-                               <height>42</height>
-                              </size>
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
                              </property>
-                             <property name="maximumSize">
+                             <property name="minimumSize">
                               <size>
                                <width>70</width>
                                <height>42</height>
@@ -6360,13 +6266,13 @@ Information</string>
                            </item>
                            <item>
                             <widget class="QPushButton" name="pushButton_7">
-                             <property name="minimumSize">
-                              <size>
-                               <width>70</width>
-                               <height>42</height>
-                              </size>
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
                              </property>
-                             <property name="maximumSize">
+                             <property name="minimumSize">
                               <size>
                                <width>70</width>
                                <height>42</height>
@@ -6379,13 +6285,13 @@ Information</string>
                            </item>
                            <item>
                             <widget class="QPushButton" name="pushButton_8">
-                             <property name="minimumSize">
-                              <size>
-                               <width>70</width>
-                               <height>42</height>
-                              </size>
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
                              </property>
-                             <property name="maximumSize">
+                             <property name="minimumSize">
                               <size>
                                <width>70</width>
                                <height>42</height>
@@ -6573,7 +6479,7 @@ Information</string>
                         </layout>
                        </item>
                        <item>
-                        <layout class="QHBoxLayout" name="horizontalLayout_8" stretch="3,0,1">
+                        <layout class="QHBoxLayout" name="horizontalLayout_8" stretch="3,1,1">
                          <property name="spacing">
                           <number>3</number>
                          </property>
@@ -6584,10 +6490,10 @@ Information</string>
                            </property>
                            <item>
                             <widget class="QLabel" name="BATName1_2">
-                             <property name="maximumSize">
+                             <property name="minimumSize">
                               <size>
-                               <width>16777215</width>
-                               <height>42</height>
+                               <width>0</width>
+                               <height>47</height>
                               </size>
                              </property>
                              <property name="font">
@@ -6611,12 +6517,6 @@ Information</string>
                            </item>
                            <item>
                             <widget class="QLabel" name="BatAnalog_9">
-                             <property name="maximumSize">
-                              <size>
-                               <width>16777215</width>
-                               <height>42</height>
-                              </size>
-                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>
@@ -6635,12 +6535,6 @@ Information</string>
                            </item>
                            <item>
                             <widget class="QLabel" name="BatAnalog_10">
-                             <property name="maximumSize">
-                              <size>
-                               <width>16777215</width>
-                               <height>42</height>
-                              </size>
-                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>
@@ -6659,12 +6553,6 @@ Information</string>
                            </item>
                            <item>
                             <widget class="QLabel" name="BatAnalog_11">
-                             <property name="maximumSize">
-                              <size>
-                               <width>16777215</width>
-                               <height>42</height>
-                              </size>
-                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>
@@ -6683,12 +6571,6 @@ Information</string>
                            </item>
                            <item>
                             <widget class="QLabel" name="BatAnalog_12">
-                             <property name="maximumSize">
-                              <size>
-                               <width>16777215</width>
-                               <height>42</height>
-                              </size>
-                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>
@@ -6707,12 +6589,6 @@ Information</string>
                            </item>
                            <item>
                             <widget class="QLabel" name="BatAnalog_13">
-                             <property name="maximumSize">
-                              <size>
-                               <width>16777215</width>
-                               <height>42</height>
-                              </size>
-                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>
@@ -6731,12 +6607,6 @@ Information</string>
                            </item>
                            <item>
                             <widget class="QLabel" name="BatAnalog_14">
-                             <property name="maximumSize">
-                              <size>
-                               <width>16777215</width>
-                               <height>42</height>
-                              </size>
-                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>
@@ -6755,12 +6625,6 @@ Information</string>
                            </item>
                            <item>
                             <widget class="QLabel" name="BatAnalog_15">
-                             <property name="maximumSize">
-                              <size>
-                               <width>16777215</width>
-                               <height>42</height>
-                              </size>
-                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>
@@ -6779,12 +6643,6 @@ Information</string>
                            </item>
                            <item>
                             <widget class="QLabel" name="BatAnalog_16">
-                             <property name="maximumSize">
-                              <size>
-                               <width>16777215</width>
-                               <height>42</height>
-                              </size>
-                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>
@@ -6804,24 +6662,12 @@ Information</string>
                           </layout>
                          </item>
                          <item>
-                          <layout class="QVBoxLayout" name="verticalLayout_27">
+                          <layout class="QVBoxLayout" name="verticalLayout_27" stretch="1,1,1,1,1,1,1,1,1">
                            <property name="spacing">
                             <number>3</number>
                            </property>
                            <item>
                             <widget class="QLabel" name="BatValue1_2">
-                             <property name="minimumSize">
-                              <size>
-                               <width>70</width>
-                               <height>42</height>
-                              </size>
-                             </property>
-                             <property name="maximumSize">
-                              <size>
-                               <width>70</width>
-                               <height>42</height>
-                              </size>
-                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>
@@ -6846,13 +6692,13 @@ Information</string>
                              <property name="enabled">
                               <bool>true</bool>
                              </property>
-                             <property name="minimumSize">
-                              <size>
-                               <width>70</width>
-                               <height>42</height>
-                              </size>
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
                              </property>
-                             <property name="maximumSize">
+                             <property name="minimumSize">
                               <size>
                                <width>70</width>
                                <height>42</height>
@@ -6865,13 +6711,13 @@ Information</string>
                            </item>
                            <item>
                             <widget class="QPushButton" name="pushButton_10">
-                             <property name="minimumSize">
-                              <size>
-                               <width>70</width>
-                               <height>42</height>
-                              </size>
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
                              </property>
-                             <property name="maximumSize">
+                             <property name="minimumSize">
                               <size>
                                <width>70</width>
                                <height>42</height>
@@ -6884,15 +6730,15 @@ Information</string>
                            </item>
                            <item>
                             <widget class="QPushButton" name="pushButton_11">
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
                              <property name="minimumSize">
                               <size>
                                <width>0</width>
-                               <height>42</height>
-                              </size>
-                             </property>
-                             <property name="maximumSize">
-                              <size>
-                               <width>70</width>
                                <height>42</height>
                               </size>
                              </property>
@@ -6903,15 +6749,15 @@ Information</string>
                            </item>
                            <item>
                             <widget class="QPushButton" name="pushButton_12">
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
                              <property name="minimumSize">
                               <size>
                                <width>0</width>
-                               <height>42</height>
-                              </size>
-                             </property>
-                             <property name="maximumSize">
-                              <size>
-                               <width>70</width>
                                <height>42</height>
                               </size>
                              </property>
@@ -6922,15 +6768,15 @@ Information</string>
                            </item>
                            <item>
                             <widget class="QPushButton" name="pushButton_13">
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
                              <property name="minimumSize">
                               <size>
                                <width>0</width>
-                               <height>42</height>
-                              </size>
-                             </property>
-                             <property name="maximumSize">
-                              <size>
-                               <width>70</width>
                                <height>42</height>
                               </size>
                              </property>
@@ -6941,15 +6787,15 @@ Information</string>
                            </item>
                            <item>
                             <widget class="QPushButton" name="pushButton_14">
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
                              <property name="minimumSize">
                               <size>
                                <width>0</width>
-                               <height>42</height>
-                              </size>
-                             </property>
-                             <property name="maximumSize">
-                              <size>
-                               <width>70</width>
                                <height>42</height>
                               </size>
                              </property>
@@ -6960,11 +6806,11 @@ Information</string>
                            </item>
                            <item>
                             <widget class="QLabel" name="label">
-                             <property name="maximumSize">
-                              <size>
-                               <width>16777215</width>
-                               <height>42</height>
-                              </size>
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
                              </property>
                              <property name="text">
                               <string/>
@@ -6973,11 +6819,11 @@ Information</string>
                            </item>
                            <item>
                             <widget class="QLabel" name="label_18">
-                             <property name="maximumSize">
-                              <size>
-                               <width>16777215</width>
-                               <height>42</height>
-                              </size>
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
                              </property>
                              <property name="text">
                               <string/>
@@ -6993,12 +6839,6 @@ Information</string>
                            </property>
                            <item>
                             <widget class="QLabel" name="BatUnit1_2">
-                             <property name="maximumSize">
-                              <size>
-                               <width>16777215</width>
-                               <height>42</height>
-                              </size>
-                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>
@@ -7020,12 +6860,6 @@ Information</string>
                            </item>
                            <item>
                             <widget class="QLabel" name="BatUnit_9">
-                             <property name="maximumSize">
-                              <size>
-                               <width>16777215</width>
-                               <height>42</height>
-                              </size>
-                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>
@@ -7044,12 +6878,6 @@ Information</string>
                            </item>
                            <item>
                             <widget class="QLabel" name="BatUnit_10">
-                             <property name="maximumSize">
-                              <size>
-                               <width>16777215</width>
-                               <height>42</height>
-                              </size>
-                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>
@@ -7068,12 +6896,6 @@ Information</string>
                            </item>
                            <item>
                             <widget class="QLabel" name="BatUnit_11">
-                             <property name="maximumSize">
-                              <size>
-                               <width>16777215</width>
-                               <height>42</height>
-                              </size>
-                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>
@@ -7092,12 +6914,6 @@ Information</string>
                            </item>
                            <item>
                             <widget class="QLabel" name="BatUnit_12">
-                             <property name="maximumSize">
-                              <size>
-                               <width>16777215</width>
-                               <height>42</height>
-                              </size>
-                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>
@@ -7116,12 +6932,6 @@ Information</string>
                            </item>
                            <item>
                             <widget class="QLabel" name="BatUnit_13">
-                             <property name="maximumSize">
-                              <size>
-                               <width>16777215</width>
-                               <height>42</height>
-                              </size>
-                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>
@@ -7140,12 +6950,6 @@ Information</string>
                            </item>
                            <item>
                             <widget class="QLabel" name="BatUnit_14">
-                             <property name="maximumSize">
-                              <size>
-                               <width>16777215</width>
-                               <height>42</height>
-                              </size>
-                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>
@@ -7164,12 +6968,6 @@ Information</string>
                            </item>
                            <item>
                             <widget class="QLabel" name="BatUnit_15">
-                             <property name="maximumSize">
-                              <size>
-                               <width>16777215</width>
-                               <height>42</height>
-                              </size>
-                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>
@@ -7188,12 +6986,6 @@ Information</string>
                            </item>
                            <item>
                             <widget class="QLabel" name="BatUnit_16">
-                             <property name="maximumSize">
-                              <size>
-                               <width>16777215</width>
-                               <height>42</height>
-                              </size>
-                             </property>
                              <property name="font">
                               <font>
                                <pointsize>14</pointsize>
@@ -7412,7 +7204,10 @@ Information</string>
                             <number>2</number>
                            </property>
                            <item>
-                            <layout class="QHBoxLayout" name="horizontalLayout_2">
+                            <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="2,1">
+                             <property name="spacing">
+                              <number>0</number>
+                             </property>
                              <item>
                               <widget class="QLabel" name="label_2">
                                <property name="font">
@@ -7430,13 +7225,13 @@ Information</string>
                              </item>
                              <item>
                               <widget class="QPushButton" name="pushButton_19">
-                               <property name="minimumSize">
-                                <size>
-                                 <width>80</width>
-                                 <height>48</height>
-                                </size>
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
                                </property>
-                               <property name="maximumSize">
+                               <property name="minimumSize">
                                 <size>
                                  <width>80</width>
                                  <height>48</height>
@@ -7453,7 +7248,7 @@ Information</string>
                             </layout>
                            </item>
                            <item>
-                            <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="0,0">
+                            <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="1,1">
                              <item>
                               <widget class="QLabel" name="Statuslb_1">
                                <property name="font">
@@ -7472,13 +7267,13 @@ enable</string>
                              </item>
                              <item>
                               <widget class="QPushButton" name="pushButton_20">
-                               <property name="minimumSize">
-                                <size>
-                                 <width>115</width>
-                                 <height>71</height>
-                                </size>
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
                                </property>
-                               <property name="maximumSize">
+                               <property name="minimumSize">
                                 <size>
                                  <width>115</width>
                                  <height>71</height>
@@ -7497,21 +7292,9 @@ enable</string>
                             </layout>
                            </item>
                            <item>
-                            <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="0,0">
+                            <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="1,1">
                              <item>
                               <widget class="QLabel" name="Statuslb_2">
-                               <property name="minimumSize">
-                                <size>
-                                 <width>127</width>
-                                 <height>71</height>
-                                </size>
-                               </property>
-                               <property name="maximumSize">
-                                <size>
-                                 <width>127</width>
-                                 <height>71</height>
-                                </size>
-                               </property>
                                <property name="font">
                                 <font>
                                  <pointsize>14</pointsize>
@@ -7528,13 +7311,13 @@ enable</string>
                              </item>
                              <item>
                               <widget class="QPushButton" name="pushButton_21">
-                               <property name="minimumSize">
-                                <size>
-                                 <width>115</width>
-                                 <height>71</height>
-                                </size>
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
                                </property>
-                               <property name="maximumSize">
+                               <property name="minimumSize">
                                 <size>
                                  <width>115</width>
                                  <height>71</height>
@@ -10415,7 +10198,10 @@ Set rule:B1 - A1 ≥ 10V</string>
            <property name="styleSheet">
             <string notr="true">background-color: rgb(31, 133, 227);</string>
            </property>
-           <layout class="QGridLayout" name="gridLayout_55">
+           <layout class="QHBoxLayout" name="horizontalLayout_47">
+            <property name="spacing">
+             <number>0</number>
+            </property>
             <property name="leftMargin">
              <number>0</number>
             </property>
@@ -10428,11 +10214,8 @@ Set rule:B1 - A1 ≥ 10V</string>
             <property name="bottomMargin">
              <number>0</number>
             </property>
-            <property name="spacing">
-             <number>0</number>
-            </property>
-            <item row="0" column="0">
-             <layout class="QHBoxLayout" name="horizontalLayout_17" stretch="1,5,0,5,0">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_17" stretch="2,5,4,5,4">
               <property name="spacing">
                <number>6</number>
               </property>
@@ -10445,7 +10228,7 @@ Set rule:B1 - A1 ≥ 10V</string>
               <item>
                <widget class="QPushButton" name="UI_MenuBtn">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
@@ -10453,7 +10236,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                 <property name="minimumSize">
                  <size>
                   <width>120</width>
-                  <height>0</height>
+                  <height>52</height>
                  </size>
                 </property>
                 <property name="font">
@@ -10497,7 +10280,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                 <property name="minimumSize">
                  <size>
                   <width>350</width>
-                  <height>40</height>
+                  <height>52</height>
                  </size>
                 </property>
                 <property name="font">
@@ -10541,7 +10324,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                 <property name="minimumSize">
                  <size>
                   <width>150</width>
-                  <height>0</height>
+                  <height>52</height>
                  </size>
                 </property>
                 <property name="font">

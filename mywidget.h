@@ -1146,6 +1146,8 @@ private slots:
 
 private:
     Ui::MyWidget *ui;
+    virtual void resizeEvent(QResizeEvent *event)override;//调整控件大小
+
     QButtonGroup *pButton_BatteryData;
 
     QTimer *timer;

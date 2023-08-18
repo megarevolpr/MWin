@@ -9,6 +9,8 @@
 
 #define CHINESE     0
 #define ENGLISH     1
+#define WIDTH   988
+#define HEIGHT  604
 
 MyWidget::MyWidget(QWidget *parent) :
     QWidget(parent),
@@ -6082,4 +6084,17 @@ void MyWidget::on_search_btn_clicked()
 void MyWidget::on_TimeSeting_btn_clicked()
 {
     QMessageBox::question(this ,tr("Time"), tr("Click here to modify the time displayed on the HMI."), tr("OK"));
+}
+
+//调整控件大小
+void MyWidget::resizeEvent(QResizeEvent *event)
+{
+    int x = this->frameGeometry().width(); //获取ui形成窗口宽度
+    int y = this->frameGeometry().height();//获取窗口高度
+
+    float x_w = x/WIDTH;
+//    float y_h = y/HEIGHT;
+
+    QFont font("宋体", 12*x_w); // 创建一个宋体字体，字号为12
+    QApplication::setFont(font); // 设置应用程序的全局字体为宋体
 }
