@@ -1310,11 +1310,20 @@ void MyWidget::MPS_Data_Tab()
     QStringList Converter_TabList;
     Converter_TabList << tr("Inverter") << tr("Value") << tr("DC") << tr("Value");
     ui->RT_Machine_tableWidget->setHorizontalHeaderLabels(Converter_TabList);
-    ui->RT_Machine_tableWidget->setColumnWidth(0,200);
+    ui->RT_Machine_tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);//表格自适应窗口大小
+    ui->RT_Machine_tableWidget->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+    ui->RT_Machine_tableWidget->verticalHeader()->setMinimumSectionSize(50);
+    ui->RT_Machine_tableWidget->verticalHeader()->setMaximumSectionSize(60);
+
+    /*ui->RT_Machine_tableWidget->setColumnWidth(0,200);
     ui->RT_Machine_tableWidget->setColumnWidth(1,200);
     ui->RT_Machine_tableWidget->setColumnWidth(2,200);
     ui->RT_Machine_tableWidget->horizontalHeader()->setStretchLastSection(3);
     ui->RT_Machine_tableWidget->verticalHeader()->setVisible(false);//设置垂直头不可见
+    for(int i=0;i<9;i++)
+    {
+        ui->RT_Machine_tableWidget->setRowHeight(i,42);
+    }*/
     for(int i = 0; i < Converter_Tablist1.size(); i++)
     {
         ui->RT_Machine_tableWidget->setItem(i, 0, new QTableWidgetItem(Converter_Tablist1.at(i)));
@@ -1325,10 +1334,7 @@ void MyWidget::MPS_Data_Tab()
         ui->RT_Machine_tableWidget->setItem(i, 2, new QTableWidgetItem(Converter_Tablist2.at(i)));
         ui->RT_Machine_tableWidget->item(i, 2)->setTextAlignment(Qt::AlignCenter);
     }
-    for(int i=0;i<9;i++)
-    {
-        ui->RT_Machine_tableWidget->setRowHeight(i,42);
-    }
+
     /***************************************************************************************************/
 
     QStringList PV_Tablist1;
@@ -1345,16 +1351,24 @@ void MyWidget::MPS_Data_Tab()
     ui->RT_DCDC_tableWidget->setShowGrid(true);//设置显示格子
     ui->RT_DCDC_tableWidget->setSelectionBehavior(QAbstractItemView::SelectItems);//每次选择一行
     ui->RT_DCDC_tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);//设置不可编辑
+    ui->RT_DCDC_tableWidget->verticalHeader()->setVisible(false);//设置垂直头不可见
     ui->RT_DCDC_tableWidget->setStyleSheet("selection-background-color:lightblue;");
 
     QStringList PV_TabList;
     PV_TabList << tr("Name") << tr("Value") << tr("Name") << tr("Value");
     ui->RT_DCDC_tableWidget->setHorizontalHeaderLabels(PV_TabList);
-    ui->RT_DCDC_tableWidget->setColumnWidth(0,200);
+    ui->RT_DCDC_tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->RT_DCDC_tableWidget->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+    ui->RT_DCDC_tableWidget->verticalHeader()->setMinimumSectionSize(50);
+    ui->RT_DCDC_tableWidget->verticalHeader()->setMaximumSectionSize(60);
+    /*ui->RT_DCDC_tableWidget->setColumnWidth(0,200);
     ui->RT_DCDC_tableWidget->setColumnWidth(1,200);
     ui->RT_DCDC_tableWidget->setColumnWidth(2,200);
     ui->RT_DCDC_tableWidget->horizontalHeader()->setStretchLastSection(3);
-    ui->RT_DCDC_tableWidget->verticalHeader()->setVisible(false);//设置垂直头不可见
+    for(int i=0;i<7;i++)
+    {
+        ui->RT_DCDC_tableWidget->setRowHeight(i,45);
+    }*/
     for(int i = 0; i < PV_Tablist1.size(); i++)
     {
         ui->RT_DCDC_tableWidget->setItem(i, 0, new QTableWidgetItem(PV_Tablist1.at(i)));
@@ -1365,10 +1379,7 @@ void MyWidget::MPS_Data_Tab()
         ui->RT_DCDC_tableWidget->setItem(i, 2, new QTableWidgetItem(PV_Tablist2.at(i)));
         ui->RT_DCDC_tableWidget->item(i, 2)->setTextAlignment(Qt::AlignCenter);
     }
-    for(int i=0;i<7;i++)
-    {
-        ui->RT_DCDC_tableWidget->setRowHeight(i,45);
-    }
+
     /***************************************************************************************************/
     QStringList RT_Grid_Tablist1;
     RT_Grid_Tablist1  << tr("Grid Voltage(AB)") << tr("Grid Voltage(BC)") << tr("Grid Voltage(CA)")
@@ -1389,10 +1400,18 @@ void MyWidget::MPS_Data_Tab()
     QStringList Grid_TabList;
     Grid_TabList << tr("Name") << tr("Value") << tr("Name") << tr("Value");
     ui->RT_Grid_tableWidget->setHorizontalHeaderLabels(Grid_TabList);
-    ui->RT_Grid_tableWidget->setColumnWidth(0,200);
+    ui->RT_Grid_tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->RT_Grid_tableWidget->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+    ui->RT_Grid_tableWidget->verticalHeader()->setMinimumSectionSize(50);
+    ui->RT_Grid_tableWidget->verticalHeader()->setMaximumSectionSize(60);
+    /*ui->RT_Grid_tableWidget->setColumnWidth(0,200);
     ui->RT_Grid_tableWidget->setColumnWidth(1,200);
     ui->RT_Grid_tableWidget->setColumnWidth(2,200);
     ui->RT_Grid_tableWidget->horizontalHeader()->setStretchLastSection(3);
+    for(int i=0;i<6;i++)
+    {
+        ui->RT_Grid_tableWidget->setRowHeight(i,45);
+    }*/
     ui->RT_Grid_tableWidget->verticalHeader()->setVisible(false);//设置垂直头不可见
     for(int i = 0; i < RT_Grid_Tablist1.size(); i++)
     {
@@ -1404,10 +1423,7 @@ void MyWidget::MPS_Data_Tab()
         ui->RT_Grid_tableWidget->setItem(i, 2, new QTableWidgetItem(RT_Grid_Tablist2.at(i)));
         ui->RT_Grid_tableWidget->item(i, 2)->setTextAlignment(Qt::AlignCenter);
     }
-    for(int i=0;i<6;i++)
-    {
-        ui->RT_Grid_tableWidget->setRowHeight(i,45);
-    }
+
     /***************************************************************************************************/
 
     QStringList Load_Tablist1;
@@ -1425,15 +1441,25 @@ void MyWidget::MPS_Data_Tab()
     ui->RT_Load_tableWidget->setSelectionBehavior(QAbstractItemView::SelectItems);//每次选择一行
     ui->RT_Load_tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);//设置不可编辑
     ui->RT_Load_tableWidget->setStyleSheet("selection-background-color:lightblue;");
+    ui->RT_Load_tableWidget->verticalHeader()->setVisible(false);//设置垂直头不可见
 
     QStringList Load_Tablist;
     Load_Tablist << tr("Name") << tr("Value") << tr("Name") << tr("Value");
     ui->RT_Load_tableWidget->setHorizontalHeaderLabels(Load_Tablist);
-    ui->RT_Load_tableWidget->setColumnWidth(0,200);
+    ui->RT_Load_tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->RT_Load_tableWidget->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+    ui->RT_Load_tableWidget->verticalHeader()->setMinimumSectionSize(50);
+    ui->RT_Load_tableWidget->verticalHeader()->setMaximumSectionSize(60);
+    /*ui->RT_Load_tableWidget->setColumnWidth(0,200);
     ui->RT_Load_tableWidget->setColumnWidth(1,200);
     ui->RT_Load_tableWidget->setColumnWidth(2,200);
     ui->RT_Load_tableWidget->horizontalHeader()->setStretchLastSection(3);
-    ui->RT_Load_tableWidget->verticalHeader()->setVisible(false);//设置垂直头不可见
+    for(int i=0;i<6;i++)
+    {
+        ui->RT_Load_tableWidget->setRowHeight(i,45);
+    }*/
+
+
     for(int i = 0; i < Load_Tablist1.size(); i++)
     {
         ui->RT_Load_tableWidget->setItem(i, 0, new QTableWidgetItem(Load_Tablist1.at(i)));
@@ -1448,10 +1474,6 @@ void MyWidget::MPS_Data_Tab()
     PV_Data(ui->RT_DCDC_tableWidget);
     Grid_Data(ui->RT_Grid_tableWidget);
     Load_Data(ui->RT_Load_tableWidget);
-    for(int i=0;i<6;i++)
-    {
-        ui->RT_Load_tableWidget->setRowHeight(i,45);
-    }
 }
 
 //MPS状态表初始化
@@ -1476,19 +1498,26 @@ void MyWidget::ModuleState_Tab()
     ui->State_tableWidget->setShowGrid(true);//设置显示格子
     ui->State_tableWidget->setSelectionBehavior(QAbstractItemView::SelectItems);//每次选择一行
     ui->State_tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);//设置不可编辑
+    ui->State_tableWidget->horizontalHeader()->setVisible(true);    //设置竖直标题可见
     ui->State_tableWidget->setStyleSheet("selection-background-color:lightblue;");
 
     QStringList State_Tablist;
     State_Tablist << tr("Name") << tr("Value") << tr("Name") << tr("Value")<< tr("Name") << tr("Value");
+    ui->State_tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->State_tableWidget->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+    ui->State_tableWidget->verticalHeader()->setMinimumSectionSize(50);//设置行高最小值
     ui->State_tableWidget->setHorizontalHeaderLabels(State_Tablist);
-    ui->State_tableWidget->horizontalHeader()->setVisible(true);    //设置竖直标题可见
-    ui->State_tableWidget->setColumnWidth(0,220);
+
+
+    /*ui->State_tableWidget->setColumnWidth(0,220);
     ui->State_tableWidget->setColumnWidth(1,90);
     ui->State_tableWidget->setColumnWidth(2,220);
     ui->State_tableWidget->setColumnWidth(3,100);
     ui->State_tableWidget->setColumnWidth(4,220);
     ui->State_tableWidget->setColumnWidth(5,90);
-
+    for (int i = 0; i < 12; ++i) {
+        ui->State_tableWidget->setRowHeight(i, 45);
+    }*/
     for(int i = 0; i < State_Tablist1.size(); i++)
     {
         ui->State_tableWidget->setItem(i, 0, new QTableWidgetItem(State_Tablist1.at(i)));
@@ -1504,9 +1533,7 @@ void MyWidget::ModuleState_Tab()
         ui->State_tableWidget->setItem(i, 4, new QTableWidgetItem(State_Tablist3.at(i)));
         ui->State_tableWidget->item(i, 4)->setTextAlignment(Qt::AlignCenter);
     }
-    for (int i = 0; i < 12; ++i) {
-        ui->State_tableWidget->setRowHeight(i, 45);
-    }
+
     MPSState(ui->State_tableWidget); //MPS状态说明
 }
 //DCDC参数设置
@@ -1520,16 +1547,23 @@ void MyWidget::DCDCParam_tab()
     ui->DCDC_tableWidget->setShowGrid(true);//设置显示格子
     ui->DCDC_tableWidget->setSelectionBehavior(QAbstractItemView::SelectItems);//每次选择一行
     ui->DCDC_tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);//设置不可编辑
+    ui->DCDC_tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->DCDC_tableWidget->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+    ui->DCDC_tableWidget->verticalHeader()->setMinimumSectionSize(50);//设置行高最小值
 
     QStringList List5;
     List5 << tr("Name") << tr("Value") << tr("Unit") << tr("Name") << tr("Value")<< tr("Unit");
     ui->DCDC_tableWidget->setHorizontalHeaderLabels(List5);
-    ui->DCDC_tableWidget->setColumnWidth(0,300);
+    /*ui->DCDC_tableWidget->setColumnWidth(0,300);
     ui->DCDC_tableWidget->setColumnWidth(1,120);
     ui->DCDC_tableWidget->setColumnWidth(2,100);
     ui->DCDC_tableWidget->setColumnWidth(3,200);
     ui->DCDC_tableWidget->setColumnWidth(4,120);
     ui->DCDC_tableWidget->setColumnWidth(5,100);
+    for (int i = 0; i < 2; ++i)
+    {
+        ui->DCDC_tableWidget->setRowHeight(i, 45);
+    }*/
     QStringList Display_Par1;
     Display_Par1 << tr("Work parttern")<< tr("Boost or Buck");
     QStringList Display_Par2;
@@ -1573,33 +1607,33 @@ void MyWidget::DCDCParam_tab()
             }
         }
     }
-    for (int i = 0; i < 2; ++i)
-    {
-        ui->DCDC_tableWidget->setRowHeight(i, 45);
-    }
+
     DCDC_Paramter_tab(ui->DCDC_tableWidget);    //DCDC参数页说明
 }
 //电池设置初始化_锂电池
 void MyWidget::BatterySet_tab()
 {
-    ui->Lithium_Tab->setColumnWidth(0,270);
+    ui->Lithium_Tab->setEditTriggers(QAbstractItemView::NoEditTriggers);//设置不可编辑
+    ui->plainTextEdit->setReadOnly(true);//只读
+    ui->Lithium_Tab->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->Lithium_Tab->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+    ui->Lithium_Tab->verticalHeader()->setMinimumSectionSize(50);//设置行高最小值
+
+    /*ui->Lithium_Tab->setColumnWidth(0,270);
     ui->Lithium_Tab->setColumnWidth(1,80);
     ui->Lithium_Tab->setColumnWidth(2,270);
     ui->Lithium_Tab->setColumnWidth(3,80);
-    ui->Lithium_Tab->setEditTriggers(QAbstractItemView::NoEditTriggers);//设置不可编辑
-    ui->plainTextEdit->setReadOnly(true);//只读
-
     for(int i=0;i<10;i++)
     {
         ui->Lithium_Tab->setRowHeight(i,45);
-    }
+    }*/
 
     Battery_Setup_Tab(ui->Lithium_Tab);
 }
 //电池设置表初始化_铅酸
 void MyWidget::BatterySet_Lead_tab()
 {
-    ui->Lead_Tab->setColumnWidth(0,180);
+    /*ui->Lead_Tab->setColumnWidth(0,180);
     ui->Lead_Tab->setColumnWidth(1,120);
     ui->Lead_Tab->setColumnWidth(2,50);
     ui->Lead_Tab->setColumnWidth(3,180);
@@ -1609,9 +1643,12 @@ void MyWidget::BatterySet_Lead_tab()
     for(int i=0;i<10;i++)
     {
         ui->Lead_Tab->setRowHeight(i,45);
-    }
+    }*/
     ui->Lead_Tab->setEditTriggers(QAbstractItemView::NoEditTriggers);//设置不可编辑
     ui->plainTextEdit_2->setReadOnly(true);//只读
+    ui->Lead_Tab->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->Lead_Tab->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+    ui->Lead_Tab->verticalHeader()->setMinimumSectionSize(50);//设置行高最小值
     Battery_Setup_Lead_Tab(ui->Lead_Tab);
 
 }
@@ -1630,7 +1667,11 @@ void MyWidget::RunTimeSet_tab()
     ui->Time_tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);//设置不可编辑
     ui->Time_tableWidget->setShowGrid(true);//设置显示格子
     ui->Time_tableWidget->setSelectionBehavior(QAbstractItemView::SelectItems);//每次选择一行
-    ui->Time_tableWidget->setColumnWidth(0,50);
+    ui->Time_tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->Time_tableWidget->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+    ui->Time_tableWidget->verticalHeader()->setMinimumSectionSize(50);//设置行高最小值
+
+    /*ui->Time_tableWidget->setColumnWidth(0,50);
     ui->Time_tableWidget->setColumnWidth(1,180);
     ui->Time_tableWidget->setColumnWidth(2,180);
     ui->Time_tableWidget->setColumnWidth(3,180);
@@ -1640,7 +1681,7 @@ void MyWidget::RunTimeSet_tab()
     for(int i=0;i<20;i++)
     {
         ui->Time_tableWidget->setRowHeight(i,35);
-    }
+    }*/
 
     AutoOperation(ui->Time_tableWidget);    //自动运行页说明
 }
@@ -1657,18 +1698,21 @@ void MyWidget::Information_tbnt_released()
     ui->EquipmentInfor_tableWidget->setSelectionBehavior(QAbstractItemView::SelectItems);//每次选择一行
     ui->EquipmentInfor_tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);//设置不可编辑
     ui->EquipmentInfor_tableWidget->setStyleSheet("selection-background-color:lightblue;");
+    ui->EquipmentInfor_tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->EquipmentInfor_tableWidget->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+    ui->EquipmentInfor_tableWidget->verticalHeader()->setMinimumSectionSize(50);//设置行高最小值
 
     //将设备信息显示到LCD上
     QStringList List4;
     List4 << tr("Name") << tr("System Information") ;
     ui->EquipmentInfor_tableWidget->setHorizontalHeaderLabels(List4);
-    ui->EquipmentInfor_tableWidget->setColumnWidth(0,280);
+    /*ui->EquipmentInfor_tableWidget->setColumnWidth(0,280);
     ui->EquipmentInfor_tableWidget->horizontalHeader()->setStretchLastSection(1);//自动占用剩余空间
 
     for(int i=0;i<8;i++)
     {
         ui->EquipmentInfor_tableWidget->setRowHeight(i,40);
-    }
+    }*/
 
     SystemMessages(ui->EquipmentInfor_tableWidget);//系统信息页说明
 }
@@ -1689,18 +1733,20 @@ void MyWidget::Data_Report()
     ui->Report_tableWidget->setFrameShape(QFrame::NoFrame);//设置无边框
     ui->Report_tableWidget->setShowGrid(true);//设置显示格子
     ui->Report_tableWidget->setSelectionBehavior(QAbstractItemView::SelectItems);//每次选择一行
-    ui->Report_tableWidget->setEditTriggers(QAbstractItemView::SelectedClicked);//单机修改
-    ui->Report_tableWidget->setColumnWidth(0,250);
+    ui->Report_tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->Report_tableWidget->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+    ui->Report_tableWidget->verticalHeader()->setMinimumSectionSize(50);//设置行高最小值
+    /*ui->Report_tableWidget->setColumnWidth(0,250);
     ui->Report_tableWidget->setColumnWidth(1,140);
     ui->Report_tableWidget->setColumnWidth(2,140);
     ui->Report_tableWidget->setColumnWidth(3,140);
-    ui->Report_tableWidget->horizontalHeader()->setStretchLastSection(4);
+    ui->Report_tableWidget->horizontalHeader()->setStretchLastSection(4);*/
 
     for(int i = 0; i < ReportData_Tablist.size(); i++)
     {
         ui->Report_tableWidget->setItem(i, 0, new QTableWidgetItem(ReportData_Tablist.at(i)));
         ui->Report_tableWidget->item(i, 0)->setTextAlignment(Qt::AlignCenter);
-        ui->Report_tableWidget->setRowHeight(i, 45);
+//        ui->Report_tableWidget->setRowHeight(i, 45);
     }
     DataReportMessages(ui->Report_tableWidget); //数据报表页说明
 }
@@ -1719,11 +1765,17 @@ void MyWidget::History()
     ui->Historicalfailure_tableWidget->setFrameShape(QFrame::NoFrame);//设置无边框
     ui->Historicalfailure_tableWidget->setShowGrid(true);//设置显示格子
     ui->Historicalfailure_tableWidget->setSelectionBehavior(QAbstractItemView::SelectItems);//每次选择一行
-    ui->Historicalfailure_tableWidget->setEditTriggers(QAbstractItemView::SelectedClicked);//单机修改
-    ui->Historicalfailure_tableWidget->setColumnWidth(0,50);
+    ui->Historicalfailure_tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->Historicalfailure_tableWidget->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+    ui->Historicalfailure_tableWidget->verticalHeader()->setMinimumSectionSize(50);//设置行高最小值
+    /*ui->Historicalfailure_tableWidget->setColumnWidth(0,50);
     ui->Historicalfailure_tableWidget->setColumnWidth(1,180);
     ui->Historicalfailure_tableWidget->setColumnWidth(2,180);
     ui->Historicalfailure_tableWidget->horizontalHeader()->setStretchLastSection(true);
+    for (int i = 0; i < 15; ++i)
+    {
+        ui->Historicalfailure_tableWidget->setRowHeight(i, 40);
+    }*/
 
     Grade_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
     Grade2_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
@@ -1734,10 +1786,7 @@ void MyWidget::History()
     Grade7_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
     Grade8_explain->setStyleSheet("background-color:rgb(200, 0, 0);");
 
-    for (int i = 0; i < 15; ++i)
-    {
-        ui->Historicalfailure_tableWidget->setRowHeight(i, 40);
-    }
+
 
     HistoryRecord(ui->Historicalfailure_tableWidget);   //历史记录页说明
 }
@@ -1756,14 +1805,15 @@ void MyWidget::OperationLog()
     ui->Operation_tableWidget->setFrameShape(QFrame::NoFrame);//设置无边框
     ui->Operation_tableWidget->setShowGrid(true);//设置显示格子
     ui->Operation_tableWidget->setSelectionBehavior(QAbstractItemView::SelectItems);//每次选择一行
-    ui->Operation_tableWidget->setEditTriggers(QAbstractItemView::SelectedClicked);//单机修改
-    ui->Operation_tableWidget->setColumnWidth(0,260);
+    ui->Operation_tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->Operation_tableWidget->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+    ui->Operation_tableWidget->verticalHeader()->setMinimumSectionSize(50);//设置行高最小值
+    /*ui->Operation_tableWidget->setColumnWidth(0,260);
     ui->Operation_tableWidget->horizontalHeader()->setStretchLastSection(true);
-
     for (int i = 0; i < 9; ++i)
     {
         ui->Operation_tableWidget->setRowHeight(i, 40);
-    }
+    }*/
 
     OperationLog_tab(ui->Operation_tableWidget);    //操作日志页说明
 }
@@ -1794,6 +1844,7 @@ void MyWidget::OperationLog()
 
     PCS_Alarm_information_table();  //展示PCS故障信息表
 }*/
+
 /*************DCAC参数*************/
 void MyWidget::UserParam_tab()
 {
@@ -1805,11 +1856,14 @@ void MyWidget::UserParam_tab()
     ui->System_Tab->setShowGrid(true);//设置显示格子
     ui->System_Tab->setSelectionBehavior(QAbstractItemView::SelectItems);//每次选择一行
     ui->System_Tab->setEditTriggers(QAbstractItemView::NoEditTriggers);//设置不可编辑
+    ui->System_Tab->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->System_Tab->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+    ui->System_Tab->verticalHeader()->setMinimumSectionSize(50);//设置行高最小值
 
     QStringList List5;
     List5 << tr("Name") << tr("Value") << tr("Unit")<< tr("Name") << tr("Value") << tr("Unit");
     ui->System_Tab->setHorizontalHeaderLabels(List5);
-    ui->System_Tab->setColumnWidth(0,160);
+    /*ui->System_Tab->setColumnWidth(0,160);
     ui->System_Tab->setColumnWidth(1,160);
     ui->System_Tab->setColumnWidth(2,160);
     ui->System_Tab->setColumnWidth(3,160);
@@ -1822,7 +1876,7 @@ void MyWidget::UserParam_tab()
     ui->System_Tab->setRowHeight(4, 47);
     ui->System_Tab->setRowHeight(5, 47);
     ui->System_Tab->setRowHeight(6, 47);
-    ui->System_Tab->setRowHeight(7, 47);
+    ui->System_Tab->setRowHeight(7, 47);*/
 
     AdvancedSetup_btn->setText(tr("Advance setting"));
     ui->System_Tab->setCellWidget(7,5, (QWidget *)AdvancedSetup_btn);          //高级设置
@@ -2183,7 +2237,10 @@ void MyWidget::on_UI_MenuBtn_clicked()
         connect(m_menu, SIGNAL(Sent(int)), this, SLOT(My_menuAction(int)));
 
         m_menu->setGeometry(0, 0, 250, 453);
-        m_menu->move(QPoint((this->pos().x() + 10),(this->pos().y() + 85)));
+        int x = this->frameGeometry().width(); //获取ui形成窗口宽度
+        int y = this->frameGeometry().height();//获取窗口高度
+
+        m_menu->move(QPoint((this->pos().x() + 10),(this->pos().y() + (y-ui->UI_MenuBtn->height()-458))));
         m_menu->show();
     }
     else
@@ -2382,7 +2439,26 @@ void MyWidget::SystemlnformationVer_clicked(int nid)
 /*************绘制高级设置界面**************/
 void MyWidget::SystemParam_tbnt_released()
 {
-    for(int i=0; i<13;i++)//调整功能设置、系统参数设置的列宽行高
+    ui->UI_Parameter_Tab->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->UI_Parameter_Tab->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+    ui->UI_Parameter_Tab->verticalHeader()->setMinimumSectionSize(50);//设置行高最小值
+
+    ui->UI_SystemParameter_Tab->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->UI_SystemParameter_Tab->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+    ui->UI_SystemParameter_Tab->verticalHeader()->setMinimumSectionSize(50);//设置行高最小值
+
+    ui->ExternalDevice_tW->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->ExternalDevice_tW->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+    ui->ExternalDevice_tW->verticalHeader()->setMinimumSectionSize(50);//设置行高最小值
+
+    ui->UI_Debug_Tab->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->UI_Debug_Tab->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+    ui->UI_Debug_Tab->verticalHeader()->setMinimumSectionSize(50);//设置行高最小值
+
+    ui->UI_DCDC_Debug_tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->UI_DCDC_Debug_tableWidget->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+    ui->UI_DCDC_Debug_tableWidget->verticalHeader()->setMinimumSectionSize(50);//设置行高最小值
+    /*for(int i=0; i<13;i++)//调整功能设置、系统参数设置的列宽行高
     {
         ui->UI_Parameter_Tab->setColumnWidth(i,170);
         ui->UI_Parameter_Tab->setRowHeight(i++,50);
@@ -2449,7 +2525,7 @@ void MyWidget::SystemParam_tbnt_released()
             ui->UI_DCDC_Debug_tableWidget->setColumnWidth(i,140);
             ui->UI_DCDC_Debug_tableWidget->setRowHeight(i,50);
         }
-    }
+    }*/
 
     FunctionSet(ui->UI_Parameter_Tab);  //功能设置页说明
     SystemParameter(ui->UI_SystemParameter_Tab);    //系统设置页说明
@@ -6097,4 +6173,6 @@ void MyWidget::resizeEvent(QResizeEvent *event)
 
     QFont font("宋体", 12*x_w); // 创建一个宋体字体，字号为12
     QApplication::setFont(font); // 设置应用程序的全局字体为宋体
+
+
 }
