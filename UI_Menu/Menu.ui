@@ -6,9 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>331</width>
-    <height>410</height>
+    <width>253</width>
+    <height>453</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>250</width>
+    <height>453</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Form</string>
@@ -29,6 +41,12 @@
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>103</width>
+            <height>159</height>
+           </size>
           </property>
           <property name="text">
            <string>Host</string>
@@ -56,6 +74,12 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="minimumSize">
+           <size>
+            <width>103</width>
+            <height>159</height>
+           </size>
+          </property>
           <property name="text">
            <string>Rt.Data</string>
           </property>
@@ -82,6 +106,12 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="minimumSize">
+           <size>
+            <width>103</width>
+            <height>159</height>
+           </size>
+          </property>
           <property name="text">
            <string>Record</string>
           </property>
@@ -107,6 +137,12 @@
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>103</width>
+            <height>159</height>
+           </size>
           </property>
           <property name="text">
            <string>System</string>
@@ -139,6 +175,12 @@
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <property name="minimumSize">
+          <size>
+           <width>111</width>
+           <height>83</height>
+          </size>
+         </property>
          <property name="text">
           <string>Switch</string>
          </property>
@@ -164,6 +206,12 @@
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>111</width>
+           <height>83</height>
+          </size>
          </property>
          <property name="text">
           <string>Stand-by</string>

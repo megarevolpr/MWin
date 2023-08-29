@@ -50,7 +50,7 @@ Menu::Menu(QWidget *parent)  :
 //    ui->Close_bt->installEventFilter(this);
     installEventFilter(this);
     ui->Host_bt->setText(tr("Host"));
-    ui->RTDATA_bt->setText(tr("Rt.Date"));
+    ui->RTDATA_bt->setText(tr("Rt.Data"));
     ui->Record_bt->setText(tr("Record"));
     ui->System_bt->setText(tr("System"));
     ui->Open_bt->setText(tr("Switch"));

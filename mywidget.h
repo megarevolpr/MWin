@@ -1147,7 +1147,7 @@ private slots:
 private:
     Ui::MyWidget *ui;
     virtual void resizeEvent(QResizeEvent *event)override;//调整控件大小
-
+    void moveEvent(QMoveEvent *event) override;
     QButtonGroup *pButton_BatteryData;
 
     QTimer *timer;
@@ -1155,5 +1155,8 @@ private:
     bool IPShow;//IP地址显示标志位
     QTranslator *translator;    //翻译
     int LanguageType;   //当前语言
+
+
+
 };
 #endif // MYWIDGET_H

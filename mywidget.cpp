@@ -18,7 +18,8 @@ MyWidget::MyWidget(QWidget *parent) :
 {
     LanguageType = CHINESE; //开机默认为中文
 
-
+    QFont font("Sans Serif", 13); // 创建一个宋体字体，字号为13
+    QApplication::setFont(font); // 设置应用程序的全局字体为宋体
 
     ui->setupUi(this);
 //    setFixedSize(800,562);//固定窗口大小
@@ -1101,9 +1102,7 @@ void MyWidget::Delete_explain()
     Battery_Setup_Lead_Tab_delete();//释放 电池设置-铅酸
 }
 
-/********************************************************
- * 初始化界面
-*********************************************************/
+/*******初始化界面*********/
 void MyWidget::UIPageInit()
 {
     FirstPage();  //主页点击
@@ -1113,7 +1112,7 @@ void MyWidget::UIPageInit()
     RecordPage();//记录页面
     SystemParam_tbnt_released();//绘制高级设置界面
 }
-//触摸点击
+/************触摸点击**********/
 void MyWidget::FirstPage()
 {
     ui->Alarm_Button->setDefault(false);
@@ -1131,17 +1130,13 @@ void MyWidget::FirstPage()
     ui->Bypass_Batt_btn->setFlat(true);
     ui->Bypass_Batt_btn->setFocusPolicy(Qt::NoFocus);
 }
-/***************************************************************
- *高级设置按钮点击功能
- ***************************************************************/
+/************高级设置按钮点击功能**************/
 void MyWidget::AdvancedSetup_btn_clicked()
 {
     m_menu->hide();
     ui->UI_stackedWidget->setCurrentWidget(ui->BasicSet_page);
 }
-/*************************************************************************
-*切换语言
-* ***********************************************************************/
+/******切换语言*****/
 void MyWidget::ChangeLanguage_btn_clicked()
 {
     m_menu->hide();//隐藏菜单界面
@@ -1254,9 +1249,7 @@ void MyWidget::SystemSettingPage()
 
     Information_tbnt_released();/*系统-系统消息*/
 }
-/***************************************************************
- * LCD标签初始化和定时器设置
- ***************************************************************/
+/************LCD标签初始化和定时器设置***********/
 void MyWidget::LCDSetting()
 {
     ui->TimeSeting_btn->setFlat(true);//设置时间显示控件无边框
@@ -1706,13 +1699,6 @@ void MyWidget::Information_tbnt_released()
     QStringList List4;
     List4 << tr("Name") << tr("System Information") ;
     ui->EquipmentInfor_tableWidget->setHorizontalHeaderLabels(List4);
-    /*ui->EquipmentInfor_tableWidget->setColumnWidth(0,280);
-    ui->EquipmentInfor_tableWidget->horizontalHeader()->setStretchLastSection(1);//自动占用剩余空间
-
-    for(int i=0;i<8;i++)
-    {
-        ui->EquipmentInfor_tableWidget->setRowHeight(i,40);
-    }*/
 
     SystemMessages(ui->EquipmentInfor_tableWidget);//系统信息页说明
 }
@@ -2232,15 +2218,15 @@ void MyWidget::on_UI_MenuBtn_clicked()
         if(m_menu != nullptr)
         {
             delete m_menu;
+            m_menu = new Menu(this);
+            connect(m_menu, SIGNAL(Sent(int)), this, SLOT(My_menuAction(int))); //菜单
         }
-        m_menu = new Menu(this);
-        connect(m_menu, SIGNAL(Sent(int)), this, SLOT(My_menuAction(int)));
 
-        m_menu->setGeometry(0, 0, 250, 453);
+        m_menu->setGeometry(0, 0, 253, 453);
         int x = this->frameGeometry().width(); //获取ui形成窗口宽度
         int y = this->frameGeometry().height();//获取窗口高度
 
-        m_menu->move(QPoint((this->pos().x() + 10),(this->pos().y() + (y-ui->UI_MenuBtn->height()-458))));
+        m_menu->move(QPoint((this->pos().x() + 10),(this->pos().y() + (y-ui->UI_MenuBtn->height()-461))));
         m_menu->show();
     }
     else
@@ -3273,7 +3259,7 @@ void MyWidget::DC_AC_Parameter_tab(QTableWidget *myTable)
 
     Constant_power = new Specification(this,Constant_power_explain, myTable, line++, column, \
                                        tr("0"), tr("Constant power(AC)"), \
-                                       tr("AC Side Power: You can control the charging and discharging power of the battery from the AC side by modifying this value. When the advanced setting for power control mode is set to Constant Power mode (CP_N&P), a positive value indicates discharging, and a negative value indicates charging.\nFor example, setting it to -5 means that the AC side will charge the battery at a power of -5 kW. Due to converter losses, the DC side power will be lower than the AC side power in this case. Setting it to 5 means that the AC side will output power at 5 kW. Due to converter losses, the DC side power will be higher than the AC side power in this case."));
+                                       tr("AC Side Power: You can control the charging and discharging power of the battery from the AC side by modifying this value. When the advanced setting for power control mode is set to Constant Power mode (CP_AC), a positive value indicates discharging, and a negative value indicates charging.\nFor example, setting it to -5 means that the AC side will charge the battery at a power of -5 kW. Due to converter losses, the DC side power will be lower than the AC side power in this case. Setting it to 5 means that the AC side will output power at 5 kW. Due to converter losses, the DC side power will be higher than the AC side power in this case."));
     Constant_power->add_Specification();
 
     Work_mode_explain->setText(tr("Batter\npriority"));
@@ -6003,8 +5989,8 @@ void MyWidget::on_RTS_module_2_clicked()
 {
     QMessageBox::question(this , "2", tr("Choose the second module to view the real-time status of the second module"), tr("OK"));
 }
-
-void MyWidget::on_UI_Complete_Btn_clicked()//退出高级设置
+/******退出高级设置********/
+void MyWidget::on_UI_Complete_Btn_clicked()
 {
     ui->UI_stackedWidget->setCurrentWidget(ui->UI_page);
 }
@@ -6112,9 +6098,7 @@ void MyWidget::on_DCDC_Module_State_btn_clicked()
     QMessageBox::question(this, tr("DCDC Module State"), tr("Rotate to display the status of each online DCDC module."), tr("OK"));
 }
 
-/***************************************************************
- * 故障信息表搜索功能
- ***************************************************************/
+/**********故障信息表搜索功能************/
 void MyWidget::on_search_btn_clicked()
 {
     if(FaultTable->isHidden())
@@ -6156,23 +6140,45 @@ void MyWidget::on_search_btn_clicked()
     }*/
 }
 
-//时间显示点击
+/*************时间显示点击***********/
 void MyWidget::on_TimeSeting_btn_clicked()
 {
     QMessageBox::question(this ,tr("Time"), tr("Click here to modify the time displayed on the HMI."), tr("OK"));
 }
 
-//调整控件大小
+/*********窗口缩放菜单跟随********/
 void MyWidget::resizeEvent(QResizeEvent *event)
 {
-    int x = this->frameGeometry().width(); //获取ui形成窗口宽度
-    int y = this->frameGeometry().height();//获取窗口高度
+    int currentHeight = this->frameGeometry().height();//获取窗口高度
+    if(!m_menu->isHidden())
+    {
+        if(m_menu != nullptr)
+        {
+            delete m_menu;
+            m_menu = new Menu(this);
+            connect(m_menu, SIGNAL(Sent(int)), this, SLOT(My_menuAction(int))); //菜单
+        }
+        m_menu->setGeometry(0, 0, 253, 453);
+        m_menu->move(QPoint((this->pos().x() + 10),(this->pos().y() + (currentHeight-ui->UI_MenuBtn->height()-461))));
+        m_menu->show();
+    }
+}
+/*********窗口移动菜单跟随*************/
+void MyWidget::moveEvent(QMoveEvent *event)
+{
+    if(!m_menu->isHidden())
+    {
+        if(m_menu != nullptr)
+        {
+            delete m_menu;
+            m_menu = new Menu(this);
+            connect(m_menu, SIGNAL(Sent(int)), this, SLOT(My_menuAction(int))); //菜单
+        }
+        m_menu->setGeometry(0, 0, 253, 453);
+        int x = this->frameGeometry().width(); //获取ui形成窗口宽度
+        int y = this->frameGeometry().height();//获取窗口高度
 
-    float x_w = x/WIDTH;
-//    float y_h = y/HEIGHT;
-
-    QFont font("宋体", 12*x_w); // 创建一个宋体字体，字号为12
-    QApplication::setFont(font); // 设置应用程序的全局字体为宋体
-
-
+        m_menu->move(QPoint((this->pos().x() + 10),(this->pos().y() + (y-ui->UI_MenuBtn->height()-461))));
+        m_menu->show();
+    }
 }
