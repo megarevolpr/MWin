@@ -48,12 +48,55 @@
 #include <QTranslator>
 #include <QApplication>
 #include <QDebug>
+#include <QTableWidgetItem>
 
-#include "Menu.h"
 #include "Specification/Specification.h"
 #include "OperMode.h"
 #include "upgradetools.h"
 #include "FaultTableInterface.h"
+
+//菜单类型
+#define HOSTPAGE            1
+#define RTDATAPAGE          2
+#define RECORDPAGE          3
+#define SYSTEMPAGE          4
+#define MACHINESWITCH       5
+#define MACHINESTANDBY      6
+#define SYSTEMINFORMATION   7
+#define USER_LOGIN          8
+
+//操作模式
+#define Mode_SELF_USE           0
+#define Mode_BATTERY_PRIORITY   1
+#define Mode_MANUAL             2
+#define Mode_OPTIMAL_MODE       3
+#define Mode_MIXED_MODE         4
+
+//高级设置
+#define ADVANCED_SETTING        5
+
+//系统基础设置
+#define SystemTotal_PAGE        4
+#define DCAC_PAGE_NUM           0
+#define DCDC_PAGE_NUM           1
+#define Lithium_PAGE_NUM        2
+#define Lead_PAGE_NUM           3
+#define MixedMode_PAGE_NUM      4
+
+//系统高级设置
+#define AdvancedTotal_PAGE      6
+#define Advanced_PAGE1_NUM      5
+#define Advanced_PAGE2_NUM      6
+#define Advanced_PAGE3_NUM      7
+#define Device_PAGE_NUM         8
+#define DCACDebug_PAGE_NUM      9
+#define DCDCDebug_PAGE_NUM      10
+
+//当前登录角色
+#define User                    0
+#define Maintain                1
+#define Root                    2
+#define None                    3
 
 namespace Ui {
 class MyWidget;
@@ -67,7 +110,6 @@ public:
     explicit MyWidget(QWidget *parent = nullptr);
     ~MyWidget();
 
-    Menu *m_menu;
     OperMode *mode_expelain;
     UpgradeTools *UpgradeInterface;
     QPushButton *AdvancedSetup_btn;//高级设置入口
@@ -1011,6 +1053,8 @@ private:
     void Data_Report();         //数据报表
     void History();             //历史记录
     void OperationLog();        //操作日志
+    void WorkingModeInit();     //新界面工作模式初始化
+    void Account_Change( uint8_t Account_Type );//切换登录信息
 
 
 
@@ -1058,6 +1102,10 @@ private slots:
 
     void onTimerOut();  //时间显示
     void My_menuAction(int Index);
+    void WordingMode(int Index);//系统模式
+    void ModeSwitchExplain(int Index);//模式切换说明
+    void Return(int Index);//返回退出键
+    void combox_Account_change(int Index);//下拉框选择登录用户
 
     void on_RTD_Converter_clicked();
 
@@ -1132,10 +1180,6 @@ private slots:
 
     void on_search_btn_clicked();
 
-    void on_pushButton_add_clicked();
-
-    void on_pushButton_sub_clicked();
-
     void on_TimeSeting_btn_clicked();
 
     void on_Hybrid_mode_Button_clicked();
@@ -1144,11 +1188,41 @@ private slots:
 
     void on_DCDC_Module_State_btn_clicked();
 
+    void on_ModeInfo_bt_clicked();
+
+    void on_SetNext_bt_clicked();
+
+    void on_SetPrevious_bt_clicked();
+
+    void on_IntroPrevious_bt_clicked();
+
+    void on_IntroNext_bt_clicked();
+
+    void on_ToLogin_bt_clicked();
+
+    void on_Cancel_bt_clicked();
+
+    void on_Advanced_bt_clicked();
+
+    void on_InfoNext_bt_clicked();
+
+    void on_InfoPrevious_bt_clicked();
+
 private:
     Ui::MyWidget *ui;
-    virtual void resizeEvent(QResizeEvent *event)override;//调整控件大小
-    void moveEvent(QMoveEvent *event) override;
+    QStringList Mode_Str;//模式文本显示列表
+    QList<QTableWidget*>  new_ui_TabList;
     QButtonGroup *pButton_BatteryData;
+    QButtonGroup *Menu_Group;
+    QButtonGroup *SystemMode_Group;
+    QButtonGroup *ExitReturn_Group;
+    QButtonGroup *ModeSwitch_Group;
+    int CurrentCheckMode;//当前模式
+    int CurrentCheckModeExplain;//当前模式说明
+    int System_Current_Page; //系统当前页
+    int Advanced_Current_Page;//高级设置当前页
+    int ModeIntr_Current_Page;//模式介绍页当前页码
+    unsigned char Account_Type = None;//当前登录角色 -- 上电默认未登录
 
     QTimer *timer;
     QTimer *Update_RTData_timer;

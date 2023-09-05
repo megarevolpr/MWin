@@ -1,26 +1,12 @@
 <RCC>
     <qresource prefix="/new_ui">
-        <file>UI/03-历史记录.png</file>
-        <file>UI/03实时功率.png</file>
-        <file>UI/03-设备信息.png</file>
-        <file>UI/04-屏幕校准.png</file>
-        <file>UI/04-操作日志.png</file>
-        <file>UI/06-系统设置.png</file>
         <file>UI/开关机-01.png</file>
         <file>UI/开关机-02.png</file>
-        <file>UI/3.png</file>
         <file>UI/ProcessBar2-01.png</file>
         <file>UI/ProcessBar2-02.png</file>
         <file>UI/ProcessBar1-01.png</file>
         <file>UI/ProcessBar1-02.png</file>
-        <file>UI/Tic.png</file>
-        <file>UI/Bat1.png</file>
-        <file>UI/Bat0.png</file>
-        <file>UI/Bat2.png</file>
-        <file>UI/Bat3.png</file>
-        <file>UI/Bat4.png</file>
         <file>UI/stop.png</file>
-        <file>UI/Arrow_Bottom.png</file>
         <file>UI/Warning_1.png</file>
         <file>UI/Warning_2.png</file>
         <file>UI/IP.png</file>
@@ -28,50 +14,49 @@
         <file>UI/DCBar1-02.png</file>
         <file>UI/DCBar2-01 .png</file>
         <file>UI/DCBar2-02 .png</file>
-        <file>UI/DCBat0.png</file>
         <file>UI/DCBat1.png</file>
         <file>UI/DCBat2.png</file>
-        <file>UI/DCBat3.png</file>
-        <file>UI/DCBat4.png</file>
         <file>UI/DCstop.png</file>
         <file>UI/PV.png</file>
-        <file>UI/status.png</file>
-        <file>UI/Next.png</file>
         <file>UI/Last.png</file>
         <file>UI/Enter.png</file>
-        <file>UI/upgrade.png</file>
-        <file>UI/left.png</file>
-        <file>UI/right.png</file>
         <file>UI/Logo.png</file>
         <file>UI/house.png</file>
         <file>UI/Power_Standby.png</file>
-        <file>UI/Welcome_PCS.png</file>
-        <file>UI/DCDC.png</file>
         <file>UI/MPS.png</file>
         <file>UI/PMDE.png</file>
-        <file>UI/MEGA.jpg</file>
         <file>UI/BatterySOC.png</file>
         <file>UI/Loading.gif</file>
-        <file>UI/PV_A.png</file>
-        <file>UI/PV_B.png</file>
-        <file>UI/PV_C.png</file>
-        <file>UI/BAT_A.png</file>
-        <file>UI/BAT_B.png</file>
-        <file>UI/BAT_B2.png</file>
-        <file>UI/BAT2A.png</file>
-        <file>UI/ZY_2A.png</file>
-        <file>UI/ZY_2B.png</file>
-        <file>UI/ZY_A.png</file>
-        <file>UI/ZY_B.png</file>
-        <file>UI/ZY_C.png</file>
-        <file>UI/ZY_D.png</file>
-        <file>UI/电池区域划分.png</file>
         <file>UI/BatterySOC_new.png</file>
-    </qresource>
-    <qresource prefix="/Massagebox">
-        <file>UI/Close.png</file>
-        <file>UI/information.png</file>
-        <file>UI/question.png</file>
-        <file>UI/Warning.png</file>
+        <file>UI/Battery_area.png</file>
+        <file>UI/Battery_Priority_A.png</file>
+        <file>UI/Battery_Priority_B1.png</file>
+        <file>UI/Battery_Priority_B2.png</file>
+        <file>UI/Battery_Priority_C.png</file>
+        <file>UI/Manual.png</file>
+        <file>UI/Optimal_Mode_A.png</file>
+        <file>UI/Optimal_Mode_B.png</file>
+        <file>UI/Optimal_Mode_C.png</file>
+        <file>UI/Optimal_Mode_D.png</file>
+        <file>UI/Optimal_Mode_E.png</file>
+        <file>UI/Optimal_Mode_F.png</file>
+        <file>UI/Self_Use_A.png</file>
+        <file>UI/Self_Use_B.png</file>
+        <file>UI/Self_Use_C.png</file>
+        <file>UI/Enter.png</file>
+        <file>UI/HNAC_Data.png</file>
+        <file>UI/HNAC_Host .png</file>
+        <file>UI/HNAC_Record.png</file>
+        <file>UI/HNAC_Standby.png</file>
+        <file>UI/HNAC_System.png</file>
+        <file>UI/HNAC_TurnOn.png</file>
+        <file>UI/Next2.png</file>
+        <file>UI/Previous.png</file>
+        <file>UI/用户1-min.png</file>
+        <file>UI/维修1-min.png</file>
+        <file>UI/研发3-min.png</file>
+        <file>UI/MixedMode.png</file>
+        <file>UI/光伏用户2.png</file>
+        <file>UI/3.png</file>
     </qresource>
 </RCC>

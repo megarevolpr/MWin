@@ -2,7 +2,6 @@
 #include "mywidget.h"
 #include "ui_mywidget.h"
 #include "MainThread.h"
-#include "UI_Menu/Menu.h"
 
 
 
@@ -17,6 +16,10 @@ MyWidget::MyWidget(QWidget *parent) :
     ui(new Ui::MyWidget)
 {
     LanguageType = CHINESE; //开机默认为中文
+    CurrentCheckMode = Mode_SELF_USE;//初始为 自发自用模式
+    System_Current_Page = DCAC_PAGE_NUM;
+    Advanced_Current_Page = Advanced_PAGE1_NUM;
+    ModeIntr_Current_Page   = 0;
 
     QFont font("Sans Serif", 13); // 创建一个宋体字体，字号为13
     QApplication::setFont(font); // 设置应用程序的全局字体为宋体
@@ -63,10 +66,52 @@ void MyWidget::LoadLanguageInit()
 void MyWidget::MemoryAllocation()
 {
     IPShow = true;
-    m_menu = new Menu(this);
     mode_expelain = new OperMode(this);
     UpgradeInterface = new UpgradeTools(this);
     FaultTable = new FaultTableInterface(this,LanguageType);
+    /****************QButtonGroup**************/
+    Mode_Str<<tr("Battery Area")<<tr("Self-issuance and self-use")<<tr("Battery Priority")<<tr("Manual")<<tr("Optimal model")<<tr("Mixed mode");
+    new_ui_TabList<<ui->DCAC_Tab<<ui->DCDC_Tab<<ui->Lithium_Tab_2<<ui->Lead_Acid_Tab<<ui->MixedTime_Tab<<ui->Advanced_Tab_1
+                 <<ui->Advanced_Tab_2<<ui->Advanced_Tab_3<<ui->ExternalDevice_Tab<<ui->DCAC_Debug_Tab<<ui->DCDC_Debug_Tab;
+    //菜单
+    Menu_Group = new QButtonGroup();
+    Menu_Group->addButton(ui->Host_btn,1);
+    Menu_Group->addButton(ui->Host_b_btn,1);
+    Menu_Group->addButton(ui->Host_p_btn,1);
+    Menu_Group->addButton(ui->RT_Data_btn,2);
+    Menu_Group->addButton(ui->RT_Data_b_btn,2);
+    Menu_Group->addButton(ui->RT_Data_p_btn,2);
+    Menu_Group->addButton(ui->Record_btn,3);
+    Menu_Group->addButton(ui->Record_b_btn,3);
+    Menu_Group->addButton(ui->Record_p_btn,3);
+    Menu_Group->addButton(ui->System_btn,4);
+    Menu_Group->addButton(ui->System_b_btn,4);
+    Menu_Group->addButton(ui->System_p_btn,4);
+    Menu_Group->addButton(ui->Switch_p_btn,5);
+    Menu_Group->addButton(ui->Standby_btn,6);
+    Menu_Group->addButton(ui->Sys_Inf_btn,7);
+    Menu_Group->addButton(ui->Login_bt,8);
+
+    SystemMode_Group = new QButtonGroup();
+    SystemMode_Group->addButton(ui->SelfUse_bt,Mode_SELF_USE);
+    SystemMode_Group->addButton(ui->BetteryPriority_bt,Mode_BATTERY_PRIORITY);
+    SystemMode_Group->addButton(ui->Manual_bt,Mode_MANUAL);
+    SystemMode_Group->addButton(ui->OptimalModel_bt,Mode_OPTIMAL_MODE);
+    SystemMode_Group->addButton(ui->MixedMode_bt,Mode_MIXED_MODE);
+
+    ExitReturn_Group = new QButtonGroup();
+    ExitReturn_Group->addButton(ui->IntrBack_bt,0);
+    ExitReturn_Group->addButton(ui->Save_bt,1);
+    ExitReturn_Group->addButton(ui->Exit_bt,2);
+
+    ModeSwitch_Group = new QButtonGroup();
+    ModeSwitch_Group->addButton(ui->BatArea_bt,0);
+    ModeSwitch_Group->addButton(ui->SelfUseIntro_bt,1);
+    ModeSwitch_Group->addButton(ui->BatPriorityIntro_bt,2);
+    ModeSwitch_Group->addButton(ui->OptimalIntro_bt,3);
+    ModeSwitch_Group->addButton(ui->MixedModeIntro_bt,4);
+    ModeSwitch_Group->addButton(ui->ManualIntro_bt,5);
+
     /************************实时数据******************************/
     //变流器
     MPS_vol_AB_explain      = new QPushButton;
@@ -366,13 +411,13 @@ void MyWidget::MemoryAllocation()
     /**********************系统消息*************************/
 
     pButton_Version = new QButtonGroup();
-    pButton_Version->addButton(ui->interface_explain_btn, 0);
-    pButton_Version->addButton(ui->port_explain_btn, 1);
-    pButton_Version->addButton(ui->ip_explain_btn, 2);
-    pButton_Version->addButton(ui->netmask_explain_btn, 3);
-    pButton_Version->addButton(ui->gateway_explain_btn, 4);
-    pButton_Version->addButton(ui->server_ip_explain_btn, 5);
-    pButton_Version->addButton(ui->ok, 6);
+    pButton_Version->addButton(ui->interface_explain_btn_2, 0);
+    pButton_Version->addButton(ui->port_explain_btn_2, 1);
+    pButton_Version->addButton(ui->ip_explain_btn_2, 2);
+    pButton_Version->addButton(ui->netmask_explain_btn_2, 3);
+    pButton_Version->addButton(ui->gateway_explain_btn_2, 4);
+    pButton_Version->addButton(ui->server_ip_explain_btn_2, 5);
+    pButton_Version->addButton(ui->ok_2, 6);
 
     MonitoringVersion_explain       = new QPushButton;
     DCAC_SysProtocol_Version_explain= new QPushButton;
@@ -1133,14 +1178,11 @@ void MyWidget::FirstPage()
 /************高级设置按钮点击功能**************/
 void MyWidget::AdvancedSetup_btn_clicked()
 {
-    m_menu->hide();
     ui->UI_stackedWidget->setCurrentWidget(ui->BasicSet_page);
 }
 /******切换语言*****/
 void MyWidget::ChangeLanguage_btn_clicked()
 {
-    m_menu->hide();//隐藏菜单界面
-
     if(LanguageType == CHINESE)
     {
         LanguageType = ENGLISH;//如果当前是中文，则切英文
@@ -1209,9 +1251,14 @@ void MyWidget::LinkRelationship()
 {
     connect(timer, SIGNAL(timeout()), this, SLOT(onTimerOut()));    //关联定时器，以便实时更新时间
 
-    connect(m_menu, SIGNAL(Sent(int)), this, SLOT(My_menuAction(int))); //菜单
+//    connect(m_menu, SIGNAL(Sent(int)), this, SLOT(My_menuAction(int))); //菜单
+    connect(Menu_Group, SIGNAL(buttonClicked(int)), this,SLOT(My_menuAction(int)));//菜单
+    connect(SystemMode_Group, SIGNAL(buttonClicked(int)), this,SLOT(WordingMode(int)));//系统控制模式
+    connect(ModeSwitch_Group, SIGNAL(buttonClicked(int)), this,SLOT(ModeSwitchExplain(int)));//切换模式说明
+    connect(ExitReturn_Group, SIGNAL(buttonClicked(int)), this,SLOT(Return(int)));//返回函数
     connect(Work_mode_explain, SIGNAL(clicked(bool)), this, SLOT(Operational_mode_clicked())); //操作模式界面关联
     connect(System_upgrade_explain, SIGNAL(clicked(bool)), this, SLOT(UpgradeInterface_clicked())); //升级界面关联
+    connect( ui->combox_Account, SIGNAL(currentIndexChanged(int)), this , SLOT(combox_Account_change(int)));
 
     connect(AdvancedSetup_btn,SIGNAL(clicked(bool)), this, SLOT(AdvancedSetup_btn_clicked()));//高级设置
 
@@ -1241,6 +1288,7 @@ void MyWidget::RunStatePage()
 //系统设置
 void MyWidget::SystemSettingPage()
 {
+    WorkingModeInit();
     UserParam_tab();/*系统-设置表*/
     DCDCParam_tab();/*系统-DCDC设置表*/
     BatterySet_tab();/*系统-电池设置表-锂电*/
@@ -1682,25 +1730,25 @@ void MyWidget::RunTimeSet_tab()
 //系统信息槽
 void MyWidget::Information_tbnt_released()
 {
-    ui->EquipmentInfor_tableWidget->setColumnCount(2);
-    ui->EquipmentInfor_tableWidget->setRowCount(8);
-    ui->EquipmentInfor_tableWidget->horizontalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
-    ui->EquipmentInfor_tableWidget->verticalHeader()->setVisible(false);//设置垂直头不可见
-    ui->EquipmentInfor_tableWidget->setFrameShape(QFrame::NoFrame);//设置无边框
-    ui->EquipmentInfor_tableWidget->setShowGrid(true);//设置显示格子
-    ui->EquipmentInfor_tableWidget->setSelectionBehavior(QAbstractItemView::SelectItems);//每次选择一行
-    ui->EquipmentInfor_tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);//设置不可编辑
-    ui->EquipmentInfor_tableWidget->setStyleSheet("selection-background-color:lightblue;");
-    ui->EquipmentInfor_tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
-    ui->EquipmentInfor_tableWidget->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
-    ui->EquipmentInfor_tableWidget->verticalHeader()->setMinimumSectionSize(50);//设置行高最小值
+    ui->EquipmentInfor_tableWidget_2->setColumnCount(2);
+    ui->EquipmentInfor_tableWidget_2->setRowCount(8);
+    ui->EquipmentInfor_tableWidget_2->horizontalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
+    ui->EquipmentInfor_tableWidget_2->verticalHeader()->setVisible(false);//设置垂直头不可见
+    ui->EquipmentInfor_tableWidget_2->setFrameShape(QFrame::NoFrame);//设置无边框
+    ui->EquipmentInfor_tableWidget_2->setShowGrid(true);//设置显示格子
+    ui->EquipmentInfor_tableWidget_2->setSelectionBehavior(QAbstractItemView::SelectItems);//每次选择一行
+    ui->EquipmentInfor_tableWidget_2->setEditTriggers(QAbstractItemView::NoEditTriggers);//设置不可编辑
+    ui->EquipmentInfor_tableWidget_2->setStyleSheet("selection-background-color:lightblue;");
+    ui->EquipmentInfor_tableWidget_2->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->EquipmentInfor_tableWidget_2->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+    ui->EquipmentInfor_tableWidget_2->verticalHeader()->setMinimumSectionSize(50);//设置行高最小值
 
     //将设备信息显示到LCD上
     QStringList List4;
     List4 << tr("Name") << tr("System Information") ;
-    ui->EquipmentInfor_tableWidget->setHorizontalHeaderLabels(List4);
+    ui->EquipmentInfor_tableWidget_2->setHorizontalHeaderLabels(List4);
 
-    SystemMessages(ui->EquipmentInfor_tableWidget);//系统信息页说明
+    SystemMessages(ui->EquipmentInfor_tableWidget_2);//系统信息页说明
 }
 
 //数据报表
@@ -1751,11 +1799,13 @@ void MyWidget::History()
     ui->Historicalfailure_tableWidget->setFrameShape(QFrame::NoFrame);//设置无边框
     ui->Historicalfailure_tableWidget->setShowGrid(true);//设置显示格子
     ui->Historicalfailure_tableWidget->setSelectionBehavior(QAbstractItemView::SelectItems);//每次选择一行
-    ui->Historicalfailure_tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    for (int i = 1; i < ui->Historicalfailure_tableWidget->columnCount(); ++i) {
+        ui->Historicalfailure_tableWidget->horizontalHeader()->setSectionResizeMode(i, QHeaderView::Stretch);
+    }
     ui->Historicalfailure_tableWidget->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
     ui->Historicalfailure_tableWidget->verticalHeader()->setMinimumSectionSize(50);//设置行高最小值
-    /*ui->Historicalfailure_tableWidget->setColumnWidth(0,50);
-    ui->Historicalfailure_tableWidget->setColumnWidth(1,180);
+
+    /*ui->Historicalfailure_tableWidget->setColumnWidth(1,180);
     ui->Historicalfailure_tableWidget->setColumnWidth(2,180);
     ui->Historicalfailure_tableWidget->horizontalHeader()->setStretchLastSection(true);
     for (int i = 0; i < 15; ++i)
@@ -1802,6 +1852,108 @@ void MyWidget::OperationLog()
     }*/
 
     OperationLog_tab(ui->Operation_tableWidget);    //操作日志页说明
+}
+//新界面工作模式初始化
+void MyWidget::WorkingModeInit()
+{
+    for(int i=0;i<11;i++)
+    {
+       if(i < 2)
+       {
+           QStringList List5;//DCAC设置
+           List5 << tr("Name") << tr("Value")<< tr("Name") << tr("Value")<< tr("Name") << tr("Value");
+           new_ui_TabList.at(i)->setHorizontalHeaderLabels(List5);
+       }
+       if(i == 4)
+       {
+           QStringList time_str;
+           time_str<< tr("Check") <<tr("Peak-Flat-Valley")<< tr("StartTime") << tr("EndTime") << tr("Features") << tr("Power(kW)");
+           new_ui_TabList.at(i)->setColumnCount(time_str.size());
+           new_ui_TabList.at(i)->setRowCount(20);
+           new_ui_TabList.at(i)->setHorizontalHeaderLabels(time_str);
+           new_ui_TabList.at(i)->horizontalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
+           new_ui_TabList.at(i)->verticalHeader()->setVisible(false);//设置垂直头不可见
+           new_ui_TabList.at(i)->setFrameShape(QFrame::NoFrame);//设置无边框
+           new_ui_TabList.at(i)->setEditTriggers(QAbstractItemView::NoEditTriggers);//设置不可编辑
+           new_ui_TabList.at(i)->setShowGrid(true);//设置显示格子
+           new_ui_TabList.at(i)->setSelectionBehavior(QAbstractItemView::SelectItems);//每次选择一行
+           new_ui_TabList.at(i)->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+           new_ui_TabList.at(i)->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+           new_ui_TabList.at(i)->verticalHeader()->setMinimumSectionSize(50);//设置行高最小值
+       }
+       else
+       {
+           new_ui_TabList.at(i)->horizontalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
+           new_ui_TabList.at(i)->verticalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
+           new_ui_TabList.at(i)->setFrameShape(QFrame::NoFrame);//设置无边框
+           new_ui_TabList.at(i)->setShowGrid(true);//设置显示格子
+           new_ui_TabList.at(i)->setSelectionBehavior(QAbstractItemView::SelectItems);//每次选择一行
+           new_ui_TabList.at(i)->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+           new_ui_TabList.at(i)->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+           new_ui_TabList.at(i)->verticalHeader()->setMinimumSectionSize(50);//设置行高最小值
+       }
+
+
+    }
+}
+//切换登录信息
+void MyWidget::Account_Change(uint8_t Account_Type)
+{
+    if( Account_Type == 0 )         //用户
+    {
+        ui->Menu_Avatar_lb->setStyleSheet( "border-image: url(:/new_ui/UI/用户1-min.png);\
+                                           background-color: rgba(255, 255, 255, 0);\
+                                           border-radius: 24px;\
+                                           border:1px solid black;" );
+        ui->Login_bt->setText( tr("USER") );
+    }
+    else if( Account_Type == 1 )    //维修
+    {
+        ui->Menu_Avatar_lb->setStyleSheet( "border-image: url(:/new_ui/UI/维修1-min.png);\
+                                           background-color: rgba(255, 255, 255, 0);\
+                                           border-radius: 24px;\
+                                           border:1px solid black;" );
+        ui->Login_bt->setText( tr("MAINTAIN") );
+    }
+    else if( Account_Type == 2 )    //超级权限
+    {
+        ui->Menu_Avatar_lb->setStyleSheet( "border-image: url(:/new_ui/UI/研发3-min.png);\
+                                           background-color: rgba(255, 255, 255, 0);\
+                                           border-radius: 24px;\
+                                           border:1px solid black;" );
+        ui->Login_bt->setText( tr("ROOT") );
+    }
+
+    else
+    {
+        ui->Menu_Avatar_lb->setStyleSheet( "border-image: url(:/new_ui/UI/用户1-min.png);\
+                                           background-color: rgba(255, 255, 255, 0);\
+                                           border-radius: 24px;\
+                                           border:1px solid black;" );
+        ui->Login_bt->setText( tr("Not Logged in") );
+    }
+}
+//菜单页头像切换
+void MyWidget::combox_Account_change(int Index)
+{
+    if( Index == User )
+    {
+        ui->Login_Avatar_lb->setStyleSheet( "border-image: url(:/new_ui/UI/用户1-min.png);\
+                                             min-width:126px;min-height:126px;max-width:126px;\
+                                             max-height: 126px;border-radius: 63px;border:1px solid black;");
+    }
+    if( Index == Maintain )
+    {
+        ui->Login_Avatar_lb->setStyleSheet( "border-image: url(:/new_ui/UI/维修1-min.png);\
+                                            min-width:126px;min-height:126px;max-width:126px;\
+                                            max-height: 126px;border-radius: 63px;border:1px solid black;");
+    }
+    if( Index == Root )
+    {
+        ui->Login_Avatar_lb->setStyleSheet( "border-image: url(:/new_ui/UI/研发3-min.png);\
+                                             min-width:126px;min-height:126px;max-width:126px;\
+                                             max-height: 126px;border-radius: 63px;border:1px solid black;");
+    }
 }
 
 //告警信息绘表
@@ -2213,26 +2365,7 @@ void MyWidget::UserParam_tab()
 //显示菜单
 void MyWidget::on_UI_MenuBtn_clicked()
 {
-    if(m_menu->isHidden())
-    {
-        if(m_menu != nullptr)
-        {
-            delete m_menu;
-            m_menu = new Menu(this);
-            connect(m_menu, SIGNAL(Sent(int)), this, SLOT(My_menuAction(int))); //菜单
-        }
-
-        m_menu->setGeometry(0, 0, 253, 453);
-        int x = this->frameGeometry().width(); //获取ui形成窗口宽度
-        int y = this->frameGeometry().height();//获取窗口高度
-
-        m_menu->move(QPoint((this->pos().x() + 10),(this->pos().y() + (y-ui->UI_MenuBtn->height()-461))));
-        m_menu->show();
-    }
-    else
-    {
-        m_menu->hide();
-    }
+    ui->UI_stackedWidget->setCurrentWidget(ui->Menu_page);
 }
 /***********时间显示**********/
 void MyWidget::onTimerOut()
@@ -2249,61 +2382,191 @@ void MyWidget::onTimerOut()
         ui->TimeSeting_btn->setText(str);
     }
 }
+//系统工作模式
+void MyWidget::WordingMode(int Index)
+{
+    ui->SetPageNum_lb->setText( QString("%1/%2").arg(System_Current_Page+1).arg(SystemTotal_PAGE) );
+
+    CurrentCheckMode = Index;
+    ui->Mode_lb->setText( Mode_Str.at(CurrentCheckMode+1) );
+
+    ui->UI_stackedWidget->setCurrentWidget(ui->UI_page);
+    ui->stackedWidget->setCurrentWidget(ui->Wordking_page);
+    ui->Set_stackedWidget->setCurrentWidget(ui->Setting_page);
+    ui->setpage_stackedWidget->setCurrentIndex( System_Current_Page );
+}
+//模式切换说明
+void MyWidget::ModeSwitchExplain(int Index)
+{
+    ui->Intro_lb->setText( Mode_Str.at(Index) );
+    CurrentCheckModeExplain = Index;
+
+    if( !ui->IntroPrevious_bt->isEnabled() )//使能上一页、下一页
+    {
+        ui->IntroPrevious_bt->setEnabled( true );
+    }
+    if( !ui->IntroNext_bt->isEnabled() )
+    {
+        ui->IntroNext_bt->setEnabled( true );
+    }
+    ui->IntrPageNum_lb->setText(tr("1/2"));//设置显示页码
+    ModeIntr_Current_Page = 0;
+    switch (Index)
+    {
+    case 0:
+    {
+        //只有一页，上下页切换失能
+        ui->IntroPrevious_bt->setDisabled( true );
+        ui->IntroNext_bt->setDisabled( true );
+        ui->IntrPageNum_lb->setText(tr("1/1"));
+        ui->Introduction_stackedWidget->setCurrentIndex( 0 );
+    }
+        break;
+    case 1:
+    {
+        ui->Introduction_stackedWidget->setCurrentIndex( 0 );
+    }
+        break;
+    case 2:
+    {
+        ui->Introduction_stackedWidget->setCurrentIndex( 0 );
+    }
+        break;
+    case 3:
+    {
+        ui->IntrPageNum_lb->setText(tr("1/3"));
+        ui->Intro_lb->setText( Mode_Str.at(4) );
+        ui->Introduction_stackedWidget->setCurrentIndex( 0 );
+    }
+        break;
+    case 4:
+    {
+        //只有一页，上下页切换失能
+        ui->IntroPrevious_bt->setDisabled( true );
+        ui->IntroNext_bt->setDisabled( true );
+        ModeIntr_Current_Page = Index+1;
+        ui->IntrPageNum_lb->setText(tr("1/1"));
+        ui->Intro_lb->setText( Mode_Str.at(5) );
+        ui->Introduction_stackedWidget->setCurrentIndex( ModeIntr_Current_Page );
+    }
+        break;
+    case 5:
+    {
+        //只有一页，上下页切换失能
+        ui->IntroPrevious_bt->setDisabled( true );
+        ui->IntroNext_bt->setDisabled( true );
+        ModeIntr_Current_Page = Index+1;
+        ui->IntrPageNum_lb->setText(tr("1/1"));
+        ui->Intro_lb->setText( Mode_Str.at(3) );
+        ui->Introduction_stackedWidget->setCurrentIndex( ModeIntr_Current_Page );
+    }
+        break;
+    default:
+        break;
+    }
+}
+//返回退出键
+void MyWidget::Return(int Index)
+{
+    switch (Index)
+    {
+        case 0:
+            {
+
+            }
+            break;
+        case 1:
+            {
+
+            }
+            break;
+        case 2:
+            {
+
+            }
+            break;
+        default:
+            break;
+    }
+    ui->UI_stackedWidget->setCurrentWidget(ui->UI_page);
+    ui->stackedWidget->setCurrentWidget(ui->Wordking_page);
+    ui->Set_stackedWidget->setCurrentWidget(ui->Mode_page);
+}
 
 /***************************************************************
- * 根据索引打开相应的界面
+ * 根据菜单索引打开相应的界面
  ***************************************************************/
 void MyWidget::My_menuAction(int Index)
 {
     switch (Index)
     {
         case HOSTPAGE:
-            ui->stackedWidget->setCurrentWidget(ui->Host_page);
-            ui->RTState_stackedWidget->setCurrentWidget(ui->RTState_page);
-            ui->BAT_stackedWidget->setCurrentWidget(ui->BAT_Lithium_page);
+            {
+                ui->UI_stackedWidget->setCurrentWidget(ui->UI_page);
+                ui->stackedWidget->setCurrentWidget(ui->Host_page);
+                ui->RTState_stackedWidget->setCurrentWidget(ui->RTState_page);
+                ui->BAT_stackedWidget->setCurrentWidget(ui->BAT_Lithium_page);
+            }
             break;
         case RTDATAPAGE:
-            ui->stackedWidget->setCurrentWidget(ui->Status_page);
-            ui->Run_tabWidget->setCurrentWidget(ui->RT_Data_page);
-            ui->RT_Dtata_StackedWidget->setCurrentWidget(ui->RTD_Bypass_N_page);
-            ui->MPS_Data_stw->setCurrentWidget(ui->Machine_page);
-            ui->BAT_stackedWidget->setCurrentWidget(ui->BAT_Lithium_page);
-
+            {
+                ui->UI_stackedWidget->setCurrentWidget(ui->UI_page);
+                ui->stackedWidget->setCurrentWidget(ui->Status_page);
+                ui->Run_tabWidget->setCurrentWidget(ui->RT_Data_page);
+                ui->RT_Dtata_StackedWidget->setCurrentWidget(ui->RTD_Bypass_N_page);
+                ui->MPS_Data_stw->setCurrentWidget(ui->Machine_page);
+                ui->BAT_stackedWidget->setCurrentWidget(ui->BAT_Lithium_page);
+            }
             break;
         case RECORDPAGE:
-            ui->stackedWidget->setCurrentWidget(ui->Record_page);
-            ui->Record_tabWidget->setCurrentWidget(ui->DataReport_page);
-            ui->Report_tab->setCurrentWidget(ui->Report_tabPage_T);
-            ui->dateEdit->setDate(QDateTime::currentDateTime().date());
-
+            {
+                ui->UI_stackedWidget->setCurrentWidget(ui->UI_page);
+                ui->stackedWidget->setCurrentWidget(ui->Record_page);
+                ui->Record_tabWidget->setCurrentWidget(ui->DataReport_page);
+                ui->Report_tab->setCurrentWidget(ui->Report_tabPage_T);
+                ui->dateEdit->setDate(QDateTime::currentDateTime().date());
+            }
             break;
         case SYSTEMPAGE:
-
-            ui->stackedWidget->setCurrentWidget(ui->System_page);
-            ui->BatterSet_tabWidget->setCurrentWidget(ui->LithiumBatterPage);
-
-            break;
-        case MACHINECLOSE:
             {
-
-            }
-
-            break;
-        case MACHINESTANDBY:
-            {
-                m_menu->hide();
-                QMessageBox::question(this, tr("Stand-by"), tr("The converter standby switch. Click the converter to enter the standby state"), tr("OK"));
-            }//这是变流器待机开关，点击后变流器进入待机状态
-            break;
-        case MACHINEOPEN:
-            {
-
+                ui->UI_stackedWidget->setCurrentWidget(ui->UI_page);
+                ui->stackedWidget->setCurrentWidget(ui->Wordking_page);
+                ui->Set_stackedWidget->setCurrentWidget(ui->Mode_page);
             }
             break;
         case MACHINESWITCH:
-            ui->stackedWidget->setCurrentWidget(ui->Switch_page);
+            {
+                ui->UI_stackedWidget->setCurrentWidget(ui->UI_page);
+                ui->stackedWidget->setCurrentWidget(ui->Switch_page);
+            }
             break;
+        case MACHINESTANDBY:
+            {
+                QMessageBox::question(this, tr("Stand-by"), tr("The converter standby switch. Click the converter to enter the standby state"), tr("OK"));
+            }//这是变流器待机开关，点击后变流器进入待机状态
+            break;
+        case SYSTEMINFORMATION:
+            {
+                ui->InfoPageNum_lb->setText( "1/2" );
+                ui->UI_stackedWidget->setCurrentWidget(ui->UI_page);
+                ui->stackedWidget->setCurrentWidget(ui->Wordking_page);
+                ui->Set_stackedWidget->setCurrentWidget(ui->SystemInfor_page);
+            }
+            break;
+        case USER_LOGIN:
+            {
+                if( Account_Type >=  ui->combox_Account->count() )
+                {
+                    ui->combox_Account->setCurrentIndex( 0 );
+                }
+                else
+                {
+                    ui->combox_Account->setCurrentIndex( Account_Type );
+                }
 
+                ui->UI_stackedWidget->setCurrentWidget( ui->Login );
+            }
+            break;
         default:
             break;
     }
@@ -6077,16 +6340,7 @@ void MyWidget::on_Switch_off_clicked()
 {
     QMessageBox::question(this, tr("Turn off"), tr("The switch to turn off the DCAC converter, click to deactivate the DCAC converter."), tr("OK"));
 }
-//每月深度放电日期+
-void MyWidget::on_pushButton_add_clicked()
-{
-    QMessageBox::question(this, tr("Date +"), tr("Clicking will move the monthly deep discharge date back one day."), tr("OK"));
-}
-//每月深度放电日期-
-void MyWidget::on_pushButton_sub_clicked()
-{
-    QMessageBox::question(this, tr("Date -"), tr("Clicking will move the monthly deep discharge date forward by one day."), tr("OK"));
-}
+
 /****************变流器当前状态*****************/
 void MyWidget::on_Converter_State_btn_clicked()
 {
@@ -6096,6 +6350,222 @@ void MyWidget::on_Converter_State_btn_clicked()
 void MyWidget::on_DCDC_Module_State_btn_clicked()
 {
     QMessageBox::question(this, tr("DCDC Module State"), tr("Rotate to display the status of each online DCDC module."), tr("OK"));
+}
+/**************模式介绍************/
+void MyWidget::on_ModeInfo_bt_clicked()
+{
+    ui->UI_stackedWidget->setCurrentWidget(ui->UI_page);
+    ui->stackedWidget->setCurrentWidget(ui->Wordking_page);
+    ui->Set_stackedWidget->setCurrentWidget(ui->Introduction_page);//切换到 模式介绍页
+}
+//下一页
+void MyWidget::on_SetNext_bt_clicked()
+{
+    if( CurrentCheckMode != 5 )
+    {
+        System_Current_Page++;
+        if( System_Current_Page > MixedMode_PAGE_NUM  )
+        {
+            System_Current_Page = DCAC_PAGE_NUM;
+        }
+
+        if( (System_Current_Page == Lithium_PAGE_NUM) || (System_Current_Page == Lead_PAGE_NUM) )
+        {
+            ui->SetPageNum_lb->setText( QString("%1/%2").arg(Lithium_PAGE_NUM+1).arg(SystemTotal_PAGE) );
+        }
+        else if( System_Current_Page > Lead_PAGE_NUM )
+        {
+            ui->SetPageNum_lb->setText( QString("%1/%2").arg(System_Current_Page).arg(SystemTotal_PAGE) );
+        }
+        else
+        {
+            ui->SetPageNum_lb->setText( QString("%1/%2").arg(System_Current_Page+1).arg(SystemTotal_PAGE) );
+        }
+        if( System_Current_Page == MixedMode_PAGE_NUM )
+        {
+
+        }
+        ui->setpage_stackedWidget->setCurrentIndex( System_Current_Page );//根据页面索引号切换页面
+    }
+    else if( CurrentCheckMode == 5 )
+    {
+        Advanced_Current_Page++;
+        if( Advanced_Current_Page > DCDCDebug_PAGE_NUM  )
+        {
+            Advanced_Current_Page = Advanced_PAGE1_NUM;
+        }
+        ui->SetPageNum_lb->setText( QString("%1/%2").arg(Advanced_Current_Page-4).arg(AdvancedTotal_PAGE) );
+        ui->setpage_stackedWidget->setCurrentIndex( Advanced_Current_Page );
+    }
+}
+//上一页
+void MyWidget::on_SetPrevious_bt_clicked()
+{
+    if( CurrentCheckMode != 5 )
+    {
+        System_Current_Page--;
+        if( System_Current_Page < DCAC_PAGE_NUM  )
+        {
+            System_Current_Page = MixedMode_PAGE_NUM;
+        }
+
+        if( (System_Current_Page == Lithium_PAGE_NUM) || (System_Current_Page == Lead_PAGE_NUM) )
+        {
+            ui->SetPageNum_lb->setText( QString("%1/%2").arg(Lithium_PAGE_NUM+1).arg(SystemTotal_PAGE) );
+        }
+        else if( System_Current_Page > Lead_PAGE_NUM )
+        {
+            ui->SetPageNum_lb->setText( QString("%1/%2").arg(System_Current_Page).arg(SystemTotal_PAGE) );
+        }
+        else
+        {
+            ui->SetPageNum_lb->setText( QString("%1/%2").arg(System_Current_Page+1).arg(SystemTotal_PAGE) );
+        }
+        if( System_Current_Page == MixedMode_PAGE_NUM )
+        {
+
+        }
+
+        ui->setpage_stackedWidget->setCurrentIndex( System_Current_Page );
+    }
+    else if( CurrentCheckMode == 5 )
+    {
+        Advanced_Current_Page--;
+        if( Advanced_Current_Page < Advanced_PAGE1_NUM  )
+        {
+            Advanced_Current_Page = DCDCDebug_PAGE_NUM;
+        }
+        ui->SetPageNum_lb->setText( QString("%1/%2").arg(Advanced_Current_Page-4).arg(AdvancedTotal_PAGE) );
+        ui->setpage_stackedWidget->setCurrentIndex( Advanced_Current_Page );
+    }
+}
+//模式介绍 上一页
+void MyWidget::on_IntroPrevious_bt_clicked()
+{
+    ModeIntr_Current_Page--;
+
+    if( CurrentCheckModeExplain == Mode_SELF_USE+1 )
+    {
+        //超过最小页码，返回自发自用页
+        if( ModeIntr_Current_Page < 0 )
+        {
+            ModeIntr_Current_Page = 1;
+        }
+        ui->IntrPageNum_lb->setText( QString("%1/2").arg( ModeIntr_Current_Page+1 ) );
+        //自发自用介绍
+        ui->Introduction_stackedWidget->setCurrentIndex( ModeIntr_Current_Page );
+    }
+    else if( CurrentCheckModeExplain == Mode_BATTERY_PRIORITY+1 )
+    {
+        //超过最小页码，返回电池优先页
+        if( ModeIntr_Current_Page < 0 )
+        {
+            ModeIntr_Current_Page = 2;
+            ui->IntrPageNum_lb->setText( "2/2" );
+        }
+        if( ModeIntr_Current_Page < 2 )
+        {
+            ModeIntr_Current_Page = 0;
+            ui->IntrPageNum_lb->setText( "1/2" );
+        }
+        //电池优先介绍
+        ui->Introduction_stackedWidget->setCurrentIndex( ModeIntr_Current_Page );
+    }
+    else if( CurrentCheckModeExplain == Mode_MANUAL+3 )
+    {
+        //手动模式介绍
+        ModeIntr_Current_Page = 0;
+        ui->IntrPageNum_lb->setText(tr("1/1"));
+        ui->Introduction_stackedWidget->setCurrentIndex( ModeIntr_Current_Page );
+    }
+    else if( CurrentCheckModeExplain == Mode_OPTIMAL_MODE )
+    {
+        //超过最小页码，返回最优模式页
+        //最优模式有两页　3 4
+        if( ModeIntr_Current_Page < 0 )
+        {
+            ModeIntr_Current_Page = 4;
+            ui->IntrPageNum_lb->setText(tr("3/3"));
+        }
+        if( ModeIntr_Current_Page < 3 )
+        {
+            ui->IntrPageNum_lb->setText(tr("1/3"));
+            ModeIntr_Current_Page = 0;
+        }
+        if( ModeIntr_Current_Page == 3 )
+        {
+            ui->IntrPageNum_lb->setText(tr("2/3"));
+        }
+        //最优模式介绍
+        ui->Introduction_stackedWidget->setCurrentIndex( ModeIntr_Current_Page );
+    }
+    else if(CurrentCheckModeExplain == Mode_MIXED_MODE)
+    {
+        ModeIntr_Current_Page = 0;
+        ui->IntrPageNum_lb->setText( "1/1" );
+        ui->Introduction_stackedWidget->setCurrentIndex( ModeIntr_Current_Page );
+    }
+}
+//模式介绍 下一页
+void MyWidget::on_IntroNext_bt_clicked()
+{
+    ModeIntr_Current_Page++;
+
+    if( CurrentCheckModeExplain == Mode_SELF_USE+1 )
+    {
+        //超过自发自用页范围
+        if( ModeIntr_Current_Page >= 2 )
+        {
+            ModeIntr_Current_Page = 0;
+        }
+        ui->IntrPageNum_lb->setText( QString("%1/2").arg( ModeIntr_Current_Page+1 ) );
+        //自发自用介绍
+        ui->Introduction_stackedWidget->setCurrentIndex( ModeIntr_Current_Page );
+    }
+    else if( CurrentCheckModeExplain == Mode_BATTERY_PRIORITY+1 )
+    {
+        if( ModeIntr_Current_Page < 2 )
+        {
+            ModeIntr_Current_Page = 2;
+            ui->IntrPageNum_lb->setText( "2/2" );
+        }
+        if( ModeIntr_Current_Page > 2 )
+        {
+            ModeIntr_Current_Page = 0;
+            ui->IntrPageNum_lb->setText( "1/2" );
+        }
+        ui->Introduction_stackedWidget->setCurrentIndex( ModeIntr_Current_Page );
+    }
+    else if( CurrentCheckModeExplain == Mode_MANUAL+3 )
+    {
+        ModeIntr_Current_Page = 0;
+        ui->IntrPageNum_lb->setText( "1/1" );
+        ui->Introduction_stackedWidget->setCurrentIndex( ModeIntr_Current_Page );
+    }
+    else if( CurrentCheckModeExplain == Mode_OPTIMAL_MODE )
+    {
+        if( ModeIntr_Current_Page < 3 )
+        {
+            ModeIntr_Current_Page = 3;
+            ui->IntrPageNum_lb->setText( "2/3" );
+        }
+        if( ModeIntr_Current_Page > 4 )
+        {
+            ModeIntr_Current_Page = 0;
+            ui->IntrPageNum_lb->setText( "1/3" );
+        }
+        if( ModeIntr_Current_Page == 4 )
+        {
+            ui->IntrPageNum_lb->setText( "3/3" );
+        }
+        ui->Introduction_stackedWidget->setCurrentIndex( ModeIntr_Current_Page );
+    }
+    else if(CurrentCheckModeExplain == Mode_MIXED_MODE)
+    {
+        ModeIntr_Current_Page = 0;
+        ui->IntrPageNum_lb->setText( "1/1" );
+        ui->Introduction_stackedWidget->setCurrentIndex( ModeIntr_Current_Page );
+    }
 }
 
 /**********故障信息表搜索功能************/
@@ -6145,40 +6615,89 @@ void MyWidget::on_TimeSeting_btn_clicked()
 {
     QMessageBox::question(this ,tr("Time"), tr("Click here to modify the time displayed on the HMI."), tr("OK"));
 }
-
-/*********窗口缩放菜单跟随********/
-void MyWidget::resizeEvent(QResizeEvent *event)
+//点击登录
+void MyWidget::on_ToLogin_bt_clicked()
 {
-    int currentHeight = this->frameGeometry().height();//获取窗口高度
-    if(!m_menu->isHidden())
+    QMessageBox::question(this, tr("Login"), tr("."), tr("OK"));
+    if( ui->combox_Account->currentIndex() == User )
     {
-        if(m_menu != nullptr)
-        {
-            delete m_menu;
-            m_menu = new Menu(this);
-            connect(m_menu, SIGNAL(Sent(int)), this, SLOT(My_menuAction(int))); //菜单
-        }
-        m_menu->setGeometry(0, 0, 253, 453);
-        m_menu->move(QPoint((this->pos().x() + 10),(this->pos().y() + (currentHeight-ui->UI_MenuBtn->height()-461))));
-        m_menu->show();
+        ui->UI_stackedWidget->setCurrentWidget( ui->UI_page );
+        ui->stackedWidget->setCurrentWidget( ui->Host_page );
+        ui->RTState_stackedWidget->setCurrentWidget(ui->RTStateData_page);
+        ui->BAT_stackedWidget->setCurrentWidget(ui->BAT_Lithium_page);
+        Account_Type = User;
+        Account_Change( Account_Type );
+//        PermissionsOfControl( Account_Type );//锁定系统设置内容
+
+    }
+    else if( ui->combox_Account->currentIndex() == Maintain )
+    {
+        ui->UI_stackedWidget->setCurrentWidget( ui->UI_page );
+        ui->stackedWidget->setCurrentWidget( ui->Host_page );
+        ui->RTState_stackedWidget->setCurrentWidget(ui->RTStateData_page);
+
+
+        ui->BAT_stackedWidget->setCurrentWidget(ui->BAT_Lithium_page);
+
+        Account_Type = Maintain;
+        Account_Change( Account_Type );
+    }
+    else if( ui->combox_Account->currentIndex() == Root )
+    {
+        ui->UI_stackedWidget->setCurrentWidget( ui->UI_page );
+        ui->stackedWidget->setCurrentWidget( ui->Host_page );
+        ui->RTState_stackedWidget->setCurrentWidget(ui->RTStateData_page);
+        ui->BAT_stackedWidget->setCurrentWidget(ui->BAT_Lithium_page);
+
+        Account_Type = Root;
+        Account_Change( Account_Type );
     }
 }
-/*********窗口移动菜单跟随*************/
-void MyWidget::moveEvent(QMoveEvent *event)
+//取消登录
+void MyWidget::on_Cancel_bt_clicked()
 {
-    if(!m_menu->isHidden())
+    ui->UI_MenuBtn->click();
+    Account_Change( Account_Type );
+}
+//进入高级设置
+void MyWidget::on_Advanced_bt_clicked()
+{
+    //跳转高级设置页
+    CurrentCheckMode = 5;
+    ui->SetPageNum_lb->setText( QString("%1/%2").arg(Advanced_Current_Page-4).arg(AdvancedTotal_PAGE) );
+    ui->Set_stackedWidget->setCurrentWidget( ui->Setting_page );
+    ui->Mode_lb->setText( tr("Advanced Settings") );
+    ui->setpage_stackedWidget->setCurrentIndex( Advanced_Current_Page );
+}
+//系统信息 下一页
+void MyWidget::on_InfoNext_bt_clicked()
+{
+    if( ui->Info_stackedWidget->currentIndex() == 0 )
     {
-        if(m_menu != nullptr)
-        {
-            delete m_menu;
-            m_menu = new Menu(this);
-            connect(m_menu, SIGNAL(Sent(int)), this, SLOT(My_menuAction(int))); //菜单
-        }
-        m_menu->setGeometry(0, 0, 253, 453);
-        int x = this->frameGeometry().width(); //获取ui形成窗口宽度
-        int y = this->frameGeometry().height();//获取窗口高度
-
-        m_menu->move(QPoint((this->pos().x() + 10),(this->pos().y() + (y-ui->UI_MenuBtn->height()-461))));
-        m_menu->show();
+        ui->Infor_lb->setText( tr("Battery Information") );
+        ui->InfoPageNum_lb->setText( "2/2" );
+        ui->Info_stackedWidget->setCurrentWidget( ui->Bat_Info_page );
+    }
+    else if( ui->Info_stackedWidget->currentIndex() == 1 )
+    {
+        ui->Infor_lb->setText( tr("MPS Information") );
+        ui->InfoPageNum_lb->setText( "1/2" );
+        ui->Info_stackedWidget->setCurrentWidget( ui->MPS_Info_page );
+    }
+}
+//系统信息 上一页
+void MyWidget::on_InfoPrevious_bt_clicked()
+{
+    if( ui->Info_stackedWidget->currentIndex() == 0 )
+    {
+        ui->Infor_lb->setText( tr("Battery Information") );
+        ui->InfoPageNum_lb->setText( "2/2" );
+        ui->Info_stackedWidget->setCurrentWidget( ui->Bat_Info_page );
+    }
+    else if( ui->Info_stackedWidget->currentIndex() == 1 )
+    {
+        ui->Infor_lb->setText( tr("MPS Information") );
+        ui->InfoPageNum_lb->setText( "1/2" );
+        ui->Info_stackedWidget->setCurrentWidget( ui->MPS_Info_page );
     }
 }

@@ -44,6 +44,7 @@
 #define MACHINEOPEN     7
 #define MACHINESWITCH   8
 
+
 namespace Ui {
 class Menu;
 }
