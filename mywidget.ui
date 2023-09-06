@@ -11124,23 +11124,10 @@ Settings</string>
                        <number>0</number>
                       </property>
                       <item>
-                       <layout class="QHBoxLayout" name="horizontalLayout_64">
+                       <layout class="QHBoxLayout" name="horizontalLayout_64" stretch="3,2,1,5,1,1,1,1,1,1">
                         <property name="spacing">
                          <number>0</number>
                         </property>
-                        <item>
-                         <spacer name="horizontalSpacer_50">
-                          <property name="orientation">
-                           <enum>Qt::Horizontal</enum>
-                          </property>
-                          <property name="sizeHint" stdset="0">
-                           <size>
-                            <width>40</width>
-                            <height>20</height>
-                           </size>
-                          </property>
-                         </spacer>
-                        </item>
                         <item>
                          <widget class="QLabel" name="PageInfo_lb">
                           <property name="maximumSize">
@@ -11366,19 +11353,6 @@ Settings</string>
                            <string>Exit</string>
                           </property>
                          </widget>
-                        </item>
-                        <item>
-                         <spacer name="horizontalSpacer_48">
-                          <property name="orientation">
-                           <enum>Qt::Horizontal</enum>
-                          </property>
-                          <property name="sizeHint" stdset="0">
-                           <size>
-                            <width>40</width>
-                            <height>20</height>
-                           </size>
-                          </property>
-                         </spacer>
                         </item>
                        </layout>
                       </item>
