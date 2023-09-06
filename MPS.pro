@@ -11,7 +11,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 DEFINES += QT_DEPRECATED_WARNINGS
 #QT      += network
 
-TARGET = MPS_V1.0.4
+TARGET = MPS_V1.1.0
 TEMPLATE = app
 
 
@@ -46,9 +46,7 @@ RESOURCES += image.qrc \
             language.qrc \
     faultdescription.qrc
 
-DISTFILES += \
-    Language/CN.ts \
-    Language/EN.ts
+DISTFILES +=
 
 
 

@@ -1185,13 +1185,13 @@ void MyWidget::UpgradeInterface_clicked()
 {
     int reply = QMessageBox::question(this, tr("Upgrade prompt")\
                           ,tr("1. Make sure to press the EPO button before upgrading.\
-                              \n2. Before upgrading the DCDC, switch off the ship-type switch of the DCDC module."), tr("Return"),tr("OK"));
-    if (reply == 0)
+                              \n2. Before upgrading the DCDC, switch off the ship-type switch of the DCDC module."), tr("NEXT"),tr("Cancel"));
+    if (reply == 1)
     {
         // 点击了"Cancel"按钮的处理逻辑
         return ;
 
-    } else if (reply == 1) {
+    } else if (reply == 0) {
         // 点击了"OK"按钮的处理逻辑
         if(UpgradeInterface->isHidden())
         {
@@ -1751,7 +1751,11 @@ void MyWidget::History()
     ui->Historicalfailure_tableWidget->setFrameShape(QFrame::NoFrame);//设置无边框
     ui->Historicalfailure_tableWidget->setShowGrid(true);//设置显示格子
     ui->Historicalfailure_tableWidget->setSelectionBehavior(QAbstractItemView::SelectItems);//每次选择一行
-    ui->Historicalfailure_tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->Historicalfailure_tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Interactive);
+    ui->Historicalfailure_tableWidget->setColumnWidth(0,100);
+    for (int i = 1; i < ui->Historicalfailure_tableWidget->columnCount(); ++i) {
+        ui->Historicalfailure_tableWidget->horizontalHeader()->setSectionResizeMode(i, QHeaderView::Stretch);
+    }
     ui->Historicalfailure_tableWidget->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
     ui->Historicalfailure_tableWidget->verticalHeader()->setMinimumSectionSize(50);//设置行高最小值
     /*ui->Historicalfailure_tableWidget->setColumnWidth(0,50);
@@ -2425,11 +2429,9 @@ void MyWidget::SystemlnformationVer_clicked(int nid)
 /*************绘制高级设置界面**************/
 void MyWidget::SystemParam_tbnt_released()
 {
-    ui->UI_Parameter_Tab->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     ui->UI_Parameter_Tab->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
     ui->UI_Parameter_Tab->verticalHeader()->setMinimumSectionSize(50);//设置行高最小值
 
-    ui->UI_SystemParameter_Tab->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     ui->UI_SystemParameter_Tab->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
     ui->UI_SystemParameter_Tab->verticalHeader()->setMinimumSectionSize(50);//设置行高最小值
 
@@ -2444,6 +2446,26 @@ void MyWidget::SystemParam_tbnt_released()
     ui->UI_DCDC_Debug_tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     ui->UI_DCDC_Debug_tableWidget->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
     ui->UI_DCDC_Debug_tableWidget->verticalHeader()->setMinimumSectionSize(50);//设置行高最小值
+
+    ui->ExternalDevice_tW->horizontalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
+    ui->ExternalDevice_tW->verticalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
+    ui->ExternalDevice_tW->setStyleSheet("selection-background-color:lightblue;");
+
+
+    for (int i = 0; i < ui->UI_Parameter_Tab->columnCount(); ++i)
+    {
+        if(i%3==2)
+        {
+            ui->UI_Parameter_Tab->setColumnWidth(i,70);
+            ui->UI_SystemParameter_Tab->setColumnWidth(i,60);
+        }
+        else
+        {
+            ui->UI_Parameter_Tab->horizontalHeader()->setSectionResizeMode(i, QHeaderView::Stretch);
+            ui->UI_SystemParameter_Tab->horizontalHeader()->setSectionResizeMode(i, QHeaderView::Stretch);
+        }
+    }
+
     /*for(int i=0; i<13;i++)//调整功能设置、系统参数设置的列宽行高
     {
         ui->UI_Parameter_Tab->setColumnWidth(i,170);
@@ -2476,9 +2498,7 @@ void MyWidget::SystemParam_tbnt_released()
             ui->ExternalDevice_tW->setRowHeight(i,50);
         }
     }
-    ui->ExternalDevice_tW->horizontalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
-    ui->ExternalDevice_tW->verticalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
-    ui->ExternalDevice_tW->setStyleSheet("selection-background-color:lightblue;");
+
 
     for(int i=0; i<14;i++)//调整 DCAC调试 的列宽行高
     {

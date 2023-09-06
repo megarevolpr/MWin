@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1257</width>
-    <height>701</height>
+    <width>1213</width>
+    <height>692</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -88,72 +88,78 @@
         <number>0</number>
        </property>
        <item row="0" column="0">
-        <layout class="QVBoxLayout" name="verticalLayout_5" stretch="1,10,1">
+        <layout class="QVBoxLayout" name="verticalLayout_5" stretch="0,10,1">
          <property name="spacing">
           <number>1</number>
          </property>
          <item>
-          <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,8">
-           <property name="spacing">
-            <number>0</number>
+          <widget class="QWidget" name="widget" native="true">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(31, 133, 227);</string>
            </property>
-           <item>
-            <widget class="QPushButton" name="ChangeLanguage_btn_1">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>48</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(31, 133, 227);
+           <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,8">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="ChangeLanguage_btn_1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>48</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">
 color: rgb(255, 255, 255);
-</string>
-             </property>
-             <property name="text">
-              <string>Change
+border:2px solid rgb(255, 255, 255);
+border-radius:23px;</string>
+              </property>
+              <property name="text">
+               <string>Change
 Language</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="label_24">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>48</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <pointsize>17</pointsize>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(31, 133, 227);
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_24">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>48</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>17</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(31, 133, 227);
 color: rgb(255, 255, 255);</string>
-             </property>
-             <property name="text">
-              <string>Basic settings</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-          </layout>
+              </property>
+              <property name="text">
+               <string>Basic settings</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
          </item>
          <item>
           <widget class="QTabWidget" name="tabWidget">
@@ -838,11 +844,26 @@ color: rgb(255, 255, 255);</string>
              </item>
             </layout>
            </widget>
-           <widget class="QWidget" name="tab">
+           <widget class="QWidget" name="UI_SystemParameter_page">
             <attribute name="title">
              <string>System parameter</string>
             </attribute>
             <layout class="QGridLayout" name="gridLayout_45">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <property name="spacing">
+              <number>0</number>
+             </property>
              <item row="0" column="0">
               <widget class="QTableWidget" name="UI_SystemParameter_Tab">
                <property name="sizePolicy">
@@ -2563,7 +2584,13 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
              <number>0</number>
             </property>
             <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_48" stretch="2,5,4,4,1,5">
+             <layout class="QHBoxLayout" name="horizontalLayout_48" stretch="2,6,4,3,1,5">
+              <property name="topMargin">
+               <number>5</number>
+              </property>
+              <property name="bottomMargin">
+               <number>5</number>
+              </property>
               <item>
                <widget class="QPushButton" name="ChangeLanguage_btn">
                 <property name="sizePolicy">
@@ -2575,7 +2602,7 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                 <property name="minimumSize">
                  <size>
                   <width>133</width>
-                  <height>48</height>
+                  <height>45</height>
                  </size>
                 </property>
                 <property name="maximumSize">
@@ -2590,7 +2617,9 @@ border-image: url(:/new_ui/UI/Enter.png);</string>
                  </font>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">color: rgb(255, 255, 255);</string>
+                 <string notr="true">color: rgb(255, 255, 255);
+border:2px solid rgb(255, 255, 255);
+border-radius:23px;</string>
                 </property>
                 <property name="text">
                  <string>Change
@@ -2625,7 +2654,7 @@ Language</string>
                 <property name="minimumSize">
                  <size>
                   <width>180</width>
-                  <height>48</height>
+                  <height>45</height>
                  </size>
                 </property>
                 <property name="font">
@@ -2711,7 +2740,7 @@ Language</string>
                 <property name="minimumSize">
                  <size>
                   <width>323</width>
-                  <height>48</height>
+                  <height>45</height>
                  </size>
                 </property>
                 <property name="font">
@@ -2723,7 +2752,7 @@ Language</string>
                  <cursorShape>ArrowCursor</cursorShape>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">color: rgb(255, 255, 255);</string>
+                 <string notr="true">color: rgb(255, 255, 255);border:2px solid rgb(31, 133, 227);</string>
                 </property>
                 <property name="text">
                  <string/>
@@ -2771,7 +2800,7 @@ Language</string>
             <enum>QFrame::Raised</enum>
            </property>
            <property name="currentIndex">
-            <number>1</number>
+            <number>4</number>
            </property>
            <widget class="QWidget" name="Host_page">
             <layout class="QGridLayout" name="gridLayout_41">
@@ -3949,7 +3978,7 @@ Language</string>
                           </size>
                          </property>
                          <property name="styleSheet">
-                          <string notr="true">border-image: url(:/new_ui/UI/ProcessBar1-02.png);</string>
+                          <string notr="true">border-image: url(:/new_ui/UI/ProcessBar1-01.png);</string>
                          </property>
                          <property name="text">
                           <string/>
@@ -4307,7 +4336,7 @@ Language</string>
                 <string notr="true"/>
                </property>
                <property name="currentIndex">
-                <number>2</number>
+                <number>0</number>
                </property>
                <widget class="QWidget" name="RT_Data_page">
                 <attribute name="title">
@@ -5868,26 +5897,42 @@ QPushButton::hover{
                  <property name="spacing">
                   <number>0</number>
                  </property>
-                 <item row="0" column="0">
-                  <layout class="QVBoxLayout" name="verticalLayout_6">
+                 <item row="1" column="0">
+                  <layout class="QVBoxLayout" name="verticalLayout_6" stretch="2,1,2">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <item>
+                    <widget class="QLabel" name="label_34">
+                     <property name="font">
+                      <font>
+                       <family>宋体</family>
+                       <pointsize>15</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>Please click on 'Alarm Information' to enter the query interface
+and view the details of the alarm information you have encountered.</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
                    <item>
                     <layout class="QHBoxLayout" name="horizontalLayout_30">
                      <item>
-                      <widget class="QLabel" name="label_34">
-                       <property name="font">
-                        <font>
-                         <family>宋体</family>
-                         <pointsize>15</pointsize>
-                        </font>
+                      <spacer name="horizontalSpacer_30">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
                        </property>
-                       <property name="text">
-                        <string>Please click on 'Alarm Information' to enter the query interface
-and view the details of the alarm information you have encountered.</string>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
                        </property>
-                       <property name="alignment">
-                        <set>Qt::AlignCenter</set>
-                       </property>
-                      </widget>
+                      </spacer>
                      </item>
                      <item>
                       <widget class="QPushButton" name="search_btn">
@@ -5903,11 +5948,10 @@ and view the details of the alarm information you have encountered.</string>
                          <height>0</height>
                         </size>
                        </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>110</width>
-                         <height>16777215</height>
-                        </size>
+                       <property name="font">
+                        <font>
+                         <pointsize>15</pointsize>
+                        </font>
                        </property>
                        <property name="styleSheet">
                         <string notr="true">QPushButton:checked {
@@ -5935,6 +5979,19 @@ Information</string>
                         <bool>false</bool>
                        </property>
                       </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_31">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
                      </item>
                     </layout>
                    </item>
@@ -7280,7 +7337,7 @@ Information</string>
                             <number>2</number>
                            </property>
                            <item>
-                            <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="2,1">
+                            <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,1">
                              <property name="spacing">
                               <number>0</number>
                              </property>
@@ -7482,7 +7539,7 @@ enable</string>
                 </font>
                </property>
                <property name="currentIndex">
-                <number>1</number>
+                <number>0</number>
                </property>
                <widget class="QWidget" name="DataReport_page">
                 <attribute name="title">
@@ -7564,12 +7621,30 @@ QTabBar#tabBar::tab:selected {
                      </property>
                      <widget class="QWidget" name="Report_tabPage_T">
                       <layout class="QGridLayout" name="gridLayout_27">
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="spacing">
+                        <number>0</number>
+                       </property>
                        <item row="0" column="0">
                         <widget class="QTableWidget" name="Report_tableWidget">
                          <property name="font">
                           <font>
                            <pointsize>14</pointsize>
                           </font>
+                         </property>
+                         <property name="editTriggers">
+                          <set>QAbstractItemView::NoEditTriggers</set>
                          </property>
                         </widget>
                        </item>
@@ -7944,7 +8019,7 @@ QTabBar#tabBar::tab:selected {
                          <item>
                           <layout class="QVBoxLayout" name="verticalLayout_4">
                            <property name="spacing">
-                            <number>1</number>
+                            <number>6</number>
                            </property>
                            <item>
                             <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,2">
@@ -8282,7 +8357,7 @@ background-color: rgb(255, 0, 0);</string>
                 <bool>false</bool>
                </property>
                <property name="currentIndex">
-                <number>4</number>
+                <number>0</number>
                </property>
                <widget class="QWidget" name="DCACParameterSet_page">
                 <attribute name="title">
@@ -9824,8 +9899,8 @@ Set rule:B1 - A1 ≥ 10V</string>
                           <rect>
                            <x>0</x>
                            <y>0</y>
-                           <width>501</width>
-                           <height>476</height>
+                           <width>482</width>
+                           <height>469</height>
                           </rect>
                          </property>
                          <property name="font">
@@ -10006,6 +10081,9 @@ Set rule:B1 - A1 ≥ 10V</string>
                                        <horstretch>0</horstretch>
                                        <verstretch>0</verstretch>
                                       </sizepolicy>
+                                     </property>
+                                     <property name="styleSheet">
+                                      <string notr="true"/>
                                      </property>
                                      <property name="text">
                                       <string>192 . 168 . 1 . 100</string>
@@ -10489,15 +10567,21 @@ Set rule:B1 - A1 ≥ 10V</string>
              <number>0</number>
             </property>
             <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_17" stretch="2,5,4,5,4">
+             <layout class="QHBoxLayout" name="horizontalLayout_17" stretch="3,5,4,5,4">
               <property name="spacing">
                <number>6</number>
               </property>
               <property name="leftMargin">
                <number>3</number>
               </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
               <property name="rightMargin">
                <number>3</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
               </property>
               <item>
                <widget class="QPushButton" name="UI_MenuBtn">
@@ -10520,7 +10604,8 @@ Set rule:B1 - A1 ≥ 10V</string>
                 </property>
                 <property name="styleSheet">
                  <string notr="true">color: rgb(255, 255, 255);
-</string>
+border:2px solid rgb(255, 255, 255);
+border-radius:26px;</string>
                 </property>
                 <property name="text">
                  <string>Menu</string>
@@ -10563,7 +10648,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                  </font>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">color: rgb(255, 255, 255);</string>
+                 <string notr="true">color: rgb(255, 255, 255);border:2px solid rgb(31, 133, 227);</string>
                 </property>
                 <property name="text">
                  <string>M_01 Converter turn off</string>
@@ -10606,7 +10691,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                  </font>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">color: rgb(255, 255, 255);</string>
+                 <string notr="true">color: rgb(255, 255, 255);border:2px solid rgb(31, 133, 227);</string>
                 </property>
                 <property name="text">
                  <string>Converter2 Turn off</string>
