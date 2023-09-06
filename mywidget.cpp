@@ -2385,9 +2385,19 @@ void MyWidget::onTimerOut()
 //系统工作模式
 void MyWidget::WordingMode(int Index)
 {
-    ui->SetPageNum_lb->setText( QString("%1/%2").arg(System_Current_Page+1).arg(SystemTotal_PAGE) );
+    if(System_Current_Page<Lead_PAGE_NUM)
+    {
+        ui->SetPageNum_lb->setText( QString("%1/%2").arg(System_Current_Page+1).arg(SystemTotal_PAGE) );
+    }
+    else {
+        ui->SetPageNum_lb->setText( QString("%1/%2").arg(System_Current_Page).arg(SystemTotal_PAGE) );
+    }
 
     CurrentCheckMode = Index;
+    if(!ui->Save_bt->isVisible()&&CurrentCheckMode!=ADVANCED_SETTING)
+    {
+        ui->Save_bt->setVisible(true);
+    }
     ui->Mode_lb->setText( Mode_Str.at(CurrentCheckMode+1) );
 
     ui->UI_stackedWidget->setCurrentWidget(ui->UI_page);
@@ -2468,16 +2478,26 @@ void MyWidget::ModeSwitchExplain(int Index)
 //返回退出键
 void MyWidget::Return(int Index)
 {
+    QString EnableMode("QToolButton::hover{color: rgb(0, 0, 0);border:2px solid rgb(27, 120, 205);background-color: rgb(27, 120, 205);}\
+                       QToolButton::!hover{color: rgb(255, 255, 255);border:2px solid rgb(27, 120, 205);background-color: rgb(27, 120, 205);}");
+    QString DisableMode("QToolButton::hover{color: rgb(0, 0, 0);border:2px solid rgb(85, 170, 255);background-color: rgb(85, 170, 255);}\
+                          QToolButton::!hover{color: rgb(255, 255, 255);border:2px solid rgb(85, 170, 255);background-color: rgb(85, 170, 255);}");
     switch (Index)
     {
         case 0:
             {
 
+
             }
             break;
         case 1:
             {
-
+                SystemMode_Group->button(0)->setStyleSheet(DisableMode);
+                SystemMode_Group->button(1)->setStyleSheet(DisableMode);
+                SystemMode_Group->button(2)->setStyleSheet(DisableMode);
+                SystemMode_Group->button(3)->setStyleSheet(DisableMode);
+                SystemMode_Group->button(4)->setStyleSheet(DisableMode);
+                SystemMode_Group->button(CurrentCheckMode)->setStyleSheet(EnableMode);
             }
             break;
         case 2:
@@ -6663,7 +6683,8 @@ void MyWidget::on_Cancel_bt_clicked()
 void MyWidget::on_Advanced_bt_clicked()
 {
     //跳转高级设置页
-    CurrentCheckMode = 5;
+    CurrentCheckMode = ADVANCED_SETTING;
+    ui->Save_bt->setVisible(false);
     ui->SetPageNum_lb->setText( QString("%1/%2").arg(Advanced_Current_Page-4).arg(AdvancedTotal_PAGE) );
     ui->Set_stackedWidget->setCurrentWidget( ui->Setting_page );
     ui->Mode_lb->setText( tr("Advanced Settings") );

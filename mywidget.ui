@@ -10553,7 +10553,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                    <string notr="true"/>
                   </property>
                   <property name="currentIndex">
-                   <number>2</number>
+                   <number>1</number>
                   </property>
                   <widget class="QWidget" name="Mode_page">
                    <layout class="QGridLayout" name="gridLayout_52">
@@ -10721,19 +10721,16 @@ QPushButton::hover{
                                <enum>Qt::LeftToRight</enum>
                               </property>
                               <property name="styleSheet">
-                               <string notr="true">QToolButton:checked {
-	border:2px solid rgb(27, 120, 205);
-	background-color: rgb(27, 120, 205);
+                               <string notr="true">QToolButton::hover{
+color: rgb(0, 0, 0);
+border:2px solid rgb(27, 120, 205);
+background-color: rgb(27, 120, 205);
 }
-QToolButton:!checked {
-	color: rgb(255, 255, 255);
-	background-color: rgb(85, 170, 255);
-	border:2px solid rgb(85, 170, 255);
-}
-QToolButton::hover{
-	color: rgb(0, 0, 0);
- }
-</string>
+QToolButton::!hover{
+color: rgb(255, 255, 255);
+border:2px solid rgb(27, 120, 205);
+background-color: rgb(27, 120, 205);
+}</string>
                               </property>
                               <property name="text">
                                <string>Self-use</string>
@@ -10785,17 +10782,16 @@ QToolButton::hover{
                                </font>
                               </property>
                               <property name="styleSheet">
-                               <string notr="true">QToolButton:checked {
-	border:2px solid rgb(27, 120, 205);
-	background-color: rgb(27, 120, 205);
-}
-QToolButton:!checked {
+                               <string notr="true">
+QToolButton:!hover {
 	color: rgb(255, 255, 255);
 	background-color: rgb(85, 170, 255);
 	border:2px solid rgb(85, 170, 255);
 }
 QToolButton::hover{
 	color: rgb(0, 0, 0);
+	background-color: rgb(85, 170, 255);
+	border:2px solid rgb(85, 170, 255);
  }
 </string>
                               </property>
@@ -10850,17 +10846,16 @@ Priority</string>
                                </font>
                               </property>
                               <property name="styleSheet">
-                               <string notr="true">QToolButton:checked {
-	border:2px solid rgb(27, 120, 205);
-	background-color: rgb(27, 120, 205);
-}
-QToolButton:!checked {
+                               <string notr="true">
+QToolButton:!hover {
 	color: rgb(255, 255, 255);
 	background-color: rgb(85, 170, 255);
 	border:2px solid rgb(85, 170, 255);
 }
 QToolButton::hover{
 	color: rgb(0, 0, 0);
+	background-color: rgb(85, 170, 255);
+	border:2px solid rgb(85, 170, 255);
  }
 </string>
                               </property>
@@ -10922,17 +10917,16 @@ model</string>
                                </font>
                               </property>
                               <property name="styleSheet">
-                               <string notr="true">QToolButton:checked {
-	border:2px solid rgb(27, 120, 205);
-	background-color: rgb(27, 120, 205);
-}
-QToolButton:!checked {
+                               <string notr="true">
+QToolButton:!hover {
 	color: rgb(255, 255, 255);
 	background-color: rgb(85, 170, 255);
 	border:2px solid rgb(85, 170, 255);
 }
 QToolButton::hover{
 	color: rgb(0, 0, 0);
+	background-color: rgb(85, 170, 255);
+	border:2px solid rgb(85, 170, 255);
  }
 </string>
                               </property>
@@ -10987,17 +10981,16 @@ mode</string>
                                </font>
                               </property>
                               <property name="styleSheet">
-                               <string notr="true">QToolButton:checked {
-	border:2px solid rgb(27, 120, 205);
-	background-color: rgb(27, 120, 205);
-}
-QToolButton:!checked {
+                               <string notr="true">
+QToolButton:!hover {
 	color: rgb(255, 255, 255);
 	background-color: rgb(85, 170, 255);
 	border:2px solid rgb(85, 170, 255);
 }
 QToolButton::hover{
 	color: rgb(0, 0, 0);
+	background-color: rgb(85, 170, 255);
+	border:2px solid rgb(85, 170, 255);
  }
 </string>
                               </property>
