@@ -811,6 +811,8 @@ public:
     QPushButton *Module_max_explain;  //最大模块数说明
     QPushButton *Module_min_explain;  //最小模块数说明
     QPushButton *Insulation_detection_enable_DCDC_explain;  //DCDC绝缘监测使能说明
+    QPushButton *BatteryCapacityAlarm_explain;
+    QPushButton *Grid_expansion_explain;
 
 
     Specification *Change_rate_of_power;
@@ -1086,6 +1088,9 @@ private:
     void SetLithiumToTable(QTableWidget *myTable);//设置锂电池页控件到表格
     void SetLead_acidToTable(QTableWidget *myTable);//设置铅酸电池页控件到表格
     void SetMixedTime_TabToTable(QTableWidget *myTable);//设置混合模式页控件到表格
+    void SetAdvancedSetup1ToTable(QTableWidget *myTable);//设置高级设置页控件到表格
+    void SetAdvancedSetup2ToTable(QTableWidget *myTable);//
+    void SetAdvancedSetup3ToTable(QTableWidget *myTable);//
 
     void MPS_state_delete();//MPS状态 释放 说明
     void Data_Report_delete();//数据报表 释放 说明

@@ -722,6 +722,8 @@ void MyWidget::MemoryAllocation()
     Module_max_explain = new QPushButton;  //最大模块数说明
     Module_min_explain = new QPushButton;  //最小模块数说明
     Insulation_detection_enable_DCDC_explain = new QPushButton;  //DCDC绝缘监测使能说明
+    BatteryCapacityAlarm_explain = new QPushButton;
+    Grid_expansion_explain = new QPushButton;
 
     /***************************外设**************************/
     //输入干接点1说明
@@ -5978,6 +5980,9 @@ void MyWidget::SetControlToTable()
     SetLithiumToTable(ui->Lithium_Tab_2);
     SetLead_acidToTable(ui->Lead_Acid_Tab);
     SetMixedTime_TabToTable(ui->MixedTime_Tab);
+    SetAdvancedSetup1ToTable(ui->Advanced_Tab_1);
+    SetAdvancedSetup2ToTable(ui->Advanced_Tab_2);
+    SetAdvancedSetup3ToTable(ui->Advanced_Tab_3);
 }
 //设置DCAC控件到表格
 void MyWidget::SetDCACToTable(QTableWidget *myTable)
@@ -6312,6 +6317,186 @@ void MyWidget::SetMixedTime_TabToTable(QTableWidget *myTable)
         ButtonToTable->add_SpecificationData(MixedModeButtonList->at(i+80), myTable, i, 4, temp13, temp4, temp9);
         ButtonToTable->add_SpecificationData(MixedModeButtonList->at(i+100), myTable,i, 5, "10", temp5, temp10);
     }
+}
+//设置高级设置页1控件到表格
+void MyWidget::SetAdvancedSetup1ToTable(QTableWidget *myTable)
+{
+    int line = 0;int column = 1;//当前解释的button行和列
+
+    ButtonToTable->add_SpecificationData(Power_control_type_explain, myTable, line++, column,\
+                                         "CP_AC" , tr("Power control type"), \
+                                         tr("Constant Voltage (CV) mode: The converter will operate in constant voltage mode on the DC side.\n"
+                                            "Constant Current (CC) mode: The converter will operate in constant current mode on the DC side.\n"
+                                            "Constant Power AC (CP_AC) mode: The power level can be set at \"constant power.\" The value represents the power level, positive for discharge and negative for charge. "
+                                            "For example, setting it to -5 means that the AC side will charge the battery with a power of 5 kW. Due to converter losses, "
+                                            "the DC side power will be lower than the AC side power in this case. Conversely, setting it to 5 means that the AC side will output power at 5 kW. "
+                                            "Due to converter losses, the DC side power will be higher than the AC side power in this case.\nReserved."));
+
+    ButtonToTable->add_SpecificationData(Output_reactive_power_mode_explain, myTable, line++, column, \
+                                         tr("Non adjustable"), tr("Output reactive power mode"), \
+                                         tr("Reactive Power Output Mode: Default non-adjustable, options include Power Factor, Reactive Power, non-adjustable."));
+
+    ButtonToTable->add_SpecificationData(Grid_frequency_upper_limit_explain, myTable, line++, column, \
+                                         "0.2", tr("Upper limit of power grid frequency variation range"), \
+                                         tr("Upper limit of power grid frequency variation range: The maximum range of frequency variation allowed on the AC side, which can be selected as 0.2, 0.5, 1, 5."));
+
+    ButtonToTable->add_SpecificationData(Grid_frequency_lower_limit_explain, myTable, line++, column, \
+                                         "-0.5", tr("Lower limit of power grid frequency variation range"), \
+                                         tr("Lower limit of power grid frequency variation range: The maximum range of frequency variation allowed on the AC side, which can be selected as-0.5, -1, -2, -5."));
+
+    ButtonToTable->add_SpecificationData(Vol_protection_upper_limit_explain, myTable, line++, column, \
+                                         "+15", tr("Vol protection upper limit"), \
+                                         tr("Upper limit of voltage protection range: The maximum range of voltage variation allowed on the AC side, which can be selected as 10, 15, 20."));
+
+    ButtonToTable->add_SpecificationData(Vol_protection_lower_limit_explain, myTable, line++, column, \
+                                         "-15", tr("Vol protection lower limit"), \
+                                         tr("Lower limit of voltage protection range: The minimum range of voltage variation allowed on the AC side, which can be selected as -10, -15, -20."));
+
+    ButtonToTable->add_SpecificationData(Output_power_limit_explain, myTable, line++, column,\
+                                         "100", tr("Output power limit"), \
+                                         tr("Output Power Limit: Restricts the upper limit of the set value for the power on the AC side of the converter."));
+
+    ButtonToTable->add_SpecificationData(DG_capacity_explain, myTable, line++, column, \
+                                         "100", tr("DG capacity"), \
+                                         tr("Diesel Generator: Rated Power of the Diesel Generator."));
+
+    line = 0;
+    column = 3;
+    ButtonToTable->add_SpecificationData(Host_Address_explain, myTable, line++, column,\
+                                         "1", tr("Serial Communication Address"), \
+                                         tr("Serial Communication Address: The default value is 1, adjustable range is between 1 and 255, used for matching address during serial communication."));
+
+    ButtonToTable->add_SpecificationData(serial_port_1_explain, myTable, line++, column, \
+                                         "9600", tr("serial port 2"), \
+                                         tr("Serial Port 2 has six selectable baud rates: 1200, 2400, 4800, 9600, 19200, and 38400.\
+                                            The default baud rate for Serial Port 2 is 9600 bps, with eight data bits, no parity, and one stop bit (8-N-1)."));
+
+    ButtonToTable->add_SpecificationData(serial_port_2_explain, myTable, line++, column, \
+                                         "9600", tr("serial port 3"), \
+                                         tr("Serial Port 3 has six selectable baud rates: 1200, 2400, 4800, 9600, 19200, and 38400. The default baud rate for Serial Port 3 is 9600 bps, with eight data bits, no parity, and one stop bit (8-N-1)."));
+
+    ButtonToTable->add_SpecificationData(serial_port_3_explain, myTable, line++, column, \
+                                         "9600", tr("serial port 4"), \
+                                         tr("Serial Port 4 has six selectable baud rates: 1200, 2400, 4800, 9600, 19200, and 38400. The default baud rate for Serial Port 4 is 9600 bps, with eight data bits, no parity, and one stop bit (8-N-1)."));
+
+    ButtonToTable->add_SpecificationData(serial_port_4_explain, myTable, line++, column, \
+                                         "9600", tr("serial port 5"), \
+                                         tr("Serial Port 5 has six selectable baud rates: 1200, 2400, 4800, 9600, 19200, and 38400. The default baud rate for Serial Port 5 is 9600 bps, with eight data bits, no parity, and one stop bit (8-N-1)."));
+
+    ButtonToTable->add_SpecificationData(serial_port_5_explain, myTable, line++, column, \
+                                         "9600", tr("serial port 6"), \
+                                         tr("Serial Port 6 has six selectable baud rates: 1200, 2400, 4800, 9600, 19200, and 38400. The default baud rate for Serial Port 6 is 9600 bps, with eight data bits, no parity, and one stop bit (8-N-1)."));
+
+    ButtonToTable->add_SpecificationData(Can_port_1_explain, myTable, line++, column, \
+                                         "500", tr("Can port 1"), \
+                                         tr("CAN1 Port: The baud rate for internal communication is 500 kbps by default and cannot be modified."));
+
+    ButtonToTable->add_SpecificationData(Can_port_2_explain, myTable, line++, column, \
+                                         "250", tr("Can port 2"), \
+                                         tr("CAN2 Port: Optional baud rates for the CAN2 port include 100, 125, 250, 500, and 800 kbps, with a default baud rate of 500 kbps."));
+
+    line = 0;
+    column = 5;
+    ButtonToTable->add_SpecificationData(Machine_type_explain, myTable, line++, column, \
+                                         "MPS-TS", tr("Machine type"), \
+                                         tr("Converter Model: As per factory settings, generally not modifiable."));
+
+    ButtonToTable->add_SpecificationData(Machine_capacity_explain, myTable, line++, column, \
+                                         "100", tr("Machine capacity"), \
+                                             tr("The rated capacity of the converter shall be based on the factory value and cannot be changed."));
+
+
+    ButtonToTable->add_SpecificationData(Output_Fre_grade_explain, myTable, line++, column, \
+                                         "50", tr("Output Fre grade"), \
+                                         tr("Output Frequency Level: Default 50Hz, typically 50Hz or 60Hz."));
+
+    ButtonToTable->add_SpecificationData(Output_vol_level_explain, myTable, line++, column, \
+                                         "400", tr("Output vol level"), \
+                                         tr("Output Voltage Level: As per factory settings, generally not modifiable."));
+
+}
+//设置高级设置页2控件到表格
+void MyWidget::SetAdvancedSetup2ToTable(QTableWidget *myTable)
+{
+    int line = 0;int column = 1;//当前解释的button行和列
+    ButtonToTable->add_SpecificationData(Change_rate_of_power_explain, myTable, line++, column, \
+                                         "20", tr("Power change rate"), \
+                                         tr("Power change rate: the rate at which power changes within a second ."));
+
+    ButtonToTable->add_SpecificationData(Grid_connected_mode_of_Inv_explain, myTable, line++, column, \
+                                         tr("Disable"), tr("Converter Anti-Reverse Flow"), \
+                                         tr("Converter Anti-Reverse Flow: Enable, Disable;"
+                                            "\nEnabling prevents converter current from flowing into the grid, while Disabling allows converter current to flow into the grid."));
+
+    ButtonToTable->add_SpecificationData(BmsComFaultTime_explain, myTable, line++, column, \
+                                         tr("20"), tr("Bms Com. Fault Time"), \
+                                         tr("BMS communication fault determination time: "
+                                            "The BMS communication fault determination time refers to the BMS communication fault when the BMS communication is disconnected and the communication is not recovered after a preset period of time."));
+
+    ButtonToTable->add_SpecificationData(EMSComFaultModel_explain, myTable, line++, column, \
+                                         tr("120"), tr("EMS Com. Fault Model"), \
+                                         tr("EMS communication fault determination time: "
+                                            "The EMS communication fault determination time refers to the time when the communication between the EMS is disconnected and the communication is not recovered after a preset period of time."));
+
+    ButtonToTable->add_SpecificationData(Converter_side_vol_level_explain, myTable, line++, column, \
+                                         "270:400", tr("Transformer Turns Ratio"), \
+                                                 tr("Transformer Voltage Ratio: To be determined by the factory nameplate, not modifiable."));
+
+    ButtonToTable->add_SpecificationData(Language_explain, myTable, line++, column, \
+                                         tr("English"), tr("Language"), \
+                                         tr("You can set the display language of the screen to Chinese or English. The system needs to restart before switching the language."));
+
+    ButtonToTable->add_SpecificationData(Sounds_explain, myTable, line++, column, \
+                                         tr("Allow"), tr("Sounds"), \
+                                         tr("Set whether the display is enabled sound, which can be allowed(Allow) or prohibited(forbid)."));
+
+    ButtonToTable->add_SpecificationData(UserPassPort_explain, myTable, line++, column, \
+                                         "123456", tr("User password"), \
+                                         tr("User password: Available for resetting the user password. The default user password is 123456. (Note: The user password must be six digits.)"));
+
+    ButtonToTable->add_SpecificationData(RootPassport_explain, myTable, line++, column,\
+                                         "888888", tr("Admin password"), \
+                                         tr("Admin password: Available for resetting the admin password. The default admin password is 888888. (Note: The admin password must be six digits.)"));
+
+    line = 0;
+    column = 3;
+    ButtonToTable->add_SpecificationData(BatteryCapacityAlarm_explain,myTable,line++,column,\
+                                         tr("Prohibit"),tr("Battery Capacity Alarm"),\
+                                         tr("."));
+
+    ButtonToTable->add_SpecificationData(ProtocolVersion_explain, myTable, line++, column, \
+                                         "V1.0", tr("ProtocolVersion"), \
+                                         tr("Protocol version: View the current protocol version. The default protocol version number is V1.0."));
+
+    ButtonToTable->add_SpecificationData(Clear_Data_explain, myTable, line++, column, \
+                                         tr("Clear"), tr("Clear Data"), \
+                                         tr("Clear previous recorded data and operation data of the system."));
+
+    ButtonToTable->add_SpecificationData(Restore_factory_explain, myTable,line++, column, \
+                                         tr("restore"), tr("Restore factory"), \
+                                         tr("Restore the factory default Settings."));
+
+    ButtonToTable->add_SpecificationData(BackupSetParameters_explain, myTable,line++, column, \
+                                         tr("Backup"), tr("Backup Set Parameters"), \
+                                         tr("Backup setting parameters: Backup setting parameters refers to backing up the parameters set on the current device so that the backup parameter Settings can be restored when needed."));
+
+    ButtonToTable->add_SpecificationData(RestoreBackupSetParameters_explain, myTable,line++, column, \
+                                         tr("Restore\nBackup"), tr("Restore Backup Set Parameters"), \
+                                         tr("Restore backup setting parameters: Restore backup setting parameters means to restore the device to the last backup setting parameters and restart the device."));
+
+    //系统升级说明
+    System_upgrade_explain->setText(tr("upgrade"));
+    myTable->setCellWidget(line++, column, (QWidget *)System_upgrade_explain);
+
+    //电网扩容使能
+    Grid_expansion_explain->setText(tr("Grid expansion"));
+    myTable->setCellWidget(line++, column, (QWidget *)Grid_expansion_explain);
+
+}
+//设置高级设置页3控件到表格
+void MyWidget::SetAdvancedSetup3ToTable(QTableWidget *myTable)
+{
+
 }
 
 /*********选中第一个模块*********/
