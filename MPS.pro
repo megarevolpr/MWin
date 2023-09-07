@@ -20,11 +20,13 @@ include         ($$PWD/Specification/Specification.pri)
 include         ($$PWD/OperMode/OperMode.pri)
 include         ($$PWD/UpgradeTools/UpgradeTools.pri)
 include         ($$PWD/FaultTableInterface/FaultTableInterface.pri)
+include         ($$PWD/SpecificationData/SpecificationData.pri)
 
 INCLUDEPATH     +=$$PWD/Specification/
 INCLUDEPATH     +=$$PWD/OperMode/
 INCLUDEPATH     +=$$PWD/UpgradeTools/
 INCLUDEPATH     +=$$PWD/FaultTableInterface/
+INCLUDEPATH     +=$$PWD/SpecificationData/
 
 CONFIG += c++11
 

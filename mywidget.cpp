@@ -60,15 +60,14 @@ void MyWidget::LoadLanguageInit()
     }
 }
 
-/********************************************************
- * 初始化内存空间
-*********************************************************/
+/*****初始化内存空间******/
 void MyWidget::MemoryAllocation()
 {
     IPShow = true;
     mode_expelain = new OperMode(this);
     UpgradeInterface = new UpgradeTools(this);
     FaultTable = new FaultTableInterface(this,LanguageType);
+    ButtonToTable = new SpecificationData(this);
     /****************QButtonGroup**************/
     Mode_Str<<tr("Battery Area")<<tr("Self-issuance and self-use")<<tr("Battery Priority")<<tr("Manual")<<tr("Optimal model")<<tr("Mixed mode");
     new_ui_TabList<<ui->DCAC_Tab<<ui->DCDC_Tab<<ui->Lithium_Tab_2<<ui->Lead_Acid_Tab<<ui->MixedTime_Tab<<ui->Advanced_Tab_1
@@ -289,6 +288,7 @@ void MyWidget::MemoryAllocation()
     Control_mode_explain = new QPushButton;             //控制模式说明
     Machine_number_explain = new QPushButton;           //设备号说明
     Parallel_explain = new QPushButton;                 //并机说明
+    G_Constant_power_explain = new QPushButton;
 //    Unbalance_power_enable_explain = new QPushButton;   //功率不平衡使能说明
 
     /***************************DC/AC参数**********************************/
@@ -297,6 +297,7 @@ void MyWidget::MemoryAllocation()
 //    Battery_position_explain = new QPushButton;                  //电池位置说明
     Voltage_level_explain = new QPushButton;                     //电压等级说明
     Current_value_explain = new QPushButton;                     //电流值说明
+    OuterLoopControl_explain = new QPushButton;
 
     /***************************电池设置 锂电****************************/
 
@@ -335,6 +336,7 @@ void MyWidget::MemoryAllocation()
     Generator_turn_on_SOC_A1_explain  = new QPushButton;
     Grid_off_EOD_explain  = new QPushButton;
     Grid_on_EOD_explain  = new QPushButton;
+    DCACReferenceVoltage_explain  = new QPushButton;
     /*Shutdown_voltage_point_explain  = new QPushButton;
     Mending_center_point_explain  = new QPushButton;
     Temperature_filling_coefficient_explain  = new QPushButton;
@@ -1134,17 +1136,18 @@ void MyWidget::Delete_explain()
     HistoryRecord_delete();//释放 历史记录
     OperationLog_tab_delete();//释放 操作日志
 
-    DCDC_Paramter_tab_delete();//释放 DC/DC参数
-    Battery_Setup_Tab_delete();//释放 电池设置-锂电
-    //    AutoOperation_delete();//释放 自动运行
-    SystemMessages_delete();//释放 系统消息
-    FunctionSet_delete();//释放 功能设置
-    SystemParameter_delete();//释放 系统参数
-    ExternalDevice_delete();//释放 外设
-    DCAC_Debugg_delete();//释放 DCAC调试
-    DCDC_Debugg_delete();//释放 DCDC调试
-    DC_AC_Parameter_tab_delete();//释放 DC/AC参数
-    Battery_Setup_Lead_Tab_delete();//释放 电池设置-铅酸
+
+//    DCDC_Paramter_tab_delete();//释放 DC/DC参数
+//    Battery_Setup_Tab_delete();//释放 电池设置-锂电
+//    //    AutoOperation_delete();//释放 自动运行
+//    SystemMessages_delete();//释放 系统消息
+//    FunctionSet_delete();//释放 功能设置
+//    SystemParameter_delete();//释放 系统参数
+//    ExternalDevice_delete();//释放 外设
+//    DCAC_Debugg_delete();//释放 DCAC调试
+//    DCDC_Debugg_delete();//释放 DCDC调试
+//    DC_AC_Parameter_tab_delete();//释放 DC/AC参数
+//    Battery_Setup_Lead_Tab_delete();//释放 电池设置-铅酸
 }
 
 /*******初始化界面*********/
@@ -1152,10 +1155,12 @@ void MyWidget::UIPageInit()
 {
     FirstPage();  //主页点击
     RunStatePage();//实时数据
-    SystemSettingPage();//系统设置
+    WorkingModeInit();//基础&高级设置表格初始化
+//    SystemSettingPage();//系统设置
     LCDSetting();   //实时刷新时间
     RecordPage();//记录页面
-    SystemParam_tbnt_released();//绘制高级设置界面
+//    SystemParam_tbnt_released();//绘制高级设置界面
+    SetControlToTable();//设置控件到表格
 }
 /************触摸点击**********/
 void MyWidget::FirstPage()
@@ -1203,9 +1208,12 @@ void MyWidget::ChangeLanguage_btn_clicked()
     }
 
     Delete_explain();//释放空间
+    delete ButtonToTable;
     mode_expelain = new OperMode(this);
     UpgradeInterface = new UpgradeTools(this);
     FaultTable = new FaultTableInterface(this,LanguageType);
+    ButtonToTable = new SpecificationData(this);
+
     UIPageInit();       //初始化界面
 }
 //操作模式新界面
@@ -1288,7 +1296,7 @@ void MyWidget::RunStatePage()
 //系统设置
 void MyWidget::SystemSettingPage()
 {
-    WorkingModeInit();
+
     UserParam_tab();/*系统-设置表*/
     DCDCParam_tab();/*系统-DCDC设置表*/
     BatterySet_tab();/*系统-电池设置表-锂电*/
@@ -2022,346 +2030,6 @@ void MyWidget::UserParam_tab()
     DC_AC_Parameter_tab(ui->System_Tab);    //DCAC参数页说明
 }
 
-//展示PCS故障信息表
-/*void MyWidget::PCS_Alarm_information_table()
-{
-    ui->RTAlarm_Data_page->setRowHeight(0, 110);
-    QStringList RTAlarm_List;
-    RTAlarm_List << tr("Inverter overcurrent") << tr("General failure") \
-                << tr("Inductive current instantaneous value >3lp or inductive current RMS value >1.36ln") \
-                << tr("PCS shut down and disconnect the output contactor") \
-                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
-    for(int i = 0; i < RTAlarm_List.size(); i++)
-    {
-        ui->RTAlarm_Data_page->setItem(0, i, new QTableWidgetItem(RTAlarm_List.at(i)));
-        ui->RTAlarm_Data_page->item(0, i)->setTextAlignment(Qt::AlignCenter);
-    }
-
-    ui->RTAlarm_Data_page->setRowHeight(1, 130);
-    RTAlarm_List.clear();
-    RTAlarm_List << tr("Converter fault") << tr("General failure")\
-                << tr("During soft startup of converter, inverter voltage RMS more then 1.2Vgrid or inverter voltage RMS less than 0.3Vgrid after 30s") \
-                << tr("PCS shut down and Stop the soft startup") \
-                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
-    for(int i = 0; i < RTAlarm_List.size(); i++)
-    {
-        ui->RTAlarm_Data_page->setItem(1, i, new QTableWidgetItem(RTAlarm_List.at(i)));
-        ui->RTAlarm_Data_page->item(1, i)->setTextAlignment(Qt::AlignCenter);
-    }
-
-    ui->RTAlarm_Data_page->setRowHeight(2, 110);
-    RTAlarm_List.clear();
-    RTAlarm_List << tr("Battery low voltage") << tr("Warning") \
-                << tr("The DC input/output voltage is lower than the battery EOD voltage or less than 1.414 times the grid line voltage") \
-                << tr("PCS shut down and the AC contactor is disconnected") \
-                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
-    for(int i = 0; i < RTAlarm_List.size(); i++)
-    {
-        ui->RTAlarm_Data_page->setItem(2, i, new QTableWidgetItem(RTAlarm_List.at(i)));
-        ui->RTAlarm_Data_page->item(2, i)->setTextAlignment(Qt::AlignCenter);
-    }
-
-    ui->RTAlarm_Data_page->setRowHeight(3, 200);
-    RTAlarm_List.clear();
-    RTAlarm_List << tr("Low battery power") << tr("Warning") \
-                << tr("The battery voltage is lower than the EOD voltage value (applicable to BMS free battery systems to prevent voltage rebound)") \
-                << tr("When the PCS is in discharge state, the machine stops (the charging process is not affected) and the AC contactor is disconnected") \
-                << tr("Recoverable, The alarm is cleared when the charging time of PCS is longer than 5 minutes");
-    for(int i = 0; i < RTAlarm_List.size(); i++)
-    {
-        ui->RTAlarm_Data_page->setItem(3, i, new QTableWidgetItem(RTAlarm_List.at(i)));
-        ui->RTAlarm_Data_page->item(3, i)->setTextAlignment(Qt::AlignCenter);
-    }
-
-    ui->RTAlarm_Data_page->setRowHeight(4, 130);
-    RTAlarm_List.clear();
-    RTAlarm_List << tr("DC bus overvoltage") << tr("Serious failure") \
-                << tr("DC input voltage more then 850V") \
-                << tr("PCS shut down, the AC contactor is disconnected, and the DC circuit breaker is tripped") \
-                << tr("Unrecoverable");
-    for(int i = 0; i < RTAlarm_List.size(); i++)
-    {
-        ui->RTAlarm_Data_page->setItem(4, i, new QTableWidgetItem(RTAlarm_List.at(i)));
-        ui->RTAlarm_Data_page->item(4, i)->setTextAlignment(Qt::AlignCenter);
-    }
-
-    ui->RTAlarm_Data_page->setRowHeight(5, 130);
-    RTAlarm_List.clear();
-    RTAlarm_List << tr("DC bus short circuit") << tr("Serious failure") \
-                << tr("The DC bus voltage is less than 200V, the DC current is more than 50A, and the judgment time is 200us") \
-                << tr("PCS shut down, the AC contactor is disconnected, and the DC circuit breaker is tripped") \
-                << tr("Unrecoverable");
-    for(int i = 0; i < RTAlarm_List.size(); i++)
-    {
-        ui->RTAlarm_Data_page->setItem(5, i, new QTableWidgetItem(RTAlarm_List.at(i)));
-        ui->RTAlarm_Data_page->item(5, i)->setTextAlignment(Qt::AlignCenter);
-    }
-
-    ui->RTAlarm_Data_page->setRowHeight(6, 110);
-    RTAlarm_List.clear();
-    RTAlarm_List << tr("The output contactor is open") << tr("General failure")\
-                << tr("When PCS is running, the auxiliary contact signal of AC contactor is in the disconnected state") \
-                << tr("PCS shut down and the AC contactor is disconnected") \
-                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
-    for(int i = 0; i < RTAlarm_List.size(); i++)
-    {
-        ui->RTAlarm_Data_page->setItem(6, i, new QTableWidgetItem(RTAlarm_List.at(i)));
-        ui->RTAlarm_Data_page->item(6, i)->setTextAlignment(Qt::AlignCenter);
-    }
-
-    ui->RTAlarm_Data_page->setRowHeight(7, 110);
-    RTAlarm_List.clear();
-    RTAlarm_List << tr("Output contactor short circuit") << tr("General failure")\
-                << tr("When PCS is shut down, the auxiliary contact signal of AC contactor is closed") \
-                << tr("PCS shut down and the AC contactor is disconnected") \
-                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
-    for(int i = 0; i < RTAlarm_List.size(); i++)
-    {
-        ui->RTAlarm_Data_page->setItem(7, i, new QTableWidgetItem(RTAlarm_List.at(i)));
-        ui->RTAlarm_Data_page->item(7, i)->setTextAlignment(Qt::AlignCenter);
-    }
-
-    ui->RTAlarm_Data_page->setRowHeight(8, 310);
-    RTAlarm_List.clear();
-    RTAlarm_List << tr("The converter is overheated") << tr("Warning") \
-                << tr("IGBT temperature exceeds 105℃ or reactor temperature exceeds 160℃") \
-                << tr("IGBT overtemperature: derating operation (grid-connected); IGBT overtemperature: PCS shut down (off-grid), AC contactor is disconnected; Reactor overtemperature: PCS shut down and AC contactor is disconnected") \
-                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
-    for(int i = 0; i < RTAlarm_List.size(); i++)
-    {
-        ui->RTAlarm_Data_page->setItem(8, i, new QTableWidgetItem(RTAlarm_List.at(i)));
-        ui->RTAlarm_Data_page->item(8, i)->setTextAlignment(Qt::AlignCenter);
-    }
-
-    ui->RTAlarm_Data_page->setRowHeight(9, 90);
-    RTAlarm_List.clear();
-    RTAlarm_List << tr("Output over load") << tr("Warning") \
-                << tr("Off-grid load power >110%Pn") \
-                << tr("PCS shut down and the AC contactor is disconnected") \
-                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
-    for(int i = 0; i < RTAlarm_List.size(); i++)
-    {
-        ui->RTAlarm_Data_page->setItem(9, i, new QTableWidgetItem(RTAlarm_List.at(i)));
-        ui->RTAlarm_Data_page->item(9, i)->setTextAlignment(Qt::AlignCenter);
-    }
-
-    ui->RTAlarm_Data_page->setRowHeight(10, 170);
-    RTAlarm_List.clear();
-    RTAlarm_List << tr("The positive and negative terminals of the battery are connected inversely fault") << tr("Warning") \
-                << tr("The DC input is reversed") \
-                << tr("PCS shut down and the AC contactor is disconnected") \
-                << tr("Unrecoverable");
-    for(int i = 0; i < RTAlarm_List.size(); i++)
-    {
-        ui->RTAlarm_Data_page->setItem(10, i, new QTableWidgetItem(RTAlarm_List.at(i)));
-        ui->RTAlarm_Data_page->item(10, i)->setTextAlignment(Qt::AlignCenter);
-    }
-
-    ui->RTAlarm_Data_page->setRowHeight(11, 170);
-    RTAlarm_List.clear();
-    RTAlarm_List << tr("The DC contactor is faulty") << tr("General failure") \
-                << tr("When the driving signal is a closed signal, the pressure difference between the battery and the bus is greater than 50V;When the driving signal is off, the auxiliary contact signal is closed") \
-                << tr("PCS shut down and the AC contactor is disconnected") \
-                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
-    for(int i = 0; i < RTAlarm_List.size(); i++)
-    {
-        ui->RTAlarm_Data_page->setItem(11, i, new QTableWidgetItem(RTAlarm_List.at(i)));
-        ui->RTAlarm_Data_page->item(11, i)->setTextAlignment(Qt::AlignCenter);
-    }
-
-    ui->RTAlarm_Data_page->setRowHeight(12, 90);
-    RTAlarm_List.clear();
-    RTAlarm_List << tr("EMS communicate\nfault") << tr("General failure") \
-                << tr("The communication between PCS and EMS is lost, and the judgment time is 3 minutes") \
-                << tr("PCS shut down and the AC contactor is disconnected") \
-                << tr("Recoverable, the fault recovers automatically 30 seconds after it is rectified");
-    for(int i = 0; i < RTAlarm_List.size(); i++)
-    {
-        ui->RTAlarm_Data_page->setItem(12, i, new QTableWidgetItem(RTAlarm_List.at(i)));
-        ui->RTAlarm_Data_page->item(12, i)->setTextAlignment(Qt::AlignCenter);
-    }
-
-    ui->RTAlarm_Data_page->setRowHeight(13, 90);
-    RTAlarm_List.clear();
-    RTAlarm_List << tr("BMS communicate\nfault") << tr("General failure") \
-                << tr("Communication loss between PCS and BMS, judgment time 50s") \
-                << tr("PCS shut down and the AC contactor is disconnected") \
-                << tr("Recoverable, the fault recovers automatically 30 seconds after it is rectified");
-    for(int i = 0; i < RTAlarm_List.size(); i++)
-    {
-        ui->RTAlarm_Data_page->setItem(13, i, new QTableWidgetItem(RTAlarm_List.at(i)));
-        ui->RTAlarm_Data_page->item(13, i)->setTextAlignment(Qt::AlignCenter);
-    }
-
-    ui->RTAlarm_Data_page->setRowHeight(14, 130);
-    RTAlarm_List.clear();
-    RTAlarm_List << tr("Converter phase loss fault") << tr("General failure") \
-                << tr("When the grid-connected power is greater than 50%, one or more lines of the three-phase circuit have no output power, and the judgment time is 10s") \
-                << tr("PCS shut down and the AC contactor is disconnected") \
-                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
-    for(int i = 0; i < RTAlarm_List.size(); i++)
-    {
-        ui->RTAlarm_Data_page->setItem(14, i, new QTableWidgetItem(RTAlarm_List.at(i)));
-        ui->RTAlarm_Data_page->item(14, i)->setTextAlignment(Qt::AlignCenter);
-    }
-
-    ui->RTAlarm_Data_page->setRowHeight(15, 110);
-    RTAlarm_List.clear();
-    RTAlarm_List << tr("Grid overvoltage") << tr("Warning") \
-                << tr("If the power grid voltage exceeds the maximum allowable voltage (90% to 70% can be set), the judgment time is 1s") \
-                << tr("PCS shut down and the AC contactor is disconnected") \
-                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
-    for(int i = 0; i < RTAlarm_List.size(); i++)
-    {
-        ui->RTAlarm_Data_page->setItem(15, i, new QTableWidgetItem(RTAlarm_List.at(i)));
-        ui->RTAlarm_Data_page->item(15, i)->setTextAlignment(Qt::AlignCenter);
-    }
-
-    ui->RTAlarm_Data_page->setRowHeight(16, 110);
-    RTAlarm_List.clear();
-    RTAlarm_List << tr("Grid undervoltage") << tr("Warning") \
-                << tr("If the power grid voltage exceeds the maximum allowable voltage (90% to 70% can be set), the judgment time is 1s") \
-                << tr("PCS shut down and the AC contactor is disconnected") \
-                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
-    for(int i = 0; i < RTAlarm_List.size(); i++)
-    {
-        ui->RTAlarm_Data_page->setItem(16, i, new QTableWidgetItem(RTAlarm_List.at(i)));
-        ui->RTAlarm_Data_page->item(16, i)->setTextAlignment(Qt::AlignCenter);
-    }
-
-    ui->RTAlarm_Data_page->setRowHeight(17, 150);
-    RTAlarm_List.clear();
-    RTAlarm_List << tr("Grid reverse sequence") << tr("Warning") \
-                << tr("The three-phase phase sequence is reversed (the positive sequence mode value of the grid voltage is less than the negative sequence mode value), and the judgment time is 1s") \
-                << tr("PCS shut down and the AC contactor is disconnected") \
-                << tr("Unrecoverable");
-    for(int i = 0; i < RTAlarm_List.size(); i++)
-    {
-        ui->RTAlarm_Data_page->setItem(17, i, new QTableWidgetItem(RTAlarm_List.at(i)));
-        ui->RTAlarm_Data_page->item(17, i)->setTextAlignment(Qt::AlignCenter);
-    }
-
-    ui->RTAlarm_Data_page->setRowHeight(18, 150);
-    RTAlarm_List.clear();
-    RTAlarm_List << tr("Grid frequency anomaly") << tr("Warning") \
-                << tr("Grid frequency frequency beyond the allowable range of PCS (±2Hz can be set)") \
-                << tr("PCS shut down and the AC contactor is disconnected") \
-                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
-    for(int i = 0; i < RTAlarm_List.size(); i++)
-    {
-        ui->RTAlarm_Data_page->setItem(18, i, new QTableWidgetItem(RTAlarm_List.at(i)));
-        ui->RTAlarm_Data_page->item(18, i)->setTextAlignment(Qt::AlignCenter);
-    }
-
-    ui->RTAlarm_Data_page->setRowHeight(19, 150);
-    RTAlarm_List.clear();
-    RTAlarm_List << tr("Converter shutter island protection") << tr("Warning") \
-                << tr("Initiative shutter island protection mode, the power grid loses power, and the load matches the grid-connected power and phase Angle of the inverter") \
-                << tr("PCS shut down and the AC contactor is disconnected") \
-                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
-    for(int i = 0; i < RTAlarm_List.size(); i++)
-    {
-        ui->RTAlarm_Data_page->setItem(19, i, new QTableWidgetItem(RTAlarm_List.at(i)));
-        ui->RTAlarm_Data_page->item(19, i)->setTextAlignment(Qt::AlignCenter);
-    }
-
-    ui->RTAlarm_Data_page->setRowHeight(20, 150);
-    RTAlarm_List.clear();
-    RTAlarm_List << tr("Drive line fault") << tr("General failure") \
-                << tr("The driver cable port is loose") \
-                << tr("PCS shut down and the AC contactor is disconnected") \
-                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
-    for(int i = 0; i < RTAlarm_List.size(); i++)
-    {
-        ui->RTAlarm_Data_page->setItem(20, i, new QTableWidgetItem(RTAlarm_List.at(i)));
-        ui->RTAlarm_Data_page->item(20, i)->setTextAlignment(Qt::AlignCenter);
-    }
-
-    ui->RTAlarm_Data_page->setRowHeight(21, 150);
-    RTAlarm_List.clear();
-    RTAlarm_List << tr("Lightning protection fault") << tr("Warning") \
-                << tr("Surge arrester breakdown or leakage") \
-                << tr("PCS shut down and the AC contactor is disconnected") \
-                << tr("Unrecoverable");
-    for(int i = 0; i < RTAlarm_List.size(); i++)
-    {
-        ui->RTAlarm_Data_page->setItem(21, i, new QTableWidgetItem(RTAlarm_List.at(i)));
-        ui->RTAlarm_Data_page->item(21, i)->setTextAlignment(Qt::AlignCenter);
-    }
-
-    ui->RTAlarm_Data_page->setRowHeight(22, 150);
-    RTAlarm_List.clear();
-    RTAlarm_List << tr("The AC auxiliary power supply is faulty") << tr("General failure") \
-                << tr("The AC auxiliary power output is abnormal. Procedure") \
-                << tr("PCS shut down and the AC contactor is disconnected") \
-                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
-    for(int i = 0; i < RTAlarm_List.size(); i++)
-    {
-        ui->RTAlarm_Data_page->setItem(22, i, new QTableWidgetItem(RTAlarm_List.at(i)));
-        ui->RTAlarm_Data_page->item(22, i)->setTextAlignment(Qt::AlignCenter);
-    }
-
-    ui->RTAlarm_Data_page->setRowHeight(23, 150);
-    RTAlarm_List.clear();
-    RTAlarm_List << tr("The DC auxiliary power supply is faulty") << tr("General failure") \
-                << tr("The DC auxiliary power output is abnormal. Procedure") \
-                << tr("PCS shut down and the AC contactor is disconnected") \
-                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
-    for(int i = 0; i < RTAlarm_List.size(); i++)
-    {
-        ui->RTAlarm_Data_page->setItem(23, i, new QTableWidgetItem(RTAlarm_List.at(i)));
-        ui->RTAlarm_Data_page->item(23, i)->setTextAlignment(Qt::AlignCenter);
-    }
-
-    ui->RTAlarm_Data_page->setRowHeight(24, 150);
-    RTAlarm_List.clear();
-    RTAlarm_List << tr("Fan failure") << tr("Warning") \
-                << tr("The fan cannot be started") \
-                << tr("PCS derating operation") \
-                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
-    for(int i = 0; i < RTAlarm_List.size(); i++)
-    {
-        ui->RTAlarm_Data_page->setItem(24, i, new QTableWidgetItem(RTAlarm_List.at(i)));
-        ui->RTAlarm_Data_page->item(24, i)->setTextAlignment(Qt::AlignCenter);
-    }
-
-    ui->RTAlarm_Data_page->setRowHeight(25, 150);
-    RTAlarm_List.clear();
-    RTAlarm_List << tr("Emergency shutdown") << tr("Warning") \
-                << tr("Press the EPO button on the converter control panel") \
-                << tr("PCS shut down and the AC contactor is disconnected") \
-                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
-    for(int i = 0; i < RTAlarm_List.size(); i++)
-    {
-        ui->RTAlarm_Data_page->setItem(25, i, new QTableWidgetItem(RTAlarm_List.at(i)));
-        ui->RTAlarm_Data_page->item(25, i)->setTextAlignment(Qt::AlignCenter);
-    }
-
-    ui->RTAlarm_Data_page->setRowHeight(26, 150);
-    RTAlarm_List.clear();
-    RTAlarm_List << tr("CT or Hall open circuit fault") << tr("General failure") \
-                << tr("When PCS grid-connected power is greater than 50%, CT detection current is less than 70% of the given quantity") \
-                << tr("PCS shut down and the AC contactor is disconnected") \
-                << tr("Recoverable, automatic recovery 5 minutes after the fault is eliminated");
-    for(int i = 0; i < RTAlarm_List.size(); i++)
-    {
-        ui->RTAlarm_Data_page->setItem(26, i, new QTableWidgetItem(RTAlarm_List.at(i)));
-        ui->RTAlarm_Data_page->item(26, i)->setTextAlignment(Qt::AlignCenter);
-    }
-
-    ui->RTAlarm_Data_page->setRowHeight(27, 150);
-    RTAlarm_List.clear();
-    RTAlarm_List << tr("Insulation impedance anomaly") << tr("Serious failure") \
-                << tr("For 1000V systems, the positive or negative ground impedance is less than 33KΩ") \
-                << tr("PCS shut down and the AC contactor is disconnected") \
-                << tr("Unrecoverable");
-    for(int i = 0; i < RTAlarm_List.size(); i++)
-    {
-        ui->RTAlarm_Data_page->setItem(27, i, new QTableWidgetItem(RTAlarm_List.at(i)));
-        ui->RTAlarm_Data_page->item(27, i)->setTextAlignment(Qt::AlignCenter);
-    }
-}*/
-
 //显示菜单
 void MyWidget::on_UI_MenuBtn_clicked()
 {
@@ -2513,9 +2181,7 @@ void MyWidget::Return(int Index)
     ui->Set_stackedWidget->setCurrentWidget(ui->Mode_page);
 }
 
-/***************************************************************
- * 根据菜单索引打开相应的界面
- ***************************************************************/
+/******根据菜单索引打开相应的界面******/
 void MyWidget::My_menuAction(int Index)
 {
     switch (Index)
@@ -3523,7 +3189,7 @@ void MyWidget::MPSState(QTableWidget *myTable)
     Contator_Sta_Buck = new Specification(this,Contator_Sta_Buck_explain, myTable, line++, column, \
                                             tr("On"), tr("Contator Status Buck"), \
                                             tr("DC module low voltage contactor has two states: On, Off; When there is voltage on the low voltage side, close the contactor on the low voltage side; Otherwise, the low pressure contactor is disconnected."));
-    Contator_Sta_Buck->add_Specification();  
+    Contator_Sta_Buck->add_Specification();
     Converter_Status_V = new Specification(this,Converter_Status_V_explain, myTable, line++, column, \
                                             tr("Turn off"), tr("Converter Status"), \
                                             tr("DCDC module operation modes states: OFF, Standby, Constant Voltage, Constant Current, MPPT."));
@@ -6192,6 +5858,312 @@ void MyWidget::DCDC_Debugg(QTableWidget *myTable)
                                    str);
     DC_Bat_State->add_Specification();
 }
+//设置控件到表格
+void MyWidget::SetControlToTable()
+{
+    SetDCACToTable(ui->DCAC_Tab);
+    SetDCDCToTable(ui->DCDC_Tab);
+    SetLithiumToTable(ui->Lithium_Tab_2);
+    SetLead_acidToTable(ui->Lead_Acid_Tab);
+}
+//设置DCAC控件到表格
+void MyWidget::SetDCACToTable(QTableWidget *myTable)
+{
+    int line = 0;int column = 1;//当前解释的button行和列
+    ButtonToTable->add_SpecificationData(Grid_connected_mode_explain,myTable, line++, column, \
+                                         tr("automatic"), tr("Grid conected mode of the converter "), \
+                                         tr("When \"Auto\" is selected, the converter will automatically switch between grid-on and grid-off. When the grid side is normal, "
+                                            "the converter operates in grid-on mode (PQ).When the grid side is abnormal, the converter operates in grid-off mode (VF).\nWhen \"Grid-on\" is selected, "
+                                            "the converter operates in grid-on mode (PQ).When the grid side is abnormal, the converter will shut down.\nWhen \"Grid-off\" is selected, "
+                                            "the converter operates in grid-off mode (VF)."));
+
+    ButtonToTable->add_SpecificationData(Constant_power_explain,myTable , line++, column, \
+                                         tr("0"), tr("Constant power(AC)"), \
+                                         tr("AC Side Power: You can control the charging and discharging power of the battery from the AC side by modifying this value. "
+                                            "When the advanced setting for power control mode is set to Constant Power mode (CP_AC), a positive value indicates discharging, and a negative value indicates charging.\n"
+                                            "For example, setting it to -5 means that the AC side will charge the battery at a power of -5 kW. "
+                                            "Due to converter losses, the DC side power will be lower than the AC side power in this case. Setting it to 5 means that the AC side will output power at 5 kW. "
+                                            "Due to converter losses, the DC side power will be higher than the AC side power in this case."));
+
+    ButtonToTable->add_SpecificationData(Constant_voltage_explain, myTable, line++, column, \
+                                         tr("600"), tr("Constant voltage"), \
+                                         tr("Enter the advanced settings interface and select the control power mode. "
+                                            "Choose constant voltage and modify the voltage value. Converter will operate at the constant voltage value and function as a constant voltage source."));
+
+    ButtonToTable->add_SpecificationData(Constant_current_explain, myTable, line++, column, \
+                                         tr("100"), tr("Constant current"), \
+                                         tr("Enter the advanced settings interface and select the control power mode. Choose constant current and modify the current value. "
+                                            "Converter will charge or discharge the battery with this current value. Positive values represent discharging, while negative values represent charging."));
+
+    ButtonToTable->add_SpecificationData(Output_power_factor_explain, myTable, line++, column, \
+                                         tr("1"), tr("Output power factor"), \
+                                         tr("This item can modify the power factor, where the power factor is equal to the ratio of active power to apparent power. "
+                                            "A positive value indicates leading reactive power, while a negative value indicates lagging reactive power."));
+
+
+    ButtonToTable->add_SpecificationData(Output_reactive_power_explain, myTable, line++, column, \
+                                         tr("1"), tr("Output reactive power"), \
+                                         tr("This parameter can change the reactive power Q, positive value indicates leading reactive power, negative value indicates lagging reactive power."));
+
+
+    ButtonToTable->add_SpecificationData(Charge_SOC_explain, myTable, line++, column, \
+                                         "20", tr("Charge SOC"), \
+                                         tr("Charging SOC:"
+                                            "\n (1) At the self-use mode, when the battery SOC is lower than the charging SOC, the converter maintains the battery SOC at this value."
+                                            "\n (2) At the battery priority mode, the ECP or FCP state is determined based on the current SOC."
+                                            "\n (3) At the optimal mode, when the battery SOC is lower than the charging SOC, the converter enters the FCP state and starts charging the battery. "
+                                            "When the current SOC is greater than or equal to the discharge SOC, the converter exits the FCP state and enters the ECP state."));
+
+
+    ButtonToTable->add_SpecificationData(Disharge_SOC_explain, myTable, line++, column, \
+                                         "50", tr("Disharge SOC"), \
+                                         tr("Discharge SOC: When the SOC is greater than the discharge SOC, the FCP state is released."));
+    line = 0;
+    column = 3;
+    ButtonToTable->add_SpecificationData(DG_ECP_explain, myTable,line++, column, \
+                                         tr("20"), tr("DG ECP"), \
+                                         tr("In chai-hair mode, the AC power reference value of the saturation zone and the equalization zone."));
+
+    ButtonToTable->add_SpecificationData(DG_FCP_explain, myTable, line++, column, \
+                                         tr("20"), tr("DG FCP"), \
+                                         tr("Power reference value of AC side of the discharge area in Chai hair mode."));
+
+    ButtonToTable->add_SpecificationData(Grid_ECP_explain, myTable, line++, column, \
+                                         tr("0"), tr("Grid ECP"), \
+                                         tr("In the power grid mode, the AC power reference value in the saturation zone and the equilibrium zone."));
+
+    ButtonToTable->add_SpecificationData(Grid_FCP_explain, myTable, line++, column, \
+                                         tr("0"), tr("Grid FCP"), \
+                                         tr("In power grid mode, this parameter specifies the power reference value on the AC side of the vent area."));
+
+    ButtonToTable->add_SpecificationData(Grid_EDP_explain, myTable, line++, column, \
+                                         tr("100"), tr("Grid EDP"), \
+                                         tr("The equalization zone limits the discharge power of the system to the grid side."));
+
+    ButtonToTable->add_SpecificationData(Grid_FDP_explain, myTable, line++, column, \
+                                         tr("100"), tr("Grid FDP"), \
+                                         tr("The discharge zone limits the discharge power of the system to the power grid side."));
+
+    ButtonToTable->add_SpecificationData(Machine_number_explain, myTable, line++, column, \
+                                         tr("M_01"), tr("Machine number"), \
+                                         tr("Device number: You can set ID number, which can be set within the range of M_01 to M_12."));
+
+    ButtonToTable->add_SpecificationData(Parallel_explain, myTable, line++, column, \
+                                         tr("Disable"), tr("Parallel"), \
+                                         tr("Parallel operation: When converter operates at grid-off mode in parallel, this item needs to be enabled."));
+
+    line = 0;
+    column = 5;
+    ButtonToTable->add_SpecificationData(Battery_type_explain, myTable, line++, column, \
+                                         tr("Lithium"), tr("Battery type"), \
+                                         tr("Battery Types: Lithium, Lead-Acid."));
+
+    ButtonToTable->add_SpecificationData(BMS_Comm_type_explain, myTable, line++, column, \
+                                         "CAN", tr("BMS Comm type"), \
+                                         tr("Battery Communication Modes: None, RS485, CAN, Ethernet. "
+                                            "(Note: Due to the fact that CAN and Ethernet both have only one port, the battery communication mode and EMS communication mode cannot be selected as \"CAN\" or \"Ethernet\" simultaneously.)"));
+
+    ButtonToTable->add_SpecificationData(BAT_manufacturers_explain, myTable, line++, column, \
+                                         tr("Auto"), tr("BAT protocol"), \
+                                         tr("Battery Protocol: Parse the messages sent by BMS based on the selected battery protocol."
+                                            "\nCurrently supported battery manufacturer protocols include:"
+                                            "MEGA, LISHEN, GREATPOWER, GOLD, BMSER, LANLI, SLANPOWER, PYLON, CATL, SUOYING, XINGWANGDA, KUBO, GOLD_V2, TOGOOD, GROUP_STANDARD, WOBOYUAN, KGOOER, LD, PYLON_L, VILION, TUOPU,JDI."
+                                            "\nSelect AUTO to automatically detect the battery manufacturer protocol."));
+
+    ButtonToTable->add_SpecificationData(EMS_Comm_type_explain, myTable, line++, column, \
+                                         "RS485", tr("EMS Comm type"), \
+                                         tr("EMS communication methods: RS485, CAN, Ethernet.\nThe setting communication methods are readable and writable in remote mode, and only readable in local mode. "
+                                            "The unselected communication methods are only readable in both remote and local mode."));
+
+    ButtonToTable->add_SpecificationData(Control_mode_explain, myTable, line++, column, \
+                                         tr("Local"), tr("Control mode"), \
+                                         tr("Local: Converter control through HMI, In this mode, the EMS can only read and cannot write.\n"
+                                            "Remote: In remote mode, the EMS can perform both read and write control."));
+
+    ButtonToTable->add_SpecificationData(G_Constant_power_explain,myTable, line++, column,\
+                                         tr("0"), tr("Constant power(generators)"), \
+                                         tr("."));
+
+}
+//设置DCDC控件到表格
+void MyWidget::SetDCDCToTable(QTableWidget *myTable)
+{
+    int line = 0;int column = 1;//当前解释的button行和列
+    ButtonToTable->add_SpecificationData(Work_parttern_explain, myTable, line++, column, \
+                                         tr("MPPT"), tr("Work parttern"), \
+                                         tr("DCDC module working modes include standby, constant voltage (CV), constant current (CC), and maximum power point tracking (MPPT)."));
+
+    ButtonToTable->add_SpecificationData(Boost_or_Buck_explain, myTable, line++, column, \
+                                         tr("Buck"), tr("Boost or Buck"), \
+                                         tr("DCDC module operating modes: Buck, Boost."));
+
+    ButtonToTable->add_SpecificationData(Current_value_explain, myTable, line++, column, \
+                                         tr("60"), tr("DC CC Value"), \
+                                         tr("DC Constant Current Value: Constant current target, range (0A - 120A) * n (n is the number of online modules)."));
+
+    ButtonToTable->add_SpecificationData(Voltage_level_explain, myTable, line++, column, \
+                                         tr("300"), tr("DC CV Value"), \
+                                         tr("DC Constant Voltage Value: Constant voltage target, range 200V-850V."));
+
+    ButtonToTable->add_SpecificationData(OuterLoopControl_explain, myTable, line++, column, \
+                                         tr("Prohibit"), tr("Outer Loop Control"), \
+                                         tr("."));
+}
+//设置锂电池页控件到表格
+void MyWidget::SetLithiumToTable(QTableWidget *myTable)
+{
+    int line = 0;int column = 1;//当前解释的button行和列
+    //并网DOD说明
+    ButtonToTable->add_SpecificationData(DOD_OnGrid_explain, myTable, line++, column, \
+                                   "90", tr("Grid-on DOD"), \
+                                   tr("Grid-on DOD, allowable depth of discharge in grid-on mode."));
+
+    //离网DOD说明
+    ButtonToTable->add_SpecificationData(DOD_OffGrid_explain, myTable, line++, column, \
+                                    "90", tr("Grid-off DOD"), \
+                                    tr("Grid-off DOD, allowable depth of discharge in grid-off mode."));
+    //DOD保护解除
+    ButtonToTable->add_SpecificationData(DOD_Protection_Release_SOC_explain, myTable, line++, column, \
+                                    "50", tr("DOD Protection Release SOC"), \
+                                    tr("DOD Protection Release SOC: When the DOD protection is activated, the current SOC reaches the set SOC value, and the DOD protection is released, allowing the battery to continue discharging."));
+
+
+    //充电电压上限说明
+    ButtonToTable->add_SpecificationData(Charge_Volt_Upper_Limit_explain, myTable, line++, column, \
+                                               "792", tr("Charging voltage upper limit"), \
+                                                tr("Charging voltage upper limit: When the battery total voltage reaches this value during charging, the converter will shut down."));
+
+    //充电电压上限回差说明
+    ButtonToTable->add_SpecificationData(Charge_Volt_upper_Limit_delta_explain, myTable, line++, column, \
+                                                      "10", tr("Charge Volt upper Limit delta"), \
+                                                      tr("Charging voltage upper limit hysteresis: When the battery is charging, if the battery total voltage reaches the charging voltage upper limit, the converter will shut down. When the battery total voltage drops below the charging voltage upper limit minus the hysteresis value, the converter will automatically turn on."));
+
+    line = 0;
+    column = 3;
+    //放电电压限制说明
+    ButtonToTable->add_SpecificationData(Disc_Volt_lower_Limit_explain, myTable, line++, column, \
+                                              "616", tr("Disc_Vol_lower_Limit"), \
+                                              tr("Discharge voltage lower limit: When the battery total voltage reaches this value during discharge, the converter will shut down."));
+
+    //放电电压下限回差说明
+    ButtonToTable->add_SpecificationData(Discharge_Volt_upper_Limit_delta_explain, myTable, line++, column, \
+                                                         "10", tr("Discharge Volt upper Limit delta"), \
+                                                         tr("Discharge voltage lower limit hysteresis: When the battery is discharging, if the battery total voltage drops below the discharge voltage lower limit, the converter will shut down. When the battery total voltage exceeds the discharge voltage lower limit plus the hysteresis value, the converter will automatically turn on."));
+
+    //充电电流限制说明
+    ButtonToTable->add_SpecificationData(Charge_Current_Limit_explain, myTable, line++, column, \
+                                             "240", tr("Charge Current Limit"), \
+                                             tr("Charging current limit: The maximum allowable current on the battery side to prevent overcurrent during charging."));
+
+    //放电电流限制说明
+    ButtonToTable->add_SpecificationData(Discharge_Current_Limit_explain, myTable, line++, column, \
+                                                "240", tr("Discharge Current Limit"), \
+                                                tr("Discharging current limit: The maximum allowable current on the battery side to prevent overcurrent during discharging."));
+
+    //柴发关闭SOC说明
+    ButtonToTable->add_SpecificationData(Gen_turn_off_SOC_explain, myTable, line++, column, \
+                                         "85", tr("Generator turn off SOC"), \
+                                         tr("When the specified SOC is reached, the diesel generator shuts down."));
+
+    //柴发开启SOC说明
+    ButtonToTable->add_SpecificationData(Gen_turn_on_SOC_explain, myTable, line++, column, \
+                                        "25", tr("Generator turn on SOC"), \
+                                        tr("When the specified SOC is reached, the diesel generator starts."));
+
+    line = 0;
+    column = 5;
+    //强充开启说明
+    ButtonToTable->add_SpecificationData(ForceCharge_start_explain, myTable, line++, column, \
+                                          "2.85", tr("Force Charge On"), \
+                                          tr("Forced Charging On: When the cell voltage drops below this value, the converter switches to Battery Priority Mode, and the AC side charges the battery with a power of 10kW."));
+
+    // 强充结束说明
+    ButtonToTable->add_SpecificationData(ForceCharge_top_explain, myTable, line++, column, \
+                                        "3.2", tr("ForceCharge Off"), \
+                                        tr("Forced Charging Off: When the cell voltage exceeds this value, the converter exits Battery Priority Mode and returns to the mode before Forced Charging was enabled."));
+
+    ButtonToTable->add_SpecificationData(DCAC_cell_protect_explain, myTable, line++, column, \
+                                    "3650", tr("DCAC cell protect"), \
+                                    tr("Reserved function, settings are invalid."));
+
+    ButtonToTable->add_SpecificationData(DCAC_cell_delta_explain, myTable, line++, column, \
+                                    "50", tr("DCAC cell delta"), \
+                                    tr("Reserved function, settings are invalid."));
+
+}
+//设置铅酸电池页控件到表格
+void MyWidget::SetLead_acidToTable(QTableWidget *myTable)
+{
+    int line = 0;int column = 1;//当前解释的button行和列
+    //容量
+    ButtonToTable->add_SpecificationData(Capacity_explain, myTable, line++, column, \
+                                        "0", tr("Capacity"), \
+                                        tr("Capacity, the capacity of the lead-acid battery."));
+
+    //电池节数
+    ButtonToTable->add_SpecificationData(Cell_number_2V_explain, myTable, line++, column, \
+                                        "0", tr("Cell_number_2V"), \
+                                        tr("The number of battery cells connected in series in the battery stack (based on a 2V unit)."));
+
+    //浮充电压
+    ButtonToTable->add_SpecificationData(Bat_float_vol_explain, myTable, line++, column, \
+                                        "0", tr("Battery float voltage"), \
+                                        tr("This is the floating charge voltage."));
+
+    //均充电压
+    ButtonToTable->add_SpecificationData(Bat_filling_vol_explain, myTable, line++, column, \
+                                        "0", tr("Battery filling voltage"), \
+                                        tr("This is the filling voltage."));
+
+    //充电限流值
+    ButtonToTable->add_SpecificationData(Charge_limiting_value_explain, myTable, line++, column, \
+                                        "0", tr("Charge limiting value"), \
+                                        tr("Charging Current Limit: The maximum allowable current on the battery side to prevent overcurrent during charging. (Upper limit: 0.25C)"));
+
+    //放电限流值
+    ButtonToTable->add_SpecificationData(Discharge_limiting_value_explain, myTable, line++, column, \
+                                        "0", tr("Discharge limiting value"), \
+                                        tr("Discharge Current Limit: The maximum allowable current on the battery side to prevent overcurrent during discharge. (Upper limit: 0.5C)"));
+
+    line = 0;
+    column = 3;
+    //发电机开启
+    ButtonToTable->add_SpecificationData(Generator_turn_on_SOC_A1_explain, myTable, line++, column, \
+                                        "0", tr("Generator turn on voltage(A1)"), \
+                                        tr("Generator Start Voltage: When the specified voltage is reached, the diesel generator will start up."));
+
+    //发电机关闭
+    ButtonToTable->add_SpecificationData(Generator_turn_off_SOC_B1_explain, myTable, line++, column, \
+                                        "0", tr("Generator turn off voltage(B1)"), \
+                                        tr("Generator Shutdown Voltage: When the specified voltage is reached, the diesel generator will shut down."));
+
+    //DCAC参考电压
+    ButtonToTable->add_SpecificationData(DCACReferenceVoltage_explain, myTable, line++, column, \
+                                        "10", tr("DCAC Reference Voltage"), \
+                                        tr("."));
+
+    //离网EOD
+    ButtonToTable->add_SpecificationData(Grid_off_EOD_explain, myTable, line++, column, \
+                                        "0", tr("Grid-off EOD"), \
+                                        tr("Grid-off discharge cut-off voltage."));
+
+    //并网EOD
+    ButtonToTable->add_SpecificationData(Grid_on_EOD_explain, myTable, line++, column, \
+                                        "0", tr("Grid-on EOD"), \
+                                        tr("Grid-on discharge cut-off voltage."));
+    line = 4;
+    column = 5;
+    //均充转浮充电流
+    ButtonToTable->add_SpecificationData(Uniform_To_Flushing_current_explain, myTable, line++, column, \
+                                        "0", tr("Uniform charging and flushing current"), \
+                                        tr("Uniform charging to flushing current: Upper limit of 0.025C."));
+
+    //浮充转均充电流
+    ButtonToTable->add_SpecificationData(Flushing_To_Uniform_current_explain, myTable, line++, column, \
+                                        "0", tr("Float turn uniform charging current"), \
+                                        tr("Float turn to uniform charging current: Upper limit of 0.15C."));
+}
+
 /*********选中第一个模块*********/
 void MyWidget::on_RTD_module_1_clicked()
 {

@@ -6,9 +6,9 @@
 #include <QString>
 
 typedef struct{
-    QWidget *parent;
+    QWidget *parent;            //父对象
     QPushButton *explain_btn;
-    QTableWidget *target_tab;
+    QTableWidget *target_tab;//Key
     int row;
     int column;
     QString value;

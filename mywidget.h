@@ -54,6 +54,7 @@
 #include "OperMode.h"
 #include "upgradetools.h"
 #include "FaultTableInterface.h"
+#include "SpecificationData/specificationdata.h"
 
 //菜单类型
 #define HOSTPAGE            1
@@ -114,6 +115,7 @@ public:
     UpgradeTools *UpgradeInterface;
     QPushButton *AdvancedSetup_btn;//高级设置入口
     FaultTableInterface *FaultTable;
+    SpecificationData *ButtonToTable;
     /************************实时数据******************************/
     //变流器
     QPushButton *MPS_vol_AB_explain;
@@ -292,7 +294,7 @@ public:
 
     /***************************DC/AC参数****************************/
     QPushButton *Grid_connected_mode_explain;//并网方式说明
-    QPushButton *Constant_power_explain;     //功率说明
+    QPushButton *Constant_power_explain;     //恒功率说明
 //    QPushButton *Charging_and_discharging_explain;  //充放电说明
     QPushButton *Work_mode_explain;  //工作模式说明
     QPushButton *Output_power_factor_explain;    //输出功率因素说明
@@ -302,12 +304,11 @@ public:
     QPushButton *Control_mode_explain;  //控制模式说明
     QPushButton *Machine_number_explain;    //设备号说明
     QPushButton *Parallel_explain;  //并机说明
+    QPushButton *G_Constant_power_explain;
 //    QPushButton *Unbalance_power_enable_explain;    //功率不平衡使能说明
-
 
     Specification *Grid_connected_mode;
     Specification *Constant_power;
-//    Specification *Charging_and_discharging;
     Specification *Work_mode;
     Specification *Output_power_factor;
     Specification *Output_reactive_power;
@@ -316,7 +317,7 @@ public:
     Specification *Control_mode;
     Specification *Machine_number;
     Specification *Parallel;
-//    Specification *Unbalance_power_enable;
+
     /***************************DC参数****************************/
     QPushButton *Work_parttern_explain; //DCDC工作模式说明
     QPushButton *Boost_or_Buck_explain; //升/降压说明
@@ -325,7 +326,7 @@ public:
     QPushButton *Battery_position_explain; //电池位置说明
     QPushButton *Voltage_level_explain; //电压等级说明
     QPushButton *Current_value_explain; //电流值说明
-
+    QPushButton *OuterLoopControl_explain; //电流值说明
 
     Specification *Work_parttern;
     Specification *Boost_or_Buck;
@@ -395,6 +396,7 @@ public:
     QPushButton *Generator_turn_on_SOC_A1_explain;
     QPushButton *Grid_off_EOD_explain;
     QPushButton *Grid_on_EOD_explain;
+    QPushButton *DCACReferenceVoltage_explain;
     /*QPushButton *Shutdown_voltage_point_explain;
     QPushButton *Mending_center_point_explain;
     QPushButton *Temperature_filling_coefficient_explain;
@@ -1078,6 +1080,11 @@ private:
     void ExternalDevice(QTableWidget *myTable);//外设页说明
     void DCAC_Debugg(QTableWidget *myTable); //DCAC调试页说明
     void DCDC_Debugg(QTableWidget *myTable); //DCDC调试页说明
+    void SetControlToTable();//设置控件到表格
+    void SetDCACToTable(QTableWidget *myTable);//设置DCAC控件到表格
+    void SetDCDCToTable(QTableWidget *myTable);//设置DCDC控件到表格
+    void SetLithiumToTable(QTableWidget *myTable);//设置锂电池页控件到表格
+    void SetLead_acidToTable(QTableWidget *myTable);//设置铅酸电池页控件到表格
 
     void MPS_state_delete();//MPS状态 释放 说明
     void Data_Report_delete();//数据报表 释放 说明

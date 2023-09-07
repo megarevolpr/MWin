@@ -11186,7 +11186,7 @@ Settings</string>
                            <string/>
                           </property>
                           <property name="icon">
-                           <iconset resource="image.qrc">
+                           <iconset>
                             <normaloff>:/new_ui/UI/Previous.png</normaloff>:/new_ui/UI/Previous.png</iconset>
                           </property>
                           <property name="iconSize">
@@ -11242,7 +11242,7 @@ Settings</string>
                            <string/>
                           </property>
                           <property name="icon">
-                           <iconset resource="image.qrc">
+                           <iconset>
                             <normaloff>:/new_ui/UI/Next2.png</normaloff>:/new_ui/UI/Next2.png</iconset>
                           </property>
                           <property name="iconSize">
@@ -11362,7 +11362,7 @@ Settings</string>
                          <string notr="true">background-color: rgb(255, 255, 255);</string>
                         </property>
                         <property name="currentIndex">
-                         <number>10</number>
+                         <number>3</number>
                         </property>
                         <widget class="QWidget" name="DCAC_page">
                          <property name="styleSheet">
@@ -11632,7 +11632,7 @@ Settings</string>
                             </item>
                             <item row="5" column="4">
                              <property name="text">
-                              <string>Mixed model</string>
+                              <string>Constant power (generators)(kW)</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -11656,7 +11656,7 @@ Settings</string>
                             </item>
                             <item row="6" column="4">
                              <property name="text">
-                              <string>Constant power (generators)(kW)</string>
+                              <string/>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -11835,7 +11835,7 @@ Settings</string>
                             </item>
                             <item row="2" column="0">
                              <property name="text">
-                              <string>Battery position</string>
+                              <string>Current value(A)</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -11875,7 +11875,7 @@ Settings</string>
                             </item>
                             <item row="3" column="0">
                              <property name="text">
-                              <string>Current value(A)</string>
+                              <string>Voltage level(V)</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -11915,7 +11915,7 @@ Settings</string>
                             </item>
                             <item row="4" column="0">
                              <property name="text">
-                              <string>Voltage level(V)</string>
+                              <string>Out Loop Control</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -11939,7 +11939,7 @@ Settings</string>
                             </item>
                             <item row="5" column="0">
                              <property name="text">
-                              <string>Out Loop Control</string>
+                              <string/>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -12507,10 +12507,19 @@ Set rule:B1 - A1 ≥ 10V</string>
                                <property name="textAlignment">
                                 <set>AlignCenter</set>
                                </property>
+                               <property name="flags">
+                                <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+                               </property>
                               </item>
                               <item row="0" column="5">
                                <property name="text">
-                                <string/>
+                                <string>0</string>
+                               </property>
+                               <property name="textAlignment">
+                                <set>AlignCenter</set>
+                               </property>
+                               <property name="flags">
+                                <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
                                </property>
                               </item>
                               <item row="1" column="0">
@@ -12544,10 +12553,19 @@ Set rule:B1 - A1 ≥ 10V</string>
                                <property name="textAlignment">
                                 <set>AlignCenter</set>
                                </property>
+                               <property name="flags">
+                                <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+                               </property>
                               </item>
                               <item row="1" column="5">
                                <property name="text">
-                                <string/>
+                                <string>0</string>
+                               </property>
+                               <property name="textAlignment">
+                                <set>AlignCenter</set>
+                               </property>
+                               <property name="flags">
+                                <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
                                </property>
                               </item>
                               <item row="2" column="0">
@@ -12581,10 +12599,19 @@ Set rule:B1 - A1 ≥ 10V</string>
                                <property name="textAlignment">
                                 <set>AlignCenter</set>
                                </property>
+                               <property name="flags">
+                                <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+                               </property>
                               </item>
                               <item row="2" column="5">
                                <property name="text">
-                                <string/>
+                                <string>0</string>
+                               </property>
+                               <property name="textAlignment">
+                                <set>AlignCenter</set>
+                               </property>
+                               <property name="flags">
+                                <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
                                </property>
                               </item>
                               <item row="3" column="0">
@@ -12618,10 +12645,19 @@ Set rule:B1 - A1 ≥ 10V</string>
                                <property name="textAlignment">
                                 <set>AlignCenter</set>
                                </property>
+                               <property name="flags">
+                                <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+                               </property>
                               </item>
                               <item row="3" column="5">
                                <property name="text">
-                                <string/>
+                                <string>0</string>
+                               </property>
+                               <property name="textAlignment">
+                                <set>AlignCenter</set>
+                               </property>
+                               <property name="flags">
+                                <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
                                </property>
                               </item>
                               <item row="4" column="0">
@@ -12676,13 +12712,19 @@ Set rule:B1 - A1 ≥ 10V</string>
                                <property name="textAlignment">
                                 <set>AlignCenter</set>
                                </property>
+                               <property name="flags">
+                                <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+                               </property>
                               </item>
                               <item row="5" column="3">
                                <property name="text">
-                                <string/>
+                                <string>0</string>
                                </property>
                                <property name="textAlignment">
                                 <set>AlignCenter</set>
+                               </property>
+                               <property name="flags">
+                                <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
                                </property>
                               </item>
                               <item row="5" column="4">
@@ -14742,7 +14784,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                            <string/>
                           </property>
                           <property name="icon">
-                           <iconset resource="image.qrc">
+                           <iconset>
                             <normaloff>:/new_ui/UI/Previous.png</normaloff>:/new_ui/UI/Previous.png</iconset>
                           </property>
                           <property name="iconSize">
@@ -14792,7 +14834,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                            <string/>
                           </property>
                           <property name="icon">
-                           <iconset resource="image.qrc">
+                           <iconset>
                             <normaloff>:/new_ui/UI/Next2.png</normaloff>:/new_ui/UI/Next2.png</iconset>
                           </property>
                           <property name="iconSize">
@@ -15052,8 +15094,8 @@ Set rule:B1 - A1 ≥ 10V</string>
                                       <rect>
                                        <x>0</x>
                                        <y>0</y>
-                                       <width>503</width>
-                                       <height>459</height>
+                                       <width>385</width>
+                                       <height>264</height>
                                       </rect>
                                      </property>
                                      <property name="font">
@@ -15464,7 +15506,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                            <string/>
                           </property>
                           <property name="icon">
-                           <iconset resource="image.qrc">
+                           <iconset>
                             <normaloff>:/new_ui/UI/Previous.png</normaloff>:/new_ui/UI/Previous.png</iconset>
                           </property>
                           <property name="iconSize">
@@ -15523,7 +15565,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                            <string/>
                           </property>
                           <property name="icon">
-                           <iconset resource="image.qrc">
+                           <iconset>
                             <normaloff>:/new_ui/UI/Next2.png</normaloff>:/new_ui/UI/Next2.png</iconset>
                           </property>
                           <property name="iconSize">
@@ -15682,8 +15724,8 @@ QPushButton::hover{
                                 <rect>
                                  <x>0</x>
                                  <y>0</y>
-                                 <width>753</width>
-                                 <height>451</height>
+                                 <width>71</width>
+                                 <height>71</height>
                                 </rect>
                                </property>
                                <layout class="QGridLayout" name="gridLayout_69">
@@ -18239,7 +18281,7 @@ text-align: left;</string>
                  <string>Switch</string>
                 </property>
                 <property name="icon">
-                 <iconset resource="image.qrc">
+                 <iconset>
                   <normaloff>:/new_ui/UI/HNAC_TurnOn.png</normaloff>:/new_ui/UI/HNAC_TurnOn.png</iconset>
                 </property>
                 <property name="iconSize">
@@ -18316,7 +18358,7 @@ text-align: left;</string>
                  <string>Standby</string>
                 </property>
                 <property name="icon">
-                 <iconset resource="image.qrc">
+                 <iconset>
                   <normaloff>:/new_ui/UI/HNAC_Standby.png</normaloff>:/new_ui/UI/HNAC_Standby.png</iconset>
                 </property>
                 <property name="iconSize">
@@ -18393,7 +18435,7 @@ text-align: left;</string>
                  <string>System Information</string>
                 </property>
                 <property name="icon">
-                 <iconset resource="image.qrc">
+                 <iconset>
                   <normaloff>:/new_ui/UI/IP.png</normaloff>:/new_ui/UI/IP.png</iconset>
                 </property>
                 <property name="iconSize">
