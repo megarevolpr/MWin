@@ -1085,6 +1085,7 @@ private:
     void SetDCDCToTable(QTableWidget *myTable);//设置DCDC控件到表格
     void SetLithiumToTable(QTableWidget *myTable);//设置锂电池页控件到表格
     void SetLead_acidToTable(QTableWidget *myTable);//设置铅酸电池页控件到表格
+    void SetMixedTime_TabToTable(QTableWidget *myTable);//设置混合模式页控件到表格
 
     void MPS_state_delete();//MPS状态 释放 说明
     void Data_Report_delete();//数据报表 释放 说明
@@ -1219,6 +1220,7 @@ private:
     Ui::MyWidget *ui;
     QStringList Mode_Str;//模式文本显示列表
     QList<QTableWidget*>  new_ui_TabList;
+    QList<QPushButton*>  *MixedModeButtonList;
     QButtonGroup *pButton_BatteryData;
     QButtonGroup *Menu_Group;
     QButtonGroup *SystemMode_Group;

@@ -346,7 +346,6 @@ void MyWidget::MemoryAllocation()
     Flushing_To_Uniform_current_explain  = new QPushButton;
 
     /*******************************自动运行*******************************/
-
     Check1_explain = new QPushButton;Check2_explain= new QPushButton;Check3_explain= new QPushButton;
     Check4_explain= new QPushButton;Check5_explain= new QPushButton;Check6_explain= new QPushButton;
     Check7_explain= new QPushButton;Check8_explain= new QPushButton;Check9_explain= new QPushButton;
@@ -395,20 +394,133 @@ void MyWidget::MemoryAllocation()
     Power16_explain= new QPushButton;Power17_explain= new QPushButton;Power18_explain= new QPushButton;
     Power19_explain= new QPushButton;Power20_explain= new QPushButton;
 
-    Check1 = nullptr;Check2 = nullptr;Check3 = nullptr;Check4 = nullptr; Check5 = nullptr;Check6 = nullptr;Check7 = nullptr;Check8 = nullptr;Check9 = nullptr;
-    Check10 = nullptr;Check11 = nullptr;Check12 = nullptr;Check13 = nullptr;Check14 = nullptr;Check15 = nullptr;Check16 = nullptr;Check17 = nullptr;
-    Check18 = nullptr;Check19 = nullptr;Check20 = nullptr;
-    Peak1 = nullptr;Peak2 = nullptr;Peak3 = nullptr;Peak4 = nullptr; Peak5 = nullptr;Peak6 = nullptr;Peak7 = nullptr;Peak8 = nullptr;Peak9 = nullptr;
-    Peak10 = nullptr;Peak11 = nullptr;Peak12 = nullptr;Peak13 = nullptr;Peak14 = nullptr;Peak15 = nullptr;Peak16 = nullptr;Peak17 = nullptr;
-    Peak18 = nullptr;Peak19 = nullptr;Peak20 = nullptr;
-    Start_T1 = nullptr;Start_T2 = nullptr;Start_T3 = nullptr;Start_T4 = nullptr;Start_T5 = nullptr;Start_T6 = nullptr;Start_T7 = nullptr;Start_T8 = nullptr;Start_T9 = nullptr;Start_T10 = nullptr;
-    Start_T11 = nullptr;Start_T12 = nullptr;Start_T13 = nullptr;Start_T14 = nullptr;Start_T15 = nullptr;Start_T16 = nullptr;Start_T17 = nullptr;Start_T18 = nullptr;Start_T19 = nullptr;Start_T20 = nullptr;
-    End_T1 = nullptr;End_T2 = nullptr;End_T3 = nullptr;End_T4 = nullptr;End_T5 = nullptr;End_T6 = nullptr;End_T7 = nullptr;End_T8 = nullptr;End_T9 = nullptr;End_T10 = nullptr;
-    End_T11 = nullptr;End_T12 = nullptr;End_T13 = nullptr;End_T14 = nullptr;End_T15 = nullptr;End_T16 = nullptr;End_T17 = nullptr;End_T18 = nullptr;End_T19 = nullptr;End_T20 = nullptr;
-    State1 = nullptr;State2 = nullptr;State3 = nullptr;State4 = nullptr;State5 = nullptr;State6 = nullptr;State7 = nullptr;State8 = nullptr;State9 = nullptr;State10 = nullptr;
-    State11 = nullptr;State12 = nullptr;State13 = nullptr;State14 = nullptr;State15 = nullptr;State16 = nullptr;State17 = nullptr;State18 = nullptr;State19 = nullptr;State20 = nullptr;
-    Power1 = nullptr;Power2 = nullptr;Power3 = nullptr;Power4 = nullptr;Power5 = nullptr;Power6 = nullptr;Power7 = nullptr;Power8 = nullptr;Power9 = nullptr;Power10 = nullptr;
-    Power11 = nullptr;Power12 = nullptr;Power13 = nullptr;Power14 = nullptr;Power15 = nullptr;Power16 = nullptr;Power17 = nullptr;Power18 = nullptr;Power19 = nullptr;Power20 = nullptr;
+    MixedModeButtonList = new QList<QPushButton*>;
+    MixedModeButtonList->append(Check1_explain);
+    MixedModeButtonList->append(Check2_explain);
+    MixedModeButtonList->append(Check3_explain);
+    MixedModeButtonList->append(Check4_explain);
+    MixedModeButtonList->append(Check5_explain);
+    MixedModeButtonList->append(Check6_explain);
+    MixedModeButtonList->append(Check7_explain);
+    MixedModeButtonList->append(Check8_explain);
+    MixedModeButtonList->append(Check9_explain);
+    MixedModeButtonList->append(Check10_explain);
+    MixedModeButtonList->append(Check11_explain);
+    MixedModeButtonList->append(Check12_explain);
+    MixedModeButtonList->append(Check13_explain);
+    MixedModeButtonList->append(Check14_explain);
+    MixedModeButtonList->append(Check15_explain);
+    MixedModeButtonList->append(Check16_explain);
+    MixedModeButtonList->append(Check17_explain);
+    MixedModeButtonList->append(Check18_explain);
+    MixedModeButtonList->append(Check19_explain);
+    MixedModeButtonList->append(Check20_explain);
+
+    MixedModeButtonList->append(Peak1_explain);
+    MixedModeButtonList->append(Peak2_explain);
+    MixedModeButtonList->append(Peak3_explain);
+    MixedModeButtonList->append(Peak4_explain);
+    MixedModeButtonList->append(Peak5_explain);
+    MixedModeButtonList->append(Peak6_explain);
+    MixedModeButtonList->append(Peak7_explain);
+    MixedModeButtonList->append(Peak8_explain);
+    MixedModeButtonList->append(Peak9_explain);
+    MixedModeButtonList->append(Peak10_explain);
+    MixedModeButtonList->append(Peak11_explain);
+    MixedModeButtonList->append(Peak12_explain);
+    MixedModeButtonList->append(Peak13_explain);
+    MixedModeButtonList->append(Peak14_explain);
+    MixedModeButtonList->append(Peak15_explain);
+    MixedModeButtonList->append(Peak16_explain);
+    MixedModeButtonList->append(Peak17_explain);
+    MixedModeButtonList->append(Peak18_explain);
+    MixedModeButtonList->append(Peak19_explain);
+    MixedModeButtonList->append(Peak20_explain);
+
+    MixedModeButtonList->append(Start_T1_explain);
+    MixedModeButtonList->append(Start_T2_explain);
+    MixedModeButtonList->append(Start_T3_explain);
+    MixedModeButtonList->append(Start_T4_explain);
+    MixedModeButtonList->append(Start_T5_explain);
+    MixedModeButtonList->append(Start_T6_explain);
+    MixedModeButtonList->append(Start_T7_explain);
+    MixedModeButtonList->append(Start_T8_explain);
+    MixedModeButtonList->append(Start_T9_explain);
+    MixedModeButtonList->append(Start_T10_explain);
+    MixedModeButtonList->append(Start_T11_explain);
+    MixedModeButtonList->append(Start_T12_explain);
+    MixedModeButtonList->append(Start_T13_explain);
+    MixedModeButtonList->append(Start_T14_explain);
+    MixedModeButtonList->append(Start_T15_explain);
+    MixedModeButtonList->append(Start_T16_explain);
+    MixedModeButtonList->append(Start_T17_explain);
+    MixedModeButtonList->append(Start_T18_explain);
+    MixedModeButtonList->append(Start_T19_explain);
+    MixedModeButtonList->append(Start_T20_explain);
+
+    MixedModeButtonList->append(End_T1_explain);
+    MixedModeButtonList->append(End_T2_explain);
+    MixedModeButtonList->append(End_T3_explain);
+    MixedModeButtonList->append(End_T4_explain);
+    MixedModeButtonList->append(End_T5_explain);
+    MixedModeButtonList->append(End_T6_explain);
+    MixedModeButtonList->append(End_T7_explain);
+    MixedModeButtonList->append(End_T8_explain);
+    MixedModeButtonList->append(End_T9_explain);
+    MixedModeButtonList->append(End_T10_explain);
+    MixedModeButtonList->append(End_T11_explain);
+    MixedModeButtonList->append(End_T12_explain);
+    MixedModeButtonList->append(End_T13_explain);
+    MixedModeButtonList->append(End_T14_explain);
+    MixedModeButtonList->append(End_T15_explain);
+    MixedModeButtonList->append(End_T16_explain);
+    MixedModeButtonList->append(End_T17_explain);
+    MixedModeButtonList->append(End_T18_explain);
+    MixedModeButtonList->append(End_T19_explain);
+    MixedModeButtonList->append(End_T20_explain);
+
+    MixedModeButtonList->append(State1_explain);
+    MixedModeButtonList->append(State2_explain);
+    MixedModeButtonList->append(State3_explain);
+    MixedModeButtonList->append(State4_explain);
+    MixedModeButtonList->append(State5_explain);
+    MixedModeButtonList->append(State6_explain);
+    MixedModeButtonList->append(State7_explain);
+    MixedModeButtonList->append(State8_explain);
+    MixedModeButtonList->append(State9_explain);
+    MixedModeButtonList->append(State10_explain);
+    MixedModeButtonList->append(State11_explain);
+    MixedModeButtonList->append(State12_explain);
+    MixedModeButtonList->append(State13_explain);
+    MixedModeButtonList->append(State14_explain);
+    MixedModeButtonList->append(State15_explain);
+    MixedModeButtonList->append(State16_explain);
+    MixedModeButtonList->append(State17_explain);
+    MixedModeButtonList->append(State18_explain);
+    MixedModeButtonList->append(State19_explain);
+    MixedModeButtonList->append(State20_explain);
+
+    MixedModeButtonList->append(Power1_explain);
+    MixedModeButtonList->append(Power2_explain);
+    MixedModeButtonList->append(Power3_explain);
+    MixedModeButtonList->append(Power4_explain);
+    MixedModeButtonList->append(Power5_explain);
+    MixedModeButtonList->append(Power6_explain);
+    MixedModeButtonList->append(Power7_explain);
+    MixedModeButtonList->append(Power8_explain);
+    MixedModeButtonList->append(Power9_explain);
+    MixedModeButtonList->append(Power10_explain);
+    MixedModeButtonList->append(Power11_explain);
+    MixedModeButtonList->append(Power12_explain);
+    MixedModeButtonList->append(Power13_explain);
+    MixedModeButtonList->append(Power14_explain);
+    MixedModeButtonList->append(Power15_explain);
+    MixedModeButtonList->append(Power16_explain);
+    MixedModeButtonList->append(Power17_explain);
+    MixedModeButtonList->append(Power18_explain);
+    MixedModeButtonList->append(Power19_explain);
+    MixedModeButtonList->append(Power20_explain);
+
 
     /**********************系统消息*************************/
 
@@ -5865,6 +5977,7 @@ void MyWidget::SetControlToTable()
     SetDCDCToTable(ui->DCDC_Tab);
     SetLithiumToTable(ui->Lithium_Tab_2);
     SetLead_acidToTable(ui->Lead_Acid_Tab);
+    SetMixedTime_TabToTable(ui->MixedTime_Tab);
 }
 //设置DCAC控件到表格
 void MyWidget::SetDCACToTable(QTableWidget *myTable)
@@ -6161,7 +6274,44 @@ void MyWidget::SetLead_acidToTable(QTableWidget *myTable)
     //浮充转均充电流
     ButtonToTable->add_SpecificationData(Flushing_To_Uniform_current_explain, myTable, line++, column, \
                                         "0", tr("Float turn uniform charging current"), \
-                                        tr("Float turn to uniform charging current: Upper limit of 0.15C."));
+                                         tr("Float turn to uniform charging current: Upper limit of 0.15C."));
+}
+//设置混合模式页控件到表格
+void MyWidget::SetMixedTime_TabToTable(QTableWidget *myTable)
+{
+    QString temp1 = tr("Check");
+    QString temp2 = tr("Start_Time");
+    QString temp3 = tr("End_Time");
+    QString temp4 = tr("Features");
+    QString temp5 = tr("Power");
+    QString temp6 = tr("9:00");
+    QString temp7 = tr("10:00");
+    QString temp8 = tr("End time: The system stops automatically running when the system reaches this time.");
+    QString temp9 = tr("The function that will perform this function during business hours, there are six to choose from, They are System for self-use, battery Batter priority, Peak shaving, Output PV power,Economic model.");
+    QString temp10 = tr("Working Power: Only effective in peak shaving mode. Positive values indicate discharging, while negative values indicate charging.");
+    QString temp11 = tr("Start time: When the system reaches this time, it starts to run automatically.");
+    QString temp12 = tr("Select: After this function is enabled, the system automatically runs the selected function mode within the specified period.");
+    QString temp13 = tr("System for self-use");
+    QString temp14 = tr("Peak price");//峰
+    QString temp15 = tr("In the peak shaving and valley filling mode, select 'Peak price' periods,'Flat price' periods and 'Valley price' periods based on electricity prices.");//
+    QString temp16 = tr("Peak-Flat-Valley");//峰-平-谷
+
+    for(int i = 0;i < 20; i++ )
+    {
+        if(i<5)
+        {
+            ButtonToTable->add_SpecificationData(MixedModeButtonList->at(i), myTable,i, 0, "√", temp1, temp12);
+        }
+        else
+        {
+            ButtonToTable->add_SpecificationData(MixedModeButtonList->at(i), myTable,i, 0, "", temp1, temp12);
+        }
+        ButtonToTable->add_SpecificationData(MixedModeButtonList->at(i+20), myTable, i, 1, temp14, temp16, temp15);
+        ButtonToTable->add_SpecificationData(MixedModeButtonList->at(i+40), myTable, i, 2, temp6, temp2, temp11);
+        ButtonToTable->add_SpecificationData(MixedModeButtonList->at(i+60), myTable, i, 3, temp7, temp3, temp8);
+        ButtonToTable->add_SpecificationData(MixedModeButtonList->at(i+80), myTable, i, 4, temp13, temp4, temp9);
+        ButtonToTable->add_SpecificationData(MixedModeButtonList->at(i+100), myTable,i, 5, "10", temp5, temp10);
+    }
 }
 
 /*********选中第一个模块*********/
