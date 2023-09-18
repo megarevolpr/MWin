@@ -5625,7 +5625,7 @@ void MyWidget::ExternalDevice(QTableWidget *myTable)
     DO_2_Action->add_Specification();
     DO_3_Action = new Specification(this,DO_3_Action_explain, myTable, 8, 2, \
                                    tr("Prompt"), tr("DO_3_Action"), str1);
-    DO_3_Action->add_Specification();*/
+    DO_3_Action->add_Specification()*/
 
 }
 /*****************DCAC调试页说明*********************/
