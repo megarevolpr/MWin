@@ -62,9 +62,8 @@
 #define RECORDPAGE          3
 #define SYSTEMPAGE          4
 #define MACHINESWITCH       5
-#define MACHINESTANDBY      6
-#define SYSTEMINFORMATION   7
-#define USER_LOGIN          8
+#define SYSTEMINFORMATION   6
+#define USER_LOGIN          7
 
 //操作模式
 #define Mode_SELF_USE           0
@@ -305,7 +304,8 @@ public:
     QPushButton *Machine_number_explain;    //设备号说明
     QPushButton *Parallel_explain;  //并机说明
     QPushButton *G_Constant_power_explain;
-//    QPushButton *Unbalance_power_enable_explain;    //功率不平衡使能说明
+    QPushButton *Grid_capacity_explain;
+    QPushButton *DG_Charging_power_limit;
 
     Specification *Grid_connected_mode;
     Specification *Constant_power;
@@ -327,6 +327,10 @@ public:
     QPushButton *Voltage_level_explain; //电压等级说明
     QPushButton *Current_value_explain; //电流值说明
     QPushButton *OuterLoopControl_explain; //电流值说明
+    QPushButton *IV_curve_scanning_explain;
+    QPushButton *IV_curve_scanning_low_explain;
+    QPushButton *IV_curve_scanning_high_explain;
+
 
     Specification *Work_parttern;
     Specification *Boost_or_Buck;

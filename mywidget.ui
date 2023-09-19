@@ -25,12 +25,6 @@
     <height>692</height>
    </size>
   </property>
-  <property name="maximumSize">
-   <size>
-    <width>1920</width>
-    <height>1080</height>
-   </size>
-  </property>
   <property name="cursor">
    <cursorShape>ArrowCursor</cursorShape>
   </property>
@@ -4324,7 +4318,7 @@ Language</string>
                 <string notr="true"/>
                </property>
                <property name="currentIndex">
-                <number>2</number>
+                <number>0</number>
                </property>
                <widget class="QWidget" name="RT_Data_page">
                 <attribute name="title">
@@ -5935,7 +5929,7 @@ and view the details of the alarm information you have encountered.</string>
                        </property>
                        <property name="font">
                         <font>
-                         <pointsize>13</pointsize>
+                         <pointsize>16</pointsize>
                         </font>
                        </property>
                        <property name="styleSheet">
@@ -9871,8 +9865,8 @@ Set rule:B1 - A1 ≥ 10V</string>
                           <rect>
                            <x>0</x>
                            <y>0</y>
-                           <width>385</width>
-                           <height>264</height>
+                           <width>501</width>
+                           <height>476</height>
                           </rect>
                          </property>
                          <property name="font">
@@ -10212,7 +10206,7 @@ Set rule:B1 - A1 ≥ 10V</string>
               <number>0</number>
              </property>
              <item row="0" column="0">
-              <layout class="QVBoxLayout" name="verticalLayout_45">
+              <layout class="QVBoxLayout" name="verticalLayout_45" stretch="1,3,1,3,1">
                <item>
                 <spacer name="verticalSpacer_8">
                  <property name="orientation">
@@ -10227,7 +10221,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                 </spacer>
                </item>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_52">
+                <layout class="QHBoxLayout" name="horizontalLayout_52" stretch="2,3,2,3,2">
                  <item>
                   <spacer name="horizontalSpacer_24">
                    <property name="orientation">
@@ -10257,11 +10251,27 @@ Set rule:B1 - A1 ≥ 10V</string>
                    </property>
                    <property name="font">
                     <font>
-                     <pointsize>12</pointsize>
+                     <pointsize>14</pointsize>
                     </font>
                    </property>
                    <property name="cursor">
                     <cursorShape>ArrowCursor</cursorShape>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QToolButton:checked {
+	color: rgb(0, 0, 0);
+	background-color: rgb(255, 255, 255);
+	border:1px solid rgb(230, 230, 230);
+}
+QToolButton:!checked {
+	color: rgb(0, 0, 0);
+	background-color: rgb(255, 255, 255);
+	border:1px solid rgb(230, 230, 230);
+}
+QToolButton::hover{
+	
+	background-color: rgb(230, 230, 230);
+ }</string>
                    </property>
                    <property name="text">
                     <string>DCDC converter
@@ -10314,11 +10324,27 @@ Set rule:B1 - A1 ≥ 10V</string>
                    </property>
                    <property name="font">
                     <font>
-                     <pointsize>12</pointsize>
+                     <pointsize>14</pointsize>
                     </font>
                    </property>
                    <property name="cursor">
                     <cursorShape>ArrowCursor</cursorShape>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QToolButton:checked {
+	color: rgb(0, 0, 0);
+	background-color: rgb(255, 255, 255);
+	border:1px solid rgb(230, 230, 230);
+}
+QToolButton:!checked {
+	color: rgb(0, 0, 0);
+	background-color: rgb(255, 255, 255);
+	border:1px solid rgb(230, 230, 230);
+}
+QToolButton::hover{
+	
+	background-color: rgb(230, 230, 230);
+ }</string>
                    </property>
                    <property name="text">
                     <string>DCDC converter
@@ -10368,7 +10394,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                 </spacer>
                </item>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_53">
+                <layout class="QHBoxLayout" name="horizontalLayout_53" stretch="2,3,2,3,2">
                  <item>
                   <spacer name="horizontalSpacer_26">
                    <property name="orientation">
@@ -10398,11 +10424,27 @@ Set rule:B1 - A1 ≥ 10V</string>
                    </property>
                    <property name="font">
                     <font>
-                     <pointsize>12</pointsize>
+                     <pointsize>14</pointsize>
                     </font>
                    </property>
                    <property name="cursor">
                     <cursorShape>ArrowCursor</cursorShape>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QToolButton:checked {
+	color: rgb(0, 0, 0);
+	background-color: rgb(255, 255, 255);
+	border:1px solid rgb(230, 230, 230);
+}
+QToolButton:!checked {
+	color: rgb(0, 0, 0);
+	background-color: rgb(255, 255, 255);
+	border:1px solid rgb(230, 230, 230);
+}
+QToolButton::hover{
+	
+	background-color: rgb(230, 230, 230);
+ }</string>
                    </property>
                    <property name="text">
                     <string>DCAC converter
@@ -10455,11 +10497,27 @@ Set rule:B1 - A1 ≥ 10V</string>
                    </property>
                    <property name="font">
                     <font>
-                     <pointsize>12</pointsize>
+                     <pointsize>14</pointsize>
                     </font>
                    </property>
                    <property name="cursor">
                     <cursorShape>ArrowCursor</cursorShape>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QToolButton:checked {
+	color: rgb(0, 0, 0);
+	background-color: rgb(255, 255, 255);
+	border:1px solid rgb(230, 230, 230);
+}
+QToolButton:!checked {
+	color: rgb(0, 0, 0);
+	background-color: rgb(255, 255, 255);
+	border:1px solid rgb(230, 230, 230);
+}
+QToolButton::hover{
+	
+	background-color: rgb(230, 230, 230);
+ }</string>
                    </property>
                    <property name="text">
                     <string>DCAC converter 
@@ -11124,33 +11182,63 @@ Settings</string>
                        <number>0</number>
                       </property>
                       <item>
-                       <layout class="QHBoxLayout" name="horizontalLayout_64" stretch="3,2,1,5,1,1,1,1,1,1">
+                       <layout class="QHBoxLayout" name="horizontalLayout_64" stretch="0,2,1,5,1,1,1,1,1,1">
                         <property name="spacing">
                          <number>0</number>
                         </property>
+                        <property name="leftMargin">
+                         <number>10</number>
+                        </property>
+                        <property name="topMargin">
+                         <number>5</number>
+                        </property>
+                        <property name="rightMargin">
+                         <number>10</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>5</number>
+                        </property>
                         <item>
-                         <widget class="QLabel" name="PageInfo_lb">
-                          <property name="maximumSize">
-                           <size>
-                            <width>16777215</width>
-                            <height>50</height>
-                           </size>
-                          </property>
-                          <property name="font">
-                           <font>
-                            <pointsize>14</pointsize>
-                           </font>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">border:1px solid black;</string>
-                          </property>
-                          <property name="text">
-                           <string>DC/AC Parameters</string>
-                          </property>
-                          <property name="alignment">
-                           <set>Qt::AlignCenter</set>
-                          </property>
-                         </widget>
+                         <layout class="QVBoxLayout" name="verticalLayout_73" stretch="1,5">
+                          <item>
+                           <spacer name="verticalSpacer_29">
+                            <property name="orientation">
+                             <enum>Qt::Vertical</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                             <size>
+                              <width>20</width>
+                              <height>40</height>
+                             </size>
+                            </property>
+                           </spacer>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="PageInfo_lb">
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>50</height>
+                             </size>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <pointsize>14</pointsize>
+                             </font>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">border:1px solid black;
+border-radius:6px;</string>
+                            </property>
+                            <property name="text">
+                             <string>DC/AC Parameters</string>
+                            </property>
+                            <property name="alignment">
+                             <set>Qt::AlignCenter</set>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
                         </item>
                         <item>
                          <spacer name="horizontalSpacer_51">
@@ -11186,7 +11274,7 @@ Settings</string>
                            <string/>
                           </property>
                           <property name="icon">
-                           <iconset>
+                           <iconset resource="image.qrc">
                             <normaloff>:/new_ui/UI/Previous.png</normaloff>:/new_ui/UI/Previous.png</iconset>
                           </property>
                           <property name="iconSize">
@@ -11242,7 +11330,7 @@ Settings</string>
                            <string/>
                           </property>
                           <property name="icon">
-                           <iconset>
+                           <iconset resource="image.qrc">
                             <normaloff>:/new_ui/UI/Next2.png</normaloff>:/new_ui/UI/Next2.png</iconset>
                           </property>
                           <property name="iconSize">
@@ -11303,11 +11391,12 @@ Settings</string>
                           </property>
                           <property name="font">
                            <font>
-                            <pointsize>18</pointsize>
+                            <pointsize>16</pointsize>
                            </font>
                           </property>
                           <property name="styleSheet">
-                           <string notr="true">outline: none</string>
+                           <string notr="true">border:1px solid black;
+border-radius:10px;</string>
                           </property>
                           <property name="text">
                            <string>Save</string>
@@ -11347,7 +11436,8 @@ Settings</string>
                            </font>
                           </property>
                           <property name="styleSheet">
-                           <string notr="true">outline: none</string>
+                           <string notr="true">border:1px solid black;
+border-radius:10px;</string>
                           </property>
                           <property name="text">
                            <string>Exit</string>
@@ -11362,7 +11452,7 @@ Settings</string>
                          <string notr="true">background-color: rgb(255, 255, 255);</string>
                         </property>
                         <property name="currentIndex">
-                         <number>5</number>
+                         <number>0</number>
                         </property>
                         <widget class="QWidget" name="DCAC_page">
                          <property name="styleSheet">
@@ -11512,7 +11602,7 @@ Settings</string>
                             </item>
                             <item row="2" column="0">
                              <property name="text">
-                              <string>Constant voltage(V)</string>
+                              <string>Grid expansion</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -11552,7 +11642,7 @@ Settings</string>
                             </item>
                             <item row="3" column="0">
                              <property name="text">
-                              <string>Constant current(A)</string>
+                              <string>Grad capacity(kW)</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -11592,7 +11682,7 @@ Settings</string>
                             </item>
                             <item row="4" column="0">
                              <property name="text">
-                              <string>Output power factor</string>
+                              <string>DG charging power limit(kW)</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -11616,7 +11706,7 @@ Settings</string>
                             </item>
                             <item row="5" column="0">
                              <property name="text">
-                              <string>Output reactive power(kW)</string>
+                              <string>DG capacity(kW)</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -11632,7 +11722,7 @@ Settings</string>
                             </item>
                             <item row="5" column="4">
                              <property name="text">
-                              <string>Constant power (generators)(kW)</string>
+                              <string/>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -11648,7 +11738,7 @@ Settings</string>
                             </item>
                             <item row="6" column="2">
                              <property name="text">
-                              <string>Machine number</string>
+                              <string/>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -11672,7 +11762,7 @@ Settings</string>
                             </item>
                             <item row="7" column="2">
                              <property name="text">
-                              <string>Parallel </string>
+                              <string/>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -11763,7 +11853,7 @@ Settings</string>
                             </item>
                             <item row="0" column="2">
                              <property name="text">
-                              <string/>
+                              <string>Constant Curent(A)</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -11779,7 +11869,7 @@ Settings</string>
                             </item>
                             <item row="0" column="4">
                              <property name="text">
-                              <string/>
+                              <string>IV curve scanning</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -11803,7 +11893,7 @@ Settings</string>
                             </item>
                             <item row="1" column="2">
                              <property name="text">
-                              <string/>
+                              <string>Constant Voltage(V)</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -11819,7 +11909,7 @@ Settings</string>
                             </item>
                             <item row="1" column="4">
                              <property name="text">
-                              <string/>
+                              <string>IV curve scanning low voltage(V)</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -11835,7 +11925,7 @@ Settings</string>
                             </item>
                             <item row="2" column="0">
                              <property name="text">
-                              <string>Current value(A)</string>
+                              <string>Battery position</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -11843,7 +11933,7 @@ Settings</string>
                             </item>
                             <item row="2" column="2">
                              <property name="text">
-                              <string/>
+                              <string>Outer Ring Contralized Control</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -11859,7 +11949,7 @@ Settings</string>
                             </item>
                             <item row="2" column="4">
                              <property name="text">
-                              <string/>
+                              <string>IV curve scanning high voltage(V)</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -11875,7 +11965,7 @@ Settings</string>
                             </item>
                             <item row="3" column="0">
                              <property name="text">
-                              <string>Voltage level(V)</string>
+                              <string/>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -11915,7 +12005,7 @@ Settings</string>
                             </item>
                             <item row="4" column="0">
                              <property name="text">
-                              <string>Out Loop Control</string>
+                              <string/>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -12077,6 +12167,11 @@ Generator turn off SOC(B1)</string>
                                     <verstretch>0</verstretch>
                                    </sizepolicy>
                                   </property>
+                                  <property name="font">
+                                   <font>
+                                    <pointsize>12</pointsize>
+                                   </font>
+                                  </property>
                                   <property name="text">
                                    <string>Power On</string>
                                   </property>
@@ -12089,6 +12184,11 @@ Generator turn off SOC(B1)</string>
                                     <horstretch>0</horstretch>
                                     <verstretch>0</verstretch>
                                    </sizepolicy>
+                                  </property>
+                                  <property name="font">
+                                   <font>
+                                    <pointsize>12</pointsize>
+                                   </font>
                                   </property>
                                   <property name="text">
                                    <string>Power Off</string>
@@ -12222,7 +12322,7 @@ Generator turn off SOC(B1)</string>
                               </item>
                               <item row="2" column="0">
                                <property name="text">
-                                <string>DOD protection release(%)</string>
+                                <string>DOD Protection Release SOC(%)</string>
                                </property>
                                <property name="textAlignment">
                                 <set>AlignCenter</set>
@@ -14784,7 +14884,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                            <string/>
                           </property>
                           <property name="icon">
-                           <iconset>
+                           <iconset resource="image.qrc">
                             <normaloff>:/new_ui/UI/Previous.png</normaloff>:/new_ui/UI/Previous.png</iconset>
                           </property>
                           <property name="iconSize">
@@ -14834,7 +14934,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                            <string/>
                           </property>
                           <property name="icon">
-                           <iconset>
+                           <iconset resource="image.qrc">
                             <normaloff>:/new_ui/UI/Next2.png</normaloff>:/new_ui/UI/Next2.png</iconset>
                           </property>
                           <property name="iconSize">
@@ -15506,7 +15606,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                            <string/>
                           </property>
                           <property name="icon">
-                           <iconset>
+                           <iconset resource="image.qrc">
                             <normaloff>:/new_ui/UI/Previous.png</normaloff>:/new_ui/UI/Previous.png</iconset>
                           </property>
                           <property name="iconSize">
@@ -15565,7 +15665,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                            <string/>
                           </property>
                           <property name="icon">
-                           <iconset>
+                           <iconset resource="image.qrc">
                             <normaloff>:/new_ui/UI/Next2.png</normaloff>:/new_ui/UI/Next2.png</iconset>
                           </property>
                           <property name="iconSize">
@@ -17195,7 +17295,7 @@ QPushButton::hover{
              <number>0</number>
             </property>
             <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_17" stretch="2,5,4,5,4">
+             <layout class="QHBoxLayout" name="horizontalLayout_17" stretch="2,5,0,5,4">
               <property name="spacing">
                <number>6</number>
               </property>
@@ -17747,6 +17847,11 @@ border-radius: 24px;border:1px solid black;</string>
                  <verstretch>0</verstretch>
                 </sizepolicy>
                </property>
+               <property name="font">
+                <font>
+                 <pointsize>16</pointsize>
+                </font>
+               </property>
                <property name="styleSheet">
                 <string notr="true">background-color: rgb(0, 170, 255);
 border:2px solid rgb(0, 170, 255);</string>
@@ -17878,6 +17983,11 @@ image: url(:/new_ui/UI/HNAC_Host .png);
                     <verstretch>0</verstretch>
                    </sizepolicy>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>16</pointsize>
+                   </font>
+                  </property>
                   <property name="styleSheet">
                    <string notr="true">border:2px solid rgb(0, 170, 255);
 text-align: top;</string>
@@ -17976,6 +18086,11 @@ image: url(:/new_ui/UI/HNAC_Data.png);</string>
                     <horstretch>0</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>16</pointsize>
+                   </font>
                   </property>
                   <property name="styleSheet">
                    <string notr="true">border:2px solid rgb(170, 170, 255);text-align: top;</string>
@@ -18077,6 +18192,11 @@ image: url(:/new_ui/UI/HNAC_Record.png);
                     <verstretch>0</verstretch>
                    </sizepolicy>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>16</pointsize>
+                   </font>
+                  </property>
                   <property name="styleSheet">
                    <string notr="true">border:2px solid rgb(0, 230, 161);
 text-align: top;</string>
@@ -18177,6 +18297,11 @@ image: url(:/new_ui/UI/HNAC_System.png);
                     <verstretch>0</verstretch>
                    </sizepolicy>
                   </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>16</pointsize>
+                   </font>
+                  </property>
                   <property name="styleSheet">
                    <string notr="true">text-align: top;border:2px solid rgb(156, 231, 115);
 </string>
@@ -18220,7 +18345,7 @@ image: url(:/new_ui/UI/HNAC_System.png);
           </spacer>
          </item>
          <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_56" stretch="0,5,1,5,1,5,0">
+          <layout class="QHBoxLayout" name="horizontalLayout_56" stretch="1,2,1,2,1">
            <item>
             <spacer name="horizontalSpacer_37">
              <property name="orientation">
@@ -18272,94 +18397,22 @@ image: url(:/new_ui/UI/HNAC_System.png);
                   <verstretch>0</verstretch>
                  </sizepolicy>
                 </property>
+                <property name="font">
+                 <font>
+                  <pointsize>16</pointsize>
+                 </font>
+                </property>
                 <property name="styleSheet">
                  <string notr="true">background-color: rgb(76, 130, 255);
 border:2px solid rgb(76, 130, 255);
 text-align: left;</string>
                 </property>
                 <property name="text">
-                 <string>Switch</string>
+                 <string>Turn On/Off</string>
                 </property>
                 <property name="icon">
-                 <iconset>
+                 <iconset resource="image.qrc">
                   <normaloff>:/new_ui/UI/HNAC_TurnOn.png</normaloff>:/new_ui/UI/HNAC_TurnOn.png</iconset>
-                </property>
-                <property name="iconSize">
-                 <size>
-                  <width>50</width>
-                  <height>50</height>
-                 </size>
-                </property>
-                <property name="toolButtonStyle">
-                 <enum>Qt::ToolButtonTextBesideIcon</enum>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
-           <item>
-            <spacer name="horizontalSpacer_30">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item>
-            <widget class="QWidget" name="widget_2" native="true">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>40</width>
-               <height>0</height>
-              </size>
-             </property>
-             <layout class="QHBoxLayout" name="horizontalLayout_60" stretch="0">
-              <property name="spacing">
-               <number>0</number>
-              </property>
-              <property name="leftMargin">
-               <number>0</number>
-              </property>
-              <property name="topMargin">
-               <number>0</number>
-              </property>
-              <property name="rightMargin">
-               <number>0</number>
-              </property>
-              <property name="bottomMargin">
-               <number>0</number>
-              </property>
-              <item>
-               <widget class="QToolButton" name="Standby_btn">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">background-color: rgb(76, 130, 255);
-border:2px solid rgb(76, 130, 255);
-text-align: left;</string>
-                </property>
-                <property name="text">
-                 <string>Standby</string>
-                </property>
-                <property name="icon">
-                 <iconset>
-                  <normaloff>:/new_ui/UI/HNAC_Standby.png</normaloff>:/new_ui/UI/HNAC_Standby.png</iconset>
                 </property>
                 <property name="iconSize">
                  <size>
@@ -18426,6 +18479,11 @@ text-align: left;</string>
                   <verstretch>0</verstretch>
                  </sizepolicy>
                 </property>
+                <property name="font">
+                 <font>
+                  <pointsize>16</pointsize>
+                 </font>
+                </property>
                 <property name="styleSheet">
                  <string notr="true">background-color: rgb(76, 130, 255);
 border:2px solid rgb(76, 130, 255);
@@ -18435,7 +18493,7 @@ text-align: left;</string>
                  <string>System Information</string>
                 </property>
                 <property name="icon">
-                 <iconset>
+                 <iconset resource="image.qrc">
                   <normaloff>:/new_ui/UI/IP.png</normaloff>:/new_ui/UI/IP.png</iconset>
                 </property>
                 <property name="iconSize">

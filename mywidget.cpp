@@ -41,6 +41,7 @@ MyWidget::~MyWidget()
     delete ui;
 }
 
+/******语言初始化*******/
 void MyWidget::LoadLanguageInit()
 {
     translator = new QTranslator(qApp);
@@ -87,9 +88,8 @@ void MyWidget::MemoryAllocation()
     Menu_Group->addButton(ui->System_b_btn,4);
     Menu_Group->addButton(ui->System_p_btn,4);
     Menu_Group->addButton(ui->Switch_p_btn,5);
-    Menu_Group->addButton(ui->Standby_btn,6);
-    Menu_Group->addButton(ui->Sys_Inf_btn,7);
-    Menu_Group->addButton(ui->Login_bt,8);
+    Menu_Group->addButton(ui->Sys_Inf_btn,6);
+    Menu_Group->addButton(ui->Login_bt,7);
 
     SystemMode_Group = new QButtonGroup();
     SystemMode_Group->addButton(ui->SelfUse_bt,Mode_SELF_USE);
@@ -289,15 +289,19 @@ void MyWidget::MemoryAllocation()
     Machine_number_explain = new QPushButton;           //设备号说明
     Parallel_explain = new QPushButton;                 //并机说明
     G_Constant_power_explain = new QPushButton;
-//    Unbalance_power_enable_explain = new QPushButton;   //功率不平衡使能说明
+    Grid_capacity_explain = new QPushButton;            //电网容量说明
+    DG_Charging_power_limit= new QPushButton;           //柴发充电功率限制
 
     /***************************DC/AC参数**********************************/
     Work_parttern_explain = new QPushButton;                     //DCDC工作模式说明
     Boost_or_Buck_explain = new QPushButton;                     //升/降压说明
-//    Battery_position_explain = new QPushButton;                  //电池位置说明
+    Battery_position_explain = new QPushButton;                  //电池位置说明
     Voltage_level_explain = new QPushButton;                     //电压等级说明
     Current_value_explain = new QPushButton;                     //电流值说明
-    OuterLoopControl_explain = new QPushButton;
+    OuterLoopControl_explain = new QPushButton;                 //
+    IV_curve_scanning_explain = new QPushButton;                //静脉扫描
+    IV_curve_scanning_low_explain = new QPushButton;            //低电压静脉扫描
+    IV_curve_scanning_high_explain = new QPushButton;           //高电压静脉扫描
 
     /***************************电池设置 锂电****************************/
 
@@ -1980,7 +1984,7 @@ void MyWidget::WorkingModeInit()
 {
     for(int i=0;i<11;i++)
     {
-       if(i < 2)
+       if(i < 3)
        {
            QStringList List5;//DCAC设置
            List5 << tr("Name") << tr("Value")<< tr("Name") << tr("Value")<< tr("Name") << tr("Value");
@@ -2014,8 +2018,6 @@ void MyWidget::WorkingModeInit()
            new_ui_TabList.at(i)->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
            new_ui_TabList.at(i)->verticalHeader()->setMinimumSectionSize(50);//设置行高最小值
        }
-
-
     }
 }
 //切换登录信息
@@ -2340,11 +2342,6 @@ void MyWidget::My_menuAction(int Index)
                 ui->stackedWidget->setCurrentWidget(ui->Switch_page);
             }
             break;
-        case MACHINESTANDBY:
-            {
-                QMessageBox::question(this, tr("Stand-by"), tr("The converter standby switch. Click the converter to enter the standby state"), tr("OK"));
-            }//这是变流器待机开关，点击后变流器进入待机状态
-            break;
         case SYSTEMINFORMATION:
             {
                 ui->InfoPageNum_lb->setText( "1/2" );
@@ -2371,7 +2368,7 @@ void MyWidget::My_menuAction(int Index)
             break;
     }
 }
-//电池数据点击槽
+/*********电池数据点击槽*******/
 void MyWidget::BatteryData_clicked(int nid)
 {
     switch (nid) {
@@ -5988,6 +5985,7 @@ void MyWidget::SetControlToTable()
 void MyWidget::SetDCACToTable(QTableWidget *myTable)
 {
     int line = 0;int column = 1;//当前解释的button行和列
+    //并网方式
     ButtonToTable->add_SpecificationData(Grid_connected_mode_explain,myTable, line++, column, \
                                          tr("automatic"), tr("Grid conected mode of the converter "), \
                                          tr("When \"Auto\" is selected, the converter will automatically switch between grid-on and grid-off. When the grid side is normal, "
@@ -5995,6 +5993,7 @@ void MyWidget::SetDCACToTable(QTableWidget *myTable)
                                             "the converter operates in grid-on mode (PQ).When the grid side is abnormal, the converter will shut down.\nWhen \"Grid-off\" is selected, "
                                             "the converter operates in grid-off mode (VF)."));
 
+    //恒功率
     ButtonToTable->add_SpecificationData(Constant_power_explain,myTable , line++, column, \
                                          tr("0"), tr("Constant power(AC)"), \
                                          tr("AC Side Power: You can control the charging and discharging power of the battery from the AC side by modifying this value. "
@@ -6003,27 +6002,26 @@ void MyWidget::SetDCACToTable(QTableWidget *myTable)
                                             "Due to converter losses, the DC side power will be lower than the AC side power in this case. Setting it to 5 means that the AC side will output power at 5 kW. "
                                             "Due to converter losses, the DC side power will be higher than the AC side power in this case."));
 
-    ButtonToTable->add_SpecificationData(Constant_voltage_explain, myTable, line++, column, \
-                                         tr("600"), tr("Constant voltage"), \
-                                         tr("Enter the advanced settings interface and select the control power mode. "
-                                            "Choose constant voltage and modify the voltage value. Converter will operate at the constant voltage value and function as a constant voltage source."));
+    //电网扩容使能
+    Grid_expansion_explain->setText(tr("Prohibit"));
+    myTable->setCellWidget(line++, column, (QWidget *)Grid_expansion_explain);
 
-    ButtonToTable->add_SpecificationData(Constant_current_explain, myTable, line++, column, \
-                                         tr("100"), tr("Constant current"), \
-                                         tr("Enter the advanced settings interface and select the control power mode. Choose constant current and modify the current value. "
-                                            "Converter will charge or discharge the battery with this current value. Positive values represent discharging, while negative values represent charging."));
+    //电网容量
+    ButtonToTable->add_SpecificationData(Grid_capacity_explain, myTable, line++, column, \
+                                         tr("30"), tr("Grid capacity(kW)"), \
+                                         tr("Grid Capacity: The maximum power capacity connected to the grid in grid expansion mode."));
 
-    ButtonToTable->add_SpecificationData(Output_power_factor_explain, myTable, line++, column, \
-                                         tr("1"), tr("Output power factor"), \
-                                         tr("This item can modify the power factor, where the power factor is equal to the ratio of active power to apparent power. "
-                                            "A positive value indicates leading reactive power, while a negative value indicates lagging reactive power."));
+    //柴发充电功率限制
+    ButtonToTable->add_SpecificationData(DG_Charging_power_limit, myTable, line++, column, \
+                                         tr("10"), tr("DG Charging power limit"), \
+                                         tr("."));
 
+    //柴发容量
+    ButtonToTable->add_SpecificationData(DG_capacity_explain, myTable, line++, column, \
+                                             "200", tr("DG capacity"), \
+                                             tr("Diesel Generator: Rated Power of the Diesel Generator."));
 
-    ButtonToTable->add_SpecificationData(Output_reactive_power_explain, myTable, line++, column, \
-                                         tr("1"), tr("Output reactive power"), \
-                                         tr("This parameter can change the reactive power Q, positive value indicates leading reactive power, negative value indicates lagging reactive power."));
-
-
+    //充电SOC
     ButtonToTable->add_SpecificationData(Charge_SOC_explain, myTable, line++, column, \
                                          "20", tr("Charge SOC"), \
                                          tr("Charging SOC:"
@@ -6032,10 +6030,14 @@ void MyWidget::SetDCACToTable(QTableWidget *myTable)
                                             "\n (3) At the optimal mode, when the battery SOC is lower than the charging SOC, the converter enters the FCP state and starts charging the battery. "
                                             "When the current SOC is greater than or equal to the discharge SOC, the converter exits the FCP state and enters the ECP state."));
 
-
+    //放电SOC
     ButtonToTable->add_SpecificationData(Disharge_SOC_explain, myTable, line++, column, \
                                          "50", tr("Disharge SOC"), \
                                          tr("Discharge SOC: When the SOC is greater than the discharge SOC, the FCP state is released."));
+
+
+
+
     line = 0;
     column = 3;
     ButtonToTable->add_SpecificationData(DG_ECP_explain, myTable,line++, column, \
@@ -6062,25 +6064,20 @@ void MyWidget::SetDCACToTable(QTableWidget *myTable)
                                          tr("100"), tr("Grid FDP"), \
                                          tr("The discharge zone limits the discharge power of the system to the power grid side."));
 
-    ButtonToTable->add_SpecificationData(Machine_number_explain, myTable, line++, column, \
-                                         tr("M_01"), tr("Machine number"), \
-                                         tr("Device number: You can set ID number, which can be set within the range of M_01 to M_12."));
-
-    ButtonToTable->add_SpecificationData(Parallel_explain, myTable, line++, column, \
-                                         tr("Disable"), tr("Parallel"), \
-                                         tr("Parallel operation: When converter operates at grid-off mode in parallel, this item needs to be enabled."));
-
     line = 0;
     column = 5;
+    //电池类型
     ButtonToTable->add_SpecificationData(Battery_type_explain, myTable, line++, column, \
                                          tr("Lithium"), tr("Battery type"), \
                                          tr("Battery Types: Lithium, Lead-Acid."));
 
+    //BMS通信方式
     ButtonToTable->add_SpecificationData(BMS_Comm_type_explain, myTable, line++, column, \
                                          "CAN", tr("BMS Comm type"), \
                                          tr("Battery Communication Modes: None, RS485, CAN, Ethernet. "
                                             "(Note: Due to the fact that CAN and Ethernet both have only one port, the battery communication mode and EMS communication mode cannot be selected as \"CAN\" or \"Ethernet\" simultaneously.)"));
 
+    //BMS制造商
     ButtonToTable->add_SpecificationData(BAT_manufacturers_explain, myTable, line++, column, \
                                          tr("Auto"), tr("BAT protocol"), \
                                          tr("Battery Protocol: Parse the messages sent by BMS based on the selected battery protocol."
@@ -6088,44 +6085,108 @@ void MyWidget::SetDCACToTable(QTableWidget *myTable)
                                             "MEGA, LISHEN, GREATPOWER, GOLD, BMSER, LANLI, SLANPOWER, PYLON, CATL, SUOYING, XINGWANGDA, KUBO, GOLD_V2, TOGOOD, GROUP_STANDARD, WOBOYUAN, KGOOER, LD, PYLON_L, VILION, TUOPU,JDI."
                                             "\nSelect AUTO to automatically detect the battery manufacturer protocol."));
 
+    //EMS通信方式
     ButtonToTable->add_SpecificationData(EMS_Comm_type_explain, myTable, line++, column, \
                                          "RS485", tr("EMS Comm type"), \
                                          tr("EMS communication methods: RS485, CAN, Ethernet.\nThe setting communication methods are readable and writable in remote mode, and only readable in local mode. "
                                             "The unselected communication methods are only readable in both remote and local mode."));
 
+    //控制方式
     ButtonToTable->add_SpecificationData(Control_mode_explain, myTable, line++, column, \
                                          tr("Local"), tr("Control mode"), \
                                          tr("Local: Converter control through HMI, In this mode, the EMS can only read and cannot write.\n"
                                             "Remote: In remote mode, the EMS can perform both read and write control."));
 
-    ButtonToTable->add_SpecificationData(G_Constant_power_explain,myTable, line++, column,\
+    /*ButtonToTable->add_SpecificationData(G_Constant_power_explain,myTable, line++, column,\
                                          tr("0"), tr("Constant power(generators)"), \
                                          tr("."));
+
+
+    ButtonToTable->add_SpecificationData(Constant_voltage_explain, myTable, line++, column, \
+                                         tr("600"), tr("Constant voltage"), \
+                                         tr("Enter the advanced settings interface and select the control power mode. "
+                                            "Choose constant voltage and modify the voltage value. Converter will operate at the constant voltage value and function as a constant voltage source."));
+
+    ButtonToTable->add_SpecificationData(Constant_current_explain, myTable, line++, column, \
+                                         tr("100"), tr("Constant current"), \
+                                         tr("Enter the advanced settings interface and select the control power mode. Choose constant current and modify the current value. "
+                                            "Converter will charge or discharge the battery with this current value. Positive values represent discharging, while negative values represent charging."));
+
+    ButtonToTable->add_SpecificationData(Output_power_factor_explain, myTable, line++, column, \
+                                         tr("1"), tr("Output power factor"), \
+                                         tr("This item can modify the power factor, where the power factor is equal to the ratio of active power to apparent power. "
+                                            "A positive value indicates leading reactive power, while a negative value indicates lagging reactive power."));
+
+
+    ButtonToTable->add_SpecificationData(Output_reactive_power_explain, myTable, line++, column, \
+                                         tr("1"), tr("Output reactive power"), \
+                                         tr("This parameter can change the reactive power Q, positive value indicates leading reactive power, negative value indicates lagging reactive power."));
+
+    ButtonToTable->add_SpecificationData(Machine_number_explain, myTable, line++, column, \
+                                         tr("M_01"), tr("Machine number"), \
+                                         tr("Device number: You can set ID number, which can be set within the range of M_01 to M_12."));
+
+    ButtonToTable->add_SpecificationData(Parallel_explain, myTable, line++, column, \
+                                         tr("Disable"), tr("Parallel"), \
+                                         tr("Parallel operation: When converter operates at grid-off mode in parallel, this item needs to be enabled."));*/
+
+
 
 }
 //设置DCDC控件到表格
 void MyWidget::SetDCDCToTable(QTableWidget *myTable)
 {
     int line = 0;int column = 1;//当前解释的button行和列
+    //工作模式
     ButtonToTable->add_SpecificationData(Work_parttern_explain, myTable, line++, column, \
                                          tr("MPPT"), tr("Work parttern"), \
                                          tr("DCDC module working modes include standby, constant voltage (CV), constant current (CC), and maximum power point tracking (MPPT)."));
 
+    //升/降压
     ButtonToTable->add_SpecificationData(Boost_or_Buck_explain, myTable, line++, column, \
                                          tr("Buck"), tr("Boost or Buck"), \
                                          tr("DCDC module operating modes: Buck, Boost."));
 
+    //电池位置
+    ButtonToTable->add_SpecificationData(Battery_position_explain, myTable, line++, column, \
+                                         tr("LowSide"), tr("Battery position"), \
+                                         tr("."));
+    line = 0;
+    column = 3;
+    //恒流值
     ButtonToTable->add_SpecificationData(Current_value_explain, myTable, line++, column, \
                                          tr("60"), tr("DC CC Value"), \
                                          tr("DC Constant Current Value: Constant current target, range (0A - 120A) * n (n is the number of online modules)."));
 
+    //恒压值
     ButtonToTable->add_SpecificationData(Voltage_level_explain, myTable, line++, column, \
                                          tr("300"), tr("DC CV Value"), \
                                          tr("DC Constant Voltage Value: Constant voltage target, range 200V-850V."));
 
+    //外环集中控制
     ButtonToTable->add_SpecificationData(OuterLoopControl_explain, myTable, line++, column, \
                                          tr("Prohibit"), tr("Outer Loop Control"), \
                                          tr("."));
+    line = 0;
+    column = 5;
+    //IV曲线扫描
+    ButtonToTable->add_SpecificationData(IV_curve_scanning_explain, myTable, line++, column, \
+                                         tr("Prohibit"), tr("Outer Loop Control"), \
+                                         tr("."));
+
+    //IV曲线扫描低电压
+    ButtonToTable->add_SpecificationData(IV_curve_scanning_low_explain, myTable, line++, column, \
+                                         tr("0"), tr("IV curve scanning low"), \
+                                         tr("."));
+
+    //IV曲线扫描高电压
+    ButtonToTable->add_SpecificationData(IV_curve_scanning_high_explain, myTable, line++, column, \
+                                         tr("0"), tr("IV curve scanning high"), \
+                                         tr("."));
+
+
+
+
 }
 //设置锂电池页控件到表格
 void MyWidget::SetLithiumToTable(QTableWidget *myTable)
@@ -6289,7 +6350,7 @@ void MyWidget::SetMixedTime_TabToTable(QTableWidget *myTable)
     QString temp3 = tr("End_Time");
     QString temp4 = tr("Features");
     QString temp5 = tr("Power");
-    QString temp6 = tr("9:00");
+    QString temp6 = tr("08:00");
     QString temp7 = tr("10:00");
     QString temp8 = tr("End time: The system stops automatically running when the system reaches this time.");
     QString temp9 = tr("The function that will perform this function during business hours, there are six to choose from, They are System for self-use, battery Batter priority, Peak shaving, Output PV power,Economic model.");
@@ -6322,46 +6383,87 @@ void MyWidget::SetMixedTime_TabToTable(QTableWidget *myTable)
 void MyWidget::SetAdvancedSetup1ToTable(QTableWidget *myTable)
 {
     int line = 0;int column = 1;//当前解释的button行和列
-
+    //功率控制类型
     ButtonToTable->add_SpecificationData(Power_control_type_explain, myTable, line++, column,\
                                          "CP_AC" , tr("Power control type"), \
                                          tr("Constant Voltage (CV) mode: The converter will operate in constant voltage mode on the DC side.\n"
                                             "Constant Current (CC) mode: The converter will operate in constant current mode on the DC side.\n"
-                                            "Constant Power AC (CP_AC) mode: The power level can be set at \"constant power.\" The value represents the power level, positive for discharge and negative for charge. "
+                                            "Constant Power AC (CP_AC) mode: The power level can be set at \"constant power.\" "
+                                            "The value represents the power level, positive for discharge and negative for charge. "
                                             "For example, setting it to -5 means that the AC side will charge the battery with a power of 5 kW. Due to converter losses, "
                                             "the DC side power will be lower than the AC side power in this case. Conversely, setting it to 5 means that the AC side will output power at 5 kW. "
                                             "Due to converter losses, the DC side power will be higher than the AC side power in this case.\nReserved."));
 
+    //输出无功方式
     ButtonToTable->add_SpecificationData(Output_reactive_power_mode_explain, myTable, line++, column, \
                                          tr("Non adjustable"), tr("Output reactive power mode"), \
                                          tr("Reactive Power Output Mode: Default non-adjustable, options include Power Factor, Reactive Power, non-adjustable."));
 
-    ButtonToTable->add_SpecificationData(Grid_frequency_upper_limit_explain, myTable, line++, column, \
-                                         "0.2", tr("Upper limit of power grid frequency variation range"), \
-                                         tr("Upper limit of power grid frequency variation range: The maximum range of frequency variation allowed on the AC side, which can be selected as 0.2, 0.5, 1, 5."));
+    //输出无功功率
+    ButtonToTable->add_SpecificationData(Output_reactive_power_explain, myTable, line++, column, \
+                                        tr("1"), tr("Output reactive power"), \
+                                        tr("This parameter can change the reactive power Q, positive value indicates leading reactive power, negative value indicates lagging reactive power."));
 
-    ButtonToTable->add_SpecificationData(Grid_frequency_lower_limit_explain, myTable, line++, column, \
-                                         "-0.5", tr("Lower limit of power grid frequency variation range"), \
-                                         tr("Lower limit of power grid frequency variation range: The maximum range of frequency variation allowed on the AC side, which can be selected as-0.5, -1, -2, -5."));
+    //输出功率因素
+    ButtonToTable->add_SpecificationData(Output_power_factor_explain, myTable, line++, column, \
+                                        tr("1"), tr("Output power factor"), \
+                                        tr("This item can modify the power factor, where the power factor is equal to the ratio of active power to apparent power. "
+                                           "A positive value indicates leading reactive power, while a negative value indicates lagging reactive power."));
 
-    ButtonToTable->add_SpecificationData(Vol_protection_upper_limit_explain, myTable, line++, column, \
-                                         "+15", tr("Vol protection upper limit"), \
-                                         tr("Upper limit of voltage protection range: The maximum range of voltage variation allowed on the AC side, which can be selected as 10, 15, 20."));
+    //恒压值
+    ButtonToTable->add_SpecificationData(Constant_current_explain, myTable, line++, column, \
+                                         tr("100"), tr("Constant current"), \
+                                         tr("Enter the advanced settings interface and select the control power mode. Choose constant current and modify the current value."
+                                            "Converter will charge or discharge the battery with this current value."
+                                            "Positive values represent discharging, while negative values represent charging."));
 
-    ButtonToTable->add_SpecificationData(Vol_protection_lower_limit_explain, myTable, line++, column, \
-                                         "-15", tr("Vol protection lower limit"), \
-                                         tr("Lower limit of voltage protection range: The minimum range of voltage variation allowed on the AC side, which can be selected as -10, -15, -20."));
+    //恒流值
+    ButtonToTable->add_SpecificationData(Constant_voltage_explain, myTable, line++, column, \
+                                         tr("600"), tr("Constant voltage"), \
+                                         tr("Enter the advanced settings interface and select the control power mode."
+                                            "Choose constant voltage and modify the voltage value."
+                                            "Converter will operate at the constant voltage value and function as a constant voltage source."));
 
+    //输出功率限制
     ButtonToTable->add_SpecificationData(Output_power_limit_explain, myTable, line++, column,\
                                          "100", tr("Output power limit"), \
                                          tr("Output Power Limit: Restricts the upper limit of the set value for the power on the AC side of the converter."));
 
-    ButtonToTable->add_SpecificationData(DG_capacity_explain, myTable, line++, column, \
-                                         "100", tr("DG capacity"), \
-                                         tr("Diesel Generator: Rated Power of the Diesel Generator."));
+    //设备号
+    ButtonToTable->add_SpecificationData(Machine_number_explain, myTable, line++, column,\
+                                       tr("M_01"), tr("Machine number"), \
+                                       tr("Device number: You can set ID number, which can be set within the range of M_01 to M_12."));
+
+
+
+    //并机
+    ButtonToTable->add_SpecificationData(Parallel_explain, myTable, line++, column,\
+                                         tr("Disable"), tr("Parallel"), \
+                                         tr("Parallel operation: When converter operates at grid-off mode in parallel, this item needs to be enabled."));
 
     line = 0;
     column = 3;
+//    ButtonToTable->add_SpecificationData(Grid_frequency_upper_limit_explain, myTable, line++, column, \
+//                                         "0.2", tr("Upper limit of power grid frequency variation range"), \
+//                                         tr("Upper limit of power grid frequency variation range: The maximum range of frequency variation allowed on the AC side, which can be selected as 0.2, 0.5, 1, 5."));
+
+//    ButtonToTable->add_SpecificationData(Grid_frequency_lower_limit_explain, myTable, line++, column, \
+//                                         "-0.5", tr("Lower limit of power grid frequency variation range"), \
+//                                         tr("Lower limit of power grid frequency variation range: The maximum range of frequency variation allowed on the AC side, which can be selected as-0.5, -1, -2, -5."));
+
+//    ButtonToTable->add_SpecificationData(Vol_protection_upper_limit_explain, myTable, line++, column, \
+//                                         "+15", tr("Vol protection upper limit"), \
+//                                         tr("Upper limit of voltage protection range: The maximum range of voltage variation allowed on the AC side, which can be selected as 10, 15, 20."));
+
+//    ButtonToTable->add_SpecificationData(Vol_protection_lower_limit_explain, myTable, line++, column, \
+//                                         "-15", tr("Vol protection lower limit"), \
+//                                         tr("Lower limit of voltage protection range: The minimum range of voltage variation allowed on the AC side, which can be selected as -10, -15, -20."));
+
+
+
+
+
+
     ButtonToTable->add_SpecificationData(Host_Address_explain, myTable, line++, column,\
                                          "1", tr("Serial Communication Address"), \
                                          tr("Serial Communication Address: The default value is 1, adjustable range is between 1 and 255, used for matching address during serial communication."));
@@ -6486,11 +6588,7 @@ void MyWidget::SetAdvancedSetup2ToTable(QTableWidget *myTable)
 
     //系统升级说明
     System_upgrade_explain->setText(tr("upgrade"));
-    myTable->setCellWidget(line++, column, (QWidget *)System_upgrade_explain);
-
-    //电网扩容使能
-    Grid_expansion_explain->setText(tr("Grid expansion"));
-    myTable->setCellWidget(line++, column, (QWidget *)Grid_expansion_explain);
+    myTable->setCellWidget(line++, column, (QWidget *)System_upgrade_explain);   
 
 }
 //设置高级设置页3控件到表格
