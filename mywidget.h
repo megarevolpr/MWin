@@ -174,62 +174,7 @@ public:
     QPushButton *Load_power_factor_explain;
     QPushButton *Load_Frequency_explain;
 
-    Specification *MPS_vol_AB;
-    Specification *MPS_vol_BC = nullptr;
-    Specification *MPS_vol_CA;
-    Specification *MPS_cur_A;
-    Specification *MPS_cur_B;
-    Specification *MPS_cur_C;
-    Specification *MPS_IGBT_T;
-    Specification *MPS_Env_T;
-    Specification *MPS_Leakage_cur;
-    Specification *PV_vol;
-    Specification *PV_cur;
-    Specification *PV_power;
-    Specification *Batter_vol;
-    Specification *Batter_cur;
-    Specification *Batter_power;
-    Specification *Bus_vol;
-    Specification *Bus_cur;
 
-    Specification *PV_vol_H;
-    Specification *PV_cur_H;
-    Specification *PV_power_H;
-    Specification *PV_vol_L;
-    Specification *PV_cur_L;
-    Specification *PV_power_L;
-    Specification *PositiveInuslation;
-    Specification *Bus_H_vol_add;
-    Specification *Bus_H_vol_reduce;
-    Specification *Bus_L_vol_add;
-    Specification *Bus_L_vol_reduce;
-    Specification *PV_IGBT_T;
-    Specification *NegativeInuslation;
-    Specification *Leakage_cur;
-
-    Specification *Grid_vol_AB;
-    Specification *Grid_vol_BC;
-    Specification *Grid_vol_CA;
-    Specification *Grid_cur_A;
-    Specification *Grid_cur_B;
-    Specification *Grid_cur_C;
-    Specification *Grid_active_power;
-    Specification *Grid_reactive_power;
-    Specification *Grid_apparent_power;
-    Specification *Grid_power_factor;
-    Specification *Grid_Frequency;
-
-    Specification *Load_vol_AB;
-    Specification *Load_vol_BC;
-    Specification *Load_vol_CA;
-    Specification *Load_cur_A;
-    Specification *Load_cur_B;
-    Specification *Load_cur_C;
-    Specification *Load_active_power;
-    Specification *Load_reactive_power;
-    Specification *Load_apparent_power;
-    Specification *Load_power_factor;
-    Specification *Load_Frequency;
     /******************************MPS状态**********************************/
     QPushButton *DC_input_Bre_explain;
     QPushButton *DC_Con_explain;
@@ -237,6 +182,7 @@ public:
     QPushButton *Output_Bre_explain;
     QPushButton *Output_Con_explain;
     QPushButton *Grid_Bre_explain;
+    QPushButton *DCACinsulation_detection_explain;
     QPushButton *DO1_explain;
     QPushButton *DO2_explain;
     QPushButton *DO3_explain;
@@ -245,6 +191,7 @@ public:
     QPushButton *DC_Soft_Start_explain;
     QPushButton *Converter_Status_explain;
     QPushButton *Reactive_P_Reg_explain;
+    QPushButton *Sleep_mode_explain;
     QPushButton *LVRT_explain;
     QPushButton *DI1_explain;
     QPushButton *DI2_explain;
@@ -260,36 +207,10 @@ public:
     QPushButton *Soft_Start_Sta_Boost_explain;
     QPushButton *Soft_Start_Sta_Buck_explain;
     QPushButton *Converter_Status_V_explain;
+    QPushButton *ModeLock_explain;
+    QPushButton *DCDCinsulation_detection_explain;
 
-    Specification *DC_input_Bre;
-    Specification *DC_Con;
-    Specification *M_Bypass_Bre;
-    Specification *Output_Bre;
-    Specification *Output_Con;
-    Specification *Grid_Bre;
-    Specification *DO1;
-    Specification *DO2;
-    Specification *DO3;
 
-    Specification *DCAC_Conver_avail;
-    Specification *DC_Soft_Start;
-    Specification *Converter_Status;
-    Specification *Reactive_P_Reg;
-    Specification *LVRT;
-    Specification *DI1;
-    Specification *DI2;
-    Specification *DI3;
-    Specification *DI4;
-    Specification *DI5;
-    Specification *DI6;
-
-    Specification *Contator_Sta_Boost;
-    Specification *Contator_Sta_Buck;
-    Specification *Run_mode;
-    Specification *DCDC_Converter_ava;
-    Specification *Soft_Start_Sta_Boost;
-    Specification *Soft_Start_Sta_Buck;
-    Specification *Converter_Status_V;
 
     /***************************DC/AC参数****************************/
     QPushButton *Grid_connected_mode_explain;//并网方式说明
@@ -307,16 +228,7 @@ public:
     QPushButton *Grid_capacity_explain;
     QPushButton *DG_Charging_power_limit;
 
-    Specification *Grid_connected_mode;
-    Specification *Constant_power;
-    Specification *Work_mode;
-    Specification *Output_power_factor;
-    Specification *Output_reactive_power;
-    Specification *Constant_current;
-    Specification *Constant_voltage;
-    Specification *Control_mode;
-    Specification *Machine_number;
-    Specification *Parallel;
+
 
     /***************************DC参数****************************/
     QPushButton *Work_parttern_explain; //DCDC工作模式说明
@@ -330,15 +242,6 @@ public:
     QPushButton *IV_curve_scanning_explain;
     QPushButton *IV_curve_scanning_low_explain;
     QPushButton *IV_curve_scanning_high_explain;
-
-
-    Specification *Work_parttern;
-    Specification *Boost_or_Buck;
-    Specification *Bat_Charging_or_discharging_Model;
-    Specification *DCDC_Capacity;
-    Specification *Battery_position;
-    Specification *Voltage_level;
-    Specification *Current_value;
 
     /***************************电池设置-锂电****************************/
 
@@ -366,30 +269,6 @@ public:
     QPushButton *DCAC_cell_protect_explain;//DCAC单体保护电压
     QPushButton *DCAC_cell_delta_explain;//DCAC单体保护电压回差
 
-    Specification *DOD_OnGrid;
-    Specification *DOD_OffGrid;
-    Specification *Charge_Volt_Upper_Limit;
-    Specification *Charge_Volt_upper_Limit_delta;
-    Specification *Disc_Volt_lower_Limit;
-    Specification *Discharge_Volt_upper_Limit_delta;
-    Specification *Charge_Current_Limit;
-    Specification *Discharge_Current_Limit;
-//    Specification *Floating_charge;
-//    Specification *Equalized_charge;
-    Specification *Gen_turn_off_SOC;
-    Specification *Gen_turn_on_SOC;
-    Specification *Relese_Charge_mark;
-    Specification *ForceCharge_start;
-    Specification *ForceCharge_top;
-    Specification *DOD_Protection_Release_SOC;//DOD保护解除SOC
-    Specification *Cell_Voltage_max;//最高单体电压
-    Specification *Cell_Voltage_max_delta;//最高单体电压回差
-    Specification *Cell_Voltage_min;//最低单体电压
-    Specification *Cell_Voltage_min_delta;//最低单体电压回差
-    Specification *DCAC_cell_protect;//DCAC单体保护电压
-    Specification *DCAC_cell_delta;//DCAC单体保护电压回差
-
-
     /***************************电池设置-铅酸****************************/
     QPushButton *Capacity_explain;
     QPushButton *Cell_number_2V_explain;
@@ -409,26 +288,6 @@ public:
     QPushButton *Temperature_alarm_upper_limit_explain;*/
     QPushButton *Uniform_To_Flushing_current_explain;
     QPushButton *Flushing_To_Uniform_current_explain;
-
-
-
-    Specification *Capacity;
-    Specification *Cell_number_2V;
-    Specification *Bat_float_vol;
-    Specification *Bat_filling_vol;
-    Specification *Charge_limiting_value;
-    Specification *Discharge_limiting_value;
-    Specification *Generator_turn_off_SOC_B1;
-    Specification *Generator_turn_on_SOC_A1;
-    Specification *Grid_off_EOD;
-    Specification *Grid_on_EOD;
-    /*Specification *Shutdown_voltage_point;
-    Specification *Mending_center_point;
-    Specification *Temperature_filling_coefficient;
-    Specification *Mending_allowable_setting;
-    Specification *Temperature_alarm_upper_limit;*/
-    Specification *Uniform_To_Flushing_current;
-    Specification *Flushing_To_Uniform_current;
 
     /***************************自动运行**************************/
     //选择
@@ -466,24 +325,9 @@ public:
     QPushButton *Power11_explain,*Power12_explain,*Power13_explain,*Power14_explain,*Power15_explain;
     QPushButton *Power16_explain,*Power17_explain,*Power18_explain,*Power19_explain,*Power20_explain;
 
-
-    Specification *Check1,*Check2,*Check3,*Check4,*Check5,*Check6,*Check7,*Check8,*Check9,*Check10;
-    Specification *Check11,*Check12,*Check13,*Check14,*Check15,*Check16,*Check17,*Check18,*Check19,*Check20;
-    Specification *Peak1,*Peak2,*Peak3,*Peak4,*Peak5,*Peak6,*Peak7,*Peak8,*Peak9,*Peak10;
-    Specification *Peak11,*Peak12,*Peak13,*Peak14,*Peak15,*Peak16,*Peak17,*Peak18,*Peak19,*Peak20;
-    Specification *Start_T1,*Start_T2,*Start_T3,*Start_T4,*Start_T5,*Start_T6,*Start_T7,*Start_T8,*Start_T9,*Start_T10;
-    Specification *Start_T11,*Start_T12,*Start_T13,*Start_T14,*Start_T15,*Start_T16,*Start_T17,*Start_T18,*Start_T19,*Start_T20;
-    Specification *End_T1,*End_T2,*End_T3,*End_T4,*End_T5,*End_T6,*End_T7,*End_T8,*End_T9,*End_T10;
-    Specification *End_T11,*End_T12,*End_T13,*End_T14,*End_T15,*End_T16,*End_T17,*End_T18,*End_T19,*End_T20;
-    Specification *State1,*State2,*State3,*State4,*State5,*State6,*State7,*State8,*State9,*State10;
-    Specification *State11,*State12,*State13,*State14,*State15,*State16,*State17,*State18,*State19,*State20;
-    Specification *Power1,*Power2,*Power3,*Power4,*Power5,*Power6,*Power7,*Power8,*Power9,*Power10;
-    Specification *Power11,*Power12,*Power13,*Power14,*Power15,*Power16,*Power17,*Power18,*Power19,*Power20;
-
     /***************************系统信息**************************/
 
     QButtonGroup *pButton_Version;
-
     QPushButton *MonitoringVersion_explain;
     QPushButton *DCAC_SysProtocol_Version_explain;
     QPushButton *DCAC_ConverterVersion_explain;
@@ -494,14 +338,6 @@ public:
     QPushButton *SN_explain;
 
 
-    Specification *MonitoringVersion;
-    Specification *DCAC_SysProtocol_Version;
-    Specification *DCAC_ConverterVersion;
-    Specification *DCAC_CPLD_Version;
-    Specification *DCDC_SysProtocol_Version;
-    Specification *DCDC_ConverterVersion;
-    Specification *DCDC_CPLD_Version;
-    Specification *SN;
 
     /***********************数据报表************************/
     QPushButton *PV_power_generation_Day_explain;
@@ -528,31 +364,6 @@ public:
     QPushButton *Grid_Discharge_Month_explain;
     QPushButton *Grid_Discharge_Year_explain;
     QPushButton *Grid_Discharge_Total_explain;
-
-    Specification *PV_power_generation_Day;
-    Specification *PV_power_generation_Month;
-    Specification *PV_power_generation_Year;
-    Specification *PV_power_generation_Total;
-    Specification *Load_Discharge_Day;
-    Specification *Load_Discharge_Month;
-    Specification *Load_Discharge_Year;
-    Specification *Load_Discharge_Total;
-    Specification *Battery_Charge_Day;
-    Specification *Battery_Charge_Month;
-    Specification *Battery_Charge_Year;
-    Specification *Battery_Charge_Total;
-    Specification *Battery_Discharge_Day;
-    Specification *Battery_Discharge_Month;
-    Specification *Battery_Discharge_Year;
-    Specification *Battery_Discharge_Total;
-    Specification *Grid_Charge_Day;
-    Specification *Grid_Charge_Month;
-    Specification *Grid_Charge_Year;
-    Specification *Grid_Charge_Total;
-    Specification *Grid_Discharge_Day;
-    Specification *Grid_Discharge_Month;
-    Specification *Grid_Discharge_Year;
-    Specification *Grid_Discharge_Total;
 
     /**********************历史记录*************************/
     QPushButton *Grade_explain;
@@ -616,66 +427,6 @@ public:
     QPushButton *Describe14_explain;
     QPushButton *Describe15_explain;
 
-    Specification *Grade;
-    Specification *Grade2;
-    Specification *Grade3;
-    Specification *Grade4;
-    Specification *Grade5;
-    Specification *Grade6;
-    Specification *Grade7;
-    Specification *Grade8;
-    Specification *Grade9;
-    Specification *Grade10;
-    Specification *Grade11;
-    Specification *Grade12;
-    Specification *Grade13;
-    Specification *Grade14;
-    Specification *Grade15;
-    Specification *StartTime;
-    Specification *StartTime2;
-    Specification *StartTime3;
-    Specification *StartTime4;
-    Specification *StartTime5;
-    Specification *StartTime6;
-    Specification *StartTime7;
-    Specification *StartTime8;
-    Specification *StartTime9;
-    Specification *StartTime10;
-    Specification *StartTime11;
-    Specification *StartTime12;
-    Specification *StartTime13;
-    Specification *StartTime14;
-    Specification *StartTime15;
-    Specification *EndTime;
-    Specification *EndTime2;
-    Specification *EndTime3;
-    Specification *EndTime4;
-    Specification *EndTime5;
-    Specification *EndTime6;
-    Specification *EndTime7;
-    Specification *EndTime8;
-    Specification *EndTime9;
-    Specification *EndTime10;
-    Specification *EndTime11;
-    Specification *EndTime12;
-    Specification *EndTime13;
-    Specification *EndTime14;
-    Specification *EndTime15;
-    Specification *Describe;
-    Specification *Describe2;
-    Specification *Describe3;
-    Specification *Describe4;
-    Specification *Describe5;
-    Specification *Describe6;
-    Specification *Describe7;
-    Specification *Describe8;
-    Specification *Describe9;
-    Specification *Describe10;
-    Specification *Describe11;
-    Specification *Describe12;
-    Specification *Describe13;
-    Specification *Describe14;
-    Specification *Describe15;
 
     /**********************操作日志*************************/
     QPushButton *ModificationTime_explain;
@@ -697,24 +448,6 @@ public:
     QPushButton *EventRecord11_explain;
     QPushButton *EventRecord12_explain;
 
-    Specification *ModificationTime;
-    Specification *ModificationTime2;
-    Specification *ModificationTime3;
-    Specification *ModificationTime4;
-    Specification *ModificationTime5;
-    Specification *ModificationTime6;
-    Specification *ModificationTime9;
-    Specification *ModificationTime11;
-    Specification *ModificationTime12;
-    Specification *EventRecord;
-    Specification *EventRecord2;
-    Specification *EventRecord3;
-    Specification *EventRecord4;
-    Specification *EventRecord5;
-    Specification *EventRecord6;
-    Specification *EventRecord9;
-    Specification *EventRecord11;
-    Specification *EventRecord12;
 
     /*************************功能设置*************************/
     QPushButton *Battery_type_explain;  //电池类型说明
@@ -751,37 +484,7 @@ public:
     QPushButton *Grid_FCP_explain;
     QPushButton *Grid_EDP_explain;
     QPushButton *Grid_FDP_explain;
-    Specification *Battery_type;
-    Specification *BMS_Comm_type;
-    Specification *Power_control_type;
-    Specification *EMS_Comm_type;
-    Specification *Output_power_limit;
-    Specification *BAT_manufacturers;
-    Specification *Charge_SOC;
-    Specification *Disharge_SOC;
-    Specification *DG_capacity;
-    Specification *Energy_priority;
-    Specification *Host_Address;
-    Specification *serial_port_1;
-    Specification *serial_port_2;
-    Specification *serial_port_3;
-    Specification *serial_port_4;
-    Specification *serial_port_5;
-    Specification *Can_port_1;
-    Specification *Can_port_2;
-    Specification *ProtocolVersion;
-    Specification *UserPassPort;
-    Specification *RootPassport;
-    Specification *Language;
-    Specification *Sounds;
-    Specification *BmsComFaultTime;
-    Specification *EMSComFaultModel;
-    Specification *DG_ECP;
-    Specification *DG_FCP;
-    Specification *Grid_ECP;
-    Specification *Grid_FCP;
-    Specification *Grid_EDP;
-    Specification *Grid_FDP;
+
 
     /***************************系统参数**************************/
     QPushButton *Change_rate_of_power_explain;  //功率变化率说明
@@ -821,40 +524,6 @@ public:
     QPushButton *Grid_expansion_explain;
 
 
-    Specification *Change_rate_of_power;
-    Specification *Grid_frequency_upper_limit;
-    Specification *Grid_frequency_lower_limit;
-    Specification *Vol_protection_upper_limit;
-    Specification *Vol_protection_lower_limit;
-    Specification *HVRT_enable;
-    Specification *LVRT_enable;
-    Specification *AFD_enable;
-    Specification *Insulation_detection_enable;
-    Specification *PrimaryFreq_enable;
-    Specification *Inertia_enable;
-    Specification *Load_priority;
-    Specification *Machine_type;
-    Specification *Machine_capacity;
-    Specification *Output_Fre_grade;
-    Specification *Output_vol_level;
-    Specification *Converter_side_vol_level;
-    Specification *Output_reactive_power_mode;
-//    Specification *Grid_recovery_scheduling;
-    Specification *Grid_recovery_time;
-    Specification *Grid_connected_mode_of_Inv;
-
-    Specification *Pshedding_Freq;
-    Specification *QP_curve;
-    Specification *CV_parallel;
-    Specification *Module_Number;
-    Specification *Restore_factory;
-    Specification *BackupSetParameters;
-    Specification *RestoreBackupSetParameters;
-    Specification *Clear_Data;
-    Specification *Machine_Type;
-    Specification *Module_max;
-    Specification *Module_min;
-    Specification *Insulation_detection_enable_DCDC;
 
 
     /***************************外设**************************/
@@ -887,34 +556,6 @@ public:
     QPushButton *DO_3_Action_explain;*/
 
 
-
-    Specification *DI_1_Enable;
-    Specification *DI_1_NC_O;
-    Specification *DI_1_Action;
-    Specification *DI_2_Enable;
-    Specification *DI_2_NC_O;
-    Specification *DI_2_Action;
-    Specification *DI_3_Enable;
-    Specification *DI_3_NC_O;
-    Specification *DI_3_Action;
-    Specification *DI_4_Enable;
-    Specification *DI_4_NC_O;
-    Specification *DI_4_Action;
-    Specification *DI_5_Enable;
-    Specification *DI_5_NC_O;
-    Specification *DI_5_Action;
-    Specification *DI_6_Enable;
-    Specification *DI_6_NC_O;
-    Specification *DI_6_Action;
-    /*Specification *DO_1_Enable;
-    Specification *DO_1_NC_O;
-    Specification *DO_1_Action;
-    Specification *DO_2_Enable;
-    Specification *DO_2_NC_O;
-    Specification *DO_2_Action;
-    Specification *DO_3_Enable;
-    Specification *DO_3_NC_O;
-    Specification *DO_3_Action;*/
 
     /***************************DCAC调试**************************/
     QPushButton *Debug_variable_1_explain;  //调试变量1
@@ -957,44 +598,6 @@ public:
 
 
 
-    Specification *Debug_variable_1;
-    Specification *Debug_variable_2;
-    Specification *Debug_variable_3;
-    Specification *Debug_variable_1_addr;
-    Specification *Debug_variable_2_addr;
-    Specification *Debug_variable_3_addr;
-    Specification *Debug_memery_var_1;
-    Specification *Debug_memery_var_2;
-    Specification *Debug_memery_var_3;
-    Specification *Input_Vol_revise;
-    Specification *Input_Cur_revise;
-    Specification *Voltage_1_5_revise;
-    Specification *Bus_Vol_revise;
-    Specification *Grid_A_AB_Vol_revise;
-    Specification *Grid_B_BC_Vol_revise;
-    Specification *Grid_C_CA_Vol_revise;
-    Specification *Output_A_Cur_revise;
-    Specification *Output_B_Cur_revise;
-    Specification *Output_C_Cur_revise;
-    Specification *INV_A_Vol_revise;
-    Specification *INV_B_Vol_revise;
-    Specification *INV_C_Vol_revise;
-    Specification *INV_A_ind_Cur_revise;
-    Specification *INV_B_ind_Cur_revise;
-    Specification *INV_C_ind_Cur_revise;
-    Specification *INV_On_off_flag;
-    Specification *Logic_state;
-    Specification *INV_flag;
-    Specification *Grid_flag;
-    Specification *Grid_protect_flag;
-    Specification *PV_flag;
-    Specification *DC_bus_flag;
-    Specification *INT_main_flag;
-    Specification *parallel_signal;
-    Specification *Monitor_Order;
-    Specification *Bat_Infor;
-    Specification *Bat_State;
-
     /***************************DCDC调试**************************/
     QPushButton *DC_Debug_variable_1_explain;  //调试变量1
     QPushButton *DC_Debug_variable_2_explain;  //调试变量2
@@ -1017,25 +620,6 @@ public:
     QPushButton *DC_Bat_State_explain;  //电池状态字
 
 
-    Specification *DC_Debug_variable_1;
-    Specification *DC_Debug_variable_2;
-    Specification *DC_Debug_variable_3;
-    Specification *Current_ID;
-    Specification *DC_INT_main_flag;
-    Specification *DC_DC_bus_flag;
-    Specification *DC_PV_flag;
-    Specification *DC_Debug_variable_1_addr;
-    Specification *DC_Debug_variable_2_addr;
-    Specification *DC_Debug_variable_3_addr;
-    Specification *DC_INV_On_off_flag;
-    Specification *DCONV_logic;
-    Specification *DC_parallel_signal;
-    Specification *DC_Debug_memery_var_1;
-    Specification *DC_Debug_memery_var_2;
-    Specification *DC_Debug_memery_var_3;
-    Specification *DC_Monitor_Order;
-    Specification *DC_Bat_Infor;
-    Specification *DC_Bat_State;
 
 private:
 
@@ -1093,29 +677,13 @@ private:
     void SetLithiumToTable(QTableWidget *myTable);//设置锂电池页控件到表格
     void SetLead_acidToTable(QTableWidget *myTable);//设置铅酸电池页控件到表格
     void SetMixedTime_TabToTable(QTableWidget *myTable);//设置混合模式页控件到表格
-    void SetAdvancedSetup1ToTable(QTableWidget *myTable);//设置高级设置页控件到表格
-    void SetAdvancedSetup2ToTable(QTableWidget *myTable);//
-    void SetAdvancedSetup3ToTable(QTableWidget *myTable);//
+    void SetAdvancedSetup1ToTable(QTableWidget *myTable);//设置高级设置页1控件到表格
+    void SetAdvancedSetup2ToTable(QTableWidget *myTable);//设置高级设置页2控件到表格
+    void SetAdvancedSetup3ToTable(QTableWidget *myTable);//设置高级设置页3控件到表格
     void Device_TabToTable(QTableWidget *myTable);//设置高级设置外设页控件到表格
-    void DCAC_Debugg(QTableWidget *myTable); //DCAC调试页说明
-    void DCDC_Debugg(QTableWidget *myTable); //DCDC调试页说明
+    void DCAC_Debugg(QTableWidget *myTable); //设置高级设置DCAC调试页控件到表格
+    void DCDC_Debugg(QTableWidget *myTable); //设置高级设置DCDC调试页控件到表格
 
-    void MPS_state_delete();//MPS状态 释放 说明
-    void Data_Report_delete();//数据报表 释放 说明
-    void HistoryRecord_delete();//历史数据 释放 说明
-    void OperationLog_tab_delete();//操作日志 释放 说明
-    void DC_AC_Parameter_tab_delete();//DCAC参数 释放 说明
-    void DCDC_Paramter_tab_delete();//DCDC参数 释放 说明
-    void Battery_Setup_Tab_delete();//电池设置 释放 说明
-    void Battery_Setup_Lead_Tab_delete();
-    void AutoOperation_delete();//自动运行 释放 说明
-    void SystemMessages_delete();//系统信息 释放 说明
-    void FunctionSet_delete();//功能设置 释放 说明
-    void SystemParameter_delete();//系统参数 释放 说明
-    void ExternalDevice_delete();//外设 释放 说明
-    void DCAC_Debugg_delete();//DCAC调试 释放 说明
-    void DCDC_Debugg_delete();//DCDC调试 释放 说明
-    void Delete_explain();//调用上面的释放函数
 
 
 private slots:
@@ -1143,7 +711,6 @@ private slots:
     void on_PV_clicked();//跳转PV实时数据
     void on_Batt_btn_released();//跳转到电池信息
     void on_Alarm_btn_clicker();//跳转实时告警页面
-    void AdvancedSetup_btn_clicked();//跳转到高级设置
     void ChangeLanguage_btn_clicked();//切换语言
     void Operational_mode_clicked();//操作模式新界面
     void UpgradeInterface_clicked();//升级界面
@@ -1232,6 +799,7 @@ private slots:
 private:
     Ui::MyWidget *ui;
     QStringList Mode_Str;//模式文本显示列表
+    QStringList Mode_title_Str;//当前页面文本显示列表
     QList<QTableWidget*>  new_ui_TabList;
     QList<QPushButton*>  *MixedModeButtonList;
     QButtonGroup *pButton_BatteryData;

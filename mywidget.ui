@@ -56,7 +56,7 @@
    <item row="0" column="0">
     <widget class="QStackedWidget" name="UI_stackedWidget">
      <property name="currentIndex">
-      <number>1</number>
+      <number>3</number>
      </property>
      <widget class="QWidget" name="BasicSet_page">
       <property name="focusPolicy">
@@ -4318,7 +4318,7 @@ Language</string>
                 <string notr="true"/>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>1</number>
                </property>
                <widget class="QWidget" name="RT_Data_page">
                 <attribute name="title">
@@ -9865,8 +9865,8 @@ Set rule:B1 - A1 ≥ 10V</string>
                           <rect>
                            <x>0</x>
                            <y>0</y>
-                           <width>385</width>
-                           <height>264</height>
+                           <width>501</width>
+                           <height>476</height>
                           </rect>
                          </property>
                          <property name="font">
@@ -10611,7 +10611,7 @@ QToolButton::hover{
                    <string notr="true"/>
                   </property>
                   <property name="currentIndex">
-                   <number>1</number>
+                   <number>0</number>
                   </property>
                   <widget class="QWidget" name="Mode_page">
                    <layout class="QGridLayout" name="gridLayout_52">
@@ -11182,7 +11182,7 @@ Settings</string>
                        <number>0</number>
                       </property>
                       <item>
-                       <layout class="QHBoxLayout" name="horizontalLayout_64" stretch="2,2,1,5,1,1,1,1,1,1">
+                       <layout class="QHBoxLayout" name="horizontalLayout_64" stretch="5,1,5,1,1,1,1,1,1">
                         <property name="spacing">
                          <number>0</number>
                         </property>
@@ -11199,59 +11199,63 @@ Settings</string>
                          <number>5</number>
                         </property>
                         <item>
-                         <layout class="QVBoxLayout" name="verticalLayout_73" stretch="1,5">
+                         <layout class="QHBoxLayout" name="horizontalLayout_60">
                           <item>
-                           <spacer name="verticalSpacer_29">
+                           <layout class="QVBoxLayout" name="verticalLayout_73" stretch="1,5">
+                            <item>
+                             <spacer name="verticalSpacer_29">
+                              <property name="orientation">
+                               <enum>Qt::Vertical</enum>
+                              </property>
+                              <property name="sizeHint" stdset="0">
+                               <size>
+                                <width>20</width>
+                                <height>40</height>
+                               </size>
+                              </property>
+                             </spacer>
+                            </item>
+                            <item>
+                             <widget class="QLabel" name="PageInfo_lb">
+                              <property name="maximumSize">
+                               <size>
+                                <width>16777215</width>
+                                <height>50</height>
+                               </size>
+                              </property>
+                              <property name="font">
+                               <font>
+                                <pointsize>14</pointsize>
+                               </font>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">border:1px solid black;
+border-radius:6px;</string>
+                              </property>
+                              <property name="text">
+                               <string>DC/AC Parameters</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <spacer name="horizontalSpacer_51">
                             <property name="orientation">
-                             <enum>Qt::Vertical</enum>
+                             <enum>Qt::Horizontal</enum>
                             </property>
                             <property name="sizeHint" stdset="0">
                              <size>
-                              <width>20</width>
-                              <height>40</height>
+                              <width>40</width>
+                              <height>20</height>
                              </size>
                             </property>
                            </spacer>
                           </item>
-                          <item>
-                           <widget class="QLabel" name="PageInfo_lb">
-                            <property name="maximumSize">
-                             <size>
-                              <width>16777215</width>
-                              <height>50</height>
-                             </size>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <pointsize>14</pointsize>
-                             </font>
-                            </property>
-                            <property name="styleSheet">
-                             <string notr="true">border:1px solid black;
-border-radius:6px;</string>
-                            </property>
-                            <property name="text">
-                             <string>DC/AC Parameters</string>
-                            </property>
-                            <property name="alignment">
-                             <set>Qt::AlignCenter</set>
-                            </property>
-                           </widget>
-                          </item>
                          </layout>
-                        </item>
-                        <item>
-                         <spacer name="horizontalSpacer_51">
-                          <property name="orientation">
-                           <enum>Qt::Horizontal</enum>
-                          </property>
-                          <property name="sizeHint" stdset="0">
-                           <size>
-                            <width>40</width>
-                            <height>20</height>
-                           </size>
-                          </property>
-                         </spacer>
                         </item>
                         <item>
                          <widget class="QToolButton" name="SetPrevious_bt">
@@ -15144,6 +15148,12 @@ Set rule:B1 - A1 ≥ 10V</string>
                                     <property name="editTriggers">
                                      <set>QAbstractItemView::NoEditTriggers</set>
                                     </property>
+                                    <attribute name="horizontalHeaderVisible">
+                                     <bool>false</bool>
+                                    </attribute>
+                                    <attribute name="verticalHeaderVisible">
+                                     <bool>false</bool>
+                                    </attribute>
                                     <row>
                                      <property name="text">
                                       <string>1</string>
@@ -17935,7 +17945,7 @@ color: rgb(255, 255, 255);</string>
                 </sizepolicy>
                </property>
                <property name="styleSheet">
-                <string notr="true">border-image: url(:/new_ui/UI/光伏用户2.png);
+                <string notr="true">border-image: url(:/new_ui/UI/user.png);
 background-color: rgba(255, 255, 255, 0); 
 border-radius: 24px;border:1px solid black;</string>
                </property>
@@ -18691,7 +18701,7 @@ text-align: left;</string>
               </size>
              </property>
              <property name="styleSheet">
-              <string notr="true">border-image: url(:/new_ui/UI/用户1-min.png);
+              <string notr="true">border-image: url(:/new_ui/UI/user.png);
 min-width:126px;min-height:126px;max-width:126px;
 max-height: 126px;border-radius: 63px;border:1px solid black;</string>
              </property>
