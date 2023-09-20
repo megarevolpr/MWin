@@ -11452,7 +11452,7 @@ border-radius:10px;</string>
                          <string notr="true">background-color: rgb(255, 255, 255);</string>
                         </property>
                         <property name="currentIndex">
-                         <number>5</number>
+                         <number>8</number>
                         </property>
                         <widget class="QWidget" name="DCAC_page">
                          <property name="styleSheet">
@@ -13209,7 +13209,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="7" column="0">
                              <property name="text">
-                              <string>Machine Number</string>
+                              <string>Machine number</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13344,7 +13344,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             <column/>
                             <item row="0" column="0">
                              <property name="text">
-                              <string>Rate of change of power(kW/s)</string>
+                              <string>Protocol Version</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13352,7 +13352,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="0" column="2">
                              <property name="text">
-                              <string>Battery capacity alarm</string>
+                              <string>Release Charging Prohibition Indicator</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13368,7 +13368,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="0" column="4">
                              <property name="text">
-                              <string/>
+                              <string>User Password</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13381,7 +13381,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="1" column="0">
                              <property name="text">
-                              <string>Grid connected mode of Inv</string>
+                              <string>Restore factory</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13389,7 +13389,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="1" column="2">
                              <property name="text">
-                              <string>Protocol Version</string>
+                              <string>Release Discharging Prohibition Indicator</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13405,7 +13405,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="1" column="4">
                              <property name="text">
-                              <string/>
+                              <string>Maintenance password</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13418,7 +13418,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="2" column="0">
                              <property name="text">
-                              <string>BMS Comm.fault time(s)</string>
+                              <string/>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13426,7 +13426,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="2" column="2">
                              <property name="text">
-                              <string>Clear Data</string>
+                              <string/>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13455,7 +13455,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="3" column="0">
                              <property name="text">
-                              <string>EMS Comm.fault time(s)</string>
+                              <string/>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13463,7 +13463,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="3" column="2">
                              <property name="text">
-                              <string>Restore factory</string>
+                              <string/>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13492,7 +13492,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="4" column="0">
                              <property name="text">
-                              <string>Transformer ratio</string>
+                              <string/>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13500,7 +13500,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="4" column="2">
                              <property name="text">
-                              <string>Backup setup parameters</string>
+                              <string/>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13529,7 +13529,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="5" column="0">
                              <property name="text">
-                              <string>Language</string>
+                              <string/>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13537,7 +13537,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="5" column="2">
                              <property name="text">
-                              <string>Restore backup setup parameters</string>
+                              <string/>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13566,7 +13566,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="6" column="0">
                              <property name="text">
-                              <string>Sounds</string>
+                              <string/>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13574,7 +13574,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="6" column="2">
                              <property name="text">
-                              <string>System upgrade</string>
+                              <string/>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13603,7 +13603,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="7" column="0">
                              <property name="text">
-                              <string>User Password</string>
+                              <string/>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13611,7 +13611,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="7" column="2">
                              <property name="text">
-                              <string>Grid Expansion Enabling</string>
+                              <string/>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13640,7 +13640,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="8" column="0">
                              <property name="text">
-                              <string>Maintenance password</string>
+                              <string/>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13727,7 +13727,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             <column/>
                             <item row="0" column="0">
                              <property name="text">
-                              <string>Energy priority</string>
+                              <string>Rate of change of power(kW/s)</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13735,7 +13735,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="0" column="2">
                              <property name="text">
-                              <string>LVRT enable</string>
+                              <string>Machine type</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13764,7 +13764,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="1" column="0">
                              <property name="text">
-                              <string>Relese Charge mark</string>
+                              <string>Grid frequency upper limit(Hz)</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13772,7 +13772,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="1" column="2">
                              <property name="text">
-                              <string>HVRT enable</string>
+                              <string>Machine capacity</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13801,7 +13801,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="2" column="0">
                              <property name="text">
-                              <string>Relese Discharge mark</string>
+                              <string>Grid frequency lower limit(Hz)</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13809,7 +13809,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="2" column="2">
                              <property name="text">
-                              <string>AFD enable</string>
+                              <string>Transformer ratio</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13838,7 +13838,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="3" column="0">
                              <property name="text">
-                              <string>Grid recovery scheduling</string>
+                              <string>Vol protection upper limit(%)</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13846,7 +13846,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="3" column="2">
                              <property name="text">
-                              <string>PrimaryFreq enable</string>
+                              <string>Output vol. level</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13875,7 +13875,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="4" column="0">
                              <property name="text">
-                              <string>Grid recovery time(s)</string>
+                              <string>Vol protection lower limit(%)</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13883,7 +13883,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="4" column="2">
                              <property name="text">
-                              <string>Inertia enable</string>
+                              <string>Output Fre. grade</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13899,7 +13899,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="4" column="4">
                              <property name="text">
-                              <string/>
+                              <string>Grid recovery scheduling</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13912,7 +13912,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="5" column="0">
                              <property name="text">
-                              <string>CV_Parallel</string>
+                              <string>HVRT enable</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13920,7 +13920,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="5" column="2">
                              <property name="text">
-                              <string>PsheddingFreq</string>
+                              <string>Converter Anti-Reverse Flow</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13936,7 +13936,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="5" column="4">
                              <property name="text">
-                              <string/>
+                              <string>Grid recovery time(s)</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13949,7 +13949,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="6" column="0">
                              <property name="text">
-                              <string>QP curve</string>
+                              <string>LVRT enable</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13957,7 +13957,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="6" column="2">
                              <property name="text">
-                              <string/>
+                              <string>PsheddingFreq</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13973,7 +13973,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="6" column="4">
                              <property name="text">
-                              <string/>
+                              <string>Insulation detection enable DCAC</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13986,7 +13986,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="7" column="0">
                              <property name="text">
-                              <string>Insulation detection enable DCDC</string>
+                              <string>AFD enable</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13994,7 +13994,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="7" column="2">
                              <property name="text">
-                              <string/>
+                              <string>Inertia enable</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -14010,7 +14010,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="7" column="4">
                              <property name="text">
-                              <string/>
+                              <string>CV Parallel</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -14023,7 +14023,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="8" column="0">
                              <property name="text">
-                              <string>Insulation detection enable DCAC</string>
+                              <string>PrimaryFreq enable</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -14031,7 +14031,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="8" column="2">
                              <property name="text">
-                              <string/>
+                              <string>QP curve</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -14154,7 +14154,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </column>
                             <item row="0" column="3">
                              <property name="text">
-                              <string>Shut Down NO</string>
+                              <string>EPO</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -14162,7 +14162,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="1" column="3">
                              <property name="text">
-                              <string>Flooding</string>
+                              <string>Shut Down</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -14186,7 +14186,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="4" column="3">
                              <property name="text">
-                              <string>Smoke</string>
+                              <string>Flooding</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -14194,10 +14194,43 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="5" column="3">
                              <property name="text">
-                              <string>Temperature</string>
+                              <string>Fire fighting</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
+                             </property>
+                            </item>
+                            <item row="6" column="0">
+                             <property name="text">
+                              <string>Enable</string>
+                             </property>
+                             <property name="textAlignment">
+                              <set>AlignCenter</set>
+                             </property>
+                             <property name="flags">
+                              <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+                             </property>
+                            </item>
+                            <item row="6" column="1">
+                             <property name="text">
+                              <string>N_O</string>
+                             </property>
+                             <property name="textAlignment">
+                              <set>AlignCenter</set>
+                             </property>
+                             <property name="flags">
+                              <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+                             </property>
+                            </item>
+                            <item row="6" column="2">
+                             <property name="text">
+                              <string>Prompt</string>
+                             </property>
+                             <property name="textAlignment">
+                              <set>AlignCenter</set>
+                             </property>
+                             <property name="flags">
+                              <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
                              </property>
                             </item>
                             <item row="6" column="3">
@@ -14207,6 +14240,42 @@ Set rule:B1 - A1 ≥ 10V</string>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
                              </property>
+                             <property name="flags">
+                              <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+                             </property>
+                            </item>
+                            <item row="7" column="0">
+                             <property name="text">
+                              <string>Enable</string>
+                             </property>
+                             <property name="textAlignment">
+                              <set>AlignCenter</set>
+                             </property>
+                             <property name="flags">
+                              <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+                             </property>
+                            </item>
+                            <item row="7" column="1">
+                             <property name="text">
+                              <string>N_O</string>
+                             </property>
+                             <property name="textAlignment">
+                              <set>AlignCenter</set>
+                             </property>
+                             <property name="flags">
+                              <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+                             </property>
+                            </item>
+                            <item row="7" column="2">
+                             <property name="text">
+                              <string>Prompt</string>
+                             </property>
+                             <property name="textAlignment">
+                              <set>AlignCenter</set>
+                             </property>
+                             <property name="flags">
+                              <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+                             </property>
                             </item>
                             <item row="7" column="3">
                              <property name="text">
@@ -14215,6 +14284,42 @@ Set rule:B1 - A1 ≥ 10V</string>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
                              </property>
+                             <property name="flags">
+                              <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+                             </property>
+                            </item>
+                            <item row="8" column="0">
+                             <property name="text">
+                              <string>Enable</string>
+                             </property>
+                             <property name="textAlignment">
+                              <set>AlignCenter</set>
+                             </property>
+                             <property name="flags">
+                              <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+                             </property>
+                            </item>
+                            <item row="8" column="1">
+                             <property name="text">
+                              <string>N_O</string>
+                             </property>
+                             <property name="textAlignment">
+                              <set>AlignCenter</set>
+                             </property>
+                             <property name="flags">
+                              <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+                             </property>
+                            </item>
+                            <item row="8" column="2">
+                             <property name="text">
+                              <string>Prompt</string>
+                             </property>
+                             <property name="textAlignment">
+                              <set>AlignCenter</set>
+                             </property>
+                             <property name="flags">
+                              <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+                             </property>
                             </item>
                             <item row="8" column="3">
                              <property name="text">
@@ -14222,6 +14327,9 @@ Set rule:B1 - A1 ≥ 10V</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
+                             </property>
+                             <property name="flags">
+                              <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
                              </property>
                             </item>
                            </widget>
