@@ -9865,8 +9865,8 @@ Set rule:B1 - A1 ≥ 10V</string>
                           <rect>
                            <x>0</x>
                            <y>0</y>
-                           <width>501</width>
-                           <height>476</height>
+                           <width>385</width>
+                           <height>264</height>
                           </rect>
                          </property>
                          <property name="font">
@@ -11182,7 +11182,7 @@ Settings</string>
                        <number>0</number>
                       </property>
                       <item>
-                       <layout class="QHBoxLayout" name="horizontalLayout_64" stretch="0,2,1,5,1,1,1,1,1,1">
+                       <layout class="QHBoxLayout" name="horizontalLayout_64" stretch="2,2,1,5,1,1,1,1,1,1">
                         <property name="spacing">
                          <number>0</number>
                         </property>
@@ -11452,7 +11452,7 @@ border-radius:10px;</string>
                          <string notr="true">background-color: rgb(255, 255, 255);</string>
                         </property>
                         <property name="currentIndex">
-                         <number>0</number>
+                         <number>5</number>
                         </property>
                         <widget class="QWidget" name="DCAC_page">
                          <property name="styleSheet">
@@ -12974,7 +12974,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="0" column="4">
                              <property name="text">
-                              <string>Machine type</string>
+                              <string>Battery capacity alarm</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -12995,7 +12995,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="1" column="2">
                              <property name="text">
-                              <string>serial port 1(bps)</string>
+                              <string>serial port 2(bps)</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13011,7 +13011,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="1" column="4">
                              <property name="text">
-                              <string>Machine capacity</string>
+                              <string>BMS Comm.fault time(s)</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13024,7 +13024,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="2" column="0">
                              <property name="text">
-                              <string>Grid frequency upper limit(Hz)</string>
+                              <string>Output reactive power(kW)</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13032,7 +13032,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="2" column="2">
                              <property name="text">
-                              <string>serial port 2(bps)</string>
+                              <string>serial port 3(bps)</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13048,7 +13048,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="2" column="4">
                              <property name="text">
-                              <string>Output Fre. grade</string>
+                              <string>EMS Comm.fault time(s)</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13061,7 +13061,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="3" column="0">
                              <property name="text">
-                              <string>Grid frequency lower limit(Hz)</string>
+                              <string>Output power factor</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13069,7 +13069,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="3" column="2">
                              <property name="text">
-                              <string>serial port 3(bps)</string>
+                              <string>serial port 4(bps)</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13085,7 +13085,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="3" column="4">
                              <property name="text">
-                              <string>Output vol. level</string>
+                              <string>Language</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13098,7 +13098,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="4" column="0">
                              <property name="text">
-                              <string>Vol protection upper limit(%)</string>
+                              <string>Constant voltage(V)</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13106,7 +13106,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="4" column="2">
                              <property name="text">
-                              <string>serial port 4(bps)</string>
+                              <string>serial port 5(bps)</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13122,7 +13122,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="4" column="4">
                              <property name="text">
-                              <string/>
+                              <string>Sounds</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13135,7 +13135,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="5" column="0">
                              <property name="text">
-                              <string>Vol protection lower limit(%)</string>
+                              <string>Constant current(A)</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13143,7 +13143,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="5" column="2">
                              <property name="text">
-                              <string>serial port 5(bps)</string>
+                              <string>serial port 6(bps)</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13159,7 +13159,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="5" column="4">
                              <property name="text">
-                              <string/>
+                              <string>Clear Data</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13196,7 +13196,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="6" column="4">
                              <property name="text">
-                              <string/>
+                              <string>System upgrade</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13209,7 +13209,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="7" column="0">
                              <property name="text">
-                              <string>DG capacity(kW)</string>
+                              <string>Machine Number</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13233,7 +13233,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="7" column="4">
                              <property name="text">
-                              <string/>
+                              <string>Backup setup parameters</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13246,7 +13246,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="8" column="0">
                              <property name="text">
-                              <string/>
+                              <string>Parallel</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13254,7 +13254,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="8" column="2">
                              <property name="text">
-                              <string/>
+                              <string>Energy priority</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13262,7 +13262,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="8" column="4">
                              <property name="text">
-                              <string/>
+                              <string>Restore backup setup parameters</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -15194,8 +15194,8 @@ Set rule:B1 - A1 ≥ 10V</string>
                                       <rect>
                                        <x>0</x>
                                        <y>0</y>
-                                       <width>385</width>
-                                       <height>264</height>
+                                       <width>503</width>
+                                       <height>459</height>
                                       </rect>
                                      </property>
                                      <property name="font">

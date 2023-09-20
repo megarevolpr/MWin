@@ -319,7 +319,8 @@ void MyWidget::MemoryAllocation()
     Gen_turn_on_SOC_explain = new QPushButton;     //柴发开启SOC说明
     ForceCharge_start_explain = new QPushButton; //强充开启说明
     ForceCharge_top_explain = new QPushButton;   // 强充结束说明
-    Relese_Charge_mark_explain = new QPushButton;    //释放充电标志说明
+    Relese_Charge_mark_explain = new QPushButton;    //释放禁充标志说明
+    Relese_discharge_mark_explain = new QPushButton;    //释放禁放标志说明
     DOD_Protection_Release_SOC_explain = new QPushButton;//DOD保护解除SOC
     Cell_Voltage_max_explain = new QPushButton;//最高单体电压
     Cell_Voltage_max_delta_explain = new QPushButton;//最高单体电压回差
@@ -691,6 +692,7 @@ void MyWidget::MemoryAllocation()
     Grid_FCP_explain = new QPushButton;
     Grid_EDP_explain = new QPushButton;
     Grid_FDP_explain = new QPushButton;
+    BatteryCapacityAlarm_explain = new QPushButton;
 
     /***************************系统参数**************************/
     Change_rate_of_power_explain = new QPushButton;  //功率变化率说明
@@ -726,7 +728,7 @@ void MyWidget::MemoryAllocation()
     Module_max_explain = new QPushButton;  //最大模块数说明
     Module_min_explain = new QPushButton;  //最小模块数说明
     Insulation_detection_enable_DCDC_explain = new QPushButton;  //DCDC绝缘监测使能说明
-    BatteryCapacityAlarm_explain = new QPushButton;
+    Insulation_detection_enable_DCAC_explain = new QPushButton;  //DCAC绝缘监测使能说明
     Grid_expansion_explain = new QPushButton;
 
     /***************************外设**************************/
@@ -5625,350 +5627,6 @@ void MyWidget::ExternalDevice(QTableWidget *myTable)
     DO_3_Action->add_Specification()*/
 
 }
-/*****************DCAC调试页说明*********************/
-void MyWidget::DCAC_Debugg(QTableWidget *myTable)
-{
-    QString str = tr("It is used for internal debugging only.");
-    //调试变量1
-    Debug_variable_1 = new Specification(this,Debug_variable_1_explain, myTable, 0, 1, \
-                                   "0", tr("Debug variable 1"), \
-                                   str);
-    Debug_variable_1->add_Specification();
-
-    //调试变量2
-    Debug_variable_2 = new Specification(this,Debug_variable_2_explain, myTable, 1, 1, \
-                                   "0", tr("Debug variable 2"), \
-                                   str);
-    Debug_variable_2->add_Specification();
-
-    //调试变量3
-    Debug_variable_3 = new Specification(this,Debug_variable_3_explain, myTable, 2, 1, \
-                                   "0", tr("Debug variable 3"), \
-                                   str);
-    Debug_variable_3->add_Specification();
-
-    //调试地址变量1
-    Debug_variable_1_addr = new Specification(this,Debug_variable_1_addr_explain, myTable, 3, 1, \
-                                   "4096", tr("Debug variable 1 addr"), \
-                                   str);
-    Debug_variable_1_addr->add_Specification();
-
-    //调试地址变量2
-    Debug_variable_2_addr = new Specification(this,Debug_variable_2_addr_explain, myTable, 4, 1, \
-                                   "4096", tr("Debug variable 2 addr"), \
-                                   str);
-    Debug_variable_2_addr->add_Specification();
-
-    //调试地址变量3
-    Debug_variable_3_addr = new Specification(this,Debug_variable_3_addr_explain, myTable, 5, 1, \
-                                   "4096", tr("Debug variable 3 addr"), \
-                                   str);
-    Debug_variable_3_addr->add_Specification();
-
-    //调试内存变量1
-    Debug_memery_var_1 = new Specification(this,Debug_memery_var_1_explain, myTable, 6, 1, \
-                                   "0", tr("Debug memery var 1"), \
-                                   str);
-    Debug_memery_var_1->add_Specification();
-
-    //调试内存变量2
-    Debug_memery_var_2 = new Specification(this,Debug_memery_var_2_explain, myTable, 7, 1, \
-                                   "0", tr("Debug memery var 2"), \
-                                   str);
-    Debug_memery_var_2->add_Specification();
-
-    //调试内存变量3
-    Debug_memery_var_3 = new Specification(this,Debug_memery_var_3_explain, myTable, 8, 1, \
-                                   "0", tr("Debug memery var 3"), \
-                                   str);
-    Debug_memery_var_3->add_Specification();
-
-    //输入电压系数
-    Input_Vol_revise = new Specification(this,Input_Vol_revise_explain, myTable, 9, 1, \
-                                   "", tr("Input Vol revise"), \
-                                   str);
-    Input_Vol_revise->add_Specification();
-
-    //输入电流系数
-    Input_Cur_revise = new Specification(this,Input_Cur_revise_explain, myTable, 10, 1, \
-                                   "", tr("Input Cur revise"), \
-                                   str);
-    Input_Cur_revise->add_Specification();
-
-    //1.5V电压系数
-    Voltage_1_5_revise = new Specification(this,Voltage_1_5_revise_explain, myTable, 0, 3, \
-                                   "", tr("Voltage 1.5 revise"), \
-                                   str);
-    Voltage_1_5_revise->add_Specification();
-
-    //母线电压系数
-    Bus_Vol_revise = new Specification(this,Bus_Vol_revise_explain, myTable, 1, 3, \
-                                   "", tr("Bus Vol revise"), \
-                                   str);
-    Bus_Vol_revise->add_Specification();
-
-    //电网A相电压系数
-    Grid_A_AB_Vol_revise = new Specification(this,Grid_A_AB_Vol_revise_explain, myTable, 2, 3, \
-                                   "", tr("Grid A AB Vol revise"), \
-                                   str);
-    Grid_A_AB_Vol_revise->add_Specification();
-
-    //电网B相电压系数
-    Grid_B_BC_Vol_revise = new Specification(this,Grid_B_BC_Vol_revise_explain, myTable, 3, 3, \
-                                   "", tr("Grid B BC Vol revise"), \
-                                   str);
-    Grid_B_BC_Vol_revise->add_Specification();
-
-    //电网C相电压系数
-    Grid_C_CA_Vol_revise = new Specification(this,Grid_C_CA_Vol_revise_explain, myTable, 4, 3, \
-                                   "", tr("Grid C CA Vol revise"), \
-                                   str);
-    Grid_C_CA_Vol_revise->add_Specification();
-
-    //输出A相电流系数
-    Output_A_Cur_revise = new Specification(this,Output_A_Cur_revise_explain, myTable, 5, 3, \
-                                   "", tr("Output A Cur revise"), \
-                                   str);
-    Output_A_Cur_revise->add_Specification();
-
-    //输出B相电流系数
-    Output_B_Cur_revise = new Specification(this,Output_B_Cur_revise_explain, myTable, 6, 3, \
-                                   "", tr("Output B Cur revise"), \
-                                   str);
-    Output_B_Cur_revise->add_Specification();
-
-    //输出C相电流系数
-    Output_C_Cur_revise = new Specification(this,Output_C_Cur_revise_explain, myTable, 7, 3, \
-                                   "", tr("Output C Cur revise"), \
-                                   str);
-    Output_C_Cur_revise->add_Specification();
-
-    //逆变A相电压系数
-    INV_A_Vol_revise = new Specification(this,INV_A_Vol_revise_explain, myTable, 8, 3, \
-                                   "", tr("INV A Vol revise"), \
-                                   str);
-    INV_A_Vol_revise->add_Specification();
-
-    //逆变B相电压系数
-    INV_B_Vol_revise = new Specification(this,INV_B_Vol_revise_explain, myTable, 9, 3, \
-                                   "", tr("INV B Vol revise"), \
-                                   str);
-    INV_B_Vol_revise->add_Specification();
-
-    //逆变C相电压系数
-    INV_C_Vol_revise = new Specification(this,INV_C_Vol_revise_explain, myTable, 10, 3, \
-                                   "", tr("INV C Vol revise"), \
-                                   str);
-    INV_C_Vol_revise->add_Specification();
-
-    //逆变A相电感电流系数
-    INV_A_ind_Cur_revise = new Specification(this,INV_A_ind_Cur_revise_explain, myTable, 11, 3, \
-                                   "", tr("INV A inductance Cur revise"), \
-                                   str);
-    INV_A_ind_Cur_revise->add_Specification();
-
-    //逆变B相电感电流系数
-    INV_B_ind_Cur_revise = new Specification(this,INV_B_ind_Cur_revise_explain, myTable, 12, 3, \
-                                   "", tr("INV B inductance Cur revise"), \
-                                   str);
-    INV_B_ind_Cur_revise->add_Specification();
-
-    //逆变C相电感电流系数
-    INV_C_ind_Cur_revise = new Specification(this,INV_C_ind_Cur_revise_explain, myTable, 13, 3, \
-                                   "", tr("INV C inductance Cur revise"), \
-                                   str);
-    INV_C_ind_Cur_revise->add_Specification();
-
-    //开关机状态字
-    INV_On_off_flag = new Specification(this,INV_On_off_flag_explain, myTable, 0, 5, \
-                                   "0", tr("INV On off flag"), \
-                                   str);
-    INV_On_off_flag->add_Specification();
-
-    //逻辑状态字
-    Logic_state = new Specification(this,Logic_state_explain, myTable, 1, 5, \
-                                   "0", tr("Logic state"), \
-                                   str);
-    Logic_state->add_Specification();
-
-    //逆变状态字
-    INV_flag = new Specification(this,INV_flag_explain, myTable, 2, 5, \
-                                   "0", tr("INV flag"), \
-                                   str);
-    INV_flag->add_Specification();
-
-    //电网状态字
-    Grid_flag = new Specification(this,Grid_flag_explain, myTable, 3, 5, \
-                                   "0", tr("Grid flag"), \
-                                   str);
-    Grid_flag->add_Specification();
-
-    //电网保护状态字
-    Grid_protect_flag = new Specification(this,Grid_protect_flag_explain, myTable, 4, 5, \
-                                   "0", tr("Grid protect flag"), \
-                                   str);
-    Grid_protect_flag->add_Specification();
-
-    //电池电压状态字
-    PV_flag = new Specification(this,PV_flag_explain, myTable, 5, 5, \
-                                   "0", tr("PV flag"), \
-                                   str);
-    PV_flag->add_Specification();
-
-    //母线状态字
-    DC_bus_flag = new Specification(this,DC_bus_flag_explain, myTable, 6, 5, \
-                                   "0", tr("DC bus flag"), \
-                                   str);
-    DC_bus_flag->add_Specification();
-
-    //中断状态字
-    INT_main_flag = new Specification(this,INT_main_flag_explain, myTable, 7, 5, \
-                                   "0", tr("INT main flag"), \
-                                   str);
-    INT_main_flag->add_Specification();
-
-    //并机状态字
-    parallel_signal = new Specification(this,parallel_signal_explain, myTable, 8, 5, \
-                                   "0", tr("parallel signal"), \
-                                   str);
-    parallel_signal->add_Specification();
-
-    //监控命令状态字
-    Monitor_Order = new Specification(this,Monitor_Order_explain, myTable, 9, 5, \
-                                   "0", tr("Monitor Order"), \
-                                   str);
-    Monitor_Order->add_Specification();
-
-    //电池信息字
-    Bat_Infor = new Specification(this,Bat_Infor_explain, myTable, 10, 5, \
-                                   "0", tr("Bat Infor"), \
-                                   str);
-    Bat_Infor->add_Specification();
-
-    //电池状态字
-    Bat_State = new Specification(this,Bat_State_explain, myTable, 11, 5, \
-                                   "0", tr("Bat State"), \
-                                   str);
-    Bat_State->add_Specification();
-}
-/*****************DCDC调试页说明*******************/
-void MyWidget::DCDC_Debugg(QTableWidget *myTable)
-{
-    QString str = tr("It is used for internal debugging only.");
-    //调试变量1
-    DC_Debug_variable_1 = new Specification(this,DC_Debug_variable_1_explain, myTable, 0, 1, \
-                                   "0", tr("Debug variable 1"), \
-                                   str);
-    DC_Debug_variable_1->add_Specification();
-
-    //调试变量2
-    DC_Debug_variable_2 = new Specification(this,DC_Debug_variable_2_explain, myTable, 1, 1, \
-                                   "0", tr("Debug variable 2"), \
-                                   str);
-    DC_Debug_variable_2->add_Specification();
-
-    //调试变量3
-    DC_Debug_variable_3 = new Specification(this,DC_Debug_variable_3_explain, myTable, 2, 1, \
-                                   "0", tr("Debug variable 3"), \
-                                   str);
-    DC_Debug_variable_3->add_Specification();
-
-    //当前模块号
-    Current_ID = new Specification(this,Current_ID_explain, myTable, 3, 1, \
-                                   "1", tr("Debug variable 3"), \
-                                   str);
-    Current_ID->add_Specification();
-
-    //中断状态字
-    DC_INT_main_flag = new Specification(this,DC_INT_main_flag_explain, myTable, 4, 1, \
-                                   "0", tr("INT main flag"), \
-                                   str);
-    DC_INT_main_flag->add_Specification();
-
-    //母线状态字
-    DC_DC_bus_flag = new Specification(this,DC_DC_bus_flag_explain, myTable, 5, 1, \
-                                   "0", tr("DC bus flag"), \
-                                   str);
-    DC_DC_bus_flag->add_Specification();
-
-    //电池电压状态字
-    DC_PV_flag = new Specification(this,DC_PV_flag_explain, myTable, 6, 1, \
-                                   "0", tr("PV flag"), \
-                                   str);
-    DC_PV_flag->add_Specification();
-
-    //调试地址变量1
-    DC_Debug_variable_1_addr = new Specification(this,DC_Debug_variable_1_addr_explain, myTable, 0, 3, \
-                                   "0", tr("Debug variable 1 addr"), \
-                                   str);
-    DC_Debug_variable_1_addr->add_Specification();
-
-    //调试地址变量2
-    DC_Debug_variable_2_addr = new Specification(this,DC_Debug_variable_2_addr_explain, myTable, 1, 3, \
-                                   "0", tr("Debug variable 2 addr"), \
-                                   str);
-    DC_Debug_variable_2_addr->add_Specification();
-
-    //调试地址变量3
-    DC_Debug_variable_3_addr = new Specification(this,DC_Debug_variable_3_addr_explain, myTable, 2, 3, \
-                                   "0", tr("Debug variable 3 addr"), \
-                                   str);
-    DC_Debug_variable_3_addr->add_Specification();
-
-    //开关机状态字
-    DC_INV_On_off_flag = new Specification(this,DC_INV_On_off_flag_explain, myTable, 4, 3, \
-                                   "0", tr("INV On off flag"), \
-                                   str);
-    DC_INV_On_off_flag->add_Specification();
-
-    //
-    DCONV_logic = new Specification(this,DCONV_logic_explain, myTable, 5, 3, \
-                                    "0", tr("DCONV logic"), \
-                                    str);
-    DCONV_logic->add_Specification();
-
-    //并机状态字
-    DC_parallel_signal = new Specification(this,DC_parallel_signal_explain, myTable, 6, 3, \
-                                   "0", tr("parallel signal"), \
-                                   str);
-    DC_parallel_signal->add_Specification();
-
-    //调试内存变量1
-    DC_Debug_memery_var_1 = new Specification(this,DC_Debug_memery_var_1_explain, myTable, 0, 5, \
-                                   "0", tr("Debug memery var 1"), \
-                                   str);
-    DC_Debug_memery_var_1->add_Specification();
-
-    //调试内存变量2
-    DC_Debug_memery_var_2 = new Specification(this,DC_Debug_memery_var_2_explain, myTable, 1, 5, \
-                                   "0", tr("Debug memery var 2"), \
-                                   str);
-    DC_Debug_memery_var_2->add_Specification();
-
-    //调试内存变量3
-    DC_Debug_memery_var_3 = new Specification(this,DC_Debug_memery_var_3_explain, myTable, 2, 5, \
-                                   "0", tr("Debug memery var 3"), \
-                                   str);
-    DC_Debug_memery_var_3->add_Specification();
-
-    //监控命令状态字
-    DC_Monitor_Order = new Specification(this,DC_Monitor_Order_explain, myTable, 4, 5, \
-                                   "0", tr("Monitor Order"), \
-                                   str);
-    DC_Monitor_Order->add_Specification();
-
-    //电池信息字
-    DC_Bat_Infor = new Specification(this,DC_Bat_Infor_explain, myTable, 5, 5, \
-                                   "0", tr("Bat Infor"), \
-                                   str);
-    DC_Bat_Infor->add_Specification();
-
-    //电池状态字
-    DC_Bat_State = new Specification(this,DC_Bat_State_explain, myTable, 6, 5, \
-                                   "0", tr("Bat State"), \
-                                   str);
-    DC_Bat_State->add_Specification();
-}
 //设置控件到表格
 void MyWidget::SetControlToTable()
 {
@@ -5980,6 +5638,9 @@ void MyWidget::SetControlToTable()
     SetAdvancedSetup1ToTable(ui->Advanced_Tab_1);
     SetAdvancedSetup2ToTable(ui->Advanced_Tab_2);
     SetAdvancedSetup3ToTable(ui->Advanced_Tab_3);
+    Device_TabToTable(ui->ExternalDevice_Tab);
+    DCAC_Debugg(ui->DCAC_Debug_Tab);
+    DCDC_Debugg(ui->DCDC_Debug_Tab);
 }
 //设置DCAC控件到表格
 void MyWidget::SetDCACToTable(QTableWidget *myTable)
@@ -6443,27 +6104,7 @@ void MyWidget::SetAdvancedSetup1ToTable(QTableWidget *myTable)
 
     line = 0;
     column = 3;
-//    ButtonToTable->add_SpecificationData(Grid_frequency_upper_limit_explain, myTable, line++, column, \
-//                                         "0.2", tr("Upper limit of power grid frequency variation range"), \
-//                                         tr("Upper limit of power grid frequency variation range: The maximum range of frequency variation allowed on the AC side, which can be selected as 0.2, 0.5, 1, 5."));
-
-//    ButtonToTable->add_SpecificationData(Grid_frequency_lower_limit_explain, myTable, line++, column, \
-//                                         "-0.5", tr("Lower limit of power grid frequency variation range"), \
-//                                         tr("Lower limit of power grid frequency variation range: The maximum range of frequency variation allowed on the AC side, which can be selected as-0.5, -1, -2, -5."));
-
-//    ButtonToTable->add_SpecificationData(Vol_protection_upper_limit_explain, myTable, line++, column, \
-//                                         "+15", tr("Vol protection upper limit"), \
-//                                         tr("Upper limit of voltage protection range: The maximum range of voltage variation allowed on the AC side, which can be selected as 10, 15, 20."));
-
-//    ButtonToTable->add_SpecificationData(Vol_protection_lower_limit_explain, myTable, line++, column, \
-//                                         "-15", tr("Vol protection lower limit"), \
-//                                         tr("Lower limit of voltage protection range: The minimum range of voltage variation allowed on the AC side, which can be selected as -10, -15, -20."));
-
-
-
-
-
-
+    //主机地址
     ButtonToTable->add_SpecificationData(Host_Address_explain, myTable, line++, column,\
                                          "1", tr("Serial Communication Address"), \
                                          tr("Serial Communication Address: The default value is 1, adjustable range is between 1 and 255, used for matching address during serial communication."));
@@ -6475,19 +6116,23 @@ void MyWidget::SetAdvancedSetup1ToTable(QTableWidget *myTable)
 
     ButtonToTable->add_SpecificationData(serial_port_2_explain, myTable, line++, column, \
                                          "9600", tr("serial port 3"), \
-                                         tr("Serial Port 3 has six selectable baud rates: 1200, 2400, 4800, 9600, 19200, and 38400. The default baud rate for Serial Port 3 is 9600 bps, with eight data bits, no parity, and one stop bit (8-N-1)."));
+                                         tr("Serial Port 3 has six selectable baud rates: 1200, 2400, 4800, 9600, 19200, and 38400. "
+                                            "The default baud rate for Serial Port 3 is 9600 bps, with eight data bits, no parity, and one stop bit (8-N-1)."));
 
     ButtonToTable->add_SpecificationData(serial_port_3_explain, myTable, line++, column, \
                                          "9600", tr("serial port 4"), \
-                                         tr("Serial Port 4 has six selectable baud rates: 1200, 2400, 4800, 9600, 19200, and 38400. The default baud rate for Serial Port 4 is 9600 bps, with eight data bits, no parity, and one stop bit (8-N-1)."));
+                                         tr("Serial Port 4 has six selectable baud rates: 1200, 2400, 4800, 9600, 19200, and 38400. "
+                                            "The default baud rate for Serial Port 4 is 9600 bps, with eight data bits, no parity, and one stop bit (8-N-1)."));
 
     ButtonToTable->add_SpecificationData(serial_port_4_explain, myTable, line++, column, \
                                          "9600", tr("serial port 5"), \
-                                         tr("Serial Port 5 has six selectable baud rates: 1200, 2400, 4800, 9600, 19200, and 38400. The default baud rate for Serial Port 5 is 9600 bps, with eight data bits, no parity, and one stop bit (8-N-1)."));
+                                         tr("Serial Port 5 has six selectable baud rates: 1200, 2400, 4800, 9600, 19200, and 38400. "
+                                            "The default baud rate for Serial Port 5 is 9600 bps, with eight data bits, no parity, and one stop bit (8-N-1)."));
 
     ButtonToTable->add_SpecificationData(serial_port_5_explain, myTable, line++, column, \
                                          "9600", tr("serial port 6"), \
-                                         tr("Serial Port 6 has six selectable baud rates: 1200, 2400, 4800, 9600, 19200, and 38400. The default baud rate for Serial Port 6 is 9600 bps, with eight data bits, no parity, and one stop bit (8-N-1)."));
+                                         tr("Serial Port 6 has six selectable baud rates: 1200, 2400, 4800, 9600, 19200, and 38400. "
+                                            "The default baud rate for Serial Port 6 is 9600 bps, with eight data bits, no parity, and one stop bit (8-N-1)."));
 
     ButtonToTable->add_SpecificationData(Can_port_1_explain, myTable, line++, column, \
                                          "500", tr("Can port 1"), \
@@ -6497,104 +6142,555 @@ void MyWidget::SetAdvancedSetup1ToTable(QTableWidget *myTable)
                                          "250", tr("Can port 2"), \
                                          tr("CAN2 Port: Optional baud rates for the CAN2 port include 100, 125, 250, 500, and 800 kbps, with a default baud rate of 500 kbps."));
 
+    //能量优先级说明
+    ButtonToTable->add_SpecificationData(Energy_priority_explain, myTable, line++, column, \
+                                        tr("Bat>Grid"), tr("Energy priority"), \
+                                        tr("Energy Priority: In the self-use mode,when selecting battery priority over the grid, "
+                                           "the load is powered by the battery as a priority.When selecting the grid priority over the battery, the load is powered by the grid as a priority."));
+
     line = 0;
     column = 5;
-    ButtonToTable->add_SpecificationData(Machine_type_explain, myTable, line++, column, \
-                                         "MPS-TS", tr("Machine type"), \
-                                         tr("Converter Model: As per factory settings, generally not modifiable."));
+    //电池容量告警
+    ButtonToTable->add_SpecificationData(BatteryCapacityAlarm_explain, myTable, line++, column, \
+                                         tr("prohibit"), tr("Battery Capacity Alarm"), \
+                                         tr("."));
+    //BMS通信故障判断时间
+    ButtonToTable->add_SpecificationData(BmsComFaultTime_explain, myTable, line++, column, \
+                                         tr("20"), tr("Bms Com. Fault Time"), \
+                                         tr("BMS communication fault determination time: "
+                                            "The BMS communication fault determination time refers to the BMS communication fault "
+                                            "when the BMS communication is disconnected and the communication is not recovered after a preset period of time."));
 
-    ButtonToTable->add_SpecificationData(Machine_capacity_explain, myTable, line++, column, \
-                                         "100", tr("Machine capacity"), \
-                                             tr("The rated capacity of the converter shall be based on the factory value and cannot be changed."));
+    //EMS通信故障判断时间
+    ButtonToTable->add_SpecificationData(EMSComFaultModel_explain, myTable, line++, column, \
+                                         tr("120"), tr("EMS Com. Fault Model"), \
+                                         tr("EMS communication fault determination time: "
+                                            "The EMS communication fault determination time refers to the time "
+                                            "when the communication between the EMS is disconnected and the communication is not recovered after a preset period of time."));
 
+    //语言
+    ButtonToTable->add_SpecificationData(Language_explain, myTable, line++, column, \
+                                         tr("English"), tr("Language"), \
+                                         tr("You can set the display language of the screen to Chinese or English. The system needs to restart before switching the language."));
 
-    ButtonToTable->add_SpecificationData(Output_Fre_grade_explain, myTable, line++, column, \
-                                         "50", tr("Output Fre grade"), \
-                                         tr("Output Frequency Level: Default 50Hz, typically 50Hz or 60Hz."));
+    //声音
+    ButtonToTable->add_SpecificationData(Sounds_explain, myTable, line++, column, \
+                                         tr("Allow"), tr("Sounds"), \
+                                         tr("Set whether the display is enabled sound, which can be allowed(Allow) or prohibited(forbid)."));
 
-    ButtonToTable->add_SpecificationData(Output_vol_level_explain, myTable, line++, column, \
-                                         "400", tr("Output vol level"), \
-                                         tr("Output Voltage Level: As per factory settings, generally not modifiable."));
+    //清除数据
+    ButtonToTable->add_SpecificationData(Clear_Data_explain, myTable, line++, column, \
+                                         tr("Clear"), tr("Clear Data"), \
+                                         tr("Clear previous recorded data and operation data of the system."));
 
+    //系统升级说明
+    System_upgrade_explain->setText(tr("upgrade"));
+    myTable->setCellWidget(line++, column, (QWidget *)System_upgrade_explain);
+
+    //备份设置参数
+    ButtonToTable->add_SpecificationData(BackupSetParameters_explain, myTable,line++, column, \
+                                         tr("Backup"), tr("Backup Set Parameters"), \
+                                         tr("Backup setting parameters: Backup setting parameters refers to backing up the parameters set on the current device so that the backup parameter Settings can be restored when needed."));
+
+    //恢复备份设置参数
+    ButtonToTable->add_SpecificationData(RestoreBackupSetParameters_explain, myTable,line++, column, \
+                                         tr("Restore\nBackup"), tr("Restore Backup Set Parameters"), \
+                                         tr("Restore backup setting parameters: Restore backup setting parameters means to restore the device to the last backup setting parameters and restart the device."));
 }
 //设置高级设置页2控件到表格
 void MyWidget::SetAdvancedSetup2ToTable(QTableWidget *myTable)
 {
     int line = 0;int column = 1;//当前解释的button行和列
-    ButtonToTable->add_SpecificationData(Change_rate_of_power_explain, myTable, line++, column, \
-                                         "20", tr("Power change rate"), \
-                                         tr("Power change rate: the rate at which power changes within a second ."));
-
-    ButtonToTable->add_SpecificationData(Grid_connected_mode_of_Inv_explain, myTable, line++, column, \
-                                         tr("Disable"), tr("Converter Anti-Reverse Flow"), \
-                                         tr("Converter Anti-Reverse Flow: Enable, Disable;"
-                                            "\nEnabling prevents converter current from flowing into the grid, while Disabling allows converter current to flow into the grid."));
-
-    ButtonToTable->add_SpecificationData(BmsComFaultTime_explain, myTable, line++, column, \
-                                         tr("20"), tr("Bms Com. Fault Time"), \
-                                         tr("BMS communication fault determination time: "
-                                            "The BMS communication fault determination time refers to the BMS communication fault when the BMS communication is disconnected and the communication is not recovered after a preset period of time."));
-
-    ButtonToTable->add_SpecificationData(EMSComFaultModel_explain, myTable, line++, column, \
-                                         tr("120"), tr("EMS Com. Fault Model"), \
-                                         tr("EMS communication fault determination time: "
-                                            "The EMS communication fault determination time refers to the time when the communication between the EMS is disconnected and the communication is not recovered after a preset period of time."));
-
-    ButtonToTable->add_SpecificationData(Converter_side_vol_level_explain, myTable, line++, column, \
-                                         "270:400", tr("Transformer Turns Ratio"), \
-                                                 tr("Transformer Voltage Ratio: To be determined by the factory nameplate, not modifiable."));
-
-    ButtonToTable->add_SpecificationData(Language_explain, myTable, line++, column, \
-                                         tr("English"), tr("Language"), \
-                                         tr("You can set the display language of the screen to Chinese or English. The system needs to restart before switching the language."));
-
-    ButtonToTable->add_SpecificationData(Sounds_explain, myTable, line++, column, \
-                                         tr("Allow"), tr("Sounds"), \
-                                         tr("Set whether the display is enabled sound, which can be allowed(Allow) or prohibited(forbid)."));
-
-    ButtonToTable->add_SpecificationData(UserPassPort_explain, myTable, line++, column, \
-                                         "123456", tr("User password"), \
-                                         tr("User password: Available for resetting the user password. The default user password is 123456. (Note: The user password must be six digits.)"));
-
-    ButtonToTable->add_SpecificationData(RootPassport_explain, myTable, line++, column,\
-                                         "888888", tr("Admin password"), \
-                                         tr("Admin password: Available for resetting the admin password. The default admin password is 888888. (Note: The admin password must be six digits.)"));
-
-    line = 0;
-    column = 3;
-    ButtonToTable->add_SpecificationData(BatteryCapacityAlarm_explain,myTable,line++,column,\
-                                         tr("Prohibit"),tr("Battery Capacity Alarm"),\
-                                         tr("."));
-
+    //协议版本
     ButtonToTable->add_SpecificationData(ProtocolVersion_explain, myTable, line++, column, \
                                          "V1.0", tr("ProtocolVersion"), \
                                          tr("Protocol version: View the current protocol version. The default protocol version number is V1.0."));
 
-    ButtonToTable->add_SpecificationData(Clear_Data_explain, myTable, line++, column, \
-                                         tr("Clear"), tr("Clear Data"), \
-                                         tr("Clear previous recorded data and operation data of the system."));
-
+    //恢复出厂
     ButtonToTable->add_SpecificationData(Restore_factory_explain, myTable,line++, column, \
                                          tr("restore"), tr("Restore factory"), \
                                          tr("Restore the factory default Settings."));
 
-    ButtonToTable->add_SpecificationData(BackupSetParameters_explain, myTable,line++, column, \
-                                         tr("Backup"), tr("Backup Set Parameters"), \
-                                         tr("Backup setting parameters: Backup setting parameters refers to backing up the parameters set on the current device so that the backup parameter Settings can be restored when needed."));
+    line = 0;
+    column = 3;
+    //释放充电标志
+    ButtonToTable->add_SpecificationData(Relese_Charge_mark_explain, myTable,line++, column, \
+                                         tr("Follow\nbattery"), tr("Release Prohibited Charging Flag"), \
+                                         tr("When the battery SOC is below the selected value, there are four options: Follow battery, 95%, 90%, 85%."));
 
-    ButtonToTable->add_SpecificationData(RestoreBackupSetParameters_explain, myTable,line++, column, \
-                                         tr("Restore\nBackup"), tr("Restore Backup Set Parameters"), \
-                                         tr("Restore backup setting parameters: Restore backup setting parameters means to restore the device to the last backup setting parameters and restart the device."));
+    //释放禁放标志
+    ButtonToTable->add_SpecificationData(Relese_discharge_mark_explain, myTable,line++, column, \
+                                         tr("Follow\nbattery"), tr("Release Prohibited Discharging Flag"), \
+                                         tr("When the battery SOC is higher than the selected value, there are four options: Follow battery, 5%, 10%, 15%."));
+    line = 0;
+    column = 5;
+    //用户密码
+    ButtonToTable->add_SpecificationData(UserPassPort_explain, myTable, line++, column, \
+                                         "123456", tr("User password"), \
+                                         tr("User password: Available for resetting the user password. The default user password is 123456. (Note: The user password must be six digits.)"));
 
-    //系统升级说明
-    System_upgrade_explain->setText(tr("upgrade"));
-    myTable->setCellWidget(line++, column, (QWidget *)System_upgrade_explain);   
+    //维护密码
+    ButtonToTable->add_SpecificationData(RootPassport_explain, myTable, line++, column,\
+                                         "******", tr("Admin password"), \
+                                         tr("Admin password: Available for resetting the admin password.(Note: The admin password must be six digits.)"));
 
 }
 //设置高级设置页3控件到表格
 void MyWidget::SetAdvancedSetup3ToTable(QTableWidget *myTable)
 {
+    int line = 0;int column = 1;//当前解释的button行和列
+    //功率变化率
+    ButtonToTable->add_SpecificationData(Change_rate_of_power_explain, myTable, line++, column, \
+                                             "20", tr("Power change rate"), \
+                                             tr("Power change rate: the rate at which power changes within a second ."));
+    //电网频率变化范围上限
+    ButtonToTable->add_SpecificationData(Grid_frequency_upper_limit_explain, myTable, line++, column, \
+                                         "0.2", tr("Upper limit of power grid frequency variation range"), \
+                                         tr("Upper limit of power grid frequency variation range: The maximum range of frequency variation allowed on the AC side, which can be selected as 0.2, 0.5, 1, 5."));
 
+    //电网频率变化范围下限
+    ButtonToTable->add_SpecificationData(Grid_frequency_lower_limit_explain, myTable, line++, column, \
+                                         "-0.5", tr("Lower limit of power grid frequency variation range"), \
+                                         tr("Lower limit of power grid frequency variation range: The maximum range of frequency variation allowed on the AC side, which can be selected as-0.5, -1, -2, -5."));
+
+    //电压保护范围上限
+    ButtonToTable->add_SpecificationData(Vol_protection_upper_limit_explain, myTable, line++, column, \
+                                         "+15", tr("Vol protection upper limit"), \
+                                         tr("Upper limit of voltage protection range: The maximum range of voltage variation allowed on the AC side, which can be selected as 10, 15, 20."));
+
+    //电压保护范围下限
+    ButtonToTable->add_SpecificationData(Vol_protection_lower_limit_explain, myTable, line++, column, \
+                                         "-15", tr("Vol protection lower limit"), \
+                                         tr("Lower limit of voltage protection range: The minimum range of voltage variation allowed on the AC side, which can be selected as -10, -15, -20."));
+
+    //高穿使能说明
+    ButtonToTable->add_SpecificationData(HVRT_enable_explain, myTable, line++, column, \
+                                         tr("prohibit"), tr("HVRT enable"), \
+                                         tr("High voltage ride through(HVRT) enablement: Enable, Disable. (Note: This option is generally used in large grid-on power stations.)"));
+
+    //低穿使能说明
+    ButtonToTable->add_SpecificationData(LVRT_enable_explain, myTable, line++, column, \
+                                         tr("prohibit"), "LVRT enable", \
+                                         tr("Low voltage ride through(LVRT) enablement: Enable, Disable. (Note: This option is generally used in large grid-on power stations.)"));
+    //孤岛使能说明
+    ButtonToTable->add_SpecificationData(AFD_enable_explain, myTable, line++, column, \
+                                         tr("prohibit"), tr("AFD enable"), \
+                                         tr("Prevent islanding effect. When islanding effect is detected "
+                                            "(in a photovoltaic grid-on system, when a power outage occurs in the main grid, "
+                                            "and the PV grid-connected converter generates power that matches the local load on the low-voltage side of the grid, "
+                                            "it can easily sustain power generation independently, "
+                                            "resulting in an 'island' phenomenon, which endangers the safety of maintenance personnel), "
+                                            "the converter automatically shuts down. The options for this feature can be set as 'Enable' or 'prohibited'."
+                                            "(Note: This option is generally used in large grid-on power stations.)"));
+
+    //一次调频使能说明
+    ButtonToTable->add_SpecificationData(PrimaryFreq_enable_explain, myTable, line++, column, \
+                                       tr("prohibit"), tr("PrimaryFreq enable"), \
+                                       tr("Primary frequency control enable: "
+                                          "When the grid frequency deviates from the rated value, "
+                                          "the active power is controlled to increase or decrease in order to maintain the grid frequency at the rated value. It can be selected as enabled or disabled. "
+                                          "(Note: This option is generally used in large grid-on power stations.)"));
+
+    line = 0;
+    column = 3;
+    //机器型号
+    ButtonToTable->add_SpecificationData(Machine_type_explain, myTable, line++, column, \
+                                         "MPS-TS", tr("Machine type"), \
+                                         tr("Converter Model: As per factory settings, generally not modifiable."));
+
+    //机器容量
+    ButtonToTable->add_SpecificationData(Machine_capacity_explain, myTable, line++, column, \
+                                         "100", tr("Machine capacity"), \
+                                             tr("The rated capacity of the converter shall be based on the factory value and cannot be changed."));
+
+    //变压器变比
+    ButtonToTable->add_SpecificationData(Converter_side_vol_level_explain, myTable, line++, column, \
+                                         "270:400", tr("Transformer Turns Ratio"), \
+                                                 tr("Transformer Voltage Ratio: To be determined by the factory nameplate, not modifiable."));
+
+    //输出电压等级
+    ButtonToTable->add_SpecificationData(Output_vol_level_explain, myTable, line++, column, \
+                                         "400", tr("Output vol level"), \
+                                         tr("Output Voltage Level: As per factory settings, generally not modifiable."));
+
+    //输出频率等级
+    ButtonToTable->add_SpecificationData(Output_Fre_grade_explain, myTable, line++, column, \
+                                         "50", tr("Output Fre grade"), \
+                                         tr("Output Frequency Level: Default 50Hz, typically 50Hz or 60Hz."));
+
+    //变流器防逆流
+    ButtonToTable->add_SpecificationData(Grid_connected_mode_of_Inv_explain, myTable, line++, column, \
+                                         tr("Disable"), tr("Converter Anti-Reverse Flow"), \
+                                         tr("Converter Anti-Reverse Flow: Enable, Disable;"
+                                            "\nEnabling prevents converter current from flowing into the grid, while Disabling allows converter current to flow into the grid."));
+
+    //过载降频
+    ButtonToTable->add_SpecificationData(Pshedding_Freq_explain, myTable, line++, column, \
+                                        tr("prohibit"), tr("Pshedding Freq"), \
+                                        tr("Over-frequency load shedding: It can be selected as enabled or disabled. (Note: This option is generally used in large grid-on power stations.)"));
+
+    //转动惯量使能说明
+    ButtonToTable->add_SpecificationData(Inertia_enable_explain, myTable, line++, column, \
+                                         tr("prohibit"), tr("Inertia enable"), \
+                                         tr("Rotational inertia enable: It can be selected as enabled or disabled. (Note: This option is generally used in large grid-on power stations.)"));
+
+    //QP曲线
+    ButtonToTable->add_SpecificationData(QP_curve_explain, myTable, line++, column, \
+                                        tr("prohibit"), tr("QP curve"), \
+                                        tr("QP curve: It can be selected as enabled or disabled. (Note: This option is generally used in large grid-on power stations.)"));
+    line = 0;
+    column = 5;
+    //模块数
+    ButtonToTable->add_SpecificationData(Module_Number_explain, myTable, line++, column, \
+                                        "1", tr("Module Number"), \
+                                        tr("Number of modules, default 1(invalid setting)."));
+
+    //机架
+    ButtonToTable->add_SpecificationData(Machine_Type_explain, myTable, line++, column, \
+                                        "DCAC", tr("Rack"), \
+                                        tr("When you select DCDC, the DCAC interface freezes, and the maximum module ID and minimum module ID take effect."
+                                           "You can only modify the database to restore the DCAC interface."
+                                           "(Note:As per factory settings, generally not modifiable.)"));
+
+    //最大模块号
+    ButtonToTable->add_SpecificationData(Module_max_explain, myTable, line++, column, \
+                                         "2", tr("Module max"), \
+                                         tr("Maximum Module Count for Current Chassis. (Note: Only effective when selecting DCDC mode in chassis settings.)"));
+
+    //最小模块号
+    ButtonToTable->add_SpecificationData(Module_min_explain, myTable, line++, column, \
+                                         "1", tr("Module min"), \
+                                         tr("Minimum Module Count for Current Chassis. (Note: Only effective when selecting DCDC mode in chassis settings.)"));
+
+    //电网恢复并网时间
+    ButtonToTable->add_SpecificationData(Grid_recovery_time_explain, myTable, line++, column, \
+                                         "0", tr("Grid recovery time"), \
+                                         tr("Grid restoration time: reserved function, setting invalid."));
+
+    //DCAC绝缘检测使能
+    ButtonToTable->add_SpecificationData(Insulation_detection_enable_DCAC_explain, myTable, line++, column, \
+                                         tr("Disable"), tr("Insulation detection enable DCAC"), \
+                                         tr("DCAC Isolation Monitoring Enable: Enable, Disable. (Note: Default is Disable)"));
+    //DCDC绝缘检测使能
+    ButtonToTable->add_SpecificationData(Insulation_detection_enable_DCDC_explain, myTable, line++, column, \
+                                         tr("Disable"), tr("Insulation detection enable DCDC"), \
+                                         tr("DCDC Isolation Monitoring Enable: Enable, Disable. (Note: Default is Disable)"));
+
+    //恒压并机
+    ButtonToTable->add_SpecificationData(CV_parallel_explain, myTable, line++, column, \
+                                         tr("prohibit"), tr("CV parallel"), \
+                                         tr("Constant voltage parallel operation enable: It can be selected as enabled or disabled.  (Note: This option is generally used in large grid-on power stations.)"));
+}
+//设置高级设置外设页控件到表格
+void MyWidget::Device_TabToTable(QTableWidget *myTable)
+{
+    QString str = tr("Normally closed circuit (NC) or normally open circuit (NO) according to field Settings.");
+    QString str1 = tr("When the dry contact is enabled, the device will perform the selected action when there is a change in the signal.");
+    QString str2 = tr("Input Dry Contact: nEnabled: "
+                      "Triggers the Action when the dry contact detects a state other than the specified NO/NC."
+                      "\nDisabled: No action is taken when the dry contact detects a state other than the specified NO/NC.");
+
+    //使能/禁止
+    int line = 0;int column = 0;//当前解释的button行和列
+    ButtonToTable->add_SpecificationData(DI_1_Enable_explain, myTable, line++, column, \
+                                    tr("Enable"), tr("DI_1_Enable"), str2);
+
+    ButtonToTable->add_SpecificationData(DI_2_Enable_explain, myTable, line++, column, \
+                                    tr("Enable"), tr("DI_2_Enable"), str2);
+
+    ButtonToTable->add_SpecificationData(DI_3_Enable_explain, myTable, line++, column, \
+                                    tr("Enable"), tr("DI_3_Enable"), str2);
+
+    ButtonToTable->add_SpecificationData(DI_4_Enable_explain, myTable, line++, column, \
+                                    tr("Enable"), tr("DI_4_Enable"), str2);
+
+    ButtonToTable->add_SpecificationData(DI_5_Enable_explain, myTable, line++, column, \
+                                    tr("Enable"), tr("DI_5_Enable"), str2);
+
+    ButtonToTable->add_SpecificationData(DI_6_Enable_explain, myTable, line++, column, \
+                                    tr("Enable"), tr("DI_6_Enable"), str2);
+    //常开/常闭
+    line = 0;
+    column = 1;
+    ButtonToTable->add_SpecificationData(DI_1_NC_O_explain, myTable, line++, column, \
+                                    tr("N_O"), tr("DI_1_NC_O"), str);
+
+    ButtonToTable->add_SpecificationData(DI_2_NC_O_explain, myTable, line++, column, \
+                                    tr("N_O"), tr("DI_2_NC_O"), str);
+
+    ButtonToTable->add_SpecificationData(DI_3_NC_O_explain, myTable, line++, column, \
+                                    tr("N_O"), tr("DI_3_NC_O"), str);
+
+    ButtonToTable->add_SpecificationData(DI_4_NC_O_explain, myTable, line++, column, \
+                                    tr("N_O"), tr("DI_4_NC_O"), str);
+
+    ButtonToTable->add_SpecificationData(DI_5_NC_O_explain, myTable, line++, column, \
+                                    tr("N_O"), tr("DI_5_NC_O"), str);
+
+    ButtonToTable->add_SpecificationData(DI_6_NC_O_explain, myTable, line++, column, \
+                                    tr("N_O"), tr("DI_6_NC_O"), str);
+
+    //动作
+    line = 0;
+    column = 2;
+    ButtonToTable->add_SpecificationData(DI_1_Action_explain, myTable, line++, column, \
+                                    tr("Shut down"), tr("DI_1_Action"), str1);
+
+    ButtonToTable->add_SpecificationData(DI_2_Action_explain, myTable, line++, column, \
+                                    tr("Prompt"), tr("DI_2_Action"), str1);
+
+    ButtonToTable->add_SpecificationData(DI_3_Action_explain, myTable, line++, column, \
+                                    tr("Prompt"), tr("DI_3_Action"), str1);
+
+    ButtonToTable->add_SpecificationData(DI_4_Action_explain, myTable, line++, column, \
+                                    tr("Prompt"), tr("DI_4_Action"), str1);
+
+    ButtonToTable->add_SpecificationData(DI_5_Action_explain, myTable, line++, column, \
+                                    tr("Shut down"), tr("DI_5_Action"), str1);
+
+    ButtonToTable->add_SpecificationData(DI_6_Action_explain, myTable, line++, column, \
+                                    tr("Shut down"), tr("DI_6_Action"), str1);
+}
+//设置高级设置DCAC调试页控件到表格
+void MyWidget::DCAC_Debugg(QTableWidget *myTable)
+{
+    QString str = tr("It is used for internal debugging only.");
+
+    int line = 0;int column = 1;
+    //调试变量1
+    ButtonToTable->add_SpecificationData(Debug_variable_1_explain, myTable, line++, column, \
+                                         "0", tr("Debug variable 1"),str);
+
+    //调试变量2
+    ButtonToTable->add_SpecificationData(Debug_variable_2_explain, myTable, line++, column, \
+                                         "0", tr("Debug variable 2"),str);
+
+    //调试变量3
+    ButtonToTable->add_SpecificationData(Debug_variable_3_explain, myTable, line++, column, \
+                                         "0", tr("Debug variable 3"),str);
+
+    //调试内存变量1
+    ButtonToTable->add_SpecificationData(Debug_memery_var_1_explain, myTable, line++, column, \
+                                         "0", tr("Debug memery var 1"), str);
+
+    //调试内存变量2
+    ButtonToTable->add_SpecificationData(Debug_memery_var_2_explain, myTable, line++, column, \
+                                         "0", tr("Debug memery var 2"), str);
+
+    //调试内存变量3
+    ButtonToTable->add_SpecificationData(Debug_memery_var_3_explain, myTable, line++, column, \
+                                         "0", tr("Debug memery var 3"), str);
+
+    //调试地址变量1
+    ButtonToTable->add_SpecificationData(Debug_variable_1_addr_explain, myTable, line++, column, \
+                                         "4096", tr("Debug variable 1 addr"), str);
+
+    //调试地址变量2
+    ButtonToTable->add_SpecificationData(Debug_variable_2_addr_explain, myTable, line++, column, \
+                                         "4096", tr("Debug variable 2 addr"), str);
+
+    //调试地址变量3
+    ButtonToTable->add_SpecificationData(Debug_variable_3_addr_explain, myTable, line++, column, \
+                                         "4096", tr("Debug variable 3 addr"), str);
+
+    //开关机状态字
+    ButtonToTable->add_SpecificationData(INV_On_off_flag_explain, myTable, line++, column, \
+                                         "0", tr("INV On off flag"), str);
+    line = 0;
+    column = 3;
+    //电网A相电压系数
+    ButtonToTable->add_SpecificationData(Grid_A_AB_Vol_revise_explain, myTable, line++, column, \
+                                         "", tr("Grid A AB Vol revise"), str);
+
+    //电网B相电压系数
+    ButtonToTable->add_SpecificationData(Grid_B_BC_Vol_revise_explain, myTable, line++, column, \
+                                         "", tr("Grid B BC Vol revise"), str);
+
+    //电网C相电压系数
+    ButtonToTable->add_SpecificationData(Grid_C_CA_Vol_revise_explain, myTable, line++, column, \
+                                         "", tr("Grid C CA Vol revise"), str);
+
+    //输出A相电流系数
+    ButtonToTable->add_SpecificationData(Output_A_Cur_revise_explain, myTable, line++, column, \
+                                         "", tr("Output A Cur revise"), str);
+
+    //输出B相电流系数
+    ButtonToTable->add_SpecificationData(Output_B_Cur_revise_explain, myTable, line++, column, \
+                                         "", tr("Output B Cur revise"), str);
+
+    //输出C相电流系数
+    ButtonToTable->add_SpecificationData(Output_C_Cur_revise_explain, myTable, line++, column, \
+                                         "", tr("Output C Cur revise"), str);
+
+    //1.5V电压系数
+    ButtonToTable->add_SpecificationData(Voltage_1_5_revise_explain, myTable, line++, column, \
+                                         "", tr("Voltage 1.5 revise"), str);
+
+    //母线电压系数
+    ButtonToTable->add_SpecificationData(Bus_Vol_revise_explain, myTable, line++, column, \
+                                         "", tr("Bus Vol revise"), str);
+
+    //逻辑状态字
+    ButtonToTable->add_SpecificationData(Logic_state_explain, myTable, line++, column, \
+                                         "0", tr("Logic state"), str);
+
+    //逆变状态字
+    ButtonToTable->add_SpecificationData(INV_flag_explain, myTable, line++, column, \
+                                         "0", tr("INV flag"), str);
+    line = 0;
+    column = 5;
+    //输入电压系数
+    ButtonToTable->add_SpecificationData(Input_Vol_revise_explain, myTable, line++, column, \
+                                   "", tr("Input Vol revise"), str);
+
+    //输入电流系数
+    ButtonToTable->add_SpecificationData(Input_Cur_revise_explain, myTable, line++, column, \
+                                   "", tr("Input Cur revise"), str);
+
+    //逆变A相电压系数
+    ButtonToTable->add_SpecificationData(INV_A_Vol_revise_explain, myTable, line++, column, \
+                                   "", tr("INV A Vol revise"), str);
+
+    //逆变B相电压系数
+    ButtonToTable->add_SpecificationData(INV_B_Vol_revise_explain, myTable, line++, column, \
+                                   "", tr("INV B Vol revise"), str);
+
+    //逆变C相电压系数
+    ButtonToTable->add_SpecificationData(INV_C_Vol_revise_explain, myTable, line++, column, \
+                                   "", tr("INV C Vol revise"), str);
+
+    //电池电压状态字
+    ButtonToTable->add_SpecificationData(PV_flag_explain, myTable, line++, column, \
+                                   "0", tr("PV flag"), str);
+
+    //母线状态字
+    ButtonToTable->add_SpecificationData(DC_bus_flag_explain, myTable, line++, column, \
+                                   "0", tr("DC bus flag"), str);
+
+    //中断状态字
+    ButtonToTable->add_SpecificationData(INT_main_flag_explain, myTable, line++, column, \
+                                   "0", tr("INT main flag"), str);
+
+    //电网保护状态字
+    ButtonToTable->add_SpecificationData(Grid_protect_flag_explain, myTable, line++, column, \
+                                   "0", tr("Grid protect flag"), str);
+
+    //电网状态字
+    ButtonToTable->add_SpecificationData(Grid_flag_explain, myTable, line++, column, \
+                                   "0", tr("Grid flag"), str);
+    line = 0;
+    column = 7;
+    //逆变A相电感电流系数
+    ButtonToTable->add_SpecificationData(INV_A_ind_Cur_revise_explain, myTable, line++, column, \
+                                   "", tr("INV A inductance Cur revise"), str);
+
+    //逆变B相电感电流系数
+    ButtonToTable->add_SpecificationData(INV_B_ind_Cur_revise_explain, myTable, line++, column, \
+                                   "", tr("INV B inductance Cur revise"), str);
+
+    //逆变C相电感电流系数
+    ButtonToTable->add_SpecificationData(INV_C_ind_Cur_revise_explain, myTable, line++, column, \
+                                   "", tr("INV C inductance Cur revise"), str);
+
+    //电池状态字
+    ButtonToTable->add_SpecificationData(Bat_State_explain, myTable, line++, column, \
+                                   "0", tr("Bat State"), str);
+
+    //电池信息字
+    ButtonToTable->add_SpecificationData(Bat_Infor_explain, myTable, line++, column, \
+                                   "0", tr("Bat Infor"), str);
+
+    //监控命令状态字
+    ButtonToTable->add_SpecificationData(Monitor_Order_explain, myTable, line++, column, \
+                                   "0", tr("Monitor Order"), str);
+
+    //并机状态字
+    ButtonToTable->add_SpecificationData(parallel_signal_explain, myTable, line++, column, \
+                                   "0", tr("parallel signal"), str);
+
+}
+//设置高级设置DCDC调试页控件到表格
+void MyWidget::DCDC_Debugg(QTableWidget *myTable)
+{
+    QString str = tr("It is used for internal debugging only.");
+    int line = 0;int column = 1;
+    //调试变量1
+    ButtonToTable->add_SpecificationData(DC_Debug_variable_1_explain, myTable, line++, column, \
+                                   "0", tr("Debug variable 1"), str);
+
+    //调试变量2
+    ButtonToTable->add_SpecificationData(DC_Debug_variable_2_explain, myTable, line++, column, \
+                                   "0", tr("Debug variable 2"), str);
+
+    //调试变量3
+    ButtonToTable->add_SpecificationData(DC_Debug_variable_3_explain, myTable, line++, column, \
+                                   "0", tr("Debug variable 3"), str);
+
+    //当前模块号
+    ButtonToTable->add_SpecificationData(Current_ID_explain, myTable, line++, column, \
+                                   "1", tr("Debug variable 3"), str);
+
+    //中断状态字
+    ButtonToTable->add_SpecificationData(DC_INT_main_flag_explain, myTable, line++, column, \
+                                   "0", tr("INT main flag"), str);
+
+    //母线状态字
+    ButtonToTable->add_SpecificationData(DC_DC_bus_flag_explain, myTable, line++, column, \
+                                   "0", tr("DC bus flag"), str);
+
+    //电池电压状态字
+    ButtonToTable->add_SpecificationData(DC_PV_flag_explain, myTable, line++, column, \
+                                   "0", tr("PV flag"), str);
+    line = 0;
+    column = 3;
+    //调试地址变量1
+    ButtonToTable->add_SpecificationData(DC_Debug_variable_1_addr_explain, myTable, line++, column, \
+                                   "0", tr("Debug variable 1 addr"), str);
+
+    //调试地址变量2
+    ButtonToTable->add_SpecificationData(DC_Debug_variable_2_addr_explain, myTable, line++, column, \
+                                   "0", tr("Debug variable 2 addr"), str);
+
+    //调试地址变量3
+    ButtonToTable->add_SpecificationData(DC_Debug_variable_3_addr_explain, myTable, line++, column, \
+                                   "0", tr("Debug variable 3 addr"), str);
+    line++;
+    //开关机状态字
+    ButtonToTable->add_SpecificationData(DC_INV_On_off_flag_explain, myTable, line++, column, \
+                                   "0", tr("INV On off flag"), str);
+
+    //开关机状态字2
+    ButtonToTable->add_SpecificationData(DCONV_logic_explain, myTable, line++, column, \
+                                    "0", tr("INV On off flag2"), str);
+
+    //并机状态字
+    ButtonToTable->add_SpecificationData(DC_parallel_signal_explain, myTable, line++, column, \
+                                   "0", tr("parallel signal"), str);
+    line = 0;
+    column = 5;
+    //调试内存变量1
+    ButtonToTable->add_SpecificationData(DC_Debug_memery_var_1_explain, myTable, line++, column, \
+                                   "0", tr("Debug memery var 1"), str);
+
+    //调试内存变量2
+    ButtonToTable->add_SpecificationData(DC_Debug_memery_var_2_explain, myTable, line++, column, \
+                                   "0", tr("Debug memery var 2"), str);
+
+    //调试内存变量3
+    ButtonToTable->add_SpecificationData(DC_Debug_memery_var_3_explain, myTable, line++, column, \
+                                   "0", tr("Debug memery var 3"), str);
+    line++;
+    //监控命令状态字
+    ButtonToTable->add_SpecificationData(DC_Monitor_Order_explain, myTable, line++, column, \
+                                   "0", tr("Monitor Order"), str);
+
+    //电池信息字
+    ButtonToTable->add_SpecificationData(DC_Bat_Infor_explain, myTable, line++, column, \
+                                   "0", tr("Bat Infor"), str);
+
+    //电池状态字
+    ButtonToTable->add_SpecificationData(DC_Bat_State_explain, myTable, line++, column, \
+                                   "0", tr("Bat State"), str);
 }
 
 /*********选中第一个模块*********/

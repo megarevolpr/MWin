@@ -355,6 +355,7 @@ public:
     QPushButton *Gen_turn_off_SOC_explain;    //柴发关闭SOC说明
     QPushButton *Gen_turn_on_SOC_explain;     //柴发开启SOC说明
     QPushButton *Relese_Charge_mark_explain;    //释放充电标志说明
+    QPushButton *Relese_discharge_mark_explain;    //释放充电标志说明
     QPushButton *ForceCharge_start_explain; //强充开启说明
     QPushButton *ForceCharge_top_explain;   // 强充结束说明
     QPushButton *DOD_Protection_Release_SOC_explain;//DOD保护解除SOC
@@ -734,6 +735,7 @@ public:
     QPushButton *serial_port_5_explain; //串口5说明
     QPushButton *Can_port_1_explain;    //CAN1说明
     QPushButton *Can_port_2_explain;    //CAN2说明
+    QPushButton *BatteryCapacityAlarm_explain;//电池容量告警
 
     QPushButton *ProtocolVersion_explain;   //协议版本说明
     QPushButton *UserPassPort_explain;  //用户密码说明
@@ -815,7 +817,7 @@ public:
     QPushButton *Module_max_explain;  //最大模块数说明
     QPushButton *Module_min_explain;  //最小模块数说明
     QPushButton *Insulation_detection_enable_DCDC_explain;  //DCDC绝缘监测使能说明
-    QPushButton *BatteryCapacityAlarm_explain;
+    QPushButton *Insulation_detection_enable_DCAC_explain;  //DCAC绝缘监测使能说明
     QPushButton *Grid_expansion_explain;
 
 
@@ -1084,8 +1086,7 @@ private:
     void FunctionSet(QTableWidget *myTable);    //功能设置页说明
     void SystemParameter(QTableWidget *myTable);//系统参数页说明
     void ExternalDevice(QTableWidget *myTable);//外设页说明
-    void DCAC_Debugg(QTableWidget *myTable); //DCAC调试页说明
-    void DCDC_Debugg(QTableWidget *myTable); //DCDC调试页说明
+
     void SetControlToTable();//设置控件到表格
     void SetDCACToTable(QTableWidget *myTable);//设置DCAC控件到表格
     void SetDCDCToTable(QTableWidget *myTable);//设置DCDC控件到表格
@@ -1095,6 +1096,9 @@ private:
     void SetAdvancedSetup1ToTable(QTableWidget *myTable);//设置高级设置页控件到表格
     void SetAdvancedSetup2ToTable(QTableWidget *myTable);//
     void SetAdvancedSetup3ToTable(QTableWidget *myTable);//
+    void Device_TabToTable(QTableWidget *myTable);//设置高级设置外设页控件到表格
+    void DCAC_Debugg(QTableWidget *myTable); //DCAC调试页说明
+    void DCDC_Debugg(QTableWidget *myTable); //DCDC调试页说明
 
     void MPS_state_delete();//MPS状态 释放 说明
     void Data_Report_delete();//数据报表 释放 说明
