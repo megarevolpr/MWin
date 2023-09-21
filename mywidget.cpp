@@ -51,6 +51,7 @@ void MyWidget::LoadLanguageInit()
         qApp->installTranslator(translator);
         ui->retranslateUi(this);
         LanguageType = CHINESE;
+        ui->label_42->setStyleSheet("border-image: url(:/new_ui/UI/Battery_area3.png);");
     }
     else if(LanguageType == ENGLISH)//开机语言 英文
     {
@@ -58,6 +59,7 @@ void MyWidget::LoadLanguageInit()
         qApp->installTranslator(translator);
         ui->retranslateUi(this);
         LanguageType = ENGLISH;
+        ui->label_42->setStyleSheet("border-image: url(:/new_ui/UI/Battery_area2.png);");
     }
 }
 
@@ -70,9 +72,7 @@ void MyWidget::MemoryAllocation()
     FaultTable = new FaultTableInterface(this,LanguageType);
     ButtonToTable = new SpecificationData(this);
     /****************QButtonGroup**************/
-    Mode_Str<<tr("Battery Area")<<tr("Self-issuance and self-use")<<tr("Battery Priority")<<tr("Manual")<<tr("Optimal model")<<tr("Mixed mode");
-    Mode_title_Str<<tr("DC/AC Parameters")<<tr("DC/DC Parameters")<<tr("Lithium Battery Setting Parameters")<<tr("Lead-acid Battery Setting Parameters")<<tr("Time Period Setting")<<tr("Function Sentting 1")<<tr("Function Sentting 2")\
-                    <<tr("System Senttings")<<tr("Device")<<tr("DC/AC Debug")<<tr("DC/DC Debug");
+
     new_ui_TabList<<ui->DCAC_Tab<<ui->DCDC_Tab<<ui->Lithium_Tab_2<<ui->Lead_Acid_Tab<<ui->MixedTime_Tab<<ui->Advanced_Tab_1
                  <<ui->Advanced_Tab_2<<ui->Advanced_Tab_3<<ui->ExternalDevice_Tab<<ui->DCAC_Debug_Tab<<ui->DCDC_Debug_Tab;
 
@@ -107,12 +107,12 @@ void MyWidget::MemoryAllocation()
     ExitReturn_Group->addButton(ui->Exit_bt,2);
 
     ModeSwitch_Group = new QButtonGroup();
-    ModeSwitch_Group->addButton(ui->BatArea_bt,0);
-    ModeSwitch_Group->addButton(ui->SelfUseIntro_bt,1);
-    ModeSwitch_Group->addButton(ui->BatPriorityIntro_bt,2);
-    ModeSwitch_Group->addButton(ui->OptimalIntro_bt,3);
-    ModeSwitch_Group->addButton(ui->MixedModeIntro_bt,4);
-    ModeSwitch_Group->addButton(ui->ManualIntro_bt,5);
+    ModeSwitch_Group->addButton(ui->BatArea_bt,BATTERY_AREA_EXP);
+    ModeSwitch_Group->addButton(ui->SelfUseIntro_bt,Mode_SELF_USE_EXP);
+    ModeSwitch_Group->addButton(ui->BatPriorityIntro_bt,Mode_BATTERY_PRIORITY_EXP);
+    ModeSwitch_Group->addButton(ui->OptimalIntro_bt,Mode_OPTIMAL_MODE_EXP);
+    ModeSwitch_Group->addButton(ui->MixedModeIntro_bt,Mode_MIXED_MODE_EXP);
+    ModeSwitch_Group->addButton(ui->ManualIntro_bt,Mode_MANUAL_EXP);
 
     /************************实时数据******************************/
     //变流器
@@ -181,6 +181,7 @@ void MyWidget::MemoryAllocation()
     Output_Bre_explain  = new QPushButton;
     Output_Con_explain  = new QPushButton;
     Grid_Bre_explain    = new QPushButton;
+    DCACinsulation_detection_explain = new QPushButton;
     DO1_explain         = new QPushButton;
     DO2_explain         = new QPushButton;
     DO3_explain         = new QPushButton;
@@ -204,6 +205,8 @@ void MyWidget::MemoryAllocation()
     Soft_Start_Sta_Boost_explain= new QPushButton;
     Soft_Start_Sta_Buck_explain = new QPushButton;
     Converter_Status_V_explain  = new QPushButton;
+    ModeLock_explain            = new QPushButton;
+    DCDCinsulation_detection_explain  = new QPushButton;
 
     /**********************电池数据***************************/
     pButton_BatteryData  = new QButtonGroup();
@@ -829,6 +832,7 @@ void MyWidget::ChangeLanguage_btn_clicked()
         ui->ChangeLanguage_btn->setText(tr("Change Language"));
         qApp->installTranslator(translator);
         ui->retranslateUi(this);
+        ui->label_42->setStyleSheet("border-image: url(:/new_ui/UI/Battery_area2.png);");
 
     }
     else if(LanguageType == ENGLISH)
@@ -838,10 +842,8 @@ void MyWidget::ChangeLanguage_btn_clicked()
         ui->ChangeLanguage_btn->setText(tr("切换语言"));
         qApp->installTranslator(translator);
         ui->retranslateUi(this);
-
+        ui->label_42->setStyleSheet("border-image: url(:/new_ui/UI/Battery_area3.png);");
     }
-
-
     delete ButtonToTable;
     mode_expelain = new OperMode(this);
     UpgradeInterface = new UpgradeTools(this);
@@ -849,6 +851,7 @@ void MyWidget::ChangeLanguage_btn_clicked()
     ButtonToTable = new SpecificationData(this);
 
     UIPageInit();       //初始化界面
+    ReloadLabel();      //切换语言重新加载Lable
 }
 //操作模式新界面
 void MyWidget::Operational_mode_clicked()
@@ -894,7 +897,7 @@ void MyWidget::LinkRelationship()
     connect(timer, SIGNAL(timeout()), this, SLOT(onTimerOut()));    //关联定时器，以便实时更新时间
     connect(Menu_Group, SIGNAL(buttonClicked(int)), this,SLOT(My_menuAction(int)));//菜单
     connect(SystemMode_Group, SIGNAL(buttonClicked(int)), this,SLOT(WordingMode(int)));//系统控制模式
-    connect(ModeSwitch_Group, SIGNAL(buttonClicked(int)), this,SLOT(ModeSwitchExplain(int)));//切换模式说明
+    connect(ModeSwitch_Group, SIGNAL(buttonClicked(int)), this,SLOT(ModeSwitchExplain(int)));//切换 模式说明
     connect(ExitReturn_Group, SIGNAL(buttonClicked(int)), this,SLOT(Return(int)));//返回函数
     connect(Work_mode_explain, SIGNAL(clicked(bool)), this, SLOT(Operational_mode_clicked())); //操作模式界面关联
     connect(System_upgrade_explain, SIGNAL(clicked(bool)), this, SLOT(UpgradeInterface_clicked())); //升级界面关联
@@ -1143,14 +1146,14 @@ void MyWidget::ModuleState_Tab()
 {
     QStringList State_Tablist1;
     State_Tablist1  << tr("DC input breaker") << tr("DC contactor") << tr("Maintenance Bypass breaker")
-                    << tr("Output breaker") << tr("Output contactor")<< tr("Grid breaker")<<("DCAC insulation detection")
+                    << tr("Output breaker") << tr("Output contactor")<< tr("Grid breaker")<<tr("DCAC insulation detection")
                     << tr("Start generator signal")<< tr("DO2")<< tr("DO3");
     QStringList State_Tablist2;
     State_Tablist2  << tr("DCAC Converter available") << tr("DC Soft start") << tr("Converter status")<< tr("Reactive power Regulation")
-                    << tr("Sleep mode")<< tr("LVRT")<< tr("DI1")<< tr("DI2")<< tr("DI3")<< tr("DI4")<< tr("DI5")<< tr("DI6");
+                    << tr("LVRT")<< tr("DI1")<< tr("DI2")<< tr("DI3")<< tr("DI4")<< tr("DI5")<< tr("DI6");
     QStringList State_Tablist3;
     State_Tablist3  << tr("DCDC Converter available")<< tr("Run mode")<< tr("Soft start status boost")<< tr("Soft start status buck")
-                    << tr("Contactor status boost")<< tr("Contactor status buck")<< tr("Converter status");
+                    << tr("Contactor status boost")<< tr("Contactor status buck")<< tr("Converter status")<<tr("ModeLock")<<tr("DCDC insulation detection");
 
     ui->State_tableWidget->setColumnCount(6);
     ui->State_tableWidget->setRowCount(12);
@@ -1313,6 +1316,12 @@ void MyWidget::OperationLog()
 //新界面工作模式初始化
 void MyWidget::WorkingModeInit()
 {
+    Mode_Str.clear();
+    Mode_title_Str.clear();
+    Mode_Str<<tr("Battery Area")<<tr("Self-issuance and self-use")<<tr("Battery Priority")<<tr("Manual")<<tr("Optimal model")<<tr("Mixed mode");
+    Mode_title_Str<<tr("DC/AC Parameters")<<tr("DC/DC Parameters")<<tr("Lithium Battery Setting Parameters")<<tr("Lead-acid Battery Setting Parameters")<<tr("Time Period Setting")<<tr("Function Sentting 1")<<tr("Function Sentting 2")\
+                    <<tr("System Senttings")<<tr("Device")<<tr("DC/AC Debug")<<tr("DC/DC Debug");
+
     for(int i=0;i<11;i++)
     {
        if(i < 3)
@@ -1370,6 +1379,51 @@ void MyWidget::Account_Change(uint8_t Account_Type)
     {
         ui->Login_bt->setText( tr("Not Logged in") );
     }
+}
+//切换语言重新加载Lable
+void MyWidget::ReloadLabel()
+{
+    //加载模式介绍lable
+    if(CurrentCheckModeExplain < 3)
+    {
+        ui->Intro_lb->setText( Mode_Str.at(CurrentCheckModeExplain) );//模式介绍标题更新
+        ui->IntrPageNum_lb->setText(tr("1/1"));//模式介绍页码更新
+    }
+   else if(CurrentCheckModeExplain == Mode_OPTIMAL_MODE_EXP)
+   {
+       ui->Intro_lb->setText( Mode_Str.at(4) );//模式介绍标题更新
+       ui->IntrPageNum_lb->setText(QString("%1/2").arg(ui->Introduction_stackedWidget->currentIndex()-2));//模式介绍页码更新
+   }
+    else if(CurrentCheckModeExplain == Mode_MIXED_MODE_EXP )
+    {
+        ui->Intro_lb->setText( Mode_Str.at(5) );//模式介绍标题更新
+    }
+    else if(CurrentCheckModeExplain == Mode_MANUAL_EXP )
+    {
+        ui->Intro_lb->setText( Mode_Str.at(3) );//模式介绍标题更新
+    }
+
+    //加载基础/高级设置lable
+    if(CurrentCheckMode != ADVANCED_SETTING)
+    {
+        ui->Mode_lb->setText( Mode_Str.at(CurrentCheckMode+1) );//模式标题
+        ui->PageInfo_lb->setText(Mode_title_Str.at(System_Current_Page));//页标题
+        if(System_Current_Page<Lead_PAGE_NUM)//页码
+        {
+            ui->SetPageNum_lb->setText( QString("%1/%2").arg(System_Current_Page+1).arg(SystemTotal_PAGE) );
+        }
+        else {
+            ui->SetPageNum_lb->setText( QString("%1/%2").arg(System_Current_Page).arg(SystemTotal_PAGE) );
+        }
+    }
+    else
+    {
+        ui->Mode_lb->setText( tr("Advanced Settings") );
+        ui->SetPageNum_lb->setText( QString("%1/%2").arg(Advanced_Current_Page-4).arg(AdvancedTotal_PAGE) );
+        ui->PageInfo_lb->setText(Mode_title_Str.at(Advanced_Current_Page));
+    }
+
+
 }
 //菜单页头像切换
 void MyWidget::combox_Account_change(int Index)
@@ -1438,66 +1492,55 @@ void MyWidget::WordingMode(int Index)
     ui->Set_stackedWidget->setCurrentWidget(ui->Setting_page);
     ui->setpage_stackedWidget->setCurrentIndex( System_Current_Page );
 }
-//模式切换说明
+//模式说明 切换
 void MyWidget::ModeSwitchExplain(int Index)
 {
-    ui->Intro_lb->setText( Mode_Str.at(Index) );
     CurrentCheckModeExplain = Index;
+    ui->Intro_lb->setText( Mode_Str.at(CurrentCheckModeExplain) );
 
-    if( !ui->IntroPrevious_bt->isEnabled() )//使能上一页、下一页
-    {
-        ui->IntroPrevious_bt->setEnabled( true );
-    }
-    if( !ui->IntroNext_bt->isEnabled() )
-    {
-        ui->IntroNext_bt->setEnabled( true );
-    }
-    ui->IntrPageNum_lb->setText(tr("1/2"));//设置显示页码
-    ModeIntr_Current_Page = 0;
+    //上下页失能
+    ui->IntroPrevious_bt->setDisabled( true );
+    ui->IntroNext_bt->setDisabled( true );
+
+    ui->IntrPageNum_lb->setText(tr("1/1"));//设置显示页码
+    ModeIntr_Current_Page = Index;
     switch (Index)
     {
-    case 0:
+    case BATTERY_AREA_EXP:
     {
-        //只有一页，上下页切换失能
-        ui->IntroPrevious_bt->setDisabled( true );
-        ui->IntroNext_bt->setDisabled( true );
         ui->IntrPageNum_lb->setText(tr("1/1"));
-        ui->Introduction_stackedWidget->setCurrentIndex( 0 );
+        ui->Introduction_stackedWidget->setCurrentIndex( ModeIntr_Current_Page );
     }
         break;
-    case 1:
+    case Mode_SELF_USE_EXP:
     {
-        ui->Introduction_stackedWidget->setCurrentIndex( 0 );
+        ui->Introduction_stackedWidget->setCurrentIndex( ModeIntr_Current_Page );
     }
         break;
-    case 2:
+    case Mode_BATTERY_PRIORITY_EXP:
     {
-        ui->Introduction_stackedWidget->setCurrentIndex( 0 );
+        ui->Introduction_stackedWidget->setCurrentIndex( ModeIntr_Current_Page );
     }
         break;
-    case 3:
+    case Mode_OPTIMAL_MODE_EXP:
     {
-        ui->IntrPageNum_lb->setText(tr("1/3"));
+        ui->IntrPageNum_lb->setText(tr("1/2"));
         ui->Intro_lb->setText( Mode_Str.at(4) );
-        ui->Introduction_stackedWidget->setCurrentIndex( 0 );
+        ui->IntroPrevious_bt->setEnabled( true );
+        ui->IntroNext_bt->setEnabled( true );
+        ui->Introduction_stackedWidget->setCurrentIndex( ModeIntr_Current_Page );
     }
         break;
-    case 4:
+    case Mode_MIXED_MODE_EXP:
     {
-        //只有一页，上下页切换失能
-        ui->IntroPrevious_bt->setDisabled( true );
-        ui->IntroNext_bt->setDisabled( true );
         ModeIntr_Current_Page = Index+1;
         ui->IntrPageNum_lb->setText(tr("1/1"));
         ui->Intro_lb->setText( Mode_Str.at(5) );
         ui->Introduction_stackedWidget->setCurrentIndex( ModeIntr_Current_Page );
     }
         break;
-    case 5:
+    case Mode_MANUAL_EXP:
     {
-        //只有一页，上下页切换失能
-        ui->IntroPrevious_bt->setDisabled( true );
-        ui->IntroNext_bt->setDisabled( true );
         ModeIntr_Current_Page = Index+1;
         ui->IntrPageNum_lb->setText(tr("1/1"));
         ui->Intro_lb->setText( Mode_Str.at(3) );
@@ -2190,6 +2233,10 @@ void MyWidget::MPSState(QTableWidget *myTable)
                                                 tr("On"), tr("Grid breaker"), \
                                                 tr("The power grid circuit breaker has two states: On, Off;The power grid circuit breaker can only be manually disconnected."));
 
+    ButtonToTable->add_SpecificationData(DCACinsulation_detection_explain, myTable, line++, column, \
+                                         tr("Disable"), tr("DCAC insulation detection"), \
+                                         tr("."));
+
     ButtonToTable->add_SpecificationData(DO1_explain, myTable, line++, column, \
                                                 tr("Disable"), tr("Start generator signal"), \
                                                 tr("Signal to start the diesel generator, start the diesel generator when enabled, stop the diesel generator when disabled."));
@@ -2277,7 +2324,13 @@ void MyWidget::MPSState(QTableWidget *myTable)
                                                 tr("Turn off"), tr("Converter Status"), \
                                                 tr("DCDC module operation modes states: OFF, Standby, Constant Voltage, Constant Current, MPPT."));
 
+    ButtonToTable->add_SpecificationData(ModeLock_explain, myTable, line++, column, \
+                                                tr("OFF"), tr("ModeLock"), \
+                                                tr("."));
 
+    ButtonToTable->add_SpecificationData(DCDCinsulation_detection_explain, myTable, line++, column, \
+                                                tr("Disable"), tr("DCDC insulation detection"), \
+                                                tr("."));
 }
 
 //系统消息 绘制button
@@ -2966,12 +3019,12 @@ void MyWidget::SetDCACToTable(QTableWidget *myTable)
                                          tr("Battery Communication Modes: None, RS485, CAN, Ethernet. "
                                             "(Note: Due to the fact that CAN and Ethernet both have only one port, the battery communication mode and EMS communication mode cannot be selected as \"CAN\" or \"Ethernet\" simultaneously.)"));
 
-    //BMS制造商
+    //BMS厂家
     ButtonToTable->add_SpecificationData(BAT_manufacturers_explain, myTable, line++, column, \
                                          tr("Auto"), tr("BAT protocol"), \
                                          tr("Battery Protocol: Parse the messages sent by BMS based on the selected battery protocol."
                                             "\nCurrently supported battery manufacturer protocols include:"
-                                            "MEGA, LISHEN, GREATPOWER, GOLD, BMSER, LANLI, SLANPOWER, PYLON, CATL, SUOYING, XINGWANGDA, KUBO, GOLD_V2, TOGOOD, GROUP_STANDARD, WOBOYUAN, KGOOER, LD, PYLON_L, VILION, TUOPU,JDI."
+                                            "MEGA, LISHEN, GREATPOWER, GOLD, BMSER, LANLI, SLANPOWER, PYLON, CATL, SUOYING, XINGWANGDA, KUBO, GOLD_V2, TOGOOD, PGS, WOBOYUAN, KGOOER, LD, PYLON_L, VILION, TUOPU,JDI,BGS,HUASU,ALPHA."
                                             "\nSelect AUTO to automatically detect the battery manufacturer protocol."));
 
     //EMS通信方式
@@ -3018,9 +3071,6 @@ void MyWidget::SetDCACToTable(QTableWidget *myTable)
     ButtonToTable->add_SpecificationData(Parallel_explain, myTable, line++, column, \
                                          tr("Disable"), tr("Parallel"), \
                                          tr("Parallel operation: When converter operates at grid-off mode in parallel, this item needs to be enabled."));*/
-
-
-
 }
 //设置DCDC控件到表格
 void MyWidget::SetDCDCToTable(QTableWidget *myTable)
@@ -3298,20 +3348,19 @@ void MyWidget::SetAdvancedSetup1ToTable(QTableWidget *myTable)
                                         tr("1"), tr("Output power factor"), \
                                         tr("This item can modify the power factor, where the power factor is equal to the ratio of active power to apparent power. "
                                            "A positive value indicates leading reactive power, while a negative value indicates lagging reactive power."));
-
     //恒压值
-    ButtonToTable->add_SpecificationData(Constant_current_explain, myTable, line++, column, \
-                                         tr("100"), tr("Constant current"), \
-                                         tr("Enter the advanced settings interface and select the control power mode. Choose constant current and modify the current value."
-                                            "Converter will charge or discharge the battery with this current value."
-                                            "Positive values represent discharging, while negative values represent charging."));
-
-    //恒流值
     ButtonToTable->add_SpecificationData(Constant_voltage_explain, myTable, line++, column, \
                                          tr("600"), tr("Constant voltage"), \
                                          tr("Enter the advanced settings interface and select the control power mode."
                                             "Choose constant voltage and modify the voltage value."
                                             "Converter will operate at the constant voltage value and function as a constant voltage source."));
+
+    //恒流值
+    ButtonToTable->add_SpecificationData(Constant_current_explain, myTable, line++, column, \
+                                         tr("100"), tr("Constant current"), \
+                                         tr("Enter the advanced settings interface and select the control power mode. Choose constant current and modify the current value."
+                                            "Converter will charge or discharge the battery with this current value."
+                                            "Positive values represent discharging, while negative values represent charging."));
 
     //输出功率限制
     ButtonToTable->add_SpecificationData(Output_power_limit_explain, myTable, line++, column,\
@@ -4106,6 +4155,7 @@ void MyWidget::on_ModeInfo_bt_clicked()
     ui->UI_stackedWidget->setCurrentWidget(ui->UI_page);
     ui->stackedWidget->setCurrentWidget(ui->Wordking_page);
     ui->Set_stackedWidget->setCurrentWidget(ui->Introduction_page);//切换到 模式介绍页
+    ui->Introduction_stackedWidget->setCurrentIndex( ModeIntr_Current_Page );
 }
 //下一页
 void MyWidget::on_SetNext_bt_clicked()
@@ -4196,7 +4246,7 @@ void MyWidget::on_IntroPrevious_bt_clicked()
 {
     ModeIntr_Current_Page--;
 
-    if( CurrentCheckModeExplain == Mode_SELF_USE+1 )
+    /*if( CurrentCheckModeExplain == Mode_SELF_USE+1 )
     {
         //超过最小页码，返回自发自用页
         if( ModeIntr_Current_Page < 0 )
@@ -4229,93 +4279,45 @@ void MyWidget::on_IntroPrevious_bt_clicked()
         ModeIntr_Current_Page = 0;
         ui->IntrPageNum_lb->setText(tr("1/1"));
         ui->Introduction_stackedWidget->setCurrentIndex( ModeIntr_Current_Page );
-    }
-    else if( CurrentCheckModeExplain == Mode_OPTIMAL_MODE )
+    }*/
+    if( CurrentCheckModeExplain == Mode_OPTIMAL_MODE )
     {
         //超过最小页码，返回最优模式页
         //最优模式有两页　3 4
-        if( ModeIntr_Current_Page < 0 )
-        {
-            ModeIntr_Current_Page = 4;
-            ui->IntrPageNum_lb->setText(tr("3/3"));
-        }
         if( ModeIntr_Current_Page < 3 )
         {
-            ui->IntrPageNum_lb->setText(tr("1/3"));
-            ModeIntr_Current_Page = 0;
+            ui->IntrPageNum_lb->setText(tr("2/2"));
+            ModeIntr_Current_Page = 4;
         }
         if( ModeIntr_Current_Page == 3 )
         {
-            ui->IntrPageNum_lb->setText(tr("2/3"));
+            ui->IntrPageNum_lb->setText(tr("1/2"));
         }
         //最优模式介绍
         ui->Introduction_stackedWidget->setCurrentIndex( ModeIntr_Current_Page );
     }
-    else if(CurrentCheckModeExplain == Mode_MIXED_MODE)
+    /*else if(CurrentCheckModeExplain == Mode_MIXED_MODE)
     {
         ModeIntr_Current_Page = 0;
         ui->IntrPageNum_lb->setText( "1/1" );
         ui->Introduction_stackedWidget->setCurrentIndex( ModeIntr_Current_Page );
-    }
+    }*/
 }
 //模式介绍 下一页
 void MyWidget::on_IntroNext_bt_clicked()
 {
     ModeIntr_Current_Page++;
-
-    if( CurrentCheckModeExplain == Mode_SELF_USE+1 )
+    if( CurrentCheckModeExplain == Mode_OPTIMAL_MODE )
     {
-        //超过自发自用页范围
-        if( ModeIntr_Current_Page >= 2 )
-        {
-            ModeIntr_Current_Page = 0;
-        }
-        ui->IntrPageNum_lb->setText( QString("%1/2").arg( ModeIntr_Current_Page+1 ) );
-        //自发自用介绍
-        ui->Introduction_stackedWidget->setCurrentIndex( ModeIntr_Current_Page );
-    }
-    else if( CurrentCheckModeExplain == Mode_BATTERY_PRIORITY+1 )
-    {
-        if( ModeIntr_Current_Page < 2 )
-        {
-            ModeIntr_Current_Page = 2;
-            ui->IntrPageNum_lb->setText( "2/2" );
-        }
-        if( ModeIntr_Current_Page > 2 )
-        {
-            ModeIntr_Current_Page = 0;
-            ui->IntrPageNum_lb->setText( "1/2" );
-        }
-        ui->Introduction_stackedWidget->setCurrentIndex( ModeIntr_Current_Page );
-    }
-    else if( CurrentCheckModeExplain == Mode_MANUAL+3 )
-    {
-        ModeIntr_Current_Page = 0;
-        ui->IntrPageNum_lb->setText( "1/1" );
-        ui->Introduction_stackedWidget->setCurrentIndex( ModeIntr_Current_Page );
-    }
-    else if( CurrentCheckModeExplain == Mode_OPTIMAL_MODE )
-    {
-        if( ModeIntr_Current_Page < 3 )
-        {
-            ModeIntr_Current_Page = 3;
-            ui->IntrPageNum_lb->setText( "2/3" );
-        }
         if( ModeIntr_Current_Page > 4 )
         {
-            ModeIntr_Current_Page = 0;
-            ui->IntrPageNum_lb->setText( "1/3" );
+            ModeIntr_Current_Page = 3;
+            ui->IntrPageNum_lb->setText( "1/2" );
         }
         if( ModeIntr_Current_Page == 4 )
         {
-            ui->IntrPageNum_lb->setText( "3/3" );
+            ui->IntrPageNum_lb->setText( "2/2" );
         }
-        ui->Introduction_stackedWidget->setCurrentIndex( ModeIntr_Current_Page );
-    }
-    else if(CurrentCheckModeExplain == Mode_MIXED_MODE)
-    {
-        ModeIntr_Current_Page = 0;
-        ui->IntrPageNum_lb->setText( "1/1" );
         ui->Introduction_stackedWidget->setCurrentIndex( ModeIntr_Current_Page );
     }
 }
@@ -4370,16 +4372,16 @@ void MyWidget::on_TimeSeting_btn_clicked()
 //点击登录
 void MyWidget::on_ToLogin_bt_clicked()
 {
-    QMessageBox::question(this, tr("Login"), tr("."), tr("OK"));
+
     if( ui->combox_Account->currentIndex() == User )
     {
         ui->UI_stackedWidget->setCurrentWidget( ui->UI_page );
         ui->stackedWidget->setCurrentWidget( ui->Host_page );
         ui->RTState_stackedWidget->setCurrentWidget(ui->RTStateData_page);
         ui->BAT_stackedWidget->setCurrentWidget(ui->BAT_Lithium_page);
+        ui->System_btn->setText("System");
         Account_Type = User;
         Account_Change( Account_Type );
-//        PermissionsOfControl( Account_Type );//锁定系统设置内容
 
     }
     else if( ui->combox_Account->currentIndex() == Maintain )
@@ -4387,10 +4389,8 @@ void MyWidget::on_ToLogin_bt_clicked()
         ui->UI_stackedWidget->setCurrentWidget( ui->UI_page );
         ui->stackedWidget->setCurrentWidget( ui->Host_page );
         ui->RTState_stackedWidget->setCurrentWidget(ui->RTStateData_page);
-
-
         ui->BAT_stackedWidget->setCurrentWidget(ui->BAT_Lithium_page);
-
+        ui->System_btn->setText("System");
         Account_Type = Maintain;
         Account_Change( Account_Type );
     }
@@ -4400,7 +4400,7 @@ void MyWidget::on_ToLogin_bt_clicked()
         ui->stackedWidget->setCurrentWidget( ui->Host_page );
         ui->RTState_stackedWidget->setCurrentWidget(ui->RTStateData_page);
         ui->BAT_stackedWidget->setCurrentWidget(ui->BAT_Lithium_page);
-
+        ui->System_btn->setText("System");
         Account_Type = Root;
         Account_Change( Account_Type );
     }
@@ -4454,4 +4454,15 @@ void MyWidget::on_InfoPrevious_bt_clicked()
         ui->InfoPageNum_lb->setText( "1/2" );
         ui->Info_stackedWidget->setCurrentWidget( ui->MPS_Info_page );
     }
+}
+
+//登录页面输入密码点击槽
+void MyWidget::on_pushButton_16_clicked()
+{
+    QMessageBox::question(this , "······", \
+                          tr("    When not logged in, it is not possible to access the system page or view and modify basic settings and advanced settings parameters.\n"
+                             "    When logged in as a \"User\" account, it is possible to switch work modes and modify basic settings parameters related to the work mode. "
+                             "Advanced settings parameters can be viewed but cannot be modified.\n"
+                             "    When logged in as a \"Maintain\" or \"Admin\" account, it is possible to set both basic settings parameters and advanced settings parameters.\n"
+                             "    The default user password is 123456. If there is a need to modify advanced settings parameters, please contact the maintenance personnel."), tr("OK"));
 }

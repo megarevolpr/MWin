@@ -72,6 +72,13 @@
 #define Mode_OPTIMAL_MODE       3
 #define Mode_MIXED_MODE         4
 
+//操作模式介绍
+#define BATTERY_AREA_EXP            0
+#define Mode_SELF_USE_EXP           1
+#define Mode_BATTERY_PRIORITY_EXP   2
+#define Mode_OPTIMAL_MODE_EXP       3
+#define Mode_MIXED_MODE_EXP         4
+#define Mode_MANUAL_EXP             5
 //高级设置
 #define ADVANCED_SETTING        5
 
@@ -191,7 +198,6 @@ public:
     QPushButton *DC_Soft_Start_explain;
     QPushButton *Converter_Status_explain;
     QPushButton *Reactive_P_Reg_explain;
-    QPushButton *Sleep_mode_explain;
     QPushButton *LVRT_explain;
     QPushButton *DI1_explain;
     QPushButton *DI2_explain;
@@ -209,8 +215,6 @@ public:
     QPushButton *Converter_Status_V_explain;
     QPushButton *ModeLock_explain;
     QPushButton *DCDCinsulation_detection_explain;
-
-
 
     /***************************DC/AC参数****************************/
     QPushButton *Grid_connected_mode_explain;//并网方式说明
@@ -649,6 +653,7 @@ private:
     void OperationLog();        //操作日志
     void WorkingModeInit();     //新界面工作模式初始化
     void Account_Change( uint8_t Account_Type );//切换登录信息
+    void ReloadLabel();         //切换语言重新加载Lable
 
 
 
@@ -795,6 +800,8 @@ private slots:
     void on_InfoNext_bt_clicked();
 
     void on_InfoPrevious_bt_clicked();
+
+    void on_pushButton_16_clicked();
 
 private:
     Ui::MyWidget *ui;

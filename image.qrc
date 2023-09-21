@@ -28,7 +28,6 @@
         <file>UI/BatterySOC.png</file>
         <file>UI/Loading.gif</file>
         <file>UI/BatterySOC_new.png</file>
-        <file>UI/Battery_area.png</file>
         <file>UI/Battery_Priority_A.png</file>
         <file>UI/Battery_Priority_B1.png</file>
         <file>UI/Battery_Priority_B2.png</file>
@@ -55,5 +54,7 @@
         <file>UI/MixedMode.png</file>
         <file>UI/3.png</file>
         <file>UI/user.png</file>
+        <file>UI/Battery_area2.png</file>
+        <file>UI/Battery_area3.png</file>
     </qresource>
 </RCC>
