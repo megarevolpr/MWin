@@ -16,13 +16,16 @@ MyWidget::MyWidget(QWidget *parent) :
     ui(new Ui::MyWidget)
 {
     LanguageType = CHINESE; //开机默认为中文
-    CurrentCheckMode = Mode_SELF_USE;//初始为 自发自用模式
-    System_Current_Page = DCAC_PAGE_NUM;
-    Advanced_Current_Page = Advanced_PAGE1_NUM;
-    ModeIntr_Current_Page   = 0;
 
-    QFont font("Sans Serif", 13); // 创建一个宋体字体，字号为13
-    QApplication::setFont(font); // 设置应用程序的全局字体为宋体
+    CurrentCheckMode = Mode_SELF_USE;           //初始为 自发自用模式
+    CurrentCheckModeExplain = BATTERY_AREA_EXP; //初始为 自发自用模式介绍
+    System_Current_Page = DCAC_PAGE_NUM;        //系统当前页
+    Advanced_Current_Page = Advanced_PAGE1_NUM; //高级设置当前页
+    ModeIntr_Current_Page   = 0;                //模式介绍页当前页码
+    Account_Type = None;                        //当前登录角色 -- 上电默认未登录
+
+    QFont font("Courier New", 13);  // 创建一个宋体字体，字号为13
+    QApplication::setFont(font);    // 设置应用程序的全局字体为宋体
 
     ui->setupUi(this);
 //    setFixedSize(800,562);//固定窗口大小
@@ -67,7 +70,7 @@ void MyWidget::LoadLanguageInit()
 void MyWidget::MemoryAllocation()
 {
     IPShow = true;
-    mode_expelain = new OperMode(this);
+    mode_expelain = new OperMode(this,LanguageType);
     UpgradeInterface = new UpgradeTools(this);
     FaultTable = new FaultTableInterface(this,LanguageType);
     ButtonToTable = new SpecificationData(this);
@@ -94,18 +97,20 @@ void MyWidget::MemoryAllocation()
     Menu_Group->addButton(ui->Sys_Inf_btn,6);
     Menu_Group->addButton(ui->Login_bt,7);
 
+    //系统工作模式
     SystemMode_Group = new QButtonGroup();
     SystemMode_Group->addButton(ui->SelfUse_bt,Mode_SELF_USE);
     SystemMode_Group->addButton(ui->BetteryPriority_bt,Mode_BATTERY_PRIORITY);
-    SystemMode_Group->addButton(ui->Manual_bt,Mode_MANUAL);
     SystemMode_Group->addButton(ui->OptimalModel_bt,Mode_OPTIMAL_MODE);
     SystemMode_Group->addButton(ui->MixedMode_bt,Mode_MIXED_MODE);
+    SystemMode_Group->addButton(ui->Manual_bt,Mode_MANUAL);
 
     ExitReturn_Group = new QButtonGroup();
     ExitReturn_Group->addButton(ui->IntrBack_bt,0);
     ExitReturn_Group->addButton(ui->Save_bt,1);
     ExitReturn_Group->addButton(ui->Exit_bt,2);
 
+    //工作模式 说明
     ModeSwitch_Group = new QButtonGroup();
     ModeSwitch_Group->addButton(ui->BatArea_bt,BATTERY_AREA_EXP);
     ModeSwitch_Group->addButton(ui->SelfUseIntro_bt,Mode_SELF_USE_EXP);
@@ -232,7 +237,6 @@ void MyWidget::MemoryAllocation()
 
     Grid_connected_mode_explain = new QPushButton;      //PCS并离网方式说明
     Constant_power_explain  = new QPushButton;           //恒功率说明
-//    Charging_and_discharging_explain = new QPushButton; //充放电说明status
     Work_mode_explain = new QPushButton;                //工作模式说明
     Output_power_factor_explain = new QPushButton;      //输出功率因素说明
     Output_reactive_power_explain = new QPushButton;    //输出无功功率说明
@@ -248,7 +252,6 @@ void MyWidget::MemoryAllocation()
     /***************************DC/AC参数**********************************/
     Work_parttern_explain = new QPushButton;                     //DCDC工作模式说明
     Boost_or_Buck_explain = new QPushButton;                     //升/降压说明
-    Battery_position_explain = new QPushButton;                  //电池位置说明
     Voltage_level_explain = new QPushButton;                     //电压等级说明
     Current_value_explain = new QPushButton;                     //电流值说明
     OuterLoopControl_explain = new QPushButton;                 //
@@ -266,8 +269,6 @@ void MyWidget::MemoryAllocation()
     Discharge_Volt_upper_Limit_delta_explain = new QPushButton; //放电电压下限回差说明
     Charge_Current_Limit_explain = new QPushButton;  //充电电流限制说明
     Discharge_Current_Limit_explain = new QPushButton;  //放电电流限制说明
-//    Floating_charge_explain = new QPushButton;   //浮充电压说明
-//    Equalized_charge_explain = new QPushButton;   //均充电压说明
     Gen_turn_off_SOC_explain = new QPushButton;    //柴发关闭SOC说明
     Gen_turn_on_SOC_explain = new QPushButton;     //柴发开启SOC说明
     ForceCharge_start_explain = new QPushButton; //强充开启说明
@@ -295,11 +296,6 @@ void MyWidget::MemoryAllocation()
     Grid_off_EOD_explain  = new QPushButton;
     Grid_on_EOD_explain  = new QPushButton;
     DCACReferenceVoltage_explain  = new QPushButton;
-    /*Shutdown_voltage_point_explain  = new QPushButton;
-    Mending_center_point_explain  = new QPushButton;
-    Temperature_filling_coefficient_explain  = new QPushButton;
-    Mending_allowable_setting_explain  = new QPushButton;
-    Temperature_alarm_upper_limit_explain  = new QPushButton;*/
     Uniform_To_Flushing_current_explain  = new QPushButton;
     Flushing_To_Uniform_current_explain  = new QPushButton;
 
@@ -822,6 +818,7 @@ void MyWidget::FirstPage()
     ui->Bypass_Batt_btn->setFlat(true);
     ui->Bypass_Batt_btn->setFocusPolicy(Qt::NoFocus);
 }
+
 /******切换语言*****/
 void MyWidget::ChangeLanguage_btn_clicked()
 {
@@ -832,7 +829,7 @@ void MyWidget::ChangeLanguage_btn_clicked()
         ui->ChangeLanguage_btn->setText(tr("Change Language"));
         qApp->installTranslator(translator);
         ui->retranslateUi(this);
-        ui->label_42->setStyleSheet("border-image: url(:/new_ui/UI/Battery_area2.png);");
+        ui->label_42->setStyleSheet("border-image: url(:/new_ui/UI/Battery_area3.png);");
 
     }
     else if(LanguageType == ENGLISH)
@@ -842,31 +839,21 @@ void MyWidget::ChangeLanguage_btn_clicked()
         ui->ChangeLanguage_btn->setText(tr("切换语言"));
         qApp->installTranslator(translator);
         ui->retranslateUi(this);
-        ui->label_42->setStyleSheet("border-image: url(:/new_ui/UI/Battery_area3.png);");
+        ui->label_42->setStyleSheet("border-image: url(:/new_ui/UI/Battery_area2.png);");
     }
     delete ButtonToTable;
-    mode_expelain = new OperMode(this);
+    mode_expelain = new OperMode(this,LanguageType);
     UpgradeInterface = new UpgradeTools(this);
     FaultTable = new FaultTableInterface(this,LanguageType);
     ButtonToTable = new SpecificationData(this);
 
+
     UIPageInit();       //初始化界面
+
     ReloadLabel();      //切换语言重新加载Lable
+    qDebug()<<"333";
 }
-//操作模式新界面
-void MyWidget::Operational_mode_clicked()
-{
-    if(mode_expelain->isHidden())
-    {
-        mode_expelain->show();
-//        this->hide();
-    }
-    else
-    {
-        mode_expelain->hide();
-//        this->show();
-    }
-}
+
 //升级界面
 void MyWidget::UpgradeInterface_clicked()
 {
@@ -891,6 +878,7 @@ void MyWidget::UpgradeInterface_clicked()
     }
 
 }
+
 //函数关联
 void MyWidget::LinkRelationship()
 {
@@ -899,7 +887,7 @@ void MyWidget::LinkRelationship()
     connect(SystemMode_Group, SIGNAL(buttonClicked(int)), this,SLOT(WordingMode(int)));//系统控制模式
     connect(ModeSwitch_Group, SIGNAL(buttonClicked(int)), this,SLOT(ModeSwitchExplain(int)));//切换 模式说明
     connect(ExitReturn_Group, SIGNAL(buttonClicked(int)), this,SLOT(Return(int)));//返回函数
-    connect(Work_mode_explain, SIGNAL(clicked(bool)), this, SLOT(Operational_mode_clicked())); //操作模式界面关联
+//    connect(Work_mode_explain, SIGNAL(clicked(bool)), this, SLOT(Operational_mode_clicked())); //操作模式界面关联
     connect(System_upgrade_explain, SIGNAL(clicked(bool)), this, SLOT(UpgradeInterface_clicked())); //升级界面关联
 //    connect( ui->combox_Account, SIGNAL(currentIndexChanged(int)), this , SLOT(combox_Account_change(int)));//菜单页头像切换
     connect(ui->Bypass_Batt_btn, SIGNAL(clicked()), this, SLOT(on_Batt_btn_released()));    //主页电池按钮跳转电池信息
@@ -914,6 +902,7 @@ void MyWidget::LinkRelationship()
 
 
 }
+
 //实时数据
 void MyWidget::RunStatePage()
 {
@@ -1318,7 +1307,7 @@ void MyWidget::WorkingModeInit()
 {
     Mode_Str.clear();
     Mode_title_Str.clear();
-    Mode_Str<<tr("Battery Area")<<tr("Self-issuance and self-use")<<tr("Battery Priority")<<tr("Manual")<<tr("Optimal model")<<tr("Mixed mode");
+    Mode_Str<<tr("Battery Area")<<tr("Self-issuance and self-use")<<tr("Battery Priority")<<tr("Optimal model")<<tr("Mixed mode")<<tr("Manual");
     Mode_title_Str<<tr("DC/AC Parameters")<<tr("DC/DC Parameters")<<tr("Lithium Battery Setting Parameters")<<tr("Lead-acid Battery Setting Parameters")<<tr("Time Period Setting")<<tr("Function Sentting 1")<<tr("Function Sentting 2")\
                     <<tr("System Senttings")<<tr("Device")<<tr("DC/AC Debug")<<tr("DC/DC Debug");
 
@@ -1360,6 +1349,7 @@ void MyWidget::WorkingModeInit()
        }
     }
 }
+
 //切换登录信息
 void MyWidget::Account_Change(uint8_t Account_Type)
 {
@@ -1380,28 +1370,20 @@ void MyWidget::Account_Change(uint8_t Account_Type)
         ui->Login_bt->setText( tr("Not Logged in") );
     }
 }
+
 //切换语言重新加载Lable
 void MyWidget::ReloadLabel()
 {
     //加载模式介绍lable
-    if(CurrentCheckModeExplain < 3)
-    {
-        ui->Intro_lb->setText( Mode_Str.at(CurrentCheckModeExplain) );//模式介绍标题更新
-        ui->IntrPageNum_lb->setText(tr("1/1"));//模式介绍页码更新
-    }
-   else if(CurrentCheckModeExplain == Mode_OPTIMAL_MODE_EXP)
+    ui->Intro_lb->setText( Mode_Str.at(CurrentCheckModeExplain) );//模式介绍标题更新
+    ui->IntrPageNum_lb->setText(tr("1/1"));//模式介绍页码更新
+
+   if(CurrentCheckModeExplain == Mode_OPTIMAL_MODE_EXP)
    {
-       ui->Intro_lb->setText( Mode_Str.at(4) );//模式介绍标题更新
-       ui->IntrPageNum_lb->setText(QString("%1/2").arg(ui->Introduction_stackedWidget->currentIndex()-2));//模式介绍页码更新
+       //模式介绍页码更新
+       ui->IntrPageNum_lb->setText(QString("%1/2").arg(ui->Introduction_stackedWidget->currentIndex()-2));
    }
-    else if(CurrentCheckModeExplain == Mode_MIXED_MODE_EXP )
-    {
-        ui->Intro_lb->setText( Mode_Str.at(5) );//模式介绍标题更新
-    }
-    else if(CurrentCheckModeExplain == Mode_MANUAL_EXP )
-    {
-        ui->Intro_lb->setText( Mode_Str.at(3) );//模式介绍标题更新
-    }
+
 
     //加载基础/高级设置lable
     if(CurrentCheckMode != ADVANCED_SETTING)
@@ -1424,6 +1406,130 @@ void MyWidget::ReloadLabel()
     }
 
 
+}
+
+//失能所有基础控件
+void MyWidget::DisabldAllBasisButton()
+{
+    DisableTableButton(ui->DCAC_Tab);
+
+    switch (CurrentCheckMode)
+    {
+    case Mode_SELF_USE:
+    {
+        EnableTableButton(ui->DCAC_Tab,0,1);
+        EnableTableButton(ui->DCAC_Tab,2,1);
+        EnableTableButton(ui->DCAC_Tab,3,1);
+        EnableTableButton(ui->DCAC_Tab,5,1);
+        EnableTableButton(ui->DCAC_Tab,6,1);
+        EnableTableButton(ui->DCAC_Tab,0,5);
+        EnableTableButton(ui->DCAC_Tab,1,5);
+        EnableTableButton(ui->DCAC_Tab,2,5);
+        EnableTableButton(ui->DCAC_Tab,3,5);
+        EnableTableButton(ui->DCAC_Tab,4,5);
+        break;
+    }
+    case Mode_BATTERY_PRIORITY:
+    {
+        EnableTableButton(ui->DCAC_Tab,0,1);
+        EnableTableButton(ui->DCAC_Tab,1,1);
+        EnableTableButton(ui->DCAC_Tab,2,1);
+        EnableTableButton(ui->DCAC_Tab,3,1);
+        EnableTableButton(ui->DCAC_Tab,5,1);
+        EnableTableButton(ui->DCAC_Tab,0,5);
+        EnableTableButton(ui->DCAC_Tab,1,5);
+        EnableTableButton(ui->DCAC_Tab,2,5);
+        EnableTableButton(ui->DCAC_Tab,3,5);
+        EnableTableButton(ui->DCAC_Tab,4,5);
+        break;
+    }
+    case Mode_OPTIMAL_MODE:
+    {
+        EnableTableButton(ui->DCAC_Tab,0,1);
+        EnableTableButton(ui->DCAC_Tab,1,1);
+        EnableTableButton(ui->DCAC_Tab,5,1);
+        EnableTableButton(ui->DCAC_Tab,6,1);
+        EnableTableButton(ui->DCAC_Tab,7,1);
+        EnableTableButton(ui->DCAC_Tab,0,3);
+        EnableTableButton(ui->DCAC_Tab,1,3);
+        EnableTableButton(ui->DCAC_Tab,2,3);
+        EnableTableButton(ui->DCAC_Tab,3,3);
+        EnableTableButton(ui->DCAC_Tab,4,3);
+        EnableTableButton(ui->DCAC_Tab,5,3);
+        EnableTableButton(ui->DCAC_Tab,0,5);
+        EnableTableButton(ui->DCAC_Tab,1,5);
+        EnableTableButton(ui->DCAC_Tab,2,5);
+        EnableTableButton(ui->DCAC_Tab,3,5);
+        EnableTableButton(ui->DCAC_Tab,4,5);
+
+
+        break;
+    }
+    case Mode_MIXED_MODE:
+    {
+        EnableTableButton(ui->DCAC_Tab,0,1);
+        EnableTableButton(ui->DCAC_Tab,1,1);
+        EnableTableButton(ui->DCAC_Tab,2,1);
+        EnableTableButton(ui->DCAC_Tab,3,1);
+        EnableTableButton(ui->DCAC_Tab,5,1);
+        EnableTableButton(ui->DCAC_Tab,6,1);
+        EnableTableButton(ui->DCAC_Tab,7,1);
+        EnableTableButton(ui->DCAC_Tab,0,5);
+        EnableTableButton(ui->DCAC_Tab,1,5);
+        EnableTableButton(ui->DCAC_Tab,2,5);
+        EnableTableButton(ui->DCAC_Tab,3,5);
+        EnableTableButton(ui->DCAC_Tab,4,5);
+        break;
+    }
+    case Mode_MANUAL:
+    {
+        EnableTableButton(ui->DCAC_Tab,0,1);
+        EnableTableButton(ui->DCAC_Tab,1,1);
+        EnableTableButton(ui->DCAC_Tab,5,1);
+        EnableTableButton(ui->DCAC_Tab,0,5);
+        EnableTableButton(ui->DCAC_Tab,1,5);
+        EnableTableButton(ui->DCAC_Tab,2,5);
+        EnableTableButton(ui->DCAC_Tab,3,5);
+        EnableTableButton(ui->DCAC_Tab,4,5);
+        break;
+    }
+    default:
+        break;
+    }
+}
+//失能表格的控件
+void MyWidget::DisableTableButton(QTableWidget *myTable)
+{
+    int rowCount = myTable->rowCount();
+    int columnCount = myTable->columnCount();
+
+    for(int row = 0; row<rowCount; row++)
+    {
+        for(int column = 0; column<columnCount; column++)
+        {
+            QWidget* widget = myTable->cellWidget(row, column);
+            QPushButton* button = qobject_cast<QPushButton*>(widget);
+
+            //判断得到的QPushButton指针是否有效来确定是否成功获取到了按钮
+            if (button)
+            {
+                // 成功获取到按钮，可以进行相关操作
+                button->setEnabled(false);
+            }
+        }
+    }
+
+}
+//使能表格控件
+void MyWidget::EnableTableButton(QTableWidget *myTable, int rowCount, int columnCount)
+{
+    QWidget* widget = myTable->cellWidget(rowCount, columnCount);
+    QPushButton* button = qobject_cast<QPushButton*>(widget);
+
+    if (button)
+    {
+        button->setEnabled(true);
+    }
 }
 //菜单页头像切换
 void MyWidget::combox_Account_change(int Index)
@@ -1472,6 +1578,9 @@ void MyWidget::onTimerOut()
 //系统工作模式
 void MyWidget::WordingMode(int Index)
 {
+    CurrentCheckMode = Index;
+    qDebug()<<"CurrentCheckMode"<<Index;
+    DisabldAllBasisButton();
     if(System_Current_Page<Lead_PAGE_NUM)
     {
         ui->SetPageNum_lb->setText( QString("%1/%2").arg(System_Current_Page+1).arg(SystemTotal_PAGE) );
@@ -1480,7 +1589,7 @@ void MyWidget::WordingMode(int Index)
         ui->SetPageNum_lb->setText( QString("%1/%2").arg(System_Current_Page).arg(SystemTotal_PAGE) );
     }
     ui->PageInfo_lb->setText(Mode_title_Str.at(System_Current_Page));
-    CurrentCheckMode = Index;
+
     if(!ui->Save_bt->isVisible()&&CurrentCheckMode!=ADVANCED_SETTING)
     {
         ui->Save_bt->setVisible(true);
@@ -1525,7 +1634,6 @@ void MyWidget::ModeSwitchExplain(int Index)
     case Mode_OPTIMAL_MODE_EXP:
     {
         ui->IntrPageNum_lb->setText(tr("1/2"));
-        ui->Intro_lb->setText( Mode_Str.at(4) );
         ui->IntroPrevious_bt->setEnabled( true );
         ui->IntroNext_bt->setEnabled( true );
         ui->Introduction_stackedWidget->setCurrentIndex( ModeIntr_Current_Page );
@@ -1535,7 +1643,6 @@ void MyWidget::ModeSwitchExplain(int Index)
     {
         ModeIntr_Current_Page = Index+1;
         ui->IntrPageNum_lb->setText(tr("1/1"));
-        ui->Intro_lb->setText( Mode_Str.at(5) );
         ui->Introduction_stackedWidget->setCurrentIndex( ModeIntr_Current_Page );
     }
         break;
@@ -1543,7 +1650,6 @@ void MyWidget::ModeSwitchExplain(int Index)
     {
         ModeIntr_Current_Page = Index+1;
         ui->IntrPageNum_lb->setText(tr("1/1"));
-        ui->Intro_lb->setText( Mode_Str.at(3) );
         ui->Introduction_stackedWidget->setCurrentIndex( ModeIntr_Current_Page );
     }
         break;
@@ -2945,8 +3051,9 @@ void MyWidget::SetDCACToTable(QTableWidget *myTable)
                                             "Due to converter losses, the DC side power will be higher than the AC side power in this case."));
 
     //电网扩容使能
-    Grid_expansion_explain->setText(tr("Prohibit"));
-    myTable->setCellWidget(line++, column, (QWidget *)Grid_expansion_explain);
+    ButtonToTable->add_SpecificationData(Grid_expansion_explain, myTable, line++, column, \
+                                         tr("Disable"), tr("Grid expansion"), \
+                                         tr("Grid Expansion: Enable, Disable. Enabling activates the Grid Expansion mode."));
 
     //电网容量
     ButtonToTable->add_SpecificationData(Grid_capacity_explain, myTable, line++, column, \
@@ -2956,7 +3063,7 @@ void MyWidget::SetDCACToTable(QTableWidget *myTable)
     //柴发充电功率限制
     ButtonToTable->add_SpecificationData(DG_Charging_power_limit, myTable, line++, column, \
                                          tr("10"), tr("DG Charging power limit"), \
-                                         tr("."));
+                                         tr("DG Charging power limit: Diesel generators allow for the maximum charging power."));
 
     //柴发容量
     ButtonToTable->add_SpecificationData(DG_capacity_explain, myTable, line++, column, \
@@ -3037,7 +3144,7 @@ void MyWidget::SetDCACToTable(QTableWidget *myTable)
     ButtonToTable->add_SpecificationData(Control_mode_explain, myTable, line++, column, \
                                          tr("Local"), tr("Control mode"), \
                                          tr("Local: Converter control through HMI, In this mode, the EMS can only read and cannot write.\n"
-                                            "Remote: In remote mode, the EMS can perform both read and write control."));
+                                            "    Remote: In remote mode, the EMS can perform both read and write control."));
 
     /*ButtonToTable->add_SpecificationData(G_Constant_power_explain,myTable, line++, column,\
                                          tr("0"), tr("Constant power(generators)"), \
@@ -3086,10 +3193,6 @@ void MyWidget::SetDCDCToTable(QTableWidget *myTable)
                                          tr("Buck"), tr("Boost or Buck"), \
                                          tr("DCDC module operating modes: Buck, Boost."));
 
-    //电池位置
-    ButtonToTable->add_SpecificationData(Battery_position_explain, myTable, line++, column, \
-                                         tr("LowSide"), tr("Battery position"), \
-                                         tr("."));
     line = 0;
     column = 3;
     //恒流值
@@ -3104,24 +3207,30 @@ void MyWidget::SetDCDCToTable(QTableWidget *myTable)
 
     //外环集中控制
     ButtonToTable->add_SpecificationData(OuterLoopControl_explain, myTable, line++, column, \
-                                         tr("Prohibit"), tr("Outer Loop Control"), \
-                                         tr("."));
+                                         tr("Disable"), tr("Outer Ring Centralized Control"), \
+                                         tr("Outer Ring Centralized Control: Enable, Disable."
+                                            "the photovoltaic energy storage system achieves efficient operation and optimal performance through centralized control and optimization of external environmental factors."));
     line = 0;
     column = 5;
     //IV曲线扫描
     ButtonToTable->add_SpecificationData(IV_curve_scanning_explain, myTable, line++, column, \
-                                         tr("Prohibit"), tr("Outer Loop Control"), \
-                                         tr("."));
+                                         tr("Disable"), tr("IV curve scanning"), \
+                                         tr("IV Curve Scanning: Enable, Disable.\n"
+                                            "IV curve scanning is a method used to test and evaluate the performance of photovoltaic cells or modules by obtaining the output current at different voltages."));
 
     //IV曲线扫描低电压
     ButtonToTable->add_SpecificationData(IV_curve_scanning_low_explain, myTable, line++, column, \
-                                         tr("0"), tr("IV curve scanning low"), \
-                                         tr("."));
+                                         tr("0"), tr("IV curve scanning low voltage"), \
+                                         tr("IV curve scanning high voltage: "
+                                            "By applying a higher voltage to the output end of a photovoltaic module, "
+                                            "its performance is measured to identify potential issues, such as component or array faults."));
 
     //IV曲线扫描高电压
     ButtonToTable->add_SpecificationData(IV_curve_scanning_high_explain, myTable, line++, column, \
-                                         tr("0"), tr("IV curve scanning high"), \
-                                         tr("."));
+                                         tr("0"), tr("IV curve scanning high voltage"), \
+                                         tr("IV curve scanning low voltage: "
+                                            "Obtaining comprehensive performance data of photovoltaic modules at various voltages to provide key indicators for evaluating component performance, "
+                                            "such as energy conversion efficiency and stability."));
 
 
 
@@ -3154,7 +3263,8 @@ void MyWidget::SetLithiumToTable(QTableWidget *myTable)
     //充电电压上限回差说明
     ButtonToTable->add_SpecificationData(Charge_Volt_upper_Limit_delta_explain, myTable, line++, column, \
                                                       "10", tr("Charge Volt upper Limit delta"), \
-                                                      tr("Charging voltage upper limit hysteresis: When the battery is charging, if the battery total voltage reaches the charging voltage upper limit, the converter will shut down. When the battery total voltage drops below the charging voltage upper limit minus the hysteresis value, the converter will automatically turn on."));
+                                                      tr("Charging voltage upper limit hysteresis: When the battery is charging, if the battery total voltage reaches the charging voltage upper limit, the converter will shut down. "
+                                                         "When the battery total voltage drops below the charging voltage upper limit minus the hysteresis value, the converter will automatically turn on."));
 
     line = 0;
     column = 3;
@@ -3166,7 +3276,8 @@ void MyWidget::SetLithiumToTable(QTableWidget *myTable)
     //放电电压下限回差说明
     ButtonToTable->add_SpecificationData(Discharge_Volt_upper_Limit_delta_explain, myTable, line++, column, \
                                                          "10", tr("Discharge Volt upper Limit delta"), \
-                                                         tr("Discharge voltage lower limit hysteresis: When the battery is discharging, if the battery total voltage drops below the discharge voltage lower limit, the converter will shut down. When the battery total voltage exceeds the discharge voltage lower limit plus the hysteresis value, the converter will automatically turn on."));
+                                                         tr("Discharge voltage lower limit hysteresis: When the battery is discharging, if the battery total voltage drops below the discharge voltage lower limit, "
+                                                            "the converter will shut down. When the battery total voltage exceeds the discharge voltage lower limit plus the hysteresis value, the converter will automatically turn on."));
 
     //充电电流限制说明
     ButtonToTable->add_SpecificationData(Charge_Current_Limit_explain, myTable, line++, column, \
@@ -3178,15 +3289,15 @@ void MyWidget::SetLithiumToTable(QTableWidget *myTable)
                                                 "240", tr("Discharge Current Limit"), \
                                                 tr("Discharging current limit: The maximum allowable current on the battery side to prevent overcurrent during discharging."));
 
-    //柴发关闭SOC说明
-    ButtonToTable->add_SpecificationData(Gen_turn_off_SOC_explain, myTable, line++, column, \
-                                         "85", tr("Generator turn off SOC"), \
-                                         tr("When the specified SOC is reached, the diesel generator shuts down."));
-
     //柴发开启SOC说明
     ButtonToTable->add_SpecificationData(Gen_turn_on_SOC_explain, myTable, line++, column, \
                                         "25", tr("Generator turn on SOC"), \
                                         tr("When the specified SOC is reached, the diesel generator starts."));
+
+    //柴发关闭SOC说明
+    ButtonToTable->add_SpecificationData(Gen_turn_off_SOC_explain, myTable, line++, column, \
+                                         "85", tr("Generator turn off SOC"), \
+                                         tr("When the specified SOC is reached, the diesel generator shuts down."));
 
     line = 0;
     column = 5;
@@ -3260,15 +3371,15 @@ void MyWidget::SetLead_acidToTable(QTableWidget *myTable)
                                         "10", tr("DCAC Reference Voltage"), \
                                         tr("."));
 
-    //离网EOD
-    ButtonToTable->add_SpecificationData(Grid_off_EOD_explain, myTable, line++, column, \
-                                        "0", tr("Grid-off EOD"), \
-                                        tr("Grid-off discharge cut-off voltage."));
-
     //并网EOD
     ButtonToTable->add_SpecificationData(Grid_on_EOD_explain, myTable, line++, column, \
                                         "0", tr("Grid-on EOD"), \
                                         tr("Grid-on discharge cut-off voltage."));
+
+    //离网EOD
+        ButtonToTable->add_SpecificationData(Grid_off_EOD_explain, myTable, line++, column, \
+                                            "0", tr("Grid-off EOD"), \
+                                            tr("Grid-off discharge cut-off voltage."));
     line = 4;
     column = 5;
     //均充转浮充电流
@@ -3429,8 +3540,10 @@ void MyWidget::SetAdvancedSetup1ToTable(QTableWidget *myTable)
     column = 5;
     //电池容量告警
     ButtonToTable->add_SpecificationData(BatteryCapacityAlarm_explain, myTable, line++, column, \
-                                         tr("prohibit"), tr("Battery Capacity Alarm"), \
-                                         tr("."));
+                                         tr("Disable"), tr("Battery Capacity Alarm"), \
+                                         tr("Battery Capacity Alarm: Enable,Disable.It is effective in Grid Expansion mode and is used to prevent over-discharge of the battery.\n"
+                                            "    When the battery SOC is lower than the \"Charge SOC\" or \"On-Grid DOD\", the system will enter low protection mode for battery capacity. "
+                                            "If, at this time, the load still exceeds the set grid capacity value and battery discharge is required, the system will shut down after the battery has been discharging continuously for 3 minutes."));
     //BMS通信故障判断时间
     ButtonToTable->add_SpecificationData(BmsComFaultTime_explain, myTable, line++, column, \
                                          tr("20"), tr("Bms Com. Fault Time"), \
@@ -3508,8 +3621,8 @@ void MyWidget::SetAdvancedSetup2ToTable(QTableWidget *myTable)
 
     //维护密码
     ButtonToTable->add_SpecificationData(RootPassport_explain, myTable, line++, column,\
-                                         "******", tr("Admin password"), \
-                                         tr("Admin password: Available for resetting the admin password.(Note: The admin password must be six digits.)"));
+                                         "******", tr("Maintain password"), \
+                                         tr("Maintain password: Available for resetting the admin password.(Note: The admin password must be six digits.)"));
 
 }
 //设置高级设置页3控件到表格
@@ -4167,7 +4280,6 @@ void MyWidget::on_SetNext_bt_clicked()
         {
             System_Current_Page = DCAC_PAGE_NUM;
         }
-
         if( (System_Current_Page == Lithium_PAGE_NUM) || (System_Current_Page == Lead_PAGE_NUM) )
         {
             ui->SetPageNum_lb->setText( QString("%1/%2").arg(Lithium_PAGE_NUM+1).arg(SystemTotal_PAGE) );
@@ -4246,40 +4358,6 @@ void MyWidget::on_IntroPrevious_bt_clicked()
 {
     ModeIntr_Current_Page--;
 
-    /*if( CurrentCheckModeExplain == Mode_SELF_USE+1 )
-    {
-        //超过最小页码，返回自发自用页
-        if( ModeIntr_Current_Page < 0 )
-        {
-            ModeIntr_Current_Page = 1;
-        }
-        ui->IntrPageNum_lb->setText( QString("%1/2").arg( ModeIntr_Current_Page+1 ) );
-        //自发自用介绍
-        ui->Introduction_stackedWidget->setCurrentIndex( ModeIntr_Current_Page );
-    }
-    else if( CurrentCheckModeExplain == Mode_BATTERY_PRIORITY+1 )
-    {
-        //超过最小页码，返回电池优先页
-        if( ModeIntr_Current_Page < 0 )
-        {
-            ModeIntr_Current_Page = 2;
-            ui->IntrPageNum_lb->setText( "2/2" );
-        }
-        if( ModeIntr_Current_Page < 2 )
-        {
-            ModeIntr_Current_Page = 0;
-            ui->IntrPageNum_lb->setText( "1/2" );
-        }
-        //电池优先介绍
-        ui->Introduction_stackedWidget->setCurrentIndex( ModeIntr_Current_Page );
-    }
-    else if( CurrentCheckModeExplain == Mode_MANUAL+3 )
-    {
-        //手动模式介绍
-        ModeIntr_Current_Page = 0;
-        ui->IntrPageNum_lb->setText(tr("1/1"));
-        ui->Introduction_stackedWidget->setCurrentIndex( ModeIntr_Current_Page );
-    }*/
     if( CurrentCheckModeExplain == Mode_OPTIMAL_MODE )
     {
         //超过最小页码，返回最优模式页
@@ -4289,32 +4367,26 @@ void MyWidget::on_IntroPrevious_bt_clicked()
             ui->IntrPageNum_lb->setText(tr("2/2"));
             ModeIntr_Current_Page = 4;
         }
-        if( ModeIntr_Current_Page == 3 )
+        else if( ModeIntr_Current_Page == 3 )
         {
             ui->IntrPageNum_lb->setText(tr("1/2"));
         }
         //最优模式介绍
         ui->Introduction_stackedWidget->setCurrentIndex( ModeIntr_Current_Page );
     }
-    /*else if(CurrentCheckModeExplain == Mode_MIXED_MODE)
-    {
-        ModeIntr_Current_Page = 0;
-        ui->IntrPageNum_lb->setText( "1/1" );
-        ui->Introduction_stackedWidget->setCurrentIndex( ModeIntr_Current_Page );
-    }*/
 }
 //模式介绍 下一页
 void MyWidget::on_IntroNext_bt_clicked()
 {
     ModeIntr_Current_Page++;
-    if( CurrentCheckModeExplain == Mode_OPTIMAL_MODE )
+    if( CurrentCheckModeExplain == Mode_OPTIMAL_MODE_EXP )
     {
         if( ModeIntr_Current_Page > 4 )
         {
             ModeIntr_Current_Page = 3;
             ui->IntrPageNum_lb->setText( "1/2" );
         }
-        if( ModeIntr_Current_Page == 4 )
+        else if( ModeIntr_Current_Page == 4 )
         {
             ui->IntrPageNum_lb->setText( "2/2" );
         }
@@ -4459,10 +4531,23 @@ void MyWidget::on_InfoPrevious_bt_clicked()
 //登录页面输入密码点击槽
 void MyWidget::on_pushButton_16_clicked()
 {
-    QMessageBox::question(this , "······", \
+    QMessageBox::question(this , "Password", \
                           tr("    When not logged in, it is not possible to access the system page or view and modify basic settings and advanced settings parameters.\n"
                              "    When logged in as a \"User\" account, it is possible to switch work modes and modify basic settings parameters related to the work mode. "
                              "Advanced settings parameters can be viewed but cannot be modified.\n"
                              "    When logged in as a \"Maintain\" or \"Admin\" account, it is possible to set both basic settings parameters and advanced settings parameters.\n"
                              "    The default user password is 123456. If there is a need to modify advanced settings parameters, please contact the maintenance personnel."), tr("OK"));
+}
+
+//工作模式介绍详细信息
+void MyWidget::on_Details_bt_clicked()
+{
+    if(mode_expelain->isHidden())
+    {
+        mode_expelain->show();
+    }
+    else
+    {
+        mode_expelain->hide();
+    }
 }

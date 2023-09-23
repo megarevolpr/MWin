@@ -6,11 +6,13 @@ SpecificationData::SpecificationData(QWidget *parent)
 {
     mainparent = parent;
     MyConnection = new QList<QMetaObject::Connection>;
+    font = new QFont("Courier New", -1, QFont::Bold);
 }
 
 void SpecificationData::add_SpecificationData(QPushButton *button, QTableWidget *tableWidget, int row, int column, QString value, QString title, QString text)
 {
     button->setText(value);
+//    button->setFont(*font);
     tableWidget->setCellWidget(row, column, (QWidget *)button);
 
     // 将对话框内容作为值存储在 QMap 中

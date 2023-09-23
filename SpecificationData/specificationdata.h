@@ -29,6 +29,7 @@ QWidget *mainparent;
 private:
     QList<QMetaObject::Connection > *MyConnection;
     QMap<QPushButton*, QString> specificationMap;
+    QFont *font;
 };
 
 #endif // SPECIFICATIONDATA_H

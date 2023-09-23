@@ -12,8 +12,8 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>50</width>
-    <height>100</height>
+    <width>1400</width>
+    <height>750</height>
    </size>
   </property>
   <property name="contextMenuPolicy">
@@ -29,7 +29,7 @@
    <bool>true</bool>
   </property>
   <widget class="QWidget" name="Operwidget">
-   <layout class="QHBoxLayout" name="horizontalLayout_2">
+   <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="10,1">
     <item>
      <widget class="QStackedWidget" name="ExplainWidget">
       <property name="currentIndex">
@@ -40,7 +40,7 @@
         <item row="0" column="1">
          <widget class="QStackedWidget" name="ExplanationTextWidget">
           <property name="currentIndex">
-           <number>3</number>
+           <number>4</number>
           </property>
           <widget class="QWidget" name="Systempage">
            <layout class="QHBoxLayout" name="horizontalLayout_6">
@@ -72,174 +72,196 @@
                    <height>997</height>
                   </rect>
                  </property>
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
                  <layout class="QVBoxLayout" name="verticalLayout_6">
                   <item>
-                   <layout class="QVBoxLayout" name="verticalLayout_3">
-                    <item>
-                     <widget class="QPlainTextEdit" name="PVEidt">
-                      <property name="minimumSize">
-                       <size>
-                        <width>560</width>
-                        <height>50</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>560</width>
-                        <height>16777215</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <pointsize>13</pointsize>
-                       </font>
-                      </property>
-                      <property name="plainText">
-                       <string>System for self-use:
+                   <widget class="QWidget" name="PV_Widget" native="true">
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(170, 255, 255);</string>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_3">
+                     <item>
+                      <widget class="QPlainTextEdit" name="PVEidt">
+                       <property name="minimumSize">
+                        <size>
+                         <width>560</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>560</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>13</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">background-color: rgb(255, 255, 255);</string>
+                       </property>
+                       <property name="plainText">
+                        <string>System for self-use:
 When PV, battery, photovoltaic available.</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QLabel" name="PV_A">
-                      <property name="minimumSize">
-                       <size>
-                        <width>560</width>
-                        <height>190</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>560</width>
-                        <height>190</height>
-                       </size>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">border-image: url(:/new_ui/UI/PV_A.png);
-background-color: rgb(170, 255, 255);</string>
-                      </property>
-                      <property name="text">
-                       <string/>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QPlainTextEdit" name="PV_A_Edit">
-                      <property name="minimumSize">
-                       <size>
-                        <width>560</width>
-                        <height>0</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>560</width>
-                        <height>16777215</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <pointsize>13</pointsize>
-                       </font>
-                      </property>
-                      <property name="plainText">
-                       <string>A. PV gives priority to the load power supply, if the PV power is large enough, the remaining energy is provided to the battery charge, if the PV has remaining energy, the energy is returned to the grid.</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QLabel" name="PV_B">
-                      <property name="minimumSize">
-                       <size>
-                        <width>560</width>
-                        <height>190</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>560</width>
-                        <height>190</height>
-                       </size>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">background-color: rgb(170, 255, 255);border-image: url(:/new_ui/UI/PV_B.png);</string>
-                      </property>
-                      <property name="text">
-                       <string/>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QPlainTextEdit" name="PV_B_Edit">
-                      <property name="minimumSize">
-                       <size>
-                        <width>560</width>
-                        <height>70</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>560</width>
-                        <height>16777215</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <pointsize>13</pointsize>
-                       </font>
-                      </property>
-                      <property name="plainText">
-                       <string>B, PV priority to supply the load, if the PV is not enough to power the load, the battery and PV at the same time to power the load.</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QLabel" name="PV_C">
-                      <property name="minimumSize">
-                       <size>
-                        <width>560</width>
-                        <height>190</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>560</width>
-                        <height>190</height>
-                       </size>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">background-color: rgb(170, 255, 255);border-image: url(:/new_ui/UI/PV_C.png);</string>
-                      </property>
-                      <property name="text">
-                       <string/>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QPlainTextEdit" name="PV_C_Edit">
-                      <property name="minimumSize">
-                       <size>
-                        <width>560</width>
-                        <height>0</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>560</width>
-                        <height>16777215</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <pointsize>13</pointsize>
-                       </font>
-                      </property>
-                      <property name="plainText">
-                       <string>C, PV priority to supply the load, if the PV and battery are not enough to supply power to the load, the grid, PV, battery at the same time to supply power to the load.</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="PV_A">
+                       <property name="minimumSize">
+                        <size>
+                         <width>560</width>
+                         <height>190</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>560</width>
+                         <height>190</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">background-color: rgb(170, 255, 255);
+border-image: url(:/new_ui/UI/Self_Use_A.png);</string>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPlainTextEdit" name="PV_A_Edit">
+                       <property name="minimumSize">
+                        <size>
+                         <width>560</width>
+                         <height>0</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>560</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>13</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">background-color: rgb(255, 255, 255);</string>
+                       </property>
+                       <property name="plainText">
+                        <string>A. PV gives priority to the load power supply, if the PV power is large enough, the remaining energy is provided to the battery charge, if the PV has remaining energy, the energy is returned to the grid.</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="PV_B">
+                       <property name="minimumSize">
+                        <size>
+                         <width>560</width>
+                         <height>190</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>560</width>
+                         <height>190</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">background-color: rgb(170, 255, 255);
+border-image: url(:/new_ui/UI/Self_Use_B.png);</string>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPlainTextEdit" name="PV_B_Edit">
+                       <property name="minimumSize">
+                        <size>
+                         <width>560</width>
+                         <height>70</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>560</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>13</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">background-color: rgb(255, 255, 255);</string>
+                       </property>
+                       <property name="plainText">
+                        <string>B, PV priority to supply the load, if the PV is not enough to power the load, the battery and PV at the same time to power the load.</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="PV_C">
+                       <property name="minimumSize">
+                        <size>
+                         <width>560</width>
+                         <height>190</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>560</width>
+                         <height>190</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">background-color: rgb(170, 255, 255);
+border-image: url(:/new_ui/UI/Self_Use_C.png);</string>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPlainTextEdit" name="PV_C_Edit">
+                       <property name="minimumSize">
+                        <size>
+                         <width>560</width>
+                         <height>0</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>560</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>13</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">background-color: rgb(255, 255, 255);</string>
+                       </property>
+                       <property name="plainText">
+                        <string>C, PV priority to supply the load, if the PV and battery are not enough to supply power to the load, the grid, PV, battery at the same time to supply power to the load.</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
                   </item>
                  </layout>
                 </widget>
@@ -1028,10 +1050,13 @@ background-color: rgb(170, 255, 255);</string>
                  <property name="geometry">
                   <rect>
                    <x>0</x>
-                   <y>0</y>
+                   <y>-213</y>
                    <width>581</width>
                    <height>1210</height>
                   </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(170, 255, 255);</string>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_2">
                   <item>
@@ -1052,6 +1077,9 @@ background-color: rgb(170, 255, 255);</string>
                      <font>
                       <pointsize>13</pointsize>
                      </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(255, 255, 255);</string>
                     </property>
                     <property name="plainText">
                      <string>Battery priority: 
@@ -1074,7 +1102,8 @@ background-color: rgb(170, 255, 255);</string>
                      </size>
                     </property>
                     <property name="styleSheet">
-                     <string notr="true">background-color: rgb(170, 255, 255);border-image: url(:/new_ui/UI/BAT_A.png);</string>
+                     <string notr="true">background-color: rgb(170, 255, 255);
+border-image: url(:/new_ui/UI/Battery_Priority_A.png);</string>
                     </property>
                     <property name="text">
                      <string/>
@@ -1093,6 +1122,9 @@ background-color: rgb(170, 255, 255);</string>
                      <font>
                       <pointsize>13</pointsize>
                      </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(255, 255, 255);</string>
                     </property>
                     <property name="plainText">
                      <string>(1)A, PV priority to charge the battery, excess energy to the load, if there is excess energy back to the grid.</string>
@@ -1114,7 +1146,8 @@ background-color: rgb(170, 255, 255);</string>
                      </size>
                     </property>
                     <property name="styleSheet">
-                     <string notr="true">background-color: rgb(170, 255, 255);border-image: url(:/new_ui/UI/BAT_B.png);</string>
+                     <string notr="true">background-color: rgb(170, 255, 255);
+border-image: url(:/new_ui/UI/Battery_Priority_B1.png);</string>
                     </property>
                     <property name="text">
                      <string/>
@@ -1140,6 +1173,9 @@ background-color: rgb(170, 255, 255);</string>
                       <pointsize>13</pointsize>
                      </font>
                     </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(255, 255, 255);</string>
+                    </property>
                     <property name="plainText">
                      <string>B, PV energy is given priority to battery charging, excess energy to the load.</string>
                     </property>
@@ -1160,7 +1196,8 @@ background-color: rgb(170, 255, 255);</string>
                      </size>
                     </property>
                     <property name="styleSheet">
-                     <string notr="true">background-color: rgb(170, 255, 255);border-image: url(:/new_ui/UI/BAT_B2.png);</string>
+                     <string notr="true">background-color: rgb(170, 255, 255);
+border-image: url(:/new_ui/UI/Battery_Priority_B2.png);</string>
                     </property>
                     <property name="text">
                      <string/>
@@ -1186,6 +1223,9 @@ background-color: rgb(170, 255, 255);</string>
                       <pointsize>13</pointsize>
                      </font>
                     </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(255, 255, 255);</string>
+                    </property>
                     <property name="plainText">
                      <string>B, when PV is not enough to supply the battery and load, the grid provides the load with surplus energy.</string>
                     </property>
@@ -1206,7 +1246,8 @@ background-color: rgb(170, 255, 255);</string>
                      </size>
                     </property>
                     <property name="styleSheet">
-                     <string notr="true">background-color: rgb(170, 255, 255);border-image: url(:/new_ui/UI/BAT2A.png);</string>
+                     <string notr="true">background-color: rgb(170, 255, 255);
+border-image: url(:/new_ui/UI/Battery_Priority_C.png);</string>
                     </property>
                     <property name="text">
                      <string/>
@@ -1225,6 +1266,9 @@ background-color: rgb(170, 255, 255);</string>
                      <font>
                       <pointsize>13</pointsize>
                      </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(255, 255, 255);</string>
                     </property>
                     <property name="plainText">
                      <string>(2) When the grid battery is available: A, the grid charges the battery and provides energy to the load.</string>
@@ -2018,10 +2062,13 @@ background-color: rgb(170, 255, 255);</string>
                  <property name="geometry">
                   <rect>
                    <x>0</x>
-                   <y>-991</y>
+                   <y>-845</y>
                    <width>581</width>
                    <height>1988</height>
                   </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(170, 255, 255);</string>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_3">
                   <item row="0" column="0">
@@ -2045,6 +2092,9 @@ background-color: rgb(170, 255, 255);</string>
                         <pointsize>13</pointsize>
                        </font>
                       </property>
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(255, 255, 255);</string>
+                      </property>
                       <property name="plainText">
                        <string>1, when the battery, PV, grid is available</string>
                       </property>
@@ -2065,7 +2115,8 @@ background-color: rgb(170, 255, 255);</string>
                        </size>
                       </property>
                       <property name="styleSheet">
-                       <string notr="true">background-color: rgb(170, 255, 255);border-image: url(:/new_ui/UI/ZY_A.png);</string>
+                       <string notr="true">background-color: rgb(170, 255, 255);
+border-image: url(:/new_ui/UI/Optimal_Mode_A.png);</string>
                       </property>
                       <property name="text">
                        <string/>
@@ -2091,6 +2142,9 @@ background-color: rgb(170, 255, 255);</string>
                         <pointsize>13</pointsize>
                        </font>
                       </property>
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(255, 255, 255);</string>
+                      </property>
                       <property name="plainText">
                        <string>A. When the PV is large enough, the PV charges the battery and supplies the load at the same time, and if there is any surplus, it is returned to the grid.</string>
                       </property>
@@ -2111,7 +2165,8 @@ background-color: rgb(170, 255, 255);</string>
                        </size>
                       </property>
                       <property name="styleSheet">
-                       <string notr="true">background-color: rgb(170, 255, 255);border-image: url(:/new_ui/UI/ZY_B.png);</string>
+                       <string notr="true">background-color: rgb(170, 255, 255);
+border-image: url(:/new_ui/UI/Optimal_Mode_B.png);</string>
                       </property>
                       <property name="text">
                        <string/>
@@ -2137,6 +2192,9 @@ background-color: rgb(170, 255, 255);</string>
                         <pointsize>13</pointsize>
                        </font>
                       </property>
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(255, 255, 255);</string>
+                      </property>
                       <property name="plainText">
                        <string>B. When PV is insufficient, PV charges the battery and supplies power to the load at the same time, and the grid supplements the remaining energy.</string>
                       </property>
@@ -2157,7 +2215,8 @@ background-color: rgb(170, 255, 255);</string>
                        </size>
                       </property>
                       <property name="styleSheet">
-                       <string notr="true">background-color: rgb(170, 255, 255);border-image: url(:/new_ui/UI/ZY_C.png);</string>
+                       <string notr="true">background-color: rgb(170, 255, 255);
+border-image: url(:/new_ui/UI/Optimal_Mode_C.png);</string>
                       </property>
                       <property name="text">
                        <string/>
@@ -2183,6 +2242,9 @@ background-color: rgb(170, 255, 255);</string>
                         <pointsize>13</pointsize>
                        </font>
                       </property>
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(255, 255, 255);</string>
+                      </property>
                       <property name="plainText">
                        <string>C. When PV is insufficient and the load power is less than the power set value on the AC side, the AC side supplies the load, the remaining available power on the AC side will charge the battery, and the PV will charge the battery.</string>
                       </property>
@@ -2203,7 +2265,8 @@ background-color: rgb(170, 255, 255);</string>
                        </size>
                       </property>
                       <property name="styleSheet">
-                       <string notr="true">background-color: rgb(170, 255, 255);border-image: url(:/new_ui/UI/ZY_D.png);</string>
+                       <string notr="true">background-color: rgb(170, 255, 255);
+border-image: url(:/new_ui/UI/Optimal_Mode_D.png);</string>
                       </property>
                       <property name="text">
                        <string/>
@@ -2229,6 +2292,9 @@ background-color: rgb(170, 255, 255);</string>
                         <pointsize>13</pointsize>
                        </font>
                       </property>
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(255, 255, 255);</string>
+                      </property>
                       <property name="plainText">
                        <string>D, when the PV is insufficient, the load power is greater than the AC power, the AC power is available to power the load, and the PV makes up the remaining power to the load, if the PV is insufficient, the battery adds the remaining energy.</string>
                       </property>
@@ -2253,6 +2319,9 @@ background-color: rgb(170, 255, 255);</string>
                         <pointsize>13</pointsize>
                        </font>
                       </property>
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(255, 255, 255);</string>
+                      </property>
                       <property name="plainText">
                        <string>2, when the battery, the grid is available</string>
                       </property>
@@ -2268,12 +2337,13 @@ background-color: rgb(170, 255, 255);</string>
                       </property>
                       <property name="maximumSize">
                        <size>
-                        <width>190</width>
-                        <height>150</height>
+                        <width>560</width>
+                        <height>190</height>
                        </size>
                       </property>
                       <property name="styleSheet">
-                       <string notr="true">background-color: rgb(170, 255, 255);border-image: url(:/new_ui/UI/ZY_2A.png);</string>
+                       <string notr="true">background-color: rgb(170, 255, 255);
+border-image: url(:/new_ui/UI/Optimal_Mode_E.png);</string>
                       </property>
                       <property name="text">
                        <string/>
@@ -2299,6 +2369,9 @@ background-color: rgb(170, 255, 255);</string>
                         <pointsize>13</pointsize>
                        </font>
                       </property>
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(255, 255, 255);</string>
+                      </property>
                       <property name="plainText">
                        <string>A. When the load power is less than the power set value on the AC side, the AC side supplies the load, and the remaining available power on the AC side will charge the battery.</string>
                       </property>
@@ -2319,7 +2392,7 @@ background-color: rgb(170, 255, 255);</string>
                        </size>
                       </property>
                       <property name="styleSheet">
-                       <string notr="true">background-color: rgb(170, 255, 255);border-image: url(:/new_ui/UI/ZY_2B.png);</string>
+                       <string notr="true">background-color: rgb(170, 255, 255);border-image: url(:/new_ui/UI/Optimal_Mode_F.png);</string>
                       </property>
                       <property name="text">
                        <string/>
@@ -2344,6 +2417,9 @@ background-color: rgb(170, 255, 255);</string>
                        <font>
                         <pointsize>13</pointsize>
                        </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(255, 255, 255);</string>
                       </property>
                       <property name="plainText">
                        <string>B. When the load power is greater than the AC power, the available power on the AC side will supply power to the load and supplement the remaining energy with the battery.</string>
@@ -3133,8 +3209,9 @@ background-color: rgb(170, 255, 255);</string>
                  </size>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">border-image: url(:/new_ui/UI/电池区域划分.png);
-background-color: rgb(170, 255, 255);</string>
+                 <string notr="true">border-image: url(:/new_ui/UI/Battery_area3.png);
+background-color: rgb(170, 255, 255);
+</string>
                 </property>
                 <property name="text">
                  <string/>
@@ -3166,15 +3243,24 @@ background-color: rgb(170, 255, 255);</string>
                    <bool>true</bool>
                   </property>
                   <property name="plainText">
-                   <string>Battery area division:
-ECP area of action:
-    Saturated area + equalization area (SOC decays from high to low to charging SOC).
-FCP action area:
-    Discharge area + equalization area (SOC less than charging SOC, increasing from low to high to discharge SOC cut-off).
-EDP action area:
-    Saturated area + equalization area (SOC decays from high to low to charging SOC).
-FDP action area:
-    Discharge area + equalization area (SOC less than charging SOC, increasing from low to high to discharge SOC cut-off).</string>
+                   <string>Battery zoning:   
+    Areas where ECP works:
+    (Saturated area)+(Equilibrium area)
+    When SOC decays from high to low to &quot;Charge SOC&quot;.
+
+    Areas where FCP works:
+    (SOC empty area)+(Equilibrium area)
+    SOC is less than the &quot;Charge SOC&quot;, increasing from low to high,
+    to the &quot;Discharge SOC&quot; cutoff.
+
+    Areas where EDP works:
+    (Saturated area)+(Equilibrium area)
+    When SOC decays from high to low to &quot;Charge SOC&quot;.
+
+    Areas where FDP works:
+    (SOC empty area)+(Equilibrium area)
+    SOC is less than the &quot;Charge SOC&quot;, increasing from low to high,
+    to the &quot;Discharge SOC&quot; cutoff.</string>
                   </property>
                  </widget>
                 </item>
@@ -3214,26 +3300,1047 @@ FDP action area:
             </item>
            </layout>
           </widget>
+          <widget class="QWidget" name="Mixdepage">
+           <layout class="QGridLayout" name="gridLayout_2">
+            <item row="0" column="0">
+             <widget class="QWidget" name="widget" native="true">
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(170, 255, 255);</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_67" stretch="3,3,9,2">
+               <property name="spacing">
+                <number>6</number>
+               </property>
+               <property name="leftMargin">
+                <number>8</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>8</number>
+               </property>
+               <property name="bottomMargin">
+                <number>8</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="label_82">
+                 <property name="styleSheet">
+                  <string notr="true">border-image: url(:/new_ui/UI/MixedMode.png);</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_74" stretch="2,4,4,4,5,3">
+                 <property name="spacing">
+                  <number>6</number>
+                 </property>
+                 <item>
+                  <widget class="QPlainTextEdit" name="plainTextEdit_18">
+                   <property name="font">
+                    <font>
+                     <pointsize>14</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">border-width: 1px;
+border-style: solid;
+border-color: rgb(0, 0, 0);
+border-radius: 10px;
+padding: 3px;
+background-color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="plainText">
+                    <string>Enable the time period.</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPlainTextEdit" name="plainTextEdit_19">
+                   <property name="font">
+                    <font>
+                     <pointsize>14</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 255, 255);border-width: 1px;
+border-style: solid;
+border-color: rgb(0, 0, 0);
+border-radius: 10px;</string>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="plainText">
+                    <string>Selection of peak,flat and valley sections of the grid under peak shaving and valley filling functions.</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPlainTextEdit" name="plainTextEdit_20">
+                   <property name="font">
+                    <font>
+                     <pointsize>14</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 255, 255);border-width: 1px;
+border-style: solid;
+border-color: rgb(0, 0, 0);
+border-radius: 10px;</string>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="plainText">
+                    <string>The system starts to run automatically when it reaches this time.</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPlainTextEdit" name="plainTextEdit_21">
+                   <property name="font">
+                    <font>
+                     <pointsize>14</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 255, 255);border-width: 1px;
+border-style: solid;
+border-color: rgb(0, 0, 0);
+border-radius: 10px;</string>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="plainText">
+                    <string>The system stops running automatically when it reaches this time.</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPlainTextEdit" name="plainTextEdit_22">
+                   <property name="font">
+                    <font>
+                     <pointsize>14</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 255, 255);border-width: 1px;
+border-style: solid;
+border-color: rgb(0, 0, 0);
+border-radius: 10px;</string>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="plainText">
+                    <string>Functions performed in the current time period.</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPlainTextEdit" name="plainTextEdit_23">
+                   <property name="font">
+                    <font>
+                     <pointsize>14</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 255, 255);border-width: 1px;
+border-style: solid;
+border-color: rgb(0, 0, 0);
+border-radius: 10px;</string>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="plainText">
+                    <string>Peak and trough shaving operating power.</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <widget class="QTableWidget" name="Mixde_Widget">
+                 <property name="font">
+                  <font>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(255, 255, 255);</string>
+                 </property>
+                 <row>
+                  <property name="text">
+                   <string>1</string>
+                  </property>
+                 </row>
+                 <row>
+                  <property name="text">
+                   <string>2</string>
+                  </property>
+                 </row>
+                 <row>
+                  <property name="text">
+                   <string>3</string>
+                  </property>
+                 </row>
+                 <row>
+                  <property name="text">
+                   <string>4</string>
+                  </property>
+                 </row>
+                 <row>
+                  <property name="text">
+                   <string>5</string>
+                  </property>
+                 </row>
+                 <row>
+                  <property name="text">
+                   <string>6</string>
+                  </property>
+                 </row>
+                 <row>
+                  <property name="text">
+                   <string>7</string>
+                  </property>
+                 </row>
+                 <row>
+                  <property name="text">
+                   <string>8</string>
+                  </property>
+                 </row>
+                 <row>
+                  <property name="text">
+                   <string>9</string>
+                  </property>
+                 </row>
+                 <row>
+                  <property name="text">
+                   <string>10</string>
+                  </property>
+                 </row>
+                 <row>
+                  <property name="text">
+                   <string>11</string>
+                  </property>
+                 </row>
+                 <row>
+                  <property name="text">
+                   <string>12</string>
+                  </property>
+                 </row>
+                 <row>
+                  <property name="text">
+                   <string>13</string>
+                  </property>
+                 </row>
+                 <row>
+                  <property name="text">
+                   <string>14</string>
+                  </property>
+                 </row>
+                 <row>
+                  <property name="text">
+                   <string>15</string>
+                  </property>
+                 </row>
+                 <row>
+                  <property name="text">
+                   <string>16</string>
+                  </property>
+                 </row>
+                 <row>
+                  <property name="text">
+                   <string>17</string>
+                  </property>
+                 </row>
+                 <row>
+                  <property name="text">
+                   <string>18</string>
+                  </property>
+                 </row>
+                 <row>
+                  <property name="text">
+                   <string>19</string>
+                  </property>
+                 </row>
+                 <row>
+                  <property name="text">
+                   <string>20</string>
+                  </property>
+                 </row>
+                 <row>
+                  <property name="text">
+                   <string>21</string>
+                  </property>
+                 </row>
+                 <row>
+                  <property name="text">
+                   <string>22</string>
+                  </property>
+                 </row>
+                 <row>
+                  <property name="text">
+                   <string>23</string>
+                  </property>
+                 </row>
+                 <row>
+                  <property name="text">
+                   <string>24</string>
+                  </property>
+                 </row>
+                 <row>
+                  <property name="text">
+                   <string>25</string>
+                  </property>
+                 </row>
+                 <column>
+                  <property name="text">
+                   <string>Parameter name</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Parameter description</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Radius</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Default value</string>
+                  </property>
+                 </column>
+                 <item row="0" column="0">
+                  <property name="text">
+                   <string>Battery type</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="0" column="2">
+                  <property name="text">
+                   <string>Lithium</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="0" column="3">
+                  <property name="text">
+                   <string>Lithium</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="1" column="0">
+                  <property name="text">
+                   <string>BMS Comm.type</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="1" column="2">
+                  <property name="text">
+                   <string>CAN/485</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="1" column="3">
+                  <property name="text">
+                   <string>CAN</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="2" column="0">
+                  <property name="text">
+                   <string>EMS Comm.type</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="2" column="2">
+                  <property name="text">
+                   <string>485/TCP</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="2" column="3">
+                  <property name="text">
+                   <string>485</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="3" column="0">
+                  <property name="text">
+                   <string>Charge SOC</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="3" column="2">
+                  <property name="text">
+                   <string>1~100</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="3" column="3">
+                  <property name="text">
+                   <string>20</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="4" column="0">
+                  <property name="text">
+                   <string>Discharge SOC</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="4" column="2">
+                  <property name="text">
+                   <string>1~100</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="4" column="3">
+                  <property name="text">
+                   <string>50</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="5" column="0">
+                  <property name="text">
+                   <string>Energy priority</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="5" column="2">
+                  <property name="text">
+                   <string>Bat&gt;Grid、Grid&gt;Bat</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="5" column="3">
+                  <property name="text">
+                   <string>Bat&gt;Grid</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="6" column="0">
+                  <property name="text">
+                   <string>Grid connected mode of lnv</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="6" column="2">
+                  <property name="text">
+                   <string>Countercurret、Non Countercurret</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="6" column="3">
+                  <property name="text">
+                   <string>Non Countercurret</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="7" column="0">
+                  <property name="text">
+                   <string>Constant power(AC)</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="7" column="2">
+                  <property name="text">
+                   <string>-Rated power~Rated power</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="7" column="3">
+                  <property name="text">
+                   <string>0</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="8" column="0">
+                  <property name="text">
+                   <string>Charge Volt. upper Limit(V)</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="8" column="2">
+                  <property name="text">
+                   <string>400~850</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="8" column="3">
+                  <property name="text">
+                   <string>Battery charging cut-off voltage</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="9" column="0">
+                  <property name="text">
+                   <string>Charge Volt. upper Limit delta(V)</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="9" column="2">
+                  <property name="text">
+                   <string>-</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="9" column="3">
+                  <property name="text">
+                   <string>10mV</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="10" column="0">
+                  <property name="text">
+                   <string>Discharge Volt. lower Limit(V)</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="10" column="2">
+                  <property name="text">
+                   <string>400~850</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="10" column="3">
+                  <property name="text">
+                   <string>Battery discharge cut-off voltage</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="11" column="0">
+                  <property name="text">
+                   <string>Discharge Volt. lower Limit delta(V)</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="11" column="2">
+                  <property name="text">
+                   <string>-</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="11" column="3">
+                  <property name="text">
+                   <string>10mV</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="12" column="0">
+                  <property name="text">
+                   <string>Charge Current Limit(A)</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="12" column="2">
+                  <property name="text">
+                   <string>0 ~ 1000</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="12" column="3">
+                  <property name="text">
+                   <string>By battery limit</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="13" column="0">
+                  <property name="text">
+                   <string>Discharge Current Limit(A)</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="13" column="2">
+                  <property name="text">
+                   <string>0 ~ 1000</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="13" column="3">
+                  <property name="text">
+                   <string>By battery limit</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="14" column="0">
+                  <property name="text">
+                   <string>DOD_OnGrid(%)</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="14" column="2">
+                  <property name="text">
+                   <string>1 ~ 100</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="14" column="3">
+                  <property name="text">
+                   <string>100</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="15" column="0">
+                  <property name="text">
+                   <string>DOD_OffGrid(%)</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="15" column="2">
+                  <property name="text">
+                   <string>1 ~ 100</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="15" column="3">
+                  <property name="text">
+                   <string>90</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="16" column="0">
+                  <property name="text">
+                   <string>Generator turn on SOC</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="16" column="2">
+                  <property name="text">
+                   <string>1 ~ 100</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="16" column="3">
+                  <property name="text">
+                   <string>10</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="17" column="0">
+                  <property name="text">
+                   <string>Generator turn off SOC</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="17" column="2">
+                  <property name="text">
+                   <string>1 ~ 100</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="17" column="3">
+                  <property name="text">
+                   <string>95</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="18" column="0">
+                  <property name="text">
+                   <string>Maximum battery protection value(V)</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="18" column="2">
+                  <property name="text">
+                   <string>3550 ~ 3650</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="18" column="3">
+                  <property name="text">
+                   <string>3650</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="19" column="0">
+                  <property name="text">
+                   <string>DG_ECP</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="19" column="2">
+                  <property name="text">
+                   <string>0 ~ 100</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="19" column="3">
+                  <property name="text">
+                   <string>Set according to customer requirements</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="20" column="0">
+                  <property name="text">
+                   <string>DG_FCP</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="20" column="2">
+                  <property name="text">
+                   <string>0 ~ 100</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="20" column="3">
+                  <property name="text">
+                   <string>Set according to customer requirements</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="21" column="0">
+                  <property name="text">
+                   <string>Grid_ECP</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="21" column="2">
+                  <property name="text">
+                   <string>0 ~ 100</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="21" column="3">
+                  <property name="text">
+                   <string>Set according to customer requirements</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="22" column="0">
+                  <property name="text">
+                   <string>Grid_FCP</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="22" column="2">
+                  <property name="text">
+                   <string>0 ~ 100</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="22" column="3">
+                  <property name="text">
+                   <string>Set according to customer requirements</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="23" column="0">
+                  <property name="text">
+                   <string>Grid_EDP</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="23" column="2">
+                  <property name="text">
+                   <string>0 ~ 100</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="23" column="3">
+                  <property name="text">
+                   <string>Set according to customer requirements</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="24" column="0">
+                  <property name="text">
+                   <string>Grid_FDP</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="24" column="2">
+                  <property name="text">
+                   <string>0 ~ 100</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                 <item row="24" column="3">
+                  <property name="text">
+                   <string>Set according to customer requirements</string>
+                  </property>
+                  <property name="textAlignment">
+                   <set>AlignCenter</set>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPlainTextEdit" name="plainTextEdit_2">
+                 <property name="font">
+                  <font>
+                   <pointsize>15</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(255, 255, 255);border-width: 1px;
+border-style: solid;
+border-color: rgb(0, 0, 0);
+border-radius: 10px;
+padding: 3px;</string>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="plainText">
+                  <string>&quot;Mixed Mode&quot; allows the system to automatically run different functional logic at different times. At the same time, it can run the function of &quot;peak shaving and valley filling&quot; according to the local peak and valley tariffs.</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="Manualpage">
+           <layout class="QGridLayout" name="gridLayout_6">
+            <item row="0" column="0">
+             <layout class="QVBoxLayout" name="verticalLayout_8">
+              <item>
+               <spacer name="verticalSpacer_2">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_87" stretch="1,2">
+                <item>
+                 <widget class="QLabel" name="label_89">
+                  <property name="styleSheet">
+                   <string notr="true">border-image: url(:/new_ui/UI/Manual.png);</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPlainTextEdit" name="plainTextEdit_3">
+                  <property name="font">
+                   <font>
+                    <pointsize>16</pointsize>
+                   </font>
+                  </property>
+                  <property name="readOnly">
+                   <bool>true</bool>
+                  </property>
+                  <property name="plainText">
+                   <string>The &quot;Manual Mode&quot; has no operational logic and allows for the manual control of battery charging and discharging. This mode is applicable in the following scenarios:
+1、Battery charge and discharge testing.
+2、Energy Management System (EMS) scheduling of the MPS.
+</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <spacer name="verticalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
          </widget>
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="page_2"/>
      </widget>
     </item>
     <item>
      <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>10</number>
+      </property>
       <item>
        <widget class="QPushButton" name="Return">
-        <property name="minimumSize">
-         <size>
-          <width>150</width>
-          <height>170</height>
-         </size>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
         </property>
         <property name="font">
          <font>
-          <pointsize>13</pointsize>
+          <family>Courier New</family>
+          <pointsize>14</pointsize>
          </font>
         </property>
         <property name="styleSheet">
@@ -3264,11 +4371,11 @@ QPushButton::hover{
       </item>
       <item>
        <widget class="QPushButton" name="AreaDivision_btn">
-        <property name="minimumSize">
-         <size>
-          <width>150</width>
-          <height>170</height>
-         </size>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
         </property>
         <property name="maximumSize">
          <size>
@@ -3278,7 +4385,7 @@ QPushButton::hover{
         </property>
         <property name="font">
          <font>
-          <family>宋体</family>
+          <family>Courier New</family>
           <pointsize>14</pointsize>
          </font>
         </property>
@@ -3299,7 +4406,7 @@ QPushButton::hover{
         </property>
         <property name="text">
          <string>Battery
-AreaDivision</string>
+Area</string>
         </property>
         <property name="checkable">
          <bool>true</bool>
@@ -3311,15 +4418,15 @@ AreaDivision</string>
       </item>
       <item>
        <widget class="QPushButton" name="System_btn">
-        <property name="minimumSize">
-         <size>
-          <width>150</width>
-          <height>170</height>
-         </size>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
         </property>
         <property name="font">
          <font>
-          <family>宋体</family>
+          <family>Courier New</family>
           <pointsize>14</pointsize>
          </font>
         </property>
@@ -3339,8 +4446,7 @@ QPushButton::hover{
 </string>
         </property>
         <property name="text">
-         <string>System
-for self-use</string>
+         <string>Self-use</string>
         </property>
         <property name="checkable">
          <bool>true</bool>
@@ -3352,15 +4458,15 @@ for self-use</string>
       </item>
       <item>
        <widget class="QPushButton" name="Batter_btn">
-        <property name="minimumSize">
-         <size>
-          <width>150</width>
-          <height>170</height>
-         </size>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
         </property>
         <property name="font">
          <font>
-          <family>宋体</family>
+          <family>Courier New</family>
           <pointsize>14</pointsize>
          </font>
         </property>
@@ -3381,7 +4487,7 @@ QPushButton::hover{
         </property>
         <property name="text">
          <string>Batter
-priority</string>
+Priority</string>
         </property>
         <property name="checkable">
          <bool>true</bool>
@@ -3396,11 +4502,11 @@ priority</string>
       </item>
       <item>
        <widget class="QPushButton" name="Optimal_btn">
-        <property name="minimumSize">
-         <size>
-          <width>150</width>
-          <height>170</height>
-         </size>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
         </property>
         <property name="maximumSize">
          <size>
@@ -3410,7 +4516,7 @@ priority</string>
         </property>
         <property name="font">
          <font>
-          <family>宋体</family>
+          <family>Courier New</family>
           <pointsize>14</pointsize>
          </font>
         </property>
@@ -3430,7 +4536,90 @@ QPushButton::hover{
 </string>
         </property>
         <property name="text">
-         <string>Optimal</string>
+         <string>Optimal
+Mode</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="Mixde_btn">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Courier New</family>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton:checked {
+	border:2px solid rgb(27, 120, 205);
+	background-color: rgb(27, 120, 205);
+}
+QPushButton:!checked {
+	color: rgb(255, 255, 255);
+	background-color: rgb(85, 170, 255);
+	border:2px solid rgb(85, 170, 255);
+}
+QPushButton::hover{
+	color: rgb(0, 0, 0);
+ }
+</string>
+        </property>
+        <property name="text">
+         <string>Mixde
+Mode</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="Manual_btn">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Courier New</family>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton:checked {
+	border:2px solid rgb(27, 120, 205);
+	background-color: rgb(27, 120, 205);
+}
+QPushButton:!checked {
+	color: rgb(255, 255, 255);
+	background-color: rgb(85, 170, 255);
+	border:2px solid rgb(85, 170, 255);
+}
+QPushButton::hover{
+	color: rgb(0, 0, 0);
+ }
+</string>
+        </property>
+        <property name="text">
+         <string>Manual
+Mode</string>
         </property>
         <property name="checkable">
          <bool>true</bool>

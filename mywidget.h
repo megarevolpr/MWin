@@ -65,13 +65,6 @@
 #define SYSTEMINFORMATION   6
 #define USER_LOGIN          7
 
-//操作模式
-#define Mode_SELF_USE           0
-#define Mode_BATTERY_PRIORITY   1
-#define Mode_MANUAL             2
-#define Mode_OPTIMAL_MODE       3
-#define Mode_MIXED_MODE         4
-
 //操作模式介绍
 #define BATTERY_AREA_EXP            0
 #define Mode_SELF_USE_EXP           1
@@ -79,10 +72,18 @@
 #define Mode_OPTIMAL_MODE_EXP       3
 #define Mode_MIXED_MODE_EXP         4
 #define Mode_MANUAL_EXP             5
+
+//操作模式
+#define Mode_SELF_USE           0
+#define Mode_BATTERY_PRIORITY   1
+#define Mode_OPTIMAL_MODE       2
+#define Mode_MIXED_MODE         3
+#define Mode_MANUAL             4
+
 //高级设置
 #define ADVANCED_SETTING        5
 
-//系统基础设置
+//系统基础设置 页码
 #define SystemTotal_PAGE        4
 #define DCAC_PAGE_NUM           0
 #define DCDC_PAGE_NUM           1
@@ -90,7 +91,7 @@
 #define Lead_PAGE_NUM           3
 #define MixedMode_PAGE_NUM      4
 
-//系统高级设置
+//系统高级设置 页码
 #define AdvancedTotal_PAGE      6
 #define Advanced_PAGE1_NUM      5
 #define Advanced_PAGE2_NUM      6
@@ -239,7 +240,6 @@ public:
     QPushButton *Boost_or_Buck_explain; //升/降压说明
     QPushButton *Bat_Charging_or_discharging_Model_explain; //电池充放电模式说明
     QPushButton *DCDC_Capacity_explain; //DCDC容量说明
-    QPushButton *Battery_position_explain; //电池位置说明
     QPushButton *Voltage_level_explain; //电压等级说明
     QPushButton *Current_value_explain; //电流值说明
     QPushButton *OuterLoopControl_explain; //电流值说明
@@ -654,6 +654,9 @@ private:
     void WorkingModeInit();     //新界面工作模式初始化
     void Account_Change( uint8_t Account_Type );//切换登录信息
     void ReloadLabel();         //切换语言重新加载Lable
+    void DisabldAllBasisButton();//失能所有基础控件
+    void DisableTableButton(QTableWidget *myTable);//失能表格的控件
+    void EnableTableButton(QTableWidget *myTable,int rowCount,int columnCount);//使能表格控件
 
 
 
@@ -717,7 +720,6 @@ private slots:
     void on_Batt_btn_released();//跳转到电池信息
     void on_Alarm_btn_clicker();//跳转实时告警页面
     void ChangeLanguage_btn_clicked();//切换语言
-    void Operational_mode_clicked();//操作模式新界面
     void UpgradeInterface_clicked();//升级界面
 
     void on_RTD_DC_clicked();
@@ -803,6 +805,8 @@ private slots:
 
     void on_pushButton_16_clicked();
 
+    void on_Details_bt_clicked();
+
 private:
     Ui::MyWidget *ui;
     QStringList Mode_Str;//模式文本显示列表
@@ -819,7 +823,7 @@ private:
     int System_Current_Page; //系统当前页
     int Advanced_Current_Page;//高级设置当前页
     int ModeIntr_Current_Page;//模式介绍页当前页码
-    unsigned char Account_Type = None;//当前登录角色 -- 上电默认未登录
+    unsigned char Account_Type;//当前登录角色 -- 上电默认未登录
 
     QTimer *timer;
     QTimer *Update_RTData_timer;

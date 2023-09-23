@@ -56,7 +56,7 @@
    <item row="0" column="0">
     <widget class="QStackedWidget" name="UI_stackedWidget">
      <property name="currentIndex">
-      <number>4</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="BasicSet_page">
       <property name="focusPolicy">
@@ -4327,7 +4327,7 @@ Language</string>
                 <string notr="true"/>
                </property>
                <property name="currentIndex">
-                <number>1</number>
+                <number>2</number>
                </property>
                <widget class="QWidget" name="RT_Data_page">
                 <attribute name="title">
@@ -5938,7 +5938,7 @@ and view the details of the alarm information you have encountered.</string>
                        </property>
                        <property name="font">
                         <font>
-                         <pointsize>16</pointsize>
+                         <pointsize>20</pointsize>
                         </font>
                        </property>
                        <property name="styleSheet">
@@ -7532,7 +7532,7 @@ enable</string>
                 </font>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>1</number>
                </property>
                <widget class="QWidget" name="DataReport_page">
                 <attribute name="title">
@@ -11465,7 +11465,7 @@ border-radius:10px;</string>
                          <string notr="true">background-color: rgb(255, 255, 255);</string>
                         </property>
                         <property name="currentIndex">
-                         <number>4</number>
+                         <number>7</number>
                         </property>
                         <widget class="QWidget" name="DCAC_page">
                          <property name="styleSheet">
@@ -11535,7 +11535,7 @@ border-radius:10px;</string>
                             <column/>
                             <item row="0" column="0">
                              <property name="text">
-                              <string>Grid connected mode of PCS</string>
+                              <string>Grid connected mode of converter</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -11938,7 +11938,7 @@ border-radius:10px;</string>
                             </item>
                             <item row="2" column="0">
                              <property name="text">
-                              <string>Battery position</string>
+                              <string/>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -11946,7 +11946,7 @@ border-radius:10px;</string>
                             </item>
                             <item row="2" column="2">
                              <property name="text">
-                              <string>Outer Ring Contralized Control</string>
+                              <string>Outer Ring Centralized Control</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -12971,7 +12971,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="0" column="2">
                              <property name="text">
-                              <string>Host Address</string>
+                              <string>Serial Communication Address</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13912,7 +13912,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="4" column="4">
                              <property name="text">
-                              <string>Grid recovery scheduling</string>
+                              <string>Grid recovery time(s)</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13949,7 +13949,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="5" column="4">
                              <property name="text">
-                              <string>Grid recovery time(s)</string>
+                              <string>Insulation detection enable DCAC</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -13986,7 +13986,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="6" column="4">
                              <property name="text">
-                              <string>Insulation detection enable DCAC</string>
+                              <string>Insulation detection enable DCDC</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -15102,7 +15102,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                       <item>
                        <widget class="QStackedWidget" name="Info_stackedWidget">
                         <property name="currentIndex">
-                         <number>0</number>
+                         <number>1</number>
                         </property>
                         <widget class="QWidget" name="MPS_Info_page">
                          <layout class="QGridLayout" name="gridLayout_84">
@@ -15689,7 +15689,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                        <number>0</number>
                       </property>
                       <item>
-                       <layout class="QHBoxLayout" name="horizontalLayout_69" stretch="6,1,3,1,1,2,2,1">
+                       <layout class="QHBoxLayout" name="horizontalLayout_69" stretch="2,4,1,3,1,1,2,2,1">
                         <property name="spacing">
                          <number>0</number>
                         </property>
@@ -15699,6 +15699,47 @@ Set rule:B1 - A1 ≥ 10V</string>
                         <property name="bottomMargin">
                          <number>0</number>
                         </property>
+                        <item>
+                         <widget class="QPushButton" name="Details_bt">
+                          <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                           </sizepolicy>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>40</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>16</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QPushButton:checked {
+	border:2px solid rgb(27, 120, 205);
+	background-color: rgb(27, 120, 205);
+    border-radius:20px;
+}
+QPushButton:!checked {
+	color: rgb(255, 255, 255);
+	background-color: rgb(85, 170, 255);
+	border:2px solid rgb(85, 170, 255);
+    border-radius:20px;
+}
+QPushButton::hover{
+	color: rgb(0, 0, 0);
+ }
+</string>
+                          </property>
+                          <property name="text">
+                           <string>Details</string>
+                          </property>
+                         </widget>
+                        </item>
                         <item>
                          <spacer name="horizontalSpacer_53">
                           <property name="orientation">
@@ -15908,7 +15949,7 @@ QPushButton::hover{
                          <string notr="true"/>
                         </property>
                         <property name="currentIndex">
-                         <number>1</number>
+                         <number>6</number>
                         </property>
                         <widget class="QWidget" name="BatteryArea_page">
                          <property name="sizePolicy">
@@ -16013,9 +16054,7 @@ QPushButton::hover{
                             <item>
                              <widget class="QLabel" name="label_42">
                               <property name="styleSheet">
-                               <string notr="true">
-border-image: url(:/new_ui/UI/Battery_area2.png);
-</string>
+                               <string notr="true">border-image: url(:/new_ui/UI/Battery_area3.png);</string>
                               </property>
                               <property name="text">
                                <string/>
@@ -16971,6 +17010,9 @@ padding: 3px;</string>
                                <font>
                                 <pointsize>16</pointsize>
                                </font>
+                              </property>
+                              <property name="readOnly">
+                               <bool>true</bool>
                               </property>
                               <property name="plainText">
                                <string>The &quot;Manual Mode&quot; has no operational logic and allows for the manual control of battery charging and discharging. This mode is applicable in the following scenarios:
@@ -18721,7 +18763,7 @@ max-height: 126px;border-radius: 63px;border:1px solid black;</string>
                     </item>
                     <item>
                      <property name="text">
-                      <string>Root</string>
+                      <string>Admin</string>
                      </property>
                     </item>
                    </widget>
@@ -18756,11 +18798,17 @@ max-height: 126px;border-radius: 63px;border:1px solid black;</string>
                       <verstretch>0</verstretch>
                      </sizepolicy>
                     </property>
+                    <property name="font">
+                     <font>
+                      <pointsize>24</pointsize>
+                     </font>
+                    </property>
                     <property name="styleSheet">
-                     <string notr="true">background-color: rgb(176, 196, 222);</string>
+                     <string notr="true">background-color: rgb(176, 196, 222);
+text-align: left;</string>
                     </property>
                     <property name="text">
-                     <string/>
+                     <string>······</string>
                     </property>
                    </widget>
                   </item>

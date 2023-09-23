@@ -1,11 +1,12 @@
 #include "opermode.h"
 #include "ui_opermode.h"
 
-OperMode::OperMode(QWidget *parent) :
+OperMode::OperMode(QWidget *parent,int MyLanguage) :
     QMainWindow(parent),
     ui(new Ui::OperMode)
 {
     ui->setupUi(this);
+    Language = MyLanguage;
     setWindowState(Qt::WindowMaximized); // 最大化
     InitializeMemorySpace();//初始化内存空间
 
@@ -208,15 +209,24 @@ void OperMode::Init_Tab_button()
             "background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #273c75, stop:1 #487eb0);"
         "}"
          );
-
+    if(Language)
+    {
+        ui->BatteryArea->setStyleSheet("border-image: url(:/new_ui/UI/Battery_area3.png);background-color: rgb(170, 255, 255);");
+    }
+    else
+    {
+        ui->BatteryArea->setStyleSheet("border-image: url(:/new_ui/UI/Battery_area2.png);background-color: rgb(170, 255, 255);");
+    }
 
     Init_SysTab_button(ui->Paramrter_Widget);//填充内容
     Init_BatTab_button(ui->BatPri_Widget);
     Init_OptTab_button(ui->OptMod_Widget);
+    Init_MixdeTab_button(ui->Mixde_Widget);
 
     InitializeChart(ui->Paramrter_Widget);
     InitializeChart(ui->BatPri_Widget);
     InitializeChart(ui->OptMod_Widget);
+    InitializeChart(ui->Mixde_Widget);
 }
 //初始化表格 自发自用
 void OperMode::Init_SysTab_button(QTableWidget *myWidget)
@@ -312,6 +322,38 @@ void OperMode::Init_OptTab_button(QTableWidget *myWidget)
 
 
 }
+//初始化表格 混合模式
+void OperMode::Init_MixdeTab_button(QTableWidget *myWidget)
+{
+    myWidget->setCellWidget(0, 1, (QWidget *)OptMod_Bat_Type_btn);
+    myWidget->setCellWidget(1, 1, (QWidget *)OptMod_Bat_Comm_btn);
+    myWidget->setCellWidget(2, 1, (QWidget *)OptMod_EMS_Comm_btn);
+    myWidget->setCellWidget(3, 1, (QWidget *)OptMod_Charge_SOC_btn);
+    myWidget->setCellWidget(4, 1, (QWidget *)OptMod_Discharge_SOC_btn);
+    myWidget->setCellWidget(5, 1, (QWidget *)OptMod_Energy_priority_btn);
+    myWidget->setCellWidget(6, 1, (QWidget *)OptMod_Anti_reflux_btn);
+    myWidget->setCellWidget(7, 1, (QWidget *)OptMod_ConstantPower_btn);
+    myWidget->setCellWidget(8, 1, (QWidget *)OptMod_Charge_upper_Limit);
+    myWidget->setCellWidget(9, 1, (QWidget *)OptMod_Charge_Limit_delta_btn);
+    myWidget->setCellWidget(10, 1, (QWidget *)OptMod_Disharge_Lower_Limit);
+    myWidget->setCellWidget(11, 1, (QWidget *)OptMod_Disharge_Limit_delta_btn);
+    myWidget->setCellWidget(12, 1, (QWidget *)OptMod_Charge_Current_btn);
+    myWidget->setCellWidget(13, 1, (QWidget *)OptMod_Discharge_Current_Limit_btn);
+    myWidget->setCellWidget(14, 1, (QWidget *)OptMod_DOD_OnGrid_btn);
+    myWidget->setCellWidget(15, 1, (QWidget *)OptMod_DOD_OffGrid_btn);
+    myWidget->setCellWidget(16, 1, (QWidget *)OptMod_Generator_turn_on_SOC_btn);
+    myWidget->setCellWidget(17, 1, (QWidget *)OptMod_Generator_turn_off_SOC_btn);
+    myWidget->setCellWidget(18, 1, (QWidget *)OptMod_Max_Bat_protection_btn);
+    myWidget->setCellWidget(19, 1, (QWidget *)OptMod_DG_ECP);
+    myWidget->setCellWidget(20, 1, (QWidget *)OptMod_DG_FCP);
+    myWidget->setCellWidget(21, 1, (QWidget *)OptMod_Grid_ECP);
+    myWidget->setCellWidget(22, 1, (QWidget *)OptMod_Grid_FCP);
+    myWidget->setCellWidget(23, 1, (QWidget *)OptMod_Grid_EDP);
+    myWidget->setCellWidget(24, 1, (QWidget *)OptMod_Grid_FDP);
+}
+
+
+
 //返回
 void OperMode::on_Return_clicked()
 {
@@ -359,6 +401,18 @@ void OperMode::on_AreaDivision_btn_clicked()
     ui->ExplanationTextWidget->setCurrentWidget(ui->AreaDivisionpage);
 }
 
+void OperMode::on_Mixde_btn_clicked()
+{
+    ui->ExplainWidget->setCurrentWidget(ui->Explainpage);
+    ui->ExplanationTextWidget->setCurrentWidget(ui->Mixdepage);
+}
+
+void OperMode::on_Manual_btn_clicked()
+{
+    ui->ExplainWidget->setCurrentWidget(ui->Explainpage);
+    ui->ExplanationTextWidget->setCurrentWidget(ui->Manualpage);
+}
+
 //调整控件大小
 void OperMode::resizeEvent(QResizeEvent *event)
 {
@@ -383,6 +437,11 @@ void OperMode::resizeEvent(QResizeEvent *event)
     ui->Paramrter_Widget->setColumnWidth(1,(x-710)*0.21);
     ui->Paramrter_Widget->setColumnWidth(2,(x-710)*0.22);
     ui->Paramrter_Widget->setColumnWidth(3,(x-710)*0.19);
+
+    ui->Mixde_Widget->setColumnWidth(0,(x)*0.25);//560\650\150
+    ui->Mixde_Widget->setColumnWidth(1,(x)*0.21);
+    ui->Mixde_Widget->setColumnWidth(2,(x)*0.22);
+    ui->Mixde_Widget->setColumnWidth(3,(x)*0.19);
 
 }
 
@@ -529,6 +588,10 @@ void OperMode::setAppSize(int remainH)
     this->setFixedSize(appW, appH);  		//注意：此处设置的高度是不包含标题栏
     setGeometry((deskRect.width() - appW) / 2, remainH / 2 + titleBarH, appW, appH);	//设置程序窗体在桌面的显示位置
 }
+
+
+
+
 
 
 

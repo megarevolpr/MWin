@@ -16,7 +16,7 @@ class OperMode : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit OperMode(QWidget *parent = nullptr);
+    explicit OperMode(QWidget *parent = nullptr,int MyLanguage = 0);
 
     QPushButton *Bat_Type_btn;
     QPushButton *Bat_Comm_btn;
@@ -190,9 +190,12 @@ protected:
     void Init_SysTab_button(QTableWidget *myWidget);//初始化表格点击控件
     void Init_BatTab_button(QTableWidget *myWidget);//初始化表格点击控件
     void Init_OptTab_button(QTableWidget *myWidget);//初始化表格点击控件
+    void Init_MixdeTab_button(QTableWidget *myWidget);//初始化表格点击控件
     virtual void resizeEvent(QResizeEvent *event)override;//调整控件大小
     void SetExplain(QTableWidget *myWidget);
     void setAppSize(int remainH);//窗口大小
+
+    int Language;
 
 private slots:
     void on_Return_clicked();
@@ -203,13 +206,11 @@ private slots:
 
     void on_Optimal_btn_clicked();
 
-
-
-
-
-
-
     void on_AreaDivision_btn_clicked();
+
+    void on_Mixde_btn_clicked();
+
+    void on_Manual_btn_clicked();
 
 private:
     Ui::OperMode *ui;
