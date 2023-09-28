@@ -46,9 +46,7 @@ RESOURCES += image.qrc \
             language.qrc \
     faultdescription.qrc
 
-DISTFILES += \
-    Language/CN.ts \
-    Language/EN.ts
+DISTFILES +=
 
 
 

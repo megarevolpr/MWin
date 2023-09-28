@@ -56,5 +56,6 @@
         <file>UI/user.png</file>
         <file>UI/Battery_area3.png</file>
         <file>UI/Battery_area2.png</file>
+        <file>UI/i图标.png</file>
     </qresource>
 </RCC>

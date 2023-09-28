@@ -162,8 +162,8 @@ automatically and reset time</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="259"/>
-        <location filename="../mywidget.ui" line="11562"/>
-        <location filename="../mywidget.cpp" line="3013"/>
+        <location filename="../mywidget.ui" line="11790"/>
+        <location filename="../mywidget.cpp" line="3671"/>
         <source>Battery type</source>
         <translation>电池类型</translation>
     </message>
@@ -204,18 +204,18 @@ automatically and reset time</source>
         <location filename="../mywidget.ui" line="1379"/>
         <location filename="../mywidget.ui" line="1411"/>
         <location filename="../mywidget.ui" line="1427"/>
-        <location filename="../mywidget.ui" line="8406"/>
-        <location filename="../mywidget.ui" line="8422"/>
-        <location filename="../mywidget.ui" line="8454"/>
-        <location filename="../mywidget.ui" line="8470"/>
-        <location filename="../mywidget.ui" line="8486"/>
-        <location filename="../mywidget.ui" line="8502"/>
-        <location filename="../mywidget.ui" line="8534"/>
-        <location filename="../mywidget.ui" line="9143"/>
-        <location filename="../mywidget.ui" line="9323"/>
-        <location filename="../mywidget.ui" line="9387"/>
-        <location filename="../mywidget.ui" line="9451"/>
-        <location filename="../mywidget.ui" line="9515"/>
+        <location filename="../mywidget.ui" line="8509"/>
+        <location filename="../mywidget.ui" line="8525"/>
+        <location filename="../mywidget.ui" line="8557"/>
+        <location filename="../mywidget.ui" line="8573"/>
+        <location filename="../mywidget.ui" line="8589"/>
+        <location filename="../mywidget.ui" line="8605"/>
+        <location filename="../mywidget.ui" line="8637"/>
+        <location filename="../mywidget.ui" line="9246"/>
+        <location filename="../mywidget.ui" line="9426"/>
+        <location filename="../mywidget.ui" line="9490"/>
+        <location filename="../mywidget.ui" line="9554"/>
+        <location filename="../mywidget.ui" line="9618"/>
         <source>-</source>
         <translation>-</translation>
     </message>
@@ -225,13 +225,13 @@ automatically and reset time</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="291"/>
-        <location filename="../mywidget.cpp" line="3487"/>
+        <location filename="../mywidget.cpp" line="4147"/>
         <source>ProtocolVersion</source>
         <translation>协议版本</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="307"/>
-        <location filename="../mywidget.ui" line="11602"/>
+        <location filename="../mywidget.ui" line="11830"/>
         <source>BMS Comm. type</source>
         <translation>电池通讯方式</translation>
     </message>
@@ -254,14 +254,14 @@ automatically and reset time</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="355"/>
-        <location filename="../mywidget.ui" line="12966"/>
-        <location filename="../mywidget.cpp" line="3329"/>
+        <location filename="../mywidget.ui" line="13194"/>
+        <location filename="../mywidget.cpp" line="3982"/>
         <source>Power control type</source>
         <translation>功率控制类型</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="323"/>
-        <location filename="../mywidget.cpp" line="3392"/>
+        <location filename="../mywidget.cpp" line="4045"/>
         <source>serial port 2</source>
         <translation>串口2</translation>
     </message>
@@ -271,26 +271,26 @@ automatically and reset time</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="408"/>
-        <location filename="../mywidget.ui" line="11682"/>
+        <location filename="../mywidget.ui" line="11910"/>
         <source>EMS Comm. type</source>
         <translation>EMS通讯方式</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="371"/>
-        <location filename="../mywidget.cpp" line="3397"/>
+        <location filename="../mywidget.cpp" line="4050"/>
         <source>serial port 3</source>
         <translation>串口3</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="440"/>
-        <location filename="../mywidget.ui" line="13101"/>
-        <location filename="../mywidget.cpp" line="3454"/>
+        <location filename="../mywidget.ui" line="13329"/>
+        <location filename="../mywidget.cpp" line="4114"/>
         <source>Language</source>
         <translation>语言</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="461"/>
-        <location filename="../mywidget.cpp" line="3369"/>
+        <location filename="../mywidget.cpp" line="4022"/>
         <source>Output power limit</source>
         <translation>输出功率上限</translation>
     </message>
@@ -304,48 +304,47 @@ automatically and reset time</source>
         <location filename="../mywidget.ui" line="809"/>
         <location filename="../mywidget.ui" line="825"/>
         <location filename="../mywidget.ui" line="965"/>
-        <location filename="../mywidget.ui" line="7034"/>
-        <location filename="../mywidget.ui" line="7052"/>
-        <location filename="../mywidget.ui" line="7070"/>
-        <location filename="../mywidget.ui" line="7088"/>
-        <location filename="../mywidget.ui" line="8438"/>
+        <location filename="../mywidget.ui" line="7137"/>
+        <location filename="../mywidget.ui" line="7155"/>
+        <location filename="../mywidget.ui" line="7173"/>
+        <location filename="../mywidget.ui" line="7191"/>
+        <location filename="../mywidget.ui" line="8541"/>
         <source>kW</source>
         <translation>kW</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="424"/>
-        <location filename="../mywidget.cpp" line="3402"/>
+        <location filename="../mywidget.cpp" line="4055"/>
         <source>serial port 4</source>
         <translation>串口4</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="493"/>
-        <location filename="../mywidget.ui" line="13212"/>
+        <location filename="../mywidget.ui" line="13440"/>
         <source>System upgrade</source>
         <translation>系统升级</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="477"/>
-        <location filename="../mywidget.cpp" line="3407"/>
+        <location filename="../mywidget.cpp" line="4060"/>
         <source>serial port 5</source>
         <translation>串口5</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="546"/>
-        <location filename="../mywidget.ui" line="13138"/>
-        <location filename="../mywidget.cpp" line="3459"/>
+        <location filename="../mywidget.ui" line="13366"/>
+        <location filename="../mywidget.cpp" line="4119"/>
         <source>Sounds</source>
         <translation>声音</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="567"/>
-        <location filename="../mywidget.cpp" line="2968"/>
         <source>Charge SOC</source>
         <translation>充电SOC</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="583"/>
-        <location filename="../mywidget.cpp" line="3417"/>
+        <location filename="../mywidget.cpp" line="4070"/>
         <source>Can port 1</source>
         <translation>CAN 1</translation>
     </message>
@@ -366,13 +365,13 @@ automatically and reset time</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="636"/>
-        <location filename="../mywidget.cpp" line="3421"/>
+        <location filename="../mywidget.cpp" line="4074"/>
         <source>Can port 2</source>
         <translation>CAN 2</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="673"/>
-        <location filename="../mywidget.cpp" line="2963"/>
+        <location filename="../mywidget.cpp" line="3623"/>
         <source>DG capacity</source>
         <translation>柴发容量</translation>
     </message>
@@ -383,15 +382,15 @@ automatically and reset time</source>
     <message>
         <location filename="../mywidget.ui" line="1050"/>
         <location filename="../mywidget.ui" line="1103"/>
-        <location filename="../mywidget.ui" line="6506"/>
-        <location filename="../mywidget.ui" line="6524"/>
+        <location filename="../mywidget.ui" line="6609"/>
+        <location filename="../mywidget.ui" line="6627"/>
         <source>%</source>
         <translation>%</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="721"/>
-        <location filename="../mywidget.ui" line="13270"/>
-        <location filename="../mywidget.cpp" line="3426"/>
+        <location filename="../mywidget.ui" line="13498"/>
+        <location filename="../mywidget.cpp" line="4079"/>
         <source>Energy priority</source>
         <translation>能量优先级</translation>
     </message>
@@ -402,15 +401,15 @@ automatically and reset time</source>
     <message>
         <location filename="../mywidget.ui" line="1066"/>
         <location filename="../mywidget.ui" line="1119"/>
-        <location filename="../mywidget.ui" line="6470"/>
-        <location filename="../mywidget.ui" line="8566"/>
-        <location filename="../mywidget.ui" line="9127"/>
-        <location filename="../mywidget.ui" line="9159"/>
-        <location filename="../mywidget.ui" line="9175"/>
-        <location filename="../mywidget.ui" line="9241"/>
-        <location filename="../mywidget.ui" line="9257"/>
-        <location filename="../mywidget.ui" line="9467"/>
-        <location filename="../mywidget.ui" line="9531"/>
+        <location filename="../mywidget.ui" line="6573"/>
+        <location filename="../mywidget.ui" line="8669"/>
+        <location filename="../mywidget.ui" line="9230"/>
+        <location filename="../mywidget.ui" line="9262"/>
+        <location filename="../mywidget.ui" line="9278"/>
+        <location filename="../mywidget.ui" line="9344"/>
+        <location filename="../mywidget.ui" line="9360"/>
+        <location filename="../mywidget.ui" line="9570"/>
+        <location filename="../mywidget.ui" line="9634"/>
         <source>V</source>
         <translation>V</translation>
     </message>
@@ -434,14 +433,14 @@ automatically and reset time</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="909"/>
-        <location filename="../mywidget.ui" line="13751"/>
-        <location filename="../mywidget.cpp" line="3579"/>
+        <location filename="../mywidget.ui" line="13979"/>
+        <location filename="../mywidget.cpp" line="4239"/>
         <source>Machine type</source>
         <translation>机器型号</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="925"/>
-        <location filename="../mywidget.cpp" line="3626"/>
+        <location filename="../mywidget.cpp" line="4286"/>
         <source>Module Number</source>
         <translation>模块数量</translation>
     </message>
@@ -458,15 +457,15 @@ automatically and reset time</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="957"/>
-        <location filename="../mywidget.ui" line="13788"/>
-        <location filename="../mywidget.cpp" line="3584"/>
+        <location filename="../mywidget.ui" line="14016"/>
+        <location filename="../mywidget.cpp" line="4244"/>
         <source>Machine capacity</source>
         <translation>机器容量</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="973"/>
-        <location filename="../mywidget.ui" line="13397"/>
-        <location filename="../mywidget.cpp" line="3492"/>
+        <location filename="../mywidget.ui" line="13625"/>
+        <location filename="../mywidget.cpp" line="4152"/>
         <source>Restore factory</source>
         <translation>恢复出厂</translation>
     </message>
@@ -476,26 +475,26 @@ automatically and reset time</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1005"/>
-        <location filename="../mywidget.ui" line="13899"/>
+        <location filename="../mywidget.ui" line="14127"/>
         <source>Output Fre. grade</source>
         <translation>输出频率等级</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1127"/>
-        <location filename="../mywidget.ui" line="13175"/>
-        <location filename="../mywidget.cpp" line="3464"/>
+        <location filename="../mywidget.ui" line="13403"/>
+        <location filename="../mywidget.cpp" line="4124"/>
         <source>Clear Data</source>
         <translation>清除数据</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1042"/>
-        <location filename="../mywidget.cpp" line="3539"/>
+        <location filename="../mywidget.cpp" line="4199"/>
         <source>Vol protection upper limit</source>
         <translation>电压保护范围上限</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1058"/>
-        <location filename="../mywidget.ui" line="13862"/>
+        <location filename="../mywidget.ui" line="14090"/>
         <source>Output vol. level</source>
         <translation>输出电压等级</translation>
     </message>
@@ -505,7 +504,7 @@ automatically and reset time</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1095"/>
-        <location filename="../mywidget.cpp" line="3544"/>
+        <location filename="../mywidget.cpp" line="4204"/>
         <source>Vol protection lower limit</source>
         <translation>电压保护范围下限</translation>
     </message>
@@ -515,56 +514,56 @@ automatically and reset time</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1233"/>
-        <location filename="../mywidget.cpp" line="3638"/>
+        <location filename="../mywidget.cpp" line="4298"/>
         <source>Module max</source>
         <translation>最大模块数</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1148"/>
-        <location filename="../mywidget.ui" line="13928"/>
-        <location filename="../mywidget.cpp" line="3549"/>
+        <location filename="../mywidget.ui" line="14156"/>
+        <location filename="../mywidget.cpp" line="4209"/>
         <source>HVRT enable</source>
         <translation>高压穿越使能</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1164"/>
-        <location filename="../mywidget.cpp" line="3340"/>
+        <location filename="../mywidget.cpp" line="3993"/>
         <source>Output reactive power mode</source>
         <translation>输出无功方式</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1286"/>
-        <location filename="../mywidget.cpp" line="3643"/>
+        <location filename="../mywidget.cpp" line="4303"/>
         <source>Module min</source>
         <translation>最小模块数</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1201"/>
-        <location filename="../mywidget.ui" line="13965"/>
+        <location filename="../mywidget.ui" line="14193"/>
         <source>LVRT enable</source>
         <translation>低压穿越使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="13915"/>
         <source>Grid recovery scheduling</source>
-        <translation>电网恢复调度开机</translation>
+        <translation type="vanished">电网恢复调度开机</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1339"/>
-        <location filename="../mywidget.cpp" line="3657"/>
+        <location filename="../mywidget.ui" line="14217"/>
+        <location filename="../mywidget.cpp" line="4317"/>
         <source>Insulation detection enable DCDC</source>
         <translation>DCDC绝缘监测使能</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1254"/>
-        <location filename="../mywidget.ui" line="14002"/>
-        <location filename="../mywidget.cpp" line="3558"/>
+        <location filename="../mywidget.ui" line="14230"/>
+        <location filename="../mywidget.cpp" line="4218"/>
         <source>AFD enable</source>
         <translation>孤岛使能</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1217"/>
-        <location filename="../mywidget.cpp" line="3648"/>
+        <location filename="../mywidget.cpp" line="4308"/>
         <source>Grid recovery time</source>
         <translation>电网恢复并网时间</translation>
     </message>
@@ -586,28 +585,28 @@ automatically and reset time</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1355"/>
-        <location filename="../mywidget.ui" line="14039"/>
-        <location filename="../mywidget.cpp" line="3569"/>
+        <location filename="../mywidget.ui" line="14267"/>
+        <location filename="../mywidget.cpp" line="4229"/>
         <source>PrimaryFreq enable</source>
         <translation>一次调频使能</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1323"/>
-        <location filename="../mywidget.ui" line="13973"/>
+        <location filename="../mywidget.ui" line="14201"/>
         <source>PsheddingFreq</source>
         <translation>过频降载</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1403"/>
-        <location filename="../mywidget.ui" line="14010"/>
-        <location filename="../mywidget.cpp" line="3615"/>
+        <location filename="../mywidget.ui" line="14238"/>
+        <location filename="../mywidget.cpp" line="4275"/>
         <source>Inertia enable</source>
         <translation>转动惯量使能</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1371"/>
-        <location filename="../mywidget.ui" line="14047"/>
-        <location filename="../mywidget.cpp" line="3620"/>
+        <location filename="../mywidget.ui" line="14275"/>
+        <location filename="../mywidget.cpp" line="4280"/>
         <source>QP curve</source>
         <translation>QP曲线</translation>
     </message>
@@ -667,19 +666,19 @@ automatically and reset time</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1518"/>
-        <location filename="../mywidget.ui" line="14150"/>
+        <location filename="../mywidget.ui" line="14378"/>
         <source>Enable/Disable</source>
         <translation>使能/禁止</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1523"/>
-        <location filename="../mywidget.ui" line="14155"/>
+        <location filename="../mywidget.ui" line="14383"/>
         <source>NC/NO</source>
         <translation>NC/NO</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1528"/>
-        <location filename="../mywidget.ui" line="14160"/>
+        <location filename="../mywidget.ui" line="14388"/>
         <source>Action</source>
         <translation>动作</translation>
     </message>
@@ -689,144 +688,138 @@ automatically and reset time</source>
         <translation>功能描述</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="5960"/>
+        <location filename="../mywidget.ui" line="6063"/>
         <source>Alarm Information</source>
         <translation>告警信息</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10708"/>
+        <location filename="../mywidget.ui" line="10811"/>
         <source>Model Introduction</source>
         <translation>模式介绍</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10803"/>
-        <location filename="../mywidget.ui" line="17085"/>
+        <location filename="../mywidget.ui" line="10908"/>
+        <location filename="../mywidget.ui" line="17599"/>
         <source>Self-use</source>
         <translation>自发自用</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10866"/>
+        <location filename="../mywidget.ui" line="10973"/>
         <source>Battery
 Priority</source>
         <translation>电池优先</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10930"/>
         <source>Optimal
 model</source>
-        <translation>最优模式</translation>
+        <translation type="vanished">最优模式</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="11001"/>
+        <location filename="../mywidget.ui" line="11112"/>
         <source>Mixed
 mode</source>
         <translation>混合模式</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="11130"/>
+        <location filename="../mywidget.ui" line="11246"/>
         <source>Advanced
 Settings</source>
         <translation>高级设置</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="11245"/>
-        <location filename="../mywidget.cpp" line="1321"/>
+        <location filename="../mywidget.ui" line="11441"/>
+        <location filename="../mywidget.cpp" line="1830"/>
         <source>DC/AC Parameters</source>
         <translation>DC/AC参数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="11318"/>
-        <location filename="../mywidget.cpp" line="1320"/>
+        <location filename="../mywidget.ui" line="11514"/>
+        <location filename="../mywidget.cpp" line="1829"/>
         <source>Self-issuance and self-use</source>
         <translation>自发自用</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="11371"/>
+        <location filename="../mywidget.ui" line="11567"/>
         <source>1/4</source>
         <translation>1/4</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="11415"/>
+        <location filename="../mywidget.ui" line="11627"/>
         <source>Save</source>
         <translation>保存</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="11456"/>
+        <location filename="../mywidget.ui" line="11684"/>
         <source>Exit</source>
         <translation>退出</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="11546"/>
+        <location filename="../mywidget.ui" line="11774"/>
         <source>DG ECP(kW)</source>
         <translation>DG ECP(kW)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="11578"/>
+        <location filename="../mywidget.ui" line="11806"/>
         <source>Constant power (AC)(kW)</source>
         <translation>恒功率(AC)(kW)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="11586"/>
+        <location filename="../mywidget.ui" line="11814"/>
         <source>DG FCP(kW)</source>
         <translation>DG FCP(kW)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="13114"/>
+        <location filename="../mywidget.ui" line="13342"/>
         <source>Constant voltage(V)</source>
         <translation>恒压(V)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="11626"/>
+        <location filename="../mywidget.ui" line="11854"/>
         <source>Grid ECP(kW)</source>
         <translation>Grid ECP(kW)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="11642"/>
         <source>BMS manufacturers</source>
-        <translation>BMS厂家</translation>
+        <translation type="vanished">BMS厂家</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="13151"/>
+        <location filename="../mywidget.ui" line="13379"/>
         <source>Constant current(A)</source>
         <translation>恒流(A)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="11666"/>
+        <location filename="../mywidget.ui" line="11894"/>
         <source>Grid FCP(kW)</source>
         <translation>Grid FCP(kW)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="11706"/>
         <source>Grid EDP(%)</source>
-        <translation>Grid EDP(%)</translation>
+        <translation type="vanished">Grid EDP(%)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="13040"/>
+        <location filename="../mywidget.ui" line="13268"/>
         <source>Output reactive power(kW)</source>
         <translation>输出无功功率(kW)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="11730"/>
         <source>Grid FDP(%)</source>
-        <translation>Grid FDP(%)</translation>
+        <translation type="vanished">Grid FDP(%)</translation>
     </message>
     <message>
         <source>Mixed model</source>
         <translation type="vanished">混合模式</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="11746"/>
         <source>Charge SOC(%)</source>
-        <translation>充电SOC(%)</translation>
+        <translation type="vanished">充电SOC(%)</translation>
     </message>
     <message>
         <source>Constant power (generators)(kW)</source>
         <translation type="vanished">恒功率(发电机)(kW)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="11770"/>
         <source>Discharge SOC(%)</source>
-        <translation>放电SOC(%)</translation>
+        <translation type="vanished">放电SOC(%)</translation>
     </message>
     <message>
         <source>Current value(A)</source>
@@ -841,32 +834,32 @@ Settings</source>
         <translation type="vanished">输出回路控制</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="12264"/>
+        <location filename="../mywidget.ui" line="12492"/>
         <source>On-Grid DOD(%)</source>
         <translation>并网DOD(%)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="12272"/>
+        <location filename="../mywidget.ui" line="12500"/>
         <source>Discharge Voltage lower Limit(V)</source>
         <translation>放电电压下限(V)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="12288"/>
+        <location filename="../mywidget.ui" line="12516"/>
         <source>Force charge start(mV)</source>
         <translation>强充开启(mV)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="12301"/>
+        <location filename="../mywidget.ui" line="12529"/>
         <source>Off-Grid DOD(%)</source>
         <translation>离网DOD(%)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="12309"/>
+        <location filename="../mywidget.ui" line="12537"/>
         <source>Discharge Voltage lower Limit delta(V)</source>
         <translation>放电电压下限回差(V)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="12325"/>
+        <location filename="../mywidget.ui" line="12553"/>
         <source>Force charge stop(mV)</source>
         <translation>强充结束（mV）</translation>
     </message>
@@ -875,49 +868,49 @@ Settings</source>
         <translation type="vanished">DOD保护解除(%)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="12362"/>
+        <location filename="../mywidget.ui" line="12590"/>
         <source>DCAC cell protection voltage(mV)</source>
         <translation>DCAC单体保护电压(mV)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="12375"/>
+        <location filename="../mywidget.ui" line="12603"/>
         <source>Charge Voltage upper Limit(V)</source>
         <translation>充电电压上限(V)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="12399"/>
+        <location filename="../mywidget.ui" line="12627"/>
         <source>DCAC cell protection voltage delta(mV)</source>
         <translation>DCAC单体保护电压回差(mV)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="12412"/>
+        <location filename="../mywidget.ui" line="12640"/>
         <source>Charge Voltage upper Limit delta(V)</source>
         <translation>充电电压上限回差(V)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="12602"/>
-        <location filename="../mywidget.cpp" line="3252"/>
+        <location filename="../mywidget.ui" line="12830"/>
+        <location filename="../mywidget.cpp" line="3905"/>
         <source>Generator turn on voltage(A1)</source>
         <translation>发电机开启电压(A1)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="12648"/>
-        <location filename="../mywidget.cpp" line="3257"/>
+        <location filename="../mywidget.ui" line="12876"/>
+        <location filename="../mywidget.cpp" line="3910"/>
         <source>Generator turn off voltage(B1)</source>
         <translation>发电机关闭电压(B1)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="12694"/>
+        <location filename="../mywidget.ui" line="12922"/>
         <source>DCAC Reference Voltage(mV)</source>
         <translation>DCAC参考电压(mV)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="12823"/>
+        <location filename="../mywidget.ui" line="13051"/>
         <source>Shutdown voltage point(Delete)</source>
         <translation>关机电压点</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="13003"/>
+        <location filename="../mywidget.ui" line="13231"/>
         <source>Output reactiver power mode</source>
         <translation>输出无功方式</translation>
     </message>
@@ -926,97 +919,97 @@ Settings</source>
         <translation type="vanished">串口1(bps)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="13780"/>
+        <location filename="../mywidget.ui" line="14008"/>
         <source>Grid frequency upper limit(Hz)</source>
         <translation>电网频率变化范围上限(Hz)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="13011"/>
+        <location filename="../mywidget.ui" line="13239"/>
         <source>serial port 2(bps)</source>
         <translation>串口2(bps)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="13817"/>
+        <location filename="../mywidget.ui" line="14045"/>
         <source>Grid frequency lower limit(Hz)</source>
         <translation>电网频率变化范围下限(Hz)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="13048"/>
+        <location filename="../mywidget.ui" line="13276"/>
         <source>serial port 3(bps)</source>
         <translation>串口3(bps)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="13854"/>
+        <location filename="../mywidget.ui" line="14082"/>
         <source>Vol protection upper limit(%)</source>
         <translation>电压保护范围上限(%)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="13085"/>
+        <location filename="../mywidget.ui" line="13313"/>
         <source>serial port 4(bps)</source>
         <translation>串口4(bps)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="13891"/>
+        <location filename="../mywidget.ui" line="14119"/>
         <source>Vol protection lower limit(%)</source>
         <translation>电压保护范围下限(%)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="13122"/>
+        <location filename="../mywidget.ui" line="13350"/>
         <source>serial port 5(bps)</source>
         <translation>串口5(bps)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="13188"/>
+        <location filename="../mywidget.ui" line="13416"/>
         <source>Output power limit(kW)</source>
         <translation>输出功率上限(kW)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="13196"/>
+        <location filename="../mywidget.ui" line="13424"/>
         <source>Can port 1(kbps)</source>
         <translation>CAN 1(kbps)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="11722"/>
+        <location filename="../mywidget.ui" line="11950"/>
         <source>DG capacity(kW)</source>
         <translation>柴发容量(kW)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="13233"/>
+        <location filename="../mywidget.ui" line="13461"/>
         <source>Can port 2(kbps)</source>
         <translation>CAN 2(kbps)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="13743"/>
+        <location filename="../mywidget.ui" line="13971"/>
         <source>Rate of change of power(kW/s)</source>
         <translation>功率变化率(kW/s)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="12990"/>
+        <location filename="../mywidget.ui" line="13218"/>
         <source>Battery capacity alarm</source>
         <translation>电池容量告警</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="13360"/>
+        <location filename="../mywidget.ui" line="13588"/>
         <source>Protocol Version</source>
         <translation>协议版本</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="13027"/>
+        <location filename="../mywidget.ui" line="13255"/>
         <source>BMS Comm.fault time(s)</source>
         <translation>BMS通信故障判定时间(s)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="13064"/>
+        <location filename="../mywidget.ui" line="13292"/>
         <source>EMS Comm.fault time(s)</source>
         <translation>EMS通信故障判定时间(s)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="13825"/>
+        <location filename="../mywidget.ui" line="14053"/>
         <source>Transformer ratio</source>
         <translation>变压器变比</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="13384"/>
+        <location filename="../mywidget.ui" line="13612"/>
         <source>User Password</source>
         <translation>用户密码</translation>
     </message>
@@ -1025,12 +1018,12 @@ Settings</source>
         <translation type="vanished">电网扩容使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="13421"/>
+        <location filename="../mywidget.ui" line="13649"/>
         <source>Maintenance password</source>
         <translation>维修密码</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="13767"/>
+        <location filename="../mywidget.ui" line="13995"/>
         <source>Number of modules</source>
         <translation>模块数量</translation>
     </message>
@@ -1039,17 +1032,17 @@ Settings</source>
         <translation type="vanished">释放放电标志</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="13841"/>
+        <location filename="../mywidget.ui" line="14069"/>
         <source>Maximum Module Number</source>
         <translation>最大模块数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="13878"/>
+        <location filename="../mywidget.ui" line="14106"/>
         <source>Minimum Module Number</source>
         <translation>最小模块数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="13952"/>
+        <location filename="../mywidget.ui" line="14143"/>
         <source>Grid recovery time(s)</source>
         <translation>电网恢复并网时间(s)</translation>
     </message>
@@ -1058,58 +1051,58 @@ Settings</source>
         <translation type="vanished">恒压并机</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="13989"/>
-        <location filename="../mywidget.cpp" line="3653"/>
+        <location filename="../mywidget.ui" line="14180"/>
+        <location filename="../mywidget.cpp" line="4313"/>
         <source>Insulation detection enable DCAC</source>
         <translation>DCAC绝缘监测使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="14105"/>
+        <location filename="../mywidget.ui" line="14333"/>
         <source>DI 1</source>
         <translation>DI 1</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="14110"/>
+        <location filename="../mywidget.ui" line="14338"/>
         <source>DI 2</source>
         <translation>DI 2</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="14115"/>
+        <location filename="../mywidget.ui" line="14343"/>
         <source>DI 3</source>
         <translation>DI 3</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="14120"/>
+        <location filename="../mywidget.ui" line="14348"/>
         <source>DI 4</source>
         <translation>DI 4</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="14125"/>
+        <location filename="../mywidget.ui" line="14353"/>
         <source>DI 5</source>
         <translation>DI 5</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="14130"/>
+        <location filename="../mywidget.ui" line="14358"/>
         <source>DI 6</source>
         <translation>DI 6</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="14135"/>
+        <location filename="../mywidget.ui" line="14363"/>
         <source>DO 1</source>
         <translation>DO 1</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="14140"/>
+        <location filename="../mywidget.ui" line="14368"/>
         <source>DO 2</source>
         <translation>DO 2</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="14145"/>
+        <location filename="../mywidget.ui" line="14373"/>
         <source>DO 3</source>
         <translation>DO 3</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="14165"/>
+        <location filename="../mywidget.ui" line="14393"/>
         <source>Function(default)</source>
         <translation>功能(默认)</translation>
     </message>
@@ -1118,29 +1111,32 @@ Settings</source>
         <translation type="vanished">NO关机</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="17892"/>
-        <location filename="../mywidget.cpp" line="1379"/>
+        <location filename="../mywidget.ui" line="18448"/>
+        <location filename="../mywidget.cpp" line="1912"/>
         <source>Not Logged in</source>
         <translation>未登录</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="18028"/>
+        <location filename="../mywidget.ui" line="18584"/>
         <source>Host</source>
         <translation>主页</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="18131"/>
+        <location filename="../mywidget.ui" line="18687"/>
         <source>Rt.Data</source>
         <translation>实时数据</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="18237"/>
+        <location filename="../mywidget.ui" line="18793"/>
         <source>Record</source>
         <translation>记录</translation>
     </message>
     <message>
+        <location filename="../mywidget.cpp" line="5002"/>
+        <location filename="../mywidget.cpp" line="5013"/>
+        <location filename="../mywidget.cpp" line="5023"/>
         <source>System</source>
-        <translation type="vanished">系统</translation>
+        <translation>系统</translation>
     </message>
     <message>
         <source>Switch</source>
@@ -1151,17 +1147,17 @@ Settings</source>
         <translation type="vanished">待机</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="18683"/>
+        <location filename="../mywidget.ui" line="19239"/>
         <source>Account</source>
         <translation>账号</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="18714"/>
+        <location filename="../mywidget.ui" line="19270"/>
         <source>User</source>
         <translation>用户</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="18719"/>
+        <location filename="../mywidget.ui" line="19275"/>
         <source>Maintain</source>
         <translation>维护</translation>
     </message>
@@ -1170,28 +1166,30 @@ Settings</source>
         <translation type="vanished">超级用户</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="18744"/>
+        <location filename="../mywidget.ui" line="19300"/>
+        <location filename="../mywidget.cpp" line="5082"/>
         <source>Password</source>
         <translation>密码</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="18769"/>
+        <location filename="../mywidget.ui" line="19325"/>
         <source>······</source>
         <translation>······</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="18802"/>
+        <location filename="../mywidget.ui" line="19358"/>
         <source>Tip:Please check if account and password are
 correct.</source>
         <translation>提示：请检查账号和密码是否正确。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="18849"/>
+        <location filename="../mywidget.ui" line="19405"/>
         <source>Login</source>
         <translation>登录</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="18876"/>
+        <location filename="../mywidget.ui" line="19432"/>
+        <location filename="../mywidget.cpp" line="1386"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
@@ -1201,7 +1199,7 @@ correct.</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1554"/>
-        <location filename="../mywidget.ui" line="14186"/>
+        <location filename="../mywidget.ui" line="14414"/>
         <source>Access Control</source>
         <translation>门禁</translation>
     </message>
@@ -1214,26 +1212,26 @@ correct.</source>
         <location filename="../mywidget.ui" line="1597"/>
         <location filename="../mywidget.ui" line="1641"/>
         <location filename="../mywidget.ui" line="1685"/>
-        <location filename="../mywidget.ui" line="14229"/>
-        <location filename="../mywidget.ui" line="14273"/>
-        <location filename="../mywidget.ui" line="14317"/>
-        <location filename="../mywidget.cpp" line="3697"/>
-        <location filename="../mywidget.cpp" line="3700"/>
-        <location filename="../mywidget.cpp" line="3703"/>
-        <location filename="../mywidget.cpp" line="3706"/>
-        <location filename="../mywidget.cpp" line="3709"/>
-        <location filename="../mywidget.cpp" line="3712"/>
+        <location filename="../mywidget.ui" line="14457"/>
+        <location filename="../mywidget.ui" line="14501"/>
+        <location filename="../mywidget.ui" line="14545"/>
+        <location filename="../mywidget.cpp" line="4357"/>
+        <location filename="../mywidget.cpp" line="4360"/>
+        <location filename="../mywidget.cpp" line="4363"/>
+        <location filename="../mywidget.cpp" line="4366"/>
+        <location filename="../mywidget.cpp" line="4369"/>
+        <location filename="../mywidget.cpp" line="4372"/>
         <source>N_O</source>
         <translation>N_O</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1619"/>
-        <location filename="../mywidget.ui" line="14251"/>
+        <location filename="../mywidget.ui" line="14479"/>
         <source>Generator</source>
         <translation>发电机</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="14202"/>
+        <location filename="../mywidget.ui" line="14430"/>
         <source>Flooding</source>
         <translation>水浸</translation>
     </message>
@@ -1246,8 +1244,8 @@ correct.</source>
         <translation type="vanished">温度</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="14295"/>
-        <location filename="../mywidget.ui" line="14339"/>
+        <location filename="../mywidget.ui" line="14523"/>
+        <location filename="../mywidget.ui" line="14567"/>
         <source>Reserve</source>
         <translation>保留</translation>
     </message>
@@ -1259,180 +1257,180 @@ correct.</source>
     <message>
         <location filename="../mywidget.ui" line="1778"/>
         <location filename="../mywidget.ui" line="2277"/>
-        <location filename="../mywidget.ui" line="14418"/>
-        <location filename="../mywidget.ui" line="14777"/>
-        <location filename="../mywidget.cpp" line="3743"/>
-        <location filename="../mywidget.cpp" line="3900"/>
+        <location filename="../mywidget.ui" line="14646"/>
+        <location filename="../mywidget.ui" line="15005"/>
+        <location filename="../mywidget.cpp" line="4403"/>
+        <location filename="../mywidget.cpp" line="4560"/>
         <source>Debug variable 1</source>
         <translation>调试变量1</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1786"/>
-        <location filename="../mywidget.ui" line="14618"/>
+        <location filename="../mywidget.ui" line="14846"/>
         <source>1.5V Voltage revise</source>
         <translation>1.5V电压系数</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1802"/>
         <location filename="../mywidget.ui" line="2365"/>
-        <location filename="../mywidget.ui" line="14690"/>
-        <location filename="../mywidget.ui" line="14875"/>
+        <location filename="../mywidget.ui" line="14918"/>
+        <location filename="../mywidget.ui" line="15103"/>
         <source>Inv on off flag</source>
         <translation>开关机状态字</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1815"/>
         <location filename="../mywidget.ui" line="2301"/>
-        <location filename="../mywidget.ui" line="14450"/>
-        <location filename="../mywidget.ui" line="14801"/>
-        <location filename="../mywidget.cpp" line="3747"/>
-        <location filename="../mywidget.cpp" line="3904"/>
+        <location filename="../mywidget.ui" line="14678"/>
+        <location filename="../mywidget.ui" line="15029"/>
+        <location filename="../mywidget.cpp" line="4407"/>
+        <location filename="../mywidget.cpp" line="4564"/>
         <source>Debug variable 2</source>
         <translation>调试变量2</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1823"/>
-        <location filename="../mywidget.ui" line="14650"/>
+        <location filename="../mywidget.ui" line="14878"/>
         <source> Bus Vol. revise</source>
         <translation> 母线电压系数</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1839"/>
-        <location filename="../mywidget.ui" line="14674"/>
-        <location filename="../mywidget.cpp" line="3816"/>
+        <location filename="../mywidget.ui" line="14902"/>
+        <location filename="../mywidget.cpp" line="4476"/>
         <source>Logic state</source>
         <translation>逻辑状态字</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1852"/>
         <location filename="../mywidget.ui" line="2325"/>
-        <location filename="../mywidget.ui" line="14482"/>
-        <location filename="../mywidget.ui" line="14825"/>
-        <location filename="../mywidget.cpp" line="3751"/>
-        <location filename="../mywidget.cpp" line="3908"/>
-        <location filename="../mywidget.cpp" line="3912"/>
+        <location filename="../mywidget.ui" line="14710"/>
+        <location filename="../mywidget.ui" line="15053"/>
+        <location filename="../mywidget.cpp" line="4411"/>
+        <location filename="../mywidget.cpp" line="4568"/>
+        <location filename="../mywidget.cpp" line="4572"/>
         <source>Debug variable 3</source>
         <translation>调试变量3</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1860"/>
-        <location filename="../mywidget.ui" line="14426"/>
+        <location filename="../mywidget.ui" line="14654"/>
         <source>Grid A/AB Vol. revise</source>
         <translation>电网A相电压系数</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1876"/>
-        <location filename="../mywidget.ui" line="14698"/>
+        <location filename="../mywidget.ui" line="14926"/>
         <source>Inv flag</source>
         <translation>逆变状态字</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1889"/>
         <location filename="../mywidget.ui" line="2285"/>
-        <location filename="../mywidget.ui" line="14785"/>
+        <location filename="../mywidget.ui" line="15013"/>
         <source>Debug variable 1 address</source>
         <translation>调试地址变量1</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1897"/>
-        <location filename="../mywidget.ui" line="14458"/>
+        <location filename="../mywidget.ui" line="14686"/>
         <source>Grid B/BC Vol. revise</source>
         <translation>电网B相电压系数</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1913"/>
-        <location filename="../mywidget.ui" line="14706"/>
-        <location filename="../mywidget.cpp" line="3861"/>
+        <location filename="../mywidget.ui" line="14934"/>
+        <location filename="../mywidget.cpp" line="4521"/>
         <source>Grid flag</source>
         <translation>电网状态字</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1926"/>
         <location filename="../mywidget.ui" line="2309"/>
-        <location filename="../mywidget.ui" line="14809"/>
+        <location filename="../mywidget.ui" line="15037"/>
         <source>Debug variable 2 address</source>
         <translation>调试地址变量2</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1934"/>
-        <location filename="../mywidget.ui" line="14490"/>
+        <location filename="../mywidget.ui" line="14718"/>
         <source>Grid C/CA Vol. revise</source>
         <translation>电网C相电压系数</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1950"/>
-        <location filename="../mywidget.ui" line="14682"/>
-        <location filename="../mywidget.cpp" line="3857"/>
+        <location filename="../mywidget.ui" line="14910"/>
+        <location filename="../mywidget.cpp" line="4517"/>
         <source>Grid protect flag</source>
         <translation>电网保护状态字</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1963"/>
         <location filename="../mywidget.ui" line="2333"/>
-        <location filename="../mywidget.ui" line="14833"/>
+        <location filename="../mywidget.ui" line="15061"/>
         <source>Debug variable 3 address</source>
         <translation>调试地址变量3</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1971"/>
-        <location filename="../mywidget.ui" line="14522"/>
+        <location filename="../mywidget.ui" line="14750"/>
         <source>Output A Cur. revise</source>
         <translation>输出A相电流系数</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1987"/>
         <location filename="../mywidget.ui" line="2405"/>
-        <location filename="../mywidget.ui" line="14594"/>
-        <location filename="../mywidget.ui" line="14915"/>
-        <location filename="../mywidget.cpp" line="3845"/>
-        <location filename="../mywidget.cpp" line="3924"/>
+        <location filename="../mywidget.ui" line="14822"/>
+        <location filename="../mywidget.ui" line="15143"/>
+        <location filename="../mywidget.cpp" line="4505"/>
+        <location filename="../mywidget.cpp" line="4584"/>
         <source>PV flag</source>
         <translation>电池电压状态字</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="2000"/>
         <location filename="../mywidget.ui" line="2293"/>
-        <location filename="../mywidget.ui" line="14514"/>
-        <location filename="../mywidget.ui" line="14793"/>
+        <location filename="../mywidget.ui" line="14742"/>
+        <location filename="../mywidget.ui" line="15021"/>
         <source>Debug memery var. 1</source>
         <translation>调试内存变量1</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="2008"/>
-        <location filename="../mywidget.ui" line="14554"/>
+        <location filename="../mywidget.ui" line="14782"/>
         <source>Output B Cur. revise</source>
         <translation>输出B相电流系数</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="2024"/>
         <location filename="../mywidget.ui" line="2381"/>
-        <location filename="../mywidget.ui" line="14626"/>
-        <location filename="../mywidget.ui" line="14891"/>
-        <location filename="../mywidget.cpp" line="3849"/>
-        <location filename="../mywidget.cpp" line="3920"/>
+        <location filename="../mywidget.ui" line="14854"/>
+        <location filename="../mywidget.ui" line="15119"/>
+        <location filename="../mywidget.cpp" line="4509"/>
+        <location filename="../mywidget.cpp" line="4580"/>
         <source>DC bus flag</source>
         <translation>母线状态字</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="2037"/>
-        <location filename="../mywidget.ui" line="14546"/>
-        <location filename="../mywidget.ui" line="14817"/>
+        <location filename="../mywidget.ui" line="14774"/>
+        <location filename="../mywidget.ui" line="15045"/>
         <source>Debug memery var. 2</source>
         <translation>调试内存变量2</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="2045"/>
-        <location filename="../mywidget.ui" line="14586"/>
+        <location filename="../mywidget.ui" line="14814"/>
         <source>Output C Cur. revise</source>
         <translation>输出C相电流系数</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="2061"/>
         <location filename="../mywidget.ui" line="2357"/>
-        <location filename="../mywidget.ui" line="14658"/>
-        <location filename="../mywidget.ui" line="14867"/>
-        <location filename="../mywidget.cpp" line="3853"/>
-        <location filename="../mywidget.cpp" line="3916"/>
+        <location filename="../mywidget.ui" line="14886"/>
+        <location filename="../mywidget.ui" line="15095"/>
+        <location filename="../mywidget.cpp" line="4513"/>
+        <location filename="../mywidget.cpp" line="4576"/>
         <source>INT main flag</source>
         <translation>中断状态字</translation>
     </message>
@@ -1440,42 +1438,42 @@ correct.</source>
         <location filename="../mywidget.ui" line="2074"/>
         <location filename="../mywidget.ui" line="2317"/>
         <location filename="../mywidget.ui" line="2341"/>
-        <location filename="../mywidget.ui" line="14578"/>
-        <location filename="../mywidget.ui" line="14841"/>
+        <location filename="../mywidget.ui" line="14806"/>
+        <location filename="../mywidget.ui" line="15069"/>
         <source>Debug memery var. 3</source>
         <translation>调试内存变量3</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="2082"/>
-        <location filename="../mywidget.ui" line="14498"/>
+        <location filename="../mywidget.ui" line="14726"/>
         <source>INV A Vol. revise</source>
         <translation>逆变A相电压系数</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="2098"/>
         <location filename="../mywidget.ui" line="2413"/>
-        <location filename="../mywidget.ui" line="14634"/>
-        <location filename="../mywidget.ui" line="14923"/>
+        <location filename="../mywidget.ui" line="14862"/>
+        <location filename="../mywidget.ui" line="15151"/>
         <source>Parallel signal</source>
         <translation>并机状态字</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="2111"/>
-        <location filename="../mywidget.ui" line="14434"/>
+        <location filename="../mywidget.ui" line="14662"/>
         <source>Input Vol. revise</source>
         <translation>输入电压系数</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="2119"/>
-        <location filename="../mywidget.ui" line="14530"/>
+        <location filename="../mywidget.ui" line="14758"/>
         <source>INV B Vol. revise</source>
         <translation>逆变B相电压系数</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="2135"/>
-        <location filename="../mywidget.ui" line="14602"/>
-        <location filename="../mywidget.cpp" line="3886"/>
-        <location filename="../mywidget.cpp" line="3966"/>
+        <location filename="../mywidget.ui" line="14830"/>
+        <location filename="../mywidget.cpp" line="4546"/>
+        <location filename="../mywidget.cpp" line="4626"/>
         <source>Monitor Order</source>
         <translation>监控命令字</translation>
     </message>
@@ -1486,39 +1484,39 @@ correct.</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="2156"/>
-        <location filename="../mywidget.ui" line="14562"/>
+        <location filename="../mywidget.ui" line="14790"/>
         <source>INV C Vol. revise</source>
         <translation>逆变C相电压系数</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="2172"/>
-        <location filename="../mywidget.ui" line="14570"/>
+        <location filename="../mywidget.ui" line="14798"/>
         <source>BatInfor</source>
         <translation>电池信息字</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="2180"/>
-        <location filename="../mywidget.ui" line="14442"/>
+        <location filename="../mywidget.ui" line="14670"/>
         <source>INV A inductance Cur. revise</source>
         <translation>逆变A相电感电流系数</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="2188"/>
         <location filename="../mywidget.ui" line="2421"/>
-        <location filename="../mywidget.ui" line="14538"/>
-        <location filename="../mywidget.ui" line="14931"/>
+        <location filename="../mywidget.ui" line="14766"/>
+        <location filename="../mywidget.ui" line="15159"/>
         <source>Bat state</source>
         <translation>电池状态字</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="2196"/>
-        <location filename="../mywidget.ui" line="14474"/>
+        <location filename="../mywidget.ui" line="14702"/>
         <source>INV B inductance Cur. revise</source>
         <translation>逆变B相电感电流系数</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="2204"/>
-        <location filename="../mywidget.ui" line="14506"/>
+        <location filename="../mywidget.ui" line="14734"/>
         <source>INV C inductance Cur. revise</source>
         <translation>逆变C相电感电流系数</translation>
     </message>
@@ -1529,52 +1527,138 @@ correct.</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="2349"/>
-        <location filename="../mywidget.ui" line="14849"/>
+        <location filename="../mywidget.ui" line="15077"/>
         <source>Current ID</source>
         <translation>当前模块号</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="2373"/>
-        <location filename="../mywidget.ui" line="14883"/>
+        <location filename="../mywidget.ui" line="15111"/>
         <source>Monitor order</source>
         <translation>监控命令字</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="2389"/>
-        <location filename="../mywidget.ui" line="14899"/>
+        <location filename="../mywidget.ui" line="15127"/>
         <source>DCONV logic </source>
         <translation>开关机状态字2 </translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="2397"/>
-        <location filename="../mywidget.ui" line="14907"/>
+        <location filename="../mywidget.ui" line="15135"/>
         <source>Bat infor</source>
         <translation>电池信息字</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2645"/>
+        <location filename="../mywidget.ui" line="2669"/>
         <source>100kW - TS</source>
         <translation>100kW - TS</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="5902"/>
+        <location filename="../mywidget.ui" line="6005"/>
         <source>Please click on &apos;Alarm Information&apos; to enter the query interface
 and view the details of the alarm information you have encountered.</source>
         <translation>请点击&apos;告警信息&apos;，进入查询界面，查看您所遇到的告警信息的详情。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="11538"/>
+        <location filename="../mywidget.ui" line="11039"/>
+        <source>Optimal
+mode</source>
+        <translation>最优模式</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.ui" line="11766"/>
         <source>Grid connected mode of converter</source>
         <translation>变流器并网方式</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="11949"/>
-        <location filename="../mywidget.cpp" line="3103"/>
+        <location filename="../mywidget.ui" line="11870"/>
+        <source>BMS Protocol</source>
+        <translation>电池协议</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.ui" line="11934"/>
+        <source>Grid EDP(kW)</source>
+        <translation>Grid EDP(kW)</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.ui" line="11958"/>
+        <source>Grid FDP(kW)</source>
+        <translation>Grid FDP(kW)</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.ui" line="11974"/>
+        <source>Start charging SOC(%)</source>
+        <translation>开始充电SOC(%)</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.ui" line="11998"/>
+        <source>Stop charging SOC(%)</source>
+        <translation>停止充电SOC(%)</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.ui" line="12177"/>
+        <location filename="../mywidget.cpp" line="3761"/>
         <source>Outer Ring Centralized Control</source>
         <translation>外环集中控制</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="18342"/>
+        <location filename="../mywidget.ui" line="12566"/>
+        <source>Off-Grid DOD Protection Release SOC(%)</source>
+        <translation>离网DOD保护解除SOC</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.ui" line="15251"/>
+        <source>Can 2</source>
+        <translation>Can 2</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.ui" line="15282"/>
+        <source>Display mode:</source>
+        <translation>显示方式：</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.ui" line="15304"/>
+        <source>Displayed on screen</source>
+        <translation>在屏幕显示</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.ui" line="15309"/>
+        <source>Write to USB drive</source>
+        <translation>写入U盘</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.ui" line="15361"/>
+        <source>Bengin</source>
+        <translation>开始</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.ui" line="15391"/>
+        <location filename="../mywidget.cpp" line="5130"/>
+        <source>2023-09-27  17:27:56.201  CAN 2: Tx  Len=8  ID=9f000100 00 00 00 00 00 00 00 00
+2023-09-27  17:27:56.302  CAN 2: Rx  Len=8  ID=9f000301 0d 00 64 00 70 17 e8 03
+2023-09-27  17:27:57.105  CAN 2: Rx  Len=8  ID=9f000300 40 1f a0 0f e8 03 e8 03
+2023-09-27  17:27:57.206  CAN 2: Tx  Len=8  ID=9f000100 00 00 00 00 00 00 00 00
+2023-09-27  17:27:57.307  CAN 2: Rx  Len=8  ID=9f000301 0d 00 64 00 70 17 e8 03
+2023-09-27  17:27:57.910  CAN 2: Rx  Len=8  ID=9f000304 40 1f a0 0f 00 00 00 00
+2023-09-27  17:27:58.110  CAN 2: Rx  Len=8  ID=9f000300 40 1f a0 0f e8 03 e8 03
+2023-09-27  17:27:58.211  CAN 2: Tx  Len=8  ID=9f000100 00 00 00 00 00 00 00 00
+2023-09-27  17:27:58.312  CAN 2: Rx  Len=8  ID=9f000301 0d 00 64 00 70 17 e8 03
+2023-09-27  17:27:58.915  CAN 2: Rx  Len=8  ID=9f000304 40 1f a0 0f 00 00 00 00
+2023-09-27  17:27:59.116  CAN 2: Rx  Len=8  ID=9f000300 40 1f a0 0f e8 03 e8 03
+2023-09-27  17:27:59.217  CAN 2: Tx  Len=8  ID=9f000100 00 00 00 00 00 00 00 00
+2023-09-27  17:27:59.317  CAN 2: Rx  Len=8  ID=9f000301 0d 00 64 00 70 17 e8 03
+2023-09-27  17:27:59.920  CAN 2: Rx  Len=8  ID=9f000304 40 1f a0 0f 00 00 00 00
+2023-09-27  17:28:00.121  CAN 2: Rx  Len=8  ID=9f000300 40 1f a0 0f e8 03 e8 03</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.ui" line="16211"/>
+        <source>Details</source>
+        <translation>详细信息</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.ui" line="18898"/>
         <source>System
 (Login to view)</source>
         <translation>系统
@@ -1586,8 +1670,8 @@ Information</source>
         <translation type="vanished">告警信息</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8684"/>
-        <location filename="../mywidget.ui" line="12151"/>
+        <location filename="../mywidget.ui" line="8787"/>
+        <location filename="../mywidget.ui" line="12379"/>
         <source>A1: 
 Generator turn on SOC(A1)
 B1: 
@@ -1598,55 +1682,54 @@ B1:
 发电机关闭SOC（B1）</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8707"/>
+        <location filename="../mywidget.ui" line="8810"/>
         <source>Battery
 power-on</source>
         <translation>电池上电</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8726"/>
+        <location filename="../mywidget.ui" line="8829"/>
         <source>Battery
 power-off</source>
         <translation>电池下电</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8818"/>
-        <location filename="../mywidget.ui" line="12338"/>
+        <location filename="../mywidget.ui" line="8921"/>
         <source>DOD Protection Release SOC(%)</source>
         <translation>DOD保护解除SOC</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8826"/>
+        <location filename="../mywidget.ui" line="8929"/>
         <source>Cell voltage max(mV)</source>
         <translation>最高单体电压(mV)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8842"/>
+        <location filename="../mywidget.ui" line="8945"/>
         <source>Cell voltage max delta(mV)</source>
         <translation>最高单体电压回差(mV)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8858"/>
+        <location filename="../mywidget.ui" line="8961"/>
         <source>Cell voltage min(mV)</source>
         <translation>单体最低电压(mV)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8882"/>
+        <location filename="../mywidget.ui" line="8985"/>
         <source>Cell voltage min delta(mV)</source>
         <translation>最低单体电压回差(mV)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8898"/>
+        <location filename="../mywidget.ui" line="9001"/>
         <source>ForceCharge On(V)</source>
         <translation>强充开启（V）</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8914"/>
+        <location filename="../mywidget.ui" line="9017"/>
         <source>ForceCharge Off(V)</source>
         <translation>强充结束（V）</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8930"/>
+        <location filename="../mywidget.ui" line="9033"/>
         <source>DCAC cell protect(mV)</source>
         <translation>DCAC单体保护电压(mV)</translation>
     </message>
@@ -1655,49 +1738,49 @@ power-off</source>
         <translation type="vanished">DCAC单体保护电压回差(mV)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9597"/>
+        <location filename="../mywidget.ui" line="9700"/>
         <source>Hybrid Mode</source>
         <translation>混合模式</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9650"/>
+        <location filename="../mywidget.ui" line="9753"/>
         <source>Hybrid Mode Enable：</source>
         <translation>混合模式使能：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="11618"/>
-        <location filename="../mywidget.cpp" line="2948"/>
+        <location filename="../mywidget.ui" line="11846"/>
+        <location filename="../mywidget.cpp" line="3608"/>
         <source>Grid expansion</source>
         <translation>电网扩容</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="11658"/>
+        <location filename="../mywidget.ui" line="11886"/>
         <source>Grad capacity(kW)</source>
         <translation>电网容量(kW)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="11698"/>
+        <location filename="../mywidget.ui" line="11926"/>
         <source>DG charging power limit(kW)</source>
         <translation>柴发充电限制功率(kW)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="11869"/>
+        <location filename="../mywidget.ui" line="12097"/>
         <source>Constant Curent(A)</source>
         <translation>恒流值(A)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="11885"/>
-        <location filename="../mywidget.cpp" line="3110"/>
+        <location filename="../mywidget.ui" line="12113"/>
+        <location filename="../mywidget.cpp" line="3767"/>
         <source>IV curve scanning</source>
         <translation>IV曲线扫描</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="11909"/>
+        <location filename="../mywidget.ui" line="12137"/>
         <source>Constant Voltage(V)</source>
         <translation>恒压值(V)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="11925"/>
+        <location filename="../mywidget.ui" line="12153"/>
         <source>IV curve scanning low voltage(V)</source>
         <translation>IV曲线扫描低电压(V)</translation>
     </message>
@@ -1706,56 +1789,56 @@ power-off</source>
         <translation type="vanished">外环集中控制</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="11965"/>
+        <location filename="../mywidget.ui" line="12193"/>
         <source>IV curve scanning high voltage(V)</source>
         <translation>IV曲线扫描高电压(V)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="13159"/>
+        <location filename="../mywidget.ui" line="13387"/>
         <source>serial port 6(bps)</source>
         <translation>串口6(bps)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="13368"/>
+        <location filename="../mywidget.ui" line="13596"/>
         <source>Release Charging Prohibition Indicator</source>
         <translation>释放禁充标志</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="13405"/>
+        <location filename="../mywidget.ui" line="13633"/>
         <source>Release Discharging Prohibition Indicator</source>
         <translation>释放禁放标志</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="14170"/>
+        <location filename="../mywidget.ui" line="14398"/>
         <source>EPO</source>
         <translation>EPO</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="14178"/>
+        <location filename="../mywidget.ui" line="14406"/>
         <source>Shut Down</source>
         <translation>关机</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="14210"/>
+        <location filename="../mywidget.ui" line="14438"/>
         <source>Fire fighting</source>
         <translation>消防</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="14466"/>
+        <location filename="../mywidget.ui" line="14694"/>
         <source>Input Cur. revise</source>
         <translation>输入电流系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="15030"/>
-        <location filename="../mywidget.cpp" line="4435"/>
-        <location filename="../mywidget.cpp" line="4451"/>
+        <location filename="../mywidget.ui" line="15502"/>
+        <location filename="../mywidget.cpp" line="5051"/>
+        <location filename="../mywidget.cpp" line="5067"/>
         <source>Battery Information</source>
         <translation>电池信息</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="15080"/>
-        <location filename="../mywidget.cpp" line="1526"/>
-        <location filename="../mywidget.cpp" line="4298"/>
+        <location filename="../mywidget.ui" line="15552"/>
+        <location filename="../mywidget.cpp" line="2182"/>
+        <location filename="../mywidget.cpp" line="4920"/>
         <source>1/2</source>
         <translation>1/2</translation>
     </message>
@@ -1764,7 +1847,7 @@ power-off</source>
         <translation type="vanished">1/3</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="15886"/>
+        <location filename="../mywidget.ui" line="16399"/>
         <source>Back</source>
         <translation>返回</translation>
     </message>
@@ -1781,72 +1864,72 @@ power-off</source>
         <translation type="vanished">SOC放空区</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="16123"/>
+        <location filename="../mywidget.ui" line="16634"/>
         <source>The PV prioritizes power to the load, and if the PV is powerful enough, the remaining energy is provided to charge the batteries, and if the PV still has energy left, it sends the excess energy to the grid.</source>
         <translation>光伏优先为负载供电，如果光伏发电功率足够大，剩余的能量就会提供给电池充电，如果光伏仍有剩余能量，就会将多余的能量输送给电网。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="16159"/>
+        <location filename="../mywidget.ui" line="16670"/>
         <source>The PV gives priority to powering the load, and if the PV does not have enough energy to power the load, the battery and the PV together power the load.</source>
         <translation>光伏优先为负载供电，如果光伏没有足够的能量为负载供电，则电池和光伏一起为负载供电。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="16195"/>
+        <location filename="../mywidget.ui" line="16706"/>
         <source>The PV gives priority to powering the load, and if the PV and batter ries do not have enough energy to power the load, then the grid, PV and batteries together power the load.</source>
         <translation>光伏优先为负载供电，如果光伏和电池的能量不足以为负载供电，则由电网、光伏和电池共同为负载供电。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="16295"/>
+        <location filename="../mywidget.ui" line="16806"/>
         <source>The PV prioritizes charging the batteries, and the excess energy is given to the load, and if there is still excess energy it is delivered to the grid.</source>
         <translation>光伏优先为电池充电，多余的能量则提供给负载，如果还有多余的能量，则输送给电网。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="16331"/>
+        <location filename="../mywidget.ui" line="16842"/>
         <source>When the PV does not have enough energy to supply the battery and the load, the grid provides fertility to the load.</source>
         <translation>当光伏的能量不足以为电池和负载供电时，电网给负载提供剩余的能量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="16367"/>
+        <location filename="../mywidget.ui" line="16878"/>
         <source>When the PV has no energy, the grid provides energy to the load.</source>
         <translation>当光伏没有能量时，电网就会向负载提供能量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="16467"/>
+        <location filename="../mywidget.ui" line="16978"/>
         <source>When there is enough PV energy, the PV will power the load while charging the battery, and if there is any left, it will be delivered to the grid.</source>
         <translation>当有足够的光伏能量时，光伏会在为电池充电的同时为负载供电，如果还有剩余，就会输送到电网。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="16503"/>
+        <location filename="../mywidget.ui" line="17014"/>
         <source>When the PV is low on energy, the PV charges the battery while supplying power to the load, at which point the grid supplements the load with insufficient energy.</source>
         <translation>当光伏能量不足时，光伏会给电池充电，同时为负载供电，此时电网会给负载补足剩余的能量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="16539"/>
+        <location filename="../mywidget.ui" line="17050"/>
         <source>When the PV energy is insufficient, the PV will charge the battery;if the power of the load is less than the power value set on the AC side, the AC side will provide energy to the load and the remaining energy will charge the battery.</source>
         <translation>当光伏能量不足时，光伏将为电池充电:如果负载的功率小于交流侧设定的功率值，交流侧将为负载提供能量，剩余能量将为电池充电。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="16657"/>
+        <location filename="../mywidget.ui" line="17168"/>
         <source>When the energy of the PV is insufficient and the power of the load is greater than the set AC-side power, the available power on the AC-side will be supplied to the load in full, and the PV will replenish the remaining insufficient energy; if the energy replenished by the PV is insufficient, the battery will replenish the remaining energy.</source>
         <translation>当光伏的能量不足，而负载的功率大于设定的交流侧功率时，交流侧的可用功率将全部供给负载，光伏将补充剩余的不足能量;如果光伏补充的能量不足，电池将补充剩余能量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="16693"/>
+        <location filename="../mywidget.ui" line="17204"/>
         <source>When the PV is unavailable and the power of the load is less than the power value of the AC setting,the energy on the AC side will be provided to the load and remaining energy will charge the battery.</source>
         <translation>当光伏不可用且负载功率小于交流电设置的功率值时，交流侧会给负载提供能量，同时剩余的能量将为电池充电。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="16729"/>
+        <location filename="../mywidget.ui" line="17240"/>
         <source>When the PV is unavailable and the load power is greater than the power value set the AC side energizes the load while battery energizes the load.</source>
         <translation>当光伏不可用且负载功率大于交流侧设定的功率值时，交流侧和电池一起为负载供电。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="16931"/>
+        <location filename="../mywidget.ui" line="17442"/>
         <source>&quot;Mixed Mode&quot; allows the system to automatically run different functional logic at different times. At the same time, it can run the function of &quot;peak shaving and valley filling&quot; according to the local peak and valley tariffs.</source>
         <translation>&quot;混合模式”允许系统在不同时间内自动运行不同的功能逻辑。同时，它还可以根据当地的峰谷电价运行&quot;削峰填谷&quot;功能。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="16976"/>
+        <location filename="../mywidget.ui" line="17490"/>
         <source>The &quot;Manual Mode&quot; has no operational logic and allows for the manual control of battery charging and discharging. This mode is applicable in the following scenarios:
 1、Battery charge and discharge testing.
 2、Energy Management System (EMS) scheduling of the MPS.
@@ -1856,34 +1939,34 @@ power-off</source>
 2、能量管理系统(EMS)调度</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="17044"/>
-        <location filename="../mywidget.cpp" line="1320"/>
+        <location filename="../mywidget.ui" line="17558"/>
+        <location filename="../mywidget.cpp" line="1829"/>
         <source>Battery Area</source>
         <translation>电池区域划分</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="17126"/>
-        <location filename="../mywidget.cpp" line="1320"/>
+        <location filename="../mywidget.ui" line="17640"/>
+        <location filename="../mywidget.cpp" line="1829"/>
         <source>Battery Priority</source>
         <translation>电池优先</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="17167"/>
+        <location filename="../mywidget.ui" line="17681"/>
         <source>Optimal Mode</source>
         <translation>最优模式</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="17208"/>
+        <location filename="../mywidget.ui" line="17722"/>
         <source>Mixed Mode</source>
         <translation>混合模式</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="17451"/>
+        <location filename="../mywidget.ui" line="18007"/>
         <source>Converter2 Turn off</source>
         <translation>变流器2关闭</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="18444"/>
+        <location filename="../mywidget.ui" line="19000"/>
         <source>Turn On/Off</source>
         <translation>开/关 机</translation>
     </message>
@@ -1920,7 +2003,7 @@ power-off</source>
         <translation type="vanished">       SN:</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="17408"/>
+        <location filename="../mywidget.ui" line="17952"/>
         <source>M_01 Converter turn off</source>
         <translation>M_01 变流器关闭</translation>
     </message>
@@ -1929,36 +2012,36 @@ power-off</source>
         <translation type="vanished">100kW</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="3138"/>
-        <location filename="../mywidget.ui" line="3353"/>
-        <location filename="../mywidget.ui" line="3397"/>
+        <location filename="../mywidget.ui" line="3210"/>
+        <location filename="../mywidget.ui" line="3425"/>
         <location filename="../mywidget.ui" line="3469"/>
-        <location filename="../mywidget.ui" line="3576"/>
-        <location filename="../mywidget.ui" line="3808"/>
-        <location filename="../mywidget.ui" line="3892"/>
-        <location filename="../mywidget.ui" line="3920"/>
+        <location filename="../mywidget.ui" line="3541"/>
+        <location filename="../mywidget.ui" line="3659"/>
+        <location filename="../mywidget.ui" line="3891"/>
+        <location filename="../mywidget.ui" line="3975"/>
+        <location filename="../mywidget.ui" line="4003"/>
         <source>0V</source>
         <translation>0V</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="3167"/>
-        <location filename="../mywidget.ui" line="3605"/>
-        <location filename="../mywidget.ui" line="3836"/>
-        <location filename="../mywidget.ui" line="3864"/>
-        <location filename="../mywidget.ui" line="3948"/>
+        <location filename="../mywidget.ui" line="3239"/>
+        <location filename="../mywidget.ui" line="3688"/>
+        <location filename="../mywidget.ui" line="3919"/>
+        <location filename="../mywidget.ui" line="3947"/>
+        <location filename="../mywidget.ui" line="4031"/>
         <source>0A</source>
         <translation>0A</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="3183"/>
-        <location filename="../mywidget.ui" line="4024"/>
+        <location filename="../mywidget.ui" line="3255"/>
+        <location filename="../mywidget.ui" line="4107"/>
         <source>0kW</source>
         <translation>0kW</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="3381"/>
-        <location filename="../mywidget.ui" line="3425"/>
         <location filename="../mywidget.ui" line="3453"/>
+        <location filename="../mywidget.ui" line="3497"/>
+        <location filename="../mywidget.ui" line="3525"/>
         <source>0A </source>
         <translation>0A </translation>
     </message>
@@ -1967,27 +2050,27 @@ power-off</source>
         <translation type="vanished">当前模式：CP</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2875"/>
+        <location filename="../mywidget.ui" line="2935"/>
         <source>PV:</source>
         <translation>光伏：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2948"/>
+        <location filename="../mywidget.ui" line="3008"/>
         <source>Battery charging:</source>
         <translation>电池充电量：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2961"/>
+        <location filename="../mywidget.ui" line="3021"/>
         <source>Battery discharging:</source>
         <translation>电池放电量：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="2901"/>
-        <location filename="../mywidget.ui" line="2935"/>
-        <location filename="../mywidget.ui" line="2974"/>
-        <location filename="../mywidget.ui" line="4106"/>
-        <location filename="../mywidget.ui" line="4184"/>
-        <location filename="../mywidget.ui" line="4197"/>
+        <location filename="../mywidget.ui" line="2961"/>
+        <location filename="../mywidget.ui" line="2995"/>
+        <location filename="../mywidget.ui" line="3034"/>
+        <location filename="../mywidget.ui" line="4199"/>
+        <location filename="../mywidget.ui" line="4277"/>
+        <location filename="../mywidget.ui" line="4290"/>
         <source>0kWh</source>
         <translation>0kWh</translation>
     </message>
@@ -1996,7 +2079,7 @@ power-off</source>
         <translation type="vanished">电网充电量：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4119"/>
+        <location filename="../mywidget.ui" line="4212"/>
         <source>Load:</source>
         <translation>负载：</translation>
     </message>
@@ -2005,12 +2088,12 @@ power-off</source>
         <translation type="vanished">电网放电量：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4002"/>
+        <location filename="../mywidget.ui" line="4085"/>
         <source>Power meter</source>
         <translation>电表功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="3617"/>
+        <location filename="../mywidget.ui" line="3700"/>
         <source>SOC:</source>
         <translation>剩余电量：</translation>
     </message>
@@ -2019,31 +2102,31 @@ power-off</source>
         <translation type="vanished">请输入搜索关键词</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6691"/>
-        <location filename="../mywidget.cpp" line="1707"/>
+        <location filename="../mywidget.ui" line="6794"/>
+        <location filename="../mywidget.cpp" line="2419"/>
         <source>Allowable charging power</source>
         <translation>可充电功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6709"/>
-        <location filename="../mywidget.cpp" line="1711"/>
+        <location filename="../mywidget.ui" line="6812"/>
+        <location filename="../mywidget.cpp" line="2423"/>
         <source>Allowable discharging power</source>
         <translation>可放电功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6727"/>
-        <location filename="../mywidget.cpp" line="1715"/>
+        <location filename="../mywidget.ui" line="6830"/>
+        <location filename="../mywidget.cpp" line="2427"/>
         <source>Allowable charging energy</source>
         <translation>可充电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6745"/>
-        <location filename="../mywidget.cpp" line="1719"/>
+        <location filename="../mywidget.ui" line="6848"/>
+        <location filename="../mywidget.cpp" line="2431"/>
         <source>Allowable discharging energy</source>
         <translation>可放电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8023"/>
+        <location filename="../mywidget.ui" line="8126"/>
         <source>status:</source>
         <translation>状态：</translation>
     </message>
@@ -2058,8 +2141,8 @@ B1:
 柴发关闭电压（B1）</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9002"/>
-        <location filename="../mywidget.ui" line="12535"/>
+        <location filename="../mywidget.ui" line="9105"/>
+        <location filename="../mywidget.ui" line="12763"/>
         <source>A1: Generator turn on voltage
 B1: Generator turn off voltage
 A1 Setting range: [250, 900]
@@ -2073,14 +2156,13 @@ B1 设定范围： [250,900]
     </message>
     <message>
         <location filename="../mywidget.ui" line="1419"/>
-        <location filename="../mywidget.ui" line="14026"/>
+        <location filename="../mywidget.ui" line="14254"/>
         <source>CV Parallel</source>
         <translation>恒压并机</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="831"/>
         <source>Change Language</source>
-        <translation>切换语言</translation>
+        <translation type="vanished">切换语言</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="514"/>
@@ -2089,14 +2171,14 @@ B1 设定范围： [250,900]
     </message>
     <message>
         <location filename="../mywidget.ui" line="1180"/>
-        <location filename="../mywidget.ui" line="13804"/>
-        <location filename="../mywidget.cpp" line="3631"/>
+        <location filename="../mywidget.ui" line="14032"/>
+        <location filename="../mywidget.cpp" line="4291"/>
         <source>Rack</source>
         <translation>机架</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1111"/>
-        <location filename="../mywidget.cpp" line="3589"/>
+        <location filename="../mywidget.cpp" line="4249"/>
         <source>Transformer Turns Ratio</source>
         <translation>变压器变比</translation>
     </message>
@@ -2112,19 +2194,19 @@ B1 设定范围： [250,900]
     </message>
     <message>
         <location filename="../mywidget.ui" line="1021"/>
-        <location filename="../mywidget.ui" line="13249"/>
+        <location filename="../mywidget.ui" line="13477"/>
         <source>Backup setup parameters</source>
         <translation>备份设置参数</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1074"/>
-        <location filename="../mywidget.ui" line="13278"/>
+        <location filename="../mywidget.ui" line="13506"/>
         <source>Restore backup setup parameters</source>
         <translation>恢复备份设置参数</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="1562"/>
-        <location filename="../mywidget.ui" line="14194"/>
+        <location filename="../mywidget.ui" line="14422"/>
         <source>ATS Signal</source>
         <translation>柴发信号</translation>
     </message>
@@ -2135,7 +2217,7 @@ B1 设定范围： [250,900]
     </message>
     <message>
         <location filename="../mywidget.ui" line="114"/>
-        <location filename="../mywidget.ui" line="2598"/>
+        <location filename="../mywidget.ui" line="2611"/>
         <source>Change
 Language</source>
         <translation>切换语言</translation>
@@ -2145,17 +2227,17 @@ Language</source>
         <translation type="vanished">100kW-TS</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4236"/>
+        <location filename="../mywidget.ui" line="4329"/>
         <source>Grid sell:</source>
         <translation>电网卖电量：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4171"/>
+        <location filename="../mywidget.ui" line="4264"/>
         <source>Grid buy:</source>
         <translation>电网购电量：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="3627"/>
+        <location filename="../mywidget.ui" line="3710"/>
         <source>0%</source>
         <translation>0%</translation>
     </message>
@@ -2164,133 +2246,137 @@ Language</source>
         <translation type="vanished">MPS数据</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4459"/>
-        <location filename="../mywidget.ui" line="5541"/>
-        <location filename="../mywidget.ui" line="5775"/>
-        <location filename="../mywidget.ui" line="5835"/>
-        <location filename="../mywidget.ui" line="8768"/>
-        <location filename="../mywidget.ui" line="9721"/>
-        <location filename="../mywidget.ui" line="15168"/>
-        <location filename="../mywidget.cpp" line="2500"/>
-        <location filename="../mywidget.cpp" line="3345"/>
-        <location filename="../mywidget.cpp" line="3350"/>
+        <location filename="../mywidget.ui" line="4562"/>
+        <location filename="../mywidget.ui" line="5644"/>
+        <location filename="../mywidget.ui" line="5878"/>
+        <location filename="../mywidget.ui" line="5938"/>
+        <location filename="../mywidget.ui" line="8871"/>
+        <location filename="../mywidget.ui" line="9824"/>
+        <location filename="../mywidget.ui" line="15640"/>
+        <location filename="../mywidget.cpp" line="3160"/>
+        <location filename="../mywidget.cpp" line="3998"/>
+        <location filename="../mywidget.cpp" line="4003"/>
         <source>1</source>
         <translation>1</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4486"/>
-        <location filename="../mywidget.ui" line="5568"/>
-        <location filename="../mywidget.ui" line="5780"/>
-        <location filename="../mywidget.ui" line="5840"/>
-        <location filename="../mywidget.ui" line="9726"/>
-        <location filename="../mywidget.ui" line="15173"/>
+        <location filename="../mywidget.ui" line="4589"/>
+        <location filename="../mywidget.ui" line="5671"/>
+        <location filename="../mywidget.ui" line="5883"/>
+        <location filename="../mywidget.ui" line="5943"/>
+        <location filename="../mywidget.ui" line="9829"/>
+        <location filename="../mywidget.ui" line="15645"/>
         <source>2</source>
         <translation>2</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4504"/>
-        <location filename="../mywidget.ui" line="5586"/>
-        <location filename="../mywidget.ui" line="5785"/>
-        <location filename="../mywidget.ui" line="5845"/>
-        <location filename="../mywidget.ui" line="9731"/>
-        <location filename="../mywidget.ui" line="15178"/>
+        <location filename="../mywidget.ui" line="4607"/>
+        <location filename="../mywidget.ui" line="5689"/>
+        <location filename="../mywidget.ui" line="5888"/>
+        <location filename="../mywidget.ui" line="5948"/>
+        <location filename="../mywidget.ui" line="9834"/>
+        <location filename="../mywidget.ui" line="15650"/>
         <source>3</source>
         <translation>3</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4522"/>
-        <location filename="../mywidget.ui" line="5604"/>
-        <location filename="../mywidget.ui" line="5790"/>
-        <location filename="../mywidget.ui" line="5850"/>
-        <location filename="../mywidget.ui" line="9736"/>
-        <location filename="../mywidget.ui" line="15183"/>
+        <location filename="../mywidget.ui" line="4625"/>
+        <location filename="../mywidget.ui" line="5707"/>
+        <location filename="../mywidget.ui" line="5893"/>
+        <location filename="../mywidget.ui" line="5953"/>
+        <location filename="../mywidget.ui" line="9839"/>
+        <location filename="../mywidget.ui" line="15655"/>
         <source>4</source>
         <translation>4</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4540"/>
-        <location filename="../mywidget.ui" line="5622"/>
-        <location filename="../mywidget.ui" line="5795"/>
-        <location filename="../mywidget.ui" line="5855"/>
-        <location filename="../mywidget.ui" line="9741"/>
-        <location filename="../mywidget.ui" line="15188"/>
+        <location filename="../mywidget.ui" line="4643"/>
+        <location filename="../mywidget.ui" line="5725"/>
+        <location filename="../mywidget.ui" line="5898"/>
+        <location filename="../mywidget.ui" line="5958"/>
+        <location filename="../mywidget.ui" line="9844"/>
+        <location filename="../mywidget.ui" line="15660"/>
         <source>5</source>
         <translation>5</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4558"/>
-        <location filename="../mywidget.ui" line="5640"/>
-        <location filename="../mywidget.ui" line="5800"/>
-        <location filename="../mywidget.ui" line="5860"/>
-        <location filename="../mywidget.ui" line="9746"/>
-        <location filename="../mywidget.ui" line="15193"/>
+        <location filename="../mywidget.ui" line="4661"/>
+        <location filename="../mywidget.ui" line="5743"/>
+        <location filename="../mywidget.ui" line="5903"/>
+        <location filename="../mywidget.ui" line="5963"/>
+        <location filename="../mywidget.ui" line="9849"/>
+        <location filename="../mywidget.ui" line="15665"/>
         <source>6</source>
         <translation>6</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4582"/>
-        <location filename="../mywidget.ui" line="5664"/>
-        <location filename="../mywidget.ui" line="5805"/>
-        <location filename="../mywidget.ui" line="9751"/>
-        <location filename="../mywidget.ui" line="15198"/>
+        <location filename="../mywidget.ui" line="4685"/>
+        <location filename="../mywidget.ui" line="5767"/>
+        <location filename="../mywidget.ui" line="5908"/>
+        <location filename="../mywidget.ui" line="9854"/>
+        <location filename="../mywidget.ui" line="15670"/>
         <source>7</source>
         <translation>7</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4600"/>
-        <location filename="../mywidget.ui" line="5682"/>
-        <location filename="../mywidget.ui" line="5810"/>
-        <location filename="../mywidget.ui" line="9756"/>
-        <location filename="../mywidget.ui" line="15203"/>
+        <location filename="../mywidget.ui" line="4703"/>
+        <location filename="../mywidget.ui" line="5785"/>
+        <location filename="../mywidget.ui" line="5913"/>
+        <location filename="../mywidget.ui" line="9859"/>
+        <location filename="../mywidget.ui" line="15675"/>
         <source>8</source>
         <translation>8</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4618"/>
-        <location filename="../mywidget.ui" line="5700"/>
-        <location filename="../mywidget.ui" line="5815"/>
+        <location filename="../mywidget.ui" line="4721"/>
+        <location filename="../mywidget.ui" line="5803"/>
+        <location filename="../mywidget.ui" line="5918"/>
         <source>9</source>
         <translation>9</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4636"/>
-        <location filename="../mywidget.ui" line="5718"/>
-        <location filename="../mywidget.ui" line="5820"/>
-        <location filename="../mywidget.cpp" line="2958"/>
+        <location filename="../mywidget.ui" line="4739"/>
+        <location filename="../mywidget.ui" line="5821"/>
+        <location filename="../mywidget.ui" line="5923"/>
+        <location filename="../mywidget.cpp" line="3618"/>
         <source>10</source>
         <translation>10</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4654"/>
-        <location filename="../mywidget.ui" line="5736"/>
-        <location filename="../mywidget.ui" line="5825"/>
+        <location filename="../mywidget.ui" line="4757"/>
+        <location filename="../mywidget.ui" line="5839"/>
+        <location filename="../mywidget.ui" line="5928"/>
         <source>11</source>
         <translation>11</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4672"/>
-        <location filename="../mywidget.ui" line="5754"/>
-        <location filename="../mywidget.ui" line="5830"/>
+        <location filename="../mywidget.ui" line="4775"/>
+        <location filename="../mywidget.ui" line="5857"/>
+        <location filename="../mywidget.ui" line="5933"/>
         <source>12</source>
         <translation>12</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4787"/>
+        <location filename="../mywidget.ui" line="4890"/>
+        <location filename="../mywidget.cpp" line="1850"/>
         <source>Converter</source>
         <translation>变流器</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="5010"/>
+        <location filename="../mywidget.ui" line="5113"/>
+        <location filename="../mywidget.cpp" line="1848"/>
         <source>PV</source>
         <translation>PV</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="5233"/>
+        <location filename="../mywidget.ui" line="5336"/>
+        <location filename="../mywidget.cpp" line="1852"/>
         <source>Grid</source>
         <translation>电网</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="5456"/>
+        <location filename="../mywidget.ui" line="5559"/>
+        <location filename="../mywidget.cpp" line="1849"/>
         <source>Load</source>
         <translation>负载</translation>
     </message>
@@ -2307,141 +2393,141 @@ Language</source>
         <translation type="vanished">搜索</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6004"/>
+        <location filename="../mywidget.ui" line="6107"/>
         <source>Battery Data</source>
         <translation>电池数据</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6084"/>
-        <location filename="../mywidget.ui" line="6637"/>
-        <location filename="../mywidget.ui" line="9073"/>
-        <location filename="../mywidget.ui" line="9088"/>
-        <location filename="../mywidget.ui" line="9761"/>
-        <location filename="../mywidget.ui" line="15208"/>
-        <location filename="../mywidget.cpp" line="1022"/>
-        <location filename="../mywidget.cpp" line="1065"/>
-        <location filename="../mywidget.cpp" line="1111"/>
-        <location filename="../mywidget.cpp" line="1169"/>
-        <location filename="../mywidget.cpp" line="1329"/>
+        <location filename="../mywidget.ui" line="6187"/>
+        <location filename="../mywidget.ui" line="6740"/>
+        <location filename="../mywidget.ui" line="9176"/>
+        <location filename="../mywidget.ui" line="9191"/>
+        <location filename="../mywidget.ui" line="9864"/>
+        <location filename="../mywidget.ui" line="15680"/>
+        <location filename="../mywidget.cpp" line="1531"/>
+        <location filename="../mywidget.cpp" line="1574"/>
+        <location filename="../mywidget.cpp" line="1620"/>
+        <location filename="../mywidget.cpp" line="1678"/>
+        <location filename="../mywidget.cpp" line="1861"/>
         <source>Name</source>
         <translation>名称</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6103"/>
+        <location filename="../mywidget.ui" line="6206"/>
         <source>Bat voltage</source>
         <translation>电池电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6122"/>
-        <location filename="../mywidget.cpp" line="1671"/>
+        <location filename="../mywidget.ui" line="6225"/>
+        <location filename="../mywidget.cpp" line="2383"/>
         <source>Bat current</source>
         <translation>电池电流</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6141"/>
-        <location filename="../mywidget.cpp" line="1675"/>
+        <location filename="../mywidget.ui" line="6244"/>
+        <location filename="../mywidget.cpp" line="2387"/>
         <source>SOC</source>
         <translation>SOC</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6160"/>
-        <location filename="../mywidget.cpp" line="1679"/>
+        <location filename="../mywidget.ui" line="6263"/>
+        <location filename="../mywidget.cpp" line="2391"/>
         <source>SOH</source>
         <translation>SOH</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6179"/>
+        <location filename="../mywidget.ui" line="6282"/>
         <source>Cell voltage (max)</source>
         <translation>单体最高电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6198"/>
+        <location filename="../mywidget.ui" line="6301"/>
         <source>Cell voltage (min)</source>
         <translation>单体最低电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6217"/>
+        <location filename="../mywidget.ui" line="6320"/>
         <source>Cell temp. (max)</source>
         <translation>单体最高温度</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6236"/>
+        <location filename="../mywidget.ui" line="6339"/>
         <source>Cell temp. (min)</source>
         <translation>单体最低温度</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6264"/>
-        <location filename="../mywidget.ui" line="6809"/>
-        <location filename="../mywidget.ui" line="9078"/>
-        <location filename="../mywidget.ui" line="9093"/>
-        <location filename="../mywidget.cpp" line="975"/>
-        <location filename="../mywidget.cpp" line="1022"/>
-        <location filename="../mywidget.cpp" line="1065"/>
-        <location filename="../mywidget.cpp" line="1111"/>
-        <location filename="../mywidget.cpp" line="1169"/>
-        <location filename="../mywidget.cpp" line="1329"/>
+        <location filename="../mywidget.ui" line="6367"/>
+        <location filename="../mywidget.ui" line="6912"/>
+        <location filename="../mywidget.ui" line="9181"/>
+        <location filename="../mywidget.ui" line="9196"/>
+        <location filename="../mywidget.cpp" line="1484"/>
+        <location filename="../mywidget.cpp" line="1531"/>
+        <location filename="../mywidget.cpp" line="1574"/>
+        <location filename="../mywidget.cpp" line="1620"/>
+        <location filename="../mywidget.cpp" line="1678"/>
+        <location filename="../mywidget.cpp" line="1861"/>
         <source>Value</source>
         <translation>值</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6294"/>
-        <location filename="../mywidget.ui" line="6313"/>
-        <location filename="../mywidget.ui" line="6332"/>
-        <location filename="../mywidget.ui" line="6351"/>
-        <location filename="../mywidget.ui" line="6370"/>
-        <location filename="../mywidget.ui" line="6389"/>
-        <location filename="../mywidget.ui" line="6408"/>
-        <location filename="../mywidget.ui" line="6427"/>
-        <location filename="../mywidget.ui" line="6834"/>
-        <location filename="../mywidget.ui" line="6853"/>
-        <location filename="../mywidget.ui" line="6872"/>
-        <location filename="../mywidget.ui" line="6891"/>
-        <location filename="../mywidget.ui" line="6910"/>
-        <location filename="../mywidget.ui" line="6929"/>
-        <location filename="../mywidget.ui" line="9212"/>
-        <location filename="../mywidget.ui" line="9294"/>
-        <location filename="../mywidget.ui" line="9367"/>
-        <location filename="../mywidget.ui" line="9431"/>
-        <location filename="../mywidget.ui" line="9495"/>
-        <location filename="../mywidget.ui" line="12629"/>
-        <location filename="../mywidget.ui" line="12675"/>
-        <location filename="../mywidget.ui" line="12721"/>
-        <location filename="../mywidget.ui" line="12767"/>
-        <location filename="../mywidget.ui" line="12834"/>
-        <location filename="../mywidget.cpp" line="2480"/>
-        <location filename="../mywidget.cpp" line="2939"/>
-        <location filename="../mywidget.cpp" line="2994"/>
-        <location filename="../mywidget.cpp" line="2998"/>
-        <location filename="../mywidget.cpp" line="3116"/>
-        <location filename="../mywidget.cpp" line="3123"/>
+        <location filename="../mywidget.ui" line="6397"/>
+        <location filename="../mywidget.ui" line="6416"/>
+        <location filename="../mywidget.ui" line="6435"/>
+        <location filename="../mywidget.ui" line="6454"/>
+        <location filename="../mywidget.ui" line="6473"/>
+        <location filename="../mywidget.ui" line="6492"/>
+        <location filename="../mywidget.ui" line="6511"/>
+        <location filename="../mywidget.ui" line="6530"/>
+        <location filename="../mywidget.ui" line="6937"/>
+        <location filename="../mywidget.ui" line="6956"/>
+        <location filename="../mywidget.ui" line="6975"/>
+        <location filename="../mywidget.ui" line="6994"/>
+        <location filename="../mywidget.ui" line="7013"/>
+        <location filename="../mywidget.ui" line="7032"/>
+        <location filename="../mywidget.ui" line="9315"/>
+        <location filename="../mywidget.ui" line="9397"/>
+        <location filename="../mywidget.ui" line="9470"/>
+        <location filename="../mywidget.ui" line="9534"/>
+        <location filename="../mywidget.ui" line="9598"/>
+        <location filename="../mywidget.ui" line="12857"/>
+        <location filename="../mywidget.ui" line="12903"/>
+        <location filename="../mywidget.ui" line="12949"/>
+        <location filename="../mywidget.ui" line="12995"/>
+        <location filename="../mywidget.ui" line="13062"/>
+        <location filename="../mywidget.cpp" line="3140"/>
+        <location filename="../mywidget.cpp" line="3599"/>
+        <location filename="../mywidget.cpp" line="3652"/>
+        <location filename="../mywidget.cpp" line="3656"/>
+        <location filename="../mywidget.cpp" line="3772"/>
+        <location filename="../mywidget.cpp" line="3777"/>
         <source>0</source>
         <translation>0</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6452"/>
-        <location filename="../mywidget.ui" line="6980"/>
-        <location filename="../mywidget.ui" line="9083"/>
-        <location filename="../mywidget.ui" line="9098"/>
+        <location filename="../mywidget.ui" line="6555"/>
+        <location filename="../mywidget.ui" line="7083"/>
+        <location filename="../mywidget.ui" line="9186"/>
+        <location filename="../mywidget.ui" line="9201"/>
         <source>Unit</source>
         <translation>单位</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6488"/>
-        <location filename="../mywidget.ui" line="6998"/>
-        <location filename="../mywidget.ui" line="7016"/>
-        <location filename="../mywidget.ui" line="8550"/>
+        <location filename="../mywidget.ui" line="6591"/>
+        <location filename="../mywidget.ui" line="7101"/>
+        <location filename="../mywidget.ui" line="7119"/>
+        <location filename="../mywidget.ui" line="8653"/>
         <source>A</source>
         <translation>A</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6542"/>
-        <location filename="../mywidget.ui" line="6560"/>
+        <location filename="../mywidget.ui" line="6645"/>
+        <location filename="../mywidget.ui" line="6663"/>
         <source>mV</source>
         <translation>mV</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6578"/>
-        <location filename="../mywidget.ui" line="6596"/>
+        <location filename="../mywidget.ui" line="6681"/>
+        <location filename="../mywidget.ui" line="6699"/>
         <source>℃</source>
         <translation>℃</translation>
     </message>
@@ -2470,12 +2556,12 @@ Language</source>
         <translation type="vanished">可放电电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7148"/>
+        <location filename="../mywidget.ui" line="7251"/>
         <source>prompt:</source>
         <translation>提示：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7189"/>
+        <location filename="../mywidget.ui" line="7292"/>
         <source>Normal</source>
         <translation>正常</translation>
     </message>
@@ -2492,7 +2578,7 @@ Language</source>
         <translation type="vanished">告警3</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7345"/>
+        <location filename="../mywidget.ui" line="7448"/>
         <source>Alarm level:</source>
         <translation>告警等级：</translation>
     </message>
@@ -2505,19 +2591,20 @@ enable</source>
         <location filename="../mywidget.ui" line="1586"/>
         <location filename="../mywidget.ui" line="1630"/>
         <location filename="../mywidget.ui" line="1674"/>
-        <location filename="../mywidget.ui" line="7414"/>
-        <location filename="../mywidget.ui" line="7458"/>
-        <location filename="../mywidget.ui" line="14218"/>
-        <location filename="../mywidget.ui" line="14262"/>
-        <location filename="../mywidget.ui" line="14306"/>
-        <location filename="../mywidget.cpp" line="2254"/>
-        <location filename="../mywidget.cpp" line="2270"/>
-        <location filename="../mywidget.cpp" line="3677"/>
-        <location filename="../mywidget.cpp" line="3680"/>
-        <location filename="../mywidget.cpp" line="3683"/>
-        <location filename="../mywidget.cpp" line="3686"/>
-        <location filename="../mywidget.cpp" line="3689"/>
-        <location filename="../mywidget.cpp" line="3692"/>
+        <location filename="../mywidget.ui" line="7517"/>
+        <location filename="../mywidget.ui" line="7561"/>
+        <location filename="../mywidget.ui" line="14446"/>
+        <location filename="../mywidget.ui" line="14490"/>
+        <location filename="../mywidget.ui" line="14534"/>
+        <location filename="../mywidget.cpp" line="2919"/>
+        <location filename="../mywidget.cpp" line="2935"/>
+        <location filename="../mywidget.cpp" line="3608"/>
+        <location filename="../mywidget.cpp" line="4337"/>
+        <location filename="../mywidget.cpp" line="4340"/>
+        <location filename="../mywidget.cpp" line="4343"/>
+        <location filename="../mywidget.cpp" line="4346"/>
+        <location filename="../mywidget.cpp" line="4349"/>
+        <location filename="../mywidget.cpp" line="4352"/>
         <source>Enable</source>
         <translation>使能</translation>
     </message>
@@ -2527,68 +2614,68 @@ enable</source>
         <translation type="vanished">放电使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7539"/>
+        <location filename="../mywidget.ui" line="7642"/>
         <source>Data report</source>
         <translation>数据报表</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7652"/>
+        <location filename="../mywidget.ui" line="7755"/>
         <source>yyyy-MM-dd</source>
         <translation>yyyy-MM-dd</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7684"/>
-        <location filename="../mywidget.cpp" line="3990"/>
+        <location filename="../mywidget.ui" line="7787"/>
+        <location filename="../mywidget.cpp" line="4650"/>
         <source>Y  -</source>
         <translation>年 -</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7703"/>
-        <location filename="../mywidget.cpp" line="4002"/>
+        <location filename="../mywidget.ui" line="7806"/>
+        <location filename="../mywidget.cpp" line="4662"/>
         <source>M  -</source>
         <translation>月 -</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7722"/>
-        <location filename="../mywidget.cpp" line="4014"/>
+        <location filename="../mywidget.ui" line="7825"/>
+        <location filename="../mywidget.cpp" line="4674"/>
         <source>D  -</source>
         <translation>日  -</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7748"/>
-        <location filename="../mywidget.cpp" line="3996"/>
+        <location filename="../mywidget.ui" line="7851"/>
+        <location filename="../mywidget.cpp" line="4656"/>
         <source>Y  +</source>
         <translation>年 +</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7767"/>
-        <location filename="../mywidget.cpp" line="4008"/>
+        <location filename="../mywidget.ui" line="7870"/>
+        <location filename="../mywidget.cpp" line="4668"/>
         <source>M  +</source>
         <translation>月 +</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7786"/>
-        <location filename="../mywidget.cpp" line="4020"/>
+        <location filename="../mywidget.ui" line="7889"/>
+        <location filename="../mywidget.cpp" line="4680"/>
         <source>D  +</source>
         <translation>日  +</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7802"/>
+        <location filename="../mywidget.ui" line="7905"/>
         <source>Export Data</source>
         <translation>导出数据</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7851"/>
+        <location filename="../mywidget.ui" line="7954"/>
         <source>Note:</source>
         <translation>提示：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7871"/>
+        <location filename="../mywidget.ui" line="7974"/>
         <source>Log.csv</source>
         <translation>Log.csv</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7892"/>
+        <location filename="../mywidget.ui" line="7995"/>
         <source>Out put file:</source>
         <translation>输出文件：</translation>
     </message>
@@ -2597,12 +2684,12 @@ enable</source>
         <translation type="vanished">HistoryRecord.csv</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7934"/>
+        <location filename="../mywidget.ui" line="8037"/>
         <source>Report.csv</source>
         <translation>Report.csv</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7975"/>
+        <location filename="../mywidget.ui" line="8078"/>
         <source>Data To Export</source>
         <translation>导出数据</translation>
     </message>
@@ -2619,7 +2706,7 @@ enable</source>
         <translation type="vanished">历史记录</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4032"/>
+        <location filename="../mywidget.cpp" line="4692"/>
         <source>OperationLog</source>
         <translation>操作日志</translation>
     </message>
@@ -2632,18 +2719,18 @@ enable</source>
         <translation type="vanished">退出U盘</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8237"/>
+        <location filename="../mywidget.ui" line="8340"/>
         <source>History Record</source>
         <translation>历史记录</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8127"/>
-        <location filename="../mywidget.ui" line="8274"/>
+        <location filename="../mywidget.ui" line="8230"/>
+        <location filename="../mywidget.ui" line="8377"/>
         <source>Operation Log</source>
         <translation>操作日志</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8339"/>
+        <location filename="../mywidget.ui" line="8442"/>
         <source>DC/AC Parameter</source>
         <translation>DC/AC参数</translation>
     </message>
@@ -2652,21 +2739,21 @@ enable</source>
         <translation type="vanished">PCS并网方式</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8414"/>
-        <location filename="../mywidget.ui" line="11714"/>
-        <location filename="../mywidget.cpp" line="3038"/>
+        <location filename="../mywidget.ui" line="8517"/>
+        <location filename="../mywidget.ui" line="11942"/>
+        <location filename="../mywidget.cpp" line="3696"/>
         <source>Control mode</source>
         <translation>控制模式</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8430"/>
+        <location filename="../mywidget.ui" line="8533"/>
         <source>Constant power (AC)</source>
         <translation>恒功率(AC)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8446"/>
-        <location filename="../mywidget.ui" line="13225"/>
-        <location filename="../mywidget.cpp" line="3374"/>
+        <location filename="../mywidget.ui" line="8549"/>
+        <location filename="../mywidget.ui" line="13453"/>
+        <location filename="../mywidget.cpp" line="4027"/>
         <source>Machine number</source>
         <translation>设备号</translation>
     </message>
@@ -2675,7 +2762,7 @@ enable</source>
         <translation type="vanished">充放电</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8478"/>
+        <location filename="../mywidget.ui" line="8581"/>
         <source>Parallel </source>
         <translation>并机 </translation>
     </message>
@@ -2688,37 +2775,37 @@ enable</source>
         <translation type="vanished">运行时段使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8494"/>
-        <location filename="../mywidget.ui" line="13077"/>
-        <location filename="../mywidget.cpp" line="3350"/>
+        <location filename="../mywidget.ui" line="8597"/>
+        <location filename="../mywidget.ui" line="13305"/>
+        <location filename="../mywidget.cpp" line="4003"/>
         <source>Output power factor</source>
         <translation>输出功率因素</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="4334"/>
+        <location filename="../mywidget.ui" line="4437"/>
         <source>Converter Data</source>
         <translation>变流器数据</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="5479"/>
-        <location filename="../mywidget.cpp" line="4149"/>
+        <location filename="../mywidget.ui" line="5582"/>
+        <location filename="../mywidget.cpp" line="4805"/>
         <source>Converter State</source>
         <translation>变流器状态</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="5873"/>
+        <location filename="../mywidget.ui" line="5976"/>
         <source>Converter Alarm</source>
         <translation>变流器告警</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6655"/>
-        <location filename="../mywidget.cpp" line="1699"/>
+        <location filename="../mywidget.ui" line="6758"/>
+        <location filename="../mywidget.cpp" line="2411"/>
         <source>Charging current limit</source>
         <translation>充电电流限制</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="6673"/>
-        <location filename="../mywidget.cpp" line="1703"/>
+        <location filename="../mywidget.ui" line="6776"/>
+        <location filename="../mywidget.cpp" line="2415"/>
         <source>Discharging current limit</source>
         <translation>放电电流限制</translation>
     </message>
@@ -2739,84 +2826,84 @@ enable</source>
         <translation type="vanished">可放电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7224"/>
+        <location filename="../mywidget.ui" line="7327"/>
         <source>Level1</source>
         <translation>一级告警</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7266"/>
+        <location filename="../mywidget.ui" line="7369"/>
         <source>Level2</source>
         <translation>二级告警</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7301"/>
+        <location filename="../mywidget.ui" line="7404"/>
         <source>Level3</source>
         <translation>三级告警</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7386"/>
+        <location filename="../mywidget.ui" line="7489"/>
         <source>Charging 
 enable</source>
         <translation>充电使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7430"/>
+        <location filename="../mywidget.ui" line="7533"/>
         <source>Discharging 
 enable</source>
         <translation>放电使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="7913"/>
+        <location filename="../mywidget.ui" line="8016"/>
         <source>Record.csv</source>
         <translation>Record.csv</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8064"/>
+        <location filename="../mywidget.ui" line="8167"/>
         <source>u disk disconnect!</source>
         <translation>U盘未插入！</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8098"/>
-        <location filename="../mywidget.cpp" line="4026"/>
+        <location filename="../mywidget.ui" line="8201"/>
+        <location filename="../mywidget.cpp" line="4686"/>
         <source>History Records</source>
         <translation>导出历史记录</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8162"/>
-        <location filename="../mywidget.cpp" line="4038"/>
+        <location filename="../mywidget.ui" line="8265"/>
+        <location filename="../mywidget.cpp" line="4698"/>
         <source>Electricity Statistical Table</source>
         <translation>电量统计表</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8462"/>
+        <location filename="../mywidget.ui" line="8565"/>
         <source>Working mode</source>
         <translation>工作模式</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8526"/>
-        <location filename="../mywidget.cpp" line="3345"/>
+        <location filename="../mywidget.ui" line="8629"/>
+        <location filename="../mywidget.cpp" line="3998"/>
         <source>Output reactive power</source>
         <translation>输出无功功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8542"/>
-        <location filename="../mywidget.cpp" line="3362"/>
+        <location filename="../mywidget.ui" line="8645"/>
+        <location filename="../mywidget.cpp" line="4015"/>
         <source>Constant current</source>
         <translation>恒流</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8558"/>
-        <location filename="../mywidget.cpp" line="3355"/>
+        <location filename="../mywidget.ui" line="8661"/>
+        <location filename="../mywidget.cpp" line="4008"/>
         <source>Constant voltage</source>
         <translation>恒压</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8594"/>
+        <location filename="../mywidget.ui" line="8697"/>
         <source>DC/DC Parameter</source>
         <translation>DC/DC参数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8613"/>
+        <location filename="../mywidget.ui" line="8716"/>
         <source>Battery setup</source>
         <translation>电池设置</translation>
     </message>
@@ -2839,44 +2926,44 @@ B1:
         <translation type="vanished">下电</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8786"/>
+        <location filename="../mywidget.ui" line="8889"/>
         <source>DOD_OnGrid(%):</source>
         <translation>并网DOD(%)：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8802"/>
+        <location filename="../mywidget.ui" line="8905"/>
         <source>DOD_OffGrid(%):</source>
         <translation>离网DOD(%)：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8834"/>
+        <location filename="../mywidget.ui" line="8937"/>
         <source>Charge Volt. upper Limit(V)</source>
         <translation>充电电压上限(V)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8850"/>
+        <location filename="../mywidget.ui" line="8953"/>
         <source>Charge Volt. upper Limit delta(V)</source>
         <translation>充电电压上限回差(V)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8866"/>
+        <location filename="../mywidget.ui" line="8969"/>
         <source>Discharge Volt. lower Limit(V)</source>
         <translation>放电电压下限(V)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8890"/>
+        <location filename="../mywidget.ui" line="8993"/>
         <source>Discharge Volt. lower Limit delta(V)</source>
         <translation>放电电压下限回差(V)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8906"/>
-        <location filename="../mywidget.ui" line="12346"/>
+        <location filename="../mywidget.ui" line="9009"/>
+        <location filename="../mywidget.ui" line="12574"/>
         <source>Charge Current Limit(A)</source>
         <translation>充电电流限制(A)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8922"/>
-        <location filename="../mywidget.ui" line="12383"/>
+        <location filename="../mywidget.ui" line="9025"/>
+        <location filename="../mywidget.ui" line="12611"/>
         <source>Discharge Current Limit(A)</source>
         <translation>放电电流限制(A)</translation>
     </message>
@@ -2889,14 +2976,14 @@ B1:
         <translation type="vanished">均充电压(V)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8794"/>
-        <location filename="../mywidget.ui" line="12457"/>
+        <location filename="../mywidget.ui" line="8897"/>
+        <location filename="../mywidget.ui" line="12685"/>
         <source>Generator turn off SOC(B1)</source>
         <translation>发电机关闭SOC(B1)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8810"/>
-        <location filename="../mywidget.ui" line="12420"/>
+        <location filename="../mywidget.ui" line="8913"/>
+        <location filename="../mywidget.ui" line="12648"/>
         <source>Generator turn on SOC(A1)</source>
         <translation>发电机开启SOC(A1)</translation>
     </message>
@@ -2925,132 +3012,132 @@ B1 - A1 ≥ 30 %
 </translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9036"/>
-        <location filename="../mywidget.ui" line="9041"/>
-        <location filename="../mywidget.ui" line="9046"/>
-        <location filename="../mywidget.ui" line="9051"/>
-        <location filename="../mywidget.ui" line="9056"/>
-        <location filename="../mywidget.ui" line="9061"/>
-        <location filename="../mywidget.ui" line="9066"/>
+        <location filename="../mywidget.ui" line="9139"/>
+        <location filename="../mywidget.ui" line="9144"/>
+        <location filename="../mywidget.ui" line="9149"/>
+        <location filename="../mywidget.ui" line="9154"/>
+        <location filename="../mywidget.ui" line="9159"/>
+        <location filename="../mywidget.ui" line="9164"/>
+        <location filename="../mywidget.ui" line="9169"/>
         <source>New Row</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9103"/>
-        <location filename="../mywidget.ui" line="12594"/>
-        <location filename="../mywidget.cpp" line="3220"/>
+        <location filename="../mywidget.ui" line="9206"/>
+        <location filename="../mywidget.ui" line="12822"/>
+        <location filename="../mywidget.cpp" line="3873"/>
         <source>Capacity</source>
         <translation>容量</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9111"/>
+        <location filename="../mywidget.ui" line="9214"/>
         <source>Ah</source>
         <translation>Ah</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9119"/>
-        <location filename="../mywidget.ui" line="12786"/>
+        <location filename="../mywidget.ui" line="9222"/>
+        <location filename="../mywidget.ui" line="13014"/>
         <source>Grid off EOD</source>
         <translation>离网EOD</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9135"/>
-        <location filename="../mywidget.ui" line="12640"/>
+        <location filename="../mywidget.ui" line="9238"/>
+        <location filename="../mywidget.ui" line="12868"/>
         <source>Cell number(2V)</source>
         <translation>电池节数(2V)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9151"/>
-        <location filename="../mywidget.ui" line="12740"/>
+        <location filename="../mywidget.ui" line="9254"/>
+        <location filename="../mywidget.ui" line="12968"/>
         <source>Grid on EOD</source>
         <translation>并网EOD</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9167"/>
-        <location filename="../mywidget.ui" line="12686"/>
-        <location filename="../mywidget.cpp" line="3230"/>
+        <location filename="../mywidget.ui" line="9270"/>
+        <location filename="../mywidget.ui" line="12914"/>
+        <location filename="../mywidget.cpp" line="3883"/>
         <source>Battery float voltage</source>
         <translation>电池浮充电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9183"/>
+        <location filename="../mywidget.ui" line="9286"/>
         <source>Shutdown voltage point</source>
         <translation>关机电压点</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9249"/>
-        <location filename="../mywidget.ui" line="12732"/>
-        <location filename="../mywidget.cpp" line="3235"/>
+        <location filename="../mywidget.ui" line="9352"/>
+        <location filename="../mywidget.ui" line="12960"/>
+        <location filename="../mywidget.cpp" line="3888"/>
         <source>Battery filling voltage</source>
         <translation>电池均充电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9265"/>
-        <location filename="../mywidget.ui" line="12618"/>
+        <location filename="../mywidget.ui" line="9368"/>
+        <location filename="../mywidget.ui" line="12846"/>
         <source>Mending center point</source>
         <translation>温补中心点</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9331"/>
-        <location filename="../mywidget.ui" line="12778"/>
-        <location filename="../mywidget.cpp" line="3240"/>
+        <location filename="../mywidget.ui" line="9434"/>
+        <location filename="../mywidget.ui" line="13006"/>
+        <location filename="../mywidget.cpp" line="3893"/>
         <source>Charge limiting value</source>
         <translation>充电限流值</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9339"/>
-        <location filename="../mywidget.ui" line="9403"/>
-        <location filename="../mywidget.ui" line="9547"/>
-        <location filename="../mywidget.ui" line="9579"/>
+        <location filename="../mywidget.ui" line="9442"/>
+        <location filename="../mywidget.ui" line="9506"/>
+        <location filename="../mywidget.ui" line="9650"/>
+        <location filename="../mywidget.ui" line="9682"/>
         <source>C</source>
         <translation>C</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9347"/>
-        <location filename="../mywidget.ui" line="12664"/>
+        <location filename="../mywidget.ui" line="9450"/>
+        <location filename="../mywidget.ui" line="12892"/>
         <source>Temperature filling coefficient</source>
         <translation>温补系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9395"/>
-        <location filename="../mywidget.ui" line="12815"/>
-        <location filename="../mywidget.cpp" line="3245"/>
+        <location filename="../mywidget.ui" line="9498"/>
+        <location filename="../mywidget.ui" line="13043"/>
+        <location filename="../mywidget.cpp" line="3898"/>
         <source>Discharge limiting value</source>
         <translation>放电限流值</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9411"/>
-        <location filename="../mywidget.ui" line="12710"/>
+        <location filename="../mywidget.ui" line="9514"/>
+        <location filename="../mywidget.ui" line="12938"/>
         <source>Mending allowable setting</source>
         <translation>温补允许设置</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9459"/>
+        <location filename="../mywidget.ui" line="9562"/>
         <source>Generator turn off voltage</source>
         <translation>发电机关闭电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9475"/>
-        <location filename="../mywidget.ui" line="12756"/>
+        <location filename="../mywidget.ui" line="9578"/>
+        <location filename="../mywidget.ui" line="12984"/>
         <source>Temperature alarm upper limit</source>
         <translation>温度告警上限</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9523"/>
+        <location filename="../mywidget.ui" line="9626"/>
         <source>Generator turn on voltage</source>
         <translation>发电机开启电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9539"/>
-        <location filename="../mywidget.ui" line="12802"/>
-        <location filename="../mywidget.cpp" line="3278"/>
+        <location filename="../mywidget.ui" line="9642"/>
+        <location filename="../mywidget.ui" line="13030"/>
+        <location filename="../mywidget.cpp" line="3931"/>
         <source>Uniform charging and flushing current</source>
         <translation>均充转浮充电流</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9571"/>
-        <location filename="../mywidget.ui" line="12845"/>
-        <location filename="../mywidget.cpp" line="3283"/>
+        <location filename="../mywidget.ui" line="9674"/>
+        <location filename="../mywidget.ui" line="13073"/>
+        <location filename="../mywidget.cpp" line="3936"/>
         <source>Float turn uniform charging current</source>
         <translation>浮充转均充电流</translation>
     </message>
@@ -3063,9 +3150,9 @@ B1 - A1 ≥ 30 %
         <translation type="vanished">每月深度放电日期：</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2986"/>
-        <location filename="../mywidget.cpp" line="2990"/>
-        <location filename="../mywidget.cpp" line="3440"/>
+        <location filename="../mywidget.cpp" line="3644"/>
+        <location filename="../mywidget.cpp" line="3648"/>
+        <location filename="../mywidget.cpp" line="4092"/>
         <source>20</source>
         <translation>20</translation>
     </message>
@@ -3074,13 +3161,13 @@ B1 - A1 ≥ 30 %
         <translation type="vanished">+</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9681"/>
+        <location filename="../mywidget.ui" line="9784"/>
         <source>SystemInformation</source>
         <translation>系统信息</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9694"/>
-        <location filename="../mywidget.ui" line="15135"/>
+        <location filename="../mywidget.ui" line="9797"/>
+        <location filename="../mywidget.ui" line="15607"/>
         <source>Version:</source>
         <translation>版本号：</translation>
     </message>
@@ -3089,37 +3176,37 @@ B1 - A1 ≥ 30 %
         <translation type="vanished">系统信息</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2340"/>
+        <location filename="../mywidget.cpp" line="3000"/>
         <source>Monitoring software version</source>
         <translation>监控版本</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2344"/>
+        <location filename="../mywidget.cpp" line="3004"/>
         <source>DCAC Protocol version</source>
         <translation>DCAC协议版本</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2348"/>
+        <location filename="../mywidget.cpp" line="3008"/>
         <source>DCAC Converter software version</source>
         <translation>DCAC变流器版本</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2352"/>
+        <location filename="../mywidget.cpp" line="3012"/>
         <source>DCAC CPLD software version</source>
         <translation>DCAC CPLD软件版本</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2356"/>
+        <location filename="../mywidget.cpp" line="3016"/>
         <source>DCDC Protocol version</source>
         <translation>DCDC 协议版本</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2360"/>
+        <location filename="../mywidget.cpp" line="3020"/>
         <source>DCDC Converter software version</source>
         <translation>DCDC 变流器软件版本</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2364"/>
+        <location filename="../mywidget.cpp" line="3024"/>
         <source>DCDC CPLD software version</source>
         <translation>DCDC CPLD软件版本</translation>
     </message>
@@ -3128,98 +3215,99 @@ B1 - A1 ≥ 30 %
         <translation type="vanished">SN：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9856"/>
-        <location filename="../mywidget.ui" line="15303"/>
+        <location filename="../mywidget.ui" line="9959"/>
+        <location filename="../mywidget.ui" line="15775"/>
         <source>Network:</source>
         <translation>网络：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9915"/>
-        <location filename="../mywidget.ui" line="15362"/>
+        <location filename="../mywidget.ui" line="10018"/>
+        <location filename="../mywidget.ui" line="15834"/>
         <source>interface:</source>
         <translation>接口号：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9956"/>
-        <location filename="../mywidget.ui" line="15403"/>
+        <location filename="../mywidget.ui" line="10059"/>
+        <location filename="../mywidget.ui" line="15210"/>
+        <location filename="../mywidget.ui" line="15875"/>
         <source>Port:</source>
         <translation>端口：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9937"/>
-        <location filename="../mywidget.ui" line="15384"/>
+        <location filename="../mywidget.ui" line="10040"/>
+        <location filename="../mywidget.ui" line="15856"/>
         <source>eth0</source>
         <translation>eth0</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8951"/>
+        <location filename="../mywidget.ui" line="9054"/>
         <source>DCAC cell delta(mV)</source>
         <translation>DCAC单体保护电压回差(mV)</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9771"/>
-        <location filename="../mywidget.ui" line="15218"/>
+        <location filename="../mywidget.ui" line="9874"/>
+        <location filename="../mywidget.ui" line="15690"/>
         <source>   Monitoring software version</source>
         <translation>      监控版本</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9784"/>
-        <location filename="../mywidget.ui" line="15231"/>
+        <location filename="../mywidget.ui" line="9887"/>
+        <location filename="../mywidget.ui" line="15703"/>
         <source>   DCAC Protocol version</source>
         <translation>      DCAC协议版本</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9792"/>
-        <location filename="../mywidget.ui" line="15239"/>
+        <location filename="../mywidget.ui" line="9895"/>
+        <location filename="../mywidget.ui" line="15711"/>
         <source>   DCAC Converter software version</source>
         <translation>      DCAC变流器版本</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9800"/>
-        <location filename="../mywidget.ui" line="15247"/>
+        <location filename="../mywidget.ui" line="9903"/>
+        <location filename="../mywidget.ui" line="15719"/>
         <source>   DCAC CPLD software version</source>
         <translation>      DCAC CPLD软件版本</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9813"/>
-        <location filename="../mywidget.ui" line="15260"/>
+        <location filename="../mywidget.ui" line="9916"/>
+        <location filename="../mywidget.ui" line="15732"/>
         <source>   DCDC Protocol version</source>
         <translation>      DCDC 协议版本</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9821"/>
-        <location filename="../mywidget.ui" line="15268"/>
+        <location filename="../mywidget.ui" line="9924"/>
+        <location filename="../mywidget.ui" line="15740"/>
         <source>   DCDC Converter software version</source>
         <translation>      DCDC 变流器软件版本</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9829"/>
-        <location filename="../mywidget.ui" line="15276"/>
+        <location filename="../mywidget.ui" line="9932"/>
+        <location filename="../mywidget.ui" line="15748"/>
         <source>   DCDC CPLD software version</source>
         <translation>      DCDC CPLD软件版本</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9837"/>
-        <location filename="../mywidget.ui" line="15284"/>
+        <location filename="../mywidget.ui" line="9940"/>
+        <location filename="../mywidget.ui" line="15756"/>
         <source>   SN:</source>
         <translation>      SN:</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9978"/>
-        <location filename="../mywidget.ui" line="15425"/>
+        <location filename="../mywidget.ui" line="10081"/>
+        <location filename="../mywidget.ui" line="15897"/>
         <source>502</source>
         <translation>502</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10171"/>
-        <location filename="../mywidget.ui" line="15618"/>
+        <location filename="../mywidget.ui" line="10274"/>
+        <location filename="../mywidget.ui" line="16090"/>
         <source>Apply and Reatart system</source>
         <translation>应用并重启系统</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10012"/>
-        <location filename="../mywidget.ui" line="15459"/>
-        <location filename="../mywidget.cpp" line="4120"/>
+        <location filename="../mywidget.ui" line="10115"/>
+        <location filename="../mywidget.ui" line="15931"/>
+        <location filename="../mywidget.cpp" line="4776"/>
         <source>DHCP</source>
         <translation>自动获取</translation>
     </message>
@@ -3230,62 +3318,62 @@ B1 - A1 ≥ 30 %
     </message>
     <message>
         <location filename="../mywidget.ui" line="275"/>
-        <location filename="../mywidget.ui" line="12974"/>
-        <location filename="../mywidget.cpp" line="3388"/>
+        <location filename="../mywidget.ui" line="13202"/>
+        <location filename="../mywidget.cpp" line="4041"/>
         <source>Serial Communication Address</source>
         <translation>串口通信地址</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="530"/>
-        <location filename="../mywidget.cpp" line="3412"/>
+        <location filename="../mywidget.cpp" line="4065"/>
         <source>serial port 6</source>
         <translation>串口6</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8938"/>
-        <location filename="../mywidget.cpp" line="3499"/>
+        <location filename="../mywidget.ui" line="9041"/>
+        <location filename="../mywidget.cpp" line="4159"/>
         <source>Release Prohibited Charging Flag</source>
         <translation>释放禁充标志</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="705"/>
-        <location filename="../mywidget.cpp" line="2986"/>
+        <location filename="../mywidget.cpp" line="3644"/>
         <source>DG ECP</source>
         <translation>DG ECP</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="753"/>
-        <location filename="../mywidget.cpp" line="2990"/>
+        <location filename="../mywidget.cpp" line="3648"/>
         <source>DG FCP</source>
         <translation>DG FCP</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="769"/>
-        <location filename="../mywidget.cpp" line="2994"/>
+        <location filename="../mywidget.cpp" line="3652"/>
         <source>Grid ECP</source>
         <translation>Grid ECP</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="785"/>
-        <location filename="../mywidget.cpp" line="2998"/>
+        <location filename="../mywidget.cpp" line="3656"/>
         <source>Grid FCP</source>
         <translation>Grid FCP</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="801"/>
-        <location filename="../mywidget.cpp" line="3002"/>
+        <location filename="../mywidget.cpp" line="3660"/>
         <source>Grid EDP</source>
         <translation>Grid EDP</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="817"/>
-        <location filename="../mywidget.cpp" line="3006"/>
+        <location filename="../mywidget.cpp" line="3664"/>
         <source>Grid FDP</source>
         <translation>Grid FDP</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="893"/>
-        <location filename="../mywidget.cpp" line="3525"/>
+        <location filename="../mywidget.cpp" line="4185"/>
         <source>Power change rate</source>
         <translation>功率变化率</translation>
     </message>
@@ -3301,8 +3389,8 @@ B1 - A1 ≥ 30 %
     </message>
     <message>
         <location filename="../mywidget.ui" line="1270"/>
-        <location filename="../mywidget.ui" line="13936"/>
-        <location filename="../mywidget.cpp" line="3604"/>
+        <location filename="../mywidget.ui" line="14164"/>
+        <location filename="../mywidget.cpp" line="4264"/>
         <source>Converter Anti-Reverse Flow</source>
         <translation>变流器防逆流</translation>
     </message>
@@ -3321,9 +3409,9 @@ B1 - A1 ≥ 30 %
         <translation>干接点关机</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9766"/>
-        <location filename="../mywidget.ui" line="15213"/>
-        <location filename="../mywidget.ui" line="18526"/>
+        <location filename="../mywidget.ui" line="9869"/>
+        <location filename="../mywidget.ui" line="15685"/>
+        <location filename="../mywidget.ui" line="19082"/>
         <source>System Information</source>
         <translation>系统信息</translation>
     </message>
@@ -3360,91 +3448,91 @@ B1 - A1 ≥ 30 %
         <translation type="obsolete">      SN:</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10028"/>
-        <location filename="../mywidget.ui" line="15475"/>
-        <location filename="../mywidget.cpp" line="4098"/>
+        <location filename="../mywidget.ui" line="10131"/>
+        <location filename="../mywidget.ui" line="15947"/>
+        <location filename="../mywidget.cpp" line="4754"/>
         <source>STATIC</source>
         <translation>静态</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10048"/>
-        <location filename="../mywidget.ui" line="15495"/>
+        <location filename="../mywidget.ui" line="10151"/>
+        <location filename="../mywidget.ui" line="15967"/>
         <source>ip:</source>
         <translation>地址：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10078"/>
-        <location filename="../mywidget.ui" line="15525"/>
+        <location filename="../mywidget.ui" line="10181"/>
+        <location filename="../mywidget.ui" line="15997"/>
         <source>netmask:</source>
         <translation>子网掩码：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10108"/>
-        <location filename="../mywidget.ui" line="15555"/>
+        <location filename="../mywidget.ui" line="10211"/>
+        <location filename="../mywidget.ui" line="16027"/>
         <source>gateway:</source>
         <translation>网关：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10138"/>
-        <location filename="../mywidget.ui" line="15585"/>
+        <location filename="../mywidget.ui" line="10241"/>
+        <location filename="../mywidget.ui" line="16057"/>
         <source>Server ip:</source>
         <translation>服务器IP：</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10061"/>
-        <location filename="../mywidget.ui" line="15508"/>
+        <location filename="../mywidget.ui" line="10164"/>
+        <location filename="../mywidget.ui" line="15980"/>
         <source>192 . 168 . 1 . 100</source>
         <translation>192 . 168 . 1 . 100</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10091"/>
-        <location filename="../mywidget.ui" line="15538"/>
+        <location filename="../mywidget.ui" line="10194"/>
+        <location filename="../mywidget.ui" line="16010"/>
         <source>255 . 255 . 255 . 0</source>
         <translation>255 . 255 . 255 . 0</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10121"/>
-        <location filename="../mywidget.ui" line="15568"/>
+        <location filename="../mywidget.ui" line="10224"/>
+        <location filename="../mywidget.ui" line="16040"/>
         <source>192 . 168 .  1  . 1</source>
         <translation>192 . 168 .  1  . 1</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10151"/>
-        <location filename="../mywidget.ui" line="15598"/>
+        <location filename="../mywidget.ui" line="10254"/>
+        <location filename="../mywidget.ui" line="16070"/>
         <source> 192 . 168 . 1  . 200</source>
         <translation> 192 . 168 . 1  . 200</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10532"/>
+        <location filename="../mywidget.ui" line="10635"/>
         <source>DCAC converter 
  OFF</source>
         <translation>DCAC 变换器 关闭</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10459"/>
+        <location filename="../mywidget.ui" line="10562"/>
         <source>DCAC converter
  ON</source>
         <translation>DCAC 变换器 开启</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10359"/>
+        <location filename="../mywidget.ui" line="10462"/>
         <source>DCDC converter
  OFF</source>
         <translation>DCDC 变换器 关闭</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10286"/>
+        <location filename="../mywidget.ui" line="10389"/>
         <source>DCDC converter
  ON</source>
         <translation>DCDC 变换器 开启</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="15767"/>
+        <location filename="../mywidget.ui" line="16280"/>
         <source>Battery Area Partitioning</source>
         <translation>电池区域划分</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="15988"/>
+        <location filename="../mywidget.ui" line="16501"/>
         <source>Battery zoning:   
     Areas where ECP works:
     (Saturated area)+(Equilibrium area)
@@ -3473,37 +3561,37 @@ B1 - A1 ≥ 30 %
     FDP作用区域:放空区+均衡区SOC小于&quot;充电SOC&quot;时，由低到高增加，到&quot;放电SOC&quot;截止。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="16805"/>
+        <location filename="../mywidget.ui" line="17316"/>
         <source>Enable the time period.</source>
         <translation>使能该时间段。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="16826"/>
+        <location filename="../mywidget.ui" line="17337"/>
         <source>Selection of peak,flat and valley sections of the grid under peak shaving and valley filling functions.</source>
         <translation>削峰填谷功能下选择电网的峰、平、谷。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="16847"/>
+        <location filename="../mywidget.ui" line="17358"/>
         <source>The system starts to run automatically when it reaches this time.</source>
         <translation>系统时间到达此时间时开始自动运行。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="16868"/>
+        <location filename="../mywidget.ui" line="17379"/>
         <source>The system stops running automatically when it reaches this time.</source>
         <translation>系统时间到达此时间时停止自动运行。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="16889"/>
+        <location filename="../mywidget.ui" line="17400"/>
         <source>Functions performed in the current time period.</source>
         <translation>当前时间段内执行的功能。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="16910"/>
+        <location filename="../mywidget.ui" line="17421"/>
         <source>Peak and trough shaving operating power.</source>
         <translation>削峰填谷运行功率。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="17365"/>
+        <location filename="../mywidget.ui" line="17894"/>
         <source>Menu</source>
         <translation>菜单</translation>
     </message>
@@ -3512,39 +3600,38 @@ B1 - A1 ≥ 30 %
         <translation type="vanished">主机_00 变流器关闭</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="17521"/>
+        <location filename="../mywidget.ui" line="18077"/>
         <source>640V</source>
         <translation>640V</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="17578"/>
+        <location filename="../mywidget.ui" line="18134"/>
         <source>780V</source>
         <translation>780V</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="17617"/>
+        <location filename="../mywidget.ui" line="18173"/>
         <source>639V</source>
         <translation>639V</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="17627"/>
+        <location filename="../mywidget.ui" line="18183"/>
         <source>150A</source>
         <translation>150A</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="17687"/>
+        <location filename="../mywidget.ui" line="18243"/>
         <source>246A</source>
         <translation>246A</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="17726"/>
+        <location filename="../mywidget.ui" line="18282"/>
         <source>202A</source>
         <translation>202A</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="841"/>
         <source>切换语言</source>
-        <translation>Change Language</translation>
+        <translation type="vanished">Change Language</translation>
     </message>
     <message>
         <source>Voltage(AB)</source>
@@ -3571,78 +3658,78 @@ B1 - A1 ≥ 30 %
         <translation type="vanished">电流 (C)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="958"/>
-        <location filename="../mywidget.cpp" line="1006"/>
-        <location filename="../mywidget.cpp" line="1984"/>
+        <location filename="../mywidget.cpp" line="1467"/>
+        <location filename="../mywidget.cpp" line="1515"/>
+        <location filename="../mywidget.cpp" line="2649"/>
         <source>Leakage current</source>
         <translation>漏电流</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="958"/>
-        <location filename="../mywidget.cpp" line="1975"/>
+        <location filename="../mywidget.cpp" line="1467"/>
+        <location filename="../mywidget.cpp" line="2640"/>
         <source>IGBT temperature</source>
         <translation>IGBT温度</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="958"/>
+        <location filename="../mywidget.cpp" line="1467"/>
         <source>Env. temperature</source>
         <translation>环境温度</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="960"/>
-        <location filename="../mywidget.cpp" line="1989"/>
+        <location filename="../mywidget.cpp" line="1469"/>
+        <location filename="../mywidget.cpp" line="2654"/>
         <source>PV voltage</source>
         <translation>PV电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="960"/>
-        <location filename="../mywidget.cpp" line="1993"/>
+        <location filename="../mywidget.cpp" line="1469"/>
+        <location filename="../mywidget.cpp" line="2658"/>
         <source>PV current</source>
         <translation>PV电流</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="960"/>
-        <location filename="../mywidget.cpp" line="1997"/>
+        <location filename="../mywidget.cpp" line="1469"/>
+        <location filename="../mywidget.cpp" line="2662"/>
         <source>PV power</source>
         <translation>PV功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="961"/>
-        <location filename="../mywidget.cpp" line="2001"/>
+        <location filename="../mywidget.cpp" line="1470"/>
+        <location filename="../mywidget.cpp" line="2666"/>
         <source>Battery voltage</source>
         <translation>电池电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="961"/>
-        <location filename="../mywidget.cpp" line="2005"/>
+        <location filename="../mywidget.cpp" line="1470"/>
+        <location filename="../mywidget.cpp" line="2670"/>
         <source>Battery current</source>
         <translation>电池电流</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="961"/>
-        <location filename="../mywidget.cpp" line="2009"/>
+        <location filename="../mywidget.cpp" line="1470"/>
+        <location filename="../mywidget.cpp" line="2674"/>
         <source>Battery power</source>
         <translation>电池功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="962"/>
-        <location filename="../mywidget.cpp" line="2013"/>
+        <location filename="../mywidget.cpp" line="1471"/>
+        <location filename="../mywidget.cpp" line="2678"/>
         <source>Bus voltage</source>
         <translation>母线电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="962"/>
-        <location filename="../mywidget.cpp" line="2017"/>
+        <location filename="../mywidget.cpp" line="1471"/>
+        <location filename="../mywidget.cpp" line="2682"/>
         <source>Bus current</source>
         <translation>母线电流</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="975"/>
+        <location filename="../mywidget.cpp" line="1484"/>
         <source>Inverter</source>
         <translation>逆变</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="975"/>
+        <location filename="../mywidget.cpp" line="1484"/>
         <source>DC</source>
         <translation>直流</translation>
     </message>
@@ -3667,7 +3754,7 @@ B1 - A1 ≥ 30 %
         <translation type="vanished">低压侧功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1009"/>
+        <location filename="../mywidget.cpp" line="1518"/>
         <source>PositiveInuslation</source>
         <translation>正绝缘阻抗</translation>
     </message>
@@ -3676,33 +3763,33 @@ B1 - A1 ≥ 30 %
         <translation type="vanished">低压侧电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1008"/>
+        <location filename="../mywidget.cpp" line="1517"/>
         <source>Bus_H_Vol(+)</source>
         <translation>高压侧正母线电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1008"/>
+        <location filename="../mywidget.cpp" line="1517"/>
         <source>Bus_H_Vol(-)</source>
         <translation>高压侧负母线电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1008"/>
+        <location filename="../mywidget.cpp" line="1517"/>
         <source>Bus_L_Vol(+)</source>
         <translation>低压侧正母线电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1008"/>
+        <location filename="../mywidget.cpp" line="1517"/>
         <source>Bus_L_Vol(-)</source>
         <translation>低压侧负母线电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1009"/>
+        <location filename="../mywidget.cpp" line="1518"/>
         <source>NegativeInuslation</source>
         <translation>负绝缘阻抗</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1009"/>
-        <location filename="../mywidget.cpp" line="2085"/>
+        <location filename="../mywidget.cpp" line="1518"/>
+        <location filename="../mywidget.cpp" line="2750"/>
         <source>IGBT Temperature</source>
         <translation>IGBT温度</translation>
     </message>
@@ -3727,37 +3814,37 @@ B1 - A1 ≥ 30 %
         <translation type="vanished">频率</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1147"/>
-        <location filename="../mywidget.cpp" line="2212"/>
+        <location filename="../mywidget.cpp" line="1656"/>
+        <location filename="../mywidget.cpp" line="2877"/>
         <source>DC input breaker</source>
         <translation>直流输入断路器</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1147"/>
-        <location filename="../mywidget.cpp" line="2216"/>
+        <location filename="../mywidget.cpp" line="1656"/>
+        <location filename="../mywidget.cpp" line="2881"/>
         <source>DC contactor</source>
         <translation>直流接触器</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1147"/>
+        <location filename="../mywidget.cpp" line="1656"/>
         <source>Maintenance Bypass breaker</source>
         <translation>维修旁路断路器</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1148"/>
-        <location filename="../mywidget.cpp" line="2228"/>
+        <location filename="../mywidget.cpp" line="1657"/>
+        <location filename="../mywidget.cpp" line="2893"/>
         <source>Output contactor</source>
         <translation>输出接触器</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1148"/>
-        <location filename="../mywidget.cpp" line="2232"/>
+        <location filename="../mywidget.cpp" line="1657"/>
+        <location filename="../mywidget.cpp" line="2897"/>
         <source>Grid breaker</source>
         <translation>电网断路器</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1148"/>
-        <location filename="../mywidget.cpp" line="2224"/>
+        <location filename="../mywidget.cpp" line="1657"/>
+        <location filename="../mywidget.cpp" line="2889"/>
         <source>Output breaker</source>
         <translation>输出断路器</translation>
     </message>
@@ -3766,39 +3853,37 @@ B1 - A1 ≥ 30 %
         <translation type="vanished">DO1</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1149"/>
-        <location filename="../mywidget.cpp" line="2244"/>
+        <location filename="../mywidget.cpp" line="1658"/>
+        <location filename="../mywidget.cpp" line="2909"/>
         <source>DO2</source>
         <translation>DO2</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1149"/>
-        <location filename="../mywidget.cpp" line="2248"/>
+        <location filename="../mywidget.cpp" line="1658"/>
+        <location filename="../mywidget.cpp" line="2913"/>
         <source>DO3</source>
         <translation>DO3</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1151"/>
-        <location filename="../mywidget.cpp" line="2254"/>
+        <location filename="../mywidget.cpp" line="1660"/>
+        <location filename="../mywidget.cpp" line="2919"/>
         <source>DCAC Converter available</source>
         <translation>DCAC变流器使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="872"/>
+        <location filename="../mywidget.cpp" line="1384"/>
         <source>Upgrade prompt</source>
         <translation>升级提示</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="873"/>
         <source>1. Make sure to press the EPO button before upgrading.                              
 2. Before upgrading the DCDC, switch off the ship-type switch of the DCDC module.</source>
-        <translation>1.升级前确保已按下EPO
+        <translation type="vanished">1.升级前确保已按下EPO
 2.升级DCDC前先把DCDC模块的船型开关拨到OFF位置。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="874"/>
         <source>Return</source>
-        <translation>返回</translation>
+        <translation type="vanished">返回</translation>
     </message>
     <message>
         <source>D02</source>
@@ -3809,20 +3894,21 @@ B1 - A1 ≥ 30 %
         <translation type="vanished">DO3</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1151"/>
-        <location filename="../mywidget.cpp" line="2258"/>
+        <location filename="../mywidget.cpp" line="1660"/>
+        <location filename="../mywidget.cpp" line="2923"/>
         <source>DC Soft start</source>
         <translation>直流软启动</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1151"/>
-        <location filename="../mywidget.cpp" line="1155"/>
+        <location filename="../mywidget.cpp" line="1660"/>
+        <location filename="../mywidget.cpp" line="1664"/>
+        <location filename="../mywidget.cpp" line="1844"/>
         <source>Converter status</source>
         <translation>变流器状态</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1151"/>
-        <location filename="../mywidget.cpp" line="2266"/>
+        <location filename="../mywidget.cpp" line="1660"/>
+        <location filename="../mywidget.cpp" line="2931"/>
         <source>Reactive power Regulation</source>
         <translation>无功调节方式</translation>
     </message>
@@ -3831,44 +3917,44 @@ B1 - A1 ≥ 30 %
         <translation type="vanished">休眠模式</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1152"/>
-        <location filename="../mywidget.cpp" line="2270"/>
+        <location filename="../mywidget.cpp" line="1661"/>
+        <location filename="../mywidget.cpp" line="2935"/>
         <source>LVRT</source>
         <translation>LVRT</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1152"/>
-        <location filename="../mywidget.cpp" line="2274"/>
+        <location filename="../mywidget.cpp" line="1661"/>
+        <location filename="../mywidget.cpp" line="2939"/>
         <source>DI1</source>
         <translation>DI1</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1152"/>
-        <location filename="../mywidget.cpp" line="2278"/>
+        <location filename="../mywidget.cpp" line="1661"/>
+        <location filename="../mywidget.cpp" line="2943"/>
         <source>DI2</source>
         <translation>DI2</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1152"/>
-        <location filename="../mywidget.cpp" line="2282"/>
+        <location filename="../mywidget.cpp" line="1661"/>
+        <location filename="../mywidget.cpp" line="2947"/>
         <source>DI3</source>
         <translation>DI3</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1152"/>
-        <location filename="../mywidget.cpp" line="2286"/>
+        <location filename="../mywidget.cpp" line="1661"/>
+        <location filename="../mywidget.cpp" line="2951"/>
         <source>DI4</source>
         <translation>DI4</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1152"/>
-        <location filename="../mywidget.cpp" line="2290"/>
+        <location filename="../mywidget.cpp" line="1661"/>
+        <location filename="../mywidget.cpp" line="2955"/>
         <source>DI5</source>
         <translation>DI5</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1152"/>
-        <location filename="../mywidget.cpp" line="2294"/>
+        <location filename="../mywidget.cpp" line="1661"/>
+        <location filename="../mywidget.cpp" line="2959"/>
         <source>DI6</source>
         <translation>DI6</translation>
     </message>
@@ -3881,7 +3967,7 @@ B1 - A1 ≥ 30 %
         <translation type="vanished">高压侧断路器2</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1155"/>
+        <location filename="../mywidget.cpp" line="1664"/>
         <source>Contactor status boost</source>
         <translation>高压侧接触器</translation>
     </message>
@@ -3894,47 +3980,45 @@ B1 - A1 ≥ 30 %
         <translation type="vanished">低压侧断路器2</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1155"/>
+        <location filename="../mywidget.cpp" line="1664"/>
         <source>Contactor status buck</source>
         <translation>低压侧接触器</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1154"/>
-        <location filename="../mywidget.cpp" line="2303"/>
+        <location filename="../mywidget.cpp" line="1663"/>
+        <location filename="../mywidget.cpp" line="2968"/>
         <source>Run mode</source>
         <translation>运行模式</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1154"/>
-        <location filename="../mywidget.cpp" line="2299"/>
+        <location filename="../mywidget.cpp" line="1663"/>
+        <location filename="../mywidget.cpp" line="2964"/>
         <source>DCDC Converter available</source>
         <translation>DCDC变流器使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1154"/>
+        <location filename="../mywidget.cpp" line="1663"/>
         <source>Soft start status boost</source>
         <translation>高压侧软启动</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1154"/>
+        <location filename="../mywidget.cpp" line="1663"/>
         <source>Soft start status buck</source>
         <translation>低压侧软启动</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1155"/>
-        <location filename="../mywidget.cpp" line="2327"/>
         <source>ModeLock</source>
-        <translation>模块锁</translation>
+        <translation type="vanished">模块锁</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="11861"/>
-        <location filename="../mywidget.cpp" line="3081"/>
+        <location filename="../mywidget.ui" line="12089"/>
+        <location filename="../mywidget.cpp" line="3739"/>
         <source>Work parttern</source>
         <translation>工作模式</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="11901"/>
-        <location filename="../mywidget.cpp" line="3086"/>
+        <location filename="../mywidget.ui" line="12129"/>
+        <location filename="../mywidget.cpp" line="3744"/>
         <source>Boost or Buck</source>
         <translation>升/降压</translation>
     </message>
@@ -3959,24 +4043,24 @@ B1 - A1 ≥ 30 %
         <translation type="vanished">电流值</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1335"/>
-        <location filename="../mywidget.cpp" line="3289"/>
+        <location filename="../mywidget.cpp" line="1867"/>
+        <location filename="../mywidget.cpp" line="3942"/>
         <source>Check</source>
         <translation>选择</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1335"/>
+        <location filename="../mywidget.cpp" line="1867"/>
         <source>StartTime</source>
         <translation>开始时间</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1335"/>
+        <location filename="../mywidget.cpp" line="1867"/>
         <source>EndTime</source>
         <translation>结束时间</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1335"/>
-        <location filename="../mywidget.cpp" line="3292"/>
+        <location filename="../mywidget.cpp" line="1867"/>
+        <location filename="../mywidget.cpp" line="3945"/>
         <source>Features</source>
         <translation>功能</translation>
     </message>
@@ -3993,12 +4077,12 @@ B1 - A1 ≥ 30 %
         <translation type="vanished">变流器待机开关，点击后变流器进入待机状态。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3293"/>
+        <location filename="../mywidget.cpp" line="3946"/>
         <source>Power</source>
         <translation>功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1223"/>
+        <location filename="../mywidget.cpp" line="1732"/>
         <source>PV power generation</source>
         <translation>PV发电量</translation>
     </message>
@@ -4007,17 +4091,17 @@ B1 - A1 ≥ 30 %
         <translation type="vanished">负载用电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1223"/>
+        <location filename="../mywidget.cpp" line="1732"/>
         <source>Battery charge</source>
         <translation>电池充电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1223"/>
+        <location filename="../mywidget.cpp" line="1732"/>
         <source>Load electricity consumption</source>
         <translation>负载用电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1224"/>
+        <location filename="../mywidget.cpp" line="1733"/>
         <source>Battery discharge</source>
         <translation>电池放电量</translation>
     </message>
@@ -4030,60 +4114,60 @@ B1 - A1 ≥ 30 %
         <translation type="vanished">电网放电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1224"/>
+        <location filename="../mywidget.cpp" line="1733"/>
         <source>Grid buy</source>
         <translation>电网购电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1224"/>
+        <location filename="../mywidget.cpp" line="1733"/>
         <source>Grid sell</source>
         <translation>电网卖电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1226"/>
+        <location filename="../mywidget.cpp" line="1735"/>
         <source> </source>
         <translation> </translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1226"/>
+        <location filename="../mywidget.cpp" line="1735"/>
         <source>Day(kWh)</source>
         <translation>日电量(kWh)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1226"/>
+        <location filename="../mywidget.cpp" line="1735"/>
         <source>Month(kWh)</source>
         <translation>月电量(kWh)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1226"/>
+        <location filename="../mywidget.cpp" line="1735"/>
         <source>Year(kWh)</source>
         <translation>年电量(kWh)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1226"/>
+        <location filename="../mywidget.cpp" line="1735"/>
         <source>Total(kWh)</source>
         <translation>总电量(kWh)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1252"/>
-        <location filename="../mywidget.cpp" line="2481"/>
+        <location filename="../mywidget.cpp" line="1761"/>
+        <location filename="../mywidget.cpp" line="3141"/>
         <source>Level</source>
         <translation>等级</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1252"/>
-        <location filename="../mywidget.cpp" line="2483"/>
+        <location filename="../mywidget.cpp" line="1761"/>
+        <location filename="../mywidget.cpp" line="3143"/>
         <source>Start Time</source>
         <translation>开始时间</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1252"/>
-        <location filename="../mywidget.cpp" line="2485"/>
+        <location filename="../mywidget.cpp" line="1761"/>
+        <location filename="../mywidget.cpp" line="3145"/>
         <source>End Time</source>
         <translation>结束时间</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1252"/>
+        <location filename="../mywidget.cpp" line="1761"/>
         <source>Description</source>
         <translation>描述</translation>
     </message>
@@ -4403,140 +4487,140 @@ fault</source>
         <translation type="vanished">这是变流器待机开关，点击后变流器进入待机状态</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1668"/>
+        <location filename="../mywidget.cpp" line="2380"/>
         <source>Total voltage of the battery uploaded by BMS.</source>
         <translation>BMS上传的电池组总电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1672"/>
+        <location filename="../mywidget.cpp" line="2384"/>
         <source>Total current of the battery uploaded by BMS.</source>
         <translation>BMS上传的电池组总电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1676"/>
+        <location filename="../mywidget.cpp" line="2388"/>
         <source>Battery SOC uploaded by BMS refers to the current remaining battery capacity percentage.</source>
         <translation>BMS上传的电池组SOC，即当前电池剩余电量百分比。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1680"/>
+        <location filename="../mywidget.cpp" line="2392"/>
         <source>Battery SOH uploaded from BMS, the percentage of available capacity after full charge compared to the rated capacity.</source>
         <translation>BMS上传的电池组SOH，电池组充满后可用容量与出厂容量的百分比。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1684"/>
+        <location filename="../mywidget.cpp" line="2396"/>
         <source>The highest voltage of single cell uploaded by BMS.</source>
         <translation>BMS上传的单体最高电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1688"/>
+        <location filename="../mywidget.cpp" line="2400"/>
         <source>The lowest voltage of single cell uploaded by BMS.</source>
         <translation>BMS上传的单体最低电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1692"/>
+        <location filename="../mywidget.cpp" line="2404"/>
         <source>The highest temperature of single cell uploaded by BMS.</source>
         <translation>BMS上传的单体最高温度。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1696"/>
+        <location filename="../mywidget.cpp" line="2408"/>
         <source>The lowest temperature of single cell uploaded by BMS.</source>
         <translation>BMS上传的单体最低温度。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1700"/>
+        <location filename="../mywidget.cpp" line="2412"/>
         <source>The limit of charging current uploaded by BMS.</source>
         <translation>BMS上传的充电电流限制。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1704"/>
+        <location filename="../mywidget.cpp" line="2416"/>
         <source>The limit of discharging current uploaded by BMS.</source>
         <translation>BMS上传的放电电流限制。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1724"/>
+        <location filename="../mywidget.cpp" line="2436"/>
         <source>Alarm levels uploaded from BMS, level one alarm is yellow, level two alarm is orange, and level three alarm is red;
 By default, the converter does not respond to level one and level two alarms, but shuts down in response to level three alarms.</source>
         <translation>BMS上传的告警等级，一级告警为黄色、二级告警为橙色、三级告警为红色；
 默认一级告警、二级告警变流器不做响应，三级告警变流器关机。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1985"/>
+        <location filename="../mywidget.cpp" line="2650"/>
         <source>Leakage current: The leakage current should not exceed 300mA (≤30kVA power converter), or 10mA/kVA (＞30kVA power converter).</source>
         <translation>漏电流：漏电流应不大于300mA (≤30kVA 变流器)，或10mA/kVA(＞30kVA变流器)。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2128"/>
+        <location filename="../mywidget.cpp" line="2793"/>
         <source>Active power P on the grid side of the converter.</source>
         <translation>变流器电网侧有功功率P。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2132"/>
+        <location filename="../mywidget.cpp" line="2797"/>
         <source>Reactive power Q on the grid side of the converter.</source>
         <translation>变流器电网侧无功功率Q。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2136"/>
+        <location filename="../mywidget.cpp" line="2801"/>
         <source>Apparent power S on the grid side of the converter.</source>
         <translation>变流器电网侧视在功率S。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2140"/>
+        <location filename="../mywidget.cpp" line="2805"/>
         <source>Power factor PF on the grid side of the converter.</source>
         <translation>变流器电网侧功率因素PF。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2144"/>
+        <location filename="../mywidget.cpp" line="2809"/>
         <source>Frequency on the grid side of the converter.</source>
         <translation>变流器电网频率。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2177"/>
+        <location filename="../mywidget.cpp" line="2842"/>
         <source>Active power P on the load side of the converter.</source>
         <translation>变流器负载侧有功功率P。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2181"/>
+        <location filename="../mywidget.cpp" line="2846"/>
         <source>Reactive power Q on the load side of the converter.</source>
         <translation>变流器负载侧无功功率Q。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2185"/>
+        <location filename="../mywidget.cpp" line="2850"/>
         <source>Apparent power S on the load side of the converter.</source>
         <translation>变流器负载侧视在功率S。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2189"/>
+        <location filename="../mywidget.cpp" line="2854"/>
         <source>Power factor PF on the load side of the converter.</source>
         <translation>变流器负载侧功率因素PF。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2193"/>
+        <location filename="../mywidget.cpp" line="2858"/>
         <source>Frequency on the load side of the converter.</source>
         <translation>变流器负载频率。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2212"/>
-        <location filename="../mywidget.cpp" line="2216"/>
-        <location filename="../mywidget.cpp" line="2220"/>
-        <location filename="../mywidget.cpp" line="2224"/>
-        <location filename="../mywidget.cpp" line="2228"/>
-        <location filename="../mywidget.cpp" line="2232"/>
-        <location filename="../mywidget.cpp" line="2319"/>
+        <location filename="../mywidget.cpp" line="2877"/>
+        <location filename="../mywidget.cpp" line="2881"/>
+        <location filename="../mywidget.cpp" line="2885"/>
+        <location filename="../mywidget.cpp" line="2889"/>
+        <location filename="../mywidget.cpp" line="2893"/>
+        <location filename="../mywidget.cpp" line="2897"/>
+        <location filename="../mywidget.cpp" line="2984"/>
         <source>On</source>
         <translation>闭合</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2213"/>
+        <location filename="../mywidget.cpp" line="2878"/>
         <source>There are two states for a DC circuit breaker: On, Off.</source>
         <translation>直流断路器有两种状态:闭合、断开。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2217"/>
+        <location filename="../mywidget.cpp" line="2882"/>
         <source>The DC contactor has two states: On, Off. After the soft start of the DC side is completed, the DC contactor closes. When the DC side of the battery is disconnected and the voltage of the DC bus drops to a certain level, the DC contactor opens.</source>
         <translation>直流接触器有两种状态:闭合，断开;当直流侧软启完成后，直流接触器闭合;当电池直流侧断开，直流母线电压下降到一定电压，直流接触器断开。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2221"/>
+        <location filename="../mywidget.cpp" line="2886"/>
         <source>There are two states for the maintenance bypass circuit breaker: On, Off. This circuit breaker is only used for machine maintenance. If maintenance is required, please contact the maintenance personnel.</source>
         <translation>维修旁路断路器有两种状态:闭合、断开;此断路器仅用于机器维护，如需维护，请联系维护人员。</translation>
     </message>
@@ -4545,7 +4629,7 @@ By default, the converter does not respond to level one and level two alarms, bu
         <translation type="vanished">输出断路器有两种状态:闭合、断开;只能手动断开，如果输出断路器过流，输出断路器会发生脱扣。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2229"/>
+        <location filename="../mywidget.cpp" line="2894"/>
         <source>The output contactor has two states: On, Off. The output contactor closes after the soft start on the inv. side is completed. The output contactor opens when the converter is shut down.</source>
         <translation>输出接触器有两种状态:闭合、断开;当逆变侧软启完成后，输出接触器闭合;当变流器关机时，输出接触器断开。</translation>
     </message>
@@ -4554,27 +4638,27 @@ By default, the converter does not respond to level one and level two alarms, bu
         <translation type="vanished">电网断路器有两种状态:闭合、断开;只能手动断开，如果电网断路器过流，电网断路器会发生脱扣。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2315"/>
+        <location filename="../mywidget.cpp" line="2980"/>
         <source>Off</source>
         <translation>断开</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2316"/>
+        <location filename="../mywidget.cpp" line="2981"/>
         <source>DC module high voltage contactor has two states: On, Off; When there is voltage on the high voltage side, close the high voltage contactor; Otherwise, the high voltage contactor is disconnected.</source>
         <translation>DC模块高压侧接触器有两种状态：闭合、断开；当高压侧有电压时，闭合高压侧接触器；否则高压侧接触器断开。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2320"/>
+        <location filename="../mywidget.cpp" line="2985"/>
         <source>DC module low voltage contactor has two states: On, Off; When there is voltage on the low voltage side, close the contactor on the low voltage side; Otherwise, the low pressure contactor is disconnected.</source>
         <translation>DC模块低压侧接触器有两种状态：闭合、断开；当低压侧有电压时，闭合低压侧接触器；否则低压侧接触器断开。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3297"/>
+        <location filename="../mywidget.cpp" line="3950"/>
         <source>The function that will perform this function during business hours, there are six to choose from, They are System for self-use, battery Batter priority, Peak shaving, Output PV power,Economic model.</source>
         <translation>功能，将在工作时间执行此功能，有六种可供选择，分别是自发自用、电池优先、削峰填谷、跟随PV功率、经济模式。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3302"/>
+        <location filename="../mywidget.cpp" line="3955"/>
         <source>Peak price</source>
         <translation>峰价</translation>
     </message>
@@ -4583,17 +4667,17 @@ By default, the converter does not respond to level one and level two alarms, bu
         <translation type="vanished">在削峰填谷模式下，根据电价选择‘峰价’时段、‘谷价’时段。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3014"/>
+        <location filename="../mywidget.cpp" line="3672"/>
         <source>Battery Types: Lithium, Lead-Acid.</source>
         <translation>电池类型：锂电、铅酸。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3019"/>
+        <location filename="../mywidget.cpp" line="3677"/>
         <source>Battery Communication Modes: None, RS485, CAN, Ethernet. (Note: Due to the fact that CAN and Ethernet both have only one port, the battery communication mode and EMS communication mode cannot be selected as &quot;CAN&quot; or &quot;Ethernet&quot; simultaneously.)</source>
         <translation>电池通信方式：无、RS485、CAN、以太网。(备注:由于CAN端口和以太网都只有一个端口，因此电池通讯方式和EMS通讯方式不可同时选&quot;CAN&quot;或“以太网&quot;)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3330"/>
+        <location filename="../mywidget.cpp" line="3983"/>
         <source>Constant Voltage (CV) mode: The converter will operate in constant voltage mode on the DC side.
 Constant Current (CC) mode: The converter will operate in constant current mode on the DC side.
 Constant Power AC (CP_AC) mode: The power level can be set at &quot;constant power.&quot; The value represents the power level, positive for discharge and negative for charge. For example, setting it to -5 means that the AC side will charge the battery with a power of 5 kW. Due to converter losses, the DC side power will be lower than the AC side power in this case. Conversely, setting it to 5 means that the AC side will output power at 5 kW. Due to converter losses, the DC side power will be higher than the AC side power in this case.
@@ -4604,14 +4688,14 @@ Reserved.</source>
 预留。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3033"/>
+        <location filename="../mywidget.cpp" line="3691"/>
         <source>EMS communication methods: RS485, CAN, Ethernet.
 The setting communication methods are readable and writable in remote mode, and only readable in local mode. The unselected communication methods are only readable in both remote and local mode.</source>
         <translation>EMS通信方式：RS485、CAN、以太网。
 设定的通信方式在远程模式下可读可写，在本地模式下只可读，未选中的通信方式远程和本地仅可读。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3370"/>
+        <location filename="../mywidget.cpp" line="4023"/>
         <source>Output Power Limit: Restricts the upper limit of the set value for the power on the AC side of the converter.</source>
         <translation>输出功率上限：限制变流器交流侧功率设置值的上限。</translation>
     </message>
@@ -4633,12 +4717,11 @@ Select AUTO to automatically detect the battery manufacturer protocol.</source>
 (3)最优模式下，电池SOC低于充电SOC，进入FCP状态，电池启动充电，当前SOC大于等于放电SOC时，退出FCP状态，进入ECP状态。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2978"/>
         <source>Discharge SOC: When the SOC is greater than the discharge SOC, the FCP state is released.</source>
-        <translation>放电SOC：当SOC大于放电SOC时，解除FCP状态。</translation>
+        <translation type="vanished">放电SOC：当SOC大于放电SOC时，解除FCP状态。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2964"/>
+        <location filename="../mywidget.cpp" line="3624"/>
         <source>Diesel Generator: Rated Power of the Diesel Generator.</source>
         <translation>柴油发电机：柴发的额定功率。</translation>
     </message>
@@ -4647,7 +4730,7 @@ Select AUTO to automatically detect the battery manufacturer protocol.</source>
         <translation type="vanished">能量优先级：自发自用模式下，选择电池&gt;电网时，优先使用电池给负载供电；选择电网&gt;电池时，优先使用电网给负载供电。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3389"/>
+        <location filename="../mywidget.cpp" line="4042"/>
         <source>Serial Communication Address: The default value is 1, adjustable range is between 1 and 255, used for matching address during serial communication.</source>
         <translation>串口通信地址：默认值为1，可调范围在1~255之间，用于串口通信时匹配地址。</translation>
     </message>
@@ -4656,89 +4739,98 @@ Select AUTO to automatically detect the battery manufacturer protocol.</source>
         <translation type="vanished">串口2，波特率有六项可供选择，分别是1200、2400、4800、9600、19200、38400，串口2默认波特率是9600 bps,八个数据位，无校验，一个停止位(8，N, 1).</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3398"/>
+        <location filename="../mywidget.cpp" line="4051"/>
         <source>Serial Port 3 has six selectable baud rates: 1200, 2400, 4800, 9600, 19200, and 38400. The default baud rate for Serial Port 3 is 9600 bps, with eight data bits, no parity, and one stop bit (8-N-1).</source>
         <translation>串口3，波特率有六项可供选择，分别是1200、2400、4800、9600、19200、38400，串口3默认波特率是9600 bps,八个数据位，无校验，一个停止位(8，N, 1).</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3403"/>
+        <location filename="../mywidget.cpp" line="4056"/>
         <source>Serial Port 4 has six selectable baud rates: 1200, 2400, 4800, 9600, 19200, and 38400. The default baud rate for Serial Port 4 is 9600 bps, with eight data bits, no parity, and one stop bit (8-N-1).</source>
         <translation>串口4，波特率有六项可供选择，分别是1200、2400、4800、9600、19200、38400，串口4默认波特率是9600 bps,八个数据位，无校验，一个停止位(8，N, 1).</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3408"/>
+        <location filename="../mywidget.cpp" line="4061"/>
         <source>Serial Port 5 has six selectable baud rates: 1200, 2400, 4800, 9600, 19200, and 38400. The default baud rate for Serial Port 5 is 9600 bps, with eight data bits, no parity, and one stop bit (8-N-1).</source>
         <translation>串口5，波特率有六项可供选择，分别是1200、2400、4800、9600、19200、38400，串口5默认波特率是9600 bps,八个数据位，无校验，一个停止位(8，N, 1).</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3413"/>
+        <location filename="../mywidget.cpp" line="4066"/>
         <source>Serial Port 6 has six selectable baud rates: 1200, 2400, 4800, 9600, 19200, and 38400. The default baud rate for Serial Port 6 is 9600 bps, with eight data bits, no parity, and one stop bit (8-N-1).</source>
         <translation>串口6，波特率有六项可供选择，分别是1200、2400、4800、9600、19200、38400，串口6默认波特率是9600 bps,八个数据位，无校验，一个停止位(8，N, 1).</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3418"/>
+        <location filename="../mywidget.cpp" line="4071"/>
         <source>CAN1 Port: The baud rate for internal communication is 500 kbps by default and cannot be modified.</source>
         <translation>CAN1端口：内部通讯的波特率，默认波特率500 kbps,不可修改。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3422"/>
+        <location filename="../mywidget.cpp" line="4075"/>
         <source>CAN2 Port: Optional baud rates for the CAN2 port include 100, 125, 250, 500, and 800 kbps, with a default baud rate of 500 kbps.</source>
         <translation>CAN2端口：可选波特率100、125、250、500、800 kbps，默认波特率500kbps。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3435"/>
+        <location filename="../mywidget.cpp" line="4087"/>
         <source>Battery Capacity Alarm: Enable,Disable.It is effective in Grid Expansion mode and is used to prevent over-discharge of the battery.
     When the battery SOC is lower than the &quot;Charge SOC&quot; or &quot;On-Grid DOD&quot;, the system will enter low protection mode for battery capacity. If, at this time, the load still exceeds the set grid capacity value and battery discharge is required, the system will shut down after the battery has been discharging continuously for 3 minutes.</source>
         <translation>电池容量告警：使能，禁止。电网扩容模式下生效，用于防止电池过放。
    电池SOC低于‘充电SOC’或‘并网DOD’后，系统会进入电池容量低保护，若此时负载仍超过所设置的电网容量值，需要电池放电，则在电池持续放电3分钟后系统会关机。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3526"/>
+        <location filename="../mywidget.cpp" line="4175"/>
+        <source>Maintain password</source>
+        <translation>维护密码</translation>
+    </message>
+    <message>
+        <source>Maintain password: Available for resetting the admin password.(Note: The admin password must be six digits.)</source>
+        <translation type="obsolete">维护密码：可供重新设置高级设置密码。(注：维护设置密码必须为六位数。)</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4186"/>
         <source>Power change rate: the rate at which power changes within a second .</source>
         <translation>功率变化率：单位时间内功率变化的速率。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3529"/>
+        <location filename="../mywidget.cpp" line="4189"/>
         <source>Upper limit of power grid frequency variation range</source>
         <translation>电网频率变化范围上限</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3530"/>
+        <location filename="../mywidget.cpp" line="4190"/>
         <source>Upper limit of power grid frequency variation range: The maximum range of frequency variation allowed on the AC side, which can be selected as 0.2, 0.5, 1, 5.</source>
         <translation>电网频率变化范围上限：交流侧所允许的频率变化最大范围，可供选择为0.2、0.5、1、5。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3534"/>
+        <location filename="../mywidget.cpp" line="4194"/>
         <source>Lower limit of power grid frequency variation range</source>
         <translation>电网频率变化范围下限</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3535"/>
+        <location filename="../mywidget.cpp" line="4195"/>
         <source>Lower limit of power grid frequency variation range: The maximum range of frequency variation allowed on the AC side, which can be selected as-0.5, -1, -2, -5.</source>
         <translation>电网频率变化范围下限：交流侧所允许的频率变化最大范围，可供选择为-0.5、-1、-2、-5。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3540"/>
+        <location filename="../mywidget.cpp" line="4200"/>
         <source>Upper limit of voltage protection range: The maximum range of voltage variation allowed on the AC side, which can be selected as 10, 15, 20.</source>
         <translation>电压保护范围上限：交流侧所允许的电压变化范围的上限，可供选择为10、15、20。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3545"/>
+        <location filename="../mywidget.cpp" line="4205"/>
         <source>Lower limit of voltage protection range: The minimum range of voltage variation allowed on the AC side, which can be selected as -10, -15, -20.</source>
         <translation>电压保护范围下限：交流侧所允许的电压变化范围的下限，可供选择为-10、-15、-20。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3550"/>
+        <location filename="../mywidget.cpp" line="4210"/>
         <source>High voltage ride through(HVRT) enablement: Enable, Disable. (Note: This option is generally used in large grid-on power stations.)</source>
         <translation>高压穿越使能：使能、禁止。(注:此项一般在大型并网电站使用。)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3555"/>
+        <location filename="../mywidget.cpp" line="4215"/>
         <source>Low voltage ride through(LVRT) enablement: Enable, Disable. (Note: This option is generally used in large grid-on power stations.)</source>
         <translation>低压穿越使能：使能、禁止。(注:此项一般在大型并网电站使用。)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3559"/>
+        <location filename="../mywidget.cpp" line="4219"/>
         <source>Prevent islanding effect. When islanding effect is detected (in a photovoltaic grid-on system, when a power outage occurs in the main grid, and the PV grid-connected converter generates power that matches the local load on the low-voltage side of the grid, it can easily sustain power generation independently, resulting in an &apos;island&apos; phenomenon, which endangers the safety of maintenance personnel), the converter automatically shuts down. The options for this feature can be set as &apos;Enable&apos; or &apos;prohibited&apos;.(Note: This option is generally used in large grid-on power stations.)</source>
         <translation>防止孤岛效应，当检测出现孤岛效应(在光伏并网系统中,当大电网出现停电事故时,光伏并网逆变器发电与电网低压侧本地负载如果刚好出现功率相匹配时,容易出现自给自足的维持发电状态,从而出现&quot;孤岛&quot;现象,从而危及检修人员安全)时,让逆变器自动停机,可供选择为允许、禁止。(注:此项一般在大型并网电站使用。)</translation>
     </message>
@@ -4747,42 +4839,42 @@ Select AUTO to automatically detect the battery manufacturer protocol.</source>
         <translation type="vanished">绝缘检测使能，绝缘电阻大于33KΩ要能正常起机运行，小于33KΩ不能起机，并且要告警，默认禁止,可供选择为允许、禁止。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3570"/>
+        <location filename="../mywidget.cpp" line="4230"/>
         <source>Primary frequency control enable: When the grid frequency deviates from the rated value, the active power is controlled to increase or decrease in order to maintain the grid frequency at the rated value. It can be selected as enabled or disabled. (Note: This option is generally used in large grid-on power stations.)</source>
         <translation>一次调频使能,电网的频率偏离额定值时，通过控制有功功率的增减使电网频率维持额定值，可供选择为允许、禁止。(注:此项一般在大型并网电站使用。)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3616"/>
+        <location filename="../mywidget.cpp" line="4276"/>
         <source>Rotational inertia enable: It can be selected as enabled or disabled. (Note: This option is generally used in large grid-on power stations.)</source>
         <translation>转动惯量使能，可供选择为使能、禁止。(注:此项一般在大型并网电站使用。)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3580"/>
+        <location filename="../mywidget.cpp" line="4240"/>
         <source>Converter Model: As per factory settings, generally not modifiable.</source>
         <translation>机器型号：以出厂设置为准，一般不可修改。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3585"/>
+        <location filename="../mywidget.cpp" line="4245"/>
         <source>The rated capacity of the converter shall be based on the factory value and cannot be changed.</source>
         <translation>机器的额定容量，以出厂值为准，不可更改。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3600"/>
+        <location filename="../mywidget.cpp" line="4260"/>
         <source>Output Frequency Level: Default 50Hz, typically 50Hz or 60Hz.</source>
         <translation>输出频率等级，默认50Hz，一般为50Hz或60Hz。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3595"/>
+        <location filename="../mywidget.cpp" line="4255"/>
         <source>Output Voltage Level: As per factory settings, generally not modifiable.</source>
         <translation>输出电压等级：以出厂为准，一般不可修改。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3590"/>
+        <location filename="../mywidget.cpp" line="4250"/>
         <source>Transformer Voltage Ratio: To be determined by the factory nameplate, not modifiable.</source>
         <translation>变压器变比:以出厂铭牌标识为准,不可修改。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3341"/>
+        <location filename="../mywidget.cpp" line="3994"/>
         <source>Reactive Power Output Mode: Default non-adjustable, options include Power Factor, Reactive Power, non-adjustable.</source>
         <translation>输出无功方式：默认不可调节，可供选择为功率因数、无功功率、不可调节。</translation>
     </message>
@@ -4795,7 +4887,7 @@ Select AUTO to automatically detect the battery manufacturer protocol.</source>
         <translation type="vanished">电网恢复并网时间：电网恢复调度开机允许时，根据实际需求设置即可。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3605"/>
+        <location filename="../mywidget.cpp" line="4265"/>
         <source>Converter Anti-Reverse Flow: Enable, Disable;
 Enabling prevents converter current from flowing into the grid, while Disabling allows converter current to flow into the grid.</source>
         <translation>变流器防逆流：使能、禁止
@@ -4808,54 +4900,53 @@ Enabling prevents system current from flowing into the grid, while Disabling all
 使能即系统电流禁止流向电网，禁止即系统电流允许流向电网。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3611"/>
+        <location filename="../mywidget.cpp" line="4271"/>
         <source>Over-frequency load shedding: It can be selected as enabled or disabled. (Note: This option is generally used in large grid-on power stations.)</source>
         <translation>过频降载：可供选择为使能、禁止。(注:此项一般在大型并网电站使用。)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3621"/>
+        <location filename="../mywidget.cpp" line="4281"/>
         <source>QP curve: It can be selected as enabled or disabled. (Note: This option is generally used in large grid-on power stations.)</source>
         <translation>QP曲线：可供选择为使能、禁止。(注:此项一般在大型并网电站使用。)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3663"/>
+        <location filename="../mywidget.cpp" line="4323"/>
         <source>Constant voltage parallel operation enable: It can be selected as enabled or disabled.  (Note: This option is generally used in large grid-on power stations.)</source>
         <translation>恒压并机使能,可供选择为使能、禁止。(注:此项设置在恒压并机模式下使用。)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3627"/>
+        <location filename="../mywidget.cpp" line="4287"/>
         <source>Number of modules, default 1(invalid setting).</source>
         <translation>模块数量，默认1（设置无效）。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3632"/>
+        <location filename="../mywidget.cpp" line="4292"/>
         <source>When you select DCDC, the DCAC interface freezes, and the maximum module ID and minimum module ID take effect.You can only modify the database to restore the DCAC interface.(Note:As per factory settings, generally not modifiable.)</source>
         <translation>选择DCDC时界面冻结，最大模块号和最小模块号生效，只能修改数据库以恢复DCAC界面。（注：以出厂设置为准，一般不可修改。）</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3639"/>
+        <location filename="../mywidget.cpp" line="4299"/>
         <source>Maximum Module Count for Current Chassis. (Note: Only effective when selecting DCDC mode in chassis settings.)</source>
         <translation>机架的最大模块数。(备注:仅在机架设置中选择DCDC模式时生效。)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3644"/>
+        <location filename="../mywidget.cpp" line="4304"/>
         <source>Minimum Module Count for Current Chassis. (Note: Only effective when selecting DCDC mode in chassis settings.)</source>
         <translation>机架的最小模块数。(备注:仅在机架设置中选择DCDC模式时生效。)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3658"/>
+        <location filename="../mywidget.cpp" line="4318"/>
         <source>DCDC Isolation Monitoring Enable: Enable, Disable. (Note: Default is Disable)</source>
         <translation>DCDC绝缘监测使能:使能、禁止。(注:默认禁止)</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="339"/>
-        <location filename="../mywidget.cpp" line="3510"/>
+        <location filename="../mywidget.cpp" line="4170"/>
         <source>User password</source>
         <translation>用户密码</translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="387"/>
-        <location filename="../mywidget.cpp" line="3515"/>
         <source>Admin password</source>
         <translation>高级设置密码</translation>
     </message>
@@ -4864,22 +4955,22 @@ Enabling prevents system current from flowing into the grid, while Disabling all
         <translation type="obsolete">BMS上传的充电电流上限。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1708"/>
+        <location filename="../mywidget.cpp" line="2420"/>
         <source>The allowable charging power uploaded by BMS.</source>
         <translation>BMS上传的允许充电功率。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1712"/>
+        <location filename="../mywidget.cpp" line="2424"/>
         <source>The allowable discharging power uploaded by BMS.</source>
         <translation>BMS上传的允许放电功率。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1716"/>
+        <location filename="../mywidget.cpp" line="2428"/>
         <source>The allowable charging capacity uploaded by BMS.</source>
         <translation>BMS上传的允许充电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1720"/>
+        <location filename="../mywidget.cpp" line="2432"/>
         <source>The allowable discharging capacity uploaded by BMS.</source>
         <translation>BMS上传的允许放电量。</translation>
     </message>
@@ -4889,22 +4980,22 @@ Enabling prevents system current from flowing into the grid, while Disabling all
 默认一级告警、二级告警变流器不做响应，三级告警变流器关机</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1727"/>
+        <location filename="../mywidget.cpp" line="2439"/>
         <source>Charging enable</source>
         <translation>充电使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1728"/>
+        <location filename="../mywidget.cpp" line="2440"/>
         <source>Battery Status Uploaded by BMS: Enable indicates the battery is allowed to charge, Disable indicates the battery is not allowed to charge.</source>
         <translation>BMS上传的电池状态：使能表示电池允许充电，禁止表示电池不允许充电。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1731"/>
+        <location filename="../mywidget.cpp" line="2443"/>
         <source>Discharging enable</source>
         <translation>放电使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1732"/>
+        <location filename="../mywidget.cpp" line="2444"/>
         <source>Battery Status Uploaded by BMS: Enable indicates the battery is allowed to discharge, Disable indicates the battery is not allowed to discharge.</source>
         <translation>BMS上传的电池状态：使能表示电池允许放电，禁止表示电池不允许放电。</translation>
     </message>
@@ -4925,114 +5016,205 @@ Enabling prevents system current from flowing into the grid, while Disabling all
         <translation type="vanished">这是通过CAN/485/TCP通讯协议从BMS上传的允许放电量，当前电池组允许放电的容量，当不存在该值时，此项不显示(注:仅部分BMS会提供这个值）。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1745"/>
+        <location filename="../mywidget.cpp" line="2457"/>
         <source>Interface</source>
         <translation>接口号</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1746"/>
+        <location filename="../mywidget.cpp" line="2458"/>
         <source>This is the interface number, which defaults to eth0</source>
         <translation>这是接口号，默认eth0</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1749"/>
+        <location filename="../mywidget.cpp" line="2461"/>
+        <location filename="../mywidget.cpp" line="5116"/>
         <source>Port</source>
         <translation>端口</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1750"/>
+        <location filename="../mywidget.cpp" line="2462"/>
         <source>This is the port number, default 502</source>
         <translation>这是端口号，默认502</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1753"/>
+        <location filename="../mywidget.cpp" line="2465"/>
         <source>Ip</source>
         <translation>Ip</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1754"/>
+        <location filename="../mywidget.cpp" line="2466"/>
         <source>This is the IP address. The default is 192.168.1.100</source>
         <translation>这是IP地址，默认192.168.1.100</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1757"/>
+        <location filename="../mywidget.cpp" line="2469"/>
         <source>Netmask</source>
         <translation>子网掩码</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1758"/>
+        <location filename="../mywidget.cpp" line="2470"/>
         <source>This is the subnet mask, 255.255.255.0</source>
         <translation>这是子网掩码，255.255.255.0</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1761"/>
+        <location filename="../mywidget.cpp" line="2473"/>
         <source>Gateway</source>
         <translation>网关</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1762"/>
+        <location filename="../mywidget.cpp" line="2474"/>
         <source>This is the gateway. The default is 192.168.1.1</source>
         <translation>这是网关，默认192.168.1.1</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1765"/>
+        <location filename="../mywidget.cpp" line="2477"/>
         <source>Serber ip</source>
         <translation>服务器IP</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1766"/>
+        <location filename="../mywidget.cpp" line="2478"/>
         <source>This is the server IP address. The default is 192.168.1.200</source>
         <translation>这是服务器IP，默认192.168.1.200</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1769"/>
+        <location filename="../mywidget.cpp" line="2481"/>
         <source>Apply and Restart system</source>
         <translation>应用并重启系统</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1770"/>
+        <location filename="../mywidget.cpp" line="2482"/>
         <source>This is the application and restart the system, click will restart the system, if there is an upgrade, will use the new program.</source>
         <translation>这是应用并重启系统，点击后将重启系统，如有升级，将会使用新的程序。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1942"/>
+        <location filename="../mywidget.cpp" line="2257"/>
         <source>Alarm icon</source>
         <translation>告警图标</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1942"/>
+        <location filename="../mywidget.cpp" line="1831"/>
+        <source>Port data</source>
+        <translation>端口报文</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="1834"/>
+        <source>Apply this mode and exit the parameter settings page</source>
+        <translation>应用此模式，并退出参数设置页面</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="1835"/>
+        <source>Eexit the parameter settings page</source>
+        <translation>退出参数设置页面</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="1836"/>
+        <source>Next page</source>
+        <translation>下一页</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="1837"/>
+        <source>Last page</source>
+        <translation>上一页</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="1838"/>
+        <source>Machine typs</source>
+        <translation>机器型号</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="1839"/>
+        <source>Current system time</source>
+        <translation>系统当前时间</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="1840"/>
+        <source>Alarm severity warning</source>
+        <translation>告警级别提示</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="1841"/>
+        <source>Chinese and English switching</source>
+        <translation>中英文切换</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="1842"/>
+        <source>Open menu</source>
+        <translation>打开菜单</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="1843"/>
+        <source>User login</source>
+        <translation>用户登录</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="1845"/>
+        <source>DCDC module state</source>
+        <translation>DCDC模块状态</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="1846"/>
+        <source>Return to previous page</source>
+        <translation>返回到上一页</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="1847"/>
+        <source>View the detailed running logic and related parameters of the working mode</source>
+        <translation>查看工作模式的详细运行逻辑及其相关参数</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="1851"/>
+        <source>Battery</source>
+        <translation>电池</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="1853"/>
+        <source>Set the port to listen on</source>
+        <translation>设置监听端口</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="1854"/>
+        <source>Start/Stop</source>
+        <translation>开始/停止</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2258"/>
         <source>Alarm icon: It is not displayed when there is no alarm. When there is a minor alarm, a yellow icon is displayed. When there is a fault alarm, a red icon is displayed.</source>
         <translation>告警图标：无告警时不显示，轻微告警时显示黄色图表，故障告警时显示红色图标。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2225"/>
+        <location filename="../mywidget.cpp" line="2890"/>
         <source>The output circuit breaker has two states: On, Off.The Output breaker can only be manually disconnected.</source>
         <translation>输出断路器有两种状态:闭合、断开;只能手动断开。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2233"/>
+        <location filename="../mywidget.cpp" line="2898"/>
         <source>The power grid circuit breaker has two states: On, Off;The power grid circuit breaker can only be manually disconnected.</source>
         <translation>电网断路器有两种状态:闭合、断开;只能手动断开。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2271"/>
+        <location filename="../mywidget.cpp" line="2902"/>
+        <source>DCAC insulation detection:Enable,Disable.</source>
+        <translation>DCAC绝缘监测：使能，禁止。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2936"/>
         <source>LVRT states : Enable , Disabled.</source>
         <translation>低电压穿越状态;使能、禁止。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2307"/>
-        <location filename="../mywidget.cpp" line="2311"/>
+        <location filename="../mywidget.cpp" line="2972"/>
+        <location filename="../mywidget.cpp" line="2976"/>
         <source>Not
 starting</source>
         <translation>未软启</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2308"/>
+        <location filename="../mywidget.cpp" line="2973"/>
         <source>High-voltage side soft start states: Not started, Soft start in progress, Soft start completed.</source>
         <translation>高压侧软启动状态：未启动、软启中、软启完成。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2312"/>
+        <location filename="../mywidget.cpp" line="2977"/>
         <source>Low-voltage side soft start states: Not started, Soft start in progress, Soft start completed.</source>
         <translation>低压侧软启动状态：未启动、软启中、软启完成。</translation>
     </message>
@@ -5065,7 +5247,7 @@ starting</source>
         <translation type="vanished">直流接触器有两种状态： 断开、闭合；当直流侧软启完成后，直流接触器闭合；当电池直流侧断开，直流母线电压下降到一定电压，直流接触器断开。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2220"/>
+        <location filename="../mywidget.cpp" line="2885"/>
         <source>Maintenance Bypass Breaker</source>
         <translation>维修旁路断路器</translation>
     </message>
@@ -5086,28 +5268,27 @@ starting</source>
         <translation type="vanished">电网断路器有三种状态： 断开、闭合、脱扣；只能手动断开，如果电网断路器过流，电网断路器会发生脱扣。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="9669"/>
-        <location filename="../mywidget.cpp" line="2236"/>
-        <location filename="../mywidget.cpp" line="2240"/>
-        <location filename="../mywidget.cpp" line="2244"/>
-        <location filename="../mywidget.cpp" line="2248"/>
-        <location filename="../mywidget.cpp" line="2266"/>
-        <location filename="../mywidget.cpp" line="2274"/>
-        <location filename="../mywidget.cpp" line="2278"/>
-        <location filename="../mywidget.cpp" line="2282"/>
-        <location filename="../mywidget.cpp" line="2286"/>
-        <location filename="../mywidget.cpp" line="2290"/>
-        <location filename="../mywidget.cpp" line="2294"/>
-        <location filename="../mywidget.cpp" line="2299"/>
-        <location filename="../mywidget.cpp" line="2331"/>
-        <location filename="../mywidget.cpp" line="2948"/>
-        <location filename="../mywidget.cpp" line="3103"/>
-        <location filename="../mywidget.cpp" line="3110"/>
-        <location filename="../mywidget.cpp" line="3381"/>
-        <location filename="../mywidget.cpp" line="3434"/>
-        <location filename="../mywidget.cpp" line="3604"/>
-        <location filename="../mywidget.cpp" line="3653"/>
-        <location filename="../mywidget.cpp" line="3657"/>
+        <location filename="../mywidget.ui" line="9772"/>
+        <location filename="../mywidget.cpp" line="2901"/>
+        <location filename="../mywidget.cpp" line="2905"/>
+        <location filename="../mywidget.cpp" line="2909"/>
+        <location filename="../mywidget.cpp" line="2913"/>
+        <location filename="../mywidget.cpp" line="2931"/>
+        <location filename="../mywidget.cpp" line="2939"/>
+        <location filename="../mywidget.cpp" line="2943"/>
+        <location filename="../mywidget.cpp" line="2947"/>
+        <location filename="../mywidget.cpp" line="2951"/>
+        <location filename="../mywidget.cpp" line="2955"/>
+        <location filename="../mywidget.cpp" line="2959"/>
+        <location filename="../mywidget.cpp" line="2964"/>
+        <location filename="../mywidget.cpp" line="2992"/>
+        <location filename="../mywidget.cpp" line="3761"/>
+        <location filename="../mywidget.cpp" line="3767"/>
+        <location filename="../mywidget.cpp" line="4034"/>
+        <location filename="../mywidget.cpp" line="4086"/>
+        <location filename="../mywidget.cpp" line="4264"/>
+        <location filename="../mywidget.cpp" line="4313"/>
+        <location filename="../mywidget.cpp" line="4317"/>
         <source>Disable</source>
         <translation>禁止</translation>
     </message>
@@ -5128,7 +5309,7 @@ starting</source>
         <translation type="vanished">变流器使能有两种状态：使能、禁止；机器内部自检没有问题时，变流器使能；否则变流器禁止。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2258"/>
+        <location filename="../mywidget.cpp" line="2923"/>
         <source>Not starting</source>
         <translation>未启动</translation>
     </message>
@@ -5137,14 +5318,13 @@ starting</source>
         <translation type="vanished">直流软启动有三种状态:软启中(Soft starting)，软启完成(complete)，未启动(Not starting);软启动是指变流器在启动时，通过控制电流或电压的变化使设备逐渐加速或减速到正常运行状态，以减少电路中的电流冲击和电压峰值，保护电路元器件并减少设备的机械损伤。软启动可以增加设备的寿命，减少能耗，提高系统效率。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2262"/>
-        <location filename="../mywidget.cpp" line="2327"/>
+        <location filename="../mywidget.cpp" line="2927"/>
         <source>OFF</source>
         <translation>关闭</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2262"/>
-        <location filename="../mywidget.cpp" line="2323"/>
+        <location filename="../mywidget.cpp" line="2927"/>
+        <location filename="../mywidget.cpp" line="2988"/>
         <source>Converter Status</source>
         <translation>变流器状态</translation>
     </message>
@@ -5158,7 +5338,7 @@ Discharge)、降额并网(Drop and Connected)、待机(Standby)、离网充电(G
         <translation type="vanished">这是输入干接点4的状态，有使能(Enable)、禁止(Disable)两种状态。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2931"/>
+        <location filename="../mywidget.cpp" line="3591"/>
         <source>automatic</source>
         <translation>自动</translation>
     </message>
@@ -5171,7 +5351,7 @@ Discharge)、降额并网(Drop and Connected)、待机(Standby)、离网充电(G
     选择离网模式时，机器将断开电网侧接触器，此时机器处于离网模式（VF）。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2939"/>
+        <location filename="../mywidget.cpp" line="3599"/>
         <source>Constant power(AC)</source>
         <translation>恒功率(AC)</translation>
     </message>
@@ -5190,9 +5370,9 @@ Discharge)、降额并网(Drop and Connected)、待机(Standby)、离网充电(G
         <translation type="vanished">保留。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="11065"/>
-        <location filename="../mywidget.ui" line="17249"/>
-        <location filename="../mywidget.cpp" line="1320"/>
+        <location filename="../mywidget.ui" line="11178"/>
+        <location filename="../mywidget.ui" line="17763"/>
+        <location filename="../mywidget.cpp" line="1829"/>
         <source>Manual</source>
         <translation>手动</translation>
     </message>
@@ -5207,9 +5387,9 @@ Discharge)、降额并网(Drop and Connected)、待机(Standby)、离网充电(G
         <translation type="vanished">    此项可以修改无功功率Q，正值代表无功超前，负值代表无功滞后。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3002"/>
-        <location filename="../mywidget.cpp" line="3006"/>
-        <location filename="../mywidget.cpp" line="3362"/>
+        <location filename="../mywidget.cpp" line="3660"/>
+        <location filename="../mywidget.cpp" line="3664"/>
+        <location filename="../mywidget.cpp" line="4015"/>
         <source>100</source>
         <translation>100</translation>
     </message>
@@ -5218,7 +5398,7 @@ Discharge)、降额并网(Drop and Connected)、待机(Standby)、离网充电(G
         <translation type="vanished">    当高级设置“功能设置”页面的控制功率方式选择恒流(CC)时，修改恒流值，此时机器将以该电流值给电池充放电，正值代表放电，负值代表充电。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3355"/>
+        <location filename="../mywidget.cpp" line="4008"/>
         <source>600</source>
         <translation>600</translation>
     </message>
@@ -5227,7 +5407,7 @@ Discharge)、降额并网(Drop and Connected)、待机(Standby)、离网充电(G
         <translation type="vanished">    当高级设置“功能设置”页面的控制功率方式选择恒压(CV)时，修改恒压值，机器将以恒压值进行运行，此时机器将作为一个恒压源。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3038"/>
+        <location filename="../mywidget.cpp" line="3696"/>
         <source>Local</source>
         <translation>本地</translation>
     </message>
@@ -5244,8 +5424,8 @@ Discharge)、降额并网(Drop and Connected)、待机(Standby)、离网充电(G
         <translation type="vanished">    这是设备号，可以选择主机(Master)或者从机(Slave)，其中主机为Master_00，其余八项Slave_01 ~Slave_08均为从机。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="13262"/>
-        <location filename="../mywidget.cpp" line="3381"/>
+        <location filename="../mywidget.ui" line="13490"/>
+        <location filename="../mywidget.cpp" line="4034"/>
         <source>Parallel</source>
         <translation>并机</translation>
     </message>
@@ -5254,7 +5434,7 @@ Discharge)、降额并网(Drop and Connected)、待机(Standby)、离网充电(G
         <translation type="vanished">    这是运行时段使能，有两项可选：使能(Enable)，禁止(Disable)。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3081"/>
+        <location filename="../mywidget.cpp" line="3739"/>
         <source>MPPT</source>
         <translation>MPPT</translation>
     </message>
@@ -5291,7 +5471,7 @@ Discharge)、降额并网(Drop and Connected)、待机(Standby)、离网充电(G
         <translation type="vanished">这是当前电池所处位置，需要根据当前选择的&apos;DC&apos;模块运行模式来进行选择；如果选择了降压(Buck)，请选择低压侧(LowSide)；如果选择了升压(Boost)，请选择高压侧(HightSide)；如果选择了休息(Rest)，请选择无(NON)。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3098"/>
+        <location filename="../mywidget.cpp" line="3756"/>
         <source>300</source>
         <translation>300</translation>
     </message>
@@ -5300,7 +5480,7 @@ Discharge)、降额并网(Drop and Connected)、待机(Standby)、离网充电(G
         <translation type="vanished">这是&apos;DC&apos;模块的电压等级。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3093"/>
+        <location filename="../mywidget.cpp" line="3751"/>
         <source>60</source>
         <translation>60</translation>
     </message>
@@ -5333,7 +5513,7 @@ Discharge)、降额并网(Drop and Connected)、待机(Standby)、离网充电(G
         <translation type="vanished">充电电压上限，当充电时电池总电压达到这个值时，PCS将会进入到恒压模式，防止电池过充。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3158"/>
+        <location filename="../mywidget.cpp" line="3809"/>
         <source>Charge Volt upper Limit delta</source>
         <translation>充电电压上限回差</translation>
     </message>
@@ -5342,7 +5522,7 @@ Discharge)、降额并网(Drop and Connected)、待机(Standby)、离网充电(G
         <translation type="vanished">充电电压上限回差，当电池充电时，电池总压达到充电电压上限时，进入恒压模式后，如果电池总压低于充电电压上限减去该回差值时，解除恒压模式。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3165"/>
+        <location filename="../mywidget.cpp" line="3817"/>
         <source>Disc_Vol_lower_Limit</source>
         <translation>放电电压下限</translation>
     </message>
@@ -5351,7 +5531,7 @@ Discharge)、降额并网(Drop and Connected)、待机(Standby)、离网充电(G
         <translation type="vanished">放电电压下限，当放电时电池总电压达到这个值时，PCS将会触发电池电压低告警，PCS关机，防止电池过放。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3170"/>
+        <location filename="../mywidget.cpp" line="3822"/>
         <source>Discharge Volt upper Limit delta</source>
         <translation>放电电压下限回差</translation>
     </message>
@@ -5360,7 +5540,7 @@ Discharge)、降额并网(Drop and Connected)、待机(Standby)、离网充电(G
         <translation type="vanished">放电电压下限回差，当电池放电时，电池总压达到放电电压下限时，MPS进入恒压模式后，如果电池总压回升到放电电压下限加上该回差值时，解除恒压模式。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3175"/>
+        <location filename="../mywidget.cpp" line="3828"/>
         <source>Charge Current Limit</source>
         <translation>充电电流限制</translation>
     </message>
@@ -5369,7 +5549,7 @@ Discharge)、降额并网(Drop and Connected)、待机(Standby)、离网充电(G
         <translation type="vanished">充电电流上限，这是PCS直流侧允许的最大电流，防止充电过流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3180"/>
+        <location filename="../mywidget.cpp" line="3833"/>
         <source>Discharge Current Limit</source>
         <translation>放电电流限制</translation>
     </message>
@@ -5394,12 +5574,12 @@ Discharge)、降额并网(Drop and Connected)、待机(Standby)、离网充电(G
         <translation type="vanished">达到指定SOC时，柴油发电机开启。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3221"/>
+        <location filename="../mywidget.cpp" line="3874"/>
         <source>Capacity, the capacity of the lead-acid battery.</source>
         <translation>容量，铅酸电池的容量大小。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3225"/>
+        <location filename="../mywidget.cpp" line="3878"/>
         <source>Cell_number_2V</source>
         <translation>电池节数（2V）</translation>
     </message>
@@ -5420,7 +5600,7 @@ Discharge)、降额并网(Drop and Connected)、待机(Standby)、离网充电(G
         <translation type="vanished">并网放电截止电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3296"/>
+        <location filename="../mywidget.cpp" line="3949"/>
         <source>End time: The system stops automatically running when the system reaches this time.</source>
         <translation>结束时间：系统到达此时间后停止自动运行。</translation>
     </message>
@@ -5429,86 +5609,86 @@ Discharge)、降额并网(Drop and Connected)、待机(Standby)、离网充电(G
         <translation type="vanished">这是功能，将在工作时间执行此功能，有六种可供选择，分别是自发自用、电池优先、削峰填谷、跟随PV功率、经济模式。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3303"/>
+        <location filename="../mywidget.cpp" line="3956"/>
         <source>In the peak shaving and valley filling mode, select &apos;Peak price&apos; periods,&apos;Flat price&apos; periods and &apos;Valley price&apos; periods based on electricity prices.</source>
         <translation>在削峰填谷模式下，根据电价选择‘峰’时段、‘平’时段‘谷’时段。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2378"/>
+        <location filename="../mywidget.cpp" line="3038"/>
         <source>Today&apos;s photovoltaic power generation.</source>
         <translation>光伏今日的发电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1321"/>
+        <location filename="../mywidget.cpp" line="1830"/>
         <source>DC/DC Parameters</source>
         <translation>DC/DC参数</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1321"/>
+        <location filename="../mywidget.cpp" line="1830"/>
         <source>Lithium Battery Setting Parameters</source>
         <translation>锂电池设置参数</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1321"/>
+        <location filename="../mywidget.cpp" line="1830"/>
         <source>Lead-acid Battery Setting Parameters</source>
         <translation>铅酸电池设置参数</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1321"/>
+        <location filename="../mywidget.cpp" line="1830"/>
         <source>Time Period Setting</source>
         <translation>时间段设置</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1321"/>
+        <location filename="../mywidget.cpp" line="1830"/>
         <source>Function Sentting 1</source>
         <translation>功能设置1</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1321"/>
+        <location filename="../mywidget.cpp" line="1830"/>
         <source>Function Sentting 2</source>
         <translation>功能设置2</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1322"/>
+        <location filename="../mywidget.cpp" line="1831"/>
         <source>System Senttings</source>
         <translation>系统设置</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1322"/>
+        <location filename="../mywidget.cpp" line="1831"/>
         <source>Device</source>
         <translation>设备</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1322"/>
+        <location filename="../mywidget.cpp" line="1831"/>
         <source>DC/AC Debug</source>
         <translation>DC/AC调试</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1322"/>
+        <location filename="../mywidget.cpp" line="1831"/>
         <source>DC/DC Debug</source>
         <translation>DC/DC调试</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1149"/>
-        <location filename="../mywidget.cpp" line="2240"/>
+        <location filename="../mywidget.cpp" line="1658"/>
+        <location filename="../mywidget.cpp" line="2905"/>
         <source>Start generator signal</source>
         <translation>发电机开启信号</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1155"/>
-        <location filename="../mywidget.cpp" line="2331"/>
+        <location filename="../mywidget.cpp" line="1664"/>
+        <location filename="../mywidget.cpp" line="2992"/>
         <source>DCDC insulation detection</source>
         <translation>DCDC绝缘监测</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="18724"/>
-        <location filename="../mywidget.cpp" line="1375"/>
+        <location filename="../mywidget.ui" line="19280"/>
+        <location filename="../mywidget.cpp" line="1908"/>
         <source>Admin</source>
-        <translation>Admin</translation>
+        <translation>超级权限</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1148"/>
-        <location filename="../mywidget.cpp" line="2236"/>
+        <location filename="../mywidget.cpp" line="1657"/>
+        <location filename="../mywidget.cpp" line="2901"/>
         <source>DCAC insulation detection</source>
         <translation>DCAC绝缘监测</translation>
     </message>
@@ -5517,267 +5697,337 @@ Discharge)、降额并网(Drop and Connected)、待机(Standby)、离网充电(G
         <translation type="vanished">休眠</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2382"/>
+        <location filename="../mywidget.cpp" line="3042"/>
         <source>Monthly photovoltaic power generation.</source>
         <translation>光伏今月的发电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2386"/>
+        <location filename="../mywidget.cpp" line="3046"/>
         <source>Annual photovoltaic power generation.</source>
         <translation>光伏今年的发电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2390"/>
+        <location filename="../mywidget.cpp" line="3050"/>
         <source>Total photovoltaic power generation.</source>
         <translation>光伏总发电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2394"/>
+        <location filename="../mywidget.cpp" line="3054"/>
         <source>Daily load electricity consumption </source>
         <translation>负载日用电量 </translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2395"/>
+        <location filename="../mywidget.cpp" line="3055"/>
         <source>Today&apos;s electricity consumption of the load.</source>
         <translation>负载今月的用电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2398"/>
+        <location filename="../mywidget.cpp" line="3058"/>
         <source>Monthly load electricity consumption</source>
         <translation>负载月用电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2399"/>
+        <location filename="../mywidget.cpp" line="3059"/>
         <source>Monthly electricity consumption of the load.</source>
         <translation>负载今月的用电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2402"/>
+        <location filename="../mywidget.cpp" line="3062"/>
         <source>Annual load electricity consumption</source>
         <translation>负载年用电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2403"/>
+        <location filename="../mywidget.cpp" line="3063"/>
         <source>Annual electricity consumption of the load.</source>
         <translation>负载今年的用电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2406"/>
+        <location filename="../mywidget.cpp" line="3066"/>
         <source>Total load electricity consumption</source>
         <translation>负载总用电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2407"/>
+        <location filename="../mywidget.cpp" line="3067"/>
         <source>Total electricity consumption of the load.</source>
         <translation>负载总用电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2412"/>
+        <location filename="../mywidget.cpp" line="3072"/>
         <source>Today&apos;s battery charging.</source>
         <translation>电池今日的充电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2416"/>
+        <location filename="../mywidget.cpp" line="3076"/>
         <source>Monthly battery charging.</source>
         <translation>电池今月的充电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2420"/>
+        <location filename="../mywidget.cpp" line="3080"/>
         <source>Annual battery charging.</source>
         <translation>电池今年的充电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2424"/>
+        <location filename="../mywidget.cpp" line="3084"/>
         <source>Total battery charging.</source>
         <translation>电池总充电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2429"/>
+        <location filename="../mywidget.cpp" line="3089"/>
         <source>Today&apos;s battery discharging.</source>
         <translation>电池今日的放电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2433"/>
+        <location filename="../mywidget.cpp" line="3093"/>
         <source>Monthly battery discharging.</source>
         <translation>电池今月的放电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2437"/>
+        <location filename="../mywidget.cpp" line="3097"/>
         <source>Annual battery discharging.</source>
         <translation>电池今年的放电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2441"/>
+        <location filename="../mywidget.cpp" line="3101"/>
         <source>Total battery discharging.</source>
         <translation>电池总放电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2445"/>
+        <location filename="../mywidget.cpp" line="3105"/>
         <source>Grid buy Day</source>
         <translation>电网日购电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2449"/>
+        <location filename="../mywidget.cpp" line="3109"/>
         <source>Grid buy Month</source>
         <translation>电网月购电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2453"/>
+        <location filename="../mywidget.cpp" line="3113"/>
         <source>Grid buy Year</source>
         <translation>电网年购电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2457"/>
+        <location filename="../mywidget.cpp" line="3117"/>
         <source>Grid buy Total</source>
         <translation>电网总购电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2462"/>
+        <location filename="../mywidget.cpp" line="3122"/>
         <source>Grid sell Day</source>
         <translation>电网日卖电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2466"/>
+        <location filename="../mywidget.cpp" line="3126"/>
         <source>Grid sell Month</source>
         <translation>电网月卖电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2470"/>
+        <location filename="../mywidget.cpp" line="3130"/>
         <source>Grid sell Year</source>
         <translation>电网年卖电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2474"/>
+        <location filename="../mywidget.cpp" line="3134"/>
         <source>Grid sell Total</source>
         <translation>电网总卖电量</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2482"/>
+        <location filename="../mywidget.cpp" line="3142"/>
         <source>0 represents an alarm event, and this item will turn red. 1 represents a status event.</source>
         <translation>0表示告警事件，且此项会变红，1表示状态事件。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2484"/>
+        <location filename="../mywidget.cpp" line="3144"/>
         <source>Event start time.</source>
         <translation>事件开始时间。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2486"/>
+        <location filename="../mywidget.cpp" line="3146"/>
         <source>Event end time: &apos;... &apos;indicates that there is no end time,&apos;-&apos; indicates that the event is in progress.</source>
         <translation>事件结束时间：表示这条记录的结束时间，&apos;...&apos;表示无结束时间,&apos;-&apos;表示事件正在进行。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2488"/>
+        <location filename="../mywidget.cpp" line="3148"/>
         <source>event description</source>
         <translation>事件描述</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2489"/>
+        <location filename="../mywidget.cpp" line="3149"/>
         <source>event description.</source>
         <translation>事件描述。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2492"/>
+        <location filename="../mywidget.cpp" line="3152"/>
         <source>Converter Standby.</source>
         <translation>变换器待机</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2493"/>
+        <location filename="../mywidget.cpp" line="3153"/>
         <source>The grid contactor connected</source>
         <translation>电网接触器闭合</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2494"/>
+        <location filename="../mywidget.cpp" line="3154"/>
         <source>The grid breaker connected</source>
         <translation>电网断路器闭合</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2495"/>
+        <location filename="../mywidget.cpp" line="3155"/>
         <source>The output breaker connected</source>
         <translation>输出断路器闭合</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2496"/>
+        <location filename="../mywidget.cpp" line="3156"/>
         <source>Buck not softened</source>
         <translation>低压侧未软起</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2497"/>
+        <location filename="../mywidget.cpp" line="3157"/>
         <source>Contactor off buck</source>
         <translation>低压侧接触器断开</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2498"/>
+        <location filename="../mywidget.cpp" line="3158"/>
         <source>The grid breaker disconnected</source>
         <translation>电网断路器断开</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3614"/>
+        <source>Grid Capacity: In the grid expansion mode, the maximum power limit is imposed on the grid side .</source>
+        <translation>电网扩容模式下，限制电网侧功率的最大值。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3629"/>
+        <source>Start charging SOC:
+ (1) At the self-use mode, when the battery SOC is lower than the&quot;Start charging SOC&quot;, the converter maintains the battery SOC at this value.
+ (2) At the battery priority mode, the ECP or FCP state is determined based on the current SOC.
+ (3) At the optimal mode, when the battery SOC is lower than the &quot;Start charging SOC&quot;, the converter enters the FCP state and starts charging the battery. When the current SOC is greater than or equal to the &quot;Stop charging SOC&quot;, the converter exits the FCP state and enters the ECP state.</source>
+        <translation>开始充电SOC：
+(1)自发自用模式下，电池SOC小于“开始充电SOC”时，变流器维持电池SOC在此值；
+(2)电池优先模式下，从根据当前SOC判断进入ECP或FCP状态；
+(3)最优模式下，电池SOC低于“开始充电SOC”，进入FCP状态，电池启动充电，当前SOC大于等于“停止充电SOC”时，退出FCP状态，进入ECP状态。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3637"/>
+        <source>Stop charging SOC</source>
+        <translation>停止充电SOC</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="5116"/>
+        <source>Select the port to be monitored. The optional port types are: None, RS485/2, RS485/3, RS485/4, RS485/5, RS485/6, CAN 1, CAN 2, Eth</source>
+        <translation>选择需要监听的端口。可选端口类型为：无、RS485/2、RS485/3、RS485/4、RS485/5、RS485/6、CAN 1、CAN 2、Eth</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="5122"/>
+        <source>Begin</source>
+        <translation>开始</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="5122"/>
+        <source>Start/Stop capturing messages.</source>
+        <translation>开始/停止抓取报文</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="5149"/>
+        <source>The message data will be recorded in the root directory of the USB drive in the &apos;PortDate.txt&apos; file.
+Please connect a UBS flash drive!</source>
+        <translation>报文数据将会写入U盘的根目录下的“PortDate.txt”文件。
+请连接U盘！</translation>
+    </message>
+    <message>
+        <source>Stop charging SOC: When the SOC is greater than the discharge SOC, the FCP state is released.</source>
+        <translation type="vanished">停止充电SOC：当SOC大于放电SOC时，解除FCP状态。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3762"/>
+        <source>Outer Ring Centralized Control：Multiple DCDC modules, especially when the DCDC module power fluctuation is significant.</source>
+        <translation>外环集中控制：多个DCDC模块，且DCDC模块功率波动比较大时使用。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4080"/>
+        <source>Energy Priority: You can choose whether to preferentially use electricity from the grid or battery.</source>
+        <translation>可选择优先用电网还是优先用电池的电。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="5107"/>
+        <source>Click to enter the selected working mode, go to the working mode parameter settings page, and click the &quot;Save&quot; button in the top-right corner to set the current working mode as the selected and saved working mode.
+For example, if the current working mode is &quot;Battery Priority&quot;, select &quot;Optimal Mode&quot;, enter the parameter settings page for the optimal mode, and click the &quot;Save&quot; button in the top-right corner to set the current working mode as &quot;Optimal Mode&quot;.</source>
+        <translation>   点击进入选中的工作模式，进入工作模式参数设置页面，并点击右上角的‘保存’，会将当前工作模式设置为选中并保存的工作模式。
+   例如：当前工作模式是“电池优先”，选择“最优模式”，进入最优模式参数设置页面，并点击该页面右上角的“保存”，即可将当前工作模式设置为“最优模式”。</translation>
     </message>
     <message>
         <source>Prohibit</source>
         <translation type="vanished">禁止</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2953"/>
+        <location filename="../mywidget.cpp" line="3613"/>
         <source>30</source>
         <translation>30</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2953"/>
+        <location filename="../mywidget.cpp" line="3613"/>
         <source>Grid capacity(kW)</source>
         <translation>电网容量(kW)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2954"/>
         <source>Grid Capacity: The maximum power capacity connected to the grid in grid expansion mode.</source>
-        <translation>电网扩容模式下运行接入最大的电网功率。</translation>
+        <translation type="vanished">电网扩容模式下运行接入最大的电网功率。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2958"/>
+        <location filename="../mywidget.cpp" line="3618"/>
         <source>DG Charging power limit</source>
         <translation>柴发充电限制功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2969"/>
         <source>Charging SOC:
  (1) At the self-use mode, when the battery SOC is lower than the charging SOC, the converter maintains the battery SOC at this value.
  (2) At the battery priority mode, the ECP or FCP state is determined based on the current SOC.
  (3) At the optimal mode, when the battery SOC is lower than the charging SOC, the converter enters the FCP state and starts charging the battery. When the current SOC is greater than or equal to the discharge SOC, the converter exits the FCP state and enters the ECP state.</source>
-        <translation>充电SOC：
+        <translation type="vanished">充电SOC：
 (1)自发自用模式下，电池SOC小于充电SOC时，变流器维持电池SOC在此值；
 (2)电池优先模式下，从根据当前SOC判断进入ECP或FCP状态；
 (3)最优模式下，电池SOC低于充电SOC，进入FCP状态，电池启动充电，当前SOC大于等于放电SOC时，退出FCP状态，进入ECP状态。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2987"/>
+        <location filename="../mywidget.cpp" line="3645"/>
         <source>In chai-hair mode, the AC power reference value of the saturation zone and the equalization zone.</source>
         <translation>柴发模式下，饱和区和均衡区的交流侧功率参考值。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2991"/>
+        <location filename="../mywidget.cpp" line="3649"/>
         <source>Power reference value of AC side of the discharge area in Chai hair mode.</source>
         <translation>柴发模式下，放空区的交流侧功率参考值。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2995"/>
+        <location filename="../mywidget.cpp" line="3653"/>
         <source>In the power grid mode, the AC power reference value in the saturation zone and the equilibrium zone.</source>
         <translation>电网模式下，饱和区和均衡区的交流侧功率参考值。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2999"/>
+        <location filename="../mywidget.cpp" line="3657"/>
         <source>In power grid mode, this parameter specifies the power reference value on the AC side of the vent area.</source>
         <translation>电网模式下，放空区的交流侧功率参考值。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3003"/>
+        <location filename="../mywidget.cpp" line="3661"/>
         <source>The equalization zone limits the discharge power of the system to the grid side.</source>
         <translation>均衡区限制系统对电网侧的放电功率。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3007"/>
+        <location filename="../mywidget.cpp" line="3665"/>
         <source>The discharge zone limits the discharge power of the system to the power grid side.</source>
         <translation>放空区限制系统对电网侧的放电功率。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4467"/>
+        <location filename="../mywidget.cpp" line="3683"/>
+        <source>Battery Protocol: Parse the messages sent by BMS based on the selected battery protocol.
+Currently supported battery manufacturer protocols include:MEGA, LISHEN, GREATPOWER, GOLD, BMSER, LANLI, SLANPOWER, PYLON, CATL, SUOYING, XINGWANGDA, KUBO, GOLD_V2, TOGOOD, PGS, WOBOYUAN, KGOOER, LD, PYLON_L, VILION, TUOPU,JDI,BGS,HUASU,ALPHA,SHIDING.
+Select AUTO to automatically detect the battery manufacturer protocol.</source>
+        <translation>电池协议:根据选择的电池协议解析BMS发送的报文。目前支持选择的电池厂家协议为:迈格, 力神, 鹏辉, 高特, 协能, 蓝锂, 深澜, 派能, 宁德时代, 索英, 欣旺达, 库博, 高特V2, 拓高, PCS团体标准, 沃博源, 科工, 里德, 派能(低压), 未蓝, 拓普,金锂动,BMS团体标准,华塑,阿尔法,仕鼎。
+选择AUTO时将自动判断电池厂家协议。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="5083"/>
         <source>    When not logged in, it is not possible to access the system page or view and modify basic settings and advanced settings parameters.
     When logged in as a &quot;User&quot; account, it is possible to switch work modes and modify basic settings parameters related to the work mode. Advanced settings parameters can be viewed but cannot be modified.
     When logged in as a &quot;Maintain&quot; or &quot;Admin&quot; account, it is possible to set both basic settings parameters and advanced settings parameters.
@@ -5807,92 +6057,94 @@ Select AUTO to automatically detect the battery manufacturer protocol.</source>
         <translation type="vanished">IV曲线扫描高电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3262"/>
+        <location filename="../mywidget.cpp" line="3915"/>
         <source>DCAC Reference Voltage</source>
         <translation>DCAC参考电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3294"/>
+        <location filename="../mywidget.cpp" line="3947"/>
         <source>08:00</source>
         <translation>08:00</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3363"/>
+        <location filename="../mywidget.cpp" line="4016"/>
         <source>Enter the advanced settings interface and select the control power mode. Choose constant current and modify the current value.Converter will charge or discharge the battery with this current value.Positive values represent discharging, while negative values represent charging.</source>
         <translation>进入高级设置的功能设置界面，在控制功率方式选择：恒流(CC)，修改恒流值，此时机器将以该电流值给电池充放电，正值代表放电，负值代表充电。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3356"/>
+        <location filename="../mywidget.cpp" line="4009"/>
         <source>Enter the advanced settings interface and select the control power mode.Choose constant voltage and modify the voltage value.Converter will operate at the constant voltage value and function as a constant voltage source.</source>
         <translation>进入高级设置的功能设置界面的控制功率方式选择：恒压(CV)，修改恒压值，机器将以恒压值进行运行，此时机器将作为一个恒压源。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2949"/>
+        <location filename="../mywidget.cpp" line="3609"/>
         <source>Grid Expansion: Enable, Disable. Enabling activates the Grid Expansion mode.</source>
         <translation>电网扩容：使能，禁止。使能时开启电网扩容模式。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2959"/>
+        <location filename="../mywidget.cpp" line="3619"/>
         <source>DG Charging power limit: Diesel generators allow for the maximum charging power.</source>
         <translation>柴发充电限制功率:柴油发电机允许的最大充电功率。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3025"/>
+        <location filename="../mywidget.cpp" line="3638"/>
+        <source>Stop charging SOC: When the SOC is greater than the &quot;Stop charging SOC&quot;, the FCP state is released.</source>
+        <translation>停止充电SOC：当SOC大于“停止充电SOC”时，解除FCP状态。</translation>
+    </message>
+    <message>
         <source>Battery Protocol: Parse the messages sent by BMS based on the selected battery protocol.
 Currently supported battery manufacturer protocols include:MEGA, LISHEN, GREATPOWER, GOLD, BMSER, LANLI, SLANPOWER, PYLON, CATL, SUOYING, XINGWANGDA, KUBO, GOLD_V2, TOGOOD, PGS, WOBOYUAN, KGOOER, LD, PYLON_L, VILION, TUOPU,JDI,BGS,HUASU,ALPHA.
 Select AUTO to automatically detect the battery manufacturer protocol.</source>
-        <translation>电池协议:根据选择的电池协议解析BMS发送的报文。目前支持选择的电池厂家协议为:迈格, 力神, 鹏辉, 高特, 协能, 蓝锂, 深澜, 派能, 宁德时代, 索英, 欣旺达, 库博, 高特V2, 拓高, PCS团体标准, 沃博源, 科工, 里德, 派能(低压), 未蓝, 拓普,金锂动,BMS团体标准,华塑,阿尔法。
+        <translation type="vanished">电池协议:根据选择的电池协议解析BMS发送的报文。目前支持选择的电池厂家协议为:迈格, 力神, 鹏辉, 高特, 协能, 蓝锂, 深澜, 派能, 宁德时代, 索英, 欣旺达, 库博, 高特V2, 拓高, PCS团体标准, 沃博源, 科工, 里德, 派能(低压), 未蓝, 拓普,金锂动,BMS团体标准,华塑,阿尔法。
 选择AUTO时将自动判断电池厂家协议。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3039"/>
+        <location filename="../mywidget.cpp" line="3697"/>
         <source>Local: Converter control through HMI, In this mode, the EMS can only read and cannot write.
     Remote: In remote mode, the EMS can perform both read and write control.</source>
         <translation>本地:通过HMI控制变流器，EMS在该模式下只能读不能写;
    远程:EMS可以进行读写控制。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3393"/>
+        <location filename="../mywidget.cpp" line="4046"/>
         <source>Serial Port 2 has six selectable baud rates: 1200, 2400, 4800, 9600, 19200, and 38400.                                            The default baud rate for Serial Port 2 is 9600 bps, with eight data bits, no parity, and one stop bit (8-N-1).</source>
         <translation>串口2，波特率有六项可供选择，分别是1200、2400、4800、9600、19200、38400，串口2默认波特率是9600 bps,八个数据位，无校验，一个停止位(8，N, 1).</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3427"/>
         <source>Energy Priority: In the self-use mode,when selecting battery priority over the grid, the load is powered by the battery as a priority.When selecting the grid priority over the battery, the load is powered by the grid as a priority.</source>
-        <translation>能量优先级：自发自用模式下，如果选择电池&gt;电网，则优先使用电池给负载供电；如果选择电网&gt;电池，则优先对电网给负载供电。</translation>
+        <translation type="vanished">能量优先级：自发自用模式下，如果选择电池&gt;电网，则优先使用电池给负载供电；如果选择电网&gt;电池，则优先对电网给负载供电。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3434"/>
+        <location filename="../mywidget.cpp" line="4086"/>
         <source>Battery Capacity Alarm</source>
         <translation>电池容量告警</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3504"/>
+        <location filename="../mywidget.cpp" line="4164"/>
         <source>Release Prohibited Discharging Flag</source>
         <translation>释放禁放标志</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3505"/>
+        <location filename="../mywidget.cpp" line="4165"/>
         <source>When the battery SOC is higher than the selected value, there are four options: Follow battery, 5%, 10%, 15%.</source>
         <translation>电池SOC高于选择值时解除禁放，有四项可选：跟随电池、5%、10%、15%.</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3516"/>
         <source>Admin password: Available for resetting the admin password.(Note: The admin password must be six digits.)</source>
-        <translation>维护密码：可供重新设置高级设置密码。(注：维护设置密码必须为六位数。)</translation>
+        <translation type="vanished">维护密码：可供重新设置高级设置密码。(注：维护设置密码必须为六位数。)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3649"/>
+        <location filename="../mywidget.cpp" line="4309"/>
         <source>Grid restoration time: reserved function, setting invalid.</source>
         <translation>电网恢复并网：预留功能，设置无效。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3654"/>
+        <location filename="../mywidget.cpp" line="4314"/>
         <source>DCAC Isolation Monitoring Enable: Enable, Disable. (Note: Default is Disable)</source>
         <translation>DCAC绝缘监测使能:使能、禁止。(注:默认禁止)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3670"/>
+        <location filename="../mywidget.cpp" line="4330"/>
         <source>Input Dry Contact: nEnabled: Triggers the Action when the dry contact detects a state other than the specified NO/NC.
 Disabled: No action is taken when the dry contact detects a state other than the specified NO/NC.</source>
         <translation>输入干接点：
@@ -5900,29 +6152,29 @@ Disabled: No action is taken when the dry contact detects a state other than the
 禁止：当干接点检测到与指定的常开/常闭状态不一致时，不执行任何动作。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3945"/>
+        <location filename="../mywidget.cpp" line="4605"/>
         <source>INV On off flag2</source>
         <translation>开关机状态字2</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4154"/>
+        <location filename="../mywidget.cpp" line="4810"/>
         <source>Rotate to display the status of each online DCDC module.</source>
         <translation>轮流显示每个在线DCDC模块状态。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1420"/>
-        <location filename="../mywidget.cpp" line="4427"/>
+        <location filename="../mywidget.cpp" line="1945"/>
+        <location filename="../mywidget.cpp" line="5043"/>
         <source>Advanced Settings</source>
         <translation>高级设置</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4293"/>
+        <location filename="../mywidget.cpp" line="4915"/>
         <source>2/2</source>
         <translation>2/2</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4441"/>
-        <location filename="../mywidget.cpp" line="4457"/>
+        <location filename="../mywidget.cpp" line="5057"/>
+        <location filename="../mywidget.cpp" line="5073"/>
         <source>MPS Information</source>
         <translation>MPS信息</translation>
     </message>
@@ -5931,25 +6183,25 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">选择DCDC时界面冻结，最大模块号和最小模块号生效，只能修改数据库以恢复DCAC界面。（注：以出厂设置为准，一般不可修改）</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1293"/>
-        <location filename="../mywidget.cpp" line="2791"/>
+        <location filename="../mywidget.cpp" line="1802"/>
+        <location filename="../mywidget.cpp" line="3451"/>
         <source>Record Event</source>
         <translation>事件记录</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1293"/>
-        <location filename="../mywidget.cpp" line="2789"/>
+        <location filename="../mywidget.cpp" line="1802"/>
+        <location filename="../mywidget.cpp" line="3449"/>
         <source>Modification Time</source>
         <translation>修改时间</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8398"/>
-        <location filename="../mywidget.cpp" line="2931"/>
+        <location filename="../mywidget.ui" line="8501"/>
+        <location filename="../mywidget.cpp" line="3591"/>
         <source>Grid conected mode of the converter </source>
         <translation>变流器并网方式 </translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2932"/>
+        <location filename="../mywidget.cpp" line="3592"/>
         <source>When &quot;Auto&quot; is selected, the converter will automatically switch between grid-on and grid-off. When the grid side is normal, the converter operates in grid-on mode (PQ).When the grid side is abnormal, the converter operates in grid-off mode (VF).
 When &quot;Grid-on&quot; is selected, the converter operates in grid-on mode (PQ).When the grid side is abnormal, the converter will shut down.
 When &quot;Grid-off&quot; is selected, the converter operates in grid-off mode (VF).</source>
@@ -5969,12 +6221,12 @@ priority</source>
         <translation type="vanished">电池优先</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3351"/>
+        <location filename="../mywidget.cpp" line="4004"/>
         <source>This item can modify the power factor, where the power factor is equal to the ratio of active power to apparent power. A positive value indicates leading reactive power, while a negative value indicates lagging reactive power.</source>
         <translation>此项可以修改功率因素Pf，功率因素等于有功功率和视在功率的比值，正值代表无功超前，负值代表无功滞后。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3346"/>
+        <location filename="../mywidget.cpp" line="3999"/>
         <source>This parameter can change the reactive power Q, positive value indicates leading reactive power, negative value indicates lagging reactive power.</source>
         <translation>此项可以修改无功功率Q，正值代表无功超前，负值代表无功滞后。</translation>
     </message>
@@ -5993,17 +6245,17 @@ Remote: In remote mode, the EMS can perform both read and write control.</source
 远程:EMS可以进行读写控制。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3374"/>
+        <location filename="../mywidget.cpp" line="4027"/>
         <source>M_01</source>
         <translation>M_01</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3375"/>
+        <location filename="../mywidget.cpp" line="4028"/>
         <source>Device number: You can set ID number, which can be set within the range of M_01 to M_12.</source>
         <translation>设备号：可以设置设备标识号，可设置范围为M_01~M_12。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3382"/>
+        <location filename="../mywidget.cpp" line="4035"/>
         <source>Parallel operation: When converter operates at grid-off mode in parallel, this item needs to be enabled.</source>
         <translation>并机:多台设备离网并机时，此项需设为使能。</translation>
     </message>
@@ -6012,55 +6264,70 @@ Remote: In remote mode, the EMS can perform both read and write control.</source
         <translation type="vanished">混合模式使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4078"/>
+        <location filename="../mywidget.cpp" line="4734"/>
         <source>Hybrid mode: When the function of running according to the schedule is enabled, this option is enabled.</source>
         <translation>混合模式:按时段运行表的功能运行时，此项使能。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2792"/>
+        <location filename="../mywidget.cpp" line="3452"/>
         <source>System settings operation records.</source>
         <translation>系统设置的操作记录。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3098"/>
+        <location filename="../mywidget.cpp" line="3756"/>
         <source>DC CV Value</source>
         <translation>DC恒压值</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3093"/>
+        <location filename="../mywidget.cpp" line="3751"/>
         <source>DC CC Value</source>
         <translation>DC恒流值</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1335"/>
-        <location filename="../mywidget.cpp" line="3304"/>
+        <location filename="../mywidget.cpp" line="1867"/>
+        <location filename="../mywidget.cpp" line="3957"/>
         <source>Peak-Flat-Valley</source>
         <translation>峰-平-谷</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1335"/>
+        <location filename="../mywidget.cpp" line="1867"/>
         <source>Power(kW)</source>
         <translation>功率（kW）</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2324"/>
+        <location filename="../mywidget.cpp" line="2989"/>
         <source>DCDC module operation modes states: OFF, Standby, Constant Voltage, Constant Current, MPPT.</source>
         <translation>DCDC模块工作模式状态:关闭、待机、恒压、恒流、MPPT。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2940"/>
+        <location filename="../mywidget.cpp" line="3600"/>
         <source>AC Side Power: You can control the charging and discharging power of the battery from the AC side by modifying this value. When the advanced setting for power control mode is set to Constant Power mode (CP_AC), a positive value indicates discharging, and a negative value indicates charging.
 For example, setting it to -5 means that the AC side will charge the battery at a power of -5 kW. Due to converter losses, the DC side power will be lower than the AC side power in this case. Setting it to 5 means that the AC side will output power at 5 kW. Due to converter losses, the DC side power will be higher than the AC side power in this case.</source>
         <translation>交流侧功率：可通过修改该项的值来控制交流侧对电池的充放功率;当高级设置控制功率方式选择恒功率模式(CP_AC)时，正值表示放电，负值表示充电。
 例如，设置-5，表示交流侧将以-5kW的功率给电池充电，由于逆变器的损耗，此时直流侧的功率将小于交流侧的功率;比如设置5，表示交流侧将以5kW的功率输出，由于逆变器的损耗，此时直流侧的功率将大于交流侧的功率。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3082"/>
+        <location filename="../mywidget.cpp" line="3628"/>
+        <source>Start charging SOC</source>
+        <translation>开始充电SOC</translation>
+    </message>
+    <message>
+        <source>Start charging SOC:
+ (1) At the self-use mode, when the battery SOC is lower than the charging SOC, the converter maintains the battery SOC at this value.
+ (2) At the battery priority mode, the ECP or FCP state is determined based on the current SOC.
+ (3) At the optimal mode, when the battery SOC is lower than the charging SOC, the converter enters the FCP state and starts charging the battery. When the current SOC is greater than or equal to the discharge SOC, the converter exits the FCP state and enters the ECP state.</source>
+        <translation type="obsolete">开始充电SOC：
+(1)自发自用模式下，电池SOC小于充电SOC时，变流器维持电池SOC在此值；
+(2)电池优先模式下，从根据当前SOC判断进入ECP或FCP状态；
+(3)最优模式下，电池SOC低于充电SOC，进入FCP状态，电池启动充电，当前SOC大于等于放电SOC时，退出FCP状态，进入ECP状态。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3740"/>
         <source>DCDC module working modes include standby, constant voltage (CV), constant current (CC), and maximum power point tracking (MPPT).</source>
         <translation>DCDC模块工作模式，有待机、恒压、恒流、追踪最佳功率点四种状态。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3087"/>
+        <location filename="../mywidget.cpp" line="3745"/>
         <source>DCDC module operating modes: Buck, Boost.</source>
         <translation>DCDC模块运行模式：降压、升压。</translation>
     </message>
@@ -6069,7 +6336,7 @@ For example, setting it to -5 means that the AC side will charge the battery at 
         <translation type="vanished">DC恒压值</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3099"/>
+        <location filename="../mywidget.cpp" line="3757"/>
         <source>DC Constant Voltage Value: Constant voltage target, range 200V-850V.</source>
         <translation>DC恒压值：恒压目标电压，范围200V-850V。</translation>
     </message>
@@ -6078,125 +6345,119 @@ For example, setting it to -5 means that the AC side will charge the battery at 
         <translation type="vanished">DC恒流值</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3094"/>
+        <location filename="../mywidget.cpp" line="3752"/>
         <source>DC Constant Current Value: Constant current target, range (0A - 120A) * n (n is the number of online modules).</source>
         <translation>DC恒流值：恒流目标电流，范围（0A - 120A）*n（n为在线模块数）。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3104"/>
         <source>Outer Ring Centralized Control: Enable, Disable.the photovoltaic energy storage system achieves efficient operation and optimal performance through centralized control and optimization of external environmental factors.</source>
-        <translation>外环集中控制：使能，禁止。
+        <translation type="vanished">外环集中控制：使能，禁止。
 使能后，通过对外部环境因素的集中控制和优化，实现光伏储能系统的高效运行和最佳性能。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3111"/>
         <source>IV Curve Scanning: Enable, Disable.
 IV curve scanning is a method used to test and evaluate the performance of photovoltaic cells or modules by obtaining the output current at different voltages.</source>
-        <translation>IV曲线扫描：使能，禁止。
+        <translation type="vanished">IV曲线扫描：使能，禁止。
 IV曲线扫描是一种通过获取光伏电池或光伏组件在不同电压下的输出电流来测试和评估其性能的方法。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3116"/>
+        <location filename="../mywidget.cpp" line="3772"/>
         <source>IV curve scanning low voltage</source>
         <translation>IV曲线扫描低电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3117"/>
         <source>IV curve scanning high voltage: By applying a higher voltage to the output end of a photovoltaic module, its performance is measured to identify potential issues, such as component or array faults.</source>
-        <translation>IV曲线扫描高电压：通过施加较高的电压到光伏组件的输出端来测量其性能，以便识别可能存在的问题，例如组件或阵列的故障。</translation>
+        <translation type="vanished">IV曲线扫描高电压：通过施加较高的电压到光伏组件的输出端来测量其性能，以便识别可能存在的问题，例如组件或阵列的故障。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3123"/>
+        <location filename="../mywidget.cpp" line="3777"/>
         <source>IV curve scanning high voltage</source>
         <translation>IV曲线扫描高电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3124"/>
         <source>IV curve scanning low voltage: Obtaining comprehensive performance data of photovoltaic modules at various voltages to provide key indicators for evaluating component performance, such as energy conversion efficiency and stability.</source>
-        <translation>IV曲线扫描低电压：获取光伏组件在各种电压下的完整性能数据，以提供评估组件的关键性能，如电能转换效率和稳定性能等方面的重要依据。</translation>
+        <translation type="vanished">IV曲线扫描低电压：获取光伏组件在各种电压下的完整性能数据，以提供评估组件的关键性能，如电能转换效率和稳定性能等方面的重要依据。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3138"/>
+        <location filename="../mywidget.cpp" line="3789"/>
         <source>Grid-on DOD</source>
         <translation>并网DOD</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3139"/>
+        <location filename="../mywidget.cpp" line="3790"/>
         <source>Grid-on DOD, allowable depth of discharge in grid-on mode.</source>
         <translation>并网DOD，并网模式下允许的放电深度。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3143"/>
+        <location filename="../mywidget.cpp" line="3794"/>
         <source>Grid-off DOD</source>
         <translation>离网DOD</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3144"/>
+        <location filename="../mywidget.cpp" line="3795"/>
         <source>Grid-off DOD, allowable depth of discharge in grid-off mode.</source>
         <translation>离网DOD，离网模式下允许的放电深度。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3147"/>
         <source>DOD Protection Release SOC</source>
-        <translation>DOD保护解除SOC</translation>
+        <translation type="vanished">DOD保护解除SOC</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3148"/>
         <source>DOD Protection Release SOC: When the DOD protection is activated, the current SOC reaches the set SOC value, and the DOD protection is released, allowing the battery to continue discharging.</source>
-        <translation>DOD保护解除SOC：DOD保护时，当前SOC达到该设定SOC后解除DOD保护，允许电池继续放电。</translation>
+        <translation type="vanished">DOD保护解除SOC：DOD保护时，当前SOC达到该设定SOC后解除DOD保护，允许电池继续放电。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3153"/>
+        <location filename="../mywidget.cpp" line="3804"/>
         <source>Charging voltage upper limit</source>
         <translation>充电电压上限</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3154"/>
+        <location filename="../mywidget.cpp" line="3805"/>
         <source>Charging voltage upper limit: When the battery total voltage reaches this value during charging, the converter will shut down.</source>
         <translation>充电电压上限：充电时电池总电压达到这个值，变流器将关机。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3159"/>
+        <location filename="../mywidget.cpp" line="3810"/>
         <source>Charging voltage upper limit hysteresis: When the battery is charging, if the battery total voltage reaches the charging voltage upper limit, the converter will shut down. When the battery total voltage drops below the charging voltage upper limit minus the hysteresis value, the converter will automatically turn on.</source>
         <translation>充电电压上限回差：电池充电时，电池总压达到充电电压上限后，变流器将关机。电池总压低于充电电压上限减去回差值时，变流器自动开机。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3166"/>
+        <location filename="../mywidget.cpp" line="3818"/>
         <source>Discharge voltage lower limit: When the battery total voltage reaches this value during discharge, the converter will shut down.</source>
         <translation>放电电压下限：放电时电池总电压低于这个值，变流器将关机。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3171"/>
+        <location filename="../mywidget.cpp" line="3823"/>
         <source>Discharge voltage lower limit hysteresis: When the battery is discharging, if the battery total voltage drops below the discharge voltage lower limit, the converter will shut down. When the battery total voltage exceeds the discharge voltage lower limit plus the hysteresis value, the converter will automatically turn on.</source>
         <translation>放电电压下限回差：电池放电时，电池总压低于放电电压下限后，变流器将关机。电池总压高于放电电压下限加上回差值时，变流器自动开机。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3176"/>
+        <location filename="../mywidget.cpp" line="3829"/>
         <source>Charging current limit: The maximum allowable current on the battery side to prevent overcurrent during charging.</source>
         <translation>充电电流限制：电池侧允许的最大电流，防止充电过流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3181"/>
+        <location filename="../mywidget.cpp" line="3834"/>
         <source>Discharging current limit: The maximum allowable current on the battery side to prevent overcurrent during discharging.</source>
         <translation>放电电流限制：电池侧允许的最大电流，防止放电过流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3185"/>
+        <location filename="../mywidget.cpp" line="3843"/>
         <source>Generator turn off SOC</source>
         <translation>柴发停止SOC</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3186"/>
+        <location filename="../mywidget.cpp" line="3844"/>
         <source>When the specified SOC is reached, the diesel generator shuts down.</source>
         <translation>达到指定SOC时，柴油发电机关闭。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3190"/>
+        <location filename="../mywidget.cpp" line="3838"/>
         <source>Generator turn on SOC</source>
         <translation>柴发启动SOC</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3191"/>
+        <location filename="../mywidget.cpp" line="3839"/>
         <source>When the specified SOC is reached, the diesel generator starts.</source>
         <translation>达到指定SOC时，柴油发电机开启。</translation>
     </message>
@@ -6233,98 +6494,98 @@ IV曲线扫描是一种通过获取光伏电池或光伏组件在不同电压下
         <translation type="vanished">触发最低单体电压保护后，当前最低单体电压高于该值时解除禁放。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3197"/>
+        <location filename="../mywidget.cpp" line="3850"/>
         <source>Force Charge On</source>
         <translation>强充开启</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3198"/>
+        <location filename="../mywidget.cpp" line="3851"/>
         <source>Forced Charging On: When the cell voltage drops below this value, the converter switches to Battery Priority Mode, and the AC side charges the battery with a power of 10kW.</source>
         <translation>强充开启：单体电池最低电压低于该值时，先切换成电池优先模式，交流侧将以10kw功率给电池充电。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3202"/>
+        <location filename="../mywidget.cpp" line="3855"/>
         <source>ForceCharge Off</source>
         <translation>强充结束</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3203"/>
+        <location filename="../mywidget.cpp" line="3856"/>
         <source>Forced Charging Off: When the cell voltage exceeds this value, the converter exits Battery Priority Mode and returns to the mode before Forced Charging was enabled.</source>
         <translation>强充结束：单体电池最高电压高于该值时，退出电池优先模式，回到强充前的模式.</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3206"/>
+        <location filename="../mywidget.cpp" line="3859"/>
         <source>DCAC cell protect</source>
         <translation>DCAC单体保护电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3207"/>
-        <location filename="../mywidget.cpp" line="3211"/>
+        <location filename="../mywidget.cpp" line="3860"/>
+        <location filename="../mywidget.cpp" line="3864"/>
         <source>Reserved function, settings are invalid.</source>
         <translation>预留功能，设置无效。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3210"/>
+        <location filename="../mywidget.cpp" line="3863"/>
         <source>DCAC cell delta</source>
         <translation>DCAC单体保护电压回差</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3226"/>
+        <location filename="../mywidget.cpp" line="3879"/>
         <source>The number of battery cells connected in series in the battery stack (based on a 2V unit).</source>
         <translation>电池堆串联单体的的数量（以2V为基准）。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3241"/>
+        <location filename="../mywidget.cpp" line="3894"/>
         <source>Charging Current Limit: The maximum allowable current on the battery side to prevent overcurrent during charging. (Upper limit: 0.25C)</source>
         <translation>充电电流限制：电池侧允许的最大电流，防止充电过流。（上限0.25C）</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3246"/>
+        <location filename="../mywidget.cpp" line="3899"/>
         <source>Discharge Current Limit: The maximum allowable current on the battery side to prevent overcurrent during discharge. (Upper limit: 0.5C)</source>
         <translation>放电电流限制：电池侧允许的最大电流，防止放电过流。（上限0.5C）</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3258"/>
+        <location filename="../mywidget.cpp" line="3911"/>
         <source>Generator Shutdown Voltage: When the specified voltage is reached, the diesel generator will shut down.</source>
         <translation>发电机关闭电压：达到指定电压时，柴油发电机关闭。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3253"/>
+        <location filename="../mywidget.cpp" line="3906"/>
         <source>Generator Start Voltage: When the specified voltage is reached, the diesel generator will start up.</source>
         <translation>发电机开启电压：达到指定电压时，柴油发电机开启。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3267"/>
+        <location filename="../mywidget.cpp" line="3925"/>
         <source>Grid-off EOD</source>
         <translation>离网EOD</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3268"/>
+        <location filename="../mywidget.cpp" line="3926"/>
         <source>Grid-off discharge cut-off voltage.</source>
         <translation>离网放电截止电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3272"/>
+        <location filename="../mywidget.cpp" line="3920"/>
         <source>Grid-on EOD</source>
         <translation>并网EOD</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3273"/>
+        <location filename="../mywidget.cpp" line="3921"/>
         <source>Grid-on discharge cut-off voltage.</source>
         <translation>并网放电截止电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3279"/>
+        <location filename="../mywidget.cpp" line="3932"/>
         <source>Uniform charging to flushing current: Upper limit of 0.025C.</source>
         <translation>均充转浮充：上限为0.025C。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3284"/>
+        <location filename="../mywidget.cpp" line="3937"/>
         <source>Float turn to uniform charging current: Upper limit of 0.15C.</source>
         <translation>浮充转均充：上限为0.15C。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3298"/>
+        <location filename="../mywidget.cpp" line="3951"/>
         <source>Working Power: Only effective in peak shaving mode. Positive values indicate discharging, while negative values indicate charging.</source>
         <translation>工作功率：只在削峰填谷模式下生效，正数为放电，负数为充电。</translation>
     </message>
@@ -6358,19 +6619,19 @@ When you select AUTO, the system automatically determines the battery manufactur
         <translation type="vanished">这是设备地址，默认值为1，可调范围在1~255之间，用于EMS通信时匹配主机地址，使用485改从机地址。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3499"/>
-        <location filename="../mywidget.cpp" line="3504"/>
+        <location filename="../mywidget.cpp" line="4159"/>
+        <location filename="../mywidget.cpp" line="4164"/>
         <source>Follow
 battery</source>
         <translation>跟随电池</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3500"/>
+        <location filename="../mywidget.cpp" line="4160"/>
         <source>When the battery SOC is below the selected value, there are four options: Follow battery, 95%, 90%, 85%.</source>
         <translation>电池SOC低于选择值时解除禁充，有四项可选：跟随电池、95%、90%、85%.</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3488"/>
+        <location filename="../mywidget.cpp" line="4148"/>
         <source>Protocol version: View the current protocol version. The default protocol version number is V1.0.</source>
         <translation>协议版本：查看当前协议版本,协议版本号默认为V1.0.</translation>
     </message>
@@ -6379,7 +6640,7 @@ battery</source>
         <translation type="vanished">用户密码</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3511"/>
+        <location filename="../mywidget.cpp" line="4171"/>
         <source>User password: Available for resetting the user password. The default user password is 123456. (Note: The user password must be six digits.)</source>
         <translation>用户密码：可供重新设置用户密码，默认用户密码123456。(注：用户密码必须为六位数。)</translation>
     </message>
@@ -6388,27 +6649,27 @@ battery</source>
         <translation type="vanished">高级设置密码：可供重新设置高级设置密码，默认高级设置密码888888。(注：高级设置密码必须为六位数。)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3440"/>
+        <location filename="../mywidget.cpp" line="4092"/>
         <source>Bms Com. Fault Time</source>
         <translation>BMS通信故障判定时间</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3441"/>
+        <location filename="../mywidget.cpp" line="4093"/>
         <source>BMS communication fault determination time: The BMS communication fault determination time refers to the BMS communication fault when the BMS communication is disconnected and the communication is not recovered after a preset period of time.</source>
         <translation>BMS通信故障判定时间：BMS通信故障判定时间是指当BMS通信断开，并经过预设的一段时间后仍未恢复正常通信时，将判定为BMS通信故障。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3447"/>
+        <location filename="../mywidget.cpp" line="4099"/>
         <source>120</source>
         <translation>120</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3447"/>
+        <location filename="../mywidget.cpp" line="4099"/>
         <source>EMS Com. Fault Model</source>
         <translation>EMS通信故障判定时间</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3448"/>
+        <location filename="../mywidget.cpp" line="4100"/>
         <source>EMS communication fault determination time: The EMS communication fault determination time refers to the time when the communication between the EMS is disconnected and the communication is not recovered after a preset period of time.</source>
         <translation>EMS通信故障判定时间：EMS通信故障判定时间是指当EMS通信断开，并经过预设的一段时间后仍未恢复正常通信时，将判定为EMS通信故障。</translation>
     </message>
@@ -6430,33 +6691,33 @@ Settings</source>
         <translation type="vanished">设置备份</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3473"/>
+        <location filename="../mywidget.cpp" line="4133"/>
         <source>Backup Set Parameters</source>
         <translation>备份设置参数</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3473"/>
+        <location filename="../mywidget.cpp" line="4133"/>
         <source>Backup</source>
         <translation>备份</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3474"/>
+        <location filename="../mywidget.cpp" line="4134"/>
         <source>Backup setting parameters: Backup setting parameters refers to backing up the parameters set on the current device so that the backup parameter Settings can be restored when needed.</source>
         <translation>备份设置参数：备份设置参数是指将当前设备设置的参数进行备份，以便在需要时可以恢复到这些备份的参数设置。 </translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3478"/>
+        <location filename="../mywidget.cpp" line="4138"/>
         <source>Restore
 Backup</source>
         <translation>恢复备份</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3478"/>
+        <location filename="../mywidget.cpp" line="4138"/>
         <source>Restore Backup Set Parameters</source>
         <translation>恢复备份设置参数</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3479"/>
+        <location filename="../mywidget.cpp" line="4139"/>
         <source>Restore backup setting parameters: Restore backup setting parameters means to restore the device to the last backup setting parameters and restart the device.</source>
         <translation>恢复备份设置参数：恢复备份设置参数是指将设备恢复到上一次备份好的设置参数，并重新启动设备。</translation>
     </message>
@@ -6473,84 +6734,84 @@ Backup</source>
         <translation type="vanished">这是当前系统的最小模块数（备注：仅在机架设置中选择DCDC模式时生效）。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3991"/>
+        <location filename="../mywidget.cpp" line="4651"/>
         <source>To view the data for the previous year.</source>
         <translation>查看上一年的数据。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3997"/>
+        <location filename="../mywidget.cpp" line="4657"/>
         <source>To view the data for the next year.</source>
         <translation>查看下一年的数据。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4003"/>
+        <location filename="../mywidget.cpp" line="4663"/>
         <source>To view the data of the previous month.</source>
         <translation>查看上个月的数据。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4009"/>
+        <location filename="../mywidget.cpp" line="4669"/>
         <source>To view the data for the next month.</source>
         <translation>查看下一个月的数据。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4015"/>
+        <location filename="../mywidget.cpp" line="4675"/>
         <source>To view the data of the previous day.</source>
         <translation>查看上一日的数据。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4021"/>
+        <location filename="../mywidget.cpp" line="4681"/>
         <source>To view the data of the next day.</source>
         <translation>查看下一日的数据。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4027"/>
+        <location filename="../mywidget.cpp" line="4687"/>
         <source>Export History Records, click here to export the history records to a U disk. The exported file will be named Record.csv, and it needs to be opened with Excel.</source>
         <translation>导出历史记录，点击此处将会导出历史记录到U盘里,导出到U盘的文件为Record.csv，此文件需要用Excel打开。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4039"/>
+        <location filename="../mywidget.cpp" line="4699"/>
         <source>Export the battery statistics. Click here to export the battery statistics to the U disk.
 The accuracy is 0.1, which means that the obtained data multiplied by 0.1 gives the actual value.</source>
         <translation>导出电量统计表，点击此处将会导出电量统计表到U盘里。精度为0.1,即所得数据*0.1为实际的数值。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8191"/>
-        <location filename="../mywidget.cpp" line="4044"/>
+        <location filename="../mywidget.ui" line="8294"/>
+        <location filename="../mywidget.cpp" line="4704"/>
         <source>Eject U disk</source>
         <translation>退出U盘</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4045"/>
+        <location filename="../mywidget.cpp" line="4705"/>
         <source>Eject U disk.</source>
         <translation>退出U盘。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4128"/>
+        <location filename="../mywidget.cpp" line="4784"/>
         <source>The switch to turn on the DCDC converter, click to activate the DCDC converter.</source>
         <translation>打开DCDC变流器的开关，单击后开启DCDC变流器。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4133"/>
+        <location filename="../mywidget.cpp" line="4789"/>
         <source>The switch to turn off the DCDC converter, click to deactivate the DCDC converter.</source>
         <translation>关闭DCDC变流器的开关，单击后停用DCDC变流器。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4138"/>
+        <location filename="../mywidget.cpp" line="4794"/>
         <source>The switch to turn on the DCAC converter, click to activate the DCAC converter.</source>
         <translation>打开DCAC变流器的开关，单击后开启DCAC变流器。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4143"/>
+        <location filename="../mywidget.cpp" line="4799"/>
         <source>The switch to turn off the DCAC converter, click to deactivate the DCAC converter.</source>
         <translation>关闭DCAC变流器的开关，单击后停用DCAC变流器。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4149"/>
+        <location filename="../mywidget.cpp" line="4805"/>
         <source>Display the current status of the DCAC converter.</source>
         <translation>显示当前DCAC变流器状态。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4154"/>
+        <location filename="../mywidget.cpp" line="4810"/>
         <source>DCDC Module State</source>
         <translation>DCDC模块状态</translation>
     </message>
@@ -6559,12 +6820,12 @@ The accuracy is 0.1, which means that the obtained data multiplied by 0.1 gives 
         <translation type="vanished">轮流显示每个DCDC模块状态。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4374"/>
+        <location filename="../mywidget.cpp" line="4990"/>
         <source>Time</source>
         <translation>时间</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4374"/>
+        <location filename="../mywidget.cpp" line="4990"/>
         <source>Click here to modify the time displayed on the HMI.</source>
         <translation>点击此处，可以对HMI显示的时间进行修改。</translation>
     </message>
@@ -6645,17 +6906,17 @@ The accuracy is 0.1, which means that the obtained data multiplied by 0.1 gives 
         <translation type="vanished">温度告警上限，电池温度达到该值时将会告警。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8965"/>
+        <location filename="../mywidget.ui" line="9068"/>
         <source>Lead</source>
         <translation>铅酸</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3290"/>
+        <location filename="../mywidget.cpp" line="3943"/>
         <source>Start_Time</source>
         <translation>开始时间</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3291"/>
+        <location filename="../mywidget.cpp" line="3944"/>
         <source>End_Time</source>
         <translation>结束时间</translation>
     </message>
@@ -6664,7 +6925,7 @@ The accuracy is 0.1, which means that the obtained data multiplied by 0.1 gives 
         <translation type="vanished">9:00</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3295"/>
+        <location filename="../mywidget.cpp" line="3948"/>
         <source>10:00</source>
         <translation>10:00</translation>
     </message>
@@ -6677,8 +6938,8 @@ The accuracy is 0.1, which means that the obtained data multiplied by 0.1 gives 
         <translation type="vanished">这是&apos;使能&apos;，选择后将在指定的时间以指定的功率开启指定的状态，并在指定的时间结束。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="8644"/>
-        <location filename="../mywidget.cpp" line="3013"/>
+        <location filename="../mywidget.ui" line="8747"/>
+        <location filename="../mywidget.cpp" line="3671"/>
         <source>Lithium</source>
         <translation>锂电</translation>
     </message>
@@ -6687,42 +6948,42 @@ The accuracy is 0.1, which means that the obtained data multiplied by 0.1 gives 
         <translation type="vanished">这是功能，将在工作时间执行此功能，有六种可供选择，分别是自发自用(System for self-use)、电池优先(battery Batter priority)、削峰填谷（Peak shaving).跟随PV功率(Output PV power).</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2446"/>
+        <location filename="../mywidget.cpp" line="3106"/>
         <source>Today&apos;s electricity buy from the grid.</source>
         <translation>电网今日的购电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2450"/>
+        <location filename="../mywidget.cpp" line="3110"/>
         <source>Monthly electricity buy from the grid.</source>
         <translation>电网今月的购电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2454"/>
+        <location filename="../mywidget.cpp" line="3114"/>
         <source>Annual electricity buy from the grid.</source>
         <translation>电网今年的购电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2458"/>
+        <location filename="../mywidget.cpp" line="3118"/>
         <source>Total electricity buy from the grid.</source>
         <translation>电网总购电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2463"/>
+        <location filename="../mywidget.cpp" line="3123"/>
         <source>Today&apos;s electricity sell to the grid.</source>
         <translation>电网今日的卖电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2467"/>
+        <location filename="../mywidget.cpp" line="3127"/>
         <source>Monthly electricity sell to the grid.</source>
         <translation>电网今月的卖电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2471"/>
+        <location filename="../mywidget.cpp" line="3131"/>
         <source>Annual electricity sell to the grid.</source>
         <translation>电网今年的卖电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2475"/>
+        <location filename="../mywidget.cpp" line="3135"/>
         <source>Total electricity sell to the grid.</source>
         <translation>电网总卖电量。</translation>
     </message>
@@ -6731,7 +6992,7 @@ The accuracy is 0.1, which means that the obtained data multiplied by 0.1 gives 
         <translation type="vanished">根据实际情况选择电池类型，有锂电(Lithium)和铅酸(LeadAcid)两种类型可供选择。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3018"/>
+        <location filename="../mywidget.cpp" line="3676"/>
         <source>BMS Comm type</source>
         <translation>电池通信方式</translation>
     </message>
@@ -6748,7 +7009,7 @@ If you choose constant power (CP_P) or positive and negative power (CP_N&amp;P) 
 如果选择恒压(CV)模式，变流器将以恒压模式运行。如果选择恒流(CC)模式，变流器将以恒流模式运行。如果选择恒功率(CP_P)或者正负功率(CP_N&amp;P)模式:可以在&apos;恒功率&apos;处设置功率大小，数值为大小为功率大小，正值为放电，负值为充电。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3032"/>
+        <location filename="../mywidget.cpp" line="3690"/>
         <source>EMS Comm type</source>
         <translation>EMS通讯方式</translation>
     </message>
@@ -6761,12 +7022,12 @@ If you choose constant power (CP_P) or positive and negative power (CP_N&amp;P) 
         <translation type="vanished">HMI限制交流侧功率设置值的范围。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3024"/>
+        <location filename="../mywidget.cpp" line="3682"/>
         <source>Auto</source>
         <translation>自动</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3024"/>
+        <location filename="../mywidget.cpp" line="3682"/>
         <source>BAT protocol</source>
         <translation>电池协议</translation>
     </message>
@@ -6779,9 +7040,8 @@ If you choose constant power (CP_P) or positive and negative power (CP_N&amp;P) 
         <translation type="vanished">这是充电SOC，当电池SOC低于20%时，电池将启动充电，直到充电达到放电SOC，才允许电池再次放电。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2977"/>
         <source>Disharge SOC</source>
-        <translation>充电SOC</translation>
+        <translation type="vanished">充电SOC</translation>
     </message>
     <message>
         <source>This is the discharge SOC. When the battery SOC is lower than the charging SOC, after the battery starts charging, it will be charged to the discharge SOC (50%) before allowing the battery to discharge again.</source>
@@ -6792,7 +7052,7 @@ If you choose constant power (CP_P) or positive and negative power (CP_N&amp;P) 
         <translation type="vanished">这是柴油发电机的允许输入最大功率，不得超过机型容量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3426"/>
+        <location filename="../mywidget.cpp" line="4079"/>
         <source>Bat&gt;Grid</source>
         <translation>电池&gt;电网</translation>
     </message>
@@ -6809,33 +7069,33 @@ If you choose constant power (CP_P) or positive and negative power (CP_N&amp;P) 
         <translation type="vanished">这是串口1，有六项可供选择，分别是1200、2400、4800、9600、19200、38400，串口1默认波特率是9600bps,八个数据位，无校验，一个停止位（8，N，1）。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4065"/>
+        <location filename="../mywidget.cpp" line="4721"/>
         <source>Battery power-on</source>
         <translation>电池上电</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4066"/>
+        <location filename="../mywidget.cpp" line="4722"/>
         <source>Battery power-on: This function allows the BMS to send a command to close the contactor (Note: this feature is only supported by some BMS manufacturers).</source>
         <translation>电池上电：该项可以给BMS下发闭合接触器的指令(注:仅部分BMS厂家支持该功能)。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4071"/>
+        <location filename="../mywidget.cpp" line="4727"/>
         <source>Battery power-off</source>
         <translation>电池下电</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4072"/>
+        <location filename="../mywidget.cpp" line="4728"/>
         <source>Battery power-off: This function allows the BMS to send a command to open the contactor (Note: this feature is only supported by some BMS manufacturers).</source>
         <translation>电池下电：该项可以给BMS下发断开接触器的指令(注:仅部分BMS厂家支持该功能)。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4077"/>
+        <location filename="../mywidget.cpp" line="4733"/>
         <source>Hybrid mode Enable</source>
         <translation>混合模式使能</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4128"/>
-        <location filename="../mywidget.cpp" line="4138"/>
+        <location filename="../mywidget.cpp" line="4784"/>
+        <location filename="../mywidget.cpp" line="4794"/>
         <source>Turn on</source>
         <translation>开启</translation>
     </message>
@@ -6912,17 +7172,17 @@ If you choose constant power (CP_P) or positive and negative power (CP_N&amp;P) 
         <translation type="vanished">这是超级权限密码，可供重新设置超级权限密码，默认超级权限密码888888,(注超级权限密码必须为六位数）。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3454"/>
+        <location filename="../mywidget.cpp" line="4114"/>
         <source>English</source>
         <translation>英语</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3455"/>
+        <location filename="../mywidget.cpp" line="4115"/>
         <source>You can set the display language of the screen to Chinese or English. The system needs to restart before switching the language.</source>
         <translation>设置显示屏的显示语言，可供选择为中文与英文，切换语言时系统需重启。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3468"/>
+        <location filename="../mywidget.cpp" line="4128"/>
         <source>upgrade</source>
         <translation>升级</translation>
     </message>
@@ -6935,17 +7195,17 @@ If you choose constant power (CP_P) or positive and negative power (CP_N&amp;P) 
         <translation type="vanished">点击即可进入系统升级应用程序，根据升级文档进行系统升级。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3459"/>
+        <location filename="../mywidget.cpp" line="4119"/>
         <source>Allow</source>
         <translation>允许</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3460"/>
+        <location filename="../mywidget.cpp" line="4120"/>
         <source>Set whether the display is enabled sound, which can be allowed(Allow) or prohibited(forbid).</source>
         <translation>设置显示屏是否开启声音，可供选择为允许(Allow)、禁止(forbid)。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="12189"/>
+        <location filename="../mywidget.ui" line="12417"/>
         <source>Power On</source>
         <translation>上电</translation>
     </message>
@@ -6954,7 +7214,7 @@ If you choose constant power (CP_P) or positive and negative power (CP_N&amp;P) 
         <translation type="vanished">电池上电，该项可以给BMS下发闭合接触器的指令(注：仅部分BMS厂家支持该功能)。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="12207"/>
+        <location filename="../mywidget.ui" line="12435"/>
         <source>Power Off</source>
         <translation>下电</translation>
     </message>
@@ -6963,12 +7223,12 @@ If you choose constant power (CP_P) or positive and negative power (CP_N&amp;P) 
         <translation type="vanished">电池下电，该项可以给BMS下发断开接触器的指令(注：仅部分BMS厂家支持该功能)。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4098"/>
+        <location filename="../mywidget.cpp" line="4754"/>
         <source>If this parameter is selected, static IP addresses are used</source>
         <translation>如果选择此项，表示使用静态的IP地址</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4120"/>
+        <location filename="../mywidget.cpp" line="4776"/>
         <source>If this parameter is selected, the automatically assigned IP address is used</source>
         <translation>如果选择此项，表示使用自动分配的IP地址</translation>
     </message>
@@ -7051,12 +7311,12 @@ The remote mode: the dispatching machine can only read and write data through Et
         <translation type="vanished">电池堆串联单体的的数量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3231"/>
+        <location filename="../mywidget.cpp" line="3884"/>
         <source>This is the floating charge voltage.</source>
         <translation>这是浮充电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3236"/>
+        <location filename="../mywidget.cpp" line="3889"/>
         <source>This is the filling voltage.</source>
         <translation>这是均充电压。</translation>
     </message>
@@ -7073,7 +7333,7 @@ The remote mode: the dispatching machine can only read and write data through Et
         <translation type="vanished">这是结束时间，将在此时间结束由&apos;开始时间&apos;开始的状态。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3301"/>
+        <location filename="../mywidget.cpp" line="3954"/>
         <source>System for self-use</source>
         <translation>自发自用</translation>
     </message>
@@ -7086,10 +7346,7 @@ The remote mode: the dispatching machine can only read and write data through Et
         <translation type="vanished">2/3</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2237"/>
-        <location filename="../mywidget.cpp" line="2328"/>
-        <location filename="../mywidget.cpp" line="2332"/>
-        <location filename="../mywidget.cpp" line="3263"/>
+        <location filename="../mywidget.cpp" line="3916"/>
         <source>.</source>
         <translation>。</translation>
     </message>
@@ -7098,12 +7355,12 @@ The remote mode: the dispatching machine can only read and write data through Et
         <translation type="vanished">这是工作功率，此状态下工作时根据工作状态执行此功率，正数为放电，负数为充电。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3299"/>
+        <location filename="../mywidget.cpp" line="3952"/>
         <source>Start time: When the system reaches this time, it starts to run automatically.</source>
         <translation>开始时间：系统到达此时间后开始自动运行。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3300"/>
+        <location filename="../mywidget.cpp" line="3953"/>
         <source>Select: After this function is enabled, the system automatically runs the selected function mode within the specified period.</source>
         <translation>选择：使能后，系统将按照设置的时间段自动运行选择的功能模式。</translation>
     </message>
@@ -7112,52 +7369,52 @@ The remote mode: the dispatching machine can only read and write data through Et
         <translation type="vanished">在削峰填谷模式下，根据电价选择‘峰价’时段、‘谷价’时段。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2341"/>
+        <location filename="../mywidget.cpp" line="3001"/>
         <source>This is the monitor screen version number.</source>
         <translation>这是监控屏版本号。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2345"/>
+        <location filename="../mywidget.cpp" line="3005"/>
         <source>This is the DCAC protocol version number.</source>
         <translation>这是DCAC协议版本号。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2349"/>
+        <location filename="../mywidget.cpp" line="3009"/>
         <source>This is the DCAC converter software version.</source>
         <translation>这是DCAC变流器软件版本。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2353"/>
+        <location filename="../mywidget.cpp" line="3013"/>
         <source>This is the DCAC CPLD software version.</source>
         <translation>这是DCAC CPLD软件版本。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2357"/>
+        <location filename="../mywidget.cpp" line="3017"/>
         <source>This is the DCDC protocol version number.</source>
         <translation>这是DCDC协议版本号。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2361"/>
+        <location filename="../mywidget.cpp" line="3021"/>
         <source>This is the DCDC converter software version.</source>
         <translation>这是DCDC变流器软件版本。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2365"/>
+        <location filename="../mywidget.cpp" line="3025"/>
         <source>This is the DCDC CPLD software version.</source>
         <translation>这是DCDC CPLD软件版本。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2368"/>
+        <location filename="../mywidget.cpp" line="3028"/>
         <source>SN</source>
         <translation>SN</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2369"/>
+        <location filename="../mywidget.cpp" line="3029"/>
         <source>This is SN, the serial number of the product.</source>
         <translation>这是SN，即产品序列号。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2377"/>
+        <location filename="../mywidget.cpp" line="3037"/>
         <source>PV power generation Day</source>
         <translation>光伏日发电量</translation>
     </message>
@@ -7166,7 +7423,7 @@ The remote mode: the dispatching machine can only read and write data through Et
         <translation type="vanished">这是光伏今日的发电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2381"/>
+        <location filename="../mywidget.cpp" line="3041"/>
         <source>PV power generation Month</source>
         <translation>光伏月发电量</translation>
     </message>
@@ -7175,7 +7432,7 @@ The remote mode: the dispatching machine can only read and write data through Et
         <translation type="vanished">这是光伏这个月的发电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2385"/>
+        <location filename="../mywidget.cpp" line="3045"/>
         <source>PV power generation Year</source>
         <translation>光伏年发电量</translation>
     </message>
@@ -7184,7 +7441,7 @@ The remote mode: the dispatching machine can only read and write data through Et
         <translation type="vanished">这是光伏今年的发电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2389"/>
+        <location filename="../mywidget.cpp" line="3049"/>
         <source>PV power generation Total</source>
         <translation>光伏总发电量</translation>
     </message>
@@ -7225,8 +7482,8 @@ The remote mode: the dispatching machine can only read and write data through Et
         <translation type="vanished">这是负载的总用电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2411"/>
-        <location filename="../mywidget.cpp" line="2428"/>
+        <location filename="../mywidget.cpp" line="3071"/>
+        <location filename="../mywidget.cpp" line="3088"/>
         <source>Battery Charge Day</source>
         <translation>电池日充电量</translation>
     </message>
@@ -7235,8 +7492,8 @@ The remote mode: the dispatching machine can only read and write data through Et
         <translation type="vanished">这是电池今日的充电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2415"/>
-        <location filename="../mywidget.cpp" line="2432"/>
+        <location filename="../mywidget.cpp" line="3075"/>
+        <location filename="../mywidget.cpp" line="3092"/>
         <source>Battery Discharge Month</source>
         <translation>电池月放电量</translation>
     </message>
@@ -7245,8 +7502,8 @@ The remote mode: the dispatching machine can only read and write data through Et
         <translation type="vanished">这是电池这个月的充电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2419"/>
-        <location filename="../mywidget.cpp" line="2436"/>
+        <location filename="../mywidget.cpp" line="3079"/>
+        <location filename="../mywidget.cpp" line="3096"/>
         <source>Battery Discharge Year</source>
         <translation>电池年放电量</translation>
     </message>
@@ -7255,8 +7512,8 @@ The remote mode: the dispatching machine can only read and write data through Et
         <translation type="vanished">这是电池今年的充电量。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2423"/>
-        <location filename="../mywidget.cpp" line="2440"/>
+        <location filename="../mywidget.cpp" line="3083"/>
+        <location filename="../mywidget.cpp" line="3100"/>
         <source>Battery Discharge Total</source>
         <translation>电池总放电量</translation>
     </message>
@@ -7341,7 +7598,7 @@ The remote mode: the dispatching machine can only read and write data through Et
         <translation type="vanished">这是事件结束时间，表示这条记录的结束时间,...&apos;表示无结束时间。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2487"/>
+        <location filename="../mywidget.cpp" line="3147"/>
         <source>CAN communication failure</source>
         <translation>Can通讯故障</translation>
     </message>
@@ -7350,17 +7607,17 @@ The remote mode: the dispatching machine can only read and write data through Et
         <translation type="vanished">这是事件描述，当有告警信息时，会将告警信息记录在这里。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2490"/>
+        <location filename="../mywidget.cpp" line="3150"/>
         <source>Fire alarm (High temp. alarm)</source>
         <translation>消防告警(高温告警)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2491"/>
+        <location filename="../mywidget.cpp" line="3151"/>
         <source>Power Meter Comm fualttLead-acid abnormal</source>
         <translation>电能表通讯故障</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2790"/>
+        <location filename="../mywidget.cpp" line="3450"/>
         <source>Time when the system Settings are modified.</source>
         <translation>系统设置修改时的时间。</translation>
     </message>
@@ -7369,32 +7626,32 @@ The remote mode: the dispatching machine can only read and write data through Et
         <translation type="vanished">这里是对系统设置进行修改时的操作记录。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2874"/>
+        <location filename="../mywidget.cpp" line="3534"/>
         <source>Power control type：CP_P-&gt;CP_N&amp;&amp;P</source>
         <translation>功率控制类型：CP_P-&gt;CP_N&amp;&amp;P</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2878"/>
+        <location filename="../mywidget.cpp" line="3538"/>
         <source>Power control type：CP_N&amp;&amp;P-&gt;CP_P</source>
         <translation>功率控制类型：CP_N&amp;&amp;P-&gt;CP_P</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2882"/>
+        <location filename="../mywidget.cpp" line="3542"/>
         <source>Grid Fre Upper limit：0.2-&gt;3</source>
         <translation>电网频率变化范围上限：0.2-&gt;3</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2886"/>
+        <location filename="../mywidget.cpp" line="3546"/>
         <source>Grid Fre Upper limit：3-&gt;0.2</source>
         <translation>电网频率变化范围上限：3-&gt;0.2</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2890"/>
+        <location filename="../mywidget.cpp" line="3550"/>
         <source>Voltage protection Lower limit：-10-&gt;-15</source>
         <translation>电压保护范围下限：-10-&gt;-15</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2894"/>
+        <location filename="../mywidget.cpp" line="3554"/>
         <source>Voltage protection Lower limit：-15-&gt;-10</source>
         <translation>电压保护范围下限：-15-&gt;-10</translation>
     </message>
@@ -7407,7 +7664,7 @@ The remote mode: the dispatching machine can only read and write data through Et
         <translation type="vanished">操作模式：UPS(备电模式)-&gt;系统防逆流</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2898"/>
+        <location filename="../mywidget.cpp" line="3558"/>
         <source>Operation mode：Manual-&gt;UPS</source>
         <translation>操作模式：手动-&gt;UPS(备电模式)</translation>
     </message>
@@ -7416,12 +7673,12 @@ The remote mode: the dispatching machine can only read and write data through Et
         <translation type="vanished">操作模式：削峰填谷-&gt;手动</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2902"/>
+        <location filename="../mywidget.cpp" line="3562"/>
         <source>Inv ON/Off-Grid：Off-&gt;automatic</source>
         <translation>并离网：关闭-&gt;自动</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2906"/>
+        <location filename="../mywidget.cpp" line="3566"/>
         <source>Inv ON/Off-Grid：automatic-&gt;Off</source>
         <translation>并离网：自动-&gt;关闭</translation>
     </message>
@@ -7466,14 +7723,14 @@ The remote mode: the dispatching machine can only read and write data through Et
         <translation type="vanished">交流侧所允许的电压变化范围的下限，可供选择为-10、-15、-20、-30。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3549"/>
-        <location filename="../mywidget.cpp" line="3554"/>
-        <location filename="../mywidget.cpp" line="3558"/>
-        <location filename="../mywidget.cpp" line="3569"/>
-        <location filename="../mywidget.cpp" line="3610"/>
-        <location filename="../mywidget.cpp" line="3615"/>
-        <location filename="../mywidget.cpp" line="3620"/>
-        <location filename="../mywidget.cpp" line="3662"/>
+        <location filename="../mywidget.cpp" line="4209"/>
+        <location filename="../mywidget.cpp" line="4214"/>
+        <location filename="../mywidget.cpp" line="4218"/>
+        <location filename="../mywidget.cpp" line="4229"/>
+        <location filename="../mywidget.cpp" line="4270"/>
+        <location filename="../mywidget.cpp" line="4275"/>
+        <location filename="../mywidget.cpp" line="4280"/>
+        <location filename="../mywidget.cpp" line="4322"/>
         <source>prohibit</source>
         <translation>禁止</translation>
     </message>
@@ -7510,7 +7767,7 @@ The remote mode: the dispatching machine can only read and write data through Et
         <translation type="vanished">PCS的额定容量，以出厂值为准，不可更改。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3599"/>
+        <location filename="../mywidget.cpp" line="4259"/>
         <source>Output Fre grade</source>
         <translation>输出频率等级</translation>
     </message>
@@ -7519,7 +7776,7 @@ The remote mode: the dispatching machine can only read and write data through Et
         <translation type="vanished">输出频率等级，默认50Hz，一般为50Hz或60Hz，可根据项目地微调。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3594"/>
+        <location filename="../mywidget.cpp" line="4254"/>
         <source>Output vol level</source>
         <translation>输出电压等级</translation>
     </message>
@@ -7536,7 +7793,7 @@ The remote mode: the dispatching machine can only read and write data through Et
         <translation type="vanished">逆变电压等级是逆变器逆变出来的电压等级，要根据变压器铭牌来设置，以出厂默认值为准，不可随意更改，如需更改，请联系客服确认。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3340"/>
+        <location filename="../mywidget.cpp" line="3993"/>
         <source>Non adjustable</source>
         <translation>不可调节</translation>
     </message>
@@ -7567,7 +7824,7 @@ countercurrent</source>
 具备当地并网资质时，可改为′可逆流&apos;;使用系统防逆流模式时，可改为&apos;逆流&apos;。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3610"/>
+        <location filename="../mywidget.cpp" line="4270"/>
         <source>Pshedding Freq</source>
         <translation>过频降载</translation>
     </message>
@@ -7580,7 +7837,7 @@ countercurrent</source>
         <translation type="vanished">这是QP曲线设置，有两项可选：允许(Enable)、不允许(prohibit),(注：在大型并网电站使用）。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3662"/>
+        <location filename="../mywidget.cpp" line="4322"/>
         <source>CV parallel</source>
         <translation>恒压并机</translation>
     </message>
@@ -7593,22 +7850,22 @@ countercurrent</source>
         <translation type="vanished">PCS的模块数量，默认值1(无效设置)。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3492"/>
+        <location filename="../mywidget.cpp" line="4152"/>
         <source>restore</source>
         <translation>恢复出厂</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3493"/>
+        <location filename="../mywidget.cpp" line="4153"/>
         <source>Restore the factory default Settings.</source>
         <translation>恢复出厂时的默认设置。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3464"/>
+        <location filename="../mywidget.cpp" line="4124"/>
         <source>Clear</source>
         <translation>清除</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3465"/>
+        <location filename="../mywidget.cpp" line="4125"/>
         <source>Clear previous recorded data and operation data of the system.</source>
         <translation>清除系统此前的记录数据及操作数据。</translation>
     </message>
@@ -7629,7 +7886,7 @@ countercurrent</source>
         <translation type="vanished">这是DCDC绝缘监测使能设置，有两项可选：允许(Enable)、禁止(Disable),(注：默认禁止)。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3668"/>
+        <location filename="../mywidget.cpp" line="4328"/>
         <source>Normally closed circuit (NC) or normally open circuit (NO) according to field Settings.</source>
         <translation>根据现场设置为常闭电路(N_C)或常开电路(N_O)。</translation>
     </message>
@@ -7638,7 +7895,7 @@ countercurrent</source>
         <translation type="vanished">当干接点使能后，收到异常信号时，设备将会执行此项所选的动作。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3669"/>
+        <location filename="../mywidget.cpp" line="4329"/>
         <source>When the dry contact is enabled, the device will perform the selected action when there is a change in the signal.</source>
         <translation>当干接点使能后，信号变化时，设备将会执行此项所选的动作。</translation>
     </message>
@@ -7651,7 +7908,7 @@ Disabled: No action is taken when the dry contact detects a state other than the
 禁止：当干接点检测到与指定的常开/常闭状态不一致时，不执行任何动作。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3677"/>
+        <location filename="../mywidget.cpp" line="4337"/>
         <source>DI_1_Enable</source>
         <translation>输入干接点1使能项</translation>
     </message>
@@ -7660,7 +7917,7 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">输入干接点1，如果选择使能，当干接点检测到不是设置的NO/NC时，会触发Action的动作;如果选择禁止，当干接点检测到不是设置的NO/NC时，不做任何动作。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3680"/>
+        <location filename="../mywidget.cpp" line="4340"/>
         <source>DI_2_Enable</source>
         <translation>输入干接点2使能项</translation>
     </message>
@@ -7669,7 +7926,7 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">输入干接点2，如果选择使能，当干接点检测到不是设置的NO/NC时，会触发Action的动作;如果选择禁止，当干接点检测到不是设置的NO/NC时，不做任何动作。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3683"/>
+        <location filename="../mywidget.cpp" line="4343"/>
         <source>DI_3_Enable</source>
         <translation>输入干接点3使能项</translation>
     </message>
@@ -7678,7 +7935,7 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">输入干接点3，如果选择使能，当干接点检测到不是设置的NO/NC时，会触发Action的动作;如果选择禁止，当干接点检测到不是设置的NO/NC时，不做任何动作。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3686"/>
+        <location filename="../mywidget.cpp" line="4346"/>
         <source>DI_4_Enable</source>
         <translation>输入干接点4使能项</translation>
     </message>
@@ -7687,7 +7944,7 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">输入干接点4，如果选择使能，当干接点检测到不是设置的NO/NC时，会触发Action的动作;如果选择禁止，当干接点检测到不是设置的NO/NC时，不做任何动作。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3689"/>
+        <location filename="../mywidget.cpp" line="4349"/>
         <source>DI_5_Enable</source>
         <translation>输入干接点5使能项</translation>
     </message>
@@ -7696,7 +7953,7 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">输入干接点5，如果选择使能，当干接点检测到不是设置的NO/NC时，会触发Action的动作;如果选择禁止，当干接点检测到不是设置的NO/NC时，不做任何动作。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3692"/>
+        <location filename="../mywidget.cpp" line="4352"/>
         <source>DI_6_Enable</source>
         <translation>输入干接点6使能项</translation>
     </message>
@@ -7729,32 +7986,32 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">输出干接点3，如果选择使能，当干接点检测到不是设置的NO/NC时，会触发Action的动作;如果选择禁止，当干接点检测到不是设置的NO/NC时，不做任何动作。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3697"/>
+        <location filename="../mywidget.cpp" line="4357"/>
         <source>DI_1_NC_O</source>
         <translation>输入干接点1常闭/常开项</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3700"/>
+        <location filename="../mywidget.cpp" line="4360"/>
         <source>DI_2_NC_O</source>
         <translation>输入干接点2常闭/常开项</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3703"/>
+        <location filename="../mywidget.cpp" line="4363"/>
         <source>DI_3_NC_O</source>
         <translation>输入干接点3常闭/常开项</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3706"/>
+        <location filename="../mywidget.cpp" line="4366"/>
         <source>DI_4_NC_O</source>
         <translation>输入干接点4常闭/常开项</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3709"/>
+        <location filename="../mywidget.cpp" line="4369"/>
         <source>DI_5_NC_O</source>
         <translation>输入干接点5常闭/常开项</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3712"/>
+        <location filename="../mywidget.cpp" line="4372"/>
         <source>DI_6_NC_O</source>
         <translation>输入干接点6常闭/常开项</translation>
     </message>
@@ -7771,14 +8028,14 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">输出干接点3常闭/常开项</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3718"/>
-        <location filename="../mywidget.cpp" line="3730"/>
-        <location filename="../mywidget.cpp" line="3733"/>
+        <location filename="../mywidget.cpp" line="4378"/>
+        <location filename="../mywidget.cpp" line="4390"/>
+        <location filename="../mywidget.cpp" line="4393"/>
         <source>Shut down</source>
         <translation>关机</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3718"/>
+        <location filename="../mywidget.cpp" line="4378"/>
         <source>DI_1_Action</source>
         <translation>输入干接点1响应动作</translation>
     </message>
@@ -7786,37 +8043,37 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <location filename="../mywidget.ui" line="1608"/>
         <location filename="../mywidget.ui" line="1652"/>
         <location filename="../mywidget.ui" line="1696"/>
-        <location filename="../mywidget.ui" line="14240"/>
-        <location filename="../mywidget.ui" line="14284"/>
-        <location filename="../mywidget.ui" line="14328"/>
-        <location filename="../mywidget.cpp" line="3721"/>
-        <location filename="../mywidget.cpp" line="3724"/>
-        <location filename="../mywidget.cpp" line="3727"/>
+        <location filename="../mywidget.ui" line="14468"/>
+        <location filename="../mywidget.ui" line="14512"/>
+        <location filename="../mywidget.ui" line="14556"/>
+        <location filename="../mywidget.cpp" line="4381"/>
+        <location filename="../mywidget.cpp" line="4384"/>
+        <location filename="../mywidget.cpp" line="4387"/>
         <source>Prompt</source>
         <translation>提示</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3721"/>
+        <location filename="../mywidget.cpp" line="4381"/>
         <source>DI_2_Action</source>
         <translation>输入干接点2响应动作</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3724"/>
+        <location filename="../mywidget.cpp" line="4384"/>
         <source>DI_3_Action</source>
         <translation>输入干接点3响应动作</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3727"/>
+        <location filename="../mywidget.cpp" line="4387"/>
         <source>DI_4_Action</source>
         <translation>输入干接点4响应动作</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3730"/>
+        <location filename="../mywidget.cpp" line="4390"/>
         <source>DI_5_Action</source>
         <translation>输入干接点5响应动作</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3733"/>
+        <location filename="../mywidget.cpp" line="4393"/>
         <source>DI_6_Action</source>
         <translation>输入干接点6响应动作</translation>
     </message>
@@ -7833,156 +8090,206 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">输出干接点3响应动作</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3738"/>
-        <location filename="../mywidget.cpp" line="3896"/>
+        <location filename="../mywidget.cpp" line="3768"/>
+        <location filename="../mywidget.cpp" line="3773"/>
+        <location filename="../mywidget.cpp" line="3778"/>
+        <location filename="../mywidget.cpp" line="4398"/>
+        <location filename="../mywidget.cpp" line="4556"/>
         <source>It is used for internal debugging only.</source>
         <translation>仅提供内部调试使用。</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="14610"/>
-        <location filename="../mywidget.cpp" line="3767"/>
-        <location filename="../mywidget.cpp" line="3929"/>
+        <location filename="../mywidget.ui" line="14838"/>
+        <location filename="../mywidget.cpp" line="4427"/>
+        <location filename="../mywidget.cpp" line="4589"/>
         <source>Debug variable 1 addr</source>
         <translation>调试地址变量1</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="14642"/>
-        <location filename="../mywidget.cpp" line="3771"/>
-        <location filename="../mywidget.cpp" line="3933"/>
+        <location filename="../mywidget.ui" line="14870"/>
+        <location filename="../mywidget.cpp" line="4431"/>
+        <location filename="../mywidget.cpp" line="4593"/>
         <source>Debug variable 2 addr</source>
         <translation>调试地址变量2</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="14666"/>
-        <location filename="../mywidget.cpp" line="3775"/>
-        <location filename="../mywidget.cpp" line="3937"/>
+        <location filename="../mywidget.ui" line="14894"/>
+        <location filename="../mywidget.cpp" line="4435"/>
+        <location filename="../mywidget.cpp" line="4597"/>
         <source>Debug variable 3 addr</source>
         <translation>调试地址变量3</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3755"/>
-        <location filename="../mywidget.cpp" line="3954"/>
+        <location filename="../mywidget.cpp" line="4415"/>
+        <location filename="../mywidget.cpp" line="4614"/>
         <source>Debug memery var 1</source>
         <translation>调试内存变量1</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3759"/>
-        <location filename="../mywidget.cpp" line="3958"/>
+        <location filename="../mywidget.cpp" line="4419"/>
+        <location filename="../mywidget.cpp" line="4618"/>
         <source>Debug memery var 2</source>
         <translation>调试内存变量2</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3763"/>
-        <location filename="../mywidget.cpp" line="3962"/>
+        <location filename="../mywidget.cpp" line="4423"/>
+        <location filename="../mywidget.cpp" line="4622"/>
         <source>Debug memery var 3</source>
         <translation>调试内存变量3</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3825"/>
+        <location filename="../mywidget.cpp" line="4485"/>
         <source>Input Vol revise</source>
         <translation>输入电压系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3829"/>
+        <location filename="../mywidget.cpp" line="4489"/>
         <source>Input Cur revise</source>
         <translation>输入电流系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3808"/>
+        <location filename="../mywidget.cpp" line="4468"/>
         <source>Voltage 1.5 revise</source>
         <translation>1.5V电压系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3812"/>
+        <location filename="../mywidget.cpp" line="4472"/>
         <source>Bus Vol revise</source>
         <translation>母线电压系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3784"/>
+        <location filename="../mywidget.cpp" line="4444"/>
         <source>Grid A AB Vol revise</source>
         <translation>电网A相电压系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3788"/>
+        <location filename="../mywidget.cpp" line="1833"/>
+        <location filename="../mywidget.cpp" line="5106"/>
+        <source>Working mode introduction</source>
+        <translation>工作模式介绍</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="1385"/>
+        <source>1. Make sure to press the EPO button before upgrading.
+2. Before upgrading the DCDC, switch off the ship-type switch of the DCDC module.</source>
+        <translation>1.升级前确保已按下EPO
+2.升级DCDC前先把DCDC模块的船型开关拨到OFF位置。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="1386"/>
+        <source>Next</source>
+        <translation>下一步</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="1829"/>
+        <source>Optimal mode</source>
+        <translation>最优模式</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="2993"/>
+        <source>DCDC insulation detection:Enable,Disable.</source>
+        <translation>DCDC绝缘监测：使能，禁止。</translation>
+    </message>
+    <message>
+        <source>Outer Ring Centralized Control：Used to solve power imbalance issues between multiple PV modules with significant power.</source>
+        <translation type="vanished">外环集中控制：用于处理多个功率波动较大的PV模块之间的功率不平衡。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3798"/>
+        <source>Off-Grid DOD Protection Release SOC</source>
+        <translation>离网DOD保护解除SOC</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="3799"/>
+        <source>Off-Grid DOD Protection Release SOC: After triggering off-grid DOD protection, the off-grid DOD protection can only be lifted when the battery&apos;s SOC reaches this set value.</source>
+        <translation>离网DOD保护解除SOC：DOD保护时，当前SOC达到该设定SOC后解除DOD保护，允许电池继续放电。</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4176"/>
+        <source>Maintain password: Available for resetting the maintain password.(Note: The maintain password must be six digits.)</source>
+        <translation>维护密码：可供重新设置维护密码。(注：维护设置密码必须为六位数。)</translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4448"/>
         <source>Grid B BC Vol revise</source>
         <translation>电网B相电压系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3792"/>
+        <location filename="../mywidget.cpp" line="4452"/>
         <source>Grid C CA Vol revise</source>
         <translation>电网C相电压系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3796"/>
+        <location filename="../mywidget.cpp" line="4456"/>
         <source>Output A Cur revise</source>
         <translation>输出A相电流系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3800"/>
+        <location filename="../mywidget.cpp" line="4460"/>
         <source>Output B Cur revise</source>
         <translation>输出B相电流系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3804"/>
+        <location filename="../mywidget.cpp" line="4464"/>
         <source>Output C Cur revise</source>
         <translation>输出C相电流系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3833"/>
+        <location filename="../mywidget.cpp" line="4493"/>
         <source>INV A Vol revise</source>
         <translation>逆变A相电压系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3837"/>
+        <location filename="../mywidget.cpp" line="4497"/>
         <source>INV B Vol revise</source>
         <translation>逆变B相电压系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3841"/>
+        <location filename="../mywidget.cpp" line="4501"/>
         <source>INV C Vol revise</source>
         <translation>逆变C相电压系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3866"/>
+        <location filename="../mywidget.cpp" line="4526"/>
         <source>INV A inductance Cur revise</source>
         <translation>逆变A相电感电流系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3870"/>
+        <location filename="../mywidget.cpp" line="4530"/>
         <source>INV B inductance Cur revise</source>
         <translation>逆变B相电感电流系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3874"/>
+        <location filename="../mywidget.cpp" line="4534"/>
         <source>INV C inductance Cur revise</source>
         <translation>逆变C相电感电流系数</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3779"/>
-        <location filename="../mywidget.cpp" line="3941"/>
+        <location filename="../mywidget.cpp" line="4439"/>
+        <location filename="../mywidget.cpp" line="4601"/>
         <source>INV On off flag</source>
         <translation>开关机状态字</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3820"/>
+        <location filename="../mywidget.cpp" line="4480"/>
         <source>INV flag</source>
         <translation>逆变状态字</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3890"/>
-        <location filename="../mywidget.cpp" line="3949"/>
+        <location filename="../mywidget.cpp" line="4550"/>
+        <location filename="../mywidget.cpp" line="4609"/>
         <source>parallel signal</source>
         <translation>并机状态字</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3882"/>
-        <location filename="../mywidget.cpp" line="3970"/>
+        <location filename="../mywidget.cpp" line="4542"/>
+        <location filename="../mywidget.cpp" line="4630"/>
         <source>Bat Infor</source>
         <translation>电池信息字</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3878"/>
-        <location filename="../mywidget.cpp" line="3974"/>
+        <location filename="../mywidget.cpp" line="4538"/>
+        <location filename="../mywidget.cpp" line="4634"/>
         <source>Bat State</source>
         <translation>电池状态字</translation>
     </message>
@@ -7991,12 +8298,12 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">逻辑状态字</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3980"/>
+        <location filename="../mywidget.cpp" line="4640"/>
         <source>Choose the first module to view the real-time data of the first module</source>
         <translation>选中第一个模块，查看第一个模块的实时数据</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3985"/>
+        <location filename="../mywidget.cpp" line="4645"/>
         <source>Choose the second module to view the real-time data of the second module</source>
         <translation>选中第二个模块，查看第二个模块的实时数据</translation>
     </message>
@@ -8029,7 +8336,7 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">导出历史记录，点击此处将会导出历史记录到U盘里,导出到U盘的文件为HistoryRecord.csv，此文件需要用Excel打开。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4033"/>
+        <location filename="../mywidget.cpp" line="4693"/>
         <source>Export operation log. Click here to export operation log to U disk.</source>
         <translation>导出操作日志，点击此处将会导出操作日志到U盘里。</translation>
     </message>
@@ -8042,12 +8349,12 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">退出U盘，将挂载到显控的U盘取消挂载，以保证U盘数据不会损坏。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4050"/>
+        <location filename="../mywidget.cpp" line="4710"/>
         <source>Choose the first module to view the real-time status of the first module</source>
         <translation>选中第一个模块，查看第一个模块的实时状态</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4055"/>
+        <location filename="../mywidget.cpp" line="4715"/>
         <source>Choose the second module to view the real-time status of the second module</source>
         <translation>选中第二个模块，查看第二个模块的实时状态</translation>
     </message>
@@ -8056,27 +8363,27 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">无功调节有三种:禁止(Disable)、功率因数调节(P fregulation)、无功功率调节(Q regulation)。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1959"/>
+        <location filename="../mywidget.cpp" line="2624"/>
         <source>Inv. voltage(CA)</source>
         <translation>逆变电压（CA）</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2070"/>
+        <location filename="../mywidget.cpp" line="2735"/>
         <source>Positive bus voltage on the high voltage side of the DCDC module.</source>
         <translation>DCDC模块高压侧正母线电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2074"/>
+        <location filename="../mywidget.cpp" line="2739"/>
         <source>Negative bus voltage on the high voltage side of the DCDC module.</source>
         <translation>DCDC模块高压侧负母线电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2078"/>
+        <location filename="../mywidget.cpp" line="2743"/>
         <source>Positive bus voltage on the low voltage side of the DCDC module.</source>
         <translation>DCDC模块低压侧正母线电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2082"/>
+        <location filename="../mywidget.cpp" line="2747"/>
         <source>Negative bus voltage on the low voltage side of the DCDC module.</source>
         <translation>DCDC模块低压侧负母线电压。</translation>
     </message>
@@ -8109,7 +8416,7 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">这是输入干接点6的状态，有使能(Enable)、禁止(Disable)两种状态。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2315"/>
+        <location filename="../mywidget.cpp" line="2980"/>
         <source>Contator Status Boost</source>
         <translation>高压侧接触器</translation>
     </message>
@@ -8122,7 +8429,7 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">DC模块高压侧接触器有两种状态：断开、闭合；当高压侧有电压时，闭合高压侧接触器；否则高压侧接触器断开。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2319"/>
+        <location filename="../mywidget.cpp" line="2984"/>
         <source>Contator Status Buck</source>
         <translation>低压侧接触器</translation>
     </message>
@@ -8131,8 +8438,8 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">DC模块低压侧接触器有两种状态：断开、闭合；当低压侧有电压时，闭合低压侧接触器；否则低压侧接触器断开。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2303"/>
-        <location filename="../mywidget.cpp" line="3086"/>
+        <location filename="../mywidget.cpp" line="2968"/>
+        <location filename="../mywidget.cpp" line="3744"/>
         <source>Buck</source>
         <translation>降压</translation>
     </message>
@@ -8145,194 +8452,194 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">DC变流器使能有两种状态：使能、禁止；机器内部自检没有问题时，DC变流器使能；否则DC变流器禁止。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="956"/>
+        <location filename="../mywidget.cpp" line="1465"/>
         <source>Inv. Voltage(AB)</source>
         <translation>逆变电压（AB）</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="956"/>
+        <location filename="../mywidget.cpp" line="1465"/>
         <source>Inv. Voltage(BC)</source>
         <translation>逆变电压（BC）</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="956"/>
+        <location filename="../mywidget.cpp" line="1465"/>
         <source>Inv. Voltage(CA)</source>
         <translation>逆变电压（CA）</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="957"/>
+        <location filename="../mywidget.cpp" line="1466"/>
         <source>Inv. Current(A)</source>
         <translation>逆变电流（A）</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="957"/>
+        <location filename="../mywidget.cpp" line="1466"/>
         <source>Inv. Current(B)</source>
         <translation>逆变电流（B）</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="957"/>
+        <location filename="../mywidget.cpp" line="1466"/>
         <source>Inv. Current(C)</source>
         <translation>逆变电流（C）</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1005"/>
+        <location filename="../mywidget.cpp" line="1514"/>
         <source>PV Voltage H</source>
         <translation>PV高压侧电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1005"/>
+        <location filename="../mywidget.cpp" line="1514"/>
         <source>PV Current H</source>
         <translation>PV高压侧电流</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1005"/>
+        <location filename="../mywidget.cpp" line="1514"/>
         <source>PV Power H</source>
         <translation>PV高压侧功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1006"/>
+        <location filename="../mywidget.cpp" line="1515"/>
         <source>PV Voltage L</source>
         <translation>PV低压侧电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1006"/>
+        <location filename="../mywidget.cpp" line="1515"/>
         <source>PV Current L</source>
         <translation>PV低压侧电流</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1006"/>
+        <location filename="../mywidget.cpp" line="1515"/>
         <source>PV Power L</source>
         <translation>PV低压侧功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1049"/>
-        <location filename="../mywidget.cpp" line="2101"/>
+        <location filename="../mywidget.cpp" line="1558"/>
+        <location filename="../mywidget.cpp" line="2766"/>
         <source>Grid Voltage(AB)</source>
         <translation>电网电压（AB）</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1049"/>
-        <location filename="../mywidget.cpp" line="2105"/>
+        <location filename="../mywidget.cpp" line="1558"/>
+        <location filename="../mywidget.cpp" line="2770"/>
         <source>Grid Voltage(BC)</source>
         <translation>电网电压（BC）</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1049"/>
-        <location filename="../mywidget.cpp" line="2109"/>
+        <location filename="../mywidget.cpp" line="1558"/>
+        <location filename="../mywidget.cpp" line="2774"/>
         <source>Grid Voltage(CA)</source>
         <translation>电网电压（CA）</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1050"/>
-        <location filename="../mywidget.cpp" line="2113"/>
+        <location filename="../mywidget.cpp" line="1559"/>
+        <location filename="../mywidget.cpp" line="2778"/>
         <source>Grid Current(A)</source>
         <translation>电网电流（A）</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1050"/>
-        <location filename="../mywidget.cpp" line="2117"/>
+        <location filename="../mywidget.cpp" line="1559"/>
+        <location filename="../mywidget.cpp" line="2782"/>
         <source>Grid Current(B)</source>
         <translation>电网电流（B）</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1050"/>
-        <location filename="../mywidget.cpp" line="2121"/>
+        <location filename="../mywidget.cpp" line="1559"/>
+        <location filename="../mywidget.cpp" line="2786"/>
         <source>Grid Current(C)</source>
         <translation>电网电流（C）</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1052"/>
-        <location filename="../mywidget.cpp" line="2127"/>
+        <location filename="../mywidget.cpp" line="1561"/>
+        <location filename="../mywidget.cpp" line="2792"/>
         <source>Grid active power</source>
         <translation>电网有功功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1052"/>
-        <location filename="../mywidget.cpp" line="2131"/>
+        <location filename="../mywidget.cpp" line="1561"/>
+        <location filename="../mywidget.cpp" line="2796"/>
         <source>Grid reactive power</source>
         <translation>电网无功功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1052"/>
-        <location filename="../mywidget.cpp" line="2135"/>
+        <location filename="../mywidget.cpp" line="1561"/>
+        <location filename="../mywidget.cpp" line="2800"/>
         <source>Grid apparent power</source>
         <translation>电网视在功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1052"/>
-        <location filename="../mywidget.cpp" line="2139"/>
+        <location filename="../mywidget.cpp" line="1561"/>
+        <location filename="../mywidget.cpp" line="2804"/>
         <source>Grid power factor</source>
         <translation>电网功率因数</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1053"/>
-        <location filename="../mywidget.cpp" line="2143"/>
+        <location filename="../mywidget.cpp" line="1562"/>
+        <location filename="../mywidget.cpp" line="2808"/>
         <source>Grid frequency</source>
         <translation>电网频率</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1094"/>
-        <location filename="../mywidget.cpp" line="2151"/>
+        <location filename="../mywidget.cpp" line="1603"/>
+        <location filename="../mywidget.cpp" line="2816"/>
         <source>Load Voltage(AB)</source>
         <translation>负载电压（AB）</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1094"/>
-        <location filename="../mywidget.cpp" line="2155"/>
+        <location filename="../mywidget.cpp" line="1603"/>
+        <location filename="../mywidget.cpp" line="2820"/>
         <source>Load Voltage(BC)</source>
         <translation>负载电压（BC）</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1094"/>
-        <location filename="../mywidget.cpp" line="2159"/>
+        <location filename="../mywidget.cpp" line="1603"/>
+        <location filename="../mywidget.cpp" line="2824"/>
         <source>Load Voltage(CA)</source>
         <translation>负载电压（CA）</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1095"/>
-        <location filename="../mywidget.cpp" line="2163"/>
+        <location filename="../mywidget.cpp" line="1604"/>
+        <location filename="../mywidget.cpp" line="2828"/>
         <source>Load Current(A)</source>
         <translation>负载电流（A）</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1095"/>
-        <location filename="../mywidget.cpp" line="2167"/>
+        <location filename="../mywidget.cpp" line="1604"/>
+        <location filename="../mywidget.cpp" line="2832"/>
         <source>Load Current(B)</source>
         <translation>负载电流（B）</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1095"/>
-        <location filename="../mywidget.cpp" line="2171"/>
+        <location filename="../mywidget.cpp" line="1604"/>
+        <location filename="../mywidget.cpp" line="2836"/>
         <source>Load Current(C)</source>
         <translation>负载电流（C）</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1097"/>
-        <location filename="../mywidget.cpp" line="2176"/>
+        <location filename="../mywidget.cpp" line="1606"/>
+        <location filename="../mywidget.cpp" line="2841"/>
         <source>Load active power</source>
         <translation>负载有功功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1097"/>
-        <location filename="../mywidget.cpp" line="2180"/>
+        <location filename="../mywidget.cpp" line="1606"/>
+        <location filename="../mywidget.cpp" line="2845"/>
         <source>Load reactive power</source>
         <translation>负载无功功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1097"/>
-        <location filename="../mywidget.cpp" line="2184"/>
+        <location filename="../mywidget.cpp" line="1606"/>
+        <location filename="../mywidget.cpp" line="2849"/>
         <source>Load apparent power</source>
         <translation>负载视在功率</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1097"/>
-        <location filename="../mywidget.cpp" line="2188"/>
+        <location filename="../mywidget.cpp" line="1606"/>
+        <location filename="../mywidget.cpp" line="2853"/>
         <source>Load power factor</source>
         <translation>负载功率因数</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1098"/>
-        <location filename="../mywidget.cpp" line="2192"/>
+        <location filename="../mywidget.cpp" line="1607"/>
+        <location filename="../mywidget.cpp" line="2857"/>
         <source>Load frequency</source>
         <translation>负载频率</translation>
     </message>
@@ -8347,22 +8654,22 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation>预留</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1951"/>
+        <location filename="../mywidget.cpp" line="2616"/>
         <source>Inv. voltage(AB)</source>
         <translation>逆变电压（AB）</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1952"/>
+        <location filename="../mywidget.cpp" line="2617"/>
         <source>Inv. side AB line voltage.</source>
         <translation>逆变侧AB线电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1955"/>
+        <location filename="../mywidget.cpp" line="2620"/>
         <source>Inv. voltage(BC)</source>
         <translation>逆变电压（BC）</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1956"/>
+        <location filename="../mywidget.cpp" line="2621"/>
         <source>Inv. side BC line voltage.</source>
         <translation>逆变侧BC线电压。</translation>
     </message>
@@ -8371,78 +8678,77 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">逆变电压（AC）</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1960"/>
+        <location filename="../mywidget.cpp" line="2625"/>
         <source>Inv. side CA line voltage.</source>
         <translation>逆变侧CA线电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1963"/>
+        <location filename="../mywidget.cpp" line="2628"/>
         <source>Inv. current(A)</source>
         <translation>逆变电流（A）</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1964"/>
+        <location filename="../mywidget.cpp" line="2629"/>
         <source>Inv. side A phase current.</source>
         <translation>逆变侧A相电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1967"/>
+        <location filename="../mywidget.cpp" line="2632"/>
         <source>Inv. current(B)</source>
         <translation>逆变电流（B）</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1968"/>
+        <location filename="../mywidget.cpp" line="2633"/>
         <source>Inv. side B phase current.</source>
         <translation>逆变侧B相电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1971"/>
+        <location filename="../mywidget.cpp" line="2636"/>
         <source>Inv. current(C)</source>
         <translation>逆变电流（C）</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1972"/>
+        <location filename="../mywidget.cpp" line="2637"/>
         <source>Inv. side C phase current.</source>
         <translation>逆变侧C相电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1976"/>
-        <location filename="../mywidget.cpp" line="2086"/>
+        <location filename="../mywidget.cpp" line="2641"/>
+        <location filename="../mywidget.cpp" line="2751"/>
         <source>The IGBT temperature of the converter: The IGBT temperature must not exceed 102°C. Otherwise, the converter will operate at a reduced capacity. It will resume full power operation when the temperature drops to 73°C.</source>
         <translation>变流器IGBT温度：IGBT温度不得超过102℃，否则变流器将降额运行，降额后73℃恢复可满功率运行。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1981"/>
+        <location filename="../mywidget.cpp" line="2646"/>
         <source>The ambient temperature.</source>
         <translation>环境温度。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2062"/>
+        <location filename="../mywidget.cpp" line="2727"/>
         <source>Leakage current: The leakage current should not exceed 300mA (≤30kVA power converter), or 10mA/kVA (&gt;30kVA power converter).</source>
         <translation>漏电流：漏电流应不大于300mA (≤30kVA 变流器)，或10mA/kVA(＞30kVA变流器)。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1990"/>
+        <location filename="../mywidget.cpp" line="2655"/>
         <source>Display the voltage of each PV in turn.</source>
         <translation>轮流显示每路PV电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1320"/>
         <source>Optimal model</source>
-        <translation>最优模式</translation>
+        <translation type="vanished">最优模式</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1320"/>
+        <location filename="../mywidget.cpp" line="1829"/>
         <source>Mixed mode</source>
         <translation>混合模式</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1367"/>
+        <location filename="../mywidget.cpp" line="1900"/>
         <source>USER</source>
         <translation>用户</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1371"/>
+        <location filename="../mywidget.cpp" line="1904"/>
         <source>MAINTAIN</source>
         <translation>维护</translation>
     </message>
@@ -8451,87 +8757,87 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">超级用户</translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="15823"/>
-        <location filename="../mywidget.cpp" line="1389"/>
-        <location filename="../mywidget.cpp" line="1504"/>
-        <location filename="../mywidget.cpp" line="1510"/>
-        <location filename="../mywidget.cpp" line="1536"/>
-        <location filename="../mywidget.cpp" line="1544"/>
+        <location filename="../mywidget.ui" line="16336"/>
+        <location filename="../mywidget.cpp" line="1921"/>
+        <location filename="../mywidget.cpp" line="2160"/>
+        <location filename="../mywidget.cpp" line="2166"/>
+        <location filename="../mywidget.cpp" line="2191"/>
+        <location filename="../mywidget.cpp" line="2198"/>
         <source>1/1</source>
         <translation>1/1</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1994"/>
+        <location filename="../mywidget.cpp" line="2659"/>
         <source>Total current on the PV side of the converter.</source>
         <translation>变流器PV侧总电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1998"/>
+        <location filename="../mywidget.cpp" line="2663"/>
         <source>Total power on the PV side of the converter.</source>
         <translation>变流器PV侧总功率。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2002"/>
+        <location filename="../mywidget.cpp" line="2667"/>
         <source>converter battery side voltage.</source>
         <translation>变流器电池侧电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2006"/>
+        <location filename="../mywidget.cpp" line="2671"/>
         <source>converter battery side current.</source>
         <translation>变流器电池侧电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2010"/>
+        <location filename="../mywidget.cpp" line="2675"/>
         <source>converter battery side power.</source>
         <translation>变流器电池侧功率。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2014"/>
+        <location filename="../mywidget.cpp" line="2679"/>
         <source>converter bus voltage.</source>
         <translation>变流器母线电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2018"/>
+        <location filename="../mywidget.cpp" line="2683"/>
         <source>converter bus current.</source>
         <translation>变流器母线电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2038"/>
+        <location filename="../mywidget.cpp" line="2703"/>
         <source>Voltage on the high voltage side of the DCDC module.</source>
         <translation>DCDC模块高压侧电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2042"/>
+        <location filename="../mywidget.cpp" line="2707"/>
         <source>Current on the high voltage side of the DCDC module.</source>
         <translation>DCDC模块高压侧电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2046"/>
+        <location filename="../mywidget.cpp" line="2711"/>
         <source>Power on the high voltage side of the DCDC module.</source>
         <translation>DCDC模块高压侧功率。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2050"/>
+        <location filename="../mywidget.cpp" line="2715"/>
         <source>Voltage on the low voltage side of the DCDC module.</source>
         <translation>DCDC模块低压侧电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2054"/>
+        <location filename="../mywidget.cpp" line="2719"/>
         <source>Current on the low-voltage side of the DCDC module.</source>
         <translation>DCDC模块低压侧电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2058"/>
+        <location filename="../mywidget.cpp" line="2723"/>
         <source>Power on the low voltage side of the DCDC module.</source>
         <translation>DCDC模块低压侧功率。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2061"/>
+        <location filename="../mywidget.cpp" line="2726"/>
         <source>Leakage cur</source>
         <translation>漏电流</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2069"/>
+        <location filename="../mywidget.cpp" line="2734"/>
         <source>Bus H vol(+)</source>
         <translation>高压侧正母线电压</translation>
     </message>
@@ -8540,67 +8846,67 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="obsolete">直流高压侧正母线电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2073"/>
+        <location filename="../mywidget.cpp" line="2738"/>
         <source>Bus H vol(-)</source>
         <translation>高压侧负母线电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2077"/>
+        <location filename="../mywidget.cpp" line="2742"/>
         <source>Bus L vol(+)</source>
         <translation>低压侧正母线电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2081"/>
+        <location filename="../mywidget.cpp" line="2746"/>
         <source>Bus L vol(-)</source>
         <translation>低压侧负母线电压</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2089"/>
+        <location filename="../mywidget.cpp" line="2754"/>
         <source>Positive Inuslation</source>
         <translation>正绝缘阻抗</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2090"/>
+        <location filename="../mywidget.cpp" line="2755"/>
         <source>The positive insulation impedance of the DCDC module is normal when the positive insulation impedance is greater than 33kΩ. When the positive insulation impedance is lower than 33kΩ, the insulation fault or potential security risks exist.</source>
         <translation>DCDC模块的正绝缘阻抗，正绝缘阻抗大于33kΩ时正常，低于33kΩ时存在绝缘故障或潜在的安全隐患。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2093"/>
+        <location filename="../mywidget.cpp" line="2758"/>
         <source>Negative Inuslation</source>
         <translation>负绝缘阻抗</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2094"/>
+        <location filename="../mywidget.cpp" line="2759"/>
         <source>The negative insulation impedance of the DCDC module is normal when the negative insulation impedance is greater than 33kΩ. When the negative insulation impedance is lower than 33kΩ, the insulation fault or negative security risks exist.</source>
         <translation>DCDC模块的负绝缘阻抗，负绝缘阻抗大于33kΩ时正常，低于33kΩ时存在绝缘故障或潜在的安全隐患。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2102"/>
+        <location filename="../mywidget.cpp" line="2767"/>
         <source>Grid side AB line voltage.</source>
         <translation>电网侧AB线电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2106"/>
+        <location filename="../mywidget.cpp" line="2771"/>
         <source>Grid side BC line voltage.</source>
         <translation>电网侧BC线电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2110"/>
+        <location filename="../mywidget.cpp" line="2775"/>
         <source>Grid side CA line voltage.</source>
         <translation>电网侧CA线电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2114"/>
+        <location filename="../mywidget.cpp" line="2779"/>
         <source>Grid side A phase current.</source>
         <translation>电网侧A相电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2118"/>
+        <location filename="../mywidget.cpp" line="2783"/>
         <source>Grid side B phase current.</source>
         <translation>电网侧B相电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2122"/>
+        <location filename="../mywidget.cpp" line="2787"/>
         <source>Grid side C phase current.</source>
         <translation>电网侧C相电流。</translation>
     </message>
@@ -8625,32 +8931,32 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">电网侧频率。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2152"/>
+        <location filename="../mywidget.cpp" line="2817"/>
         <source>Load side AB line voltage.</source>
         <translation>负载侧AB线电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2156"/>
+        <location filename="../mywidget.cpp" line="2821"/>
         <source>Load side BC line voltage.</source>
         <translation>负载侧BC线电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2160"/>
+        <location filename="../mywidget.cpp" line="2825"/>
         <source>Load side CA line voltage.</source>
         <translation>负载侧CA线电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2164"/>
+        <location filename="../mywidget.cpp" line="2829"/>
         <source>Load side A phase current.</source>
         <translation>负载侧A相电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2168"/>
+        <location filename="../mywidget.cpp" line="2833"/>
         <source>Load side B phase current.</source>
         <translation>负载侧B相电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2172"/>
+        <location filename="../mywidget.cpp" line="2837"/>
         <source>Load side C phase current.</source>
         <translation>负载侧C相电流。</translation>
     </message>
@@ -8703,38 +9009,38 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">电网断路器有两种状态： 断开、闭合；只能手动断开，如果电网断路器过流，电网断路器会发生脱扣。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2241"/>
+        <location filename="../mywidget.cpp" line="2906"/>
         <source>Signal to start the diesel generator, start the diesel generator when enabled, stop the diesel generator when disabled.</source>
         <translation>启动柴发的信号，使能时启动柴发，禁止是停止柴发。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2245"/>
+        <location filename="../mywidget.cpp" line="2910"/>
         <source>Dry contact 2 is output.</source>
         <translation>输出干接点2。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2249"/>
+        <location filename="../mywidget.cpp" line="2914"/>
         <source>Dry contact 3 is output.</source>
         <translation>输出干接点3.</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2255"/>
-        <location filename="../mywidget.cpp" line="2300"/>
+        <location filename="../mywidget.cpp" line="2920"/>
+        <location filename="../mywidget.cpp" line="2965"/>
         <source>The converter has two states: enabled,disabled. The converter is enabled when the self-check is successful. Otherwise, the converter is disabled.</source>
         <translation>变流器有两种状态:使能、禁止;机器自检正常时，变流器使能;否则变流器禁止。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2259"/>
+        <location filename="../mywidget.cpp" line="2924"/>
         <source>There are three states for DC soft start: Not starting, Soft starting, and Complete. Soft start refers to the process in which the converter charges the busbar with the battery during startup, causing the busbar voltage to rise close to the battery voltage.</source>
         <translation>直流软启动有三种状态:未启动，软启中，软启完成;软启动是指变流器在启动时，通过控制电池给母线充电使母线的电压上升到接近电池电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2263"/>
+        <location filename="../mywidget.cpp" line="2928"/>
         <source>Converter states include: OFF, AC Soft start, Grid-ON Charge, Grid-ON Discharge, Grid-OFF Discharge, Derating grid-on, Standby and Grid-OFF Charge.</source>
         <translation>变流器状态包括：关闭、交流软启动、并网充电、并网放电、离网放电、降额并网、待机、离网充电。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2267"/>
+        <location filename="../mywidget.cpp" line="2932"/>
         <source>There are three types of reactive power regulation: Disable,PF regulation, and  regulation.</source>
         <translation>无功调节有三种:禁止、功率因数调节、无功功率调节。</translation>
     </message>
@@ -8743,42 +9049,42 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">低电压穿越状态:使能、禁止。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2275"/>
+        <location filename="../mywidget.cpp" line="2940"/>
         <source>Input dry contact 1 status: Enabled, Disabled.</source>
         <translation>输入干接点1的状态：使能、禁止。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2279"/>
+        <location filename="../mywidget.cpp" line="2944"/>
         <source>Input dry contact 2 status: Enabled, Disabled.</source>
         <translation>输入干接点2的状态：使能、禁止。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2283"/>
+        <location filename="../mywidget.cpp" line="2948"/>
         <source>Input dry contact 3 status: Enabled, Disabled.</source>
         <translation>输入干接点3的状态：使能、禁止。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2287"/>
+        <location filename="../mywidget.cpp" line="2952"/>
         <source>Input dry contact 4 status: Enabled, Disabled.</source>
         <translation>输入干接点4的状态：使能、禁止。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2291"/>
+        <location filename="../mywidget.cpp" line="2956"/>
         <source>Input dry contact 5 status: Enabled, Disabled.</source>
         <translation>输入干接点5的状态：使能、禁止。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2295"/>
+        <location filename="../mywidget.cpp" line="2960"/>
         <source>Input dry contact 6 status: Enabled, Disabled.</source>
         <translation>输入干接点6的状态：使能、禁止。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2304"/>
+        <location filename="../mywidget.cpp" line="2969"/>
         <source>DCDC module operating modes: Boost, Buck.</source>
         <translation>DCDC模块工作方式：升压、降压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2307"/>
+        <location filename="../mywidget.cpp" line="2972"/>
         <source>Soft Start Status Boost</source>
         <translation>高压侧软启动</translation>
     </message>
@@ -8787,7 +9093,7 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">这是当前&apos;DC&apos;模块的高压侧软启动状态，有未启动(Not starting)、软启中(Soft start)、软启完成(Softstart completion)三种状态。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2311"/>
+        <location filename="../mywidget.cpp" line="2976"/>
         <source>Soft Start Status Buck</source>
         <translation>低压侧软启动</translation>
     </message>
@@ -8800,9 +9106,9 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">断开</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2323"/>
-        <location filename="../mywidget.cpp" line="4133"/>
-        <location filename="../mywidget.cpp" line="4143"/>
+        <location filename="../mywidget.cpp" line="2988"/>
+        <location filename="../mywidget.cpp" line="4789"/>
+        <location filename="../mywidget.cpp" line="4799"/>
         <source>Turn off</source>
         <translation>关闭</translation>
     </message>
@@ -8819,7 +9125,7 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">高级设置</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1667"/>
+        <location filename="../mywidget.cpp" line="2379"/>
         <source>Bat volage</source>
         <translation>电池电压</translation>
     </message>
@@ -8828,59 +9134,61 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">这是通过CAN/485/TCP通讯协议从BMS上传的电池组的电池总压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="874"/>
-        <location filename="../mywidget.cpp" line="1668"/>
-        <location filename="../mywidget.cpp" line="1672"/>
-        <location filename="../mywidget.cpp" line="1676"/>
-        <location filename="../mywidget.cpp" line="1680"/>
-        <location filename="../mywidget.cpp" line="1684"/>
-        <location filename="../mywidget.cpp" line="1688"/>
-        <location filename="../mywidget.cpp" line="1692"/>
-        <location filename="../mywidget.cpp" line="1696"/>
-        <location filename="../mywidget.cpp" line="1700"/>
-        <location filename="../mywidget.cpp" line="1704"/>
-        <location filename="../mywidget.cpp" line="1708"/>
-        <location filename="../mywidget.cpp" line="1712"/>
-        <location filename="../mywidget.cpp" line="1716"/>
-        <location filename="../mywidget.cpp" line="1720"/>
-        <location filename="../mywidget.cpp" line="1724"/>
-        <location filename="../mywidget.cpp" line="1728"/>
-        <location filename="../mywidget.cpp" line="1732"/>
-        <location filename="../mywidget.cpp" line="1746"/>
-        <location filename="../mywidget.cpp" line="1750"/>
-        <location filename="../mywidget.cpp" line="1754"/>
-        <location filename="../mywidget.cpp" line="1758"/>
-        <location filename="../mywidget.cpp" line="1762"/>
-        <location filename="../mywidget.cpp" line="1766"/>
-        <location filename="../mywidget.cpp" line="1770"/>
-        <location filename="../mywidget.cpp" line="1942"/>
-        <location filename="../mywidget.cpp" line="3980"/>
-        <location filename="../mywidget.cpp" line="3985"/>
-        <location filename="../mywidget.cpp" line="3991"/>
-        <location filename="../mywidget.cpp" line="3997"/>
-        <location filename="../mywidget.cpp" line="4003"/>
-        <location filename="../mywidget.cpp" line="4009"/>
-        <location filename="../mywidget.cpp" line="4015"/>
-        <location filename="../mywidget.cpp" line="4021"/>
-        <location filename="../mywidget.cpp" line="4027"/>
-        <location filename="../mywidget.cpp" line="4033"/>
-        <location filename="../mywidget.cpp" line="4039"/>
-        <location filename="../mywidget.cpp" line="4045"/>
-        <location filename="../mywidget.cpp" line="4050"/>
-        <location filename="../mywidget.cpp" line="4055"/>
-        <location filename="../mywidget.cpp" line="4066"/>
-        <location filename="../mywidget.cpp" line="4072"/>
-        <location filename="../mywidget.cpp" line="4078"/>
-        <location filename="../mywidget.cpp" line="4098"/>
-        <location filename="../mywidget.cpp" line="4120"/>
-        <location filename="../mywidget.cpp" line="4128"/>
-        <location filename="../mywidget.cpp" line="4133"/>
-        <location filename="../mywidget.cpp" line="4138"/>
-        <location filename="../mywidget.cpp" line="4143"/>
-        <location filename="../mywidget.cpp" line="4149"/>
-        <location filename="../mywidget.cpp" line="4154"/>
-        <location filename="../mywidget.cpp" line="4374"/>
-        <location filename="../mywidget.cpp" line="4471"/>
+        <location filename="../mywidget.cpp" line="2260"/>
+        <location filename="../mywidget.cpp" line="2380"/>
+        <location filename="../mywidget.cpp" line="2384"/>
+        <location filename="../mywidget.cpp" line="2388"/>
+        <location filename="../mywidget.cpp" line="2392"/>
+        <location filename="../mywidget.cpp" line="2396"/>
+        <location filename="../mywidget.cpp" line="2400"/>
+        <location filename="../mywidget.cpp" line="2404"/>
+        <location filename="../mywidget.cpp" line="2408"/>
+        <location filename="../mywidget.cpp" line="2412"/>
+        <location filename="../mywidget.cpp" line="2416"/>
+        <location filename="../mywidget.cpp" line="2420"/>
+        <location filename="../mywidget.cpp" line="2424"/>
+        <location filename="../mywidget.cpp" line="2428"/>
+        <location filename="../mywidget.cpp" line="2432"/>
+        <location filename="../mywidget.cpp" line="2436"/>
+        <location filename="../mywidget.cpp" line="2440"/>
+        <location filename="../mywidget.cpp" line="2444"/>
+        <location filename="../mywidget.cpp" line="2458"/>
+        <location filename="../mywidget.cpp" line="2462"/>
+        <location filename="../mywidget.cpp" line="2466"/>
+        <location filename="../mywidget.cpp" line="2470"/>
+        <location filename="../mywidget.cpp" line="2474"/>
+        <location filename="../mywidget.cpp" line="2478"/>
+        <location filename="../mywidget.cpp" line="2482"/>
+        <location filename="../mywidget.cpp" line="4640"/>
+        <location filename="../mywidget.cpp" line="4645"/>
+        <location filename="../mywidget.cpp" line="4651"/>
+        <location filename="../mywidget.cpp" line="4657"/>
+        <location filename="../mywidget.cpp" line="4663"/>
+        <location filename="../mywidget.cpp" line="4669"/>
+        <location filename="../mywidget.cpp" line="4675"/>
+        <location filename="../mywidget.cpp" line="4681"/>
+        <location filename="../mywidget.cpp" line="4687"/>
+        <location filename="../mywidget.cpp" line="4693"/>
+        <location filename="../mywidget.cpp" line="4699"/>
+        <location filename="../mywidget.cpp" line="4705"/>
+        <location filename="../mywidget.cpp" line="4710"/>
+        <location filename="../mywidget.cpp" line="4715"/>
+        <location filename="../mywidget.cpp" line="4722"/>
+        <location filename="../mywidget.cpp" line="4728"/>
+        <location filename="../mywidget.cpp" line="4734"/>
+        <location filename="../mywidget.cpp" line="4754"/>
+        <location filename="../mywidget.cpp" line="4776"/>
+        <location filename="../mywidget.cpp" line="4784"/>
+        <location filename="../mywidget.cpp" line="4789"/>
+        <location filename="../mywidget.cpp" line="4794"/>
+        <location filename="../mywidget.cpp" line="4799"/>
+        <location filename="../mywidget.cpp" line="4805"/>
+        <location filename="../mywidget.cpp" line="4810"/>
+        <location filename="../mywidget.cpp" line="4990"/>
+        <location filename="../mywidget.cpp" line="5087"/>
+        <location filename="../mywidget.cpp" line="5110"/>
+        <location filename="../mywidget.cpp" line="5116"/>
+        <location filename="../mywidget.cpp" line="5122"/>
         <source>OK</source>
         <translation>确定</translation>
     </message>
@@ -8901,7 +9209,7 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">这是通过CAN/485/TCP通讯协议从BMS上传的电池组SOH，电池组当前的容量与出厂容量的百分比，即电池的健康度。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1683"/>
+        <location filename="../mywidget.cpp" line="2395"/>
         <source>Cell voltage(max)</source>
         <translation>单体最高电压</translation>
     </message>
@@ -8910,7 +9218,7 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">这是通过CAN/485/TCP通讯协议从BMS上传的单体最高电压,即当前所有电池单体的最高电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1687"/>
+        <location filename="../mywidget.cpp" line="2399"/>
         <source>Cell voltage(min)</source>
         <translation>单体最低电压</translation>
     </message>
@@ -8919,7 +9227,7 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">这是通过CAN/485/TCP通讯协议从BMS上传的单体最低电压,即当前所有电池单体的最低电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1691"/>
+        <location filename="../mywidget.cpp" line="2403"/>
         <source>Cell temp.(max)</source>
         <translation>单体最高温度</translation>
     </message>
@@ -8928,7 +9236,7 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">这是通过CAN/485/TCP通讯协议从BMS上传的单体最高温度,即当前所有电池单体的最高温度。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1695"/>
+        <location filename="../mywidget.cpp" line="2407"/>
         <source>Cell temp.(min)</source>
         <translation>单体最低温度</translation>
     </message>
@@ -8977,7 +9285,7 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">这是通过CAN/485/TCP通讯协议从BMS上传的允许放电量，当前电池组允许放电的容量(注:仅部分BMS会提供这个值)。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1723"/>
+        <location filename="../mywidget.cpp" line="2435"/>
         <source>Alarm level</source>
         <translation>告警等级</translation>
     </message>
@@ -9074,7 +9382,7 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">当前MPS从母线侧采样的母线电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2037"/>
+        <location filename="../mywidget.cpp" line="2702"/>
         <source>Voltage H</source>
         <translation>高压侧电压</translation>
     </message>
@@ -9083,7 +9391,7 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">当前DCDC模块高压侧的电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2041"/>
+        <location filename="../mywidget.cpp" line="2706"/>
         <source>Current H</source>
         <translation>高压侧电流</translation>
     </message>
@@ -9092,7 +9400,7 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">当前DCDC模块高压侧的电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2045"/>
+        <location filename="../mywidget.cpp" line="2710"/>
         <source>Power H</source>
         <translation>高压侧功率</translation>
     </message>
@@ -9101,7 +9409,7 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">当前DCDC模块高压侧的功率。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2049"/>
+        <location filename="../mywidget.cpp" line="2714"/>
         <source>Voltage L</source>
         <translation>低压侧电压</translation>
     </message>
@@ -9110,7 +9418,7 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">当前DCDC模块低压侧的电压。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2053"/>
+        <location filename="../mywidget.cpp" line="2718"/>
         <source>Current L</source>
         <translation>低压侧电流</translation>
     </message>
@@ -9119,7 +9427,7 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">当前DCDC模块低压侧的电流。</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2057"/>
+        <location filename="../mywidget.cpp" line="2722"/>
         <source>Power L</source>
         <translation>低压侧功率</translation>
     </message>
@@ -9284,7 +9592,7 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation type="vanished">电流(C)</translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1980"/>
+        <location filename="../mywidget.cpp" line="2645"/>
         <source>Environment temperature</source>
         <translation>环境温度</translation>
     </message>
@@ -9297,682 +9605,881 @@ Disabled: No action is taken when the dry contact detects a state other than the
         <translation>工作模式</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="98"/>
+        <location filename="../OperMode/opermode.ui" line="108"/>
         <source>System for self-use:
 When PV, battery, photovoltaic available.</source>
         <translation>自发自用：
 当PV、电池、光伏可用。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="146"/>
+        <location filename="../OperMode/opermode.ui" line="159"/>
         <source>A. PV gives priority to the load power supply, if the PV power is large enough, the remaining energy is provided to the battery charge, if the PV has remaining energy, the energy is returned to the grid.</source>
         <translation>A、PV优先给负载供电，如果PV功率足够大，剩余的能量提供给电池充电，如果PV还有剩余的能量，则将能量回馈到电网。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="192"/>
+        <location filename="../OperMode/opermode.ui" line="209"/>
         <source>B, PV priority to supply the load, if the PV is not enough to power the load, the battery and PV at the same time to power the load.</source>
         <translation>B、PV优先共给负载，如果PV不足以为负载供电，则电池和PV同时为负载供电。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="238"/>
+        <location filename="../OperMode/opermode.ui" line="259"/>
         <source>C, PV priority to supply the load, if the PV and battery are not enough to supply power to the load, the grid, PV, battery at the same time to supply power to the load.</source>
         <translation>C、PV优先供给负载，如果PV和电池不足以为负载供电，则电网，PV，电池同时为负载供电。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="257"/>
-        <location filename="../OperMode/opermode.ui" line="1247"/>
-        <location filename="../OperMode/opermode.ui" line="2368"/>
+        <location filename="../OperMode/opermode.ui" line="279"/>
+        <location filename="../OperMode/opermode.ui" line="1291"/>
+        <location filename="../OperMode/opermode.ui" line="2444"/>
+        <location filename="../OperMode/opermode.ui" line="3480"/>
+        <location filename="../OperMode/opermode.ui" line="4297"/>
         <source>1</source>
         <translation>1</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="262"/>
-        <location filename="../OperMode/opermode.ui" line="1252"/>
-        <location filename="../OperMode/opermode.ui" line="2373"/>
+        <location filename="../OperMode/opermode.ui" line="284"/>
+        <location filename="../OperMode/opermode.ui" line="1296"/>
+        <location filename="../OperMode/opermode.ui" line="2449"/>
+        <location filename="../OperMode/opermode.ui" line="3485"/>
+        <location filename="../OperMode/opermode.ui" line="4302"/>
         <source>2</source>
         <translation>2</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="267"/>
-        <location filename="../OperMode/opermode.ui" line="1257"/>
-        <location filename="../OperMode/opermode.ui" line="2378"/>
+        <location filename="../OperMode/opermode.ui" line="289"/>
+        <location filename="../OperMode/opermode.ui" line="1301"/>
+        <location filename="../OperMode/opermode.ui" line="2454"/>
+        <location filename="../OperMode/opermode.ui" line="3490"/>
+        <location filename="../OperMode/opermode.ui" line="4307"/>
         <source>3</source>
         <translation>3</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="272"/>
-        <location filename="../OperMode/opermode.ui" line="1262"/>
-        <location filename="../OperMode/opermode.ui" line="2383"/>
+        <location filename="../OperMode/opermode.ui" line="294"/>
+        <location filename="../OperMode/opermode.ui" line="1306"/>
+        <location filename="../OperMode/opermode.ui" line="2459"/>
+        <location filename="../OperMode/opermode.ui" line="3495"/>
+        <location filename="../OperMode/opermode.ui" line="4312"/>
         <source>4</source>
         <translation>4</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="277"/>
-        <location filename="../OperMode/opermode.ui" line="1267"/>
-        <location filename="../OperMode/opermode.ui" line="2388"/>
+        <location filename="../OperMode/opermode.ui" line="299"/>
+        <location filename="../OperMode/opermode.ui" line="1311"/>
+        <location filename="../OperMode/opermode.ui" line="2464"/>
+        <location filename="../OperMode/opermode.ui" line="3500"/>
+        <location filename="../OperMode/opermode.ui" line="4317"/>
         <source>5</source>
         <translation>5</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="282"/>
-        <location filename="../OperMode/opermode.ui" line="1272"/>
-        <location filename="../OperMode/opermode.ui" line="2393"/>
+        <location filename="../OperMode/opermode.ui" line="304"/>
+        <location filename="../OperMode/opermode.ui" line="1316"/>
+        <location filename="../OperMode/opermode.ui" line="2469"/>
+        <location filename="../OperMode/opermode.ui" line="3505"/>
+        <location filename="../OperMode/opermode.ui" line="4322"/>
         <source>6</source>
         <translation>6</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="287"/>
-        <location filename="../OperMode/opermode.ui" line="1277"/>
-        <location filename="../OperMode/opermode.ui" line="2398"/>
+        <location filename="../OperMode/opermode.ui" line="309"/>
+        <location filename="../OperMode/opermode.ui" line="1321"/>
+        <location filename="../OperMode/opermode.ui" line="2474"/>
+        <location filename="../OperMode/opermode.ui" line="3510"/>
+        <location filename="../OperMode/opermode.ui" line="4327"/>
         <source>7</source>
         <translation>7</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="292"/>
-        <location filename="../OperMode/opermode.ui" line="1282"/>
-        <location filename="../OperMode/opermode.ui" line="2403"/>
+        <location filename="../OperMode/opermode.ui" line="314"/>
+        <location filename="../OperMode/opermode.ui" line="1326"/>
+        <location filename="../OperMode/opermode.ui" line="2479"/>
+        <location filename="../OperMode/opermode.ui" line="3515"/>
+        <location filename="../OperMode/opermode.ui" line="4332"/>
         <source>8</source>
         <translation>8</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="297"/>
-        <location filename="../OperMode/opermode.ui" line="1287"/>
-        <location filename="../OperMode/opermode.ui" line="2408"/>
+        <location filename="../OperMode/opermode.ui" line="319"/>
+        <location filename="../OperMode/opermode.ui" line="1331"/>
+        <location filename="../OperMode/opermode.ui" line="2484"/>
+        <location filename="../OperMode/opermode.ui" line="3520"/>
+        <location filename="../OperMode/opermode.ui" line="4337"/>
         <source>9</source>
         <translation>9</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="302"/>
-        <location filename="../OperMode/opermode.ui" line="802"/>
-        <location filename="../OperMode/opermode.ui" line="1292"/>
-        <location filename="../OperMode/opermode.ui" line="1792"/>
-        <location filename="../OperMode/opermode.ui" line="2413"/>
-        <location filename="../OperMode/opermode.ui" line="2913"/>
+        <location filename="../OperMode/opermode.ui" line="324"/>
+        <location filename="../OperMode/opermode.ui" line="824"/>
+        <location filename="../OperMode/opermode.ui" line="1336"/>
+        <location filename="../OperMode/opermode.ui" line="1836"/>
+        <location filename="../OperMode/opermode.ui" line="2489"/>
+        <location filename="../OperMode/opermode.ui" line="2989"/>
+        <location filename="../OperMode/opermode.ui" line="3525"/>
+        <location filename="../OperMode/opermode.ui" line="4025"/>
+        <location filename="../OperMode/opermode.ui" line="4342"/>
+        <location filename="../OperMode/opermode.ui" line="4842"/>
         <source>10</source>
         <translation>10</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="307"/>
-        <location filename="../OperMode/opermode.ui" line="1297"/>
-        <location filename="../OperMode/opermode.ui" line="2418"/>
+        <location filename="../OperMode/opermode.ui" line="329"/>
+        <location filename="../OperMode/opermode.ui" line="1341"/>
+        <location filename="../OperMode/opermode.ui" line="2494"/>
+        <location filename="../OperMode/opermode.ui" line="3530"/>
+        <location filename="../OperMode/opermode.ui" line="4347"/>
         <source>11</source>
         <translation>11</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="312"/>
-        <location filename="../OperMode/opermode.ui" line="1302"/>
-        <location filename="../OperMode/opermode.ui" line="2423"/>
+        <location filename="../OperMode/opermode.ui" line="334"/>
+        <location filename="../OperMode/opermode.ui" line="1346"/>
+        <location filename="../OperMode/opermode.ui" line="2499"/>
+        <location filename="../OperMode/opermode.ui" line="3535"/>
+        <location filename="../OperMode/opermode.ui" line="4352"/>
         <source>12</source>
         <translation>12</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="317"/>
-        <location filename="../OperMode/opermode.ui" line="1307"/>
-        <location filename="../OperMode/opermode.ui" line="2428"/>
+        <location filename="../OperMode/opermode.ui" line="339"/>
+        <location filename="../OperMode/opermode.ui" line="1351"/>
+        <location filename="../OperMode/opermode.ui" line="2504"/>
+        <location filename="../OperMode/opermode.ui" line="3540"/>
+        <location filename="../OperMode/opermode.ui" line="4357"/>
         <source>13</source>
         <translation>13</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="322"/>
-        <location filename="../OperMode/opermode.ui" line="1312"/>
-        <location filename="../OperMode/opermode.ui" line="2433"/>
+        <location filename="../OperMode/opermode.ui" line="344"/>
+        <location filename="../OperMode/opermode.ui" line="1356"/>
+        <location filename="../OperMode/opermode.ui" line="2509"/>
+        <location filename="../OperMode/opermode.ui" line="3545"/>
+        <location filename="../OperMode/opermode.ui" line="4362"/>
         <source>14</source>
         <translation>14</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="327"/>
-        <location filename="../OperMode/opermode.ui" line="1317"/>
-        <location filename="../OperMode/opermode.ui" line="2438"/>
+        <location filename="../OperMode/opermode.ui" line="349"/>
+        <location filename="../OperMode/opermode.ui" line="1361"/>
+        <location filename="../OperMode/opermode.ui" line="2514"/>
+        <location filename="../OperMode/opermode.ui" line="3550"/>
+        <location filename="../OperMode/opermode.ui" line="4367"/>
         <source>15</source>
         <translation>15</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="332"/>
-        <location filename="../OperMode/opermode.ui" line="1322"/>
-        <location filename="../OperMode/opermode.ui" line="2443"/>
+        <location filename="../OperMode/opermode.ui" line="354"/>
+        <location filename="../OperMode/opermode.ui" line="1366"/>
+        <location filename="../OperMode/opermode.ui" line="2519"/>
+        <location filename="../OperMode/opermode.ui" line="3555"/>
+        <location filename="../OperMode/opermode.ui" line="4372"/>
         <source>16</source>
         <translation>16</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="337"/>
-        <location filename="../OperMode/opermode.ui" line="1327"/>
-        <location filename="../OperMode/opermode.ui" line="2448"/>
+        <location filename="../OperMode/opermode.ui" line="359"/>
+        <location filename="../OperMode/opermode.ui" line="1371"/>
+        <location filename="../OperMode/opermode.ui" line="2524"/>
+        <location filename="../OperMode/opermode.ui" line="3560"/>
+        <location filename="../OperMode/opermode.ui" line="4377"/>
         <source>17</source>
         <translation>17</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="342"/>
-        <location filename="../OperMode/opermode.ui" line="1332"/>
-        <location filename="../OperMode/opermode.ui" line="2453"/>
+        <location filename="../OperMode/opermode.ui" line="364"/>
+        <location filename="../OperMode/opermode.ui" line="1376"/>
+        <location filename="../OperMode/opermode.ui" line="2529"/>
+        <location filename="../OperMode/opermode.ui" line="3565"/>
+        <location filename="../OperMode/opermode.ui" line="4382"/>
         <source>18</source>
         <translation>18</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="347"/>
-        <location filename="../OperMode/opermode.ui" line="1337"/>
-        <location filename="../OperMode/opermode.ui" line="2458"/>
+        <location filename="../OperMode/opermode.ui" line="369"/>
+        <location filename="../OperMode/opermode.ui" line="1381"/>
+        <location filename="../OperMode/opermode.ui" line="2534"/>
+        <location filename="../OperMode/opermode.ui" line="3570"/>
+        <location filename="../OperMode/opermode.ui" line="4387"/>
         <source>19</source>
         <translation>19</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="352"/>
-        <location filename="../OperMode/opermode.ui" line="490"/>
-        <location filename="../OperMode/opermode.ui" line="1342"/>
-        <location filename="../OperMode/opermode.ui" line="1480"/>
-        <location filename="../OperMode/opermode.ui" line="2463"/>
-        <location filename="../OperMode/opermode.ui" line="2601"/>
+        <location filename="../OperMode/opermode.ui" line="374"/>
+        <location filename="../OperMode/opermode.ui" line="512"/>
+        <location filename="../OperMode/opermode.ui" line="1386"/>
+        <location filename="../OperMode/opermode.ui" line="1524"/>
+        <location filename="../OperMode/opermode.ui" line="2539"/>
+        <location filename="../OperMode/opermode.ui" line="2677"/>
+        <location filename="../OperMode/opermode.ui" line="3575"/>
+        <location filename="../OperMode/opermode.ui" line="3713"/>
+        <location filename="../OperMode/opermode.ui" line="4392"/>
+        <location filename="../OperMode/opermode.ui" line="4530"/>
         <source>20</source>
         <translation>20</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="357"/>
-        <location filename="../OperMode/opermode.ui" line="1347"/>
-        <location filename="../OperMode/opermode.ui" line="2468"/>
+        <location filename="../OperMode/opermode.ui" line="379"/>
+        <location filename="../OperMode/opermode.ui" line="1391"/>
+        <location filename="../OperMode/opermode.ui" line="2544"/>
+        <location filename="../OperMode/opermode.ui" line="3580"/>
+        <location filename="../OperMode/opermode.ui" line="4397"/>
         <source>21</source>
         <translation>21</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="362"/>
-        <location filename="../OperMode/opermode.ui" line="1352"/>
-        <location filename="../OperMode/opermode.ui" line="2473"/>
+        <location filename="../OperMode/opermode.ui" line="384"/>
+        <location filename="../OperMode/opermode.ui" line="1396"/>
+        <location filename="../OperMode/opermode.ui" line="2549"/>
+        <location filename="../OperMode/opermode.ui" line="3585"/>
+        <location filename="../OperMode/opermode.ui" line="4402"/>
         <source>22</source>
         <translation>22</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="367"/>
-        <location filename="../OperMode/opermode.ui" line="1357"/>
-        <location filename="../OperMode/opermode.ui" line="2478"/>
+        <location filename="../OperMode/opermode.ui" line="389"/>
+        <location filename="../OperMode/opermode.ui" line="1401"/>
+        <location filename="../OperMode/opermode.ui" line="2554"/>
+        <location filename="../OperMode/opermode.ui" line="3590"/>
+        <location filename="../OperMode/opermode.ui" line="4407"/>
         <source>23</source>
         <translation>23</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="372"/>
-        <location filename="../OperMode/opermode.ui" line="1362"/>
-        <location filename="../OperMode/opermode.ui" line="2483"/>
+        <location filename="../OperMode/opermode.ui" line="394"/>
+        <location filename="../OperMode/opermode.ui" line="1406"/>
+        <location filename="../OperMode/opermode.ui" line="2559"/>
+        <location filename="../OperMode/opermode.ui" line="3595"/>
+        <location filename="../OperMode/opermode.ui" line="4412"/>
         <source>24</source>
         <translation>24</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="377"/>
-        <location filename="../OperMode/opermode.ui" line="1367"/>
-        <location filename="../OperMode/opermode.ui" line="2488"/>
+        <location filename="../OperMode/opermode.ui" line="399"/>
+        <location filename="../OperMode/opermode.ui" line="1411"/>
+        <location filename="../OperMode/opermode.ui" line="2564"/>
+        <location filename="../OperMode/opermode.ui" line="3600"/>
+        <location filename="../OperMode/opermode.ui" line="4417"/>
         <source>25</source>
         <translation>25</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="382"/>
-        <location filename="../OperMode/opermode.ui" line="1372"/>
-        <location filename="../OperMode/opermode.ui" line="2493"/>
+        <location filename="../OperMode/opermode.ui" line="404"/>
+        <location filename="../OperMode/opermode.ui" line="1416"/>
+        <location filename="../OperMode/opermode.ui" line="2569"/>
+        <location filename="../OperMode/opermode.ui" line="3605"/>
+        <location filename="../OperMode/opermode.ui" line="4422"/>
         <source>Parameter name</source>
         <translation>参数名称</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="387"/>
-        <location filename="../OperMode/opermode.ui" line="1377"/>
-        <location filename="../OperMode/opermode.ui" line="2498"/>
+        <location filename="../OperMode/opermode.ui" line="409"/>
+        <location filename="../OperMode/opermode.ui" line="1421"/>
+        <location filename="../OperMode/opermode.ui" line="2574"/>
+        <location filename="../OperMode/opermode.ui" line="3610"/>
+        <location filename="../OperMode/opermode.ui" line="4427"/>
         <source>Parameter description</source>
         <translation>参数说明</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="392"/>
-        <location filename="../OperMode/opermode.ui" line="1382"/>
-        <location filename="../OperMode/opermode.ui" line="2503"/>
+        <location filename="../OperMode/opermode.ui" line="414"/>
+        <location filename="../OperMode/opermode.ui" line="1426"/>
+        <location filename="../OperMode/opermode.ui" line="2579"/>
+        <location filename="../OperMode/opermode.ui" line="3615"/>
+        <location filename="../OperMode/opermode.ui" line="4432"/>
         <source>Radius</source>
         <translation>范围</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="397"/>
-        <location filename="../OperMode/opermode.ui" line="1387"/>
-        <location filename="../OperMode/opermode.ui" line="2508"/>
+        <location filename="../OperMode/opermode.ui" line="419"/>
+        <location filename="../OperMode/opermode.ui" line="1431"/>
+        <location filename="../OperMode/opermode.ui" line="2584"/>
+        <location filename="../OperMode/opermode.ui" line="3620"/>
+        <location filename="../OperMode/opermode.ui" line="4437"/>
         <source>Default value</source>
         <translation>默认值</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="402"/>
-        <location filename="../OperMode/opermode.ui" line="1392"/>
-        <location filename="../OperMode/opermode.ui" line="2513"/>
-        <location filename="../OperMode/opermode.cpp" line="110"/>
+        <location filename="../OperMode/opermode.ui" line="424"/>
+        <location filename="../OperMode/opermode.ui" line="1436"/>
+        <location filename="../OperMode/opermode.ui" line="2589"/>
+        <location filename="../OperMode/opermode.ui" line="3625"/>
+        <location filename="../OperMode/opermode.ui" line="4442"/>
+        <location filename="../OperMode/opermode.cpp" line="165"/>
         <source>Battery type</source>
         <translation>电池类型</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="410"/>
-        <location filename="../OperMode/opermode.ui" line="418"/>
-        <location filename="../OperMode/opermode.ui" line="1400"/>
-        <location filename="../OperMode/opermode.ui" line="1408"/>
-        <location filename="../OperMode/opermode.ui" line="2521"/>
-        <location filename="../OperMode/opermode.ui" line="2529"/>
+        <location filename="../OperMode/opermode.ui" line="432"/>
+        <location filename="../OperMode/opermode.ui" line="440"/>
+        <location filename="../OperMode/opermode.ui" line="1444"/>
+        <location filename="../OperMode/opermode.ui" line="1452"/>
+        <location filename="../OperMode/opermode.ui" line="2597"/>
+        <location filename="../OperMode/opermode.ui" line="2605"/>
+        <location filename="../OperMode/opermode.ui" line="3633"/>
+        <location filename="../OperMode/opermode.ui" line="3641"/>
+        <location filename="../OperMode/opermode.ui" line="4450"/>
+        <location filename="../OperMode/opermode.ui" line="4458"/>
         <source>Lithium</source>
         <translation>锂电</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="426"/>
-        <location filename="../OperMode/opermode.ui" line="1416"/>
-        <location filename="../OperMode/opermode.ui" line="2537"/>
-        <location filename="../OperMode/opermode.cpp" line="111"/>
+        <location filename="../OperMode/opermode.ui" line="448"/>
+        <location filename="../OperMode/opermode.ui" line="1460"/>
+        <location filename="../OperMode/opermode.ui" line="2613"/>
+        <location filename="../OperMode/opermode.ui" line="3649"/>
+        <location filename="../OperMode/opermode.ui" line="4466"/>
+        <location filename="../OperMode/opermode.cpp" line="166"/>
         <source>BMS Comm.type</source>
         <translation>电池通信方式</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="434"/>
-        <location filename="../OperMode/opermode.ui" line="1424"/>
-        <location filename="../OperMode/opermode.ui" line="2545"/>
+        <location filename="../OperMode/opermode.ui" line="456"/>
+        <location filename="../OperMode/opermode.ui" line="1468"/>
+        <location filename="../OperMode/opermode.ui" line="2621"/>
+        <location filename="../OperMode/opermode.ui" line="3657"/>
+        <location filename="../OperMode/opermode.ui" line="4474"/>
         <source>CAN/485</source>
         <translation>CAN/485</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="442"/>
-        <location filename="../OperMode/opermode.ui" line="1432"/>
-        <location filename="../OperMode/opermode.ui" line="2553"/>
+        <location filename="../OperMode/opermode.ui" line="464"/>
+        <location filename="../OperMode/opermode.ui" line="1476"/>
+        <location filename="../OperMode/opermode.ui" line="2629"/>
+        <location filename="../OperMode/opermode.ui" line="3665"/>
+        <location filename="../OperMode/opermode.ui" line="4482"/>
         <source>CAN</source>
         <translation>CAN</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="450"/>
-        <location filename="../OperMode/opermode.ui" line="1440"/>
-        <location filename="../OperMode/opermode.ui" line="2561"/>
-        <location filename="../OperMode/opermode.cpp" line="112"/>
+        <location filename="../OperMode/opermode.ui" line="472"/>
+        <location filename="../OperMode/opermode.ui" line="1484"/>
+        <location filename="../OperMode/opermode.ui" line="2637"/>
+        <location filename="../OperMode/opermode.ui" line="3673"/>
+        <location filename="../OperMode/opermode.ui" line="4490"/>
+        <location filename="../OperMode/opermode.cpp" line="167"/>
         <source>EMS Comm.type</source>
         <translation>EMS通信方式</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="458"/>
-        <location filename="../OperMode/opermode.ui" line="1448"/>
-        <location filename="../OperMode/opermode.ui" line="2569"/>
+        <location filename="../OperMode/opermode.ui" line="480"/>
+        <location filename="../OperMode/opermode.ui" line="1492"/>
+        <location filename="../OperMode/opermode.ui" line="2645"/>
+        <location filename="../OperMode/opermode.ui" line="3681"/>
+        <location filename="../OperMode/opermode.ui" line="4498"/>
         <source>485/TCP</source>
         <translation>485/TCP</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="466"/>
-        <location filename="../OperMode/opermode.ui" line="1456"/>
-        <location filename="../OperMode/opermode.ui" line="2577"/>
+        <location filename="../OperMode/opermode.ui" line="488"/>
+        <location filename="../OperMode/opermode.ui" line="1500"/>
+        <location filename="../OperMode/opermode.ui" line="2653"/>
+        <location filename="../OperMode/opermode.ui" line="3689"/>
+        <location filename="../OperMode/opermode.ui" line="4506"/>
         <source>485</source>
-        <translation>485485</translation>
+        <translation>485</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="474"/>
-        <location filename="../OperMode/opermode.ui" line="1464"/>
-        <location filename="../OperMode/opermode.ui" line="2585"/>
-        <location filename="../OperMode/opermode.cpp" line="113"/>
+        <location filename="../OperMode/opermode.ui" line="496"/>
+        <location filename="../OperMode/opermode.ui" line="1508"/>
+        <location filename="../OperMode/opermode.ui" line="2661"/>
+        <location filename="../OperMode/opermode.ui" line="3697"/>
+        <location filename="../OperMode/opermode.ui" line="4514"/>
+        <location filename="../OperMode/opermode.cpp" line="168"/>
+        <source>Start charging SOC</source>
+        <translation>开始充电SOC</translation>
+    </message>
+    <message>
+        <location filename="../OperMode/opermode.ui" line="520"/>
+        <location filename="../OperMode/opermode.ui" line="1532"/>
+        <location filename="../OperMode/opermode.ui" line="2685"/>
+        <location filename="../OperMode/opermode.ui" line="3721"/>
+        <location filename="../OperMode/opermode.ui" line="4538"/>
+        <location filename="../OperMode/opermode.cpp" line="169"/>
+        <source>Stop charging SOC</source>
+        <translation>停止充电SOC</translation>
+    </message>
+    <message>
         <source>Charge SOC</source>
-        <translation>充电SOC</translation>
+        <translation type="vanished">充电SOC</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="482"/>
-        <location filename="../OperMode/opermode.ui" line="506"/>
-        <location filename="../OperMode/opermode.ui" line="1472"/>
-        <location filename="../OperMode/opermode.ui" line="1496"/>
-        <location filename="../OperMode/opermode.ui" line="2593"/>
-        <location filename="../OperMode/opermode.ui" line="2617"/>
+        <location filename="../OperMode/opermode.ui" line="504"/>
+        <location filename="../OperMode/opermode.ui" line="528"/>
+        <location filename="../OperMode/opermode.ui" line="1516"/>
+        <location filename="../OperMode/opermode.ui" line="1540"/>
+        <location filename="../OperMode/opermode.ui" line="2669"/>
+        <location filename="../OperMode/opermode.ui" line="2693"/>
+        <location filename="../OperMode/opermode.ui" line="3705"/>
+        <location filename="../OperMode/opermode.ui" line="3729"/>
+        <location filename="../OperMode/opermode.ui" line="4522"/>
+        <location filename="../OperMode/opermode.ui" line="4546"/>
         <source>1~100</source>
         <translation>1~100</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="498"/>
-        <location filename="../OperMode/opermode.ui" line="1488"/>
-        <location filename="../OperMode/opermode.ui" line="2609"/>
-        <location filename="../OperMode/opermode.cpp" line="114"/>
         <source>Discharge SOC</source>
-        <translation>放电SOC</translation>
+        <translation type="vanished">放电SOC</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="514"/>
-        <location filename="../OperMode/opermode.ui" line="626"/>
-        <location filename="../OperMode/opermode.ui" line="674"/>
-        <location filename="../OperMode/opermode.ui" line="1616"/>
-        <location filename="../OperMode/opermode.ui" line="1664"/>
-        <location filename="../OperMode/opermode.ui" line="2737"/>
-        <location filename="../OperMode/opermode.ui" line="2785"/>
+        <location filename="../OperMode/opermode.ui" line="536"/>
+        <location filename="../OperMode/opermode.ui" line="648"/>
+        <location filename="../OperMode/opermode.ui" line="696"/>
+        <location filename="../OperMode/opermode.ui" line="1660"/>
+        <location filename="../OperMode/opermode.ui" line="1708"/>
+        <location filename="../OperMode/opermode.ui" line="2813"/>
+        <location filename="../OperMode/opermode.ui" line="2861"/>
+        <location filename="../OperMode/opermode.ui" line="3849"/>
+        <location filename="../OperMode/opermode.ui" line="3897"/>
+        <location filename="../OperMode/opermode.ui" line="4666"/>
+        <location filename="../OperMode/opermode.ui" line="4714"/>
         <source>-</source>
         <translation>-</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="522"/>
-        <location filename="../OperMode/opermode.ui" line="1512"/>
-        <location filename="../OperMode/opermode.ui" line="2633"/>
-        <location filename="../OperMode/opermode.cpp" line="115"/>
+        <location filename="../OperMode/opermode.ui" line="544"/>
+        <location filename="../OperMode/opermode.ui" line="1556"/>
+        <location filename="../OperMode/opermode.ui" line="2709"/>
+        <location filename="../OperMode/opermode.ui" line="3745"/>
+        <location filename="../OperMode/opermode.ui" line="4562"/>
+        <location filename="../OperMode/opermode.cpp" line="170"/>
         <source>Energy priority</source>
         <translation>能量优先级</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="530"/>
-        <location filename="../OperMode/opermode.ui" line="1520"/>
-        <location filename="../OperMode/opermode.ui" line="2641"/>
+        <location filename="../OperMode/opermode.ui" line="552"/>
+        <location filename="../OperMode/opermode.ui" line="1564"/>
+        <location filename="../OperMode/opermode.ui" line="2717"/>
+        <location filename="../OperMode/opermode.ui" line="3753"/>
+        <location filename="../OperMode/opermode.ui" line="4570"/>
         <source>Bat&gt;Grid、Grid&gt;Bat</source>
         <translation>电池&gt;电网、电网&gt;电池</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="538"/>
-        <location filename="../OperMode/opermode.ui" line="1528"/>
-        <location filename="../OperMode/opermode.ui" line="2649"/>
+        <location filename="../OperMode/opermode.ui" line="560"/>
+        <location filename="../OperMode/opermode.ui" line="1572"/>
+        <location filename="../OperMode/opermode.ui" line="2725"/>
+        <location filename="../OperMode/opermode.ui" line="3761"/>
+        <location filename="../OperMode/opermode.ui" line="4578"/>
         <source>Bat&gt;Grid</source>
         <translation>电池&gt;电网</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="546"/>
-        <location filename="../OperMode/opermode.ui" line="1536"/>
-        <location filename="../OperMode/opermode.ui" line="2657"/>
-        <location filename="../OperMode/opermode.cpp" line="116"/>
+        <location filename="../OperMode/opermode.ui" line="568"/>
+        <location filename="../OperMode/opermode.ui" line="1580"/>
+        <location filename="../OperMode/opermode.ui" line="2733"/>
+        <location filename="../OperMode/opermode.ui" line="3769"/>
+        <location filename="../OperMode/opermode.ui" line="4586"/>
+        <location filename="../OperMode/opermode.cpp" line="171"/>
         <source>Grid connected mode of lnv</source>
         <translation>防逆流</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="554"/>
-        <location filename="../OperMode/opermode.ui" line="1544"/>
-        <location filename="../OperMode/opermode.ui" line="2665"/>
+        <location filename="../OperMode/opermode.ui" line="576"/>
+        <location filename="../OperMode/opermode.ui" line="1588"/>
+        <location filename="../OperMode/opermode.ui" line="2741"/>
+        <location filename="../OperMode/opermode.ui" line="3777"/>
+        <location filename="../OperMode/opermode.ui" line="4594"/>
         <source>Countercurret、Non Countercurret</source>
         <translation>可逆流/不可逆流</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="562"/>
-        <location filename="../OperMode/opermode.ui" line="1552"/>
-        <location filename="../OperMode/opermode.ui" line="2673"/>
+        <location filename="../OperMode/opermode.ui" line="584"/>
+        <location filename="../OperMode/opermode.ui" line="1596"/>
+        <location filename="../OperMode/opermode.ui" line="2749"/>
+        <location filename="../OperMode/opermode.ui" line="3785"/>
+        <location filename="../OperMode/opermode.ui" line="4602"/>
         <source>Non Countercurret</source>
         <translation>不可逆流</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="570"/>
-        <location filename="../OperMode/opermode.ui" line="1560"/>
-        <location filename="../OperMode/opermode.ui" line="2681"/>
-        <location filename="../OperMode/opermode.cpp" line="117"/>
+        <location filename="../OperMode/opermode.ui" line="592"/>
+        <location filename="../OperMode/opermode.ui" line="1604"/>
+        <location filename="../OperMode/opermode.ui" line="2757"/>
+        <location filename="../OperMode/opermode.ui" line="3793"/>
+        <location filename="../OperMode/opermode.ui" line="4610"/>
+        <location filename="../OperMode/opermode.cpp" line="172"/>
         <source>Constant power(AC)</source>
         <translation>恒功率(AC)</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="578"/>
-        <location filename="../OperMode/opermode.ui" line="1568"/>
-        <location filename="../OperMode/opermode.ui" line="2689"/>
+        <location filename="../OperMode/opermode.ui" line="600"/>
+        <location filename="../OperMode/opermode.ui" line="1612"/>
+        <location filename="../OperMode/opermode.ui" line="2765"/>
+        <location filename="../OperMode/opermode.ui" line="3801"/>
+        <location filename="../OperMode/opermode.ui" line="4618"/>
         <source>-Rated power~Rated power</source>
         <translation>-额定功率~额定功率</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="586"/>
-        <location filename="../OperMode/opermode.ui" line="874"/>
-        <location filename="../OperMode/opermode.ui" line="898"/>
-        <location filename="../OperMode/opermode.ui" line="922"/>
-        <location filename="../OperMode/opermode.ui" line="946"/>
-        <location filename="../OperMode/opermode.ui" line="1576"/>
-        <location filename="../OperMode/opermode.ui" line="2697"/>
+        <location filename="../OperMode/opermode.ui" line="608"/>
+        <location filename="../OperMode/opermode.ui" line="1620"/>
+        <location filename="../OperMode/opermode.ui" line="2773"/>
+        <location filename="../OperMode/opermode.ui" line="3809"/>
+        <location filename="../OperMode/opermode.ui" line="4626"/>
         <source>0</source>
         <translation>0</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="594"/>
-        <location filename="../OperMode/opermode.ui" line="1584"/>
-        <location filename="../OperMode/opermode.ui" line="2705"/>
-        <location filename="../OperMode/opermode.cpp" line="118"/>
+        <location filename="../OperMode/opermode.ui" line="616"/>
+        <location filename="../OperMode/opermode.ui" line="1628"/>
+        <location filename="../OperMode/opermode.ui" line="2781"/>
+        <location filename="../OperMode/opermode.ui" line="3817"/>
+        <location filename="../OperMode/opermode.ui" line="4634"/>
+        <location filename="../OperMode/opermode.cpp" line="173"/>
         <source>Charge Volt. upper Limit(V)</source>
         <translation>充电电压上限(V)</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="602"/>
-        <location filename="../OperMode/opermode.ui" line="650"/>
-        <location filename="../OperMode/opermode.ui" line="1592"/>
-        <location filename="../OperMode/opermode.ui" line="1640"/>
-        <location filename="../OperMode/opermode.ui" line="2713"/>
-        <location filename="../OperMode/opermode.ui" line="2761"/>
+        <location filename="../OperMode/opermode.ui" line="624"/>
+        <location filename="../OperMode/opermode.ui" line="672"/>
+        <location filename="../OperMode/opermode.ui" line="1636"/>
+        <location filename="../OperMode/opermode.ui" line="1684"/>
+        <location filename="../OperMode/opermode.ui" line="2789"/>
+        <location filename="../OperMode/opermode.ui" line="2837"/>
+        <location filename="../OperMode/opermode.ui" line="3825"/>
+        <location filename="../OperMode/opermode.ui" line="3873"/>
+        <location filename="../OperMode/opermode.ui" line="4642"/>
+        <location filename="../OperMode/opermode.ui" line="4690"/>
         <source>400~850</source>
         <translation>400~850</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="610"/>
-        <location filename="../OperMode/opermode.ui" line="1600"/>
-        <location filename="../OperMode/opermode.ui" line="2721"/>
+        <location filename="../OperMode/opermode.ui" line="632"/>
+        <location filename="../OperMode/opermode.ui" line="1644"/>
+        <location filename="../OperMode/opermode.ui" line="2797"/>
+        <location filename="../OperMode/opermode.ui" line="3833"/>
+        <location filename="../OperMode/opermode.ui" line="4650"/>
         <source>Battery charging cut-off voltage</source>
         <translation>电池充电截止电压</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="618"/>
-        <location filename="../OperMode/opermode.ui" line="1608"/>
-        <location filename="../OperMode/opermode.ui" line="2729"/>
-        <location filename="../OperMode/opermode.cpp" line="119"/>
+        <location filename="../OperMode/opermode.ui" line="640"/>
+        <location filename="../OperMode/opermode.ui" line="1652"/>
+        <location filename="../OperMode/opermode.ui" line="2805"/>
+        <location filename="../OperMode/opermode.ui" line="3841"/>
+        <location filename="../OperMode/opermode.ui" line="4658"/>
+        <location filename="../OperMode/opermode.cpp" line="174"/>
         <source>Charge Volt. upper Limit delta(V)</source>
         <translation>充电电压上限回差(V)</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="634"/>
-        <location filename="../OperMode/opermode.ui" line="682"/>
-        <location filename="../OperMode/opermode.ui" line="1624"/>
-        <location filename="../OperMode/opermode.ui" line="1672"/>
-        <location filename="../OperMode/opermode.ui" line="2745"/>
-        <location filename="../OperMode/opermode.ui" line="2793"/>
+        <location filename="../OperMode/opermode.ui" line="656"/>
+        <location filename="../OperMode/opermode.ui" line="704"/>
+        <location filename="../OperMode/opermode.ui" line="1668"/>
+        <location filename="../OperMode/opermode.ui" line="1716"/>
+        <location filename="../OperMode/opermode.ui" line="2821"/>
+        <location filename="../OperMode/opermode.ui" line="2869"/>
+        <location filename="../OperMode/opermode.ui" line="3857"/>
+        <location filename="../OperMode/opermode.ui" line="3905"/>
+        <location filename="../OperMode/opermode.ui" line="4674"/>
+        <location filename="../OperMode/opermode.ui" line="4722"/>
         <source>10mV</source>
         <translation>10mV</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="642"/>
-        <location filename="../OperMode/opermode.ui" line="1632"/>
-        <location filename="../OperMode/opermode.ui" line="2753"/>
-        <location filename="../OperMode/opermode.cpp" line="120"/>
+        <location filename="../OperMode/opermode.ui" line="664"/>
+        <location filename="../OperMode/opermode.ui" line="1676"/>
+        <location filename="../OperMode/opermode.ui" line="2829"/>
+        <location filename="../OperMode/opermode.ui" line="3865"/>
+        <location filename="../OperMode/opermode.ui" line="4682"/>
+        <location filename="../OperMode/opermode.cpp" line="175"/>
         <source>Discharge Volt. lower Limit(V)</source>
         <translation>放电电压下限(V)</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="658"/>
-        <location filename="../OperMode/opermode.ui" line="1648"/>
-        <location filename="../OperMode/opermode.ui" line="2769"/>
+        <location filename="../OperMode/opermode.ui" line="680"/>
+        <location filename="../OperMode/opermode.ui" line="1692"/>
+        <location filename="../OperMode/opermode.ui" line="2845"/>
+        <location filename="../OperMode/opermode.ui" line="3881"/>
+        <location filename="../OperMode/opermode.ui" line="4698"/>
         <source>Battery discharge cut-off voltage</source>
         <translation>电池放电截止电压</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="666"/>
-        <location filename="../OperMode/opermode.ui" line="1656"/>
-        <location filename="../OperMode/opermode.ui" line="2777"/>
-        <location filename="../OperMode/opermode.cpp" line="121"/>
+        <location filename="../OperMode/opermode.ui" line="688"/>
+        <location filename="../OperMode/opermode.ui" line="1700"/>
+        <location filename="../OperMode/opermode.ui" line="2853"/>
+        <location filename="../OperMode/opermode.ui" line="3889"/>
+        <location filename="../OperMode/opermode.ui" line="4706"/>
+        <location filename="../OperMode/opermode.cpp" line="176"/>
         <source>Discharge Volt. lower Limit delta(V)</source>
         <translation>放电电压下限回差(V)</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="690"/>
-        <location filename="../OperMode/opermode.ui" line="1680"/>
-        <location filename="../OperMode/opermode.ui" line="2801"/>
-        <location filename="../OperMode/opermode.cpp" line="122"/>
+        <location filename="../OperMode/opermode.ui" line="712"/>
+        <location filename="../OperMode/opermode.ui" line="1724"/>
+        <location filename="../OperMode/opermode.ui" line="2877"/>
+        <location filename="../OperMode/opermode.ui" line="3913"/>
+        <location filename="../OperMode/opermode.ui" line="4730"/>
+        <location filename="../OperMode/opermode.cpp" line="177"/>
         <source>Charge Current Limit(A)</source>
         <translation>充电电流限制(A)</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="698"/>
-        <location filename="../OperMode/opermode.ui" line="722"/>
-        <location filename="../OperMode/opermode.ui" line="1688"/>
-        <location filename="../OperMode/opermode.ui" line="1712"/>
-        <location filename="../OperMode/opermode.ui" line="2809"/>
-        <location filename="../OperMode/opermode.ui" line="2833"/>
+        <location filename="../OperMode/opermode.ui" line="720"/>
+        <location filename="../OperMode/opermode.ui" line="744"/>
+        <location filename="../OperMode/opermode.ui" line="1732"/>
+        <location filename="../OperMode/opermode.ui" line="1756"/>
+        <location filename="../OperMode/opermode.ui" line="2885"/>
+        <location filename="../OperMode/opermode.ui" line="2909"/>
+        <location filename="../OperMode/opermode.ui" line="3921"/>
+        <location filename="../OperMode/opermode.ui" line="3945"/>
+        <location filename="../OperMode/opermode.ui" line="4738"/>
+        <location filename="../OperMode/opermode.ui" line="4762"/>
         <source>0 ~ 1000</source>
         <translation>0 ~ 1000</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="706"/>
-        <location filename="../OperMode/opermode.ui" line="730"/>
-        <location filename="../OperMode/opermode.ui" line="1696"/>
-        <location filename="../OperMode/opermode.ui" line="1720"/>
-        <location filename="../OperMode/opermode.ui" line="2817"/>
-        <location filename="../OperMode/opermode.ui" line="2841"/>
+        <location filename="../OperMode/opermode.ui" line="728"/>
+        <location filename="../OperMode/opermode.ui" line="752"/>
+        <location filename="../OperMode/opermode.ui" line="1740"/>
+        <location filename="../OperMode/opermode.ui" line="1764"/>
+        <location filename="../OperMode/opermode.ui" line="2893"/>
+        <location filename="../OperMode/opermode.ui" line="2917"/>
+        <location filename="../OperMode/opermode.ui" line="3929"/>
+        <location filename="../OperMode/opermode.ui" line="3953"/>
+        <location filename="../OperMode/opermode.ui" line="4746"/>
+        <location filename="../OperMode/opermode.ui" line="4770"/>
         <source>By battery limit</source>
         <translation>根据电池限制</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="714"/>
-        <location filename="../OperMode/opermode.ui" line="1704"/>
-        <location filename="../OperMode/opermode.ui" line="2825"/>
-        <location filename="../OperMode/opermode.cpp" line="123"/>
+        <location filename="../OperMode/opermode.ui" line="736"/>
+        <location filename="../OperMode/opermode.ui" line="1748"/>
+        <location filename="../OperMode/opermode.ui" line="2901"/>
+        <location filename="../OperMode/opermode.ui" line="3937"/>
+        <location filename="../OperMode/opermode.ui" line="4754"/>
+        <location filename="../OperMode/opermode.cpp" line="178"/>
         <source>Discharge Current Limit(A)</source>
         <translation>放电电流限制(A)</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="738"/>
-        <location filename="../OperMode/opermode.ui" line="1728"/>
-        <location filename="../OperMode/opermode.ui" line="2849"/>
+        <location filename="../OperMode/opermode.ui" line="760"/>
+        <location filename="../OperMode/opermode.ui" line="1772"/>
+        <location filename="../OperMode/opermode.ui" line="2925"/>
+        <location filename="../OperMode/opermode.ui" line="3961"/>
+        <location filename="../OperMode/opermode.ui" line="4778"/>
         <source>DOD_OnGrid(%)</source>
         <translation>并网DOD</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="746"/>
-        <location filename="../OperMode/opermode.ui" line="770"/>
-        <location filename="../OperMode/opermode.ui" line="794"/>
-        <location filename="../OperMode/opermode.ui" line="818"/>
-        <location filename="../OperMode/opermode.ui" line="1736"/>
-        <location filename="../OperMode/opermode.ui" line="1760"/>
-        <location filename="../OperMode/opermode.ui" line="1784"/>
-        <location filename="../OperMode/opermode.ui" line="1808"/>
-        <location filename="../OperMode/opermode.ui" line="2857"/>
-        <location filename="../OperMode/opermode.ui" line="2881"/>
-        <location filename="../OperMode/opermode.ui" line="2905"/>
-        <location filename="../OperMode/opermode.ui" line="2929"/>
+        <location filename="../OperMode/opermode.ui" line="768"/>
+        <location filename="../OperMode/opermode.ui" line="792"/>
+        <location filename="../OperMode/opermode.ui" line="816"/>
+        <location filename="../OperMode/opermode.ui" line="840"/>
+        <location filename="../OperMode/opermode.ui" line="1780"/>
+        <location filename="../OperMode/opermode.ui" line="1804"/>
+        <location filename="../OperMode/opermode.ui" line="1828"/>
+        <location filename="../OperMode/opermode.ui" line="1852"/>
+        <location filename="../OperMode/opermode.ui" line="2933"/>
+        <location filename="../OperMode/opermode.ui" line="2957"/>
+        <location filename="../OperMode/opermode.ui" line="2981"/>
+        <location filename="../OperMode/opermode.ui" line="3005"/>
+        <location filename="../OperMode/opermode.ui" line="3969"/>
+        <location filename="../OperMode/opermode.ui" line="3993"/>
+        <location filename="../OperMode/opermode.ui" line="4017"/>
+        <location filename="../OperMode/opermode.ui" line="4041"/>
+        <location filename="../OperMode/opermode.ui" line="4786"/>
+        <location filename="../OperMode/opermode.ui" line="4810"/>
+        <location filename="../OperMode/opermode.ui" line="4834"/>
+        <location filename="../OperMode/opermode.ui" line="4858"/>
         <source>1 ~ 100</source>
         <translation>1~100</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="754"/>
-        <location filename="../OperMode/opermode.ui" line="970"/>
-        <location filename="../OperMode/opermode.ui" line="994"/>
-        <location filename="../OperMode/opermode.ui" line="1744"/>
-        <location filename="../OperMode/opermode.ui" line="1864"/>
-        <location filename="../OperMode/opermode.ui" line="1888"/>
-        <location filename="../OperMode/opermode.ui" line="1912"/>
-        <location filename="../OperMode/opermode.ui" line="1936"/>
-        <location filename="../OperMode/opermode.ui" line="1960"/>
-        <location filename="../OperMode/opermode.ui" line="1984"/>
-        <location filename="../OperMode/opermode.ui" line="2865"/>
+        <location filename="../OperMode/opermode.ui" line="776"/>
+        <location filename="../OperMode/opermode.ui" line="1788"/>
+        <location filename="../OperMode/opermode.ui" line="2941"/>
+        <location filename="../OperMode/opermode.ui" line="3977"/>
+        <location filename="../OperMode/opermode.ui" line="4794"/>
         <source>100</source>
         <translation>100</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="762"/>
-        <location filename="../OperMode/opermode.ui" line="1752"/>
-        <location filename="../OperMode/opermode.ui" line="2873"/>
+        <location filename="../OperMode/opermode.ui" line="784"/>
+        <location filename="../OperMode/opermode.ui" line="1796"/>
+        <location filename="../OperMode/opermode.ui" line="2949"/>
+        <location filename="../OperMode/opermode.ui" line="3985"/>
+        <location filename="../OperMode/opermode.ui" line="4802"/>
         <source>DOD_OffGrid(%)</source>
         <translation>离网DOD</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="778"/>
-        <location filename="../OperMode/opermode.ui" line="1768"/>
-        <location filename="../OperMode/opermode.ui" line="2889"/>
+        <location filename="../OperMode/opermode.ui" line="800"/>
+        <location filename="../OperMode/opermode.ui" line="1812"/>
+        <location filename="../OperMode/opermode.ui" line="2965"/>
+        <location filename="../OperMode/opermode.ui" line="4001"/>
+        <location filename="../OperMode/opermode.ui" line="4818"/>
         <source>90</source>
         <translation>90</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="786"/>
-        <location filename="../OperMode/opermode.ui" line="1776"/>
-        <location filename="../OperMode/opermode.ui" line="2897"/>
+        <location filename="../OperMode/opermode.ui" line="808"/>
+        <location filename="../OperMode/opermode.ui" line="1820"/>
+        <location filename="../OperMode/opermode.ui" line="2973"/>
+        <location filename="../OperMode/opermode.ui" line="4009"/>
+        <location filename="../OperMode/opermode.ui" line="4826"/>
         <source>Generator turn on SOC</source>
         <translation>柴发启动SOC</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="810"/>
-        <location filename="../OperMode/opermode.ui" line="1800"/>
-        <location filename="../OperMode/opermode.ui" line="2921"/>
+        <location filename="../OperMode/opermode.ui" line="832"/>
+        <location filename="../OperMode/opermode.ui" line="1844"/>
+        <location filename="../OperMode/opermode.ui" line="2997"/>
+        <location filename="../OperMode/opermode.ui" line="4033"/>
+        <location filename="../OperMode/opermode.ui" line="4850"/>
         <source>Generator turn off SOC</source>
         <translation>柴发停止SOC</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="1057"/>
+        <location filename="../OperMode/opermode.ui" line="888"/>
+        <location filename="../OperMode/opermode.ui" line="912"/>
+        <location filename="../OperMode/opermode.ui" line="1900"/>
+        <location filename="../OperMode/opermode.ui" line="1924"/>
+        <location filename="../OperMode/opermode.ui" line="3053"/>
+        <location filename="../OperMode/opermode.ui" line="3077"/>
+        <location filename="../OperMode/opermode.ui" line="4089"/>
+        <location filename="../OperMode/opermode.ui" line="4113"/>
+        <location filename="../OperMode/opermode.ui" line="4906"/>
+        <location filename="../OperMode/opermode.ui" line="4930"/>
+        <source>the maximum cannot exceed the DG capacity</source>
+        <translation>最大不能超过柴发容量</translation>
+    </message>
+    <message>
+        <location filename="../OperMode/opermode.ui" line="936"/>
+        <location filename="../OperMode/opermode.ui" line="960"/>
+        <location filename="../OperMode/opermode.ui" line="984"/>
+        <location filename="../OperMode/opermode.ui" line="1008"/>
+        <location filename="../OperMode/opermode.ui" line="1948"/>
+        <location filename="../OperMode/opermode.ui" line="1972"/>
+        <location filename="../OperMode/opermode.ui" line="1996"/>
+        <location filename="../OperMode/opermode.ui" line="2020"/>
+        <location filename="../OperMode/opermode.ui" line="3101"/>
+        <location filename="../OperMode/opermode.ui" line="3125"/>
+        <location filename="../OperMode/opermode.ui" line="3149"/>
+        <location filename="../OperMode/opermode.ui" line="3173"/>
+        <location filename="../OperMode/opermode.ui" line="4137"/>
+        <location filename="../OperMode/opermode.ui" line="4161"/>
+        <location filename="../OperMode/opermode.ui" line="4185"/>
+        <location filename="../OperMode/opermode.ui" line="4209"/>
+        <location filename="../OperMode/opermode.ui" line="4954"/>
+        <location filename="../OperMode/opermode.ui" line="4978"/>
+        <location filename="../OperMode/opermode.ui" line="5002"/>
+        <location filename="../OperMode/opermode.ui" line="5026"/>
+        <source>the maximum cannot exceed the machine capacity</source>
+        <translation>最大不超过机器容量</translation>
+    </message>
+    <message>
+        <location filename="../OperMode/opermode.ui" line="1085"/>
         <source>Battery priority: 
 	When PV, battery, photovoltaic is available.</source>
         <translation>电池优先：
     当PV、电池、光伏可用。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="126"/>
+        <location filename="../OperMode/opermode.ui" line="5133"/>
+        <source>Battery
+Area</source>
+        <translation>电池区域划分</translation>
+    </message>
+    <message>
+        <location filename="../OperMode/opermode.ui" line="5174"/>
+        <source>Self-use</source>
+        <translation>自发自用</translation>
+    </message>
+    <message>
+        <location filename="../OperMode/opermode.ui" line="5214"/>
+        <source>Batter
+Priority</source>
+        <translation>电池优先</translation>
+    </message>
+    <message>
+        <location filename="../OperMode/opermode.ui" line="5264"/>
+        <source>Optimal
+Mode</source>
+        <translation>最优模式</translation>
+    </message>
+    <message>
+        <location filename="../OperMode/opermode.ui" line="5305"/>
+        <source>Mixde
+Mode</source>
+        <translation>混合模式</translation>
+    </message>
+    <message>
+        <location filename="../OperMode/opermode.ui" line="5346"/>
+        <source>Manual
+Mode</source>
+        <translation>手动模式</translation>
+    </message>
+    <message>
+        <location filename="../OperMode/opermode.cpp" line="181"/>
         <source>Generator turn on SOC(A1)</source>
         <translation>发电机开启SOC(A1)</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="127"/>
+        <location filename="../OperMode/opermode.cpp" line="182"/>
         <source>Generator turn off SOC(B1)</source>
         <translation>发电机关闭SOC(B1)</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="826"/>
-        <location filename="../OperMode/opermode.ui" line="1816"/>
-        <location filename="../OperMode/opermode.ui" line="2937"/>
+        <location filename="../OperMode/opermode.ui" line="848"/>
+        <location filename="../OperMode/opermode.ui" line="1860"/>
+        <location filename="../OperMode/opermode.ui" line="3013"/>
+        <location filename="../OperMode/opermode.ui" line="4049"/>
+        <location filename="../OperMode/opermode.ui" line="4866"/>
         <source>95</source>
         <translation>95</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="834"/>
-        <location filename="../OperMode/opermode.ui" line="1824"/>
-        <location filename="../OperMode/opermode.ui" line="2945"/>
-        <location filename="../OperMode/opermode.cpp" line="128"/>
+        <location filename="../OperMode/opermode.ui" line="856"/>
+        <location filename="../OperMode/opermode.ui" line="1868"/>
+        <location filename="../OperMode/opermode.ui" line="3021"/>
+        <location filename="../OperMode/opermode.ui" line="4057"/>
+        <location filename="../OperMode/opermode.ui" line="4874"/>
+        <location filename="../OperMode/opermode.cpp" line="183"/>
         <source>Maximum battery protection value(V)</source>
         <translation>电池最高单体保护值</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="842"/>
-        <location filename="../OperMode/opermode.ui" line="1832"/>
-        <location filename="../OperMode/opermode.ui" line="2953"/>
+        <location filename="../OperMode/opermode.ui" line="864"/>
+        <location filename="../OperMode/opermode.ui" line="1876"/>
+        <location filename="../OperMode/opermode.ui" line="3029"/>
+        <location filename="../OperMode/opermode.ui" line="4065"/>
+        <location filename="../OperMode/opermode.ui" line="4882"/>
         <source>3550 ~ 3650</source>
         <translation>3550~3650</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="850"/>
-        <location filename="../OperMode/opermode.ui" line="1840"/>
-        <location filename="../OperMode/opermode.ui" line="2961"/>
+        <location filename="../OperMode/opermode.ui" line="872"/>
+        <location filename="../OperMode/opermode.ui" line="1884"/>
+        <location filename="../OperMode/opermode.ui" line="3037"/>
+        <location filename="../OperMode/opermode.ui" line="4073"/>
+        <location filename="../OperMode/opermode.ui" line="4890"/>
         <source>3650</source>
         <translation>3650</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="858"/>
-        <location filename="../OperMode/opermode.ui" line="1848"/>
-        <location filename="../OperMode/opermode.ui" line="2969"/>
         <source>DG_ECP</source>
-        <translation>DG_ECP</translation>
+        <translation type="vanished">DG_ECP</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="866"/>
-        <location filename="../OperMode/opermode.ui" line="890"/>
-        <location filename="../OperMode/opermode.ui" line="914"/>
-        <location filename="../OperMode/opermode.ui" line="938"/>
-        <location filename="../OperMode/opermode.ui" line="962"/>
-        <location filename="../OperMode/opermode.ui" line="986"/>
-        <location filename="../OperMode/opermode.ui" line="1856"/>
-        <location filename="../OperMode/opermode.ui" line="1880"/>
-        <location filename="../OperMode/opermode.ui" line="1904"/>
-        <location filename="../OperMode/opermode.ui" line="1928"/>
-        <location filename="../OperMode/opermode.ui" line="1952"/>
-        <location filename="../OperMode/opermode.ui" line="1976"/>
-        <location filename="../OperMode/opermode.ui" line="2977"/>
-        <location filename="../OperMode/opermode.ui" line="3001"/>
-        <location filename="../OperMode/opermode.ui" line="3025"/>
-        <location filename="../OperMode/opermode.ui" line="3049"/>
-        <location filename="../OperMode/opermode.ui" line="3073"/>
-        <location filename="../OperMode/opermode.ui" line="3097"/>
         <source>0 ~ 100</source>
-        <translation>0 ~ 100</translation>
+        <translation type="vanished">0 ~ 100</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="882"/>
-        <location filename="../OperMode/opermode.ui" line="1872"/>
-        <location filename="../OperMode/opermode.ui" line="2993"/>
         <source>DG_FCP</source>
-        <translation>DG_FCP</translation>
+        <translation type="vanished">DG_FCP</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="906"/>
-        <location filename="../OperMode/opermode.ui" line="1896"/>
-        <location filename="../OperMode/opermode.ui" line="3017"/>
         <source>Grid_ECP</source>
-        <translation>Grid_ECP</translation>
+        <translation type="vanished">Grid_ECP</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="930"/>
-        <location filename="../OperMode/opermode.ui" line="1920"/>
-        <location filename="../OperMode/opermode.ui" line="3041"/>
-        <source>Grid_FCP</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../OperMode/opermode.ui" line="954"/>
-        <location filename="../OperMode/opermode.ui" line="1944"/>
-        <location filename="../OperMode/opermode.ui" line="3065"/>
         <source>Grid_EDP</source>
-        <translation>Grid_EDP</translation>
+        <translation type="vanished">Grid_EDP</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="978"/>
-        <location filename="../OperMode/opermode.ui" line="1968"/>
-        <location filename="../OperMode/opermode.ui" line="3089"/>
         <source>Grid_FDP</source>
-        <translation>Grid_FDP</translation>
+        <translation type="vanished">Grid_FDP</translation>
     </message>
     <message>
         <source>Battery priority: When PV, battery, photovoltaic is available.</source>
@@ -9980,67 +10487,66 @@ When PV, battery, photovoltaic available.</source>
     当PV、电池、光伏可用。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="1098"/>
+        <location filename="../OperMode/opermode.ui" line="1130"/>
         <source>(1)A, PV priority to charge the battery, excess energy to the load, if there is excess energy back to the grid.</source>
         <translation>（1）A、PV优先给电池充电，多余的能量给负载，如果还有多余的能量就回馈给电网。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="1144"/>
+        <location filename="../OperMode/opermode.ui" line="1180"/>
         <source>B, PV energy is given priority to battery charging, excess energy to the load.</source>
         <translation>B、PV能量优先给电池充电，多余的能量给负载。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="1190"/>
+        <location filename="../OperMode/opermode.ui" line="1230"/>
         <source>B, when PV is not enough to supply the battery and load, the grid provides the load with surplus energy.</source>
         <translation>当PV不足以供给电池和负载时，电网给负载提供剩余能量。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="1230"/>
+        <location filename="../OperMode/opermode.ui" line="1274"/>
         <source>(2) When the grid battery is available: A, the grid charges the battery and provides energy to the load.</source>
         <translation>（2）当电网电池可用时：电网给电池充电，同时给负载提供能量。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="2049"/>
+        <location filename="../OperMode/opermode.ui" line="2099"/>
         <source>1, when the battery, PV, grid is available</source>
         <translation>1.当电池、PV、电网可用时</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="2095"/>
+        <location filename="../OperMode/opermode.ui" line="2149"/>
         <source>A. When the PV is large enough, the PV charges the battery and supplies the load at the same time, and if there is any surplus, it is returned to the grid.</source>
         <translation>A、PV足够大时， PV给电池充电，同时供给负载，如果还有剩余，则回馈给电网。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="2141"/>
+        <location filename="../OperMode/opermode.ui" line="2199"/>
         <source>B. When PV is insufficient, PV charges the battery and supplies power to the load at the same time, and the grid supplements the remaining energy.</source>
         <translation>B、当PV不足时，PV给电池充电，同时给负载供电，电网补充剩余的能量。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="2187"/>
+        <location filename="../OperMode/opermode.ui" line="2249"/>
         <source>C. When PV is insufficient and the load power is less than the power set value on the AC side, the AC side supplies the load, the remaining available power on the AC side will charge the battery, and the PV will charge the battery.</source>
         <translation>C、当PV不足时，负载功率小于交流侧功率设定值时，交流侧供给负载，交流侧剩余可用功率将会给电池充电，同时PV给电池充电。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="2233"/>
+        <location filename="../OperMode/opermode.ui" line="2299"/>
         <source>D, when the PV is insufficient, the load power is greater than the AC power, the AC power is available to power the load, and the PV makes up the remaining power to the load, if the PV is insufficient, the battery adds the remaining energy.</source>
         <translation>D、当PV不足时，负载功率大于交流侧功率时，交流侧可用功率将负载供电，同时PV给负载补足剩余的功率，如果PV不足，则电池补充剩余能量。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="2257"/>
+        <location filename="../OperMode/opermode.ui" line="2326"/>
         <source>2, when the battery, the grid is available</source>
         <translation>2.当电池、电网可用时</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="2303"/>
+        <location filename="../OperMode/opermode.ui" line="2376"/>
         <source>A. When the load power is less than the power set value on the AC side, the AC side supplies the load, and the remaining available power on the AC side will charge the battery.</source>
         <translation>A、负载功率小于交流侧功率设定值时，交流侧供给负载，交流侧剩余可用功率将会给电池充电。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="2349"/>
+        <location filename="../OperMode/opermode.ui" line="2425"/>
         <source>B. When the load power is greater than the AC power, the available power on the AC side will supply power to the load and supplement the remaining energy with the battery.</source>
         <translation>B、负载功率大于交流侧功率时，交流侧可用功率将给负载供电，同电池补充剩余能量。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="3169"/>
         <source>Battery area division:
 ECP area of action:
     Saturated area + equalization area (SOC decays from high to low to charging SOC).
@@ -10050,7 +10556,7 @@ EDP action area:
     Saturated area + equalization area (SOC decays from high to low to charging SOC).
 FDP action area:
     Discharge area + equalization area (SOC less than charging SOC, increasing from low to high to discharge SOC cut-off).</source>
-        <translation>电池区域划分：
+        <translation type="vanished">电池区域划分：
 ECP作用区域：
     饱和区 + 均衡区（SOC由高到低衰减到充电SOC时）。
 FCP作用区域：
@@ -10061,7 +10567,7 @@ FDP作用区域：
     放空区+均衡区域（SOC小于充电SOC，由低到高增加，到放电SOC截止）。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="3204"/>
+        <location filename="../OperMode/opermode.ui" line="3290"/>
         <source>Chaifa startup logic (for all modes) :
     The display starts to enter the firewood control logic 4 minutes after the start of the display screen. 
     If the DCAC is not running, the diesel generator will be started if the power grid fails, and the diesel generator will be shut down when the power grid recovers. 
@@ -10076,8 +10582,10 @@ FDP作用区域：
         <translation type="vanished">电池优先</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="1504"/>
-        <location filename="../OperMode/opermode.ui" line="2625"/>
+        <location filename="../OperMode/opermode.ui" line="1548"/>
+        <location filename="../OperMode/opermode.ui" line="2701"/>
+        <location filename="../OperMode/opermode.ui" line="3737"/>
+        <location filename="../OperMode/opermode.ui" line="4554"/>
         <source>50</source>
         <translation>50</translation>
     </message>
@@ -10086,36 +10594,131 @@ FDP作用区域：
         <translation type="vanished">最优模式</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="2985"/>
-        <location filename="../OperMode/opermode.ui" line="3009"/>
-        <location filename="../OperMode/opermode.ui" line="3033"/>
-        <location filename="../OperMode/opermode.ui" line="3057"/>
-        <location filename="../OperMode/opermode.ui" line="3081"/>
-        <location filename="../OperMode/opermode.ui" line="3105"/>
+        <location filename="../OperMode/opermode.ui" line="896"/>
+        <location filename="../OperMode/opermode.ui" line="920"/>
+        <location filename="../OperMode/opermode.ui" line="944"/>
+        <location filename="../OperMode/opermode.ui" line="968"/>
+        <location filename="../OperMode/opermode.ui" line="992"/>
+        <location filename="../OperMode/opermode.ui" line="1016"/>
+        <location filename="../OperMode/opermode.ui" line="1908"/>
+        <location filename="../OperMode/opermode.ui" line="1932"/>
+        <location filename="../OperMode/opermode.ui" line="1956"/>
+        <location filename="../OperMode/opermode.ui" line="1980"/>
+        <location filename="../OperMode/opermode.ui" line="2004"/>
+        <location filename="../OperMode/opermode.ui" line="2028"/>
+        <location filename="../OperMode/opermode.ui" line="3061"/>
+        <location filename="../OperMode/opermode.ui" line="3085"/>
+        <location filename="../OperMode/opermode.ui" line="3109"/>
+        <location filename="../OperMode/opermode.ui" line="3133"/>
+        <location filename="../OperMode/opermode.ui" line="3157"/>
+        <location filename="../OperMode/opermode.ui" line="3181"/>
+        <location filename="../OperMode/opermode.ui" line="4097"/>
+        <location filename="../OperMode/opermode.ui" line="4121"/>
+        <location filename="../OperMode/opermode.ui" line="4145"/>
+        <location filename="../OperMode/opermode.ui" line="4169"/>
+        <location filename="../OperMode/opermode.ui" line="4193"/>
+        <location filename="../OperMode/opermode.ui" line="4217"/>
+        <location filename="../OperMode/opermode.ui" line="4914"/>
+        <location filename="../OperMode/opermode.ui" line="4938"/>
+        <location filename="../OperMode/opermode.ui" line="4962"/>
+        <location filename="../OperMode/opermode.ui" line="4986"/>
+        <location filename="../OperMode/opermode.ui" line="5010"/>
+        <location filename="../OperMode/opermode.ui" line="5034"/>
         <source>Set according to customer requirements</source>
         <translation>根据客户要求设置</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="3255"/>
+        <location filename="../OperMode/opermode.ui" line="3246"/>
+        <source>Battery zoning:   
+    Areas where ECP works:
+    (Saturated area)+(Equilibrium area)
+    When SOC decays from high to low to &quot;Charge SOC&quot;.
+
+    Areas where FCP works:
+    (SOC empty area)+(Equilibrium area)
+    SOC is less than the &quot;Charge SOC&quot;, increasing from low to high,
+    to the &quot;Discharge SOC&quot; cutoff.
+
+    Areas where EDP works:
+    (Saturated area)+(Equilibrium area)
+    When SOC decays from high to low to &quot;Charge SOC&quot;.
+
+    Areas where FDP works:
+    (SOC empty area)+(Equilibrium area)
+    SOC is less than the &quot;Charge SOC&quot;, increasing from low to high,
+    to the &quot;Discharge SOC&quot; cutoff.</source>
+        <translation>电池区域划分
+    ECP作用区域:饱和区+均衡区SOC由高到低衰减到&quot;充电SOC&quot;时。
+
+    FCP作用区域:放空区+均衡区SOC小于&quot;充电SOC&quot;时，由低到高增加，到&quot;放电SOC&quot;截止。
+
+    EDP作用区域:饱和区+均衡区SOC由高到低衰减到“充电SOC&quot;时。
+
+    FDP作用区域:放空区+均衡区SOC小于&quot;充电SOC&quot;时，由低到高增加，到&quot;放电SOC&quot;截止。</translation>
+    </message>
+    <message>
+        <location filename="../OperMode/opermode.ui" line="3360"/>
+        <source>Enable the time period.</source>
+        <translation>使能该时间段。</translation>
+    </message>
+    <message>
+        <location filename="../OperMode/opermode.ui" line="3381"/>
+        <source>Selection of peak,flat and valley sections of the grid under peak shaving and valley filling functions.</source>
+        <translation>削峰填谷功能下选择电网的峰、平、谷。</translation>
+    </message>
+    <message>
+        <location filename="../OperMode/opermode.ui" line="3402"/>
+        <source>The system starts to run automatically when it reaches this time.</source>
+        <translation>系统时间到达此时间时开始自动运行。</translation>
+    </message>
+    <message>
+        <location filename="../OperMode/opermode.ui" line="3423"/>
+        <source>The system stops running automatically when it reaches this time.</source>
+        <translation>系统时间到达此时间时停止自动运行。</translation>
+    </message>
+    <message>
+        <location filename="../OperMode/opermode.ui" line="3444"/>
+        <source>Functions performed in the current time period.</source>
+        <translation>当前时间段内执行的功能。</translation>
+    </message>
+    <message>
+        <location filename="../OperMode/opermode.ui" line="3465"/>
+        <source>Peak and trough shaving operating power.</source>
+        <translation>削峰填谷运行功率。</translation>
+    </message>
+    <message>
+        <location filename="../OperMode/opermode.ui" line="4243"/>
+        <source>&quot;Mixed Mode&quot; allows the system to automatically run different functional logic at different times. At the same time, it can run the function of &quot;peak shaving and valley filling&quot; according to the local peak and valley tariffs.</source>
+        <translation>&quot;混合模式”允许系统在不同时间内自动运行不同的功能逻辑。同时，它还可以根据当地的峰谷电价运行&quot;削峰填谷&quot;功能。</translation>
+    </message>
+    <message>
+        <location filename="../OperMode/opermode.ui" line="4279"/>
+        <source>The &quot;Manual Mode&quot; has no operational logic and allows for the manual control of battery charging and discharging. This mode is applicable in the following scenarios:
+1、Battery charge and discharge testing.
+2、Energy Management System (EMS) scheduling of the MPS.
+</source>
+        <translation>&quot;手动模式&quot;没有操作逻辑，可手动控制电池充电和放电。该模式适用于以下情况:
+1、电池充放电测试。
+2、能量管理系统(EMS)调度</translation>
+    </message>
+    <message>
+        <location filename="../OperMode/opermode.ui" line="5087"/>
         <source>Return</source>
         <translation>返回</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="3301"/>
         <source>Battery
 AreaDivision</source>
-        <translation>电池区域划分</translation>
+        <translation type="vanished">电池区域划分</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="3342"/>
         <source>System
 for self-use</source>
-        <translation>自发自用</translation>
+        <translation type="vanished">自发自用</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="3433"/>
         <source>Optimal</source>
-        <translation>最优模式</translation>
+        <translation type="vanished">最优模式</translation>
     </message>
     <message>
         <source>System
@@ -10123,10 +10726,9 @@ for self use</source>
         <translation type="vanished">自发自用</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.ui" line="3383"/>
         <source>Batter
 priority</source>
-        <translation>电池优先</translation>
+        <translation type="vanished">电池优先</translation>
     </message>
     <message>
         <source>Peak shaving</source>
@@ -10279,199 +10881,251 @@ The peak-valley filling mode is used for peak-valley arbitrage.PCS can operate a
 削峰填谷模式用于峰谷套利，PCS可根据当地的峰谷电价时段运行，可前往“自动运行”页面设置运行时间段、充放电模式、充放电功率等信息。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="101"/>
+        <location filename="../OperMode/opermode.cpp" line="154"/>
         <source>Click to view</source>
         <translation>点击查看</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="102"/>
-        <location filename="../OperMode/opermode.cpp" line="140"/>
-        <location filename="../OperMode/opermode.cpp" line="143"/>
+        <location filename="../OperMode/opermode.cpp" line="155"/>
+        <location filename="../OperMode/opermode.cpp" line="195"/>
+        <location filename="../OperMode/opermode.cpp" line="198"/>
         <source>Invalid in this mode.</source>
         <translation>该模式下无效。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="103"/>
+        <location filename="../OperMode/opermode.cpp" line="156"/>
         <source>In this mode, the charging power of the AC side is limited.</source>
         <translation>该模式下，限制交流侧的充电功率。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="104"/>
+        <location filename="../OperMode/opermode.cpp" line="157"/>
         <source>Protection is not triggered in this mode.</source>
         <translation>该模式下不会触发保护。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="105"/>
+        <location filename="../OperMode/opermode.cpp" line="158"/>
         <source>If the SOC is lower than this value, it is in the empty zone and FCP is executed.</source>
         <translation>SOC低于该值，处于放空区，执行FCP。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="106"/>
+        <location filename="../OperMode/opermode.cpp" line="159"/>
         <source>Disarm FCP point.</source>
         <translation>解除FCP点。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="107"/>
+        <location filename="../OperMode/opermode.cpp" line="160"/>
         <source>Control battery does not discharge.</source>
         <translation>控制电池不放电。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="108"/>
+        <location filename="../OperMode/opermode.cpp" line="161"/>
         <source>After DOD is triggered in this mode, it is not triggered in grid-connected mode and is shut down in off-network mode.</source>
         <translation>该模式下触发DOD后，并网模式下，不会触发，离网情况下关机。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="124"/>
+        <location filename="../OperMode/opermode.cpp" line="162"/>
+        <source>In this mode, positive discharge and negative charging.</source>
+        <translation>该模式下，正放负充。</translation>
+    </message>
+    <message>
+        <location filename="../OperMode/opermode.cpp" line="163"/>
+        <source>The functionality changes based on the mode selected in the &quot;Mixed Mode&quot; runtime schedule.</source>
+        <translation>根据“混合模式”的运行时段表中选择的模式，功能随选择的模式发生变化。</translation>
+    </message>
+    <message>
+        <location filename="../OperMode/opermode.cpp" line="179"/>
         <source>DOD OnGrid(%)</source>
         <translation>并网DOD（%）</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="125"/>
+        <location filename="../OperMode/opermode.cpp" line="180"/>
         <source>DOD OffGrid(%)</source>
         <translation>离网DOD（%）</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="129"/>
+        <location filename="../OperMode/opermode.cpp" line="194"/>
+        <source>In this mode, if the SOC is smaller than the &quot;Start charging SOC&quot;, the AC test provides a small power to maintain the &quot;Start charging SOC&quot;.</source>
+        <translation>该模式下，如果SOC小于“开始充电SOC”，交流测提供小功率维持在“开始充电SOC”。</translation>
+    </message>
+    <message>
+        <location filename="../OperMode/opermode.cpp" line="205"/>
+        <source>The AC test provides a small power to maintain the &quot;Start charging SOC&quot;.</source>
+        <translation>交流测提供小功率维持在“开始充电SOC”。</translation>
+    </message>
+    <message>
+        <location filename="../OperMode/opermode.cpp" line="206"/>
+        <source>When in an off-Grid state, off-Grid DOD Protection will be triggered and a shutdown action will be executed.</source>
+        <translation>离网状态下会触发离网DOD保护，并执行关机动作。</translation>
+    </message>
+    <message>
+        <location filename="../OperMode/opermode.ui" line="880"/>
+        <location filename="../OperMode/opermode.ui" line="1892"/>
+        <location filename="../OperMode/opermode.ui" line="3045"/>
+        <location filename="../OperMode/opermode.ui" line="4081"/>
+        <location filename="../OperMode/opermode.ui" line="4898"/>
+        <location filename="../OperMode/opermode.cpp" line="184"/>
         <source>DG ECP</source>
         <translation>DG ECP</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="130"/>
+        <location filename="../OperMode/opermode.ui" line="904"/>
+        <location filename="../OperMode/opermode.ui" line="1916"/>
+        <location filename="../OperMode/opermode.ui" line="3069"/>
+        <location filename="../OperMode/opermode.ui" line="4105"/>
+        <location filename="../OperMode/opermode.ui" line="4922"/>
+        <location filename="../OperMode/opermode.cpp" line="185"/>
         <source>DG FCP</source>
         <translation>DG FCP</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="131"/>
+        <location filename="../OperMode/opermode.ui" line="928"/>
+        <location filename="../OperMode/opermode.ui" line="1940"/>
+        <location filename="../OperMode/opermode.ui" line="3093"/>
+        <location filename="../OperMode/opermode.ui" line="4129"/>
+        <location filename="../OperMode/opermode.ui" line="4946"/>
+        <location filename="../OperMode/opermode.cpp" line="186"/>
         <source>Grid ECP</source>
         <translation>Grid ECP</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="132"/>
+        <location filename="../OperMode/opermode.ui" line="952"/>
+        <location filename="../OperMode/opermode.ui" line="1964"/>
+        <location filename="../OperMode/opermode.ui" line="3117"/>
+        <location filename="../OperMode/opermode.ui" line="4153"/>
+        <location filename="../OperMode/opermode.ui" line="4970"/>
+        <location filename="../OperMode/opermode.cpp" line="187"/>
         <source>Grid FCP</source>
         <translation>Grid FCP</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="133"/>
+        <location filename="../OperMode/opermode.ui" line="976"/>
+        <location filename="../OperMode/opermode.ui" line="1988"/>
+        <location filename="../OperMode/opermode.ui" line="3141"/>
+        <location filename="../OperMode/opermode.ui" line="4177"/>
+        <location filename="../OperMode/opermode.ui" line="4994"/>
+        <location filename="../OperMode/opermode.cpp" line="188"/>
         <source>Grid EDP</source>
         <translation>Grid EDP</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="134"/>
+        <location filename="../OperMode/opermode.ui" line="1000"/>
+        <location filename="../OperMode/opermode.ui" line="2012"/>
+        <location filename="../OperMode/opermode.ui" line="3165"/>
+        <location filename="../OperMode/opermode.ui" line="4201"/>
+        <location filename="../OperMode/opermode.ui" line="5018"/>
+        <location filename="../OperMode/opermode.cpp" line="189"/>
         <source>Grid FDP</source>
         <translation>Grid FDP</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="136"/>
+        <location filename="../OperMode/opermode.cpp" line="191"/>
         <source>Currently, only lithium batteries are supported.</source>
         <translation>目前仅支持锂电池。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="137"/>
+        <location filename="../OperMode/opermode.cpp" line="192"/>
         <source>Set the communication mode with the battery.</source>
         <translation>设置与电池的通信方式。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="138"/>
+        <location filename="../OperMode/opermode.cpp" line="193"/>
         <source>This section describes how to set the communication mode with the EMS.</source>
         <translation>设置与EMS的通信方式。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="139"/>
         <source>In this mode, if the SOC is smaller than the charging SOC, the AC test provides a small power to maintain the charging SOC.</source>
-        <translation>该模式下，如果SOC小于充电SOC，交流测提供小功率维持在充电SOC。</translation>
+        <translation type="vanished">该模式下，如果SOC小于充电SOC，交流测提供小功率维持在充电SOC。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="141"/>
+        <location filename="../OperMode/opermode.cpp" line="196"/>
         <source>In this mode, you can choose whether to preferentially use electricity from the grid or battery.</source>
         <translation>该模式下可选择优先用电网还是优先用电池的电。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="142"/>
+        <location filename="../OperMode/opermode.cpp" line="197"/>
         <source>In this mode, you can choose whether to reverse the flow.</source>
         <translation>该模式下可选择是否可逆流。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="144"/>
+        <location filename="../OperMode/opermode.cpp" line="199"/>
         <source>Battery charging voltage cut-off point.</source>
         <translation>电池充电电压截止点。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="145"/>
+        <location filename="../OperMode/opermode.cpp" line="200"/>
         <source>Battery charge voltage back almost.</source>
         <translation>电池充电电压回差点。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="146"/>
+        <location filename="../OperMode/opermode.cpp" line="201"/>
         <source>Battery discharge voltage cut-off point.</source>
         <translation>电池放电电压截止点。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="147"/>
+        <location filename="../OperMode/opermode.cpp" line="202"/>
         <source>Battery discharge voltage back to almost.</source>
         <translation>电池放电电压回差点。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="148"/>
+        <location filename="../OperMode/opermode.cpp" line="203"/>
         <source>Limit the battery charging current point.</source>
         <translation>限制电池充电电流点。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="149"/>
+        <location filename="../OperMode/opermode.cpp" line="204"/>
         <source>Limit the battery discharge current point.</source>
         <translation>限制电池放电电流点。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="150"/>
         <source>In this mode, when the SOC is less than (100 - DOD), the battery does not discharge and does not draw power from the grid.</source>
-        <translation>该模式下SOC小于（100 – DOD）时，电池不放电，也不从电网取电。</translation>
+        <translation type="vanished">该模式下SOC小于（100 – DOD）时，电池不放电，也不从电网取电。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="151"/>
         <source>After DOD is triggered in this mode, no charge or shutdown is performed in grid-connected mode, and the device is shut down in off-network condition.</source>
-        <translation>该模式下触发DOD后，并网模式下，不充电，不关机，离网情况下关机。</translation>
+        <translation type="vanished">该模式下触发DOD后，并网模式下，不充电，不关机，离网情况下关机。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="152"/>
+        <location filename="../OperMode/opermode.cpp" line="207"/>
         <source>When SOC is less than or equal to Chaifa, start Chaifa.</source>
         <translation>SOC小于等于柴发启动SOC时，启动柴发。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="153"/>
+        <location filename="../OperMode/opermode.cpp" line="208"/>
         <source>When SOC is greater than or equal to Chaifa, turn off Chaifa.</source>
         <translation>SOC大于等于柴发启动SOC时，关闭柴发。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="154"/>
+        <location filename="../OperMode/opermode.cpp" line="209"/>
         <source>Limit the maximum voltage of the battery charging cell.</source>
         <translation>限制电池充电单体最高电压。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="155"/>
+        <location filename="../OperMode/opermode.cpp" line="210"/>
         <source>In chai-hair mode, the AC power reference value of the saturation zone and the equalization zone.</source>
         <translation>柴发模式下，饱和区和均衡区的交流侧功率参考值。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="156"/>
+        <location filename="../OperMode/opermode.cpp" line="211"/>
         <source>Power reference value of AC side of the discharge area in Chai hair mode.</source>
         <translation>柴发模式下，放空区的交流侧功率参考值。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="157"/>
+        <location filename="../OperMode/opermode.cpp" line="212"/>
         <source>In the power grid mode, the AC power reference value in the saturation zone and the equilibrium zone.</source>
         <translation>电网模式下，饱和区和均衡区的交流侧功率参考值。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="158"/>
+        <location filename="../OperMode/opermode.cpp" line="213"/>
         <source>In power grid mode, this parameter specifies the power reference value on the AC side of the vent area.</source>
         <translation>电网模式下，放空区的交流侧功率参考值。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="159"/>
+        <location filename="../OperMode/opermode.cpp" line="214"/>
         <source>The equalization zone limits the discharge power of the system to the grid side.</source>
         <translation>均衡区限制系统对电网侧的放电功率。</translation>
     </message>
     <message>
-        <location filename="../OperMode/opermode.cpp" line="160"/>
+        <location filename="../OperMode/opermode.cpp" line="215"/>
         <source>The discharge zone limits the discharge power of the system to the power grid side.</source>
         <translation>放空区限制系统对电网侧的放电功率。</translation>
     </message>
@@ -10487,7 +11141,7 @@ The peak-valley filling mode is used for peak-valley arbitrage.PCS can operate a
 <context>
     <name>SpecificationData</name>
     <message>
-        <location filename="../SpecificationData/specificationdata.cpp" line="32"/>
+        <location filename="../SpecificationData/specificationdata.cpp" line="37"/>
         <source>OK</source>
         <translation>确定</translation>
     </message>
@@ -10629,7 +11283,7 @@ The peak-valley filling mode is used for peak-valley arbitrage.PCS can operate a
         <location filename="../UpgradeTools/upgradetools.ui" line="277"/>
         <location filename="../UpgradeTools/upgradetools.ui" line="667"/>
         <location filename="../UpgradeTools/upgradetools.cpp" line="69"/>
-        <location filename="../UpgradeTools/upgradetools.cpp" line="95"/>
+        <location filename="../UpgradeTools/upgradetools.cpp" line="91"/>
         <source>Monitor</source>
         <translation>监控</translation>
     </message>
@@ -10637,7 +11291,7 @@ The peak-valley filling mode is used for peak-valley arbitrage.PCS can operate a
         <location filename="../UpgradeTools/upgradetools.ui" line="298"/>
         <location filename="../UpgradeTools/upgradetools.ui" line="688"/>
         <location filename="../UpgradeTools/upgradetools.cpp" line="73"/>
-        <location filename="../UpgradeTools/upgradetools.cpp" line="99"/>
+        <location filename="../UpgradeTools/upgradetools.cpp" line="95"/>
         <source>Backup</source>
         <translation>备份</translation>
     </message>
@@ -10645,7 +11299,7 @@ The peak-valley filling mode is used for peak-valley arbitrage.PCS can operate a
         <location filename="../UpgradeTools/upgradetools.ui" line="319"/>
         <location filename="../UpgradeTools/upgradetools.ui" line="709"/>
         <location filename="../UpgradeTools/upgradetools.cpp" line="77"/>
-        <location filename="../UpgradeTools/upgradetools.cpp" line="103"/>
+        <location filename="../UpgradeTools/upgradetools.cpp" line="99"/>
         <source>Restore</source>
         <translation>恢复</translation>
     </message>
@@ -10685,13 +11339,13 @@ The peak-valley filling mode is used for peak-valley arbitrage.PCS can operate a
     </message>
     <message>
         <location filename="../UpgradeTools/upgradetools.ui" line="572"/>
-        <location filename="../UpgradeTools/upgradetools.cpp" line="122"/>
+        <location filename="../UpgradeTools/upgradetools.cpp" line="118"/>
         <source>Monitor.hex</source>
         <translation>Monitor.hex</translation>
     </message>
     <message>
         <location filename="../UpgradeTools/upgradetools.ui" line="593"/>
-        <location filename="../UpgradeTools/upgradetools.cpp" line="126"/>
+        <location filename="../UpgradeTools/upgradetools.cpp" line="122"/>
         <source>DSPUpdate.hex</source>
         <translation>DSPUpdate.hex</translation>
     </message>
@@ -10717,7 +11371,7 @@ The peak-valley filling mode is used for peak-valley arbitrage.PCS can operate a
     </message>
     <message>
         <location filename="../UpgradeTools/upgradetools.ui" line="753"/>
-        <location filename="../UpgradeTools/upgradetools.cpp" line="113"/>
+        <location filename="../UpgradeTools/upgradetools.cpp" line="109"/>
         <source>Restart</source>
         <translation>重启</translation>
     </message>
@@ -10732,14 +11386,14 @@ The peak-valley filling mode is used for peak-valley arbitrage.PCS can operate a
         <location filename="../UpgradeTools/upgradetools.cpp" line="74"/>
         <location filename="../UpgradeTools/upgradetools.cpp" line="78"/>
         <location filename="../UpgradeTools/upgradetools.cpp" line="83"/>
+        <location filename="../UpgradeTools/upgradetools.cpp" line="88"/>
         <location filename="../UpgradeTools/upgradetools.cpp" line="92"/>
         <location filename="../UpgradeTools/upgradetools.cpp" line="96"/>
         <location filename="../UpgradeTools/upgradetools.cpp" line="100"/>
-        <location filename="../UpgradeTools/upgradetools.cpp" line="104"/>
-        <location filename="../UpgradeTools/upgradetools.cpp" line="109"/>
-        <location filename="../UpgradeTools/upgradetools.cpp" line="114"/>
+        <location filename="../UpgradeTools/upgradetools.cpp" line="105"/>
+        <location filename="../UpgradeTools/upgradetools.cpp" line="110"/>
+        <location filename="../UpgradeTools/upgradetools.cpp" line="119"/>
         <location filename="../UpgradeTools/upgradetools.cpp" line="123"/>
-        <location filename="../UpgradeTools/upgradetools.cpp" line="127"/>
         <source>OK</source>
         <translation>确定</translation>
     </message>
@@ -10803,31 +11457,30 @@ You need to press the EPO during the upgrade.</source>
     </message>
     <message>
         <location filename="../UpgradeTools/upgradetools.cpp" line="70"/>
-        <location filename="../UpgradeTools/upgradetools.cpp" line="96"/>
+        <location filename="../UpgradeTools/upgradetools.cpp" line="92"/>
         <source>After inserting the u disk and checking that there is a Monitor upgrade program &apos;Monitor.hex&apos;, click to upgrade the monitor program.</source>
         <translation>在插入U盘并检查到有监控升级程序Monitor.hex后，点击将升级监控程序。</translation>
     </message>
     <message>
         <location filename="../UpgradeTools/upgradetools.cpp" line="74"/>
-        <location filename="../UpgradeTools/upgradetools.cpp" line="100"/>
+        <location filename="../UpgradeTools/upgradetools.cpp" line="96"/>
         <source>Backup: Click to backup the current program files.</source>
         <translation>备份：点击将对当前程序文件进行备份。</translation>
     </message>
     <message>
         <location filename="../UpgradeTools/upgradetools.cpp" line="78"/>
-        <location filename="../UpgradeTools/upgradetools.cpp" line="104"/>
+        <location filename="../UpgradeTools/upgradetools.cpp" line="100"/>
         <source>Restore: Restore to the most recent backup program files.</source>
         <translation>恢复：恢复到最近一次备份的程序文件。</translation>
     </message>
     <message>
         <location filename="../UpgradeTools/upgradetools.cpp" line="83"/>
-        <location filename="../UpgradeTools/upgradetools.cpp" line="114"/>
+        <location filename="../UpgradeTools/upgradetools.cpp" line="110"/>
         <source>Click to restart.</source>
         <translation>点击后将进行重启。</translation>
     </message>
     <message>
-        <location filename="../UpgradeTools/upgradetools.cpp" line="83"/>
-        <location filename="../UpgradeTools/upgradetools.cpp" line="114"/>
+        <location filename="../UpgradeTools/upgradetools.cpp" line="110"/>
         <source>Previous Page</source>
         <translation>上一页</translation>
     </message>
@@ -10836,23 +11489,23 @@ You need to press the EPO during the upgrade.</source>
         <translation type="vanished">返回</translation>
     </message>
     <message>
-        <location filename="../UpgradeTools/upgradetools.cpp" line="91"/>
+        <location filename="../UpgradeTools/upgradetools.cpp" line="87"/>
         <source>Baud Rate</source>
         <translation>波特率</translation>
     </message>
     <message>
-        <location filename="../UpgradeTools/upgradetools.cpp" line="92"/>
+        <location filename="../UpgradeTools/upgradetools.cpp" line="88"/>
         <source>Baud Rate: Default is 500k and cannot be modified.</source>
         <translation>波特率：默认500k，不可修改。</translation>
     </message>
     <message>
         <location filename="../UpgradeTools/upgradetools.ui" line="732"/>
-        <location filename="../UpgradeTools/upgradetools.cpp" line="107"/>
+        <location filename="../UpgradeTools/upgradetools.cpp" line="103"/>
         <source>DSP Upgrade</source>
         <translation>DSP升级</translation>
     </message>
     <message>
-        <location filename="../UpgradeTools/upgradetools.cpp" line="108"/>
+        <location filename="../UpgradeTools/upgradetools.cpp" line="104"/>
         <source>DSP Upgrade: Insert the u disk and check if there is a DSP upgrade program called &apos;DSPUpdate.hex&apos;. Click to upgrade the DSP.                                
 (Note: Press the EPO button before upgrading.))</source>
         <translation>DSP升级：插入U盘并检查到有DSP升级程序&apos;DSPUpdate.hex&apos;后，点击DSP后，将升级DSP软件.(注：升级前需要按下EPO.）</translation>
@@ -10868,12 +11521,12 @@ You need to press the EPO during the upgrade.</source>
 升级过程中需要按下EPO。</translation>
     </message>
     <message>
-        <location filename="../UpgradeTools/upgradetools.cpp" line="123"/>
+        <location filename="../UpgradeTools/upgradetools.cpp" line="119"/>
         <source>This is the name of the monitoring upgrade program.</source>
         <translation>这是监控升级程序名称。</translation>
     </message>
     <message>
-        <location filename="../UpgradeTools/upgradetools.cpp" line="127"/>
+        <location filename="../UpgradeTools/upgradetools.cpp" line="123"/>
         <source>This is the DSP upgrade program name.</source>
         <translation>这是DSP升级程序名称。</translation>
     </message>

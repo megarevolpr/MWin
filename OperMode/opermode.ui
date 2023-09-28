@@ -40,7 +40,7 @@
         <item row="0" column="1">
          <widget class="QStackedWidget" name="ExplanationTextWidget">
           <property name="currentIndex">
-           <number>4</number>
+           <number>0</number>
           </property>
           <widget class="QWidget" name="Systempage">
            <layout class="QHBoxLayout" name="horizontalLayout_6">
@@ -493,7 +493,7 @@ border-image: url(:/new_ui/UI/Self_Use_C.png);</string>
                 </item>
                 <item row="3" column="0">
                  <property name="text">
-                  <string>Charge SOC</string>
+                  <string>Start charging SOC</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -517,7 +517,7 @@ border-image: url(:/new_ui/UI/Self_Use_C.png);</string>
                 </item>
                 <item row="4" column="0">
                  <property name="text">
-                  <string>Discharge SOC</string>
+                  <string>Stop charging SOC</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -877,7 +877,7 @@ border-image: url(:/new_ui/UI/Self_Use_C.png);</string>
                 </item>
                 <item row="19" column="0">
                  <property name="text">
-                  <string>DG_ECP</string>
+                  <string>DG ECP</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -885,7 +885,7 @@ border-image: url(:/new_ui/UI/Self_Use_C.png);</string>
                 </item>
                 <item row="19" column="2">
                  <property name="text">
-                  <string>0 ~ 100</string>
+                  <string>the maximum cannot exceed the DG capacity</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -893,7 +893,7 @@ border-image: url(:/new_ui/UI/Self_Use_C.png);</string>
                 </item>
                 <item row="19" column="3">
                  <property name="text">
-                  <string>0</string>
+                  <string>Set according to customer requirements</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -901,7 +901,7 @@ border-image: url(:/new_ui/UI/Self_Use_C.png);</string>
                 </item>
                 <item row="20" column="0">
                  <property name="text">
-                  <string>DG_FCP</string>
+                  <string>DG FCP</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -909,7 +909,7 @@ border-image: url(:/new_ui/UI/Self_Use_C.png);</string>
                 </item>
                 <item row="20" column="2">
                  <property name="text">
-                  <string>0 ~ 100</string>
+                  <string>the maximum cannot exceed the DG capacity</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -917,7 +917,7 @@ border-image: url(:/new_ui/UI/Self_Use_C.png);</string>
                 </item>
                 <item row="20" column="3">
                  <property name="text">
-                  <string>0</string>
+                  <string>Set according to customer requirements</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -925,7 +925,7 @@ border-image: url(:/new_ui/UI/Self_Use_C.png);</string>
                 </item>
                 <item row="21" column="0">
                  <property name="text">
-                  <string>Grid_ECP</string>
+                  <string>Grid ECP</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -933,7 +933,7 @@ border-image: url(:/new_ui/UI/Self_Use_C.png);</string>
                 </item>
                 <item row="21" column="2">
                  <property name="text">
-                  <string>0 ~ 100</string>
+                  <string>the maximum cannot exceed the machine capacity</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -941,7 +941,7 @@ border-image: url(:/new_ui/UI/Self_Use_C.png);</string>
                 </item>
                 <item row="21" column="3">
                  <property name="text">
-                  <string>0</string>
+                  <string>Set according to customer requirements</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -949,7 +949,7 @@ border-image: url(:/new_ui/UI/Self_Use_C.png);</string>
                 </item>
                 <item row="22" column="0">
                  <property name="text">
-                  <string>Grid_FCP</string>
+                  <string>Grid FCP</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -957,7 +957,7 @@ border-image: url(:/new_ui/UI/Self_Use_C.png);</string>
                 </item>
                 <item row="22" column="2">
                  <property name="text">
-                  <string>0 ~ 100</string>
+                  <string>the maximum cannot exceed the machine capacity</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -965,7 +965,7 @@ border-image: url(:/new_ui/UI/Self_Use_C.png);</string>
                 </item>
                 <item row="22" column="3">
                  <property name="text">
-                  <string>0</string>
+                  <string>Set according to customer requirements</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -973,7 +973,7 @@ border-image: url(:/new_ui/UI/Self_Use_C.png);</string>
                 </item>
                 <item row="23" column="0">
                  <property name="text">
-                  <string>Grid_EDP</string>
+                  <string>Grid EDP</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -981,7 +981,7 @@ border-image: url(:/new_ui/UI/Self_Use_C.png);</string>
                 </item>
                 <item row="23" column="2">
                  <property name="text">
-                  <string>0 ~ 100</string>
+                  <string>the maximum cannot exceed the machine capacity</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -989,7 +989,7 @@ border-image: url(:/new_ui/UI/Self_Use_C.png);</string>
                 </item>
                 <item row="23" column="3">
                  <property name="text">
-                  <string>100</string>
+                  <string>Set according to customer requirements</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -997,7 +997,7 @@ border-image: url(:/new_ui/UI/Self_Use_C.png);</string>
                 </item>
                 <item row="24" column="0">
                  <property name="text">
-                  <string>Grid_FDP</string>
+                  <string>Grid FDP</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -1005,7 +1005,7 @@ border-image: url(:/new_ui/UI/Self_Use_C.png);</string>
                 </item>
                 <item row="24" column="2">
                  <property name="text">
-                  <string>0 ~ 100</string>
+                  <string>the maximum cannot exceed the machine capacity</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -1013,7 +1013,7 @@ border-image: url(:/new_ui/UI/Self_Use_C.png);</string>
                 </item>
                 <item row="24" column="3">
                  <property name="text">
-                  <string>100</string>
+                  <string>Set according to customer requirements</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -1050,7 +1050,7 @@ border-image: url(:/new_ui/UI/Self_Use_C.png);</string>
                  <property name="geometry">
                   <rect>
                    <x>0</x>
-                   <y>-213</y>
+                   <y>0</y>
                    <width>581</width>
                    <height>1210</height>
                   </rect>
@@ -1505,7 +1505,7 @@ border-image: url(:/new_ui/UI/Battery_Priority_C.png);</string>
                 </item>
                 <item row="3" column="0">
                  <property name="text">
-                  <string>Charge SOC</string>
+                  <string>Start charging SOC</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -1529,7 +1529,7 @@ border-image: url(:/new_ui/UI/Battery_Priority_C.png);</string>
                 </item>
                 <item row="4" column="0">
                  <property name="text">
-                  <string>Discharge SOC</string>
+                  <string>Stop charging SOC</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -1889,7 +1889,7 @@ border-image: url(:/new_ui/UI/Battery_Priority_C.png);</string>
                 </item>
                 <item row="19" column="0">
                  <property name="text">
-                  <string>DG_ECP</string>
+                  <string>DG ECP</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -1897,7 +1897,7 @@ border-image: url(:/new_ui/UI/Battery_Priority_C.png);</string>
                 </item>
                 <item row="19" column="2">
                  <property name="text">
-                  <string>0 ~ 100</string>
+                  <string>the maximum cannot exceed the DG capacity</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -1905,7 +1905,7 @@ border-image: url(:/new_ui/UI/Battery_Priority_C.png);</string>
                 </item>
                 <item row="19" column="3">
                  <property name="text">
-                  <string>100</string>
+                  <string>Set according to customer requirements</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -1913,7 +1913,7 @@ border-image: url(:/new_ui/UI/Battery_Priority_C.png);</string>
                 </item>
                 <item row="20" column="0">
                  <property name="text">
-                  <string>DG_FCP</string>
+                  <string>DG FCP</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -1921,7 +1921,7 @@ border-image: url(:/new_ui/UI/Battery_Priority_C.png);</string>
                 </item>
                 <item row="20" column="2">
                  <property name="text">
-                  <string>0 ~ 100</string>
+                  <string>the maximum cannot exceed the DG capacity</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -1929,7 +1929,7 @@ border-image: url(:/new_ui/UI/Battery_Priority_C.png);</string>
                 </item>
                 <item row="20" column="3">
                  <property name="text">
-                  <string>100</string>
+                  <string>Set according to customer requirements</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -1937,7 +1937,7 @@ border-image: url(:/new_ui/UI/Battery_Priority_C.png);</string>
                 </item>
                 <item row="21" column="0">
                  <property name="text">
-                  <string>Grid_ECP</string>
+                  <string>Grid ECP</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -1945,7 +1945,7 @@ border-image: url(:/new_ui/UI/Battery_Priority_C.png);</string>
                 </item>
                 <item row="21" column="2">
                  <property name="text">
-                  <string>0 ~ 100</string>
+                  <string>the maximum cannot exceed the machine capacity</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -1953,7 +1953,7 @@ border-image: url(:/new_ui/UI/Battery_Priority_C.png);</string>
                 </item>
                 <item row="21" column="3">
                  <property name="text">
-                  <string>100</string>
+                  <string>Set according to customer requirements</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -1961,7 +1961,7 @@ border-image: url(:/new_ui/UI/Battery_Priority_C.png);</string>
                 </item>
                 <item row="22" column="0">
                  <property name="text">
-                  <string>Grid_FCP</string>
+                  <string>Grid FCP</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -1969,7 +1969,7 @@ border-image: url(:/new_ui/UI/Battery_Priority_C.png);</string>
                 </item>
                 <item row="22" column="2">
                  <property name="text">
-                  <string>0 ~ 100</string>
+                  <string>the maximum cannot exceed the machine capacity</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -1977,7 +1977,7 @@ border-image: url(:/new_ui/UI/Battery_Priority_C.png);</string>
                 </item>
                 <item row="22" column="3">
                  <property name="text">
-                  <string>100</string>
+                  <string>Set according to customer requirements</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -1985,7 +1985,7 @@ border-image: url(:/new_ui/UI/Battery_Priority_C.png);</string>
                 </item>
                 <item row="23" column="0">
                  <property name="text">
-                  <string>Grid_EDP</string>
+                  <string>Grid EDP</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -1993,7 +1993,7 @@ border-image: url(:/new_ui/UI/Battery_Priority_C.png);</string>
                 </item>
                 <item row="23" column="2">
                  <property name="text">
-                  <string>0 ~ 100</string>
+                  <string>the maximum cannot exceed the machine capacity</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -2001,7 +2001,7 @@ border-image: url(:/new_ui/UI/Battery_Priority_C.png);</string>
                 </item>
                 <item row="23" column="3">
                  <property name="text">
-                  <string>100</string>
+                  <string>Set according to customer requirements</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -2009,7 +2009,7 @@ border-image: url(:/new_ui/UI/Battery_Priority_C.png);</string>
                 </item>
                 <item row="24" column="0">
                  <property name="text">
-                  <string>Grid_FDP</string>
+                  <string>Grid FDP</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -2017,7 +2017,7 @@ border-image: url(:/new_ui/UI/Battery_Priority_C.png);</string>
                 </item>
                 <item row="24" column="2">
                  <property name="text">
-                  <string>0 ~ 100</string>
+                  <string>the maximum cannot exceed the machine capacity</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -2025,7 +2025,7 @@ border-image: url(:/new_ui/UI/Battery_Priority_C.png);</string>
                 </item>
                 <item row="24" column="3">
                  <property name="text">
-                  <string>100</string>
+                  <string>Set according to customer requirements</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -2062,7 +2062,7 @@ border-image: url(:/new_ui/UI/Battery_Priority_C.png);</string>
                  <property name="geometry">
                   <rect>
                    <x>0</x>
-                   <y>-845</y>
+                   <y>0</y>
                    <width>581</width>
                    <height>1988</height>
                   </rect>
@@ -2658,7 +2658,7 @@ border-image: url(:/new_ui/UI/Optimal_Mode_E.png);</string>
                 </item>
                 <item row="3" column="0">
                  <property name="text">
-                  <string>Charge SOC</string>
+                  <string>Start charging SOC</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -2682,7 +2682,7 @@ border-image: url(:/new_ui/UI/Optimal_Mode_E.png);</string>
                 </item>
                 <item row="4" column="0">
                  <property name="text">
-                  <string>Discharge SOC</string>
+                  <string>Stop charging SOC</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -3042,7 +3042,7 @@ border-image: url(:/new_ui/UI/Optimal_Mode_E.png);</string>
                 </item>
                 <item row="19" column="0">
                  <property name="text">
-                  <string>DG_ECP</string>
+                  <string>DG ECP</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -3050,7 +3050,7 @@ border-image: url(:/new_ui/UI/Optimal_Mode_E.png);</string>
                 </item>
                 <item row="19" column="2">
                  <property name="text">
-                  <string>0 ~ 100</string>
+                  <string>the maximum cannot exceed the DG capacity</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -3066,7 +3066,7 @@ border-image: url(:/new_ui/UI/Optimal_Mode_E.png);</string>
                 </item>
                 <item row="20" column="0">
                  <property name="text">
-                  <string>DG_FCP</string>
+                  <string>DG FCP</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -3074,7 +3074,7 @@ border-image: url(:/new_ui/UI/Optimal_Mode_E.png);</string>
                 </item>
                 <item row="20" column="2">
                  <property name="text">
-                  <string>0 ~ 100</string>
+                  <string>the maximum cannot exceed the DG capacity</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -3090,7 +3090,7 @@ border-image: url(:/new_ui/UI/Optimal_Mode_E.png);</string>
                 </item>
                 <item row="21" column="0">
                  <property name="text">
-                  <string>Grid_ECP</string>
+                  <string>Grid ECP</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -3098,7 +3098,7 @@ border-image: url(:/new_ui/UI/Optimal_Mode_E.png);</string>
                 </item>
                 <item row="21" column="2">
                  <property name="text">
-                  <string>0 ~ 100</string>
+                  <string>the maximum cannot exceed the machine capacity</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -3114,7 +3114,7 @@ border-image: url(:/new_ui/UI/Optimal_Mode_E.png);</string>
                 </item>
                 <item row="22" column="0">
                  <property name="text">
-                  <string>Grid_FCP</string>
+                  <string>Grid FCP</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -3122,7 +3122,7 @@ border-image: url(:/new_ui/UI/Optimal_Mode_E.png);</string>
                 </item>
                 <item row="22" column="2">
                  <property name="text">
-                  <string>0 ~ 100</string>
+                  <string>the maximum cannot exceed the machine capacity</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -3138,7 +3138,7 @@ border-image: url(:/new_ui/UI/Optimal_Mode_E.png);</string>
                 </item>
                 <item row="23" column="0">
                  <property name="text">
-                  <string>Grid_EDP</string>
+                  <string>Grid EDP</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -3146,7 +3146,7 @@ border-image: url(:/new_ui/UI/Optimal_Mode_E.png);</string>
                 </item>
                 <item row="23" column="2">
                  <property name="text">
-                  <string>0 ~ 100</string>
+                  <string>the maximum cannot exceed the machine capacity</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -3162,7 +3162,7 @@ border-image: url(:/new_ui/UI/Optimal_Mode_E.png);</string>
                 </item>
                 <item row="24" column="0">
                  <property name="text">
-                  <string>Grid_FDP</string>
+                  <string>Grid FDP</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -3170,7 +3170,7 @@ border-image: url(:/new_ui/UI/Optimal_Mode_E.png);</string>
                 </item>
                 <item row="24" column="2">
                  <property name="text">
-                  <string>0 ~ 100</string>
+                  <string>the maximum cannot exceed the machine capacity</string>
                  </property>
                  <property name="textAlignment">
                   <set>AlignCenter</set>
@@ -3305,9 +3305,9 @@ background-color: rgb(170, 255, 255);
             <item row="0" column="0">
              <widget class="QWidget" name="widget" native="true">
               <property name="styleSheet">
-               <string notr="true">background-color: rgb(170, 255, 255);</string>
+               <string notr="true"/>
               </property>
-              <layout class="QVBoxLayout" name="verticalLayout_67" stretch="3,3,9,2">
+              <layout class="QVBoxLayout" name="verticalLayout_67" stretch="3,2,9,2">
                <property name="spacing">
                 <number>6</number>
                </property>
@@ -3474,9 +3474,6 @@ border-radius: 10px;</string>
                   <font>
                    <pointsize>12</pointsize>
                   </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">background-color: rgb(255, 255, 255);</string>
                  </property>
                  <row>
                   <property name="text">
@@ -3697,7 +3694,7 @@ border-radius: 10px;</string>
                  </item>
                  <item row="3" column="0">
                   <property name="text">
-                   <string>Charge SOC</string>
+                   <string>Start charging SOC</string>
                   </property>
                   <property name="textAlignment">
                    <set>AlignCenter</set>
@@ -3721,7 +3718,7 @@ border-radius: 10px;</string>
                  </item>
                  <item row="4" column="0">
                   <property name="text">
-                   <string>Discharge SOC</string>
+                   <string>Stop charging SOC</string>
                   </property>
                   <property name="textAlignment">
                    <set>AlignCenter</set>
@@ -4081,7 +4078,7 @@ border-radius: 10px;</string>
                  </item>
                  <item row="19" column="0">
                   <property name="text">
-                   <string>DG_ECP</string>
+                   <string>DG ECP</string>
                   </property>
                   <property name="textAlignment">
                    <set>AlignCenter</set>
@@ -4089,7 +4086,7 @@ border-radius: 10px;</string>
                  </item>
                  <item row="19" column="2">
                   <property name="text">
-                   <string>0 ~ 100</string>
+                   <string>the maximum cannot exceed the DG capacity</string>
                   </property>
                   <property name="textAlignment">
                    <set>AlignCenter</set>
@@ -4105,7 +4102,7 @@ border-radius: 10px;</string>
                  </item>
                  <item row="20" column="0">
                   <property name="text">
-                   <string>DG_FCP</string>
+                   <string>DG FCP</string>
                   </property>
                   <property name="textAlignment">
                    <set>AlignCenter</set>
@@ -4113,7 +4110,7 @@ border-radius: 10px;</string>
                  </item>
                  <item row="20" column="2">
                   <property name="text">
-                   <string>0 ~ 100</string>
+                   <string>the maximum cannot exceed the DG capacity</string>
                   </property>
                   <property name="textAlignment">
                    <set>AlignCenter</set>
@@ -4129,7 +4126,7 @@ border-radius: 10px;</string>
                  </item>
                  <item row="21" column="0">
                   <property name="text">
-                   <string>Grid_ECP</string>
+                   <string>Grid ECP</string>
                   </property>
                   <property name="textAlignment">
                    <set>AlignCenter</set>
@@ -4137,7 +4134,7 @@ border-radius: 10px;</string>
                  </item>
                  <item row="21" column="2">
                   <property name="text">
-                   <string>0 ~ 100</string>
+                   <string>the maximum cannot exceed the machine capacity</string>
                   </property>
                   <property name="textAlignment">
                    <set>AlignCenter</set>
@@ -4153,7 +4150,7 @@ border-radius: 10px;</string>
                  </item>
                  <item row="22" column="0">
                   <property name="text">
-                   <string>Grid_FCP</string>
+                   <string>Grid FCP</string>
                   </property>
                   <property name="textAlignment">
                    <set>AlignCenter</set>
@@ -4161,7 +4158,7 @@ border-radius: 10px;</string>
                  </item>
                  <item row="22" column="2">
                   <property name="text">
-                   <string>0 ~ 100</string>
+                   <string>the maximum cannot exceed the machine capacity</string>
                   </property>
                   <property name="textAlignment">
                    <set>AlignCenter</set>
@@ -4177,7 +4174,7 @@ border-radius: 10px;</string>
                  </item>
                  <item row="23" column="0">
                   <property name="text">
-                   <string>Grid_EDP</string>
+                   <string>Grid EDP</string>
                   </property>
                   <property name="textAlignment">
                    <set>AlignCenter</set>
@@ -4185,7 +4182,7 @@ border-radius: 10px;</string>
                  </item>
                  <item row="23" column="2">
                   <property name="text">
-                   <string>0 ~ 100</string>
+                   <string>the maximum cannot exceed the machine capacity</string>
                   </property>
                   <property name="textAlignment">
                    <set>AlignCenter</set>
@@ -4201,7 +4198,7 @@ border-radius: 10px;</string>
                  </item>
                  <item row="24" column="0">
                   <property name="text">
-                   <string>Grid_FDP</string>
+                   <string>Grid FDP</string>
                   </property>
                   <property name="textAlignment">
                    <set>AlignCenter</set>
@@ -4209,7 +4206,7 @@ border-radius: 10px;</string>
                  </item>
                  <item row="24" column="2">
                   <property name="text">
-                   <string>0 ~ 100</string>
+                   <string>the maximum cannot exceed the machine capacity</string>
                   </property>
                   <property name="textAlignment">
                    <set>AlignCenter</set>
@@ -4255,20 +4252,7 @@ padding: 3px;</string>
           <widget class="QWidget" name="Manualpage">
            <layout class="QGridLayout" name="gridLayout_6">
             <item row="0" column="0">
-             <layout class="QVBoxLayout" name="verticalLayout_8">
-              <item>
-               <spacer name="verticalSpacer_2">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>40</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
+             <layout class="QVBoxLayout" name="verticalLayout_8" stretch="1,2">
               <item>
                <layout class="QHBoxLayout" name="horizontalLayout_87" stretch="1,2">
                 <item>
@@ -4302,17 +4286,758 @@ padding: 3px;</string>
                </layout>
               </item>
               <item>
-               <spacer name="verticalSpacer">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
+               <widget class="QTableWidget" name="Manual_Widget">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                 </font>
                 </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>40</height>
-                 </size>
-                </property>
-               </spacer>
+                <row>
+                 <property name="text">
+                  <string>1</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>2</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>3</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>4</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>5</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>6</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>7</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>8</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>9</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>10</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>11</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>12</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>13</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>14</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>15</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>16</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>17</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>18</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>19</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>20</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>21</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>22</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>23</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>24</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>25</string>
+                 </property>
+                </row>
+                <column>
+                 <property name="text">
+                  <string>Parameter name</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Parameter description</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Radius</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Default value</string>
+                 </property>
+                </column>
+                <item row="0" column="0">
+                 <property name="text">
+                  <string>Battery type</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="0" column="2">
+                 <property name="text">
+                  <string>Lithium</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="0" column="3">
+                 <property name="text">
+                  <string>Lithium</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="1" column="0">
+                 <property name="text">
+                  <string>BMS Comm.type</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="1" column="2">
+                 <property name="text">
+                  <string>CAN/485</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="1" column="3">
+                 <property name="text">
+                  <string>CAN</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="2" column="0">
+                 <property name="text">
+                  <string>EMS Comm.type</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="2" column="2">
+                 <property name="text">
+                  <string>485/TCP</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="2" column="3">
+                 <property name="text">
+                  <string>485</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="3" column="0">
+                 <property name="text">
+                  <string>Start charging SOC</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="3" column="2">
+                 <property name="text">
+                  <string>1~100</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="3" column="3">
+                 <property name="text">
+                  <string>20</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="4" column="0">
+                 <property name="text">
+                  <string>Stop charging SOC</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="4" column="2">
+                 <property name="text">
+                  <string>1~100</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="4" column="3">
+                 <property name="text">
+                  <string>50</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="5" column="0">
+                 <property name="text">
+                  <string>Energy priority</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="5" column="2">
+                 <property name="text">
+                  <string>Bat&gt;Grid、Grid&gt;Bat</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="5" column="3">
+                 <property name="text">
+                  <string>Bat&gt;Grid</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="6" column="0">
+                 <property name="text">
+                  <string>Grid connected mode of lnv</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="6" column="2">
+                 <property name="text">
+                  <string>Countercurret、Non Countercurret</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="6" column="3">
+                 <property name="text">
+                  <string>Non Countercurret</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="7" column="0">
+                 <property name="text">
+                  <string>Constant power(AC)</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="7" column="2">
+                 <property name="text">
+                  <string>-Rated power~Rated power</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="7" column="3">
+                 <property name="text">
+                  <string>0</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="8" column="0">
+                 <property name="text">
+                  <string>Charge Volt. upper Limit(V)</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="8" column="2">
+                 <property name="text">
+                  <string>400~850</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="8" column="3">
+                 <property name="text">
+                  <string>Battery charging cut-off voltage</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="9" column="0">
+                 <property name="text">
+                  <string>Charge Volt. upper Limit delta(V)</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="9" column="2">
+                 <property name="text">
+                  <string>-</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="9" column="3">
+                 <property name="text">
+                  <string>10mV</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="10" column="0">
+                 <property name="text">
+                  <string>Discharge Volt. lower Limit(V)</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="10" column="2">
+                 <property name="text">
+                  <string>400~850</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="10" column="3">
+                 <property name="text">
+                  <string>Battery discharge cut-off voltage</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="11" column="0">
+                 <property name="text">
+                  <string>Discharge Volt. lower Limit delta(V)</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="11" column="2">
+                 <property name="text">
+                  <string>-</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="11" column="3">
+                 <property name="text">
+                  <string>10mV</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="12" column="0">
+                 <property name="text">
+                  <string>Charge Current Limit(A)</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="12" column="2">
+                 <property name="text">
+                  <string>0 ~ 1000</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="12" column="3">
+                 <property name="text">
+                  <string>By battery limit</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="13" column="0">
+                 <property name="text">
+                  <string>Discharge Current Limit(A)</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="13" column="2">
+                 <property name="text">
+                  <string>0 ~ 1000</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="13" column="3">
+                 <property name="text">
+                  <string>By battery limit</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="14" column="0">
+                 <property name="text">
+                  <string>DOD_OnGrid(%)</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="14" column="2">
+                 <property name="text">
+                  <string>1 ~ 100</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="14" column="3">
+                 <property name="text">
+                  <string>100</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="15" column="0">
+                 <property name="text">
+                  <string>DOD_OffGrid(%)</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="15" column="2">
+                 <property name="text">
+                  <string>1 ~ 100</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="15" column="3">
+                 <property name="text">
+                  <string>90</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="16" column="0">
+                 <property name="text">
+                  <string>Generator turn on SOC</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="16" column="2">
+                 <property name="text">
+                  <string>1 ~ 100</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="16" column="3">
+                 <property name="text">
+                  <string>10</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="17" column="0">
+                 <property name="text">
+                  <string>Generator turn off SOC</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="17" column="2">
+                 <property name="text">
+                  <string>1 ~ 100</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="17" column="3">
+                 <property name="text">
+                  <string>95</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="18" column="0">
+                 <property name="text">
+                  <string>Maximum battery protection value(V)</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="18" column="2">
+                 <property name="text">
+                  <string>3550 ~ 3650</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="18" column="3">
+                 <property name="text">
+                  <string>3650</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="19" column="0">
+                 <property name="text">
+                  <string>DG ECP</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="19" column="2">
+                 <property name="text">
+                  <string>the maximum cannot exceed the DG capacity</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="19" column="3">
+                 <property name="text">
+                  <string>Set according to customer requirements</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="20" column="0">
+                 <property name="text">
+                  <string>DG FCP</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="20" column="2">
+                 <property name="text">
+                  <string>the maximum cannot exceed the DG capacity</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="20" column="3">
+                 <property name="text">
+                  <string>Set according to customer requirements</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="21" column="0">
+                 <property name="text">
+                  <string>Grid ECP</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="21" column="2">
+                 <property name="text">
+                  <string>the maximum cannot exceed the machine capacity</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="21" column="3">
+                 <property name="text">
+                  <string>Set according to customer requirements</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="22" column="0">
+                 <property name="text">
+                  <string>Grid FCP</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="22" column="2">
+                 <property name="text">
+                  <string>the maximum cannot exceed the machine capacity</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="22" column="3">
+                 <property name="text">
+                  <string>Set according to customer requirements</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="23" column="0">
+                 <property name="text">
+                  <string>Grid EDP</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="23" column="2">
+                 <property name="text">
+                  <string>the maximum cannot exceed the machine capacity</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="23" column="3">
+                 <property name="text">
+                  <string>Set according to customer requirements</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="24" column="0">
+                 <property name="text">
+                  <string>Grid FDP</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="24" column="2">
+                 <property name="text">
+                  <string>the maximum cannot exceed the machine capacity</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+                <item row="24" column="3">
+                 <property name="text">
+                  <string>Set according to customer requirements</string>
+                 </property>
+                 <property name="textAlignment">
+                  <set>AlignCenter</set>
+                 </property>
+                </item>
+               </widget>
               </item>
              </layout>
             </item>

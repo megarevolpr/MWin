@@ -122,8 +122,60 @@ public:
     QPushButton *OptMod_Grid_EDP;
     QPushButton *OptMod_Grid_FDP;
 
+    QPushButton *Mixde_Bat_Type_btn;
+    QPushButton *Mixde_Bat_Comm_btn;
+    QPushButton *Mixde_EMS_Comm_btn;
+    QPushButton *Mixde_Charge_SOC_btn;
+    QPushButton *Mixde_Discharge_SOC_btn;
+    QPushButton *Mixde_Energy_priority_btn;
+    QPushButton *Mixde_Anti_reflux_btn;
+    QPushButton *Mixde_ConstantPower_btn;
+    QPushButton *Mixde_Charge_upper_Limit;
+    QPushButton *Mixde_Charge_Limit_delta_btn;
+    QPushButton *Mixde_Disharge_Lower_Limit;
+    QPushButton *Mixde_Disharge_Limit_delta_btn;
+    QPushButton *Mixde_Charge_Current_btn;
+    QPushButton *Mixde_Discharge_Current_Limit_btn;
+    QPushButton *Mixde_DOD_OnGrid_btn;
+    QPushButton *Mixde_DOD_OffGrid_btn;
+    QPushButton *Mixde_Generator_turn_on_SOC_btn;
+    QPushButton *Mixde_Generator_turn_off_SOC_btn;
+    QPushButton *Mixde_Max_Bat_protection_btn;
+    QPushButton *Mixde_DG_ECP;
+    QPushButton *Mixde_DG_FCP;
+    QPushButton *Mixde_Grid_ECP;
+    QPushButton *Mixde_Grid_FCP;
+    QPushButton *Mixde_Grid_EDP;
+    QPushButton *Mixde_Grid_FDP;
 
-    QString str,str2,str3,str4,str5,str6,str7,str8;
+    QPushButton *Manual_Bat_Type_btn;
+    QPushButton *Manual_Bat_Comm_btn;
+    QPushButton *Manual_EMS_Comm_btn;
+    QPushButton *Manual_Charge_SOC_btn;
+    QPushButton *Manual_Discharge_SOC_btn;
+    QPushButton *Manual_Energy_priority_btn;
+    QPushButton *Manual_Anti_reflux_btn;
+    QPushButton *Manual_ConstantPower_btn;
+    QPushButton *Manual_Charge_upper_Limit;
+    QPushButton *Manual_Charge_Limit_delta_btn;
+    QPushButton *Manual_Disharge_Lower_Limit;
+    QPushButton *Manual_Disharge_Limit_delta_btn;
+    QPushButton *Manual_Charge_Current_btn;
+    QPushButton *Manual_Discharge_Current_Limit_btn;
+    QPushButton *Manual_DOD_OnGrid_btn;
+    QPushButton *Manual_DOD_OffGrid_btn;
+    QPushButton *Manual_Generator_turn_on_SOC_btn;
+    QPushButton *Manual_Generator_turn_off_SOC_btn;
+    QPushButton *Manual_Max_Bat_protection_btn;
+    QPushButton *Manual_DG_ECP;
+    QPushButton *Manual_DG_FCP;
+    QPushButton *Manual_Grid_ECP;
+    QPushButton *Manual_Grid_FCP;
+    QPushButton *Manual_Grid_EDP;
+    QPushButton *Manual_Grid_FDP;
+
+
+    QString str,str2,str3,str4,str5,str6,str7,str8,str9,str10;
 
     QString Bat_Type_str;
     QString Bat_Comm_str;
@@ -191,6 +243,7 @@ protected:
     void Init_BatTab_button(QTableWidget *myWidget);//初始化表格点击控件
     void Init_OptTab_button(QTableWidget *myWidget);//初始化表格点击控件
     void Init_MixdeTab_button(QTableWidget *myWidget);//初始化表格点击控件
+    void Init_ManualTab_button(QTableWidget *myWidget);//初始化表格点击控件
     virtual void resizeEvent(QResizeEvent *event)override;//调整控件大小
     void SetExplain(QTableWidget *myWidget);
     void setAppSize(int remainH);//窗口大小

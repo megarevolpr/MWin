@@ -18,6 +18,9 @@ void SpecificationData::add_SpecificationData(QPushButton *button, QTableWidget 
     // 将对话框内容作为值存储在 QMap 中
     QString specificationValue = QString("%1#newline#%2").arg(title, text);
 
+    //添加悬浮解释
+    button->setToolTip(title);
+
     // 插入键值对到 QMap 中
     specificationMap.insert(button, specificationValue);
 
@@ -45,7 +48,6 @@ SpecificationData::~SpecificationData()
     {
         QObject::disconnect(connection);
     }
-
     // 删除链表对象
     delete MyConnection;
 }

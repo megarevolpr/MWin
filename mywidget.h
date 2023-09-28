@@ -37,20 +37,16 @@
 #include <qtoolbar.h>
 #include <qtoolbutton.h>
 #include <qcombobox.h>
-#include <fcntl.h>
+
 #include <stdio.h>
-#include <QMenu>
-#include <QAction>
 #include <QObject>
 #include <QMessageBox>
 #include <QTimer>
 #include <QButtonGroup>
 #include <QTranslator>
 #include <QApplication>
-#include <QDebug>
 #include <QTableWidgetItem>
-
-#include "Specification/Specification.h"
+#include <QToolTip>
 #include "OperMode.h"
 #include "upgradetools.h"
 #include "FaultTableInterface.h"
@@ -92,13 +88,14 @@
 #define MixedMode_PAGE_NUM      4
 
 //系统高级设置 页码
-#define AdvancedTotal_PAGE      6
+#define AdvancedTotal_PAGE      7
 #define Advanced_PAGE1_NUM      5
 #define Advanced_PAGE2_NUM      6
 #define Advanced_PAGE3_NUM      7
 #define Device_PAGE_NUM         8
 #define DCACDebug_PAGE_NUM      9
 #define DCDCDebug_PAGE_NUM      10
+#define PORTDATA_PAGE_NUM       11
 
 //当前登录角色
 #define User                    0
@@ -508,7 +505,6 @@ public:
     QPushButton *Output_vol_level_explain;  //输出电压等级说明
     QPushButton *Converter_side_vol_level_explain;  //逆变电压等级说明
     QPushButton *Output_reactive_power_mode_explain;  //输出无功方式说明
-//    QPushButton *Grid_recovery_scheduling_explain;  //电网恢复调度开机说明
     QPushButton *Grid_recovery_time_explain;  //电网恢复并网时间说明
     QPushButton *Grid_connected_mode_of_Inv_explain;  //逆变器并网方式说明
 
@@ -701,6 +697,7 @@ private slots:
     void My_menuAction(int Index);
     void WordingMode(int Index);//系统模式
     void ModeSwitchExplain(int Index);//模式切换说明
+    void Home_Click(int Index);//主页点击
     void Return(int Index);//返回退出键
     void combox_Account_change(int Index);//下拉框选择登录用户
 
@@ -709,16 +706,9 @@ private slots:
     void BatteryData_clicked(int nid);//电池数据
     void SystemlnformationVer_clicked(int nid);//系统信息相关按钮的说明
 
-    void SystemParam_tbnt_released();
 
-    void on_Running_btn_clicked();//跳转变流器实时数据
-    void on_Grid_clicked();//跳转电网实时数据
     void on_RTD_module_1_clicked();
 
-    void on_Load_clicked();//跳转负载实时数据
-    void on_PV_clicked();//跳转PV实时数据
-    void on_Batt_btn_released();//跳转到电池信息
-    void on_Alarm_btn_clicker();//跳转实时告警页面
     void ChangeLanguage_btn_clicked();//切换语言
     void UpgradeInterface_clicked();//升级界面
 
@@ -754,15 +744,7 @@ private slots:
 
     void on_RTS_module_2_clicked();
 
-    void on_UI_Complete_Btn_clicked();
 
-    void on_Battery_PowerOn_clicked();
-
-    void on_Battery_PowerOff_clicked();
-
-    void on_radio_static_clicked();
-
-    void on_radio_dhcp_clicked();
 
 
     void on_Switch_on_Inv_clicked();
@@ -776,8 +758,6 @@ private slots:
     void on_search_btn_clicked();
 
     void on_TimeSeting_btn_clicked();
-
-    void on_Hybrid_mode_Button_clicked();
 
     void on_Converter_State_btn_clicked();
 
@@ -807,6 +787,22 @@ private slots:
 
     void on_Details_bt_clicked();
 
+    void on_Information_btn_clicked();
+
+    void on_PortNum_bt_clicked();
+
+    void on_Bengin_bt_clicked();
+
+    void on_comboBox_currentIndexChanged(int index);
+
+    void on_radio_static_2_clicked();
+
+    void on_radio_dhcp_2_clicked();
+
+    void on_PowerOn_bt_clicked();
+
+    void on_PowerOff_bt_clicked();
+
 private:
     Ui::MyWidget *ui;
     QStringList Mode_Str;//模式文本显示列表
@@ -818,6 +814,7 @@ private:
     QButtonGroup *SystemMode_Group;
     QButtonGroup *ExitReturn_Group;
     QButtonGroup *ModeSwitch_Group;
+    QButtonGroup *HomeClick_Group;
     int CurrentCheckMode;//当前模式
     int CurrentCheckModeExplain;//当前模式说明
     int System_Current_Page; //系统当前页

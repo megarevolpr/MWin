@@ -24,11 +24,9 @@ MyWidget::MyWidget(QWidget *parent) :
     ModeIntr_Current_Page   = 0;                //模式介绍页当前页码
     Account_Type = None;                        //当前登录角色 -- 上电默认未登录
 
-    QFont font("Courier New", 13);  // 创建一个宋体字体，字号为13
-    QApplication::setFont(font);    // 设置应用程序的全局字体为宋体
+
 
     ui->setupUi(this);
-//    setFixedSize(800,562);//固定窗口大小
     ui->UI_stackedWidget->setCurrentWidget(ui->UI_page);
     ui->stackedWidget->setCurrentWidget(ui->Host_page); //执行程序后，自动进入到主页
 
@@ -37,10 +35,532 @@ MyWidget::MyWidget(QWidget *parent) :
     MemoryAllocation(); //初始化内存空间
     UIPageInit();       //初始化界面
     LinkRelationship();//函数关联
+
+
+
 }
 
 MyWidget::~MyWidget()
 {
+    delete mode_expelain;
+    delete UpgradeInterface;
+    delete FaultTable;
+    delete ButtonToTable;
+    /****************QButtonGroup**************/
+    //菜单
+    delete Menu_Group;
+
+    //系统工作模式
+    delete SystemMode_Group;
+
+    delete ExitReturn_Group;
+
+    //工作模式 说明
+    delete ModeSwitch_Group;
+
+    delete HomeClick_Group;
+    /************************实时数据******************************/
+    //变流器
+    delete MPS_vol_AB_explain;
+    delete MPS_vol_BC_explain;
+    delete MPS_vol_CA_explain;
+    delete MPS_cur_A_explain;
+    delete MPS_cur_B_explain;
+    delete MPS_cur_C_explain;
+    delete MPS_IGBT_T_explain;
+    delete MPS_Env_T_explain;
+    delete MPS_Leakage_cur_explain;
+    delete PV_vol_explain;
+    delete PV_cur_explain;
+    delete PV_power_explain;
+    delete Batter_vol_explain;
+    delete Batter_cur_explain;
+    delete Batter_power_explain;
+    delete Bus_vol_explain;
+    delete Bus_cur_explain;
+    //光伏
+    delete PV_vol_H_explain;
+    delete PV_cur_H_explain;
+    delete PV_power_H_explain;
+    delete PV_vol_L_explain;
+    delete PV_cur_L_explain;
+    delete PV_power_L_explain;
+    delete PositiveInuslation_explain;
+    delete Bus_H_vol_add_explain;
+    delete Bus_H_vol_reduce_explain;
+    delete Bus_L_vol_add_explain;
+    delete Bus_L_vol_reduce_explain;
+    delete PV_IGBT_T_explain;
+    delete NegativeInuslation_explain;
+    delete Leakage_cur_explain;
+    //电网
+    delete Grid_vol_AB_explain          ;
+    delete Grid_vol_BC_explain          ;
+    delete Grid_vol_CA_explain          ;
+    delete Grid_cur_A_explain           ;
+    delete Grid_cur_B_explain           ;
+    delete Grid_cur_C_explain           ;
+    delete Grid_active_power_explain    ;
+    delete Grid_reactive_power_explain  ;
+    delete Grid_apparent_power_explain  ;
+    delete Grid_power_factor_explain    ;
+    delete Grid_Frequency_explain       ;
+    //负载
+    delete Load_vol_AB_explain          ;
+    delete Load_vol_BC_explain          ;
+    delete Load_vol_CA_explain          ;
+    delete Load_cur_A_explain           ;
+    delete Load_cur_B_explain           ;
+    delete Load_cur_C_explain           ;
+    delete Load_active_power_explain    ;
+    delete Load_reactive_power_explain  ;
+    delete Load_apparent_power_explain  ;
+    delete Load_power_factor_explain    ;
+    delete Load_Frequency_explain       ;
+
+    /*******************MPS状态***************************/
+
+    delete DC_input_Bre_explain				;
+    delete DC_Con_explain      				;
+    delete M_Bypass_Bre_explain				;
+    delete Output_Bre_explain  				;
+    delete Output_Con_explain  				;
+    delete Grid_Bre_explain    				;
+    delete DCACinsulation_detection_explain	;
+    delete DO1_explain         				;
+    delete DO2_explain         				;
+    delete DO3_explain         				;
+
+    delete DCAC_Conver_avail_explain;
+    delete DC_Soft_Start_explain	;
+    delete Converter_Status_explain	;
+    delete Reactive_P_Reg_explain 	;
+    delete LVRT_explain				;
+    delete DI1_explain				;
+    delete DI2_explain				;
+    delete DI3_explain				;
+    delete DI4_explain				;
+    delete DI5_explain				;
+    delete DI6_explain				;
+
+    delete Contator_Sta_Boost_explain  		;
+    delete Contator_Sta_Buck_explain   		;
+    delete Run_mode_explain            		;
+    delete DCDC_Converter_ava_explain  		;
+    delete Soft_Start_Sta_Boost_explain		;
+    delete Soft_Start_Sta_Buck_explain 		;
+    delete Converter_Status_V_explain  		;
+    delete ModeLock_explain            		;
+    delete DCDCinsulation_detection_explain	;
+
+    /**********************电池数据***************************/
+    delete pButton_BatteryData;
+
+
+    /***************************DC/AC参数**********************************/
+
+    delete Grid_connected_mode_explain              ;//PCS并离网方式说明
+    delete Constant_power_explain                   ;//恒功率说明
+    delete Work_mode_explain                        ;//工作模式说明
+    delete Output_power_factor_explain              ;//输出功率因素说明
+    delete Output_reactive_power_explain            ;//输出无功功率说明
+    delete Constant_current_explain                 ;//恒流说明
+    delete Constant_voltage_explain                 ;//恒压说明
+    delete Control_mode_explain                     ;//控制模式说明
+    delete Machine_number_explain                   ;//设备号说明
+    delete Parallel_explain                         ;//并机说明
+    delete G_Constant_power_explain                 ;
+    delete Grid_capacity_explain                    ;//电网容量说明
+    delete DG_Charging_power_limit                  ;//柴发充电功率限制
+
+    /***************************DC/AC参数************************/
+    delete Work_parttern_explain                    ;//DCDC工作模式说明
+    delete Boost_or_Buck_explain                    ;//升/降压说明
+    delete Voltage_level_explain                    ;//电压等级说明
+    delete Current_value_explain                    ;//电流值说明
+    delete OuterLoopControl_explain                 ;//
+    delete IV_curve_scanning_explain                ;//静脉扫描
+    delete IV_curve_scanning_low_explain            ;//低电压静脉扫描
+    delete IV_curve_scanning_high_explain           ;//高电压静脉扫描
+
+    /***************************电池设置 锂电****************************/
+
+    delete DOD_OnGrid_explain 						;//并网DOD说明
+    delete DOD_OffGrid_explain 						;//离网DOD说明
+    delete Charge_Volt_Upper_Limit_explain 			;//充电电压上限说明
+    delete Charge_Volt_upper_Limit_delta_explain 	;//充电电压上限回差说明
+    delete Disc_Volt_lower_Limit_explain 			;//放电电压限制说明
+    delete Discharge_Volt_upper_Limit_delta_explain ;//放电电压下限回差说明
+    delete Charge_Current_Limit_explain 			;//充电电流限制说明
+    delete Discharge_Current_Limit_explain 			;//放电电流限制说明
+    delete Gen_turn_off_SOC_explain 				;//柴发关闭SOC说明
+    delete Gen_turn_on_SOC_explain 					;//柴发开启SOC说明
+    delete ForceCharge_start_explain 				;//强充开启说明
+    delete ForceCharge_top_explain 					;// 强充结束说明
+    delete Relese_Charge_mark_explain 				;//释放禁充标志说明
+    delete Relese_discharge_mark_explain 			;//释放禁放标志说明
+    delete DOD_Protection_Release_SOC_explain 		;//DOD保护解除SOC
+    delete Cell_Voltage_max_explain                 ;//最高单体电压
+    delete Cell_Voltage_max_delta_explain           ;//最高单体电压回差
+    delete Cell_Voltage_min_explain                 ;//最低单体电压
+    delete Cell_Voltage_min_delta_explain           ;//最低单体电压回差
+    delete DCAC_cell_protect_explain                ;//DCAC单体保护电压
+    delete DCAC_cell_delta_explain                  ;//DCAC单体保护电压回差
+
+    /***************************电池设置 铅酸****************************/
+
+    delete Capacity_explain                    ;
+    delete Cell_number_2V_explain              ;
+    delete Bat_float_vol_explain               ;
+    delete Bat_filling_vol_explain             ;
+    delete Charge_limiting_value_explain       ;
+    delete Discharge_limiting_value_explain    ;
+    delete Generator_turn_off_SOC_B1_explain   ;
+    delete Generator_turn_on_SOC_A1_explain    ;
+    delete Grid_off_EOD_explain                ;
+    delete Grid_on_EOD_explain                 ;
+    delete DCACReferenceVoltage_explain        ;
+    delete Uniform_To_Flushing_current_explain ;
+    delete Flushing_To_Uniform_current_explain ;
+
+    /*******************************自动运行*******************************/
+    delete Check1_explain ; delete Check2_explain ; delete Check3_explain ;
+    delete Check4_explain ; delete Check5_explain ; delete Check6_explain ;
+    delete Check7_explain ; delete Check8_explain ; delete Check9_explain ;
+    delete Check10_explain; delete Check11_explain; delete Check12_explain ;
+    delete Check13_explain; delete Check14_explain; delete Check15_explain ;
+    delete Check16_explain; delete Check17_explain; delete Check18_explain ;
+    delete Check19_explain; delete Check20_explain;
+
+    delete Peak1_explain  ; delete Peak2_explain  ; delete Peak3_explain ;
+    delete Peak4_explain  ; delete Peak5_explain  ; delete Peak6_explain ;
+    delete Peak7_explain  ; delete Peak8_explain  ; delete Peak9_explain ;
+    delete Peak10_explain ; delete Peak11_explain ; delete Peak12_explain ;
+    delete Peak13_explain ; delete Peak14_explain ; delete Peak15_explain ;
+    delete Peak16_explain ; delete Peak17_explain ; delete Peak18_explain ;
+    delete Peak19_explain ; delete Peak20_explain ;
+
+    delete Start_T1_explain  ; delete Start_T2_explain  ; delete Start_T3_explain ;
+    delete Start_T4_explain  ; delete Start_T5_explain  ; delete Start_T6_explain ;
+    delete Start_T7_explain  ; delete Start_T8_explain  ; delete Start_T9_explain ;
+    delete Start_T10_explain ; delete Start_T11_explain ; delete Start_T12_explain ;
+    delete Start_T13_explain ; delete Start_T14_explain ; delete Start_T15_explain ;
+    delete Start_T16_explain ; delete Start_T17_explain ; delete Start_T18_explain ;
+    delete Start_T19_explain ; delete Start_T20_explain ;
+
+    delete End_T1_explain  ; delete End_T2_explain  ; delete End_T3_explain ;
+    delete End_T4_explain  ; delete End_T5_explain  ; delete End_T6_explain ;
+    delete End_T7_explain  ; delete End_T8_explain  ; delete End_T9_explain ;
+    delete End_T10_explain ; delete End_T11_explain ; delete End_T12_explain ;
+    delete End_T13_explain ; delete End_T14_explain ; delete End_T15_explain ;
+    delete End_T16_explain ; delete End_T17_explain ; delete End_T18_explain ;
+    delete End_T19_explain ; delete End_T20_explain ;
+
+    delete State1_explain  ; delete State2_explain  ; delete State3_explain ;
+    delete State4_explain  ; delete State5_explain  ; delete State6_explain ;
+    delete State7_explain  ; delete State8_explain  ; delete State9_explain ;
+    delete State10_explain ; delete State11_explain ; delete State12_explain ;
+    delete State13_explain ; delete State14_explain ; delete State15_explain ;
+    delete State16_explain ; delete State17_explain ; delete State18_explain ;
+    delete State19_explain ; delete State20_explain ;
+
+    delete Power1_explain  ; delete Power2_explain  ; delete Power3_explain ;
+    delete Power4_explain  ; delete Power5_explain  ; delete Power6_explain ;
+    delete Power7_explain  ; delete Power8_explain  ; delete Power9_explain ;
+    delete Power10_explain ; delete Power11_explain ; delete Power12_explain ;
+    delete Power13_explain ; delete Power14_explain ; delete Power15_explain ;
+    delete Power16_explain ; delete Power17_explain ; delete Power18_explain ;
+    delete Power19_explain ; delete Power20_explain ;
+
+    delete MixedModeButtonList;
+
+
+    /**********************系统消息*************************/
+
+    delete pButton_Version                 ;
+    delete MonitoringVersion_explain       ;
+    delete DCAC_SysProtocol_Version_explain;
+    delete DCAC_ConverterVersion_explain   ;
+    delete DCAC_CPLD_Version_explain       ;
+    delete DCDC_SysProtocol_Version_explain;
+    delete DCDC_ConverterVersion_explain   ;
+    delete DCDC_CPLD_Version_explain       ;
+    delete SN_explain                      ;
+
+    /***********************数据报表************************/
+    delete PV_power_generation_Day_explain     ;
+    delete PV_power_generation_Month_explain   ;
+    delete PV_power_generation_Year_explain    ;
+    delete PV_power_generation_Total_explain   ;
+    delete Load_Discharge_Day_explain          ;
+    delete Load_Discharge_Month_explain        ;
+    delete Load_Discharge_Year_explain         ;
+    delete Load_Discharge_Total_explain        ;
+    delete Battery_Charge_Day_explain          ;
+    delete Battery_Charge_Month_explain        ;
+    delete Battery_Charge_Year_explain         ;
+    delete Battery_Charge_Total_explain        ;
+    delete Battery_Discharge_Day_explain       ;
+    delete Battery_Discharge_Month_explain     ;
+    delete Battery_Discharge_Year_explain      ;
+    delete Battery_Discharge_Total_explain     ;
+    delete Grid_Charge_Day_explain             ;
+    delete Grid_Charge_Month_explain           ;
+    delete Grid_Charge_Year_explain            ;
+    delete Grid_Charge_Total_explain           ;
+    delete Grid_Discharge_Day_explain          ;
+    delete Grid_Discharge_Month_explain        ;
+    delete Grid_Discharge_Year_explain         ;
+    delete Grid_Discharge_Total_explain        ;
+
+    /***************************历史记录**********************************/
+    delete Grade_explain       ;
+    delete Grade2_explain      ;
+    delete Grade3_explain      ;
+    delete Grade4_explain      ;
+    delete Grade5_explain      ;
+    delete Grade6_explain      ;
+    delete Grade7_explain      ;
+    delete Grade8_explain      ;
+    delete Grade9_explain      ;
+    delete Grade10_explain     ;
+    delete Grade11_explain     ;
+    delete Grade12_explain     ;
+    delete Grade13_explain     ;
+    delete Grade14_explain     ;
+    delete Grade15_explain     ;
+    delete StartTime_explain   ;
+    delete StartTime2_explain  ;
+    delete StartTime3_explain  ;
+    delete StartTime4_explain  ;
+    delete StartTime5_explain  ;
+    delete StartTime6_explain  ;
+    delete StartTime7_explain  ;
+    delete StartTime8_explain  ;
+    delete StartTime9_explain  ;
+    delete StartTime10_explain ;
+    delete StartTime11_explain ;
+    delete StartTime12_explain ;
+    delete StartTime13_explain ;
+    delete StartTime14_explain ;
+    delete StartTime15_explain ;
+    delete EndTime_explain     ;
+    delete EndTime2_explain    ;
+    delete EndTime3_explain    ;
+    delete EndTime4_explain    ;
+    delete EndTime5_explain    ;
+    delete EndTime6_explain    ;
+    delete EndTime7_explain    ;
+    delete EndTime8_explain    ;
+    delete EndTime9_explain    ;
+    delete EndTime10_explain   ;
+    delete EndTime11_explain   ;
+    delete EndTime12_explain   ;
+    delete EndTime13_explain   ;
+    delete EndTime14_explain   ;
+    delete EndTime15_explain   ;
+    delete Describe_explain    ;
+    delete Describe2_explain   ;
+    delete Describe3_explain   ;
+    delete Describe4_explain   ;
+    delete Describe5_explain   ;
+    delete Describe6_explain   ;
+    delete Describe7_explain   ;
+    delete Describe8_explain   ;
+    delete Describe9_explain   ;
+    delete Describe10_explain  ;
+    delete Describe11_explain  ;
+    delete Describe12_explain  ;
+    delete Describe13_explain  ;
+    delete Describe14_explain  ;
+    delete Describe15_explain  ;
+
+    /***************************操作日志**********************************/
+    delete ModificationTime_explain    ;
+    delete ModificationTime2_explain   ;
+    delete ModificationTime3_explain   ;
+    delete ModificationTime4_explain   ;
+    delete ModificationTime5_explain   ;
+    delete ModificationTime6_explain   ;
+    delete ModificationTime9_explain   ;
+    delete ModificationTime11_explain  ;
+    delete ModificationTime12_explain  ;
+    delete EventRecord_explain         ;
+    delete EventRecord2_explain        ;
+    delete EventRecord3_explain        ;
+    delete EventRecord4_explain        ;
+    delete EventRecord5_explain        ;
+    delete EventRecord6_explain        ;
+    delete EventRecord9_explain        ;
+    delete EventRecord11_explain       ;
+    delete EventRecord12_explain       ;
+
+    /*************************功能设置*************************/
+    delete Battery_type_explain         ;  //电池类型说明
+    delete BMS_Comm_type_explain        ; //电池通信方式说明
+    delete Power_control_type_explain   ;    //功率控制类型说明
+    delete EMS_Comm_type_explain        ; //EMS通讯方式说明
+    delete Output_power_limit_explain   ;    //输出功率上限说明
+    delete BAT_manufacturers_explain    ; //电池厂家说明
+    delete Charge_SOC_explain           ;    //充电SOC说明
+    delete Disharge_SOC_explain         ;  //放电SOC说明
+    delete DG_capacity_explain          ;   //柴发容量说明
+    delete Energy_priority_explain      ;   //能量优先级说明
+    delete Host_Address_explain         ;  //主机地址说明
+    delete serial_port_1_explain        ; //串口1说明
+    delete serial_port_2_explain        ; //串口2说明
+    delete serial_port_3_explain        ; //串口3说明
+    delete serial_port_4_explain        ; //串口4说明
+    delete serial_port_5_explain        ; //串口5说明
+    delete Can_port_1_explain           ;    //CAN1说明
+    delete Can_port_2_explain           ;    //CAN2说明
+    delete ProtocolVersion_explain      ;   //协议版本说明
+    delete UserPassPort_explain         ;  //用户密码说明
+    delete RootPassport_explain         ;  //超级权限说明
+    delete Language_explain             ;  //语言说明
+    delete System_upgrade_explain       ;    //系统升级说明
+    delete Sounds_explain               ;    //声音说明
+    delete BmsComFaultTime_explain      ;
+    delete EMSComFaultModel_explain     ;
+    delete DG_ECP_explain               ;
+    delete DG_FCP_explain               ;
+    delete Grid_ECP_explain             ;
+    delete Grid_FCP_explain             ;
+    delete Grid_EDP_explain             ;
+    delete Grid_FDP_explain             ;
+    delete BatteryCapacityAlarm_explain ;
+
+    /***************************系统参数**************************/
+    delete Change_rate_of_power_explain                ;  //功率变化率说明
+    delete Grid_frequency_upper_limit_explain          ;  //电网频率变化范围上限说明
+    delete Grid_frequency_lower_limit_explain          ;  //电网频率变化范围下限说明
+    delete Vol_protection_upper_limit_explain          ;  //电压保护范围上限说明
+    delete Vol_protection_lower_limit_explain          ;  //电压保护范围下限说明
+    delete HVRT_enable_explain                         ;  //高穿使能说明
+    delete LVRT_enable_explain                         ;  //低穿使能说明
+    delete AFD_enable_explain                          ;  //孤岛使能说明
+    delete Insulation_detection_enable_explain         ;  //绝缘监测使能说明
+    delete PrimaryFreq_enable_explain                  ;  //一次调频使能说明
+    delete Inertia_enable_explain                      ;  //转动惯量使能说明
+    delete Machine_type_explain                        ;  //机器型号说明
+    delete Machine_capacity_explain                    ;  //机器容量说明
+    delete Output_Fre_grade_explain                    ;  //输出频率等级说明
+    delete Output_vol_level_explain                    ;  //输出电压等级说明
+    delete Converter_side_vol_level_explain            ;  //逆变电压等级说明
+    delete Output_reactive_power_mode_explain          ;  //输出无功方式说明
+    delete Grid_recovery_time_explain                  ;  //电网恢复并网时间说明
+    delete Grid_connected_mode_of_Inv_explain          ;  //逆变器并网方式说明
+
+    delete Pshedding_Freq_explain                      ;  //过频降载说明
+    delete QP_curve_explain                            ;  //QP曲线说明
+    delete CV_parallel_explain                         ;  //恒压并机说明
+    delete Module_Number_explain                       ;  //模块数量说明
+    delete Restore_factory_explain                     ;  //恢复出厂说明
+    delete BackupSetParameters_explain                 ;
+    delete RestoreBackupSetParameters_explain          ;
+    delete Clear_Data_explain                          ;  //清除数据说明
+    delete Machine_Type_explain                        ;  //机架说明
+    delete Module_max_explain                          ;  //最大模块数说明
+    delete Module_min_explain                          ;  //最小模块数说明
+    delete Insulation_detection_enable_DCDC_explain    ;  //DCDC绝缘监测使能说明
+    delete Insulation_detection_enable_DCAC_explain    ;  //DCAC绝缘监测使能说明
+    delete Grid_expansion_explain                      ;
+
+    /***************************外设**************************/
+    //输入干接点1说明
+    delete DI_1_Enable_explain ;
+    delete DI_1_NC_O_explain   ;
+    delete DI_1_Action_explain ;
+
+    //输入干接点2说明
+    delete DI_2_Enable_explain ;
+    delete DI_2_NC_O_explain   ;
+    delete DI_2_Action_explain ;
+
+    //输入干接点3说明
+    delete DI_3_Enable_explain ;
+    delete DI_3_NC_O_explain   ;
+    delete DI_3_Action_explain ;
+
+    //输入干接点4说明
+    delete DI_4_Enable_explain ;
+    delete DI_4_NC_O_explain   ;
+    delete DI_4_Action_explain ;
+
+    //输入干接点5说明
+    delete DI_5_Enable_explain ;
+    delete DI_5_NC_O_explain   ;
+    delete DI_5_Action_explain ;
+
+    //输入干接点6说明
+    delete DI_6_Enable_explain ;
+    delete DI_6_NC_O_explain   ;
+    delete DI_6_Action_explain ;
+
+    /***************************DCAC调试**************************/
+    delete Debug_variable_1_explain        ;  //调试变量1
+    delete Debug_variable_2_explain        ;  //调试变量2
+    delete Debug_variable_3_explain        ;  //调试变量3
+    delete Debug_variable_1_addr_explain   ;  //调试地址变量1
+    delete Debug_variable_2_addr_explain   ;  //调试地址变量2
+    delete Debug_variable_3_addr_explain   ;  //调试地址变量3
+    delete Debug_memery_var_1_explain      ;  //调试内存变量1
+    delete Debug_memery_var_2_explain      ;  //调试内存变量2
+    delete Debug_memery_var_3_explain      ;  //调试内存变量3
+    delete Input_Vol_revise_explain        ;  //输入电压系数
+    delete Input_Cur_revise_explain        ;  //输入电流系数
+
+    delete Voltage_1_5_revise_explain      ;  //1.5V电压系数
+    delete Bus_Vol_revise_explain          ;  //母线电压系数
+    delete Grid_A_AB_Vol_revise_explain    ;  //电网A相电压系数
+    delete Grid_B_BC_Vol_revise_explain    ;  //电网B相电压系数
+    delete Grid_C_CA_Vol_revise_explain    ;  //电网C相电压系数
+    delete Output_A_Cur_revise_explain     ;  //输出A相电流系数
+    delete Output_B_Cur_revise_explain     ;  //输出B相电流系数
+    delete Output_C_Cur_revise_explain     ;  //输出C相电流系数
+    delete INV_A_Vol_revise_explain        ;  //逆变A相电压系数
+    delete INV_B_Vol_revise_explain        ;  //逆变B相电压系数
+    delete INV_C_Vol_revise_explain        ;  //逆变C相电压系数
+    delete INV_A_ind_Cur_revise_explain    ;  //逆变A相电感电流系数
+    delete INV_B_ind_Cur_revise_explain    ;  //逆变B相电感电流系数
+    delete INV_C_ind_Cur_revise_explain    ;  //逆变C相电感电流系数
+
+    delete INV_On_off_flag_explain         ;  //开关机状态字
+    delete Logic_state_explain             ;  //逻辑状态字
+    delete INV_flag_explain                ;  //逆变状态字
+    delete Grid_flag_explain               ;  //电网状态字
+    delete Grid_protect_flag_explain       ;  //电网保护状态字
+    delete PV_flag_explain                 ;  //电池电压状态字
+    delete DC_bus_flag_explain             ;  //母线状态字
+    delete INT_main_flag_explain           ;  //中断状态字
+    delete parallel_signal_explain         ;  //并机状态字
+    delete Monitor_Order_explain           ;  //监控命令状态字
+    delete Bat_Infor_explain               ;  //电池信息字
+    delete Bat_State_explain               ;  //电池状态字
+
+    /***************************DCDC调试**************************/
+    delete DC_Debug_variable_1_explain       ;  //调试变量1
+    delete DC_Debug_variable_2_explain       ;  //调试变量2
+    delete DC_Debug_variable_3_explain       ;  //调试变量3
+    delete Current_ID_explain                ;   //当前模块号
+    delete DC_INT_main_flag_explain          ;  //中断状态字
+    delete DC_DC_bus_flag_explain            ;  //母线状态字
+    delete DC_PV_flag_explain                ;  //电池电压状态字
+
+    delete DC_Debug_variable_1_addr_explain  ;  //调试地址变量1
+    delete DC_Debug_variable_2_addr_explain  ;  //调试地址变量2
+    delete DC_Debug_variable_3_addr_explain  ;  //调试地址变量3
+    delete DCONV_logic_explain               ;  //
+    delete DC_INV_On_off_flag_explain        ;  //开关机状态字
+    delete DC_parallel_signal_explain        ;  //并机状态字
+
+    delete DC_Debug_memery_var_1_explain     ;  //调试内存变量1
+    delete DC_Debug_memery_var_2_explain     ;  //调试内存变量2
+    delete DC_Debug_memery_var_3_explain     ;  //调试内存变量3
+    delete DC_Monitor_Order_explain          ;  //监控命令状态字
+    delete DC_Bat_Infor_explain              ;  //电池信息字
+    delete DC_Bat_State_explain              ;  //电池状态字
+
     delete ui;
 }
 
@@ -118,6 +638,15 @@ void MyWidget::MemoryAllocation()
     ModeSwitch_Group->addButton(ui->OptimalIntro_bt,Mode_OPTIMAL_MODE_EXP);
     ModeSwitch_Group->addButton(ui->MixedModeIntro_bt,Mode_MIXED_MODE_EXP);
     ModeSwitch_Group->addButton(ui->ManualIntro_bt,Mode_MANUAL_EXP);
+
+    HomeClick_Group = new QButtonGroup();
+    HomeClick_Group->addButton(ui->PV_btn,0);
+    HomeClick_Group->addButton(ui->Bypass_Load_Btn,1);
+    HomeClick_Group->addButton(ui->Bypass_Running_btn,2);
+    HomeClick_Group->addButton(ui->Bypass_Batt_btn,3);
+    HomeClick_Group->addButton(ui->Bypass_Grid_btn,4);
+    HomeClick_Group->addButton(ui->Alarm_Button,5);
+
 
     /************************实时数据******************************/
     //变流器
@@ -657,7 +1186,6 @@ void MyWidget::MemoryAllocation()
     Output_vol_level_explain = new QPushButton;  //输出电压等级说明
     Converter_side_vol_level_explain = new QPushButton;  //逆变电压等级说明
     Output_reactive_power_mode_explain = new QPushButton;  //输出无功方式说明
-//    Grid_recovery_scheduling_explain = new QPushButton;  //电网恢复调度开机说明
     Grid_recovery_time_explain = new QPushButton;  //电网恢复并网时间说明
     Grid_connected_mode_of_Inv_explain = new QPushButton;  //逆变器并网方式说明
 
@@ -825,9 +1353,7 @@ void MyWidget::ChangeLanguage_btn_clicked()
     if(LanguageType == CHINESE)
     {
         LanguageType = ENGLISH;//如果当前是中文，则切英文
-        translator->load(":/Language/EN.qm");
-        ui->ChangeLanguage_btn->setText(tr("Change Language"));
-        qApp->installTranslator(translator);
+        qApp->removeTranslator(translator);
         ui->retranslateUi(this);
         ui->label_42->setStyleSheet("border-image: url(:/new_ui/UI/Battery_area3.png);");
 
@@ -836,7 +1362,6 @@ void MyWidget::ChangeLanguage_btn_clicked()
     {
         LanguageType = CHINESE;//如果当前是英文，则切中文
         translator->load(":/Language/CN.qm");
-        ui->ChangeLanguage_btn->setText(tr("切换语言"));
         qApp->installTranslator(translator);
         ui->retranslateUi(this);
         ui->label_42->setStyleSheet("border-image: url(:/new_ui/UI/Battery_area2.png);");
@@ -851,22 +1376,17 @@ void MyWidget::ChangeLanguage_btn_clicked()
     UIPageInit();       //初始化界面
 
     ReloadLabel();      //切换语言重新加载Lable
-    qDebug()<<"333";
 }
 
 //升级界面
 void MyWidget::UpgradeInterface_clicked()
 {
     int reply = QMessageBox::question(this, tr("Upgrade prompt")\
-                          ,tr("1. Make sure to press the EPO button before upgrading.\
-                              \n2. Before upgrading the DCDC, switch off the ship-type switch of the DCDC module."), tr("Return"),tr("OK"));
+                          ,tr("1. Make sure to press the EPO button before upgrading.\n"
+                              "2. Before upgrading the DCDC, switch off the ship-type switch of the DCDC module."), tr("Next"),tr("Cancel"));
     if (reply == 0)
     {
-        // 点击了"Cancel"按钮的处理逻辑
-        return ;
-
-    } else if (reply == 1) {
-        // 点击了"OK"按钮的处理逻辑
+        // 点击了"Next"按钮的处理逻辑
         if(UpgradeInterface->isHidden())
         {
             UpgradeInterface->show();
@@ -875,6 +1395,11 @@ void MyWidget::UpgradeInterface_clicked()
         {
             UpgradeInterface->hide();
         }
+    }
+    else if (reply == 1)
+    {
+        // 点击了"Cancel"按钮的处理逻辑
+        return ;
     }
 
 }
@@ -886,16 +1411,10 @@ void MyWidget::LinkRelationship()
     connect(Menu_Group, SIGNAL(buttonClicked(int)), this,SLOT(My_menuAction(int)));//菜单
     connect(SystemMode_Group, SIGNAL(buttonClicked(int)), this,SLOT(WordingMode(int)));//系统控制模式
     connect(ModeSwitch_Group, SIGNAL(buttonClicked(int)), this,SLOT(ModeSwitchExplain(int)));//切换 模式说明
+    connect(HomeClick_Group, SIGNAL(buttonClicked(int)), this,SLOT(Home_Click(int)));//主页点击
     connect(ExitReturn_Group, SIGNAL(buttonClicked(int)), this,SLOT(Return(int)));//返回函数
-//    connect(Work_mode_explain, SIGNAL(clicked(bool)), this, SLOT(Operational_mode_clicked())); //操作模式界面关联
     connect(System_upgrade_explain, SIGNAL(clicked(bool)), this, SLOT(UpgradeInterface_clicked())); //升级界面关联
 //    connect( ui->combox_Account, SIGNAL(currentIndexChanged(int)), this , SLOT(combox_Account_change(int)));//菜单页头像切换
-    connect(ui->Bypass_Batt_btn, SIGNAL(clicked()), this, SLOT(on_Batt_btn_released()));    //主页电池按钮跳转电池信息
-    connect(ui->Bypass_Running_btn, SIGNAL(clicked()), this, SLOT(on_Running_btn_clicked()));   //主页变流器按钮跳转变流器实时数据
-    connect(ui->Bypass_Grid_btn, SIGNAL(clicked()), this, SLOT(on_Grid_clicked()));    //主页电网按钮跳转电网实时数据
-    connect(ui->Bypass_Load_Btn, SIGNAL(clicked()), this, SLOT(on_Load_clicked()));    //主页负载按钮跳转负载实时数据
-    connect(ui->PV_btn, SIGNAL(clicked()), this, SLOT(on_PV_clicked()));    //主页PV按钮跳转PV实时数据
-    connect(ui->Alarm_Button, SIGNAL(clicked()), this,SLOT(on_Alarm_btn_clicker()));//跳转当前告警记录
     connect(pButton_BatteryData, SIGNAL(buttonClicked(int)), this,SLOT(BatteryData_clicked(int)));//电池数据
     connect(pButton_Version, SIGNAL(buttonClicked(int)), this,SLOT(SystemlnformationVer_clicked(int)));//系统信息相关按钮的说明
     connect(ui->ChangeLanguage_btn, SIGNAL(clicked(bool)), this, SLOT(ChangeLanguage_btn_clicked()));//切换语言点击槽
@@ -1142,7 +1661,7 @@ void MyWidget::ModuleState_Tab()
                     << tr("LVRT")<< tr("DI1")<< tr("DI2")<< tr("DI3")<< tr("DI4")<< tr("DI5")<< tr("DI6");
     QStringList State_Tablist3;
     State_Tablist3  << tr("DCDC Converter available")<< tr("Run mode")<< tr("Soft start status boost")<< tr("Soft start status buck")
-                    << tr("Contactor status boost")<< tr("Contactor status buck")<< tr("Converter status")<<tr("ModeLock")<<tr("DCDC insulation detection");
+                    << tr("Contactor status boost")<< tr("Contactor status buck")<< tr("Converter status")<<tr("DCDC insulation detection");
 
     ui->State_tableWidget->setColumnCount(6);
     ui->State_tableWidget->setRowCount(12);
@@ -1206,7 +1725,7 @@ void MyWidget::Information_tbnt_released()
     SystemMessages(ui->EquipmentInfor_tableWidget_2);//系统信息页说明
 }
 
-//数据报表
+//数据报表 表格初始化
 void MyWidget::Data_Report()
 {
     QStringList ReportData_Tablist;
@@ -1234,7 +1753,7 @@ void MyWidget::Data_Report()
     }
     DataReportMessages(ui->Report_tableWidget); //数据报表页说明
 }
-//历史记录
+//历史记录 表格初始化
 void MyWidget::History()
 {
     QStringList table_h_headers;
@@ -1275,7 +1794,7 @@ void MyWidget::History()
 
     HistoryRecord(ui->Historicalfailure_tableWidget);   //历史记录页说明
 }
-//操作日志
+//操作日志 表格初始化
 void MyWidget::OperationLog()
 {
     QStringList Ope_headers;
@@ -1302,14 +1821,37 @@ void MyWidget::OperationLog()
     OperationLog_tab(ui->Operation_tableWidget);    //操作日志页说明
 }
 
-//新界面工作模式初始化
+//新界面工作模式 初始化
 void MyWidget::WorkingModeInit()
 {
     Mode_Str.clear();
     Mode_title_Str.clear();
-    Mode_Str<<tr("Battery Area")<<tr("Self-issuance and self-use")<<tr("Battery Priority")<<tr("Optimal model")<<tr("Mixed mode")<<tr("Manual");
+    Mode_Str<<tr("Battery Area")<<tr("Self-issuance and self-use")<<tr("Battery Priority")<<tr("Optimal mode")<<tr("Mixed mode")<<tr("Manual");
     Mode_title_Str<<tr("DC/AC Parameters")<<tr("DC/DC Parameters")<<tr("Lithium Battery Setting Parameters")<<tr("Lead-acid Battery Setting Parameters")<<tr("Time Period Setting")<<tr("Function Sentting 1")<<tr("Function Sentting 2")\
-                    <<tr("System Senttings")<<tr("Device")<<tr("DC/AC Debug")<<tr("DC/DC Debug");
+                 <<tr("System Senttings")<<tr("Device")<<tr("DC/AC Debug")<<tr("DC/DC Debug")<<tr("Port data");
+
+    ui->Information_btn->setToolTip(QString(tr("Working mode introduction")));
+    ui->Save_bt->setToolTip(QString(tr("Apply this mode and exit the parameter settings page")));
+    ui->Exit_bt->setToolTip(QString(tr("Eexit the parameter settings page")));
+    ui->SetNext_bt->setToolTip(QString(tr("Next page")));
+    ui->SetPrevious_bt->setToolTip(QString(tr("Last page")));
+    ui->UI_captye->setToolTip(QString(tr("Machine typs")));
+    ui->TimeSeting_btn->setToolTip(QString(tr("Current system time")));
+    ui->Alarm_Button->setToolTip(QString(tr("Alarm severity warning")));
+    ui->ChangeLanguage_btn->setToolTip(QString(tr("Chinese and English switching")));
+    ui->UI_MenuBtn->setToolTip(QString(tr("Open menu")));
+    ui->Login_bt->setToolTip(QString(tr("User login")));
+    ui->Converter_State_btn->setToolTip(QString(tr("Converter status")));
+    ui->DCDC_Module_State_btn->setToolTip(QString(tr("DCDC module state")));
+    ui->IntrBack_bt->setToolTip(QString(tr("Return to previous page")));
+    ui->Details_bt->setToolTip(QString(tr("View the detailed running logic and related parameters of the working mode")));
+    ui->PV_btn->setToolTip(QString(tr("PV")));
+    ui->Bypass_Load_Btn->setToolTip(QString(tr("Load")));
+    ui->Bypass_Running_btn->setToolTip(QString(tr("Converter")));
+    ui->Bypass_Batt_btn->setToolTip(QString(tr("Battery")));
+    ui->Bypass_Grid_btn->setToolTip(QString(tr("Grid")));
+    ui->PortNum_bt->setToolTip(QString(tr("Set the port to listen on")));
+    ui->Bengin_bt->setToolTip(QString(tr("Start/Stop")));
 
     for(int i=0;i<11;i++)
     {
@@ -1420,6 +1962,7 @@ void MyWidget::DisabldAllBasisButton()
         EnableTableButton(ui->DCAC_Tab,0,1);
         EnableTableButton(ui->DCAC_Tab,2,1);
         EnableTableButton(ui->DCAC_Tab,3,1);
+        EnableTableButton(ui->DCAC_Tab,4,1);
         EnableTableButton(ui->DCAC_Tab,5,1);
         EnableTableButton(ui->DCAC_Tab,6,1);
         EnableTableButton(ui->DCAC_Tab,0,5);
@@ -1435,7 +1978,9 @@ void MyWidget::DisabldAllBasisButton()
         EnableTableButton(ui->DCAC_Tab,1,1);
         EnableTableButton(ui->DCAC_Tab,2,1);
         EnableTableButton(ui->DCAC_Tab,3,1);
+        EnableTableButton(ui->DCAC_Tab,4,1);
         EnableTableButton(ui->DCAC_Tab,5,1);
+        EnableTableButton(ui->DCAC_Tab,6,1);
         EnableTableButton(ui->DCAC_Tab,0,5);
         EnableTableButton(ui->DCAC_Tab,1,5);
         EnableTableButton(ui->DCAC_Tab,2,5);
@@ -1447,6 +1992,7 @@ void MyWidget::DisabldAllBasisButton()
     {
         EnableTableButton(ui->DCAC_Tab,0,1);
         EnableTableButton(ui->DCAC_Tab,1,1);
+        EnableTableButton(ui->DCAC_Tab,4,1);
         EnableTableButton(ui->DCAC_Tab,5,1);
         EnableTableButton(ui->DCAC_Tab,6,1);
         EnableTableButton(ui->DCAC_Tab,7,1);
@@ -1471,9 +2017,9 @@ void MyWidget::DisabldAllBasisButton()
         EnableTableButton(ui->DCAC_Tab,1,1);
         EnableTableButton(ui->DCAC_Tab,2,1);
         EnableTableButton(ui->DCAC_Tab,3,1);
+        EnableTableButton(ui->DCAC_Tab,4,1);
         EnableTableButton(ui->DCAC_Tab,5,1);
         EnableTableButton(ui->DCAC_Tab,6,1);
-        EnableTableButton(ui->DCAC_Tab,7,1);
         EnableTableButton(ui->DCAC_Tab,0,5);
         EnableTableButton(ui->DCAC_Tab,1,5);
         EnableTableButton(ui->DCAC_Tab,2,5);
@@ -1485,6 +2031,7 @@ void MyWidget::DisabldAllBasisButton()
     {
         EnableTableButton(ui->DCAC_Tab,0,1);
         EnableTableButton(ui->DCAC_Tab,1,1);
+        EnableTableButton(ui->DCAC_Tab,4,1);
         EnableTableButton(ui->DCAC_Tab,5,1);
         EnableTableButton(ui->DCAC_Tab,0,5);
         EnableTableButton(ui->DCAC_Tab,1,5);
@@ -1579,7 +2126,6 @@ void MyWidget::onTimerOut()
 void MyWidget::WordingMode(int Index)
 {
     CurrentCheckMode = Index;
-    qDebug()<<"CurrentCheckMode"<<Index;
     DisabldAllBasisButton();
     if(System_Current_Page<Lead_PAGE_NUM)
     {
@@ -1657,13 +2203,74 @@ void MyWidget::ModeSwitchExplain(int Index)
         break;
     }
 }
+//主页点击
+void MyWidget::Home_Click(int Index)
+{
+    switch (Index) {
+    case 0:
+        {
+            ui->stackedWidget->setCurrentWidget(ui->Status_page);
+            ui->Run_tabWidget->setCurrentWidget(ui->RT_Data_page);
+            ui->RT_Dtata_StackedWidget->setCurrentWidget(ui->RTD_Bypass_N_page);
+            ui->MPS_Data_stw->setCurrentWidget(ui->DC_page);
+            ui->RTD_DC->click();
+        }
+        break;
+    case 1:
+        {
+            ui->stackedWidget->setCurrentWidget(ui->Status_page);
+            ui->Run_tabWidget->setCurrentWidget(ui->RT_Data_page);
+            ui->RT_Dtata_StackedWidget->setCurrentWidget(ui->RTD_Bypass_N_page);
+            ui->MPS_Data_stw->setCurrentWidget(ui->Load_page);
+            ui->RTD_Load->click();
+        }
+        break;
+    case 2:
+        {
+            ui->stackedWidget->setCurrentWidget(ui->Status_page);
+            ui->Run_tabWidget->setCurrentWidget(ui->RT_Data_page);
+            ui->RT_Dtata_StackedWidget->setCurrentWidget(ui->RTD_Bypass_N_page);
+            ui->MPS_Data_stw->setCurrentWidget(ui->Machine_page);
+            ui->RTD_Converter->click();
+        }
+        break;
+    case 3:
+        {
+            ui->stackedWidget->setCurrentWidget(ui->Status_page);
+            ui->Run_tabWidget->setCurrentWidget(ui->BatteryData_page);
+            ui->BAT_stackedWidget->setCurrentWidget(ui->BAT_Lithium_page);
+        }
+        break;
+    case 4:
+        {
+            ui->stackedWidget->setCurrentWidget(ui->Status_page);
+            ui->Run_tabWidget->setCurrentWidget(ui->RT_Data_page);
+            ui->RT_Dtata_StackedWidget->setCurrentWidget(ui->RTD_Bypass_N_page);
+            ui->MPS_Data_stw->setCurrentWidget(ui->Grid_page);
+            ui->RTD_Grid->click();
+        }
+        break;
+    case 5:
+        {
+            ui->stackedWidget->setCurrentWidget(ui->Status_page);
+            ui->Run_tabWidget->setCurrentWidget(ui->RTAlarm_page);
+            QMessageBox::question(this,tr("Alarm icon"), \
+                                  tr("Alarm icon: It is not displayed when there is no alarm. "
+                                     "When there is a minor alarm, a yellow icon is displayed. "
+                                     "When there is a fault alarm, a red icon is displayed."), tr("OK"));
+        }
+        break;
+    default:
+        break;
+    }
+}
 //返回退出键
 void MyWidget::Return(int Index)
 {
-    QString EnableMode("QToolButton::hover{color: rgb(0, 0, 0);border:2px solid rgb(27, 120, 205);background-color: rgb(27, 120, 205);}\
-                       QToolButton::!hover{color: rgb(255, 255, 255);border:2px solid rgb(27, 120, 205);background-color: rgb(27, 120, 205);}");
-    QString DisableMode("QToolButton::hover{color: rgb(0, 0, 0);border:2px solid rgb(85, 170, 255);background-color: rgb(85, 170, 255);}\
-                          QToolButton::!hover{color: rgb(255, 255, 255);border:2px solid rgb(85, 170, 255);background-color: rgb(85, 170, 255);}");
+    QString EnableMode("QToolButton::hover{color: rgb(0, 0, 0);border:2px solid rgb(27, 120, 205);background-color: rgb(27, 120, 205);border-radius:15px;}\
+                       QToolButton::!hover{color: rgb(255, 255, 255);border:2px solid rgb(27, 120, 205);background-color: rgb(27, 120, 205);border-radius:15px;}");
+    QString DisableMode("QToolButton::hover{color: rgb(0, 0, 0);border:2px solid rgb(85, 170, 255);background-color: rgb(85, 170, 255);border-radius:15px;}\
+                          QToolButton::!hover{color: rgb(255, 255, 255);border:2px solid rgb(85, 170, 255);background-color: rgb(85, 170, 255);border-radius:15px;}");
     switch (Index)
     {
         case 0:
@@ -1704,8 +2311,6 @@ void MyWidget::My_menuAction(int Index)
             {
                 ui->UI_stackedWidget->setCurrentWidget(ui->UI_page);
                 ui->stackedWidget->setCurrentWidget(ui->Host_page);
-                ui->RTState_stackedWidget->setCurrentWidget(ui->RTState_page);
-                ui->BAT_stackedWidget->setCurrentWidget(ui->BAT_Lithium_page);
             }
             break;
         case RTDATAPAGE:
@@ -1880,143 +2485,7 @@ void MyWidget::SystemlnformationVer_clicked(int nid)
             break;
     }
 }
-/*************绘制高级设置界面**************/
-void MyWidget::SystemParam_tbnt_released()
-{
-    ui->UI_Parameter_Tab->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
-    ui->UI_Parameter_Tab->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
-    ui->UI_Parameter_Tab->verticalHeader()->setMinimumSectionSize(50);//设置行高最小值
 
-    ui->UI_SystemParameter_Tab->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
-    ui->UI_SystemParameter_Tab->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
-    ui->UI_SystemParameter_Tab->verticalHeader()->setMinimumSectionSize(50);//设置行高最小值
-
-    ui->ExternalDevice_tW->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
-    ui->ExternalDevice_tW->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
-    ui->ExternalDevice_tW->verticalHeader()->setMinimumSectionSize(50);//设置行高最小值
-
-    ui->UI_Debug_Tab->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
-    ui->UI_Debug_Tab->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
-    ui->UI_Debug_Tab->verticalHeader()->setMinimumSectionSize(50);//设置行高最小值
-
-    ui->UI_DCDC_Debug_tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
-    ui->UI_DCDC_Debug_tableWidget->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
-    ui->UI_DCDC_Debug_tableWidget->verticalHeader()->setMinimumSectionSize(50);//设置行高最小值
-    /*for(int i=0; i<13;i++)//调整功能设置、系统参数设置的列宽行高
-    {
-        ui->UI_Parameter_Tab->setColumnWidth(i,170);
-        ui->UI_Parameter_Tab->setRowHeight(i++,50);
-
-
-        ui->UI_Parameter_Tab->setColumnWidth(i,90);
-        ui->UI_Parameter_Tab->setRowHeight(i++,50);
-
-
-        ui->UI_Parameter_Tab->setColumnWidth(i,55);
-        ui->UI_Parameter_Tab->setRowHeight(i,50);
-
-    }
-    for(int i=0; i<13;i++)
-    {
-        ui->UI_SystemParameter_Tab->setColumnWidth(i,160);
-        ui->UI_SystemParameter_Tab->setRowHeight(i++,50);
-        ui->UI_SystemParameter_Tab->setColumnWidth(i,115);
-        ui->UI_SystemParameter_Tab->setRowHeight(i++,50);
-        ui->UI_SystemParameter_Tab->setColumnWidth(i,42);
-        ui->UI_SystemParameter_Tab->setRowHeight(i,50);
-    }
-    for(int i=0;i<9;i++)//调整 外设 的列宽行高
-    {
-        ui->ExternalDevice_tW->setColumnWidth(i,200);
-        ui->ExternalDevice_tW->setRowHeight(i,50);
-        if(i==3){
-            ui->ExternalDevice_tW->setColumnWidth(i,280);
-            ui->ExternalDevice_tW->setRowHeight(i,50);
-        }
-    }
-    ui->ExternalDevice_tW->horizontalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
-    ui->ExternalDevice_tW->verticalHeader()->setStyleSheet("QHeaderView::section{background:skyblue;}");
-    ui->ExternalDevice_tW->setStyleSheet("selection-background-color:lightblue;");
-
-    for(int i=0; i<14;i++)//调整 DCAC调试 的列宽行高
-    {
-        if(i%2==0)
-        {
-            ui->UI_Debug_Tab->setColumnWidth(i,175);
-            ui->UI_Debug_Tab->setRowHeight(i,50);
-        }
-        else
-        {
-            ui->UI_Debug_Tab->setColumnWidth(i,140);
-            ui->UI_Debug_Tab->setRowHeight(i,50);
-        }
-    }
-    for (int i=0; i<11; i++)
-    {
-            ui->UI_Debug_Tab->item (i,0)->setTextAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
-            ui->UI_Debug_Tab->item (i,2)->setTextAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
-            ui->UI_Debug_Tab->item (i,4)->setTextAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
-    }
-    for(int i=0; i<7;i++)//调整 DCDC调试 的列宽行高
-    {
-        if(i%2==0)
-        {
-            ui->UI_DCDC_Debug_tableWidget->setColumnWidth(i,180);
-            ui->UI_DCDC_Debug_tableWidget->setRowHeight(i,50);
-        }
-        else
-        {
-            ui->UI_DCDC_Debug_tableWidget->setColumnWidth(i,140);
-            ui->UI_DCDC_Debug_tableWidget->setRowHeight(i,50);
-        }
-    }*/
-
-    DCAC_Debugg(ui->UI_Debug_Tab);  //DCAC调试页说明
-    DCDC_Debugg(ui->UI_DCDC_Debug_tableWidget); //DCDC调试页说明
-}
-
-void MyWidget::on_Running_btn_clicked()  //显示变流器实时数据
-{
-    ui->stackedWidget->setCurrentWidget(ui->Status_page);
-    ui->Run_tabWidget->setCurrentWidget(ui->RT_Data_page);
-    ui->RT_Dtata_StackedWidget->setCurrentWidget(ui->RTD_Bypass_N_page);
-    ui->MPS_Data_stw->setCurrentWidget(ui->Machine_page);
-    ui->RTD_Converter->click();
-}
-
-void MyWidget::on_Grid_clicked() //显示电网端实时数据
-{
-    ui->stackedWidget->setCurrentWidget(ui->Status_page);
-    ui->Run_tabWidget->setCurrentWidget(ui->RT_Data_page);
-    ui->RT_Dtata_StackedWidget->setCurrentWidget(ui->RTD_Bypass_N_page);
-    ui->MPS_Data_stw->setCurrentWidget(ui->Grid_page);
-    ui->RTD_Grid->click();
-}
-
-void MyWidget::on_Load_clicked() //显示负载端实时数据
-{
-    ui->stackedWidget->setCurrentWidget(ui->Status_page);
-    ui->Run_tabWidget->setCurrentWidget(ui->RT_Data_page);
-    ui->RT_Dtata_StackedWidget->setCurrentWidget(ui->RTD_Bypass_N_page);
-    ui->MPS_Data_stw->setCurrentWidget(ui->Load_page);
-    ui->RTD_Load->click();
-}
-
-void MyWidget::on_PV_clicked()//显示PV端实时数据
-{
-    ui->stackedWidget->setCurrentWidget(ui->Status_page);
-    ui->Run_tabWidget->setCurrentWidget(ui->RT_Data_page);
-    ui->RT_Dtata_StackedWidget->setCurrentWidget(ui->RTD_Bypass_N_page);
-    ui->MPS_Data_stw->setCurrentWidget(ui->DC_page);
-    ui->RTD_DC->click();
-}
-
-void MyWidget::on_Batt_btn_released()//显示电池信息
-{
-    ui->stackedWidget->setCurrentWidget(ui->Status_page);
-    ui->Run_tabWidget->setCurrentWidget(ui->BatteryData_page);
-    ui->BAT_stackedWidget->setCurrentWidget(ui->BAT_Lithium_page);
-}
 
 void MyWidget::on_RTD_Converter_clicked()
 {
@@ -2042,12 +2511,6 @@ void MyWidget::on_RTD_Load_clicked()//显示负载的实时数据
     ui->MPS_Data_stw->setCurrentWidget(ui->Load_page);
 }
 
-void MyWidget::on_Alarm_btn_clicker()//显示告警信息
-{
-    ui->stackedWidget->setCurrentWidget(ui->Status_page);
-    ui->Run_tabWidget->setCurrentWidget(ui->RTAlarm_page);
-    QMessageBox::question(this,tr("Alarm icon"), tr("Alarm icon: It is not displayed when there is no alarm. When there is a minor alarm, a yellow icon is displayed. When there is a fault alarm, a red icon is displayed."), tr("OK"));
-}
 
 //MPS数据 绘制button
 void MyWidget::MPS_Data(QTableWidget *myTable)
@@ -2341,7 +2804,7 @@ void MyWidget::MPSState(QTableWidget *myTable)
 
     ButtonToTable->add_SpecificationData(DCACinsulation_detection_explain, myTable, line++, column, \
                                          tr("Disable"), tr("DCAC insulation detection"), \
-                                         tr("."));
+                                         tr("DCAC insulation detection:Enable,Disable."));
 
     ButtonToTable->add_SpecificationData(DO1_explain, myTable, line++, column, \
                                                 tr("Disable"), tr("Start generator signal"), \
@@ -2430,15 +2893,10 @@ void MyWidget::MPSState(QTableWidget *myTable)
                                                 tr("Turn off"), tr("Converter Status"), \
                                                 tr("DCDC module operation modes states: OFF, Standby, Constant Voltage, Constant Current, MPPT."));
 
-    ButtonToTable->add_SpecificationData(ModeLock_explain, myTable, line++, column, \
-                                                tr("OFF"), tr("ModeLock"), \
-                                                tr("."));
-
     ButtonToTable->add_SpecificationData(DCDCinsulation_detection_explain, myTable, line++, column, \
                                                 tr("Disable"), tr("DCDC insulation detection"), \
-                                                tr("."));
+                                                tr("DCDC insulation detection:Enable,Disable."));
 }
-
 //系统消息 绘制button
 void MyWidget::SystemMessages(QTableWidget *myTable)
 {
@@ -3052,13 +3510,13 @@ void MyWidget::SetDCACToTable(QTableWidget *myTable)
 
     //电网扩容使能
     ButtonToTable->add_SpecificationData(Grid_expansion_explain, myTable, line++, column, \
-                                         tr("Disable"), tr("Grid expansion"), \
+                                         tr("Enable"), tr("Grid expansion"), \
                                          tr("Grid Expansion: Enable, Disable. Enabling activates the Grid Expansion mode."));
 
     //电网容量
     ButtonToTable->add_SpecificationData(Grid_capacity_explain, myTable, line++, column, \
                                          tr("30"), tr("Grid capacity(kW)"), \
-                                         tr("Grid Capacity: The maximum power capacity connected to the grid in grid expansion mode."));
+                                         tr("Grid Capacity: In the grid expansion mode, the maximum power limit is imposed on the grid side ."));
 
     //柴发充电功率限制
     ButtonToTable->add_SpecificationData(DG_Charging_power_limit, myTable, line++, column, \
@@ -3070,21 +3528,19 @@ void MyWidget::SetDCACToTable(QTableWidget *myTable)
                                              "200", tr("DG capacity"), \
                                              tr("Diesel Generator: Rated Power of the Diesel Generator."));
 
-    //充电SOC
+    //开始充电SOC
     ButtonToTable->add_SpecificationData(Charge_SOC_explain, myTable, line++, column, \
-                                         "20", tr("Charge SOC"), \
-                                         tr("Charging SOC:"
-                                            "\n (1) At the self-use mode, when the battery SOC is lower than the charging SOC, the converter maintains the battery SOC at this value."
+                                         "20", tr("Start charging SOC"), \
+                                         tr("Start charging SOC:"
+                                            "\n (1) At the self-use mode, when the battery SOC is lower than the\"Start charging SOC\", the converter maintains the battery SOC at this value."
                                             "\n (2) At the battery priority mode, the ECP or FCP state is determined based on the current SOC."
-                                            "\n (3) At the optimal mode, when the battery SOC is lower than the charging SOC, the converter enters the FCP state and starts charging the battery. "
-                                            "When the current SOC is greater than or equal to the discharge SOC, the converter exits the FCP state and enters the ECP state."));
+                                            "\n (3) At the optimal mode, when the battery SOC is lower than the \"Start charging SOC\", the converter enters the FCP state and starts charging the battery. "
+                                            "When the current SOC is greater than or equal to the \"Stop charging SOC\", the converter exits the FCP state and enters the ECP state."));
 
-    //放电SOC
+    //停止充电SOC
     ButtonToTable->add_SpecificationData(Disharge_SOC_explain, myTable, line++, column, \
-                                         "50", tr("Disharge SOC"), \
-                                         tr("Discharge SOC: When the SOC is greater than the discharge SOC, the FCP state is released."));
-
-
+                                         "50", tr("Stop charging SOC"), \
+                                         tr("Stop charging SOC: When the SOC is greater than the \"Stop charging SOC\", the FCP state is released."));
 
 
     line = 0;
@@ -3131,7 +3587,7 @@ void MyWidget::SetDCACToTable(QTableWidget *myTable)
                                          tr("Auto"), tr("BAT protocol"), \
                                          tr("Battery Protocol: Parse the messages sent by BMS based on the selected battery protocol."
                                             "\nCurrently supported battery manufacturer protocols include:"
-                                            "MEGA, LISHEN, GREATPOWER, GOLD, BMSER, LANLI, SLANPOWER, PYLON, CATL, SUOYING, XINGWANGDA, KUBO, GOLD_V2, TOGOOD, PGS, WOBOYUAN, KGOOER, LD, PYLON_L, VILION, TUOPU,JDI,BGS,HUASU,ALPHA."
+                                            "MEGA, LISHEN, GREATPOWER, GOLD, BMSER, LANLI, SLANPOWER, PYLON, CATL, SUOYING, XINGWANGDA, KUBO, GOLD_V2, TOGOOD, PGS, WOBOYUAN, KGOOER, LD, PYLON_L, VILION, TUOPU,JDI,BGS,HUASU,ALPHA,SHIDING."
                                             "\nSelect AUTO to automatically detect the battery manufacturer protocol."));
 
     //EMS通信方式
@@ -3208,30 +3664,23 @@ void MyWidget::SetDCDCToTable(QTableWidget *myTable)
     //外环集中控制
     ButtonToTable->add_SpecificationData(OuterLoopControl_explain, myTable, line++, column, \
                                          tr("Disable"), tr("Outer Ring Centralized Control"), \
-                                         tr("Outer Ring Centralized Control: Enable, Disable."
-                                            "the photovoltaic energy storage system achieves efficient operation and optimal performance through centralized control and optimization of external environmental factors."));
+                                         tr("Outer Ring Centralized Control：Multiple DCDC modules, especially when the DCDC module power fluctuation is significant."));
     line = 0;
     column = 5;
     //IV曲线扫描
     ButtonToTable->add_SpecificationData(IV_curve_scanning_explain, myTable, line++, column, \
                                          tr("Disable"), tr("IV curve scanning"), \
-                                         tr("IV Curve Scanning: Enable, Disable.\n"
-                                            "IV curve scanning is a method used to test and evaluate the performance of photovoltaic cells or modules by obtaining the output current at different voltages."));
+                                         tr("It is used for internal debugging only."));
 
     //IV曲线扫描低电压
     ButtonToTable->add_SpecificationData(IV_curve_scanning_low_explain, myTable, line++, column, \
                                          tr("0"), tr("IV curve scanning low voltage"), \
-                                         tr("IV curve scanning high voltage: "
-                                            "By applying a higher voltage to the output end of a photovoltaic module, "
-                                            "its performance is measured to identify potential issues, such as component or array faults."));
+                                         tr("It is used for internal debugging only."));
 
     //IV曲线扫描高电压
     ButtonToTable->add_SpecificationData(IV_curve_scanning_high_explain, myTable, line++, column, \
                                          tr("0"), tr("IV curve scanning high voltage"), \
-                                         tr("IV curve scanning low voltage: "
-                                            "Obtaining comprehensive performance data of photovoltaic modules at various voltages to provide key indicators for evaluating component performance, "
-                                            "such as energy conversion efficiency and stability."));
-
+                                         tr("It is used for internal debugging only."));
 
 
 
@@ -3251,8 +3700,8 @@ void MyWidget::SetLithiumToTable(QTableWidget *myTable)
                                     tr("Grid-off DOD, allowable depth of discharge in grid-off mode."));
     //DOD保护解除
     ButtonToTable->add_SpecificationData(DOD_Protection_Release_SOC_explain, myTable, line++, column, \
-                                    "50", tr("DOD Protection Release SOC"), \
-                                    tr("DOD Protection Release SOC: When the DOD protection is activated, the current SOC reaches the set SOC value, and the DOD protection is released, allowing the battery to continue discharging."));
+                                    "50", tr("Off-Grid DOD Protection Release SOC"), \
+                                    tr("Off-Grid DOD Protection Release SOC: After triggering off-grid DOD protection, the off-grid DOD protection can only be lifted when the battery's SOC reaches this set value."));
 
 
     //充电电压上限说明
@@ -3533,8 +3982,7 @@ void MyWidget::SetAdvancedSetup1ToTable(QTableWidget *myTable)
     //能量优先级说明
     ButtonToTable->add_SpecificationData(Energy_priority_explain, myTable, line++, column, \
                                         tr("Bat>Grid"), tr("Energy priority"), \
-                                        tr("Energy Priority: In the self-use mode,when selecting battery priority over the grid, "
-                                           "the load is powered by the battery as a priority.When selecting the grid priority over the battery, the load is powered by the grid as a priority."));
+                                        tr("Energy Priority: You can choose whether to preferentially use electricity from the grid or battery."));
 
     line = 0;
     column = 5;
@@ -3559,6 +4007,14 @@ void MyWidget::SetAdvancedSetup1ToTable(QTableWidget *myTable)
                                             "when the communication between the EMS is disconnected and the communication is not recovered after a preset period of time."));
 
     //语言
+    /*QString language_str;
+    if(LanguageType)
+    {
+        language_str = QString(tr("English"));
+    }
+    else {
+        language_str = QString(tr("Chinese"));
+    }*/
     ButtonToTable->add_SpecificationData(Language_explain, myTable, line++, column, \
                                          tr("English"), tr("Language"), \
                                          tr("You can set the display language of the screen to Chinese or English. The system needs to restart before switching the language."));
@@ -3622,7 +4078,7 @@ void MyWidget::SetAdvancedSetup2ToTable(QTableWidget *myTable)
     //维护密码
     ButtonToTable->add_SpecificationData(RootPassport_explain, myTable, line++, column,\
                                          "******", tr("Maintain password"), \
-                                         tr("Maintain password: Available for resetting the admin password.(Note: The admin password must be six digits.)"));
+                                         tr("Maintain password: Available for resetting the maintain password.(Note: The maintain password must be six digits.)"));
 
 }
 //设置高级设置页3控件到表格
@@ -4163,74 +4619,7 @@ void MyWidget::on_RTS_module_2_clicked()
 {
     QMessageBox::question(this , "2", tr("Choose the second module to view the real-time status of the second module"), tr("OK"));
 }
-/******退出高级设置********/
-void MyWidget::on_UI_Complete_Btn_clicked()
-{
-    ui->UI_stackedWidget->setCurrentWidget(ui->UI_page);
-}
-/********* 电池上电 *********/
-void MyWidget::on_Battery_PowerOn_clicked()
-{
-    QMessageBox::question(this , tr("Battery power-on"), \
-                          tr("Battery power-on: This function allows the BMS to send a command to close the contactor (Note: this feature is only supported by some BMS manufacturers)."), tr("OK"));
-}
-/********* 电池下电 *********/
-void MyWidget::on_Battery_PowerOff_clicked()
-{
-    QMessageBox::question(this , tr("Battery power-off"), \
-                          tr("Battery power-off: This function allows the BMS to send a command to open the contactor (Note: this feature is only supported by some BMS manufacturers)."), tr("OK"));
-}
-/************混合模式使能*************/
-void MyWidget::on_Hybrid_mode_Button_clicked()
-{
-    QMessageBox::question(this , tr("Hybrid mode Enable"), \
-                          tr("Hybrid mode: When the function of running according to the schedule is enabled, this option is enabled."), tr("OK"));
-}
-/*********** 选择静态IP地址 ************/
-void MyWidget::on_radio_static_clicked()
-{
-    IPShow = true;
-    if(IPShow)
-    {
-        ui->ip_explain_btn->show();
-        ui->netmask_explain_btn->show();
-        ui->gateway_explain_btn->show();
-        ui->server_ip_explain_btn->show();
-    }
-    else
-    {
-        ui->ip_explain_btn->hide();
-        ui->netmask_explain_btn->hide();
-        ui->gateway_explain_btn->hide();
-        ui->server_ip_explain_btn->hide();
-    }
-    QMessageBox::question(this ,tr("STATIC"), tr("If this parameter is selected, static IP addresses are used"), tr("OK"));//如果选择此项，表示使用静态的IP地址\n
-}
-/*********** 选择自动分配IP地址 ************/
-void MyWidget::on_radio_dhcp_clicked()
-{
-    if(0)
-    {
-        IPShow = false;
-        if(IPShow)
-        {
-            ui->ip_explain_btn->show();
-            ui->netmask_explain_btn->show();
-            ui->gateway_explain_btn->show();
-            ui->server_ip_explain_btn->show();
-        }
-        else
-        {
-            ui->ip_explain_btn->hide();
-            ui->netmask_explain_btn->hide();
-            ui->gateway_explain_btn->hide();
-            ui->server_ip_explain_btn->hide();
-        }
-        QMessageBox::question(this ,tr("DHCP"), tr("If this parameter is selected, the automatically assigned IP address is used"), tr("OK"));//如果选择此项，表示使用自动分配的IP地址 \n
-    }
 
-
-}
 /****************DCDC 变流器开启*****************/
 void MyWidget::on_Switch_on_Inv_clicked()
 {
@@ -4302,7 +4691,7 @@ void MyWidget::on_SetNext_bt_clicked()
     else if( CurrentCheckMode == 5 )
     {
         Advanced_Current_Page++;
-        if( Advanced_Current_Page > DCDCDebug_PAGE_NUM  )
+        if( Advanced_Current_Page > PORTDATA_PAGE_NUM  )
         {
             Advanced_Current_Page = Advanced_PAGE1_NUM;
         }
@@ -4311,6 +4700,7 @@ void MyWidget::on_SetNext_bt_clicked()
         ui->setpage_stackedWidget->setCurrentIndex( Advanced_Current_Page );
     }
 }
+
 //上一页
 void MyWidget::on_SetPrevious_bt_clicked()
 {
@@ -4346,7 +4736,7 @@ void MyWidget::on_SetPrevious_bt_clicked()
         Advanced_Current_Page--;
         if( Advanced_Current_Page < Advanced_PAGE1_NUM  )
         {
-            Advanced_Current_Page = DCDCDebug_PAGE_NUM;
+            Advanced_Current_Page = PORTDATA_PAGE_NUM;
         }
         ui->SetPageNum_lb->setText( QString("%1/%2").arg(Advanced_Current_Page-4).arg(AdvancedTotal_PAGE) );
         ui->PageInfo_lb->setText(Mode_title_Str.at(Advanced_Current_Page));
@@ -4451,7 +4841,7 @@ void MyWidget::on_ToLogin_bt_clicked()
         ui->stackedWidget->setCurrentWidget( ui->Host_page );
         ui->RTState_stackedWidget->setCurrentWidget(ui->RTStateData_page);
         ui->BAT_stackedWidget->setCurrentWidget(ui->BAT_Lithium_page);
-        ui->System_btn->setText("System");
+        ui->System_btn->setText(tr("System"));
         Account_Type = User;
         Account_Change( Account_Type );
 
@@ -4462,7 +4852,7 @@ void MyWidget::on_ToLogin_bt_clicked()
         ui->stackedWidget->setCurrentWidget( ui->Host_page );
         ui->RTState_stackedWidget->setCurrentWidget(ui->RTStateData_page);
         ui->BAT_stackedWidget->setCurrentWidget(ui->BAT_Lithium_page);
-        ui->System_btn->setText("System");
+        ui->System_btn->setText(tr("System"));
         Account_Type = Maintain;
         Account_Change( Account_Type );
     }
@@ -4472,7 +4862,7 @@ void MyWidget::on_ToLogin_bt_clicked()
         ui->stackedWidget->setCurrentWidget( ui->Host_page );
         ui->RTState_stackedWidget->setCurrentWidget(ui->RTStateData_page);
         ui->BAT_stackedWidget->setCurrentWidget(ui->BAT_Lithium_page);
-        ui->System_btn->setText("System");
+        ui->System_btn->setText(tr("System"));
         Account_Type = Root;
         Account_Change( Account_Type );
     }
@@ -4531,7 +4921,7 @@ void MyWidget::on_InfoPrevious_bt_clicked()
 //登录页面输入密码点击槽
 void MyWidget::on_pushButton_16_clicked()
 {
-    QMessageBox::question(this , "Password", \
+    QMessageBox::question(this , tr("Password"), \
                           tr("    When not logged in, it is not possible to access the system page or view and modify basic settings and advanced settings parameters.\n"
                              "    When logged in as a \"User\" account, it is possible to switch work modes and modify basic settings parameters related to the work mode. "
                              "Advanced settings parameters can be viewed but cannot be modified.\n"
@@ -4550,4 +4940,82 @@ void MyWidget::on_Details_bt_clicked()
     {
         mode_expelain->hide();
     }
+}
+
+//模式选择介绍信息
+void MyWidget::on_Information_btn_clicked()
+{
+    QMessageBox::question(this, tr("Working mode introduction")\
+                          ,tr("Click to enter the selected working mode, go to the working mode parameter settings page, "
+                              "and click the \"Save\" button in the top-right corner to set the current working mode as the selected and saved working mode.\n"
+                              "For example, if the current working mode is \"Battery Priority\", select \"Optimal Mode\", enter the parameter settings page for the optimal mode, "
+                              "and click the \"Save\" button in the top-right corner to set the current working mode as \"Optimal Mode\"."), tr("OK"));
+}
+
+//端口选择
+void MyWidget::on_PortNum_bt_clicked()
+{
+    QMessageBox::question(this, tr("Port"), tr("Select the port to be monitored. The optional port types are: None, RS485/2, RS485/3, RS485/4, RS485/5, RS485/6, CAN 1, CAN 2, Eth"), tr("OK"));
+}
+
+//报文抓取
+void MyWidget::on_Bengin_bt_clicked()
+{
+    QMessageBox::question(this, tr("Begin"), tr("Start/Stop capturing messages."), tr("OK"));
+}
+//显示 方式
+void MyWidget::on_comboBox_currentIndexChanged(int index)
+{
+    switch (index) {
+    case 0:
+        {
+            ui->PortMessage_TextEdit->setPlainText(tr("2023-09-27  17:27:56.201  CAN 2: Tx  Len=8  ID=9f000100 00 00 00 00 00 00 00 00\n"
+                                                      "2023-09-27  17:27:56.302  CAN 2: Rx  Len=8  ID=9f000301 0d 00 64 00 70 17 e8 03\n"
+                                                      "2023-09-27  17:27:57.105  CAN 2: Rx  Len=8  ID=9f000300 40 1f a0 0f e8 03 e8 03\n"
+                                                      "2023-09-27  17:27:57.206  CAN 2: Tx  Len=8  ID=9f000100 00 00 00 00 00 00 00 00\n"
+                                                      "2023-09-27  17:27:57.307  CAN 2: Rx  Len=8  ID=9f000301 0d 00 64 00 70 17 e8 03\n"
+                                                      "2023-09-27  17:27:57.910  CAN 2: Rx  Len=8  ID=9f000304 40 1f a0 0f 00 00 00 00\n"
+                                                      "2023-09-27  17:27:58.110  CAN 2: Rx  Len=8  ID=9f000300 40 1f a0 0f e8 03 e8 03\n"
+                                                      "2023-09-27  17:27:58.211  CAN 2: Tx  Len=8  ID=9f000100 00 00 00 00 00 00 00 00\n"
+                                                      "2023-09-27  17:27:58.312  CAN 2: Rx  Len=8  ID=9f000301 0d 00 64 00 70 17 e8 03\n"
+                                                      "2023-09-27  17:27:58.915  CAN 2: Rx  Len=8  ID=9f000304 40 1f a0 0f 00 00 00 00\n"
+                                                      "2023-09-27  17:27:59.116  CAN 2: Rx  Len=8  ID=9f000300 40 1f a0 0f e8 03 e8 03\n"
+                                                      "2023-09-27  17:27:59.217  CAN 2: Tx  Len=8  ID=9f000100 00 00 00 00 00 00 00 00\n"
+                                                      "2023-09-27  17:27:59.317  CAN 2: Rx  Len=8  ID=9f000301 0d 00 64 00 70 17 e8 03\n"
+                                                      "2023-09-27  17:27:59.920  CAN 2: Rx  Len=8  ID=9f000304 40 1f a0 0f 00 00 00 00\n"
+                                                      "2023-09-27  17:28:00.121  CAN 2: Rx  Len=8  ID=9f000300 40 1f a0 0f e8 03 e8 03"));
+        }
+        break;
+    case 1:
+        {
+        ui->PortMessage_TextEdit->setPlainText(tr("The message data will be recorded in the root directory of the USB drive in the 'PortDate.txt' file.\n"
+                                                  "Please connect a UBS flash drive!"));
+        }
+        break;
+    default:
+        break;
+    }
+}
+
+//静态IP
+void MyWidget::on_radio_static_2_clicked()
+{
+    QMessageBox::question(this ,tr("STATIC"), tr("If this parameter is selected, static IP addresses are used"), tr("OK"));//如果选择此项，表示使用静态的IP地址
+}
+//动态IP
+void MyWidget::on_radio_dhcp_2_clicked()
+{
+//    QMessageBox::question(this ,tr("DHCP"), tr("If this parameter is selected, the automatically assigned IP address is used"), tr("OK"));//如果选择此项，表示使用自动分配的IP地址 \n
+}
+//电池上电
+void MyWidget::on_PowerOn_bt_clicked()
+{
+    QMessageBox::question(this , tr("Battery power-on"), \
+                          tr("Battery power-on: This function allows the BMS to send a command to close the contactor (Note: this feature is only supported by some BMS manufacturers)."), tr("OK"));
+}
+//电池下电
+void MyWidget::on_PowerOff_bt_clicked()
+{
+    QMessageBox::question(this , tr("Battery power-off"), \
+                          tr("Battery power-off: This function allows the BMS to send a command to open the contactor (Note: this feature is only supported by some BMS manufacturers)."), tr("OK"));
 }
