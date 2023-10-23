@@ -877,6 +877,27 @@ void MyWidget::MemoryAllocation()
     Power16_explain= new QPushButton;Power17_explain= new QPushButton;Power18_explain= new QPushButton;
     Power19_explain= new QPushButton;Power20_explain= new QPushButton;
 
+    Generator1_explain  = new QPushButton;
+    Generator2_explain  = new QPushButton;
+    Generator3_explain  = new QPushButton;
+    Generator4_explain  = new QPushButton;
+    Generator5_explain  = new QPushButton;
+    Generator6_explain  = new QPushButton;
+    Generator7_explain  = new QPushButton;
+    Generator8_explain  = new QPushButton;
+    Generator9_explain  = new QPushButton;
+    Generator10_explain = new QPushButton;
+    Generator11_explain = new QPushButton;
+    Generator12_explain = new QPushButton;
+    Generator13_explain = new QPushButton;
+    Generator14_explain = new QPushButton;
+    Generator15_explain = new QPushButton;
+    Generator16_explain = new QPushButton;
+    Generator17_explain = new QPushButton;
+    Generator18_explain = new QPushButton;
+    Generator19_explain = new QPushButton;
+    Generator20_explain = new QPushButton;
+
     MixedModeButtonList = new QList<QPushButton*>;
     MixedModeButtonList->append(Check1_explain);
     MixedModeButtonList->append(Check2_explain);
@@ -1003,6 +1024,27 @@ void MyWidget::MemoryAllocation()
     MixedModeButtonList->append(Power18_explain);
     MixedModeButtonList->append(Power19_explain);
     MixedModeButtonList->append(Power20_explain);
+
+    MixedModeButtonList->append(Generator1_explain);
+    MixedModeButtonList->append(Generator2_explain);
+    MixedModeButtonList->append(Generator3_explain);
+    MixedModeButtonList->append(Generator4_explain);
+    MixedModeButtonList->append(Generator5_explain);
+    MixedModeButtonList->append(Generator6_explain);
+    MixedModeButtonList->append(Generator7_explain);
+    MixedModeButtonList->append(Generator8_explain);
+    MixedModeButtonList->append(Generator9_explain);
+    MixedModeButtonList->append(Generator10_explain);
+    MixedModeButtonList->append(Generator11_explain);
+    MixedModeButtonList->append(Generator12_explain);
+    MixedModeButtonList->append(Generator13_explain);
+    MixedModeButtonList->append(Generator14_explain);
+    MixedModeButtonList->append(Generator15_explain);
+    MixedModeButtonList->append(Generator16_explain);
+    MixedModeButtonList->append(Generator17_explain);
+    MixedModeButtonList->append(Generator18_explain);
+    MixedModeButtonList->append(Generator19_explain);
+    MixedModeButtonList->append(Generator20_explain);
 
 
     /**********************系统消息*************************/
@@ -1864,7 +1906,7 @@ void MyWidget::WorkingModeInit()
        if(i == 4)
        {
            QStringList time_str;
-           time_str<< tr("Check") <<tr("Peak-Flat-Valley")<< tr("StartTime") << tr("EndTime") << tr("Features") << tr("Power(kW)");
+           time_str<< tr("Check") <<tr("Peak-Flat-Valley")<< tr("StartTime") << tr("EndTime") << tr("Features") << tr("Power(kW)") << tr("Generator action");
            new_ui_TabList.at(i)->setColumnCount(time_str.size());
            new_ui_TabList.at(i)->setRowCount(20);
            new_ui_TabList.at(i)->setHorizontalHeaderLabels(time_str);
@@ -1874,7 +1916,16 @@ void MyWidget::WorkingModeInit()
            new_ui_TabList.at(i)->setEditTriggers(QAbstractItemView::NoEditTriggers);//设置不可编辑
            new_ui_TabList.at(i)->setShowGrid(true);//设置显示格子
            new_ui_TabList.at(i)->setSelectionBehavior(QAbstractItemView::SelectItems);//每次选择一行
-           new_ui_TabList.at(i)->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+           new_ui_TabList.at(i)->horizontalHeader()->setSectionResizeMode(QHeaderView::Interactive);
+           new_ui_TabList.at(i)->setColumnWidth(0, 100);
+           new_ui_TabList.at(i)->setColumnWidth(5, 100);
+           for(int sum = 1; sum < new_ui_TabList.at(i)->columnCount(); ++sum)
+           {
+               if(sum != 5)
+               {
+                   new_ui_TabList.at(i)->horizontalHeader()->setSectionResizeMode(sum, QHeaderView::Stretch);
+               }
+           }
            new_ui_TabList.at(i)->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
            new_ui_TabList.at(i)->verticalHeader()->setMinimumSectionSize(50);//设置行高最小值
        }
@@ -3852,14 +3903,20 @@ void MyWidget::SetMixedTime_TabToTable(QTableWidget *myTable)
     QString temp6 = tr("08:00");
     QString temp7 = tr("10:00");
     QString temp8 = tr("End time: The system stops automatically running when the system reaches this time.");
-    QString temp9 = tr("The function that will perform this function during business hours, there are six to choose from, They are System for self-use, battery Batter priority, Peak shaving, Output PV power,Economic model.");
+    QString temp9 = tr("The function that will perform this function during business hours, there are two to choose from, They are Peak shaving,Economic mode.");
     QString temp10 = tr("Working Power: Only effective in peak shaving mode. Positive values indicate discharging, while negative values indicate charging.");
     QString temp11 = tr("Start time: When the system reaches this time, it starts to run automatically.");
     QString temp12 = tr("Select: After this function is enabled, the system automatically runs the selected function mode within the specified period.");
-    QString temp13 = tr("System for self-use");
+    QString temp13 = tr("Peak shaving");
     QString temp14 = tr("Peak price");//峰
     QString temp15 = tr("In the peak shaving and valley filling mode, select 'Peak price' periods,'Flat price' periods and 'Valley price' periods based on electricity prices.");//
     QString temp16 = tr("Peak-Flat-Valley");//峰-平-谷
+    QString temp17 = tr("Generator action");
+    QString temp18 = tr("Generator action:Generator trun on,Generator trun off,NONE.");
+    QString temp19 = tr("Generator trun off");
+    QString temp20 = tr("Generator trun on");
+    QString temp21 = tr("NONE");
+    QString temp22 = tr("Economic mode");
 
     for(int i = 0;i < 20; i++ )
     {
@@ -3874,8 +3931,28 @@ void MyWidget::SetMixedTime_TabToTable(QTableWidget *myTable)
         ButtonToTable->add_SpecificationData(MixedModeButtonList->at(i+20), myTable, i, 1, temp14, temp16, temp15);
         ButtonToTable->add_SpecificationData(MixedModeButtonList->at(i+40), myTable, i, 2, temp6, temp2, temp11);
         ButtonToTable->add_SpecificationData(MixedModeButtonList->at(i+60), myTable, i, 3, temp7, temp3, temp8);
-        ButtonToTable->add_SpecificationData(MixedModeButtonList->at(i+80), myTable, i, 4, temp13, temp4, temp9);
+        if(i%2==0)
+        {
+            ButtonToTable->add_SpecificationData(MixedModeButtonList->at(i+80), myTable, i, 4, temp13, temp4, temp9);
+        }
+        if(i%2==1)
+        {
+            ButtonToTable->add_SpecificationData(MixedModeButtonList->at(i+80), myTable, i, 4, temp22, temp4, temp9);
+        }
         ButtonToTable->add_SpecificationData(MixedModeButtonList->at(i+100), myTable,i, 5, "10", temp5, temp10);
+        if(i%3==0)
+        {
+            ButtonToTable->add_SpecificationData(MixedModeButtonList->at(i+120), myTable,i, 6, temp19, temp17, temp18);
+        }
+        else if(i%3==1)
+        {
+            ButtonToTable->add_SpecificationData(MixedModeButtonList->at(i+120), myTable,i, 6, temp20, temp17, temp18);
+        }
+        else if(i%3==2)
+        {
+            ButtonToTable->add_SpecificationData(MixedModeButtonList->at(i+120), myTable,i, 6, temp21, temp17, temp18);
+        }
+
     }
 }
 //设置高级设置页1控件到表格

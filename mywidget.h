@@ -326,6 +326,12 @@ public:
     QPushButton *Power11_explain,*Power12_explain,*Power13_explain,*Power14_explain,*Power15_explain;
     QPushButton *Power16_explain,*Power17_explain,*Power18_explain,*Power19_explain,*Power20_explain;
 
+    //发电机开关
+    QPushButton *Generator1_explain,*Generator2_explain,*Generator3_explain,*Generator4_explain,*Generator5_explain
+    ,*Generator6_explain,*Generator7_explain,*Generator8_explain,*Generator9_explain,*Generator10_explain
+    ,*Generator11_explain,*Generator12_explain,*Generator13_explain,*Generator14_explain,*Generator15_explain
+    ,*Generator16_explain,*Generator17_explain,*Generator18_explain,*Generator19_explain,*Generator20_explain;
+
     /***************************系统信息**************************/
 
     QButtonGroup *pButton_Version;

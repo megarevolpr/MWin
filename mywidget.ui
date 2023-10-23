@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1257</width>
-    <height>701</height>
+    <width>1555</width>
+    <height>884</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -6071,7 +6071,7 @@ QToolButton::hover{
  ON</string>
                    </property>
                    <property name="icon">
-                    <iconset>
+                    <iconset resource="image.qrc">
                      <normaloff>:/new_ui/UI/开关机-01.png</normaloff>:/new_ui/UI/开关机-01.png</iconset>
                    </property>
                    <property name="iconSize">
@@ -6144,7 +6144,7 @@ QToolButton::hover{
  OFF</string>
                    </property>
                    <property name="icon">
-                    <iconset>
+                    <iconset resource="image.qrc">
                      <normaloff>:/new_ui/UI/开关机-02.png</normaloff>:/new_ui/UI/开关机-02.png</iconset>
                    </property>
                    <property name="iconSize">
@@ -6244,7 +6244,7 @@ QToolButton::hover{
  ON</string>
                    </property>
                    <property name="icon">
-                    <iconset>
+                    <iconset resource="image.qrc">
                      <normaloff>:/new_ui/UI/开关机-01.png</normaloff>:/new_ui/UI/开关机-01.png</iconset>
                    </property>
                    <property name="iconSize">
@@ -6317,7 +6317,7 @@ QToolButton::hover{
  OFF</string>
                    </property>
                    <property name="icon">
-                    <iconset>
+                    <iconset resource="image.qrc">
                      <normaloff>:/new_ui/UI/开关机-02.png</normaloff>:/new_ui/UI/开关机-02.png</iconset>
                    </property>
                    <property name="iconSize">
@@ -7164,7 +7164,7 @@ border-radius:6px;</string>
                            <string/>
                           </property>
                           <property name="icon">
-                           <iconset>
+                           <iconset resource="image.qrc">
                             <normaloff>:/new_ui/UI/Previous.png</normaloff>:/new_ui/UI/Previous.png</iconset>
                           </property>
                           <property name="iconSize">
@@ -7220,7 +7220,7 @@ border-radius:6px;</string>
                            <string/>
                           </property>
                           <property name="icon">
-                           <iconset>
+                           <iconset resource="image.qrc">
                             <normaloff>:/new_ui/UI/Next2.png</normaloff>:/new_ui/UI/Next2.png</iconset>
                           </property>
                           <property name="iconSize">
@@ -7374,7 +7374,7 @@ QPushButton::hover{
                          <string notr="true">background-color: rgb(255, 255, 255);</string>
                         </property>
                         <property name="currentIndex">
-                         <number>2</number>
+                         <number>4</number>
                         </property>
                         <widget class="QWidget" name="DCAC_page">
                          <property name="styleSheet">
@@ -11158,7 +11158,7 @@ QPushButton::hover{
                            <string/>
                           </property>
                           <property name="icon">
-                           <iconset>
+                           <iconset resource="image.qrc">
                             <normaloff>:/new_ui/UI/Previous.png</normaloff>:/new_ui/UI/Previous.png</iconset>
                           </property>
                           <property name="iconSize">
@@ -11208,7 +11208,7 @@ QPushButton::hover{
                            <string/>
                           </property>
                           <property name="icon">
-                           <iconset>
+                           <iconset resource="image.qrc">
                             <normaloff>:/new_ui/UI/Next2.png</normaloff>:/new_ui/UI/Next2.png</iconset>
                           </property>
                           <property name="iconSize">
@@ -11927,7 +11927,7 @@ QPushButton::hover{
                            <string/>
                           </property>
                           <property name="icon">
-                           <iconset>
+                           <iconset resource="image.qrc">
                             <normaloff>:/new_ui/UI/Previous.png</normaloff>:/new_ui/UI/Previous.png</iconset>
                           </property>
                           <property name="iconSize">
@@ -11986,7 +11986,7 @@ QPushButton::hover{
                            <string/>
                           </property>
                           <property name="icon">
-                           <iconset>
+                           <iconset resource="image.qrc">
                             <normaloff>:/new_ui/UI/Next2.png</normaloff>:/new_ui/UI/Next2.png</iconset>
                           </property>
                           <property name="iconSize">
@@ -14344,7 +14344,7 @@ text-align: left;</string>
                  <string>Turn On/Off</string>
                 </property>
                 <property name="icon">
-                 <iconset>
+                 <iconset resource="image.qrc">
                   <normaloff>:/new_ui/UI/HNAC_TurnOn.png</normaloff>:/new_ui/UI/HNAC_TurnOn.png</iconset>
                 </property>
                 <property name="iconSize">
@@ -14426,7 +14426,7 @@ text-align: left;</string>
                  <string>System Information</string>
                 </property>
                 <property name="icon">
-                 <iconset>
+                 <iconset resource="image.qrc">
                   <normaloff>:/new_ui/UI/IP.png</normaloff>:/new_ui/UI/IP.png</iconset>
                 </property>
                 <property name="iconSize">
@@ -14821,6 +14821,8 @@ correct.</string>
   </layout>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="image.qrc"/>
+ </resources>
  <connections/>
 </ui>
