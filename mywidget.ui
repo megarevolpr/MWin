@@ -6404,7 +6404,7 @@ QToolButton::hover{
                    <string notr="true"/>
                   </property>
                   <property name="currentIndex">
-                   <number>1</number>
+                   <number>0</number>
                   </property>
                   <widget class="QWidget" name="Mode_page">
                    <layout class="QGridLayout" name="gridLayout_52">
@@ -11474,8 +11474,8 @@ QPushButton::hover{
                                       <rect>
                                        <x>0</x>
                                        <y>0</y>
-                                       <width>503</width>
-                                       <height>459</height>
+                                       <width>385</width>
+                                       <height>264</height>
                                       </rect>
                                      </property>
                                      <property name="font">
@@ -12148,8 +12148,8 @@ QPushButton::hover{
                                 <rect>
                                  <x>0</x>
                                  <y>0</y>
-                                 <width>742</width>
-                                 <height>451</height>
+                                 <width>921</width>
+                                 <height>572</height>
                                 </rect>
                                </property>
                                <layout class="QGridLayout" name="gridLayout_69">

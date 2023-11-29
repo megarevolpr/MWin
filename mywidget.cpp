@@ -24,8 +24,6 @@ MyWidget::MyWidget(QWidget *parent) :
     ModeIntr_Current_Page   = 0;                //模式介绍页当前页码
     Account_Type = None;                        //当前登录角色 -- 上电默认未登录
 
-
-
     ui->setupUi(this);
     ui->UI_stackedWidget->setCurrentWidget(ui->UI_page);
     ui->stackedWidget->setCurrentWidget(ui->Host_page); //执行程序后，自动进入到主页
@@ -35,8 +33,6 @@ MyWidget::MyWidget(QWidget *parent) :
     MemoryAllocation(); //初始化内存空间
     UIPageInit();       //初始化界面
     LinkRelationship();//函数关联
-
-
 
 }
 
@@ -574,7 +570,7 @@ void MyWidget::LoadLanguageInit()
         qApp->installTranslator(translator);
         ui->retranslateUi(this);
         LanguageType = CHINESE;
-        ui->label_42->setStyleSheet("border-image: url(:/new_ui/UI/Battery_area3.png);");
+        ui->label_42->setStyleSheet("border-image: url(:/new_ui/UI/Battery_area2.png);");
     }
     else if(LanguageType == ENGLISH)//开机语言 英文
     {
@@ -582,7 +578,7 @@ void MyWidget::LoadLanguageInit()
         qApp->installTranslator(translator);
         ui->retranslateUi(this);
         LanguageType = ENGLISH;
-        ui->label_42->setStyleSheet("border-image: url(:/new_ui/UI/Battery_area2.png);");
+        ui->label_42->setStyleSheet("border-image: url(:/new_ui/UI/Battery_area3.png);");
     }
 }
 
@@ -1209,6 +1205,7 @@ void MyWidget::MemoryAllocation()
     Grid_EDP_explain = new QPushButton;
     Grid_FDP_explain = new QPushButton;
     BatteryCapacityAlarm_explain = new QPushButton;
+    BatteryCurrentFeedbackType_explain = new QPushButton;
 
     /***************************系统参数**************************/
     Change_rate_of_power_explain = new QPushButton;  //功率变化率说明
@@ -1872,6 +1869,7 @@ void MyWidget::WorkingModeInit()
     Mode_title_Str<<tr("DC/AC Parameters")<<tr("DC/DC Parameters")<<tr("Lithium Battery Setting Parameters")<<tr("Lead-acid Battery Setting Parameters")<<tr("Time Period Setting")<<tr("Function Sentting 1")<<tr("Function Sentting 2")\
                  <<tr("System Senttings")<<tr("Device")<<tr("DC/AC Debug")<<tr("DC/DC Debug")<<tr("Port data");
 
+    //鼠标悬浮提示语
     ui->Information_btn->setToolTip(QString(tr("Working mode introduction")));
     ui->Save_bt->setToolTip(QString(tr("Apply this mode and exit the parameter settings page")));
     ui->Exit_bt->setToolTip(QString(tr("Eexit the parameter settings page")));
@@ -1903,6 +1901,7 @@ void MyWidget::WorkingModeInit()
            List5 << tr("Name") << tr("Value")<< tr("Name") << tr("Value")<< tr("Name") << tr("Value");
            new_ui_TabList.at(i)->setHorizontalHeaderLabels(List5);
        }
+
        if(i == 4)
        {
            QStringList time_str;
@@ -1936,8 +1935,22 @@ void MyWidget::WorkingModeInit()
            new_ui_TabList.at(i)->setFrameShape(QFrame::NoFrame);//设置无边框
            new_ui_TabList.at(i)->setShowGrid(true);//设置显示格子
            new_ui_TabList.at(i)->setSelectionBehavior(QAbstractItemView::SelectItems);//每次选择一行
-           new_ui_TabList.at(i)->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
-           new_ui_TabList.at(i)->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+           if(i == 2 || i == 3)
+           {
+               new_ui_TabList.at(i)->horizontalHeader()->setSectionResizeMode(QHeaderView::Interactive);
+               new_ui_TabList.at(i)->setColumnWidth(1, 90);
+               new_ui_TabList.at(i)->setColumnWidth(3, 90);
+               new_ui_TabList.at(i)->setColumnWidth(5, 90);
+               new_ui_TabList.at(i)->horizontalHeader()->setSectionResizeMode(0, QHeaderView::Stretch);
+               new_ui_TabList.at(i)->horizontalHeader()->setSectionResizeMode(2, QHeaderView::Stretch);
+               new_ui_TabList.at(i)->horizontalHeader()->setSectionResizeMode(4, QHeaderView::Stretch);
+               new_ui_TabList.at(i)->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+           }
+           else
+           {
+               new_ui_TabList.at(i)->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+               new_ui_TabList.at(i)->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+           }
            new_ui_TabList.at(i)->verticalHeader()->setMinimumSectionSize(50);//设置行高最小值
        }
     }
@@ -3908,8 +3921,8 @@ void MyWidget::SetMixedTime_TabToTable(QTableWidget *myTable)
     QString temp11 = tr("Start time: When the system reaches this time, it starts to run automatically.");
     QString temp12 = tr("Select: After this function is enabled, the system automatically runs the selected function mode within the specified period.");
     QString temp13 = tr("Peak shaving");
-    QString temp14 = tr("Peak price");//峰
-    QString temp15 = tr("In the peak shaving and valley filling mode, select 'Peak price' periods,'Flat price' periods and 'Valley price' periods based on electricity prices.");//
+    QString temp14 = tr("Peak");//峰
+    QString temp15 = tr("In the economic mode, select 'Peak' periods,'Flat' periods and 'Valley' periods based on electricity prices.");
     QString temp16 = tr("Peak-Flat-Valley");//峰-平-谷
     QString temp17 = tr("Generator action");
     QString temp18 = tr("Generator action:Generator trun on,Generator trun off,NONE.");
@@ -4132,6 +4145,11 @@ void MyWidget::SetAdvancedSetup2ToTable(QTableWidget *myTable)
     //恢复出厂
     ButtonToTable->add_SpecificationData(Restore_factory_explain, myTable,line++, column, \
                                          tr("restore"), tr("Restore factory"), \
+                                         tr("Restore the factory default Settings."));
+
+    //电池电流反馈类型
+    ButtonToTable->add_SpecificationData(BatteryCurrentFeedbackType_explain, myTable,line++, column, \
+                                         tr("Calculated value"), tr("Battery current feedback type"), \
                                          tr("Restore the factory default Settings."));
 
     line = 0;

@@ -528,7 +528,7 @@ public:
     QPushButton *Insulation_detection_enable_DCDC_explain;  //DCDC绝缘监测使能说明
     QPushButton *Insulation_detection_enable_DCAC_explain;  //DCAC绝缘监测使能说明
     QPushButton *Grid_expansion_explain;
-
+    QPushButton *BatteryCurrentFeedbackType_explain;
 
 
 
