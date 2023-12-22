@@ -246,29 +246,31 @@ public:
 
     /***************************电池设置-锂电****************************/
 
-    QPushButton *DOD_OnGrid_explain;    //并网DOD说明
-    QPushButton *DOD_OffGrid_explain;   //离网DOD说明
+    QPushButton *DOD_OnGrid_explain;                //并网DOD说明
+    QPushButton *DOD_OffGrid_explain;               //离网DOD说明
     QPushButton *Charge_Volt_Upper_Limit_explain;   //充电电压上限说明
     QPushButton *Charge_Volt_upper_Limit_delta_explain; //充电电压上限回差说明
-    QPushButton *Disc_Volt_lower_Limit_explain;  //放电电压限制说明
+    QPushButton *Disc_Volt_lower_Limit_explain;     //放电电压限制说明
     QPushButton *Discharge_Volt_upper_Limit_delta_explain; //放电电压下限回差说明
-    QPushButton *Charge_Current_Limit_explain;  //充电电流限制说明
-    QPushButton *Discharge_Current_Limit_explain;  //放电电流限制说明
-//    QPushButton *Floating_charge_explain;   //浮充电压说明
-//    QPushButton *Equalized_charge_explain;   //均充电压说明
-    QPushButton *Gen_turn_off_SOC_explain;    //柴发关闭SOC说明
-    QPushButton *Gen_turn_on_SOC_explain;     //柴发开启SOC说明
-    QPushButton *Relese_Charge_mark_explain;    //释放充电标志说明
-    QPushButton *Relese_discharge_mark_explain;    //释放充电标志说明
-    QPushButton *ForceCharge_start_explain; //强充开启说明
-    QPushButton *ForceCharge_top_explain;   // 强充结束说明
+    QPushButton *Charge_Current_Limit_explain;      //充电电流限制说明
+    QPushButton *Discharge_Current_Limit_explain;   //放电电流限制说明
+//    QPushButton *Floating_charge_explain;         //浮充电压说明
+//    QPushButton *Equalized_charge_explain;        //均充电压说明
+    QPushButton *Gen_turn_off_SOC_explain;          //柴发关闭SOC说明
+    QPushButton *Gen_turn_on_SOC_explain;           //柴发开启SOC说明
+    QPushButton *Relese_Charge_mark_explain;        //释放充电标志说明
+    QPushButton *MeterModel_explain;                //电表型号
+    QPushButton *ElectricityMeterAntiBackflow_explain;//电表防逆流
+    QPushButton *Relese_discharge_mark_explain;     //释放充电标志说明
+    QPushButton *ForceCharge_start_explain;         //强充开启说明
+    QPushButton *ForceCharge_top_explain;           // 强充结束说明
     QPushButton *DOD_Protection_Release_SOC_explain;//DOD保护解除SOC
-    QPushButton *Cell_Voltage_max_explain;//最高单体电压
-    QPushButton *Cell_Voltage_max_delta_explain;//最高单体电压回差
-    QPushButton *Cell_Voltage_min_explain;//最低单体电压
-    QPushButton *Cell_Voltage_min_delta_explain;//最低单体电压回差
-    QPushButton *DCAC_cell_protect_explain;//DCAC单体保护电压
-    QPushButton *DCAC_cell_delta_explain;//DCAC单体保护电压回差
+    QPushButton *Cell_Voltage_max_explain;          //最高单体电压
+    QPushButton *Cell_Voltage_max_delta_explain;    //最高单体电压回差
+    QPushButton *Cell_Voltage_min_explain;          //最低单体电压
+    QPushButton *Cell_Voltage_min_delta_explain;    //最低单体电压回差
+    QPushButton *DCAC_cell_protect_explain;         //DCAC单体保护电压
+    QPushButton *DCAC_cell_delta_explain;           //DCAC单体保护电压回差
 
     /***************************电池设置-铅酸****************************/
     QPushButton *Capacity_explain;

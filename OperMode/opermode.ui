@@ -40,7 +40,7 @@
         <item row="0" column="1">
          <widget class="QStackedWidget" name="ExplanationTextWidget">
           <property name="currentIndex">
-           <number>0</number>
+           <number>4</number>
           </property>
           <widget class="QWidget" name="Systempage">
            <layout class="QHBoxLayout" name="horizontalLayout_6">
@@ -3307,7 +3307,7 @@ background-color: rgb(170, 255, 255);
               <property name="styleSheet">
                <string notr="true"/>
               </property>
-              <layout class="QVBoxLayout" name="verticalLayout_67" stretch="3,2,9,2">
+              <layout class="QVBoxLayout" name="verticalLayout_67" stretch="3,2,9,3">
                <property name="spacing">
                 <number>6</number>
                </property>
@@ -3334,7 +3334,7 @@ background-color: rgb(170, 255, 255);
                 </widget>
                </item>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_74" stretch="2,4,4,4,5,3">
+                <layout class="QHBoxLayout" name="horizontalLayout_74" stretch="2,5,4,4,5,3,4">
                  <property name="spacing">
                   <number>6</number>
                  </property>
@@ -3378,7 +3378,7 @@ border-radius: 10px;</string>
                     <bool>true</bool>
                    </property>
                    <property name="plainText">
-                    <string>Selection of peak,flat and valley sections of the grid under peak shaving and valley filling functions.</string>
+                    <string>Select &quot;Peak&quot;, &quot;Valley&quot; or &quot;Flat&quot; according to the grid tariff.</string>
                    </property>
                   </widget>
                  </item>
@@ -3399,7 +3399,7 @@ border-radius: 10px;</string>
                     <bool>true</bool>
                    </property>
                    <property name="plainText">
-                    <string>The system starts to run automatically when it reaches this time.</string>
+                    <string>The time to start the autorun.</string>
                    </property>
                   </widget>
                  </item>
@@ -3420,7 +3420,7 @@ border-radius: 10px;</string>
                     <bool>true</bool>
                    </property>
                    <property name="plainText">
-                    <string>The system stops running automatically when it reaches this time.</string>
+                    <string>The time to end the autorun.</string>
                    </property>
                   </widget>
                  </item>
@@ -3462,7 +3462,25 @@ border-radius: 10px;</string>
                     <bool>true</bool>
                    </property>
                    <property name="plainText">
-                    <string>Peak and trough shaving operating power.</string>
+                    <string>The power value of the execution.</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPlainTextEdit" name="plainTextEdit_4">
+                   <property name="font">
+                    <font>
+                     <pointsize>14</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 255, 255);border-width: 1px;
+border-style: solid;
+border-color: rgb(0, 0, 0);
+border-radius: 10px;</string>
+                   </property>
+                   <property name="plainText">
+                    <string>The action performed by the generator.</string>
                    </property>
                   </widget>
                  </item>
@@ -4240,7 +4258,13 @@ padding: 3px;</string>
                   <bool>true</bool>
                  </property>
                  <property name="plainText">
-                  <string>&quot;Mixed Mode&quot; allows the system to automatically run different functional logic at different times. At the same time, it can run the function of &quot;peak shaving and valley filling&quot; according to the local peak and valley tariffs.</string>
+                  <string>The &quot;Mixed Mode&quot; primarily offers the following functionalities:
+1. Economic mode:
+   a. Peak: Performs &quot;Self-use&quot; mode. The load is energized by the battery.
+   b. Fair: Performs &quot;Self-use&quot; mode. Energy is supplied to the load from the grid.
+   c. Valley: Performs &quot;Battery priority&quot; mode. The grid charges the battery and provides energy to the load.
+2. peak shaving: according to the set power value (positive discharge, negative charge) to decide the battery charging or discharging.
+Next, you can decide whether or not to turn on the generator based on the selected &quot;Generator Action&quot;.</string>
                  </property>
                 </widget>
                </item>

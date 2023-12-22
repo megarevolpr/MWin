@@ -23,7 +23,6 @@ MyWidget::MyWidget(QWidget *parent) :
     Advanced_Current_Page = Advanced_PAGE1_NUM; //高级设置当前页
     ModeIntr_Current_Page   = 0;                //模式介绍页当前页码
     Account_Type = None;                        //当前登录角色 -- 上电默认未登录
-
     ui->setupUi(this);
     ui->UI_stackedWidget->setCurrentWidget(ui->UI_page);
     ui->stackedWidget->setCurrentWidget(ui->Host_page); //执行程序后，自动进入到主页
@@ -33,7 +32,6 @@ MyWidget::MyWidget(QWidget *parent) :
     MemoryAllocation(); //初始化内存空间
     UIPageInit();       //初始化界面
     LinkRelationship();//函数关联
-
 }
 
 MyWidget::~MyWidget()
@@ -425,6 +423,8 @@ MyWidget::~MyWidget()
     delete Grid_EDP_explain             ;
     delete Grid_FDP_explain             ;
     delete BatteryCapacityAlarm_explain ;
+    delete MeterModel_explain           ;  //电表型号
+    delete ElectricityMeterAntiBackflow_explain;  //电表防逆流
 
     /***************************系统参数**************************/
     delete Change_rate_of_power_explain                ;  //功率变化率说明
@@ -1206,6 +1206,8 @@ void MyWidget::MemoryAllocation()
     Grid_FDP_explain = new QPushButton;
     BatteryCapacityAlarm_explain = new QPushButton;
     BatteryCurrentFeedbackType_explain = new QPushButton;
+    MeterModel_explain = new QPushButton;
+    ElectricityMeterAntiBackflow_explain = new QPushButton;
 
     /***************************系统参数**************************/
     Change_rate_of_power_explain = new QPushButton;  //功率变化率说明
@@ -2575,7 +2577,6 @@ void MyWidget::on_RTD_Load_clicked()//显示负载的实时数据
     ui->MPS_Data_stw->setCurrentWidget(ui->Load_page);
 }
 
-
 //MPS数据 绘制button
 void MyWidget::MPS_Data(QTableWidget *myTable)
 {
@@ -2966,7 +2967,7 @@ void MyWidget::SystemMessages(QTableWidget *myTable)
 {
     int line=0;int column=1;
     ButtonToTable->add_SpecificationData(MonitoringVersion_explain, myTable, line++, column, \
-                                         "V103B500D004", tr("Monitoring software version"), \
+                                         "V400B400D005", tr("Monitoring software version"), \
                                          tr("This is the monitor screen version number."));
 
     ButtonToTable->add_SpecificationData(DCAC_SysProtocol_Version_explain, myTable, line++, column, \
@@ -3651,7 +3652,7 @@ void MyWidget::SetDCACToTable(QTableWidget *myTable)
                                          tr("Auto"), tr("BAT protocol"), \
                                          tr("Battery Protocol: Parse the messages sent by BMS based on the selected battery protocol."
                                             "\nCurrently supported battery manufacturer protocols include:"
-                                            "MEGA, LISHEN, GREATPOWER, GOLD, BMSER, LANLI, SLANPOWER, PYLON, CATL, SUOYING, XINGWANGDA, KUBO, GOLD_V2, TOGOOD, PGS, WOBOYUAN, KGOOER, LD, PYLON_L, VILION, TUOPU,JDI,BGS,HUASU,ALPHA,SHIDING."
+                                            "MEGA, LISHEN, GREATPOWER, GOLD, BMSER, LANLI, SLANPOWER, PYLON, CATL, SUOYING, XINGWANGDA, KUBO, GOLD_V2, TOGOOD, PGS, WOBOYUAN, KGOOER, LD, PYLON_L, VILION, TUOPU,JDI,BGS,HUASU,ALPHA,SHIDING,Freedom."
                                             "\nSelect AUTO to automatically detect the battery manufacturer protocol."));
 
     //EMS通信方式
@@ -3824,13 +3825,16 @@ void MyWidget::SetLithiumToTable(QTableWidget *myTable)
                                         "3.2", tr("ForceCharge Off"), \
                                         tr("Forced Charging Off: When the cell voltage exceeds this value, the converter exits Battery Priority Mode and returns to the mode before Forced Charging was enabled."));
 
+    //DCAC单体保护电压
     ButtonToTable->add_SpecificationData(DCAC_cell_protect_explain, myTable, line++, column, \
-                                    "3650", tr("DCAC cell protect"), \
-                                    tr("Reserved function, settings are invalid."));
+                                    "3650", tr("DCAC cell protect voltage"), \
+                                    tr("When the battery current feedback type is 'Calculated Value', and the highest cell voltage in the battery reaches the cell protection voltage minus the cell protection voltage threshold,"
+                                       "the Inverter will enable linear current limiting to restrict the charging current at that time."));
 
+    //DCAC单体保护电压回差
     ButtonToTable->add_SpecificationData(DCAC_cell_delta_explain, myTable, line++, column, \
                                     "50", tr("DCAC cell delta"), \
-                                    tr("Reserved function, settings are invalid."));
+                                    tr("DCAC cell protect voltage delta."));
 
 }
 //设置铅酸电池页控件到表格
@@ -4150,7 +4154,11 @@ void MyWidget::SetAdvancedSetup2ToTable(QTableWidget *myTable)
     //电池电流反馈类型
     ButtonToTable->add_SpecificationData(BatteryCurrentFeedbackType_explain, myTable,line++, column, \
                                          tr("Calculated value"), tr("Battery current feedback type"), \
-                                         tr("Restore the factory default Settings."));
+                                         tr("The types of battery current feedback include 'Calculated Value' and 'BMS Value'.\n"
+                                            "Calculated Value: When the highest cell voltage in the battery reaches the cell protection voltage mi nus the cell protection voltage delta,"
+                                            "the inverter will enable linear current limiting to restrict the charging current at that time.\n"
+                                            "BMS Value: The inverter restricts the charging current based on the charging current limit value uploaded by the BMS.\n"
+                                            "The default is Calculated Value."));
 
     line = 0;
     column = 3;
@@ -4163,6 +4171,13 @@ void MyWidget::SetAdvancedSetup2ToTable(QTableWidget *myTable)
     ButtonToTable->add_SpecificationData(Relese_discharge_mark_explain, myTable,line++, column, \
                                          tr("Follow\nbattery"), tr("Release Prohibited Discharging Flag"), \
                                          tr("When the battery SOC is higher than the selected value, there are four options: Follow battery, 5%, 10%, 15%."));
+
+    //电表防逆流
+    ButtonToTable->add_SpecificationData(ElectricityMeterAntiBackflow_explain, myTable,line++, column, \
+                                         tr("Disable"), tr("Electric Meter Anti-Reverse Flow"), \
+                                         tr("Electric Meter Anti-Reverse Flow：Enable、Disable.\n"
+                                            "Enabling prevents system current from flowinginto the grid while Disabling allows systemcurrent to flow into the grid."));
+
     line = 0;
     column = 5;
     //用户密码
@@ -4174,6 +4189,11 @@ void MyWidget::SetAdvancedSetup2ToTable(QTableWidget *myTable)
     ButtonToTable->add_SpecificationData(RootPassport_explain, myTable, line++, column,\
                                          "******", tr("Maintain password"), \
                                          tr("Maintain password: Available for resetting the maintain password.(Note: The maintain password must be six digits.)"));
+
+    //电表型号
+        ButtonToTable->add_SpecificationData(MeterModel_explain, myTable,line++, column, \
+                                             tr("NONE"), tr("Meter Model"), \
+                                             tr("Select the meter model based on the type of meter. Currently available models include: DTSD1352, AMC96E4KC, ADL3000EB, and AMC72_96."));
 
 }
 //设置高级设置页3控件到表格

@@ -51,11 +51,11 @@
         <file>UI/HNAC_TurnOn.png</file>
         <file>UI/Next2.png</file>
         <file>UI/Previous.png</file>
-        <file>UI/MixedMode.png</file>
         <file>UI/3.png</file>
         <file>UI/user.png</file>
         <file>UI/Battery_area3.png</file>
         <file>UI/Battery_area2.png</file>
         <file>UI/i图标.png</file>
+        <file>UI/MixedMode.png</file>
     </qresource>
 </RCC>

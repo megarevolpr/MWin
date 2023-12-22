@@ -180,8 +180,7 @@ QToolTip{
 }</string>
                 </property>
                 <property name="text">
-                 <string>Change
-Language</string>
+                 <string/>
                 </property>
                </widget>
               </item>
@@ -6404,7 +6403,7 @@ QToolButton::hover{
                    <string notr="true"/>
                   </property>
                   <property name="currentIndex">
-                   <number>0</number>
+                   <number>1</number>
                   </property>
                   <widget class="QWidget" name="Mode_page">
                    <layout class="QGridLayout" name="gridLayout_52">
@@ -7374,7 +7373,7 @@ QPushButton::hover{
                          <string notr="true">background-color: rgb(255, 255, 255);</string>
                         </property>
                         <property name="currentIndex">
-                         <number>4</number>
+                         <number>8</number>
                         </property>
                         <widget class="QWidget" name="DCAC_page">
                          <property name="styleSheet">
@@ -9340,7 +9339,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="2" column="0">
                              <property name="text">
-                              <string/>
+                              <string>Battery current feedback type</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -9348,7 +9347,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="2" column="2">
                              <property name="text">
-                              <string/>
+                              <string>Electric Meter Anti-Reverse Flow</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -9364,7 +9363,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="2" column="4">
                              <property name="text">
-                              <string/>
+                              <string>Meter Model</string>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -12102,7 +12101,7 @@ QPushButton::hover{
                          <string notr="true"/>
                         </property>
                         <property name="currentIndex">
-                         <number>0</number>
+                         <number>1</number>
                         </property>
                         <widget class="QWidget" name="BatteryArea_page">
                          <property name="sizePolicy">
@@ -12148,8 +12147,8 @@ QPushButton::hover{
                                 <rect>
                                  <x>0</x>
                                  <y>0</y>
-                                 <width>921</width>
-                                 <height>572</height>
+                                 <width>71</width>
+                                 <height>71</height>
                                 </rect>
                                </property>
                                <layout class="QGridLayout" name="gridLayout_69">
@@ -12951,7 +12950,7 @@ border-image: url(:/new_ui/UI/Optimal_Mode_F.png);</string>
                            <number>0</number>
                           </property>
                           <item row="0" column="0">
-                           <layout class="QVBoxLayout" name="verticalLayout_67" stretch="3,3,3">
+                           <layout class="QVBoxLayout" name="verticalLayout_67" stretch="3,2,3">
                             <property name="spacing">
                              <number>6</number>
                             </property>
@@ -12972,7 +12971,7 @@ border-image: url(:/new_ui/UI/Optimal_Mode_F.png);</string>
                              </widget>
                             </item>
                             <item>
-                             <layout class="QHBoxLayout" name="horizontalLayout_74" stretch="2,4,4,4,5,3">
+                             <layout class="QHBoxLayout" name="horizontalLayout_74" stretch="2,5,4,4,5,3,4">
                               <property name="spacing">
                                <number>6</number>
                               </property>
@@ -12980,7 +12979,7 @@ border-image: url(:/new_ui/UI/Optimal_Mode_F.png);</string>
                                <widget class="QPlainTextEdit" name="plainTextEdit_18">
                                 <property name="font">
                                  <font>
-                                  <pointsize>14</pointsize>
+                                  <pointsize>13</pointsize>
                                  </font>
                                 </property>
                                 <property name="styleSheet">
@@ -13002,7 +13001,7 @@ padding: 3px;</string>
                                <widget class="QPlainTextEdit" name="plainTextEdit_19">
                                 <property name="font">
                                  <font>
-                                  <pointsize>14</pointsize>
+                                  <pointsize>13</pointsize>
                                  </font>
                                 </property>
                                 <property name="styleSheet">
@@ -13015,7 +13014,7 @@ border-radius: 10px;</string>
                                  <bool>true</bool>
                                 </property>
                                 <property name="plainText">
-                                 <string>Selection of peak,flat and valley sections of the grid under peak shaving and valley filling functions.</string>
+                                 <string>Selection &quot;Peak&quot;,&quot;Valley&quot; or &quot;Flat&quot; according to the gtid tariff.</string>
                                 </property>
                                </widget>
                               </item>
@@ -13023,7 +13022,7 @@ border-radius: 10px;</string>
                                <widget class="QPlainTextEdit" name="plainTextEdit_20">
                                 <property name="font">
                                  <font>
-                                  <pointsize>14</pointsize>
+                                  <pointsize>13</pointsize>
                                  </font>
                                 </property>
                                 <property name="styleSheet">
@@ -13036,7 +13035,7 @@ border-radius: 10px;</string>
                                  <bool>true</bool>
                                 </property>
                                 <property name="plainText">
-                                 <string>The system starts to run automatically when it reaches this time.</string>
+                                 <string>The time to start the autorun.</string>
                                 </property>
                                </widget>
                               </item>
@@ -13044,7 +13043,7 @@ border-radius: 10px;</string>
                                <widget class="QPlainTextEdit" name="plainTextEdit_21">
                                 <property name="font">
                                  <font>
-                                  <pointsize>14</pointsize>
+                                  <pointsize>13</pointsize>
                                  </font>
                                 </property>
                                 <property name="styleSheet">
@@ -13057,7 +13056,7 @@ border-radius: 10px;</string>
                                  <bool>true</bool>
                                 </property>
                                 <property name="plainText">
-                                 <string>The system stops running automatically when it reaches this time.</string>
+                                 <string>The time to end the autorun.</string>
                                 </property>
                                </widget>
                               </item>
@@ -13065,7 +13064,7 @@ border-radius: 10px;</string>
                                <widget class="QPlainTextEdit" name="plainTextEdit_22">
                                 <property name="font">
                                  <font>
-                                  <pointsize>14</pointsize>
+                                  <pointsize>13</pointsize>
                                  </font>
                                 </property>
                                 <property name="styleSheet">
@@ -13086,7 +13085,7 @@ border-radius: 10px;</string>
                                <widget class="QPlainTextEdit" name="plainTextEdit_23">
                                 <property name="font">
                                  <font>
-                                  <pointsize>14</pointsize>
+                                  <pointsize>13</pointsize>
                                  </font>
                                 </property>
                                 <property name="styleSheet">
@@ -13099,7 +13098,25 @@ border-radius: 10px;</string>
                                  <bool>true</bool>
                                 </property>
                                 <property name="plainText">
-                                 <string>Peak and trough shaving operating power.</string>
+                                 <string>The power value of the execution.</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QPlainTextEdit" name="plainTextEdit_24">
+                                <property name="font">
+                                 <font>
+                                  <pointsize>13</pointsize>
+                                 </font>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">border-width: 1px;
+border-style: solid;
+border-color: rgb(0, 0, 0);
+border-radius: 10px;</string>
+                                </property>
+                                <property name="plainText">
+                                 <string>The action performed by the generator.</string>
                                 </property>
                                </widget>
                               </item>
@@ -13120,7 +13137,13 @@ border-radius: 10px;
 padding: 3px;</string>
                               </property>
                               <property name="plainText">
-                               <string>&quot;Mixed Mode&quot; allows the system to automatically run different functional logic at different times. At the same time, it can run the function of &quot;peak shaving and valley filling&quot; according to the local peak and valley tariffs.</string>
+                               <string>The &quot;Mixed Mode&quot; primarily offers the following functionalities:
+1. Economic mode:
+   a. Peak: Performs &quot;Self-use&quot; mode. The load is energized by the battery.
+   b. Fair: Performs &quot;Self-use&quot; mode. Energy is supplied to the load from the grid.
+   c. Valley: Performs &quot;Battery priority&quot; mode. The grid charges the battery and provides energy to the load.
+2. peak shaving: according to the set power value (positive discharge, negative charge) to decide the battery charging or discharging.
+Next, you can decide whether or not to turn on the generator based on the selected &quot;Generator Action&quot;.</string>
                               </property>
                              </widget>
                             </item>
