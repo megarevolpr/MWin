@@ -10,7 +10,6 @@ QT       += core gui
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 DEFINES += QT_DEPRECATED_WARNINGS
 #QT      += network
-
 TARGET = MPS_V2.1.1
 TEMPLATE = app
 
@@ -21,12 +20,14 @@ include         ($$PWD/OperMode/OperMode.pri)
 include         ($$PWD/UpgradeTools/UpgradeTools.pri)
 include         ($$PWD/FaultTableInterface/FaultTableInterface.pri)
 include         ($$PWD/SpecificationData/SpecificationData.pri)
+include         ($$PWD/LogicDiagram/LogicDiagram.pri)
 
 INCLUDEPATH     +=$$PWD/Specification/
 INCLUDEPATH     +=$$PWD/OperMode/
 INCLUDEPATH     +=$$PWD/UpgradeTools/
 INCLUDEPATH     +=$$PWD/FaultTableInterface/
 INCLUDEPATH     +=$$PWD/SpecificationData/
+INCLUDEPATH     +=$$PWD/LogicDiagram/
 
 CONFIG += c++11
 

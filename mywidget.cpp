@@ -40,6 +40,7 @@ MyWidget::~MyWidget()
     delete UpgradeInterface;
     delete FaultTable;
     delete ButtonToTable;
+    delete ViewLogicDiagram;
     /****************QButtonGroup**************/
     //菜单
     delete Menu_Group;
@@ -413,6 +414,7 @@ MyWidget::~MyWidget()
     delete RootPassport_explain         ;  //超级权限说明
     delete Language_explain             ;  //语言说明
     delete System_upgrade_explain       ;    //系统升级说明
+    delete View_LogicDiagram_explain    ;  //逻辑图查看说明
     delete Sounds_explain               ;    //声音说明
     delete BmsComFaultTime_explain      ;
     delete EMSComFaultModel_explain     ;
@@ -590,6 +592,7 @@ void MyWidget::MemoryAllocation()
     UpgradeInterface = new UpgradeTools(this);
     FaultTable = new FaultTableInterface(this,LanguageType);
     ButtonToTable = new SpecificationData(this);
+    ViewLogicDiagram = new LogicDiagram(this);
     /****************QButtonGroup**************/
 
     new_ui_TabList<<ui->DCAC_Tab<<ui->DCDC_Tab<<ui->Lithium_Tab_2<<ui->Lead_Acid_Tab<<ui->MixedTime_Tab<<ui->Advanced_Tab_1
@@ -1195,6 +1198,7 @@ void MyWidget::MemoryAllocation()
     RootPassport_explain = new QPushButton;  //超级权限说明
     Language_explain = new QPushButton;  //语言说明
     System_upgrade_explain = new QPushButton;    //系统升级说明
+    View_LogicDiagram_explain = new QPushButton; //逻辑图查看说明
     Sounds_explain = new QPushButton;    //声音说明
     BmsComFaultTime_explain = new QPushButton;
     EMSComFaultModel_explain = new QPushButton;
@@ -1412,6 +1416,7 @@ void MyWidget::ChangeLanguage_btn_clicked()
     UpgradeInterface = new UpgradeTools(this);
     FaultTable = new FaultTableInterface(this,LanguageType);
     ButtonToTable = new SpecificationData(this);
+    ViewLogicDiagram = new LogicDiagram(this);
 
 
     UIPageInit();       //初始化界面
@@ -1445,6 +1450,34 @@ void MyWidget::UpgradeInterface_clicked()
 
 }
 
+//充电限流值计算逻辑图点击
+void MyWidget::LogicDiagramChargingCurrentLimitValues_clicked()
+{
+    int reply = QMessageBox::question(this, tr("DCAC cell protect voltage"),
+                                      tr("When the battery current feedback type is 'Calculated Value', "
+                                         "and the highest cell voltage in the battery reaches the cell protection voltage minus the cell protection voltage threshold,"
+                                         "the Inverter will enable linear current limiting to restrict the charging current at that time."),
+                                      tr("Click to view the logic diagram"),tr("OK"));
+    if (reply == 0)
+    {
+        // 点击了"Click to view the logic diagram"按钮的处理逻辑
+        if(ViewLogicDiagram->isHidden())
+        {
+            ViewLogicDiagram->show();
+        }
+        else
+        {
+            ViewLogicDiagram->hide();
+        }
+    }
+    else if (reply == 1)
+    {
+        // 点击了"OK"按钮的处理逻辑
+        return ;
+    }
+}
+
+
 //函数关联
 void MyWidget::LinkRelationship()
 {
@@ -1455,6 +1488,7 @@ void MyWidget::LinkRelationship()
     connect(HomeClick_Group, SIGNAL(buttonClicked(int)), this,SLOT(Home_Click(int)));//主页点击
     connect(ExitReturn_Group, SIGNAL(buttonClicked(int)), this,SLOT(Return(int)));//返回函数
     connect(System_upgrade_explain, SIGNAL(clicked(bool)), this, SLOT(UpgradeInterface_clicked())); //升级界面关联
+    connect(View_LogicDiagram_explain, SIGNAL(clicked(bool)), this, SLOT(LogicDiagramChargingCurrentLimitValues_clicked())); //逻辑图查看关联
 //    connect( ui->combox_Account, SIGNAL(currentIndexChanged(int)), this , SLOT(combox_Account_change(int)));//菜单页头像切换
     connect(pButton_BatteryData, SIGNAL(buttonClicked(int)), this,SLOT(BatteryData_clicked(int)));//电池数据
     connect(pButton_Version, SIGNAL(buttonClicked(int)), this,SLOT(SystemlnformationVer_clicked(int)));//系统信息相关按钮的说明
@@ -3826,10 +3860,14 @@ void MyWidget::SetLithiumToTable(QTableWidget *myTable)
                                         tr("Forced Charging Off: When the cell voltage exceeds this value, the converter exits Battery Priority Mode and returns to the mode before Forced Charging was enabled."));
 
     //DCAC单体保护电压
-    ButtonToTable->add_SpecificationData(DCAC_cell_protect_explain, myTable, line++, column, \
+    /*ButtonToTable->add_SpecificationData(DCAC_cell_protect_explain, myTable, line++, column, \
                                     "3650", tr("DCAC cell protect voltage"), \
                                     tr("When the battery current feedback type is 'Calculated Value', and the highest cell voltage in the battery reaches the cell protection voltage minus the cell protection voltage threshold,"
-                                       "the Inverter will enable linear current limiting to restrict the charging current at that time."));
+                                       "the Inverter will enable linear current limiting to restrict the charging current at that time."));*/
+
+    //逻辑图查看说明
+    View_LogicDiagram_explain->setText(tr("3650"));
+    myTable->setCellWidget(line++, column, (QWidget *)View_LogicDiagram_explain);
 
     //DCAC单体保护电压回差
     ButtonToTable->add_SpecificationData(DCAC_cell_delta_explain, myTable, line++, column, \
@@ -4949,7 +4987,6 @@ void MyWidget::on_TimeSeting_btn_clicked()
 //点击登录
 void MyWidget::on_ToLogin_bt_clicked()
 {
-
     if( ui->combox_Account->currentIndex() == Login_User )
     {
         ui->UI_stackedWidget->setCurrentWidget( ui->UI_page );
@@ -4958,7 +4995,6 @@ void MyWidget::on_ToLogin_bt_clicked()
         ui->BAT_stackedWidget->setCurrentWidget(ui->BAT_Lithium_page);
         ui->System_btn->setText(tr("System"));
         Account_Type = Login_User;
-        Account_Change( Account_Type );
 
     }
     else if( ui->combox_Account->currentIndex() == Login_Maintain )

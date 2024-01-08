@@ -396,7 +396,7 @@ QToolTip{
             <enum>QFrame::Raised</enum>
            </property>
            <property name="currentIndex">
-            <number>4</number>
+            <number>0</number>
            </property>
            <widget class="QWidget" name="Host_page">
             <layout class="QGridLayout" name="gridLayout_41">
@@ -2002,7 +2002,7 @@ QToolTip{
                 <string notr="true"/>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>3</number>
                </property>
                <widget class="QWidget" name="RT_Data_page">
                 <attribute name="title">
@@ -3702,7 +3702,7 @@ QPushButton::hover{
                     </font>
                    </property>
                    <property name="currentIndex">
-                    <number>0</number>
+                    <number>1</number>
                    </property>
                    <widget class="QWidget" name="BAT_Lithium_page">
                     <property name="font">
@@ -5207,7 +5207,7 @@ enable</string>
                 </font>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>3</number>
                </property>
                <widget class="QWidget" name="DataReport_page">
                 <attribute name="title">
@@ -6072,7 +6072,7 @@ QToolButton::hover{
                    </property>
                    <property name="icon">
                     <iconset resource="image.qrc">
-                     <normaloff>:/new_ui/UI/PowerOn.png</normaloff>:/new_ui/UI/PowerOn.png</iconset>
+                     <normaloff>:/new_ui/UI/SwitchOn.png</normaloff>:/new_ui/UI/SwitchOn.png</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -6145,7 +6145,7 @@ QToolButton::hover{
                    </property>
                    <property name="icon">
                     <iconset resource="image.qrc">
-                     <normaloff>:/new_ui/UI/开关机-02.png</normaloff>:/new_ui/UI/开关机-02.png</iconset>
+                     <normaloff>:/new_ui/UI/SwitchOff.png</normaloff>:/new_ui/UI/SwitchOff.png</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -6245,7 +6245,7 @@ QToolButton::hover{
                    </property>
                    <property name="icon">
                     <iconset resource="image.qrc">
-                     <normaloff>:/new_ui/UI/PowerOn.png</normaloff>:/new_ui/UI/PowerOn.png</iconset>
+                     <normaloff>:/new_ui/UI/SwitchOn.png</normaloff>:/new_ui/UI/SwitchOn.png</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -6318,7 +6318,7 @@ QToolButton::hover{
                    </property>
                    <property name="icon">
                     <iconset resource="image.qrc">
-                     <normaloff>:/new_ui/UI/开关机-02.png</normaloff>:/new_ui/UI/开关机-02.png</iconset>
+                     <normaloff>:/new_ui/UI/SwitchOff.png</normaloff>:/new_ui/UI/SwitchOff.png</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -7006,7 +7006,7 @@ Settings</string>
                                <property name="styleSheet">
                                 <string notr="true">
 QPushButton{
-border-image: url(:/new_ui/UI/i图标.png);
+border-image: url(:/new_ui/UI/i_Icon.png);
 }
 QToolTip{ 
     background-color: white; 
@@ -7018,6 +7018,12 @@ QPushButton::hover{
                                </property>
                                <property name="text">
                                 <string/>
+                               </property>
+                               <property name="iconSize">
+                                <size>
+                                 <width>16</width>
+                                 <height>16</height>
+                                </size>
                                </property>
                               </widget>
                              </item>
@@ -7374,7 +7380,7 @@ QPushButton::hover{
                          <string notr="true">background-color: rgb(255, 255, 255);</string>
                         </property>
                         <property name="currentIndex">
-                         <number>8</number>
+                         <number>2</number>
                         </property>
                         <widget class="QWidget" name="DCAC_page">
                          <property name="styleSheet">
@@ -8850,7 +8856,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                              <bool>false</bool>
                             </attribute>
                             <attribute name="verticalHeaderDefaultSectionSize">
-                             <number>27</number>
+                             <number>40</number>
                             </attribute>
                             <attribute name="verticalHeaderMinimumSectionSize">
                              <number>40</number>
@@ -9244,7 +9250,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                              <bool>false</bool>
                             </attribute>
                             <attribute name="verticalHeaderDefaultSectionSize">
-                             <number>27</number>
+                             <number>40</number>
                             </attribute>
                             <attribute name="verticalHeaderMinimumSectionSize">
                              <number>40</number>
@@ -9627,7 +9633,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                              <bool>false</bool>
                             </attribute>
                             <attribute name="verticalHeaderDefaultSectionSize">
-                             <number>27</number>
+                             <number>40</number>
                             </attribute>
                             <attribute name="verticalHeaderMinimumSectionSize">
                              <number>40</number>
@@ -10004,7 +10010,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                              <number>100</number>
                             </attribute>
                             <attribute name="verticalHeaderDefaultSectionSize">
-                             <number>28</number>
+                             <number>40</number>
                             </attribute>
                             <attribute name="verticalHeaderMinimumSectionSize">
                              <number>40</number>
@@ -11474,8 +11480,8 @@ QPushButton::hover{
                                       <rect>
                                        <x>0</x>
                                        <y>0</y>
-                                       <width>492</width>
-                                       <height>323</height>
+                                       <width>385</width>
+                                       <height>264</height>
                                       </rect>
                                      </property>
                                      <property name="font">
@@ -12102,7 +12108,7 @@ QPushButton::hover{
                          <string notr="true"/>
                         </property>
                         <property name="currentIndex">
-                         <number>0</number>
+                         <number>6</number>
                         </property>
                         <widget class="QWidget" name="BatteryArea_page">
                          <property name="sizePolicy">
@@ -12148,7 +12154,7 @@ QPushButton::hover{
                                 <rect>
                                  <x>0</x>
                                  <y>0</y>
-                                 <width>81</width>
+                                 <width>71</width>
                                  <height>71</height>
                                 </rect>
                                </property>
