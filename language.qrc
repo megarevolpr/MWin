@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>Language/CN.qm</file>
+        <file>Language/CN.ts</file>
     </qresource>
 </RCC>

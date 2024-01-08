@@ -163,7 +163,7 @@ void FaultTableInterface::on_Search_btn_clicked()
 void FaultTableInterface::resizeEvent(QResizeEvent *event)
 {
     int x = this->frameGeometry().width(); //获取ui形成窗口宽度
-    int y = this->frameGeometry().height();//获取窗口高度
+//int y = this->frameGeometry().height();//获取窗口高度
 
     ui->tableWidget->setColumnWidth(0,(x-5)*0.2);//450\650\150
     ui->tableWidget->setColumnWidth(1,(x-5)*0.15);

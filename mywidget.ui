@@ -180,7 +180,8 @@ QToolTip{
 }</string>
                 </property>
                 <property name="text">
-                 <string/>
+                 <string>Change
+Language</string>
                 </property>
                </widget>
               </item>
@@ -2001,7 +2002,7 @@ QToolTip{
                 <string notr="true"/>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>3</number>
                </property>
                <widget class="QWidget" name="RT_Data_page">
                 <attribute name="title">
@@ -2545,6 +2546,15 @@ QPushButton::hover{
                               </color>
                              </brush>
                             </colorrole>
+                            <colorrole role="PlaceholderText">
+                             <brush brushstyle="NoBrush">
+                              <color alpha="128">
+                               <red>255</red>
+                               <green>255</green>
+                               <blue>255</blue>
+                              </color>
+                             </brush>
+                            </colorrole>
                            </active>
                            <inactive>
                             <colorrole role="WindowText">
@@ -2601,6 +2611,15 @@ QPushButton::hover{
                               </color>
                              </brush>
                             </colorrole>
+                            <colorrole role="PlaceholderText">
+                             <brush brushstyle="NoBrush">
+                              <color alpha="128">
+                               <red>255</red>
+                               <green>255</green>
+                               <blue>255</blue>
+                              </color>
+                             </brush>
+                            </colorrole>
                            </inactive>
                            <disabled>
                             <colorrole role="WindowText">
@@ -2653,6 +2672,15 @@ QPushButton::hover{
                               <color alpha="255">
                                <red>85</red>
                                <green>170</green>
+                               <blue>255</blue>
+                              </color>
+                             </brush>
+                            </colorrole>
+                            <colorrole role="PlaceholderText">
+                             <brush brushstyle="NoBrush">
+                              <color alpha="128">
+                               <red>255</red>
+                               <green>255</green>
                                <blue>255</blue>
                               </color>
                              </brush>
@@ -2768,6 +2796,15 @@ QPushButton::hover{
                               </color>
                              </brush>
                             </colorrole>
+                            <colorrole role="PlaceholderText">
+                             <brush brushstyle="NoBrush">
+                              <color alpha="128">
+                               <red>255</red>
+                               <green>255</green>
+                               <blue>255</blue>
+                              </color>
+                             </brush>
+                            </colorrole>
                            </active>
                            <inactive>
                             <colorrole role="WindowText">
@@ -2824,6 +2861,15 @@ QPushButton::hover{
                               </color>
                              </brush>
                             </colorrole>
+                            <colorrole role="PlaceholderText">
+                             <brush brushstyle="NoBrush">
+                              <color alpha="128">
+                               <red>255</red>
+                               <green>255</green>
+                               <blue>255</blue>
+                              </color>
+                             </brush>
+                            </colorrole>
                            </inactive>
                            <disabled>
                             <colorrole role="WindowText">
@@ -2876,6 +2922,15 @@ QPushButton::hover{
                               <color alpha="255">
                                <red>85</red>
                                <green>170</green>
+                               <blue>255</blue>
+                              </color>
+                             </brush>
+                            </colorrole>
+                            <colorrole role="PlaceholderText">
+                             <brush brushstyle="NoBrush">
+                              <color alpha="128">
+                               <red>255</red>
+                               <green>255</green>
                                <blue>255</blue>
                               </color>
                              </brush>
@@ -2991,6 +3046,15 @@ QPushButton::hover{
                               </color>
                              </brush>
                             </colorrole>
+                            <colorrole role="PlaceholderText">
+                             <brush brushstyle="NoBrush">
+                              <color alpha="128">
+                               <red>255</red>
+                               <green>255</green>
+                               <blue>255</blue>
+                              </color>
+                             </brush>
+                            </colorrole>
                            </active>
                            <inactive>
                             <colorrole role="WindowText">
@@ -3047,6 +3111,15 @@ QPushButton::hover{
                               </color>
                              </brush>
                             </colorrole>
+                            <colorrole role="PlaceholderText">
+                             <brush brushstyle="NoBrush">
+                              <color alpha="128">
+                               <red>255</red>
+                               <green>255</green>
+                               <blue>255</blue>
+                              </color>
+                             </brush>
+                            </colorrole>
                            </inactive>
                            <disabled>
                             <colorrole role="WindowText">
@@ -3099,6 +3172,15 @@ QPushButton::hover{
                               <color alpha="255">
                                <red>85</red>
                                <green>170</green>
+                               <blue>255</blue>
+                              </color>
+                             </brush>
+                            </colorrole>
+                            <colorrole role="PlaceholderText">
+                             <brush brushstyle="NoBrush">
+                              <color alpha="128">
+                               <red>255</red>
+                               <green>255</green>
                                <blue>255</blue>
                               </color>
                              </brush>
@@ -3701,7 +3783,7 @@ QPushButton::hover{
                     </font>
                    </property>
                    <property name="currentIndex">
-                    <number>0</number>
+                    <number>1</number>
                    </property>
                    <widget class="QWidget" name="BAT_Lithium_page">
                     <property name="font">
@@ -5206,7 +5288,7 @@ enable</string>
                 </font>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>3</number>
                </property>
                <widget class="QWidget" name="DataReport_page">
                 <attribute name="title">
@@ -6071,7 +6153,7 @@ QToolButton::hover{
                    </property>
                    <property name="icon">
                     <iconset resource="image.qrc">
-                     <normaloff>:/new_ui/UI/开关机-01.png</normaloff>:/new_ui/UI/开关机-01.png</iconset>
+                     <normaloff>:/new_ui/UI/SwitchOn.png</normaloff>:/new_ui/UI/SwitchOn.png</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -6144,7 +6226,7 @@ QToolButton::hover{
                    </property>
                    <property name="icon">
                     <iconset resource="image.qrc">
-                     <normaloff>:/new_ui/UI/开关机-02.png</normaloff>:/new_ui/UI/开关机-02.png</iconset>
+                     <normaloff>:/new_ui/UI/SwitchOff.png</normaloff>:/new_ui/UI/SwitchOff.png</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -6244,7 +6326,7 @@ QToolButton::hover{
                    </property>
                    <property name="icon">
                     <iconset resource="image.qrc">
-                     <normaloff>:/new_ui/UI/开关机-01.png</normaloff>:/new_ui/UI/开关机-01.png</iconset>
+                     <normaloff>:/new_ui/UI/SwitchOn.png</normaloff>:/new_ui/UI/SwitchOn.png</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -6317,7 +6399,7 @@ QToolButton::hover{
                    </property>
                    <property name="icon">
                     <iconset resource="image.qrc">
-                     <normaloff>:/new_ui/UI/开关机-02.png</normaloff>:/new_ui/UI/开关机-02.png</iconset>
+                     <normaloff>:/new_ui/UI/SwitchOff.png</normaloff>:/new_ui/UI/SwitchOff.png</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -7005,7 +7087,7 @@ Settings</string>
                                <property name="styleSheet">
                                 <string notr="true">
 QPushButton{
-border-image: url(:/new_ui/UI/i图标.png);
+border-image: url(:/new_ui/UI/i_Icon.png);
 }
 QToolTip{ 
     background-color: white; 
@@ -7017,6 +7099,12 @@ QPushButton::hover{
                                </property>
                                <property name="text">
                                 <string/>
+                               </property>
+                               <property name="iconSize">
+                                <size>
+                                 <width>16</width>
+                                 <height>16</height>
+                                </size>
                                </property>
                               </widget>
                              </item>
@@ -7373,7 +7461,7 @@ QPushButton::hover{
                          <string notr="true">background-color: rgb(255, 255, 255);</string>
                         </property>
                         <property name="currentIndex">
-                         <number>8</number>
+                         <number>2</number>
                         </property>
                         <widget class="QWidget" name="DCAC_page">
                          <property name="styleSheet">
@@ -8149,11 +8237,11 @@ Generator turn off SOC(B1)</string>
                               <attribute name="verticalHeaderVisible">
                                <bool>false</bool>
                               </attribute>
-                              <attribute name="verticalHeaderDefaultSectionSize">
-                               <number>49</number>
-                              </attribute>
                               <attribute name="verticalHeaderMinimumSectionSize">
                                <number>40</number>
+                              </attribute>
+                              <attribute name="verticalHeaderDefaultSectionSize">
+                               <number>49</number>
                               </attribute>
                               <row/>
                               <row/>
@@ -8479,11 +8567,11 @@ Set rule:B1 - A1 ≥ 10V</string>
                               <attribute name="verticalHeaderVisible">
                                <bool>false</bool>
                               </attribute>
-                              <attribute name="verticalHeaderDefaultSectionSize">
-                               <number>49</number>
-                              </attribute>
                               <attribute name="verticalHeaderMinimumSectionSize">
                                <number>40</number>
+                              </attribute>
+                              <attribute name="verticalHeaderDefaultSectionSize">
+                               <number>49</number>
                               </attribute>
                               <row/>
                               <row/>
@@ -8848,10 +8936,10 @@ Set rule:B1 - A1 ≥ 10V</string>
                             <attribute name="verticalHeaderVisible">
                              <bool>false</bool>
                             </attribute>
-                            <attribute name="verticalHeaderDefaultSectionSize">
-                             <number>27</number>
-                            </attribute>
                             <attribute name="verticalHeaderMinimumSectionSize">
+                             <number>40</number>
+                            </attribute>
+                            <attribute name="verticalHeaderDefaultSectionSize">
                              <number>40</number>
                             </attribute>
                             <row/>
@@ -9242,10 +9330,10 @@ Set rule:B1 - A1 ≥ 10V</string>
                             <attribute name="verticalHeaderVisible">
                              <bool>false</bool>
                             </attribute>
-                            <attribute name="verticalHeaderDefaultSectionSize">
-                             <number>27</number>
-                            </attribute>
                             <attribute name="verticalHeaderMinimumSectionSize">
+                             <number>40</number>
+                            </attribute>
+                            <attribute name="verticalHeaderDefaultSectionSize">
                              <number>40</number>
                             </attribute>
                             <row/>
@@ -9625,10 +9713,10 @@ Set rule:B1 - A1 ≥ 10V</string>
                             <attribute name="verticalHeaderVisible">
                              <bool>false</bool>
                             </attribute>
-                            <attribute name="verticalHeaderDefaultSectionSize">
-                             <number>27</number>
-                            </attribute>
                             <attribute name="verticalHeaderMinimumSectionSize">
+                             <number>40</number>
+                            </attribute>
+                            <attribute name="verticalHeaderDefaultSectionSize">
                              <number>40</number>
                             </attribute>
                             <row/>
@@ -9996,16 +10084,16 @@ Set rule:B1 - A1 ≥ 10V</string>
                             <property name="editTriggers">
                              <set>QAbstractItemView::NoEditTriggers</set>
                             </property>
-                            <attribute name="horizontalHeaderDefaultSectionSize">
-                             <number>176</number>
-                            </attribute>
                             <attribute name="horizontalHeaderMinimumSectionSize">
                              <number>100</number>
                             </attribute>
-                            <attribute name="verticalHeaderDefaultSectionSize">
-                             <number>28</number>
+                            <attribute name="horizontalHeaderDefaultSectionSize">
+                             <number>176</number>
                             </attribute>
                             <attribute name="verticalHeaderMinimumSectionSize">
+                             <number>40</number>
+                            </attribute>
+                            <attribute name="verticalHeaderDefaultSectionSize">
                              <number>40</number>
                             </attribute>
                             <row>
@@ -11473,8 +11561,8 @@ QPushButton::hover{
                                       <rect>
                                        <x>0</x>
                                        <y>0</y>
-                                       <width>385</width>
-                                       <height>264</height>
+                                       <width>355</width>
+                                       <height>251</height>
                                       </rect>
                                      </property>
                                      <property name="font">
@@ -12101,7 +12189,7 @@ QPushButton::hover{
                          <string notr="true"/>
                         </property>
                         <property name="currentIndex">
-                         <number>1</number>
+                         <number>6</number>
                         </property>
                         <widget class="QWidget" name="BatteryArea_page">
                          <property name="sizePolicy">
@@ -12147,8 +12235,8 @@ QPushButton::hover{
                                 <rect>
                                  <x>0</x>
                                  <y>0</y>
-                                 <width>71</width>
-                                 <height>71</height>
+                                 <width>84</width>
+                                 <height>70</height>
                                 </rect>
                                </property>
                                <layout class="QGridLayout" name="gridLayout_69">

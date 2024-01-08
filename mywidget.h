@@ -49,6 +49,7 @@
 #include <QToolTip>
 #include "OperMode.h"
 #include "upgradetools.h"
+#include "LogicDiagram.h"
 #include "FaultTableInterface.h"
 #include "SpecificationData/specificationdata.h"
 
@@ -98,7 +99,7 @@
 #define PORTDATA_PAGE_NUM       11
 
 //当前登录角色
-#define User                    0
+#define m_User                    0
 #define Maintain                1
 #define Root                    2
 #define None                    3
@@ -120,6 +121,7 @@ public:
     QPushButton *AdvancedSetup_btn;//高级设置入口
     FaultTableInterface *FaultTable;
     SpecificationData *ButtonToTable;
+    LogicDiagram *ViewLogicDiagram;
     /************************实时数据******************************/
     //变流器
     QPushButton *MPS_vol_AB_explain;
@@ -484,6 +486,7 @@ public:
     QPushButton *RootPassport_explain;  //超级权限说明
     QPushButton *Language_explain;  //语言说明
     QPushButton *System_upgrade_explain;    //系统升级说明
+    QPushButton *View_LogicDiagram_explain; //逻辑图查看说明
     QPushButton *Sounds_explain;    //声音说明
     QPushButton *BmsComFaultTime_explain;
     QPushButton *EMSComFaultModel_explain;
@@ -719,6 +722,7 @@ private slots:
 
     void ChangeLanguage_btn_clicked();//切换语言
     void UpgradeInterface_clicked();//升级界面
+    void LogicDiagramChargingCurrentLimitValues_clicked();//充电限流值逻辑图点击
 
     void on_RTD_DC_clicked();
 
