@@ -22,7 +22,7 @@ MyWidget::MyWidget(QWidget *parent) :
     System_Current_Page = DCAC_PAGE_NUM;        //系统当前页
     Advanced_Current_Page = Advanced_PAGE1_NUM; //高级设置当前页
     ModeIntr_Current_Page   = 0;                //模式介绍页当前页码
-    Account_Type = None;                        //当前登录角色 -- 上电默认未登录
+    Account_Type = Login_None;                        //当前登录角色 -- 上电默认未登录
     ui->setupUi(this);
     ui->UI_stackedWidget->setCurrentWidget(ui->UI_page);
     ui->stackedWidget->setCurrentWidget(ui->Host_page); //执行程序后，自动进入到主页
@@ -2147,19 +2147,19 @@ void MyWidget::EnableTableButton(QTableWidget *myTable, int rowCount, int column
 //菜单页头像切换
 void MyWidget::combox_Account_change(int Index)
 {
-    if( Index == User )
+    if( Index == Login_User )
     {
         ui->Login_Avatar_lb->setStyleSheet( "border-image: url(:/new_ui/UI/用户1-min.png);\
                                              min-width:126px;min-height:126px;max-width:126px;\
                                              max-height: 126px;border-radius: 63px;border:1px solid black;");
     }
-    if( Index == Maintain )
+    if( Index ==Login_Maintain )
     {
         ui->Login_Avatar_lb->setStyleSheet( "border-image: url(:/new_ui/UI/维修1-min.png);\
                                             min-width:126px;min-height:126px;max-width:126px;\
                                             max-height: 126px;border-radius: 63px;border:1px solid black;");
     }
-    if( Index == Root )
+    if( Index == Login_Root )
     {
         ui->Login_Avatar_lb->setStyleSheet( "border-image: url(:/new_ui/UI/研发3-min.png);\
                                              min-width:126px;min-height:126px;max-width:126px;\
@@ -4281,9 +4281,9 @@ void MyWidget::SetAdvancedSetup3ToTable(QTableWidget *myTable)
 
     //变流器防逆流
     ButtonToTable->add_SpecificationData(Grid_connected_mode_of_Inv_explain, myTable, line++, column, \
-                                         tr("Disable"), tr("Converter Anti-Reverse Flow"), \
-                                         tr("Converter Anti-Reverse Flow: Enable, Disable;"
-                                            "\nEnabling prevents converter current from flowing into the grid, while Disabling allows converter current to flow into the grid."));
+                                         tr("Non countercurrent"), tr("Converter Anti-Reverse Flow"), \
+                                         tr("Converter Anti-Reverse Flow: Countercurrent, Non Countercurrent;\n"
+                                            "Countercurrent allows converter current to flow into the grid, while Non Countercurrent prevents converter current from flowing into the grid."));
 
     //过载降频
     ButtonToTable->add_SpecificationData(Pshedding_Freq_explain, myTable, line++, column, \
@@ -4950,35 +4950,35 @@ void MyWidget::on_TimeSeting_btn_clicked()
 void MyWidget::on_ToLogin_bt_clicked()
 {
 
-    if( ui->combox_Account->currentIndex() == User )
+    if( ui->combox_Account->currentIndex() == Login_User )
     {
         ui->UI_stackedWidget->setCurrentWidget( ui->UI_page );
         ui->stackedWidget->setCurrentWidget( ui->Host_page );
         ui->RTState_stackedWidget->setCurrentWidget(ui->RTStateData_page);
         ui->BAT_stackedWidget->setCurrentWidget(ui->BAT_Lithium_page);
         ui->System_btn->setText(tr("System"));
-        Account_Type = User;
+        Account_Type = Login_User;
         Account_Change( Account_Type );
 
     }
-    else if( ui->combox_Account->currentIndex() == Maintain )
+    else if( ui->combox_Account->currentIndex() == Login_Maintain )
     {
         ui->UI_stackedWidget->setCurrentWidget( ui->UI_page );
         ui->stackedWidget->setCurrentWidget( ui->Host_page );
         ui->RTState_stackedWidget->setCurrentWidget(ui->RTStateData_page);
         ui->BAT_stackedWidget->setCurrentWidget(ui->BAT_Lithium_page);
         ui->System_btn->setText(tr("System"));
-        Account_Type = Maintain;
+        Account_Type = Login_Maintain;
         Account_Change( Account_Type );
     }
-    else if( ui->combox_Account->currentIndex() == Root )
+    else if( ui->combox_Account->currentIndex() == Login_Root )
     {
         ui->UI_stackedWidget->setCurrentWidget( ui->UI_page );
         ui->stackedWidget->setCurrentWidget( ui->Host_page );
         ui->RTState_stackedWidget->setCurrentWidget(ui->RTStateData_page);
         ui->BAT_stackedWidget->setCurrentWidget(ui->BAT_Lithium_page);
         ui->System_btn->setText(tr("System"));
-        Account_Type = Root;
+        Account_Type = Login_Root;
         Account_Change( Account_Type );
     }
 }

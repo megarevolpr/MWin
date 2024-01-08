@@ -1,6 +1,5 @@
 <RCC>
     <qresource prefix="/new_ui">
-        <file>UI/开关机-01.png</file>
         <file>UI/开关机-02.png</file>
         <file>UI/ProcessBar2-01.png</file>
         <file>UI/ProcessBar2-02.png</file>
@@ -57,5 +56,6 @@
         <file>UI/Battery_area2.png</file>
         <file>UI/i图标.png</file>
         <file>UI/MixedMode.png</file>
+        <file>UI/PowerOn.png</file>
     </qresource>
 </RCC>

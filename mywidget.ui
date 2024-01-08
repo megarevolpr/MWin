@@ -180,7 +180,8 @@ QToolTip{
 }</string>
                 </property>
                 <property name="text">
-                 <string/>
+                 <string>Change
+Language</string>
                 </property>
                </widget>
               </item>
@@ -6071,7 +6072,7 @@ QToolButton::hover{
                    </property>
                    <property name="icon">
                     <iconset resource="image.qrc">
-                     <normaloff>:/new_ui/UI/开关机-01.png</normaloff>:/new_ui/UI/开关机-01.png</iconset>
+                     <normaloff>:/new_ui/UI/PowerOn.png</normaloff>:/new_ui/UI/PowerOn.png</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -6244,7 +6245,7 @@ QToolButton::hover{
                    </property>
                    <property name="icon">
                     <iconset resource="image.qrc">
-                     <normaloff>:/new_ui/UI/开关机-01.png</normaloff>:/new_ui/UI/开关机-01.png</iconset>
+                     <normaloff>:/new_ui/UI/PowerOn.png</normaloff>:/new_ui/UI/PowerOn.png</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -6403,7 +6404,7 @@ QToolButton::hover{
                    <string notr="true"/>
                   </property>
                   <property name="currentIndex">
-                   <number>1</number>
+                   <number>0</number>
                   </property>
                   <widget class="QWidget" name="Mode_page">
                    <layout class="QGridLayout" name="gridLayout_52">
@@ -11473,8 +11474,8 @@ QPushButton::hover{
                                       <rect>
                                        <x>0</x>
                                        <y>0</y>
-                                       <width>385</width>
-                                       <height>264</height>
+                                       <width>492</width>
+                                       <height>323</height>
                                       </rect>
                                      </property>
                                      <property name="font">
@@ -12101,7 +12102,7 @@ QPushButton::hover{
                          <string notr="true"/>
                         </property>
                         <property name="currentIndex">
-                         <number>1</number>
+                         <number>0</number>
                         </property>
                         <widget class="QWidget" name="BatteryArea_page">
                          <property name="sizePolicy">
@@ -12147,7 +12148,7 @@ QPushButton::hover{
                                 <rect>
                                  <x>0</x>
                                  <y>0</y>
-                                 <width>71</width>
+                                 <width>81</width>
                                  <height>71</height>
                                 </rect>
                                </property>
