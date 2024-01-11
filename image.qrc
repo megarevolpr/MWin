@@ -17,7 +17,6 @@
         <file>UI/DCstop.png</file>
         <file>UI/PV.png</file>
         <file>UI/Last.png</file>
-        <file>UI/Enter.png</file>
         <file>UI/Logo.png</file>
         <file>UI/house.png</file>
         <file>UI/Power_Standby.png</file>
@@ -40,7 +39,6 @@
         <file>UI/Self_Use_A.png</file>
         <file>UI/Self_Use_B.png</file>
         <file>UI/Self_Use_C.png</file>
-        <file>UI/Enter.png</file>
         <file>UI/HNAC_Data.png</file>
         <file>UI/HNAC_Host .png</file>
         <file>UI/HNAC_Record.png</file>

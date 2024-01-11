@@ -10,8 +10,7 @@ QT       += core gui
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 DEFINES += QT_DEPRECATED_WARNINGS
 #QT      += network
-
-TARGET = MPS_V2.1.0
+TARGET = MPS_V2.1.1
 TEMPLATE = app
 
 

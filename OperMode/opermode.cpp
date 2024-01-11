@@ -536,7 +536,7 @@ void OperMode::on_Manual_btn_clicked()
 void OperMode::resizeEvent(QResizeEvent *event)
 {
     int x = this->frameGeometry().width(); //获取ui形成窗口宽度
-    int y = this->frameGeometry().height();//获取窗口高度
+//    int y = this->frameGeometry().height();//获取窗口高度
 
 //    ui->ExplainWidget->setGeometry(0,0,x-160,y-50);
 //    ui->Explainpage->setGeometry(0,0,x-160,y-50);

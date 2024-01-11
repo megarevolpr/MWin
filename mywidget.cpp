@@ -22,7 +22,7 @@ MyWidget::MyWidget(QWidget *parent) :
     System_Current_Page = DCAC_PAGE_NUM;        //系统当前页
     Advanced_Current_Page = Advanced_PAGE1_NUM; //高级设置当前页
     ModeIntr_Current_Page   = 0;                //模式介绍页当前页码
-    Account_Type = None;                        //当前登录角色 -- 上电默认未登录
+    Account_Type = Login_None;                        //当前登录角色 -- 上电默认未登录
     ui->setupUi(this);
     ui->UI_stackedWidget->setCurrentWidget(ui->UI_page);
     ui->stackedWidget->setCurrentWidget(ui->Host_page); //执行程序后，自动进入到主页
@@ -1465,17 +1465,17 @@ void MyWidget::UpgradeInterface_clicked()
 //充电限流值计算逻辑图点击
 void MyWidget::LogicDiagramChargingCurrentLimitValues_clicked()
 {
-    int reply = QMessageBox::question(this, tr("DCAC cell protect voltage")\
-                          ,tr("When the battery current feedback type is 'Calculated Value', and the highest cell voltage in the battery reaches the cell protection voltage minus the cell protection voltage threshold,"
-                              "the Inverter will enable linear current limiting to restrict the charging current at that time."), tr("Click to view the logic diagram"),tr("OK"));
+    int reply = QMessageBox::question(this, tr("DCAC cell protect voltage"),
+                                      tr("When the battery current feedback type is 'Calculated Value', "
+                                         "and the highest cell voltage in the battery reaches the cell protection voltage minus the cell protection voltage threshold,"
+                                         "the Inverter will enable linear current limiting to restrict the charging current at that time."),
+                                      tr("Click to view the logic diagram"),tr("OK"));
     if (reply == 0)
     {
         // 点击了"Click to view the logic diagram"按钮的处理逻辑
         if(ViewLogicDiagram->isHidden())
         {
-            ViewLogicDiagram->LogicDiagramBtn();
             ViewLogicDiagram->show();
-            ViewLogicDiagram->InitialLoadingImages();
         }
         else
         {
@@ -2193,19 +2193,19 @@ void MyWidget::EnableTableButton(QTableWidget *myTable, int rowCount, int column
 //菜单页头像切换
 void MyWidget::combox_Account_change(int Index)
 {
-    if( Index == m_User )
+    if( Index == Login_User )
     {
         ui->Login_Avatar_lb->setStyleSheet( "border-image: url(:/new_ui/UI/用户1-min.png);\
                                              min-width:126px;min-height:126px;max-width:126px;\
                                              max-height: 126px;border-radius: 63px;border:1px solid black;");
     }
-    if( Index == Maintain )
+    if( Index ==Login_Maintain )
     {
         ui->Login_Avatar_lb->setStyleSheet( "border-image: url(:/new_ui/UI/维修1-min.png);\
                                             min-width:126px;min-height:126px;max-width:126px;\
                                             max-height: 126px;border-radius: 63px;border:1px solid black;");
     }
-    if( Index == Root )
+    if( Index == Login_Root )
     {
         ui->Login_Avatar_lb->setStyleSheet( "border-image: url(:/new_ui/UI/研发3-min.png);\
                                              min-width:126px;min-height:126px;max-width:126px;\
@@ -3871,11 +3871,12 @@ void MyWidget::SetLithiumToTable(QTableWidget *myTable)
                                         "3.2", tr("ForceCharge Off"), \
                                         tr("Forced Charging Off: When the cell voltage exceeds this value, the converter exits Battery Priority Mode and returns to the mode before Forced Charging was enabled."));
 
-//    //DCAC单体保护电压
-//    ButtonToTable->add_SpecificationData(DCAC_cell_protect_explain, myTable, line++, column, \
-//                                    "3650", tr("DCAC cell protect voltage"), \
-//                                    tr("When the battery current feedback type is 'Calculated Value', and the highest cell voltage in the battery reaches the cell protection voltage minus the cell protection voltage threshold,"
-//                                       "the Inverter will enable linear current limiting to restrict the charging current at that time."));
+    //DCAC单体保护电压
+    /*ButtonToTable->add_SpecificationData(DCAC_cell_protect_explain, myTable, line++, column, \
+                                    "3650", tr("DCAC cell protect voltage"), \
+                                    tr("When the battery current feedback type is 'Calculated Value', and the highest cell voltage in the battery reaches the cell protection voltage minus the cell protection voltage threshold,"
+                                       "the Inverter will enable linear current limiting to restrict the charging current at that time."));*/
+
     //逻辑图查看说明
     View_LogicDiagram_explain->setText(tr("3650"));
     myTable->setCellWidget(line++, column, (QWidget *)View_LogicDiagram_explain);
@@ -5025,36 +5026,34 @@ void MyWidget::on_TimeSeting_btn_clicked()
 //点击登录
 void MyWidget::on_ToLogin_bt_clicked()
 {
-
-    if( ui->combox_Account->currentIndex() == m_User )
+    if( ui->combox_Account->currentIndex() == Login_User )
     {
         ui->UI_stackedWidget->setCurrentWidget( ui->UI_page );
         ui->stackedWidget->setCurrentWidget( ui->Host_page );
         ui->RTState_stackedWidget->setCurrentWidget(ui->RTStateData_page);
         ui->BAT_stackedWidget->setCurrentWidget(ui->BAT_Lithium_page);
         ui->System_btn->setText(tr("System"));
-        Account_Type = m_User;
-        Account_Change( Account_Type );
+        Account_Type = Login_User;
 
     }
-    else if( ui->combox_Account->currentIndex() == Maintain )
+    else if( ui->combox_Account->currentIndex() == Login_Maintain )
     {
         ui->UI_stackedWidget->setCurrentWidget( ui->UI_page );
         ui->stackedWidget->setCurrentWidget( ui->Host_page );
         ui->RTState_stackedWidget->setCurrentWidget(ui->RTStateData_page);
         ui->BAT_stackedWidget->setCurrentWidget(ui->BAT_Lithium_page);
         ui->System_btn->setText(tr("System"));
-        Account_Type = Maintain;
+        Account_Type = Login_Maintain;
         Account_Change( Account_Type );
     }
-    else if( ui->combox_Account->currentIndex() == Root )
+    else if( ui->combox_Account->currentIndex() == Login_Root )
     {
         ui->UI_stackedWidget->setCurrentWidget( ui->UI_page );
         ui->stackedWidget->setCurrentWidget( ui->Host_page );
         ui->RTState_stackedWidget->setCurrentWidget(ui->RTStateData_page);
         ui->BAT_stackedWidget->setCurrentWidget(ui->BAT_Lithium_page);
         ui->System_btn->setText(tr("System"));
-        Account_Type = Root;
+        Account_Type = Login_Root;
         Account_Change( Account_Type );
     }
 }

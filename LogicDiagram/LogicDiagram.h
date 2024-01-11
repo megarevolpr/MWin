@@ -9,6 +9,11 @@
 #include <QScrollBar>
 #include <QtMath>
 
+#define ONLY_LOAD       0   //仅加载图片，使其清晰
+#define LOAD_RESTORE    1   //加载图片，使其清晰，并将其大小复原默认
+
+#define Q_UNUSED(x) (void)x;
+
 namespace Ui {
 class LogicDiagram;
 }
@@ -21,14 +26,13 @@ public:
     explicit LogicDiagram(QWidget *parent = nullptr,int LanguageType=0);
     ~LogicDiagram(); //析构函数，便于查看系统回收的过程
 
-    QPixmap srcImage,changeImage,normal;   //原始图像以及缩放后的图像
+    QPixmap srcImage,changeImage;   //原始图像以及缩放后的图像
     float ratio = 1.0;      //缩放的比例
     float ratio_t;
 
     int Language;
 
-    void LogicDiagramBtn();//槽函数
-    void on_tabWidget_currentChanged(int index);
+    void LogicDiagramBtn(int SizeType);//槽函数
 
     void InitialLoadingImages();
 
@@ -43,6 +47,9 @@ protected:
     void mouseMoveEvent(QMouseEvent *event) override;
     void mouseReleaseEvent(QMouseEvent *event) ;
     void keyReleaseEvent(QKeyEvent *event) override;
+    void showEvent(QShowEvent *event) override;
+
+    virtual void resizeEvent(QResizeEvent *event)override;//调整控件大小
 
 private:
     Ui::LogicDiagram *ui;

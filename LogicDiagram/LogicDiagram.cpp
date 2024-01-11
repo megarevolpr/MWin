@@ -7,12 +7,9 @@ LogicDiagram::LogicDiagram(QWidget *parent,int LanguageType) :
     ui(new Ui::LogicDiagram)
 {
     ui->setupUi(this);
-    setWindowState(Qt::WindowMaximized); // 最大化
+//    setWindowState(Qt::WindowMaximized); // 最大化
     Language = LanguageType;
 
-//    LogicDiagramBtn();
-//    normal = srcImage.scaled(1000,1400);//保存初次加载的标准图
-//    ratio = 1.0;
 }
 
 
@@ -22,21 +19,24 @@ LogicDiagram::~LogicDiagram()
 }
 
 //加载图像
-void LogicDiagram::LogicDiagramBtn()
+void LogicDiagram::LogicDiagramBtn(int SizeType)
 {
      //设置label为居中显式
      ui->label->setAlignment(Qt::AlignCenter);
      QString image_path;
      //读取并显示图像
      if(Language == 0)
-     {
         image_path = (":new_ui/UI/LogicDiagram.png");
-     }
-     else {
+     else
         image_path = (":new_ui/UI/LogicDiagram_En.png");
-     }
+
+     //图片加载类型
      QImage image(image_path);
-     image = image.scaled(ui->label->size(),Qt::IgnoreAspectRatio,Qt::SmoothTransformation);
+     if(SizeType == LOAD_RESTORE)
+         image = image.scaled((ui->scrollArea->height()*0.7),ui->scrollArea->height(),Qt::IgnoreAspectRatio,Qt::SmoothTransformation);
+     else
+        image = image.scaled((ui->label->size().height()*0.7),ui->label->size().height(),Qt::IgnoreAspectRatio,Qt::SmoothTransformation);
+
      srcImage = QPixmap::fromImage(image);
      //重绘
      ui->label->setPixmap(srcImage);
@@ -101,85 +101,77 @@ void LogicDiagram::wheelEvent(QWheelEvent *event)
 {
     if (event->modifiers() == Qt::ControlModifier)
     {
-        // 获取normal的宽度和高度
-        int normalWidth = normal.width();
-        int normalHeight = normal.height();
+        int normalWidth = ui->scrollArea->width();
+        int normalHeight = ui->scrollArea->height();
 
         double scaleFactor = qPow(1.02, event->delta() / 102.0); // 根据滚轮滚动的距离计算缩放因子
         ratio *= scaleFactor;
         int w = ratio * srcImage.width();
         int h = ratio * srcImage.height();
-
-        // 如果srcImage比normal小，就将srcImage缩放到与normal相同大小
-        if (w < normalWidth || h < normalHeight) {
-            changeImage = srcImage.scaled(normalWidth, normalHeight);
+        // 最小为图片完全展示的大小
+        if (w < normalWidth && h < normalHeight)
+        {
+            changeImage = srcImage.scaled((normalHeight*0.7), normalHeight);
             ui->label->setPixmap(changeImage);
             ratio = ratio_t;
         }
-        else {
+        else
+        {
             changeImage = srcImage.scaled(w, h);
             ui->label->setPixmap(changeImage);
             ratio_t = ratio;
         }
-
         event->accept();
     }
     //当滚轮远离使用者时：
 }
 
 //检测Ctrl键松开情况
-void
-LogicDiagram::keyReleaseEvent(QKeyEvent *event)
+void LogicDiagram::keyReleaseEvent(QKeyEvent *event)
 {
     if (event->key() == Qt::Key_Control)
     {
         // Ctrl键被松开
         // 执行app()函数
-        LogicDiagramBtn();//重新加载图片，使其更加清晰
+        LogicDiagramBtn(ONLY_LOAD);//重新加载图片，使其更加清晰
         ratio = 1.0;
         event->accept();
     }
 }
 
-//点击table头 加载图片
-void LogicDiagram::on_tabWidget_currentChanged(int index)
+void LogicDiagram::showEvent(QShowEvent *event)
 {
-    if(index==1)
+    QWidget::showEvent(event); // 调用基类的 showEvent
+    if (event->isAccepted())
     {
-        LogicDiagramBtn();
-
-        normal = srcImage.scaled(ui->scrollArea->viewport()->size().width(),ui->scrollArea->viewport()->size().height());;//保存初次加载的标准图
+        // 窗口显示后要调用的函数
         ratio = 1.0;
-    }
-    else {
-        return ;
+        LogicDiagramBtn(LOAD_RESTORE);
     }
 }
 
+
 void LogicDiagram::InitialLoadingImages()
 {
-    LogicDiagramBtn();
-
-    normal = srcImage.scaled(ui->scrollArea->viewport()->size().width(),ui->scrollArea->viewport()->size().height());;//保存初次加载的标准图
+    LogicDiagramBtn(LOAD_RESTORE);
     ratio = 1.0;
 }
 
 //重新加载恢复到标准大小
 void LogicDiagram::on_pushButton_clicked()
 {
-    // 获取normal的宽度和高度
-
-    int normalWidth = normal.width();
-    int normalHeight = normal.height();
-    qDebug()<<"width"<<normalWidth;
-    qDebug()<<"height"<<normalHeight;
-    changeImage = srcImage.scaled(normalWidth, normalHeight);
-//    ui->label->setPixmap(changeImage);
-    ui->label->setPixmap(normal);
     ratio = 1.0;
+    LogicDiagramBtn(LOAD_RESTORE);
 }
 
 void LogicDiagram::on_pushButton_2_clicked()
 {
     this->hide();
+}
+//表格宽度随窗口大小变化
+void LogicDiagram::resizeEvent(QResizeEvent *event)
+{
+    Q_UNUSED(event);
+    ratio = 1.0;
+    LogicDiagramBtn(ONLY_LOAD);
 }

@@ -99,10 +99,10 @@
 #define PORTDATA_PAGE_NUM       11
 
 //当前登录角色
-#define m_User                    0
-#define Maintain                1
-#define Root                    2
-#define None                    3
+#define Login_User                    0
+#define Login_Maintain                1
+#define Login_Root                    2
+#define Login_None                    3
 
 namespace Ui {
 class MyWidget;
