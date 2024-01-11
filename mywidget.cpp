@@ -469,31 +469,37 @@ MyWidget::~MyWidget()
     delete DI_1_Enable_explain ;
     delete DI_1_NC_O_explain   ;
     delete DI_1_Action_explain ;
+    delete DI_1_Function_explain ;
 
     //输入干接点2说明
     delete DI_2_Enable_explain ;
     delete DI_2_NC_O_explain   ;
     delete DI_2_Action_explain ;
+    delete DI_2_Function_explain ;
 
     //输入干接点3说明
     delete DI_3_Enable_explain ;
     delete DI_3_NC_O_explain   ;
     delete DI_3_Action_explain ;
+    delete DI_3_Function_explain ;
 
     //输入干接点4说明
     delete DI_4_Enable_explain ;
     delete DI_4_NC_O_explain   ;
     delete DI_4_Action_explain ;
+    delete DI_4_Function_explain ;
 
     //输入干接点5说明
     delete DI_5_Enable_explain ;
     delete DI_5_NC_O_explain   ;
     delete DI_5_Action_explain ;
+    delete DI_5_Function_explain ;
 
     //输入干接点6说明
     delete DI_6_Enable_explain ;
     delete DI_6_NC_O_explain   ;
     delete DI_6_Action_explain ;
+    delete DI_6_Function_explain ;
 
     /***************************DCAC调试**************************/
     delete Debug_variable_1_explain        ;  //调试变量1
@@ -1254,31 +1260,37 @@ void MyWidget::MemoryAllocation()
     DI_1_Enable_explain = new QPushButton;
     DI_1_NC_O_explain   = new QPushButton;
     DI_1_Action_explain = new QPushButton;
+    DI_1_Function_explain = new QPushButton;
 
     //输入干接点2说明
     DI_2_Enable_explain = new QPushButton;
     DI_2_NC_O_explain   = new QPushButton;
     DI_2_Action_explain = new QPushButton;
+    DI_2_Function_explain = new QPushButton;
 
     //输入干接点3说明
     DI_3_Enable_explain = new QPushButton;
     DI_3_NC_O_explain   = new QPushButton;
     DI_3_Action_explain = new QPushButton;
+    DI_3_Function_explain = new QPushButton;
 
     //输入干接点4说明
     DI_4_Enable_explain = new QPushButton;
     DI_4_NC_O_explain   = new QPushButton;
     DI_4_Action_explain = new QPushButton;
+    DI_4_Function_explain = new QPushButton;
 
     //输入干接点5说明
     DI_5_Enable_explain = new QPushButton;
     DI_5_NC_O_explain   = new QPushButton;
     DI_5_Action_explain = new QPushButton;
+    DI_5_Function_explain = new QPushButton;
 
     //输入干接点6说明
     DI_6_Enable_explain = new QPushButton;
     DI_6_NC_O_explain   = new QPushButton;
     DI_6_Action_explain = new QPushButton;
+    DI_6_Function_explain = new QPushButton;
 
     //输出干接点1说明
     /*DO_1_Enable_explain = new QPushButton;
@@ -4318,9 +4330,9 @@ void MyWidget::SetAdvancedSetup3ToTable(QTableWidget *myTable)
 
     //变流器防逆流
     ButtonToTable->add_SpecificationData(Grid_connected_mode_of_Inv_explain, myTable, line++, column, \
-                                         tr("Disable"), tr("Converter Anti-Reverse Flow"), \
-                                         tr("Converter Anti-Reverse Flow: Enable, Disable;"
-                                            "\nEnabling prevents converter current from flowing into the grid, while Disabling allows converter current to flow into the grid."));
+                                         tr("Non\nCountercurrent"), tr("Converter Anti-Reverse Flow"), \
+                                         tr("Converter Anti-Reverse Flow: Countercurrent, Non Countercurrent;"
+                                            "\nCountercurrent allows converter current to flow into the grid, while Non Countercurrent prevents converter current from flowing into the grid."));
 
     //过载降频
     ButtonToTable->add_SpecificationData(Pshedding_Freq_explain, myTable, line++, column, \
@@ -4387,6 +4399,12 @@ void MyWidget::Device_TabToTable(QTableWidget *myTable)
     QString str2 = tr("Input Dry Contact: nEnabled: "
                       "Triggers the Action when the dry contact detects a state other than the specified NO/NC."
                       "\nDisabled: No action is taken when the dry contact detects a state other than the specified NO/NC.");
+    QString str3 = tr(" ");
+    QString str4 = tr(" ");
+    QString str5 = tr(" ");
+    QString str6 = tr(" ");
+    QString str7 = tr(" ");
+    QString str8 = tr(" ");
 
     //使能/禁止
     int line = 0;int column = 0;//当前解释的button行和列
@@ -4448,6 +4466,27 @@ void MyWidget::Device_TabToTable(QTableWidget *myTable)
 
     ButtonToTable->add_SpecificationData(DI_6_Action_explain, myTable, line++, column, \
                                     tr("Shut down"), tr("DI_6_Action"), str1);
+
+    //功能
+    line = 0;
+    column = 3;
+    ButtonToTable->add_SpecificationData(DI_1_Function_explain, myTable, line++, column, \
+                                    tr("EPO"), tr("DI_1_Function"), str3);
+
+    ButtonToTable->add_SpecificationData(DI_2_Function_explain, myTable, line++, column, \
+                                    tr("Shut Down"), tr("DI_2_Function"), str4);
+
+    ButtonToTable->add_SpecificationData(DI_3_Function_explain, myTable, line++, column, \
+                                    tr("Access Control"), tr("DI_3_Function"), str5);
+
+    ButtonToTable->add_SpecificationData(DI_4_Function_explain, myTable, line++, column, \
+                                    tr("ATS Signal"), tr("DI_4_Function"), str6);
+
+    ButtonToTable->add_SpecificationData(DI_5_Function_explain, myTable, line++, column, \
+                                    tr("Flooding"), tr("DI_5_Function"), str7);
+
+    ButtonToTable->add_SpecificationData(DI_6_Function_explain, myTable, line++, column, \
+                                    tr("Fire fighting"), tr("DI_6_Function"), str8);
 }
 //设置高级设置DCAC调试页控件到表格
 void MyWidget::DCAC_Debugg(QTableWidget *myTable)

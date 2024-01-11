@@ -541,21 +541,27 @@ public:
     QPushButton *DI_1_Enable_explain;   //输入干接点1说明
     QPushButton *DI_1_NC_O_explain;
     QPushButton *DI_1_Action_explain;
+    QPushButton *DI_1_Function_explain;
     QPushButton *DI_2_Enable_explain;   //输入干接点2说明
     QPushButton *DI_2_NC_O_explain;
     QPushButton *DI_2_Action_explain;
+    QPushButton *DI_2_Function_explain;
     QPushButton *DI_3_Enable_explain;   //输入干接点3说明
     QPushButton *DI_3_NC_O_explain;
     QPushButton *DI_3_Action_explain;
+    QPushButton *DI_3_Function_explain;
     QPushButton *DI_4_Enable_explain;   //输入干接点4说明
     QPushButton *DI_4_NC_O_explain;
     QPushButton *DI_4_Action_explain;
+    QPushButton *DI_4_Function_explain;
     QPushButton *DI_5_Enable_explain;   //输入干接点5说明
     QPushButton *DI_5_NC_O_explain;
     QPushButton *DI_5_Action_explain;
+    QPushButton *DI_5_Function_explain;
     QPushButton *DI_6_Enable_explain;   //输入干接点6说明
     QPushButton *DI_6_NC_O_explain;
     QPushButton *DI_6_Action_explain;
+    QPushButton *DI_6_Function_explain;
     /*QPushButton *DO_1_Enable_explain;   //输出干接点1说明
     QPushButton *DO_1_NC_O_explain;
     QPushButton *DO_1_Action_explain;

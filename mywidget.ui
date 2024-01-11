@@ -2002,7 +2002,7 @@ QToolTip{
                 <string notr="true"/>
                </property>
                <property name="currentIndex">
-                <number>3</number>
+                <number>0</number>
                </property>
                <widget class="QWidget" name="RT_Data_page">
                 <attribute name="title">
@@ -6485,7 +6485,7 @@ QToolButton::hover{
                    <string notr="true"/>
                   </property>
                   <property name="currentIndex">
-                   <number>1</number>
+                   <number>3</number>
                   </property>
                   <widget class="QWidget" name="Mode_page">
                    <layout class="QGridLayout" name="gridLayout_52">
@@ -7461,7 +7461,7 @@ QPushButton::hover{
                          <string notr="true">background-color: rgb(255, 255, 255);</string>
                         </property>
                         <property name="currentIndex">
-                         <number>2</number>
+                         <number>0</number>
                         </property>
                         <widget class="QWidget" name="DCAC_page">
                          <property name="styleSheet">
@@ -10163,7 +10163,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </column>
                             <item row="0" column="3">
                              <property name="text">
-                              <string>EPO</string>
+                              <string/>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -10171,7 +10171,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="1" column="3">
                              <property name="text">
-                              <string>Shut Down</string>
+                              <string/>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -10179,7 +10179,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="2" column="3">
                              <property name="text">
-                              <string>Access Control</string>
+                              <string/>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -10187,7 +10187,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="3" column="3">
                              <property name="text">
-                              <string>ATS Signal</string>
+                              <string/>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -10195,7 +10195,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="4" column="3">
                              <property name="text">
-                              <string>Flooding</string>
+                              <string/>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -10203,7 +10203,7 @@ Set rule:B1 - A1 ≥ 10V</string>
                             </item>
                             <item row="5" column="3">
                              <property name="text">
-                              <string>Fire fighting</string>
+                              <string/>
                              </property>
                              <property name="textAlignment">
                               <set>AlignCenter</set>
@@ -11561,8 +11561,8 @@ QPushButton::hover{
                                       <rect>
                                        <x>0</x>
                                        <y>0</y>
-                                       <width>355</width>
-                                       <height>251</height>
+                                       <width>627</width>
+                                       <height>613</height>
                                       </rect>
                                      </property>
                                      <property name="font">
@@ -12189,7 +12189,7 @@ QPushButton::hover{
                          <string notr="true"/>
                         </property>
                         <property name="currentIndex">
-                         <number>6</number>
+                         <number>2</number>
                         </property>
                         <widget class="QWidget" name="BatteryArea_page">
                          <property name="sizePolicy">
@@ -12235,8 +12235,8 @@ QPushButton::hover{
                                 <rect>
                                  <x>0</x>
                                  <y>0</y>
-                                 <width>84</width>
-                                 <height>70</height>
+                                 <width>921</width>
+                                 <height>572</height>
                                 </rect>
                                </property>
                                <layout class="QGridLayout" name="gridLayout_69">

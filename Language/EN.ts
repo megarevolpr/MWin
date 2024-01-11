@@ -84,17 +84,17 @@ automatically and reset time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LogicDiagram/LogicDiagram.ui" line="473"/>
+        <location filename="../LogicDiagram/LogicDiagram.ui" line="482"/>
         <source>Logic Diagram</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LogicDiagram/LogicDiagram.ui" line="1421"/>
+        <location filename="../LogicDiagram/LogicDiagram.ui" line="1494"/>
         <source>Reload</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../LogicDiagram/LogicDiagram.ui" line="1453"/>
+        <location filename="../LogicDiagram/LogicDiagram.ui" line="1526"/>
         <source>Previous
 Page</source>
         <translation type="unfinished"></translation>
@@ -104,7 +104,7 @@ Page</source>
     <name>MyWidget</name>
     <message>
         <location filename="../mywidget.ui" line="7558"/>
-        <location filename="../mywidget.cpp" line="3673"/>
+        <location filename="../mywidget.cpp" line="3687"/>
         <source>Battery type</source>
         <translation type="unfinished"></translation>
     </message>
@@ -115,7 +115,7 @@ Page</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="8962"/>
-        <location filename="../mywidget.cpp" line="4016"/>
+        <location filename="../mywidget.cpp" line="4030"/>
         <source>Power control type</source>
         <translation type="unfinished"></translation>
     </message>
@@ -126,7 +126,7 @@ Page</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="9097"/>
-        <location filename="../mywidget.cpp" line="4148"/>
+        <location filename="../mywidget.cpp" line="4162"/>
         <source>Language</source>
         <translation type="unfinished"></translation>
     </message>
@@ -145,7 +145,7 @@ Page</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="9134"/>
-        <location filename="../mywidget.cpp" line="4153"/>
+        <location filename="../mywidget.cpp" line="4167"/>
         <source>Sounds</source>
         <translation type="unfinished"></translation>
     </message>
@@ -157,7 +157,7 @@ Page</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="9266"/>
-        <location filename="../mywidget.cpp" line="4113"/>
+        <location filename="../mywidget.cpp" line="4127"/>
         <source>Energy priority</source>
         <translation type="unfinished"></translation>
     </message>
@@ -168,19 +168,19 @@ Page</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="9747"/>
-        <location filename="../mywidget.cpp" line="4294"/>
+        <location filename="../mywidget.cpp" line="4308"/>
         <source>Machine type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="9784"/>
-        <location filename="../mywidget.cpp" line="4299"/>
+        <location filename="../mywidget.cpp" line="4313"/>
         <source>Machine capacity</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="9393"/>
-        <location filename="../mywidget.cpp" line="4186"/>
+        <location filename="../mywidget.cpp" line="4200"/>
         <source>Restore factory</source>
         <translation type="unfinished"></translation>
     </message>
@@ -191,7 +191,7 @@ Page</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="9171"/>
-        <location filename="../mywidget.cpp" line="4158"/>
+        <location filename="../mywidget.cpp" line="4172"/>
         <source>Clear Data</source>
         <translation type="unfinished"></translation>
     </message>
@@ -202,7 +202,7 @@ Page</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="9924"/>
-        <location filename="../mywidget.cpp" line="4264"/>
+        <location filename="../mywidget.cpp" line="4278"/>
         <source>HVRT enable</source>
         <translation type="unfinished"></translation>
     </message>
@@ -213,19 +213,19 @@ Page</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="9985"/>
-        <location filename="../mywidget.cpp" line="4372"/>
+        <location filename="../mywidget.cpp" line="4386"/>
         <source>Insulation detection enable DCDC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="9998"/>
-        <location filename="../mywidget.cpp" line="4273"/>
+        <location filename="../mywidget.cpp" line="4287"/>
         <source>AFD enable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="8970"/>
-        <location filename="../mywidget.cpp" line="4075"/>
+        <location filename="../mywidget.cpp" line="4089"/>
         <source>Serial Communication Address</source>
         <translation type="unfinished"></translation>
     </message>
@@ -241,7 +241,7 @@ Page</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="10035"/>
-        <location filename="../mywidget.cpp" line="4284"/>
+        <location filename="../mywidget.cpp" line="4298"/>
         <source>PrimaryFreq enable</source>
         <translation type="unfinished"></translation>
     </message>
@@ -252,7 +252,7 @@ Page</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="10006"/>
-        <location filename="../mywidget.cpp" line="4330"/>
+        <location filename="../mywidget.cpp" line="4344"/>
         <source>Inertia enable</source>
         <translation type="unfinished"></translation>
     </message>
@@ -263,13 +263,13 @@ Page</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="9932"/>
-        <location filename="../mywidget.cpp" line="4319"/>
+        <location filename="../mywidget.cpp" line="4333"/>
         <source>Converter Anti-Reverse Flow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="10043"/>
-        <location filename="../mywidget.cpp" line="4335"/>
+        <location filename="../mywidget.cpp" line="4349"/>
         <source>QP curve</source>
         <translation type="unfinished"></translation>
     </message>
@@ -289,7 +289,7 @@ Page</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10182"/>
+        <location filename="../mywidget.cpp" line="4480"/>
         <source>Access Control</source>
         <translation type="unfinished"></translation>
     </message>
@@ -301,8 +301,8 @@ Page</source>
     <message>
         <location filename="../mywidget.ui" line="10414"/>
         <location filename="../mywidget.ui" line="10773"/>
-        <location filename="../mywidget.cpp" line="4458"/>
-        <location filename="../mywidget.cpp" line="4615"/>
+        <location filename="../mywidget.cpp" line="4499"/>
+        <location filename="../mywidget.cpp" line="4656"/>
         <source>Debug variable 1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -320,8 +320,8 @@ Page</source>
     <message>
         <location filename="../mywidget.ui" line="10446"/>
         <location filename="../mywidget.ui" line="10797"/>
-        <location filename="../mywidget.cpp" line="4462"/>
-        <location filename="../mywidget.cpp" line="4619"/>
+        <location filename="../mywidget.cpp" line="4503"/>
+        <location filename="../mywidget.cpp" line="4660"/>
         <source>Debug variable 2</source>
         <translation type="unfinished"></translation>
     </message>
@@ -332,16 +332,16 @@ Page</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="10670"/>
-        <location filename="../mywidget.cpp" line="4531"/>
+        <location filename="../mywidget.cpp" line="4572"/>
         <source>Logic state</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="10478"/>
         <location filename="../mywidget.ui" line="10821"/>
-        <location filename="../mywidget.cpp" line="4466"/>
-        <location filename="../mywidget.cpp" line="4623"/>
-        <location filename="../mywidget.cpp" line="4627"/>
+        <location filename="../mywidget.cpp" line="4507"/>
+        <location filename="../mywidget.cpp" line="4664"/>
+        <location filename="../mywidget.cpp" line="4668"/>
         <source>Debug variable 3</source>
         <translation type="unfinished"></translation>
     </message>
@@ -367,7 +367,7 @@ Page</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="10702"/>
-        <location filename="../mywidget.cpp" line="4576"/>
+        <location filename="../mywidget.cpp" line="4617"/>
         <source>Grid flag</source>
         <translation type="unfinished"></translation>
     </message>
@@ -383,7 +383,7 @@ Page</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="10678"/>
-        <location filename="../mywidget.cpp" line="4572"/>
+        <location filename="../mywidget.cpp" line="4613"/>
         <source>Grid protect flag</source>
         <translation type="unfinished"></translation>
     </message>
@@ -400,8 +400,8 @@ Page</source>
     <message>
         <location filename="../mywidget.ui" line="10590"/>
         <location filename="../mywidget.ui" line="10911"/>
-        <location filename="../mywidget.cpp" line="4560"/>
-        <location filename="../mywidget.cpp" line="4639"/>
+        <location filename="../mywidget.cpp" line="4601"/>
+        <location filename="../mywidget.cpp" line="4680"/>
         <source>PV flag</source>
         <translation type="unfinished"></translation>
     </message>
@@ -419,8 +419,8 @@ Page</source>
     <message>
         <location filename="../mywidget.ui" line="10622"/>
         <location filename="../mywidget.ui" line="10887"/>
-        <location filename="../mywidget.cpp" line="4564"/>
-        <location filename="../mywidget.cpp" line="4635"/>
+        <location filename="../mywidget.cpp" line="4605"/>
+        <location filename="../mywidget.cpp" line="4676"/>
         <source>DC bus flag</source>
         <translation type="unfinished"></translation>
     </message>
@@ -438,8 +438,8 @@ Page</source>
     <message>
         <location filename="../mywidget.ui" line="10654"/>
         <location filename="../mywidget.ui" line="10863"/>
-        <location filename="../mywidget.cpp" line="4568"/>
-        <location filename="../mywidget.cpp" line="4631"/>
+        <location filename="../mywidget.cpp" line="4609"/>
+        <location filename="../mywidget.cpp" line="4672"/>
         <source>INT main flag</source>
         <translation type="unfinished"></translation>
     </message>
@@ -472,8 +472,8 @@ Page</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="10598"/>
-        <location filename="../mywidget.cpp" line="4601"/>
-        <location filename="../mywidget.cpp" line="4681"/>
+        <location filename="../mywidget.cpp" line="4642"/>
+        <location filename="../mywidget.cpp" line="4722"/>
         <source>Monitor Order</source>
         <translation type="unfinished"></translation>
     </message>
@@ -607,7 +607,7 @@ mode</source>
     <message>
         <location filename="../mywidget.ui" line="6940"/>
         <location filename="../mywidget.ui" line="13555"/>
-        <location filename="../mywidget.cpp" line="1902"/>
+        <location filename="../mywidget.cpp" line="1916"/>
         <source>Manual</source>
         <translation type="unfinished"></translation>
     </message>
@@ -619,13 +619,13 @@ Settings</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="7209"/>
-        <location filename="../mywidget.cpp" line="1903"/>
+        <location filename="../mywidget.cpp" line="1917"/>
         <source>DC/AC Parameters</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="7282"/>
-        <location filename="../mywidget.cpp" line="1902"/>
+        <location filename="../mywidget.cpp" line="1916"/>
         <source>Self-issuance and self-use</source>
         <translation type="unfinished"></translation>
     </message>
@@ -661,7 +661,7 @@ Settings</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="7614"/>
-        <location filename="../mywidget.cpp" line="3610"/>
+        <location filename="../mywidget.cpp" line="3624"/>
         <source>Grid expansion</source>
         <translation type="unfinished"></translation>
     </message>
@@ -707,7 +707,7 @@ Settings</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="7881"/>
-        <location filename="../mywidget.cpp" line="3769"/>
+        <location filename="../mywidget.cpp" line="3783"/>
         <source>IV curve scanning</source>
         <translation type="unfinished"></translation>
     </message>
@@ -763,7 +763,7 @@ Settings</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="11159"/>
-        <location filename="../mywidget.cpp" line="5122"/>
+        <location filename="../mywidget.cpp" line="5163"/>
         <source>2023-09-27  17:27:56.201  CAN 2: Tx  Len=8  ID=9f000100 00 00 00 00 00 00 00 00
 2023-09-27  17:27:56.302  CAN 2: Rx  Len=8  ID=9f000301 0d 00 64 00 70 17 e8 03
 2023-09-27  17:27:57.105  CAN 2: Rx  Len=8  ID=9f000300 40 1f a0 0f e8 03 e8 03
@@ -920,13 +920,13 @@ Settings</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="8598"/>
-        <location filename="../mywidget.cpp" line="3913"/>
+        <location filename="../mywidget.cpp" line="3927"/>
         <source>Generator turn on voltage(A1)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="8644"/>
-        <location filename="../mywidget.cpp" line="3918"/>
+        <location filename="../mywidget.cpp" line="3932"/>
         <source>Generator turn off voltage(B1)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1073,7 +1073,7 @@ mode</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="7945"/>
-        <location filename="../mywidget.cpp" line="3763"/>
+        <location filename="../mywidget.cpp" line="3777"/>
         <source>Outer Ring Centralized Control</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1084,7 +1084,7 @@ mode</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="9948"/>
-        <location filename="../mywidget.cpp" line="4368"/>
+        <location filename="../mywidget.cpp" line="4382"/>
         <source>Insulation detection enable DCAC</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1139,7 +1139,7 @@ mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10198"/>
+        <location filename="../mywidget.cpp" line="4486"/>
         <source>Flooding</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1156,15 +1156,15 @@ mode</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="11270"/>
-        <location filename="../mywidget.cpp" line="5043"/>
-        <location filename="../mywidget.cpp" line="5059"/>
+        <location filename="../mywidget.cpp" line="5084"/>
+        <location filename="../mywidget.cpp" line="5100"/>
         <source>Battery Information</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="11320"/>
-        <location filename="../mywidget.cpp" line="2280"/>
-        <location filename="../mywidget.cpp" line="4912"/>
+        <location filename="../mywidget.cpp" line="2294"/>
+        <location filename="../mywidget.cpp" line="4953"/>
         <source>1/2</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1233,13 +1233,13 @@ mode</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="13350"/>
-        <location filename="../mywidget.cpp" line="1902"/>
+        <location filename="../mywidget.cpp" line="1916"/>
         <source>Battery Area</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="13432"/>
-        <location filename="../mywidget.cpp" line="1902"/>
+        <location filename="../mywidget.cpp" line="1916"/>
         <source>Battery Priority</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1260,7 +1260,7 @@ mode</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="13903"/>
-        <location filename="../mywidget.cpp" line="2010"/>
+        <location filename="../mywidget.cpp" line="2024"/>
         <source>Not Logged in</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1302,7 +1302,7 @@ mode</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="14755"/>
-        <location filename="../mywidget.cpp" line="5074"/>
+        <location filename="../mywidget.cpp" line="5115"/>
         <source>Password</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1324,7 +1324,7 @@ correct.</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="14887"/>
-        <location filename="../mywidget.cpp" line="1432"/>
+        <location filename="../mywidget.cpp" line="1444"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1384,12 +1384,12 @@ Set rule:B1 - A1 ≥ 10V</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="9800"/>
-        <location filename="../mywidget.cpp" line="4346"/>
+        <location filename="../mywidget.cpp" line="4360"/>
         <source>Rack</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10190"/>
+        <location filename="../mywidget.cpp" line="4483"/>
         <source>ATS Signal</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1397,12 +1397,12 @@ Set rule:B1 - A1 ≥ 10V</source>
         <location filename="../mywidget.ui" line="10225"/>
         <location filename="../mywidget.ui" line="10269"/>
         <location filename="../mywidget.ui" line="10313"/>
-        <location filename="../mywidget.cpp" line="4412"/>
-        <location filename="../mywidget.cpp" line="4415"/>
-        <location filename="../mywidget.cpp" line="4418"/>
-        <location filename="../mywidget.cpp" line="4421"/>
-        <location filename="../mywidget.cpp" line="4424"/>
-        <location filename="../mywidget.cpp" line="4427"/>
+        <location filename="../mywidget.cpp" line="4432"/>
+        <location filename="../mywidget.cpp" line="4435"/>
+        <location filename="../mywidget.cpp" line="4438"/>
+        <location filename="../mywidget.cpp" line="4441"/>
+        <location filename="../mywidget.cpp" line="4444"/>
+        <location filename="../mywidget.cpp" line="4447"/>
         <source>N_O</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1412,9 +1412,9 @@ Set rule:B1 - A1 ≥ 10V</source>
         <location filename="../mywidget.ui" line="3531"/>
         <location filename="../mywidget.ui" line="3591"/>
         <location filename="../mywidget.ui" line="11408"/>
-        <location filename="../mywidget.cpp" line="3162"/>
-        <location filename="../mywidget.cpp" line="4032"/>
-        <location filename="../mywidget.cpp" line="4037"/>
+        <location filename="../mywidget.cpp" line="3176"/>
+        <location filename="../mywidget.cpp" line="4046"/>
+        <location filename="../mywidget.cpp" line="4051"/>
         <source>1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1490,7 +1490,7 @@ Set rule:B1 - A1 ≥ 10V</source>
         <location filename="../mywidget.ui" line="2311"/>
         <location filename="../mywidget.ui" line="3474"/>
         <location filename="../mywidget.ui" line="3576"/>
-        <location filename="../mywidget.cpp" line="3620"/>
+        <location filename="../mywidget.cpp" line="3634"/>
         <source>10</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1510,25 +1510,25 @@ Set rule:B1 - A1 ≥ 10V</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="2462"/>
-        <location filename="../mywidget.cpp" line="1924"/>
+        <location filename="../mywidget.cpp" line="1938"/>
         <source>Converter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="2712"/>
-        <location filename="../mywidget.cpp" line="1922"/>
+        <location filename="../mywidget.cpp" line="1936"/>
         <source>PV</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="2962"/>
-        <location filename="../mywidget.cpp" line="1926"/>
+        <location filename="../mywidget.cpp" line="1940"/>
         <source>Grid</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="3212"/>
-        <location filename="../mywidget.cpp" line="1923"/>
+        <location filename="../mywidget.cpp" line="1937"/>
         <source>Load</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1546,11 +1546,11 @@ Set rule:B1 - A1 ≥ 10V</source>
         <location filename="../mywidget.ui" line="3840"/>
         <location filename="../mywidget.ui" line="4393"/>
         <location filename="../mywidget.ui" line="11448"/>
-        <location filename="../mywidget.cpp" line="1604"/>
-        <location filename="../mywidget.cpp" line="1647"/>
-        <location filename="../mywidget.cpp" line="1693"/>
-        <location filename="../mywidget.cpp" line="1751"/>
-        <location filename="../mywidget.cpp" line="1935"/>
+        <location filename="../mywidget.cpp" line="1618"/>
+        <location filename="../mywidget.cpp" line="1661"/>
+        <location filename="../mywidget.cpp" line="1707"/>
+        <location filename="../mywidget.cpp" line="1765"/>
+        <location filename="../mywidget.cpp" line="1949"/>
         <source>Name</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1561,19 +1561,19 @@ Set rule:B1 - A1 ≥ 10V</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="3878"/>
-        <location filename="../mywidget.cpp" line="2481"/>
+        <location filename="../mywidget.cpp" line="2495"/>
         <source>Bat current</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="3897"/>
-        <location filename="../mywidget.cpp" line="2485"/>
+        <location filename="../mywidget.cpp" line="2499"/>
         <source>SOC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="3916"/>
-        <location filename="../mywidget.cpp" line="2489"/>
+        <location filename="../mywidget.cpp" line="2503"/>
         <source>SOH</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1600,12 +1600,12 @@ Set rule:B1 - A1 ≥ 10V</source>
     <message>
         <location filename="../mywidget.ui" line="4020"/>
         <location filename="../mywidget.ui" line="4565"/>
-        <location filename="../mywidget.cpp" line="1557"/>
-        <location filename="../mywidget.cpp" line="1604"/>
-        <location filename="../mywidget.cpp" line="1647"/>
-        <location filename="../mywidget.cpp" line="1693"/>
-        <location filename="../mywidget.cpp" line="1751"/>
-        <location filename="../mywidget.cpp" line="1935"/>
+        <location filename="../mywidget.cpp" line="1571"/>
+        <location filename="../mywidget.cpp" line="1618"/>
+        <location filename="../mywidget.cpp" line="1661"/>
+        <location filename="../mywidget.cpp" line="1707"/>
+        <location filename="../mywidget.cpp" line="1765"/>
+        <location filename="../mywidget.cpp" line="1949"/>
         <source>Value</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1629,12 +1629,12 @@ Set rule:B1 - A1 ≥ 10V</source>
         <location filename="../mywidget.ui" line="8717"/>
         <location filename="../mywidget.ui" line="8763"/>
         <location filename="../mywidget.ui" line="8830"/>
-        <location filename="../mywidget.cpp" line="3142"/>
-        <location filename="../mywidget.cpp" line="3601"/>
-        <location filename="../mywidget.cpp" line="3654"/>
-        <location filename="../mywidget.cpp" line="3658"/>
-        <location filename="../mywidget.cpp" line="3774"/>
-        <location filename="../mywidget.cpp" line="3779"/>
+        <location filename="../mywidget.cpp" line="3156"/>
+        <location filename="../mywidget.cpp" line="3615"/>
+        <location filename="../mywidget.cpp" line="3668"/>
+        <location filename="../mywidget.cpp" line="3672"/>
+        <location filename="../mywidget.cpp" line="3788"/>
+        <location filename="../mywidget.cpp" line="3793"/>
         <source>0</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1684,39 +1684,39 @@ Set rule:B1 - A1 ≥ 10V</source>
         <location filename="../mywidget.ui" line="10214"/>
         <location filename="../mywidget.ui" line="10258"/>
         <location filename="../mywidget.ui" line="10302"/>
-        <location filename="../mywidget.cpp" line="2921"/>
-        <location filename="../mywidget.cpp" line="2937"/>
-        <location filename="../mywidget.cpp" line="3610"/>
-        <location filename="../mywidget.cpp" line="4392"/>
-        <location filename="../mywidget.cpp" line="4395"/>
-        <location filename="../mywidget.cpp" line="4398"/>
-        <location filename="../mywidget.cpp" line="4401"/>
-        <location filename="../mywidget.cpp" line="4404"/>
-        <location filename="../mywidget.cpp" line="4407"/>
+        <location filename="../mywidget.cpp" line="2935"/>
+        <location filename="../mywidget.cpp" line="2951"/>
+        <location filename="../mywidget.cpp" line="3624"/>
+        <location filename="../mywidget.cpp" line="4412"/>
+        <location filename="../mywidget.cpp" line="4415"/>
+        <location filename="../mywidget.cpp" line="4418"/>
+        <location filename="../mywidget.cpp" line="4421"/>
+        <location filename="../mywidget.cpp" line="4424"/>
+        <location filename="../mywidget.cpp" line="4427"/>
         <source>Enable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="4447"/>
-        <location filename="../mywidget.cpp" line="2517"/>
+        <location filename="../mywidget.cpp" line="2531"/>
         <source>Allowable charging power</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="4465"/>
-        <location filename="../mywidget.cpp" line="2521"/>
+        <location filename="../mywidget.cpp" line="2535"/>
         <source>Allowable discharging power</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="4483"/>
-        <location filename="../mywidget.cpp" line="2525"/>
+        <location filename="../mywidget.cpp" line="2539"/>
         <source>Allowable charging energy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="4501"/>
-        <location filename="../mywidget.cpp" line="2529"/>
+        <location filename="../mywidget.cpp" line="2543"/>
         <source>Allowable discharging energy</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1732,37 +1732,37 @@ Set rule:B1 - A1 ≥ 10V</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="5440"/>
-        <location filename="../mywidget.cpp" line="4705"/>
+        <location filename="../mywidget.cpp" line="4746"/>
         <source>Y  -</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="5459"/>
-        <location filename="../mywidget.cpp" line="4717"/>
+        <location filename="../mywidget.cpp" line="4758"/>
         <source>M  -</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="5478"/>
-        <location filename="../mywidget.cpp" line="4729"/>
+        <location filename="../mywidget.cpp" line="4770"/>
         <source>D  -</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="5504"/>
-        <location filename="../mywidget.cpp" line="4711"/>
+        <location filename="../mywidget.cpp" line="4752"/>
         <source>Y  +</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="5523"/>
-        <location filename="../mywidget.cpp" line="4723"/>
+        <location filename="../mywidget.cpp" line="4764"/>
         <source>M  +</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="5542"/>
-        <location filename="../mywidget.cpp" line="4735"/>
+        <location filename="../mywidget.cpp" line="4776"/>
         <source>D  +</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1814,19 +1814,19 @@ Set rule:B1 - A1 ≥ 10V</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="7710"/>
-        <location filename="../mywidget.cpp" line="3698"/>
+        <location filename="../mywidget.cpp" line="3712"/>
         <source>Control mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="9221"/>
-        <location filename="../mywidget.cpp" line="4061"/>
+        <location filename="../mywidget.cpp" line="4075"/>
         <source>Machine number</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="9073"/>
-        <location filename="../mywidget.cpp" line="4037"/>
+        <location filename="../mywidget.cpp" line="4051"/>
         <source>Output power factor</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1858,7 +1858,7 @@ Language</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="3235"/>
-        <location filename="../mywidget.cpp" line="4797"/>
+        <location filename="../mywidget.cpp" line="4838"/>
         <source>Converter State</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1869,13 +1869,13 @@ Language</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="4411"/>
-        <location filename="../mywidget.cpp" line="2509"/>
+        <location filename="../mywidget.cpp" line="2523"/>
         <source>Charging current limit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="4429"/>
-        <location filename="../mywidget.cpp" line="2513"/>
+        <location filename="../mywidget.cpp" line="2527"/>
         <source>Discharging current limit</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1918,13 +1918,13 @@ enable</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="5854"/>
-        <location filename="../mywidget.cpp" line="4741"/>
+        <location filename="../mywidget.cpp" line="4782"/>
         <source>History Records</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="5918"/>
-        <location filename="../mywidget.cpp" line="4753"/>
+        <location filename="../mywidget.cpp" line="4794"/>
         <source>Electricity Statistical Table</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1950,7 +1950,7 @@ enable</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="8590"/>
-        <location filename="../mywidget.cpp" line="3881"/>
+        <location filename="../mywidget.cpp" line="3895"/>
         <source>Capacity</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1971,13 +1971,13 @@ enable</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="8682"/>
-        <location filename="../mywidget.cpp" line="3891"/>
+        <location filename="../mywidget.cpp" line="3905"/>
         <source>Battery float voltage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="8728"/>
-        <location filename="../mywidget.cpp" line="3896"/>
+        <location filename="../mywidget.cpp" line="3910"/>
         <source>Battery filling voltage</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1988,7 +1988,7 @@ enable</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="8774"/>
-        <location filename="../mywidget.cpp" line="3901"/>
+        <location filename="../mywidget.cpp" line="3915"/>
         <source>Charge limiting value</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1999,7 +1999,7 @@ enable</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="8811"/>
-        <location filename="../mywidget.cpp" line="3906"/>
+        <location filename="../mywidget.cpp" line="3920"/>
         <source>Discharge limiting value</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2015,13 +2015,13 @@ enable</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="8798"/>
-        <location filename="../mywidget.cpp" line="3939"/>
+        <location filename="../mywidget.cpp" line="3953"/>
         <source>Uniform charging and flushing current</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="8841"/>
-        <location filename="../mywidget.cpp" line="3944"/>
+        <location filename="../mywidget.cpp" line="3958"/>
         <source>Float turn uniform charging current</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2114,7 +2114,7 @@ enable</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="11715"/>
-        <location filename="../mywidget.cpp" line="5153"/>
+        <location filename="../mywidget.cpp" line="5194"/>
         <source>STATIC</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2198,17 +2198,17 @@ enable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10166"/>
+        <location filename="../mywidget.cpp" line="4474"/>
         <source>EPO</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10174"/>
+        <location filename="../mywidget.cpp" line="4477"/>
         <source>Shut Down</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.ui" line="10206"/>
+        <location filename="../mywidget.cpp" line="4489"/>
         <source>Fire fighting</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2264,25 +2264,25 @@ Next, you can decide whether or not to turn on the generator based on the select
     </message>
     <message>
         <location filename="../mywidget.ui" line="7857"/>
-        <location filename="../mywidget.cpp" line="3741"/>
+        <location filename="../mywidget.cpp" line="3755"/>
         <source>Work parttern</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="7897"/>
-        <location filename="../mywidget.cpp" line="3746"/>
+        <location filename="../mywidget.cpp" line="3760"/>
         <source>Boost or Buck</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="9258"/>
-        <location filename="../mywidget.cpp" line="4068"/>
+        <location filename="../mywidget.cpp" line="4082"/>
         <source>Parallel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="5947"/>
-        <location filename="../mywidget.cpp" line="4759"/>
+        <location filename="../mywidget.cpp" line="4800"/>
         <source>Eject U disk</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2290,2212 +2290,2217 @@ Next, you can decide whether or not to turn on the generator based on the select
         <location filename="../mywidget.ui" line="10236"/>
         <location filename="../mywidget.ui" line="10280"/>
         <location filename="../mywidget.ui" line="10324"/>
-        <location filename="../mywidget.cpp" line="4436"/>
-        <location filename="../mywidget.cpp" line="4439"/>
-        <location filename="../mywidget.cpp" line="4442"/>
+        <location filename="../mywidget.cpp" line="4456"/>
+        <location filename="../mywidget.cpp" line="4459"/>
+        <location filename="../mywidget.cpp" line="4462"/>
         <source>Prompt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="10606"/>
-        <location filename="../mywidget.cpp" line="4482"/>
-        <location filename="../mywidget.cpp" line="4644"/>
+        <location filename="../mywidget.cpp" line="4523"/>
+        <location filename="../mywidget.cpp" line="4685"/>
         <source>Debug variable 1 addr</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="10638"/>
-        <location filename="../mywidget.cpp" line="4486"/>
-        <location filename="../mywidget.cpp" line="4648"/>
+        <location filename="../mywidget.cpp" line="4527"/>
+        <location filename="../mywidget.cpp" line="4689"/>
         <source>Debug variable 2 addr</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="10662"/>
-        <location filename="../mywidget.cpp" line="4490"/>
-        <location filename="../mywidget.cpp" line="4652"/>
+        <location filename="../mywidget.cpp" line="4531"/>
+        <location filename="../mywidget.cpp" line="4693"/>
         <source>Debug variable 3 addr</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="12104"/>
-        <location filename="../mywidget.cpp" line="2019"/>
-        <location filename="../mywidget.cpp" line="2258"/>
-        <location filename="../mywidget.cpp" line="2264"/>
-        <location filename="../mywidget.cpp" line="2289"/>
-        <location filename="../mywidget.cpp" line="2296"/>
+        <location filename="../mywidget.cpp" line="2033"/>
+        <location filename="../mywidget.cpp" line="2272"/>
+        <location filename="../mywidget.cpp" line="2278"/>
+        <location filename="../mywidget.cpp" line="2303"/>
+        <location filename="../mywidget.cpp" line="2310"/>
         <source>1/1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="14735"/>
-        <location filename="../mywidget.cpp" line="2006"/>
+        <location filename="../mywidget.cpp" line="2020"/>
         <source>Admin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1430"/>
+        <location filename="../mywidget.cpp" line="1442"/>
         <source>Upgrade prompt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1431"/>
+        <location filename="../mywidget.cpp" line="1443"/>
         <source>1. Make sure to press the EPO button before upgrading.
 2. Before upgrading the DCDC, switch off the ship-type switch of the DCDC module.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1432"/>
+        <location filename="../mywidget.cpp" line="1444"/>
         <source>Next</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1538"/>
+        <location filename="../mywidget.cpp" line="1552"/>
         <source>Inv. Voltage(AB)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1538"/>
+        <location filename="../mywidget.cpp" line="1552"/>
         <source>Inv. Voltage(BC)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1538"/>
+        <location filename="../mywidget.cpp" line="1552"/>
         <source>Inv. Voltage(CA)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1539"/>
+        <location filename="../mywidget.cpp" line="1553"/>
         <source>Inv. Current(A)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1539"/>
+        <location filename="../mywidget.cpp" line="1553"/>
         <source>Inv. Current(B)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1539"/>
+        <location filename="../mywidget.cpp" line="1553"/>
         <source>Inv. Current(C)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1540"/>
-        <location filename="../mywidget.cpp" line="2642"/>
+        <location filename="../mywidget.cpp" line="1554"/>
+        <location filename="../mywidget.cpp" line="2656"/>
         <source>IGBT temperature</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1540"/>
+        <location filename="../mywidget.cpp" line="1554"/>
         <source>Env. temperature</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1540"/>
-        <location filename="../mywidget.cpp" line="1588"/>
-        <location filename="../mywidget.cpp" line="2651"/>
+        <location filename="../mywidget.cpp" line="1554"/>
+        <location filename="../mywidget.cpp" line="1602"/>
+        <location filename="../mywidget.cpp" line="2665"/>
         <source>Leakage current</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1542"/>
-        <location filename="../mywidget.cpp" line="2656"/>
+        <location filename="../mywidget.cpp" line="1556"/>
+        <location filename="../mywidget.cpp" line="2670"/>
         <source>PV voltage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1542"/>
-        <location filename="../mywidget.cpp" line="2660"/>
+        <location filename="../mywidget.cpp" line="1556"/>
+        <location filename="../mywidget.cpp" line="2674"/>
         <source>PV current</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1542"/>
-        <location filename="../mywidget.cpp" line="2664"/>
+        <location filename="../mywidget.cpp" line="1556"/>
+        <location filename="../mywidget.cpp" line="2678"/>
         <source>PV power</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1543"/>
-        <location filename="../mywidget.cpp" line="2668"/>
+        <location filename="../mywidget.cpp" line="1557"/>
+        <location filename="../mywidget.cpp" line="2682"/>
         <source>Battery voltage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1543"/>
-        <location filename="../mywidget.cpp" line="2672"/>
+        <location filename="../mywidget.cpp" line="1557"/>
+        <location filename="../mywidget.cpp" line="2686"/>
         <source>Battery current</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1543"/>
-        <location filename="../mywidget.cpp" line="2676"/>
+        <location filename="../mywidget.cpp" line="1557"/>
+        <location filename="../mywidget.cpp" line="2690"/>
         <source>Battery power</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1544"/>
-        <location filename="../mywidget.cpp" line="2680"/>
+        <location filename="../mywidget.cpp" line="1558"/>
+        <location filename="../mywidget.cpp" line="2694"/>
         <source>Bus voltage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1544"/>
-        <location filename="../mywidget.cpp" line="2684"/>
+        <location filename="../mywidget.cpp" line="1558"/>
+        <location filename="../mywidget.cpp" line="2698"/>
         <source>Bus current</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1557"/>
+        <location filename="../mywidget.cpp" line="1571"/>
         <source>Inverter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1557"/>
+        <location filename="../mywidget.cpp" line="1571"/>
         <source>DC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1587"/>
+        <location filename="../mywidget.cpp" line="1601"/>
         <source>PV Voltage H</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1587"/>
+        <location filename="../mywidget.cpp" line="1601"/>
         <source>PV Current H</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1587"/>
+        <location filename="../mywidget.cpp" line="1601"/>
         <source>PV Power H</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1588"/>
+        <location filename="../mywidget.cpp" line="1602"/>
         <source>PV Voltage L</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1588"/>
+        <location filename="../mywidget.cpp" line="1602"/>
         <source>PV Current L</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1588"/>
+        <location filename="../mywidget.cpp" line="1602"/>
         <source>PV Power L</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1590"/>
+        <location filename="../mywidget.cpp" line="1604"/>
         <source>Bus_H_Vol(+)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1590"/>
+        <location filename="../mywidget.cpp" line="1604"/>
         <source>Bus_H_Vol(-)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1590"/>
+        <location filename="../mywidget.cpp" line="1604"/>
         <source>Bus_L_Vol(+)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1590"/>
+        <location filename="../mywidget.cpp" line="1604"/>
         <source>Bus_L_Vol(-)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1591"/>
-        <location filename="../mywidget.cpp" line="2752"/>
+        <location filename="../mywidget.cpp" line="1605"/>
+        <location filename="../mywidget.cpp" line="2766"/>
         <source>IGBT Temperature</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1591"/>
+        <location filename="../mywidget.cpp" line="1605"/>
         <source>PositiveInuslation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1591"/>
+        <location filename="../mywidget.cpp" line="1605"/>
         <source>NegativeInuslation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1631"/>
-        <location filename="../mywidget.cpp" line="2768"/>
+        <location filename="../mywidget.cpp" line="1645"/>
+        <location filename="../mywidget.cpp" line="2782"/>
         <source>Grid Voltage(AB)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1631"/>
-        <location filename="../mywidget.cpp" line="2772"/>
+        <location filename="../mywidget.cpp" line="1645"/>
+        <location filename="../mywidget.cpp" line="2786"/>
         <source>Grid Voltage(BC)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1631"/>
-        <location filename="../mywidget.cpp" line="2776"/>
+        <location filename="../mywidget.cpp" line="1645"/>
+        <location filename="../mywidget.cpp" line="2790"/>
         <source>Grid Voltage(CA)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1632"/>
-        <location filename="../mywidget.cpp" line="2780"/>
+        <location filename="../mywidget.cpp" line="1646"/>
+        <location filename="../mywidget.cpp" line="2794"/>
         <source>Grid Current(A)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1632"/>
-        <location filename="../mywidget.cpp" line="2784"/>
+        <location filename="../mywidget.cpp" line="1646"/>
+        <location filename="../mywidget.cpp" line="2798"/>
         <source>Grid Current(B)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1632"/>
-        <location filename="../mywidget.cpp" line="2788"/>
+        <location filename="../mywidget.cpp" line="1646"/>
+        <location filename="../mywidget.cpp" line="2802"/>
         <source>Grid Current(C)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1634"/>
-        <location filename="../mywidget.cpp" line="2794"/>
+        <location filename="../mywidget.cpp" line="1648"/>
+        <location filename="../mywidget.cpp" line="2808"/>
         <source>Grid active power</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1634"/>
-        <location filename="../mywidget.cpp" line="2798"/>
+        <location filename="../mywidget.cpp" line="1648"/>
+        <location filename="../mywidget.cpp" line="2812"/>
         <source>Grid reactive power</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1634"/>
-        <location filename="../mywidget.cpp" line="2802"/>
+        <location filename="../mywidget.cpp" line="1648"/>
+        <location filename="../mywidget.cpp" line="2816"/>
         <source>Grid apparent power</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1634"/>
-        <location filename="../mywidget.cpp" line="2806"/>
+        <location filename="../mywidget.cpp" line="1648"/>
+        <location filename="../mywidget.cpp" line="2820"/>
         <source>Grid power factor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1635"/>
-        <location filename="../mywidget.cpp" line="2810"/>
+        <location filename="../mywidget.cpp" line="1649"/>
+        <location filename="../mywidget.cpp" line="2824"/>
         <source>Grid frequency</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1676"/>
-        <location filename="../mywidget.cpp" line="2818"/>
+        <location filename="../mywidget.cpp" line="1690"/>
+        <location filename="../mywidget.cpp" line="2832"/>
         <source>Load Voltage(AB)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1676"/>
-        <location filename="../mywidget.cpp" line="2822"/>
+        <location filename="../mywidget.cpp" line="1690"/>
+        <location filename="../mywidget.cpp" line="2836"/>
         <source>Load Voltage(BC)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1676"/>
-        <location filename="../mywidget.cpp" line="2826"/>
+        <location filename="../mywidget.cpp" line="1690"/>
+        <location filename="../mywidget.cpp" line="2840"/>
         <source>Load Voltage(CA)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1677"/>
-        <location filename="../mywidget.cpp" line="2830"/>
+        <location filename="../mywidget.cpp" line="1691"/>
+        <location filename="../mywidget.cpp" line="2844"/>
         <source>Load Current(A)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1677"/>
-        <location filename="../mywidget.cpp" line="2834"/>
+        <location filename="../mywidget.cpp" line="1691"/>
+        <location filename="../mywidget.cpp" line="2848"/>
         <source>Load Current(B)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1677"/>
-        <location filename="../mywidget.cpp" line="2838"/>
+        <location filename="../mywidget.cpp" line="1691"/>
+        <location filename="../mywidget.cpp" line="2852"/>
         <source>Load Current(C)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1679"/>
-        <location filename="../mywidget.cpp" line="2843"/>
+        <location filename="../mywidget.cpp" line="1693"/>
+        <location filename="../mywidget.cpp" line="2857"/>
         <source>Load active power</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1679"/>
-        <location filename="../mywidget.cpp" line="2847"/>
+        <location filename="../mywidget.cpp" line="1693"/>
+        <location filename="../mywidget.cpp" line="2861"/>
         <source>Load reactive power</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1679"/>
-        <location filename="../mywidget.cpp" line="2851"/>
+        <location filename="../mywidget.cpp" line="1693"/>
+        <location filename="../mywidget.cpp" line="2865"/>
         <source>Load apparent power</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1679"/>
-        <location filename="../mywidget.cpp" line="2855"/>
+        <location filename="../mywidget.cpp" line="1693"/>
+        <location filename="../mywidget.cpp" line="2869"/>
         <source>Load power factor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1680"/>
-        <location filename="../mywidget.cpp" line="2859"/>
+        <location filename="../mywidget.cpp" line="1694"/>
+        <location filename="../mywidget.cpp" line="2873"/>
         <source>Load frequency</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1729"/>
-        <location filename="../mywidget.cpp" line="2879"/>
+        <location filename="../mywidget.cpp" line="1743"/>
+        <location filename="../mywidget.cpp" line="2893"/>
         <source>DC input breaker</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1729"/>
-        <location filename="../mywidget.cpp" line="2883"/>
+        <location filename="../mywidget.cpp" line="1743"/>
+        <location filename="../mywidget.cpp" line="2897"/>
         <source>DC contactor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1729"/>
+        <location filename="../mywidget.cpp" line="1743"/>
         <source>Maintenance Bypass breaker</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1730"/>
-        <location filename="../mywidget.cpp" line="2891"/>
+        <location filename="../mywidget.cpp" line="1744"/>
+        <location filename="../mywidget.cpp" line="2905"/>
         <source>Output breaker</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1730"/>
-        <location filename="../mywidget.cpp" line="2895"/>
+        <location filename="../mywidget.cpp" line="1744"/>
+        <location filename="../mywidget.cpp" line="2909"/>
         <source>Output contactor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1730"/>
-        <location filename="../mywidget.cpp" line="2899"/>
+        <location filename="../mywidget.cpp" line="1744"/>
+        <location filename="../mywidget.cpp" line="2913"/>
         <source>Grid breaker</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1730"/>
-        <location filename="../mywidget.cpp" line="2903"/>
+        <location filename="../mywidget.cpp" line="1744"/>
+        <location filename="../mywidget.cpp" line="2917"/>
         <source>DCAC insulation detection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1731"/>
-        <location filename="../mywidget.cpp" line="2907"/>
+        <location filename="../mywidget.cpp" line="1745"/>
+        <location filename="../mywidget.cpp" line="2921"/>
         <source>Start generator signal</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1731"/>
-        <location filename="../mywidget.cpp" line="2911"/>
+        <location filename="../mywidget.cpp" line="1745"/>
+        <location filename="../mywidget.cpp" line="2925"/>
         <source>DO2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1731"/>
-        <location filename="../mywidget.cpp" line="2915"/>
+        <location filename="../mywidget.cpp" line="1745"/>
+        <location filename="../mywidget.cpp" line="2929"/>
         <source>DO3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1733"/>
-        <location filename="../mywidget.cpp" line="2921"/>
+        <location filename="../mywidget.cpp" line="1747"/>
+        <location filename="../mywidget.cpp" line="2935"/>
         <source>DCAC Converter available</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1733"/>
-        <location filename="../mywidget.cpp" line="2925"/>
+        <location filename="../mywidget.cpp" line="1747"/>
+        <location filename="../mywidget.cpp" line="2939"/>
         <source>DC Soft start</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1733"/>
-        <location filename="../mywidget.cpp" line="1737"/>
-        <location filename="../mywidget.cpp" line="1918"/>
+        <location filename="../mywidget.cpp" line="1747"/>
+        <location filename="../mywidget.cpp" line="1751"/>
+        <location filename="../mywidget.cpp" line="1932"/>
         <source>Converter status</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1733"/>
-        <location filename="../mywidget.cpp" line="2933"/>
+        <location filename="../mywidget.cpp" line="1747"/>
+        <location filename="../mywidget.cpp" line="2947"/>
         <source>Reactive power Regulation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1734"/>
-        <location filename="../mywidget.cpp" line="2937"/>
+        <location filename="../mywidget.cpp" line="1748"/>
+        <location filename="../mywidget.cpp" line="2951"/>
         <source>LVRT</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1734"/>
-        <location filename="../mywidget.cpp" line="2941"/>
+        <location filename="../mywidget.cpp" line="1748"/>
+        <location filename="../mywidget.cpp" line="2955"/>
         <source>DI1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1734"/>
-        <location filename="../mywidget.cpp" line="2945"/>
+        <location filename="../mywidget.cpp" line="1748"/>
+        <location filename="../mywidget.cpp" line="2959"/>
         <source>DI2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1734"/>
-        <location filename="../mywidget.cpp" line="2949"/>
+        <location filename="../mywidget.cpp" line="1748"/>
+        <location filename="../mywidget.cpp" line="2963"/>
         <source>DI3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1734"/>
-        <location filename="../mywidget.cpp" line="2953"/>
+        <location filename="../mywidget.cpp" line="1748"/>
+        <location filename="../mywidget.cpp" line="2967"/>
         <source>DI4</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1734"/>
-        <location filename="../mywidget.cpp" line="2957"/>
+        <location filename="../mywidget.cpp" line="1748"/>
+        <location filename="../mywidget.cpp" line="2971"/>
         <source>DI5</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1734"/>
-        <location filename="../mywidget.cpp" line="2961"/>
+        <location filename="../mywidget.cpp" line="1748"/>
+        <location filename="../mywidget.cpp" line="2975"/>
         <source>DI6</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1736"/>
-        <location filename="../mywidget.cpp" line="2966"/>
+        <location filename="../mywidget.cpp" line="1750"/>
+        <location filename="../mywidget.cpp" line="2980"/>
         <source>DCDC Converter available</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1736"/>
-        <location filename="../mywidget.cpp" line="2970"/>
+        <location filename="../mywidget.cpp" line="1750"/>
+        <location filename="../mywidget.cpp" line="2984"/>
         <source>Run mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1736"/>
+        <location filename="../mywidget.cpp" line="1750"/>
         <source>Soft start status boost</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1736"/>
+        <location filename="../mywidget.cpp" line="1750"/>
         <source>Soft start status buck</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1737"/>
+        <location filename="../mywidget.cpp" line="1751"/>
         <source>Contactor status boost</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1737"/>
+        <location filename="../mywidget.cpp" line="1751"/>
         <source>Contactor status buck</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1737"/>
-        <location filename="../mywidget.cpp" line="2994"/>
+        <location filename="../mywidget.cpp" line="1751"/>
+        <location filename="../mywidget.cpp" line="3008"/>
         <source>DCDC insulation detection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1805"/>
+        <location filename="../mywidget.cpp" line="1819"/>
         <source>PV power generation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1805"/>
+        <location filename="../mywidget.cpp" line="1819"/>
         <source>Load electricity consumption</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1805"/>
+        <location filename="../mywidget.cpp" line="1819"/>
         <source>Battery charge</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1806"/>
+        <location filename="../mywidget.cpp" line="1820"/>
         <source>Battery discharge</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1806"/>
+        <location filename="../mywidget.cpp" line="1820"/>
         <source>Grid buy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1806"/>
+        <location filename="../mywidget.cpp" line="1820"/>
         <source>Grid sell</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1808"/>
+        <location filename="../mywidget.cpp" line="1822"/>
+        <location filename="../mywidget.cpp" line="4402"/>
+        <location filename="../mywidget.cpp" line="4403"/>
+        <location filename="../mywidget.cpp" line="4404"/>
+        <location filename="../mywidget.cpp" line="4405"/>
+        <location filename="../mywidget.cpp" line="4406"/>
+        <location filename="../mywidget.cpp" line="4407"/>
         <source> </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1808"/>
+        <location filename="../mywidget.cpp" line="1822"/>
         <source>Day(kWh)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1808"/>
+        <location filename="../mywidget.cpp" line="1822"/>
         <source>Month(kWh)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1808"/>
+        <location filename="../mywidget.cpp" line="1822"/>
         <source>Year(kWh)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1808"/>
+        <location filename="../mywidget.cpp" line="1822"/>
         <source>Total(kWh)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1834"/>
-        <location filename="../mywidget.cpp" line="3143"/>
+        <location filename="../mywidget.cpp" line="1848"/>
+        <location filename="../mywidget.cpp" line="3157"/>
         <source>Level</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1834"/>
-        <location filename="../mywidget.cpp" line="3145"/>
+        <location filename="../mywidget.cpp" line="1848"/>
+        <location filename="../mywidget.cpp" line="3159"/>
         <source>Start Time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1834"/>
-        <location filename="../mywidget.cpp" line="3147"/>
+        <location filename="../mywidget.cpp" line="1848"/>
+        <location filename="../mywidget.cpp" line="3161"/>
         <source>End Time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1834"/>
+        <location filename="../mywidget.cpp" line="1848"/>
         <source>Description</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1875"/>
-        <location filename="../mywidget.cpp" line="3451"/>
+        <location filename="../mywidget.cpp" line="1889"/>
+        <location filename="../mywidget.cpp" line="3465"/>
         <source>Modification Time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1875"/>
-        <location filename="../mywidget.cpp" line="3453"/>
+        <location filename="../mywidget.cpp" line="1889"/>
+        <location filename="../mywidget.cpp" line="3467"/>
         <source>Record Event</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1902"/>
+        <location filename="../mywidget.cpp" line="1916"/>
         <source>Optimal mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1902"/>
+        <location filename="../mywidget.cpp" line="1916"/>
         <source>Mixed mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1903"/>
+        <location filename="../mywidget.cpp" line="1917"/>
         <source>DC/DC Parameters</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1903"/>
+        <location filename="../mywidget.cpp" line="1917"/>
         <source>Lithium Battery Setting Parameters</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1903"/>
+        <location filename="../mywidget.cpp" line="1917"/>
         <source>Lead-acid Battery Setting Parameters</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1903"/>
+        <location filename="../mywidget.cpp" line="1917"/>
         <source>Time Period Setting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1903"/>
+        <location filename="../mywidget.cpp" line="1917"/>
         <source>Function Sentting 1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1903"/>
+        <location filename="../mywidget.cpp" line="1917"/>
         <source>Function Sentting 2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1904"/>
+        <location filename="../mywidget.cpp" line="1918"/>
         <source>System Senttings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1904"/>
+        <location filename="../mywidget.cpp" line="1918"/>
         <source>Device</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1904"/>
+        <location filename="../mywidget.cpp" line="1918"/>
         <source>DC/AC Debug</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1904"/>
+        <location filename="../mywidget.cpp" line="1918"/>
         <source>DC/DC Debug</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1904"/>
+        <location filename="../mywidget.cpp" line="1918"/>
         <source>Port data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1907"/>
-        <location filename="../mywidget.cpp" line="5098"/>
+        <location filename="../mywidget.cpp" line="1921"/>
+        <location filename="../mywidget.cpp" line="5139"/>
         <source>Working mode introduction</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1908"/>
+        <location filename="../mywidget.cpp" line="1922"/>
         <source>Apply this mode and exit the parameter settings page</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1909"/>
+        <location filename="../mywidget.cpp" line="1923"/>
         <source>Eexit the parameter settings page</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1910"/>
+        <location filename="../mywidget.cpp" line="1924"/>
         <source>Next page</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1911"/>
+        <location filename="../mywidget.cpp" line="1925"/>
         <source>Last page</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1912"/>
+        <location filename="../mywidget.cpp" line="1926"/>
         <source>Machine typs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1913"/>
+        <location filename="../mywidget.cpp" line="1927"/>
         <source>Current system time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1914"/>
+        <location filename="../mywidget.cpp" line="1928"/>
         <source>Alarm severity warning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1915"/>
+        <location filename="../mywidget.cpp" line="1929"/>
         <source>Chinese and English switching</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1916"/>
+        <location filename="../mywidget.cpp" line="1930"/>
         <source>Open menu</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1917"/>
+        <location filename="../mywidget.cpp" line="1931"/>
         <source>User login</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1919"/>
+        <location filename="../mywidget.cpp" line="1933"/>
         <source>DCDC module state</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1920"/>
+        <location filename="../mywidget.cpp" line="1934"/>
         <source>Return to previous page</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1921"/>
+        <location filename="../mywidget.cpp" line="1935"/>
         <source>View the detailed running logic and related parameters of the working mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1925"/>
+        <location filename="../mywidget.cpp" line="1939"/>
         <source>Battery</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1927"/>
+        <location filename="../mywidget.cpp" line="1941"/>
         <source>Set the port to listen on</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1928"/>
+        <location filename="../mywidget.cpp" line="1942"/>
         <source>Start/Stop</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1942"/>
-        <location filename="../mywidget.cpp" line="3950"/>
+        <location filename="../mywidget.cpp" line="1956"/>
+        <location filename="../mywidget.cpp" line="3964"/>
         <source>Check</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1942"/>
-        <location filename="../mywidget.cpp" line="3965"/>
+        <location filename="../mywidget.cpp" line="1956"/>
+        <location filename="../mywidget.cpp" line="3979"/>
         <source>Peak-Flat-Valley</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1942"/>
+        <location filename="../mywidget.cpp" line="1956"/>
         <source>StartTime</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1942"/>
+        <location filename="../mywidget.cpp" line="1956"/>
         <source>EndTime</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1942"/>
-        <location filename="../mywidget.cpp" line="3953"/>
+        <location filename="../mywidget.cpp" line="1956"/>
+        <location filename="../mywidget.cpp" line="3967"/>
         <source>Features</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1942"/>
+        <location filename="../mywidget.cpp" line="1956"/>
         <source>Power(kW)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1942"/>
-        <location filename="../mywidget.cpp" line="3966"/>
+        <location filename="../mywidget.cpp" line="1956"/>
+        <location filename="../mywidget.cpp" line="3980"/>
         <source>Generator action</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1998"/>
+        <location filename="../mywidget.cpp" line="2012"/>
         <source>USER</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2002"/>
+        <location filename="../mywidget.cpp" line="2016"/>
         <source>MAINTAIN</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2043"/>
-        <location filename="../mywidget.cpp" line="5035"/>
+        <location filename="../mywidget.cpp" line="2057"/>
+        <location filename="../mywidget.cpp" line="5076"/>
         <source>Advanced Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2355"/>
+        <location filename="../mywidget.cpp" line="2369"/>
         <source>Alarm icon</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2356"/>
+        <location filename="../mywidget.cpp" line="2370"/>
         <source>Alarm icon: It is not displayed when there is no alarm. When there is a minor alarm, a yellow icon is displayed. When there is a fault alarm, a red icon is displayed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1458"/>
-        <location filename="../mywidget.cpp" line="2358"/>
-        <location filename="../mywidget.cpp" line="2478"/>
-        <location filename="../mywidget.cpp" line="2482"/>
-        <location filename="../mywidget.cpp" line="2486"/>
-        <location filename="../mywidget.cpp" line="2490"/>
-        <location filename="../mywidget.cpp" line="2494"/>
-        <location filename="../mywidget.cpp" line="2498"/>
-        <location filename="../mywidget.cpp" line="2502"/>
-        <location filename="../mywidget.cpp" line="2506"/>
-        <location filename="../mywidget.cpp" line="2510"/>
-        <location filename="../mywidget.cpp" line="2514"/>
-        <location filename="../mywidget.cpp" line="2518"/>
-        <location filename="../mywidget.cpp" line="2522"/>
-        <location filename="../mywidget.cpp" line="2526"/>
-        <location filename="../mywidget.cpp" line="2530"/>
-        <location filename="../mywidget.cpp" line="2534"/>
-        <location filename="../mywidget.cpp" line="2538"/>
-        <location filename="../mywidget.cpp" line="2542"/>
+        <location filename="../mywidget.cpp" line="1470"/>
+        <location filename="../mywidget.cpp" line="2372"/>
+        <location filename="../mywidget.cpp" line="2492"/>
+        <location filename="../mywidget.cpp" line="2496"/>
+        <location filename="../mywidget.cpp" line="2500"/>
+        <location filename="../mywidget.cpp" line="2504"/>
+        <location filename="../mywidget.cpp" line="2508"/>
+        <location filename="../mywidget.cpp" line="2512"/>
+        <location filename="../mywidget.cpp" line="2516"/>
+        <location filename="../mywidget.cpp" line="2520"/>
+        <location filename="../mywidget.cpp" line="2524"/>
+        <location filename="../mywidget.cpp" line="2528"/>
+        <location filename="../mywidget.cpp" line="2532"/>
+        <location filename="../mywidget.cpp" line="2536"/>
+        <location filename="../mywidget.cpp" line="2540"/>
+        <location filename="../mywidget.cpp" line="2544"/>
+        <location filename="../mywidget.cpp" line="2548"/>
+        <location filename="../mywidget.cpp" line="2552"/>
         <location filename="../mywidget.cpp" line="2556"/>
-        <location filename="../mywidget.cpp" line="2560"/>
-        <location filename="../mywidget.cpp" line="2564"/>
-        <location filename="../mywidget.cpp" line="2568"/>
-        <location filename="../mywidget.cpp" line="2572"/>
-        <location filename="../mywidget.cpp" line="2576"/>
-        <location filename="../mywidget.cpp" line="2580"/>
-        <location filename="../mywidget.cpp" line="4695"/>
-        <location filename="../mywidget.cpp" line="4700"/>
-        <location filename="../mywidget.cpp" line="4706"/>
-        <location filename="../mywidget.cpp" line="4712"/>
-        <location filename="../mywidget.cpp" line="4718"/>
-        <location filename="../mywidget.cpp" line="4724"/>
-        <location filename="../mywidget.cpp" line="4730"/>
+        <location filename="../mywidget.cpp" line="2570"/>
+        <location filename="../mywidget.cpp" line="2574"/>
+        <location filename="../mywidget.cpp" line="2578"/>
+        <location filename="../mywidget.cpp" line="2582"/>
+        <location filename="../mywidget.cpp" line="2586"/>
+        <location filename="../mywidget.cpp" line="2590"/>
+        <location filename="../mywidget.cpp" line="2594"/>
         <location filename="../mywidget.cpp" line="4736"/>
-        <location filename="../mywidget.cpp" line="4742"/>
-        <location filename="../mywidget.cpp" line="4748"/>
-        <location filename="../mywidget.cpp" line="4754"/>
-        <location filename="../mywidget.cpp" line="4760"/>
+        <location filename="../mywidget.cpp" line="4741"/>
+        <location filename="../mywidget.cpp" line="4747"/>
+        <location filename="../mywidget.cpp" line="4753"/>
+        <location filename="../mywidget.cpp" line="4759"/>
         <location filename="../mywidget.cpp" line="4765"/>
-        <location filename="../mywidget.cpp" line="4770"/>
-        <location filename="../mywidget.cpp" line="4776"/>
-        <location filename="../mywidget.cpp" line="4781"/>
-        <location filename="../mywidget.cpp" line="4786"/>
-        <location filename="../mywidget.cpp" line="4791"/>
-        <location filename="../mywidget.cpp" line="4797"/>
-        <location filename="../mywidget.cpp" line="4802"/>
-        <location filename="../mywidget.cpp" line="4982"/>
-        <location filename="../mywidget.cpp" line="5079"/>
-        <location filename="../mywidget.cpp" line="5102"/>
-        <location filename="../mywidget.cpp" line="5108"/>
-        <location filename="../mywidget.cpp" line="5114"/>
-        <location filename="../mywidget.cpp" line="5153"/>
-        <location filename="../mywidget.cpp" line="5164"/>
-        <location filename="../mywidget.cpp" line="5170"/>
+        <location filename="../mywidget.cpp" line="4771"/>
+        <location filename="../mywidget.cpp" line="4777"/>
+        <location filename="../mywidget.cpp" line="4783"/>
+        <location filename="../mywidget.cpp" line="4789"/>
+        <location filename="../mywidget.cpp" line="4795"/>
+        <location filename="../mywidget.cpp" line="4801"/>
+        <location filename="../mywidget.cpp" line="4806"/>
+        <location filename="../mywidget.cpp" line="4811"/>
+        <location filename="../mywidget.cpp" line="4817"/>
+        <location filename="../mywidget.cpp" line="4822"/>
+        <location filename="../mywidget.cpp" line="4827"/>
+        <location filename="../mywidget.cpp" line="4832"/>
+        <location filename="../mywidget.cpp" line="4838"/>
+        <location filename="../mywidget.cpp" line="4843"/>
+        <location filename="../mywidget.cpp" line="5023"/>
+        <location filename="../mywidget.cpp" line="5120"/>
+        <location filename="../mywidget.cpp" line="5143"/>
+        <location filename="../mywidget.cpp" line="5149"/>
+        <location filename="../mywidget.cpp" line="5155"/>
+        <location filename="../mywidget.cpp" line="5194"/>
+        <location filename="../mywidget.cpp" line="5205"/>
+        <location filename="../mywidget.cpp" line="5211"/>
         <source>OK</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1458"/>
+        <location filename="../mywidget.cpp" line="1470"/>
         <source>Click to view the logic diagram</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2477"/>
+        <location filename="../mywidget.cpp" line="2491"/>
         <source>Bat volage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2478"/>
+        <location filename="../mywidget.cpp" line="2492"/>
         <source>Total voltage of the battery uploaded by BMS.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2482"/>
+        <location filename="../mywidget.cpp" line="2496"/>
         <source>Total current of the battery uploaded by BMS.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2486"/>
+        <location filename="../mywidget.cpp" line="2500"/>
         <source>Battery SOC uploaded by BMS refers to the current remaining battery capacity percentage.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2490"/>
+        <location filename="../mywidget.cpp" line="2504"/>
         <source>Battery SOH uploaded from BMS, the percentage of available capacity after full charge compared to the rated capacity.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2493"/>
+        <location filename="../mywidget.cpp" line="2507"/>
         <source>Cell voltage(max)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2494"/>
+        <location filename="../mywidget.cpp" line="2508"/>
         <source>The highest voltage of single cell uploaded by BMS.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2497"/>
+        <location filename="../mywidget.cpp" line="2511"/>
         <source>Cell voltage(min)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2498"/>
+        <location filename="../mywidget.cpp" line="2512"/>
         <source>The lowest voltage of single cell uploaded by BMS.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2501"/>
+        <location filename="../mywidget.cpp" line="2515"/>
         <source>Cell temp.(max)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2502"/>
+        <location filename="../mywidget.cpp" line="2516"/>
         <source>The highest temperature of single cell uploaded by BMS.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2505"/>
+        <location filename="../mywidget.cpp" line="2519"/>
         <source>Cell temp.(min)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2506"/>
+        <location filename="../mywidget.cpp" line="2520"/>
         <source>The lowest temperature of single cell uploaded by BMS.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2510"/>
+        <location filename="../mywidget.cpp" line="2524"/>
         <source>The limit of charging current uploaded by BMS.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2514"/>
+        <location filename="../mywidget.cpp" line="2528"/>
         <source>The limit of discharging current uploaded by BMS.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2518"/>
+        <location filename="../mywidget.cpp" line="2532"/>
         <source>The allowable charging power uploaded by BMS.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2522"/>
+        <location filename="../mywidget.cpp" line="2536"/>
         <source>The allowable discharging power uploaded by BMS.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2526"/>
+        <location filename="../mywidget.cpp" line="2540"/>
         <source>The allowable charging capacity uploaded by BMS.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2530"/>
+        <location filename="../mywidget.cpp" line="2544"/>
         <source>The allowable discharging capacity uploaded by BMS.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2533"/>
+        <location filename="../mywidget.cpp" line="2547"/>
         <source>Alarm level</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2534"/>
+        <location filename="../mywidget.cpp" line="2548"/>
         <source>Alarm levels uploaded from BMS, level one alarm is yellow, level two alarm is orange, and level three alarm is red;
 By default, the converter does not respond to level one and level two alarms, but shuts down in response to level three alarms.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2537"/>
+        <location filename="../mywidget.cpp" line="2551"/>
         <source>Charging enable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2538"/>
+        <location filename="../mywidget.cpp" line="2552"/>
         <source>Battery Status Uploaded by BMS: Enable indicates the battery is allowed to charge, Disable indicates the battery is not allowed to charge.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2541"/>
+        <location filename="../mywidget.cpp" line="2555"/>
         <source>Discharging enable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2542"/>
+        <location filename="../mywidget.cpp" line="2556"/>
         <source>Battery Status Uploaded by BMS: Enable indicates the battery is allowed to discharge, Disable indicates the battery is not allowed to discharge.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2555"/>
+        <location filename="../mywidget.cpp" line="2569"/>
         <source>Interface</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2556"/>
+        <location filename="../mywidget.cpp" line="2570"/>
         <source>This is the interface number, which defaults to eth0</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2559"/>
-        <location filename="../mywidget.cpp" line="5108"/>
+        <location filename="../mywidget.cpp" line="2573"/>
+        <location filename="../mywidget.cpp" line="5149"/>
         <source>Port</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2560"/>
+        <location filename="../mywidget.cpp" line="2574"/>
         <source>This is the port number, default 502</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2563"/>
+        <location filename="../mywidget.cpp" line="2577"/>
         <source>Ip</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2564"/>
+        <location filename="../mywidget.cpp" line="2578"/>
         <source>This is the IP address. The default is 192.168.1.100</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2567"/>
+        <location filename="../mywidget.cpp" line="2581"/>
         <source>Netmask</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2568"/>
+        <location filename="../mywidget.cpp" line="2582"/>
         <source>This is the subnet mask, 255.255.255.0</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2571"/>
+        <location filename="../mywidget.cpp" line="2585"/>
         <source>Gateway</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2572"/>
+        <location filename="../mywidget.cpp" line="2586"/>
         <source>This is the gateway. The default is 192.168.1.1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2575"/>
+        <location filename="../mywidget.cpp" line="2589"/>
         <source>Serber ip</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2576"/>
+        <location filename="../mywidget.cpp" line="2590"/>
         <source>This is the server IP address. The default is 192.168.1.200</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2579"/>
+        <location filename="../mywidget.cpp" line="2593"/>
         <source>Apply and Restart system</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2580"/>
+        <location filename="../mywidget.cpp" line="2594"/>
         <source>This is the application and restart the system, click will restart the system, if there is an upgrade, will use the new program.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2618"/>
+        <location filename="../mywidget.cpp" line="2632"/>
         <source>Inv. voltage(AB)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2619"/>
+        <location filename="../mywidget.cpp" line="2633"/>
         <source>Inv. side AB line voltage.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2622"/>
+        <location filename="../mywidget.cpp" line="2636"/>
         <source>Inv. voltage(BC)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2623"/>
+        <location filename="../mywidget.cpp" line="2637"/>
         <source>Inv. side BC line voltage.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2626"/>
+        <location filename="../mywidget.cpp" line="2640"/>
         <source>Inv. voltage(CA)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2627"/>
+        <location filename="../mywidget.cpp" line="2641"/>
         <source>Inv. side CA line voltage.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2630"/>
+        <location filename="../mywidget.cpp" line="2644"/>
         <source>Inv. current(A)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2631"/>
+        <location filename="../mywidget.cpp" line="2645"/>
         <source>Inv. side A phase current.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2634"/>
+        <location filename="../mywidget.cpp" line="2648"/>
         <source>Inv. current(B)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2635"/>
+        <location filename="../mywidget.cpp" line="2649"/>
         <source>Inv. side B phase current.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2638"/>
+        <location filename="../mywidget.cpp" line="2652"/>
         <source>Inv. current(C)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2639"/>
+        <location filename="../mywidget.cpp" line="2653"/>
         <source>Inv. side C phase current.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2643"/>
-        <location filename="../mywidget.cpp" line="2753"/>
+        <location filename="../mywidget.cpp" line="2657"/>
+        <location filename="../mywidget.cpp" line="2767"/>
         <source>The IGBT temperature of the converter: The IGBT temperature must not exceed 102°C. Otherwise, the converter will operate at a reduced capacity. It will resume full power operation when the temperature drops to 73°C.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2647"/>
+        <location filename="../mywidget.cpp" line="2661"/>
         <source>Environment temperature</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2648"/>
+        <location filename="../mywidget.cpp" line="2662"/>
         <source>The ambient temperature.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2652"/>
+        <location filename="../mywidget.cpp" line="2666"/>
         <source>Leakage current: The leakage current should not exceed 300mA (≤30kVA power converter), or 10mA/kVA (＞30kVA power converter).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2657"/>
+        <location filename="../mywidget.cpp" line="2671"/>
         <source>Display the voltage of each PV in turn.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2661"/>
+        <location filename="../mywidget.cpp" line="2675"/>
         <source>Total current on the PV side of the converter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2665"/>
+        <location filename="../mywidget.cpp" line="2679"/>
         <source>Total power on the PV side of the converter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2669"/>
+        <location filename="../mywidget.cpp" line="2683"/>
         <source>converter battery side voltage.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2673"/>
+        <location filename="../mywidget.cpp" line="2687"/>
         <source>converter battery side current.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2677"/>
+        <location filename="../mywidget.cpp" line="2691"/>
         <source>converter battery side power.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2681"/>
+        <location filename="../mywidget.cpp" line="2695"/>
         <source>converter bus voltage.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2685"/>
+        <location filename="../mywidget.cpp" line="2699"/>
         <source>converter bus current.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2704"/>
+        <location filename="../mywidget.cpp" line="2718"/>
         <source>Voltage H</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2705"/>
+        <location filename="../mywidget.cpp" line="2719"/>
         <source>Voltage on the high voltage side of the DCDC module.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2708"/>
+        <location filename="../mywidget.cpp" line="2722"/>
         <source>Current H</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2709"/>
+        <location filename="../mywidget.cpp" line="2723"/>
         <source>Current on the high voltage side of the DCDC module.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2712"/>
+        <location filename="../mywidget.cpp" line="2726"/>
         <source>Power H</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2713"/>
+        <location filename="../mywidget.cpp" line="2727"/>
         <source>Power on the high voltage side of the DCDC module.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2716"/>
+        <location filename="../mywidget.cpp" line="2730"/>
         <source>Voltage L</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2717"/>
+        <location filename="../mywidget.cpp" line="2731"/>
         <source>Voltage on the low voltage side of the DCDC module.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2720"/>
+        <location filename="../mywidget.cpp" line="2734"/>
         <source>Current L</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2721"/>
+        <location filename="../mywidget.cpp" line="2735"/>
         <source>Current on the low-voltage side of the DCDC module.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2724"/>
+        <location filename="../mywidget.cpp" line="2738"/>
         <source>Power L</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2725"/>
+        <location filename="../mywidget.cpp" line="2739"/>
         <source>Power on the low voltage side of the DCDC module.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2728"/>
+        <location filename="../mywidget.cpp" line="2742"/>
         <source>Leakage cur</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2729"/>
+        <location filename="../mywidget.cpp" line="2743"/>
         <source>Leakage current: The leakage current should not exceed 300mA (≤30kVA power converter), or 10mA/kVA (&gt;30kVA power converter).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2736"/>
+        <location filename="../mywidget.cpp" line="2750"/>
         <source>Bus H vol(+)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2737"/>
+        <location filename="../mywidget.cpp" line="2751"/>
         <source>Positive bus voltage on the high voltage side of the DCDC module.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2740"/>
+        <location filename="../mywidget.cpp" line="2754"/>
         <source>Bus H vol(-)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2741"/>
+        <location filename="../mywidget.cpp" line="2755"/>
         <source>Negative bus voltage on the high voltage side of the DCDC module.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2744"/>
+        <location filename="../mywidget.cpp" line="2758"/>
         <source>Bus L vol(+)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2745"/>
+        <location filename="../mywidget.cpp" line="2759"/>
         <source>Positive bus voltage on the low voltage side of the DCDC module.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2748"/>
+        <location filename="../mywidget.cpp" line="2762"/>
         <source>Bus L vol(-)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2749"/>
+        <location filename="../mywidget.cpp" line="2763"/>
         <source>Negative bus voltage on the low voltage side of the DCDC module.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2756"/>
+        <location filename="../mywidget.cpp" line="2770"/>
         <source>Positive Inuslation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2757"/>
+        <location filename="../mywidget.cpp" line="2771"/>
         <source>The positive insulation impedance of the DCDC module is normal when the positive insulation impedance is greater than 33kΩ. When the positive insulation impedance is lower than 33kΩ, the insulation fault or potential security risks exist.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2760"/>
+        <location filename="../mywidget.cpp" line="2774"/>
         <source>Negative Inuslation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2761"/>
+        <location filename="../mywidget.cpp" line="2775"/>
         <source>The negative insulation impedance of the DCDC module is normal when the negative insulation impedance is greater than 33kΩ. When the negative insulation impedance is lower than 33kΩ, the insulation fault or negative security risks exist.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2769"/>
+        <location filename="../mywidget.cpp" line="2783"/>
         <source>Grid side AB line voltage.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2773"/>
+        <location filename="../mywidget.cpp" line="2787"/>
         <source>Grid side BC line voltage.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2777"/>
+        <location filename="../mywidget.cpp" line="2791"/>
         <source>Grid side CA line voltage.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2781"/>
+        <location filename="../mywidget.cpp" line="2795"/>
         <source>Grid side A phase current.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2785"/>
+        <location filename="../mywidget.cpp" line="2799"/>
         <source>Grid side B phase current.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2789"/>
+        <location filename="../mywidget.cpp" line="2803"/>
         <source>Grid side C phase current.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2795"/>
+        <location filename="../mywidget.cpp" line="2809"/>
         <source>Active power P on the grid side of the converter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2799"/>
+        <location filename="../mywidget.cpp" line="2813"/>
         <source>Reactive power Q on the grid side of the converter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2803"/>
+        <location filename="../mywidget.cpp" line="2817"/>
         <source>Apparent power S on the grid side of the converter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2807"/>
+        <location filename="../mywidget.cpp" line="2821"/>
         <source>Power factor PF on the grid side of the converter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2811"/>
+        <location filename="../mywidget.cpp" line="2825"/>
         <source>Frequency on the grid side of the converter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2819"/>
+        <location filename="../mywidget.cpp" line="2833"/>
         <source>Load side AB line voltage.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2823"/>
+        <location filename="../mywidget.cpp" line="2837"/>
         <source>Load side BC line voltage.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2827"/>
+        <location filename="../mywidget.cpp" line="2841"/>
         <source>Load side CA line voltage.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2831"/>
+        <location filename="../mywidget.cpp" line="2845"/>
         <source>Load side A phase current.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2835"/>
+        <location filename="../mywidget.cpp" line="2849"/>
         <source>Load side B phase current.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2839"/>
+        <location filename="../mywidget.cpp" line="2853"/>
         <source>Load side C phase current.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2844"/>
+        <location filename="../mywidget.cpp" line="2858"/>
         <source>Active power P on the load side of the converter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2848"/>
+        <location filename="../mywidget.cpp" line="2862"/>
         <source>Reactive power Q on the load side of the converter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2852"/>
+        <location filename="../mywidget.cpp" line="2866"/>
         <source>Apparent power S on the load side of the converter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2856"/>
+        <location filename="../mywidget.cpp" line="2870"/>
         <source>Power factor PF on the load side of the converter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2860"/>
+        <location filename="../mywidget.cpp" line="2874"/>
         <source>Frequency on the load side of the converter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2879"/>
-        <location filename="../mywidget.cpp" line="2883"/>
-        <location filename="../mywidget.cpp" line="2887"/>
-        <location filename="../mywidget.cpp" line="2891"/>
-        <location filename="../mywidget.cpp" line="2895"/>
-        <location filename="../mywidget.cpp" line="2899"/>
-        <location filename="../mywidget.cpp" line="2986"/>
+        <location filename="../mywidget.cpp" line="2893"/>
+        <location filename="../mywidget.cpp" line="2897"/>
+        <location filename="../mywidget.cpp" line="2901"/>
+        <location filename="../mywidget.cpp" line="2905"/>
+        <location filename="../mywidget.cpp" line="2909"/>
+        <location filename="../mywidget.cpp" line="2913"/>
+        <location filename="../mywidget.cpp" line="3000"/>
         <source>On</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2880"/>
+        <location filename="../mywidget.cpp" line="2894"/>
         <source>There are two states for a DC circuit breaker: On, Off.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2884"/>
+        <location filename="../mywidget.cpp" line="2898"/>
         <source>The DC contactor has two states: On, Off. After the soft start of the DC side is completed, the DC contactor closes. When the DC side of the battery is disconnected and the voltage of the DC bus drops to a certain level, the DC contactor opens.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2887"/>
+        <location filename="../mywidget.cpp" line="2901"/>
         <source>Maintenance Bypass Breaker</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2888"/>
+        <location filename="../mywidget.cpp" line="2902"/>
         <source>There are two states for the maintenance bypass circuit breaker: On, Off. This circuit breaker is only used for machine maintenance. If maintenance is required, please contact the maintenance personnel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2892"/>
+        <location filename="../mywidget.cpp" line="2906"/>
         <source>The output circuit breaker has two states: On, Off.The Output breaker can only be manually disconnected.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2896"/>
+        <location filename="../mywidget.cpp" line="2910"/>
         <source>The output contactor has two states: On, Off. The output contactor closes after the soft start on the inv. side is completed. The output contactor opens when the converter is shut down.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2900"/>
+        <location filename="../mywidget.cpp" line="2914"/>
         <source>The power grid circuit breaker has two states: On, Off;The power grid circuit breaker can only be manually disconnected.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2903"/>
-        <location filename="../mywidget.cpp" line="2907"/>
-        <location filename="../mywidget.cpp" line="2911"/>
-        <location filename="../mywidget.cpp" line="2915"/>
-        <location filename="../mywidget.cpp" line="2933"/>
-        <location filename="../mywidget.cpp" line="2941"/>
-        <location filename="../mywidget.cpp" line="2945"/>
-        <location filename="../mywidget.cpp" line="2949"/>
-        <location filename="../mywidget.cpp" line="2953"/>
-        <location filename="../mywidget.cpp" line="2957"/>
-        <location filename="../mywidget.cpp" line="2961"/>
-        <location filename="../mywidget.cpp" line="2966"/>
-        <location filename="../mywidget.cpp" line="2994"/>
-        <location filename="../mywidget.cpp" line="3763"/>
-        <location filename="../mywidget.cpp" line="3769"/>
-        <location filename="../mywidget.cpp" line="4068"/>
-        <location filename="../mywidget.cpp" line="4120"/>
-        <location filename="../mywidget.cpp" line="4212"/>
-        <location filename="../mywidget.cpp" line="4319"/>
-        <location filename="../mywidget.cpp" line="4368"/>
-        <location filename="../mywidget.cpp" line="4372"/>
+        <location filename="../mywidget.cpp" line="2917"/>
+        <location filename="../mywidget.cpp" line="2921"/>
+        <location filename="../mywidget.cpp" line="2925"/>
+        <location filename="../mywidget.cpp" line="2929"/>
+        <location filename="../mywidget.cpp" line="2947"/>
+        <location filename="../mywidget.cpp" line="2955"/>
+        <location filename="../mywidget.cpp" line="2959"/>
+        <location filename="../mywidget.cpp" line="2963"/>
+        <location filename="../mywidget.cpp" line="2967"/>
+        <location filename="../mywidget.cpp" line="2971"/>
+        <location filename="../mywidget.cpp" line="2975"/>
+        <location filename="../mywidget.cpp" line="2980"/>
+        <location filename="../mywidget.cpp" line="3008"/>
+        <location filename="../mywidget.cpp" line="3777"/>
+        <location filename="../mywidget.cpp" line="3783"/>
+        <location filename="../mywidget.cpp" line="4082"/>
+        <location filename="../mywidget.cpp" line="4134"/>
+        <location filename="../mywidget.cpp" line="4226"/>
+        <location filename="../mywidget.cpp" line="4382"/>
+        <location filename="../mywidget.cpp" line="4386"/>
         <source>Disable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2904"/>
+        <location filename="../mywidget.cpp" line="2918"/>
         <source>DCAC insulation detection:Enable,Disable.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2908"/>
+        <location filename="../mywidget.cpp" line="2922"/>
         <source>Signal to start the diesel generator, start the diesel generator when enabled, stop the diesel generator when disabled.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2912"/>
+        <location filename="../mywidget.cpp" line="2926"/>
         <source>Dry contact 2 is output.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2916"/>
+        <location filename="../mywidget.cpp" line="2930"/>
         <source>Dry contact 3 is output.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2922"/>
-        <location filename="../mywidget.cpp" line="2967"/>
+        <location filename="../mywidget.cpp" line="2936"/>
+        <location filename="../mywidget.cpp" line="2981"/>
         <source>The converter has two states: enabled,disabled. The converter is enabled when the self-check is successful. Otherwise, the converter is disabled.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2925"/>
+        <location filename="../mywidget.cpp" line="2939"/>
         <source>Not starting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2926"/>
+        <location filename="../mywidget.cpp" line="2940"/>
         <source>There are three states for DC soft start: Not starting, Soft starting, and Complete. Soft start refers to the process in which the converter charges the busbar with the battery during startup, causing the busbar voltage to rise close to the battery voltage.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2929"/>
+        <location filename="../mywidget.cpp" line="2943"/>
         <source>OFF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2929"/>
-        <location filename="../mywidget.cpp" line="2990"/>
+        <location filename="../mywidget.cpp" line="2943"/>
+        <location filename="../mywidget.cpp" line="3004"/>
         <source>Converter Status</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2930"/>
+        <location filename="../mywidget.cpp" line="2944"/>
         <source>Converter states include: OFF, AC Soft start, Grid-ON Charge, Grid-ON Discharge, Grid-OFF Discharge, Derating grid-on, Standby and Grid-OFF Charge.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2934"/>
+        <location filename="../mywidget.cpp" line="2948"/>
         <source>There are three types of reactive power regulation: Disable,PF regulation, and  regulation.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2938"/>
+        <location filename="../mywidget.cpp" line="2952"/>
         <source>LVRT states : Enable , Disabled.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2942"/>
+        <location filename="../mywidget.cpp" line="2956"/>
         <source>Input dry contact 1 status: Enabled, Disabled.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2946"/>
+        <location filename="../mywidget.cpp" line="2960"/>
         <source>Input dry contact 2 status: Enabled, Disabled.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2950"/>
+        <location filename="../mywidget.cpp" line="2964"/>
         <source>Input dry contact 3 status: Enabled, Disabled.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2954"/>
+        <location filename="../mywidget.cpp" line="2968"/>
         <source>Input dry contact 4 status: Enabled, Disabled.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2958"/>
+        <location filename="../mywidget.cpp" line="2972"/>
         <source>Input dry contact 5 status: Enabled, Disabled.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2962"/>
+        <location filename="../mywidget.cpp" line="2976"/>
         <source>Input dry contact 6 status: Enabled, Disabled.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2970"/>
-        <location filename="../mywidget.cpp" line="3746"/>
+        <location filename="../mywidget.cpp" line="2984"/>
+        <location filename="../mywidget.cpp" line="3760"/>
         <source>Buck</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2971"/>
+        <location filename="../mywidget.cpp" line="2985"/>
         <source>DCDC module operating modes: Boost, Buck.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2974"/>
-        <location filename="../mywidget.cpp" line="2978"/>
+        <location filename="../mywidget.cpp" line="2988"/>
+        <location filename="../mywidget.cpp" line="2992"/>
         <source>Not
 starting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2974"/>
+        <location filename="../mywidget.cpp" line="2988"/>
         <source>Soft Start Status Boost</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2975"/>
+        <location filename="../mywidget.cpp" line="2989"/>
         <source>High-voltage side soft start states: Not started, Soft start in progress, Soft start completed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2978"/>
+        <location filename="../mywidget.cpp" line="2992"/>
         <source>Soft Start Status Buck</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2979"/>
+        <location filename="../mywidget.cpp" line="2993"/>
         <source>Low-voltage side soft start states: Not started, Soft start in progress, Soft start completed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2982"/>
+        <location filename="../mywidget.cpp" line="2996"/>
         <source>Off</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2982"/>
+        <location filename="../mywidget.cpp" line="2996"/>
         <source>Contator Status Boost</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2983"/>
+        <location filename="../mywidget.cpp" line="2997"/>
         <source>DC module high voltage contactor has two states: On, Off; When there is voltage on the high voltage side, close the high voltage contactor; Otherwise, the high voltage contactor is disconnected.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2986"/>
+        <location filename="../mywidget.cpp" line="3000"/>
         <source>Contator Status Buck</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2987"/>
+        <location filename="../mywidget.cpp" line="3001"/>
         <source>DC module low voltage contactor has two states: On, Off; When there is voltage on the low voltage side, close the contactor on the low voltage side; Otherwise, the low pressure contactor is disconnected.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2990"/>
-        <location filename="../mywidget.cpp" line="4781"/>
-        <location filename="../mywidget.cpp" line="4791"/>
+        <location filename="../mywidget.cpp" line="3004"/>
+        <location filename="../mywidget.cpp" line="4822"/>
+        <location filename="../mywidget.cpp" line="4832"/>
         <source>Turn off</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2991"/>
+        <location filename="../mywidget.cpp" line="3005"/>
         <source>DCDC module operation modes states: OFF, Standby, Constant Voltage, Constant Current, MPPT.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="2995"/>
+        <location filename="../mywidget.cpp" line="3009"/>
         <source>DCDC insulation detection:Enable,Disable.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3002"/>
+        <location filename="../mywidget.cpp" line="3016"/>
         <source>Monitoring software version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3003"/>
+        <location filename="../mywidget.cpp" line="3017"/>
         <source>This is the monitor screen version number.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3006"/>
+        <location filename="../mywidget.cpp" line="3020"/>
         <source>DCAC Protocol version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3007"/>
+        <location filename="../mywidget.cpp" line="3021"/>
         <source>This is the DCAC protocol version number.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3010"/>
+        <location filename="../mywidget.cpp" line="3024"/>
         <source>DCAC Converter software version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3011"/>
+        <location filename="../mywidget.cpp" line="3025"/>
         <source>This is the DCAC converter software version.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3014"/>
+        <location filename="../mywidget.cpp" line="3028"/>
         <source>DCAC CPLD software version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3015"/>
+        <location filename="../mywidget.cpp" line="3029"/>
         <source>This is the DCAC CPLD software version.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3018"/>
+        <location filename="../mywidget.cpp" line="3032"/>
         <source>DCDC Protocol version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3019"/>
+        <location filename="../mywidget.cpp" line="3033"/>
         <source>This is the DCDC protocol version number.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3022"/>
+        <location filename="../mywidget.cpp" line="3036"/>
         <source>DCDC Converter software version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3023"/>
+        <location filename="../mywidget.cpp" line="3037"/>
         <source>This is the DCDC converter software version.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3026"/>
+        <location filename="../mywidget.cpp" line="3040"/>
         <source>DCDC CPLD software version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3027"/>
+        <location filename="../mywidget.cpp" line="3041"/>
         <source>This is the DCDC CPLD software version.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3030"/>
+        <location filename="../mywidget.cpp" line="3044"/>
         <source>SN</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3031"/>
+        <location filename="../mywidget.cpp" line="3045"/>
         <source>This is SN, the serial number of the product.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3039"/>
+        <location filename="../mywidget.cpp" line="3053"/>
         <source>PV power generation Day</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3040"/>
+        <location filename="../mywidget.cpp" line="3054"/>
         <source>Today&apos;s photovoltaic power generation.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3043"/>
+        <location filename="../mywidget.cpp" line="3057"/>
         <source>PV power generation Month</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3044"/>
+        <location filename="../mywidget.cpp" line="3058"/>
         <source>Monthly photovoltaic power generation.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3047"/>
+        <location filename="../mywidget.cpp" line="3061"/>
         <source>PV power generation Year</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3048"/>
+        <location filename="../mywidget.cpp" line="3062"/>
         <source>Annual photovoltaic power generation.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3051"/>
+        <location filename="../mywidget.cpp" line="3065"/>
         <source>PV power generation Total</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3052"/>
+        <location filename="../mywidget.cpp" line="3066"/>
         <source>Total photovoltaic power generation.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3056"/>
+        <location filename="../mywidget.cpp" line="3070"/>
         <source>Daily load electricity consumption </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3057"/>
+        <location filename="../mywidget.cpp" line="3071"/>
         <source>Today&apos;s electricity consumption of the load.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3060"/>
+        <location filename="../mywidget.cpp" line="3074"/>
         <source>Monthly load electricity consumption</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3061"/>
+        <location filename="../mywidget.cpp" line="3075"/>
         <source>Monthly electricity consumption of the load.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3064"/>
+        <location filename="../mywidget.cpp" line="3078"/>
         <source>Annual load electricity consumption</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3065"/>
+        <location filename="../mywidget.cpp" line="3079"/>
         <source>Annual electricity consumption of the load.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3068"/>
+        <location filename="../mywidget.cpp" line="3082"/>
         <source>Total load electricity consumption</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3069"/>
+        <location filename="../mywidget.cpp" line="3083"/>
         <source>Total electricity consumption of the load.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3073"/>
-        <location filename="../mywidget.cpp" line="3090"/>
+        <location filename="../mywidget.cpp" line="3087"/>
+        <location filename="../mywidget.cpp" line="3104"/>
         <source>Battery Charge Day</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3074"/>
+        <location filename="../mywidget.cpp" line="3088"/>
         <source>Today&apos;s battery charging.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3077"/>
-        <location filename="../mywidget.cpp" line="3094"/>
+        <location filename="../mywidget.cpp" line="3091"/>
+        <location filename="../mywidget.cpp" line="3108"/>
         <source>Battery Discharge Month</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3078"/>
+        <location filename="../mywidget.cpp" line="3092"/>
         <source>Monthly battery charging.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3081"/>
-        <location filename="../mywidget.cpp" line="3098"/>
+        <location filename="../mywidget.cpp" line="3095"/>
+        <location filename="../mywidget.cpp" line="3112"/>
         <source>Battery Discharge Year</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3082"/>
+        <location filename="../mywidget.cpp" line="3096"/>
         <source>Annual battery charging.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3085"/>
-        <location filename="../mywidget.cpp" line="3102"/>
+        <location filename="../mywidget.cpp" line="3099"/>
+        <location filename="../mywidget.cpp" line="3116"/>
         <source>Battery Discharge Total</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3086"/>
+        <location filename="../mywidget.cpp" line="3100"/>
         <source>Total battery charging.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3091"/>
+        <location filename="../mywidget.cpp" line="3105"/>
         <source>Today&apos;s battery discharging.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3095"/>
+        <location filename="../mywidget.cpp" line="3109"/>
         <source>Monthly battery discharging.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3099"/>
+        <location filename="../mywidget.cpp" line="3113"/>
         <source>Annual battery discharging.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3103"/>
+        <location filename="../mywidget.cpp" line="3117"/>
         <source>Total battery discharging.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3107"/>
+        <location filename="../mywidget.cpp" line="3121"/>
         <source>Grid buy Day</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3108"/>
+        <location filename="../mywidget.cpp" line="3122"/>
         <source>Today&apos;s electricity buy from the grid.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3111"/>
+        <location filename="../mywidget.cpp" line="3125"/>
         <source>Grid buy Month</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3112"/>
+        <location filename="../mywidget.cpp" line="3126"/>
         <source>Monthly electricity buy from the grid.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3115"/>
+        <location filename="../mywidget.cpp" line="3129"/>
         <source>Grid buy Year</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3116"/>
+        <location filename="../mywidget.cpp" line="3130"/>
         <source>Annual electricity buy from the grid.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3119"/>
+        <location filename="../mywidget.cpp" line="3133"/>
         <source>Grid buy Total</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3120"/>
+        <location filename="../mywidget.cpp" line="3134"/>
         <source>Total electricity buy from the grid.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3124"/>
+        <location filename="../mywidget.cpp" line="3138"/>
         <source>Grid sell Day</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3125"/>
+        <location filename="../mywidget.cpp" line="3139"/>
         <source>Today&apos;s electricity sell to the grid.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3128"/>
+        <location filename="../mywidget.cpp" line="3142"/>
         <source>Grid sell Month</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3129"/>
+        <location filename="../mywidget.cpp" line="3143"/>
         <source>Monthly electricity sell to the grid.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3132"/>
+        <location filename="../mywidget.cpp" line="3146"/>
         <source>Grid sell Year</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3133"/>
+        <location filename="../mywidget.cpp" line="3147"/>
         <source>Annual electricity sell to the grid.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3136"/>
+        <location filename="../mywidget.cpp" line="3150"/>
         <source>Grid sell Total</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3137"/>
+        <location filename="../mywidget.cpp" line="3151"/>
         <source>Total electricity sell to the grid.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3144"/>
+        <location filename="../mywidget.cpp" line="3158"/>
         <source>0 represents an alarm event, and this item will turn red. 1 represents a status event.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3146"/>
+        <location filename="../mywidget.cpp" line="3160"/>
         <source>Event start time.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3148"/>
+        <location filename="../mywidget.cpp" line="3162"/>
         <source>Event end time: &apos;... &apos;indicates that there is no end time,&apos;-&apos; indicates that the event is in progress.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3149"/>
+        <location filename="../mywidget.cpp" line="3163"/>
         <source>CAN communication failure</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3150"/>
+        <location filename="../mywidget.cpp" line="3164"/>
         <source>event description</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3151"/>
+        <location filename="../mywidget.cpp" line="3165"/>
         <source>event description.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3152"/>
+        <location filename="../mywidget.cpp" line="3166"/>
         <source>Fire alarm (High temp. alarm)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3153"/>
+        <location filename="../mywidget.cpp" line="3167"/>
         <source>Power Meter Comm fualttLead-acid abnormal</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3154"/>
+        <location filename="../mywidget.cpp" line="3168"/>
         <source>Converter Standby.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3155"/>
+        <location filename="../mywidget.cpp" line="3169"/>
         <source>The grid contactor connected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3156"/>
+        <location filename="../mywidget.cpp" line="3170"/>
         <source>The grid breaker connected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3157"/>
+        <location filename="../mywidget.cpp" line="3171"/>
         <source>The output breaker connected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3158"/>
+        <location filename="../mywidget.cpp" line="3172"/>
         <source>Buck not softened</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3159"/>
+        <location filename="../mywidget.cpp" line="3173"/>
         <source>Contactor off buck</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3160"/>
+        <location filename="../mywidget.cpp" line="3174"/>
         <source>The grid breaker disconnected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3452"/>
+        <location filename="../mywidget.cpp" line="3466"/>
         <source>Time when the system Settings are modified.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3454"/>
+        <location filename="../mywidget.cpp" line="3468"/>
         <source>System settings operation records.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3536"/>
+        <location filename="../mywidget.cpp" line="3550"/>
         <source>Power control type：CP_P-&gt;CP_N&amp;&amp;P</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3540"/>
+        <location filename="../mywidget.cpp" line="3554"/>
         <source>Power control type：CP_N&amp;&amp;P-&gt;CP_P</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3544"/>
+        <location filename="../mywidget.cpp" line="3558"/>
         <source>Grid Fre Upper limit：0.2-&gt;3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3548"/>
+        <location filename="../mywidget.cpp" line="3562"/>
         <source>Grid Fre Upper limit：3-&gt;0.2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3552"/>
+        <location filename="../mywidget.cpp" line="3566"/>
         <source>Voltage protection Lower limit：-10-&gt;-15</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3556"/>
+        <location filename="../mywidget.cpp" line="3570"/>
         <source>Voltage protection Lower limit：-15-&gt;-10</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3560"/>
+        <location filename="../mywidget.cpp" line="3574"/>
         <source>Operation mode：Manual-&gt;UPS</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3564"/>
+        <location filename="../mywidget.cpp" line="3578"/>
         <source>Inv ON/Off-Grid：Off-&gt;automatic</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3568"/>
+        <location filename="../mywidget.cpp" line="3582"/>
         <source>Inv ON/Off-Grid：automatic-&gt;Off</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3593"/>
+        <location filename="../mywidget.cpp" line="3607"/>
         <source>automatic</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3593"/>
+        <location filename="../mywidget.cpp" line="3607"/>
         <source>Grid conected mode of the converter </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3594"/>
+        <location filename="../mywidget.cpp" line="3608"/>
         <source>When &quot;Auto&quot; is selected, the converter will automatically switch between grid-on and grid-off. When the grid side is normal, the converter operates in grid-on mode (PQ).When the grid side is abnormal, the converter operates in grid-off mode (VF).
 When &quot;Grid-on&quot; is selected, the converter operates in grid-on mode (PQ).When the grid side is abnormal, the converter will shut down.
 When &quot;Grid-off&quot; is selected, the converter operates in grid-off mode (VF).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3601"/>
+        <location filename="../mywidget.cpp" line="3615"/>
         <source>Constant power(AC)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3602"/>
+        <location filename="../mywidget.cpp" line="3616"/>
         <source>AC Side Power: You can control the charging and discharging power of the battery from the AC side by modifying this value. When the advanced setting for power control mode is set to Constant Power mode (CP_AC), a positive value indicates discharging, and a negative value indicates charging.
 For example, setting it to -5 means that the AC side will charge the battery at a power of -5 kW. Due to converter losses, the DC side power will be lower than the AC side power in this case. Setting it to 5 means that the AC side will output power at 5 kW. Due to converter losses, the DC side power will be higher than the AC side power in this case.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3611"/>
+        <location filename="../mywidget.cpp" line="3625"/>
         <source>Grid Expansion: Enable, Disable. Enabling activates the Grid Expansion mode.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3615"/>
+        <location filename="../mywidget.cpp" line="3629"/>
         <source>30</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3615"/>
+        <location filename="../mywidget.cpp" line="3629"/>
         <source>Grid capacity(kW)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3616"/>
+        <location filename="../mywidget.cpp" line="3630"/>
         <source>Grid Capacity: In the grid expansion mode, the maximum power limit is imposed on the grid side .</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3620"/>
+        <location filename="../mywidget.cpp" line="3634"/>
         <source>DG Charging power limit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3621"/>
+        <location filename="../mywidget.cpp" line="3635"/>
         <source>DG Charging power limit: Diesel generators allow for the maximum charging power.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3625"/>
+        <location filename="../mywidget.cpp" line="3639"/>
         <source>DG capacity</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3626"/>
+        <location filename="../mywidget.cpp" line="3640"/>
         <source>Diesel Generator: Rated Power of the Diesel Generator.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3630"/>
+        <location filename="../mywidget.cpp" line="3644"/>
         <source>Start charging SOC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3631"/>
+        <location filename="../mywidget.cpp" line="3645"/>
         <source>Start charging SOC:
  (1) At the self-use mode, when the battery SOC is lower than the&quot;Start charging SOC&quot;, the converter maintains the battery SOC at this value.
  (2) At the battery priority mode, the ECP or FCP state is determined based on the current SOC.
@@ -4503,538 +4508,550 @@ For example, setting it to -5 means that the AC side will charge the battery at 
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3639"/>
+        <location filename="../mywidget.cpp" line="3653"/>
         <source>Stop charging SOC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3640"/>
+        <location filename="../mywidget.cpp" line="3654"/>
         <source>Stop charging SOC: When the SOC is greater than the &quot;Stop charging SOC&quot;, the FCP state is released.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3646"/>
-        <location filename="../mywidget.cpp" line="3650"/>
-        <location filename="../mywidget.cpp" line="4126"/>
+        <location filename="../mywidget.cpp" line="3660"/>
+        <location filename="../mywidget.cpp" line="3664"/>
+        <location filename="../mywidget.cpp" line="4140"/>
         <source>20</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3646"/>
+        <location filename="../mywidget.cpp" line="3660"/>
         <source>DG ECP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3647"/>
+        <location filename="../mywidget.cpp" line="3661"/>
         <source>In chai-hair mode, the AC power reference value of the saturation zone and the equalization zone.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3650"/>
+        <location filename="../mywidget.cpp" line="3664"/>
         <source>DG FCP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3651"/>
+        <location filename="../mywidget.cpp" line="3665"/>
         <source>Power reference value of AC side of the discharge area in Chai hair mode.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3654"/>
+        <location filename="../mywidget.cpp" line="3668"/>
         <source>Grid ECP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3655"/>
+        <location filename="../mywidget.cpp" line="3669"/>
         <source>In the power grid mode, the AC power reference value in the saturation zone and the equilibrium zone.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3658"/>
+        <location filename="../mywidget.cpp" line="3672"/>
         <source>Grid FCP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3659"/>
+        <location filename="../mywidget.cpp" line="3673"/>
         <source>In power grid mode, this parameter specifies the power reference value on the AC side of the vent area.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3662"/>
-        <location filename="../mywidget.cpp" line="3666"/>
-        <location filename="../mywidget.cpp" line="4049"/>
+        <location filename="../mywidget.cpp" line="3676"/>
+        <location filename="../mywidget.cpp" line="3680"/>
+        <location filename="../mywidget.cpp" line="4063"/>
         <source>100</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3662"/>
+        <location filename="../mywidget.cpp" line="3676"/>
         <source>Grid EDP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3663"/>
+        <location filename="../mywidget.cpp" line="3677"/>
         <source>The equalization zone limits the discharge power of the system to the grid side.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3666"/>
+        <location filename="../mywidget.cpp" line="3680"/>
         <source>Grid FDP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3667"/>
+        <location filename="../mywidget.cpp" line="3681"/>
         <source>The discharge zone limits the discharge power of the system to the power grid side.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3673"/>
+        <location filename="../mywidget.cpp" line="3687"/>
         <source>Lithium</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3674"/>
+        <location filename="../mywidget.cpp" line="3688"/>
         <source>Battery Types: Lithium, Lead-Acid.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3678"/>
+        <location filename="../mywidget.cpp" line="3692"/>
         <source>BMS Comm type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3679"/>
+        <location filename="../mywidget.cpp" line="3693"/>
         <source>Battery Communication Modes: None, RS485, CAN, Ethernet. (Note: Due to the fact that CAN and Ethernet both have only one port, the battery communication mode and EMS communication mode cannot be selected as &quot;CAN&quot; or &quot;Ethernet&quot; simultaneously.)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3684"/>
+        <location filename="../mywidget.cpp" line="3698"/>
         <source>Auto</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3684"/>
+        <location filename="../mywidget.cpp" line="3698"/>
         <source>BAT protocol</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3692"/>
+        <location filename="../mywidget.cpp" line="3706"/>
         <source>EMS Comm type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3693"/>
+        <location filename="../mywidget.cpp" line="3707"/>
         <source>EMS communication methods: RS485, CAN, Ethernet.
 The setting communication methods are readable and writable in remote mode, and only readable in local mode. The unselected communication methods are only readable in both remote and local mode.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3698"/>
+        <location filename="../mywidget.cpp" line="3712"/>
         <source>Local</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3699"/>
+        <location filename="../mywidget.cpp" line="3713"/>
         <source>Local: Converter control through HMI, In this mode, the EMS can only read and cannot write.
     Remote: In remote mode, the EMS can perform both read and write control.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3741"/>
+        <location filename="../mywidget.cpp" line="3755"/>
         <source>MPPT</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3742"/>
+        <location filename="../mywidget.cpp" line="3756"/>
         <source>DCDC module working modes include standby, constant voltage (CV), constant current (CC), and maximum power point tracking (MPPT).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3747"/>
+        <location filename="../mywidget.cpp" line="3761"/>
         <source>DCDC module operating modes: Buck, Boost.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3753"/>
+        <location filename="../mywidget.cpp" line="3767"/>
         <source>60</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3753"/>
+        <location filename="../mywidget.cpp" line="3767"/>
         <source>DC CC Value</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3754"/>
+        <location filename="../mywidget.cpp" line="3768"/>
         <source>DC Constant Current Value: Constant current target, range (0A - 120A) * n (n is the number of online modules).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3758"/>
+        <location filename="../mywidget.cpp" line="3772"/>
         <source>300</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3758"/>
+        <location filename="../mywidget.cpp" line="3772"/>
         <source>DC CV Value</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3759"/>
+        <location filename="../mywidget.cpp" line="3773"/>
         <source>DC Constant Voltage Value: Constant voltage target, range 200V-850V.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3764"/>
+        <location filename="../mywidget.cpp" line="3778"/>
         <source>Outer Ring Centralized Control：Multiple DCDC modules, especially when the DCDC module power fluctuation is significant.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3770"/>
-        <location filename="../mywidget.cpp" line="3775"/>
-        <location filename="../mywidget.cpp" line="3780"/>
-        <location filename="../mywidget.cpp" line="4453"/>
-        <location filename="../mywidget.cpp" line="4611"/>
+        <location filename="../mywidget.cpp" line="3784"/>
+        <location filename="../mywidget.cpp" line="3789"/>
+        <location filename="../mywidget.cpp" line="3794"/>
+        <location filename="../mywidget.cpp" line="4494"/>
+        <location filename="../mywidget.cpp" line="4652"/>
         <source>It is used for internal debugging only.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3774"/>
+        <location filename="../mywidget.cpp" line="3788"/>
         <source>IV curve scanning low voltage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3779"/>
+        <location filename="../mywidget.cpp" line="3793"/>
         <source>IV curve scanning high voltage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3791"/>
+        <location filename="../mywidget.cpp" line="3805"/>
         <source>Grid-on DOD</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3792"/>
+        <location filename="../mywidget.cpp" line="3806"/>
         <source>Grid-on DOD, allowable depth of discharge in grid-on mode.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3796"/>
+        <location filename="../mywidget.cpp" line="3810"/>
         <source>Grid-off DOD</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3797"/>
+        <location filename="../mywidget.cpp" line="3811"/>
         <source>Grid-off DOD, allowable depth of discharge in grid-off mode.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3800"/>
+        <location filename="../mywidget.cpp" line="3814"/>
         <source>Off-Grid DOD Protection Release SOC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3801"/>
+        <location filename="../mywidget.cpp" line="3815"/>
         <source>Off-Grid DOD Protection Release SOC: After triggering off-grid DOD protection, the off-grid DOD protection can only be lifted when the battery&apos;s SOC reaches this set value.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3806"/>
+        <location filename="../mywidget.cpp" line="3820"/>
         <source>Charging voltage upper limit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3807"/>
+        <location filename="../mywidget.cpp" line="3821"/>
         <source>Charging voltage upper limit: When the battery total voltage reaches this value during charging, the converter will shut down.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3811"/>
+        <location filename="../mywidget.cpp" line="3825"/>
         <source>Charge Volt upper Limit delta</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3812"/>
+        <location filename="../mywidget.cpp" line="3826"/>
         <source>Charging voltage upper limit hysteresis: When the battery is charging, if the battery total voltage reaches the charging voltage upper limit, the converter will shut down. When the battery total voltage drops below the charging voltage upper limit minus the hysteresis value, the converter will automatically turn on.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3819"/>
+        <location filename="../mywidget.cpp" line="3833"/>
         <source>Disc_Vol_lower_Limit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3820"/>
+        <location filename="../mywidget.cpp" line="3834"/>
         <source>Discharge voltage lower limit: When the battery total voltage reaches this value during discharge, the converter will shut down.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3824"/>
+        <location filename="../mywidget.cpp" line="3838"/>
         <source>Discharge Volt upper Limit delta</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3825"/>
+        <location filename="../mywidget.cpp" line="3839"/>
         <source>Discharge voltage lower limit hysteresis: When the battery is discharging, if the battery total voltage drops below the discharge voltage lower limit, the converter will shut down. When the battery total voltage exceeds the discharge voltage lower limit plus the hysteresis value, the converter will automatically turn on.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3830"/>
+        <location filename="../mywidget.cpp" line="3844"/>
         <source>Charge Current Limit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3831"/>
+        <location filename="../mywidget.cpp" line="3845"/>
         <source>Charging current limit: The maximum allowable current on the battery side to prevent overcurrent during charging.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3835"/>
+        <location filename="../mywidget.cpp" line="3849"/>
         <source>Discharge Current Limit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3836"/>
+        <location filename="../mywidget.cpp" line="3850"/>
         <source>Discharging current limit: The maximum allowable current on the battery side to prevent overcurrent during discharging.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3840"/>
+        <location filename="../mywidget.cpp" line="3854"/>
         <source>Generator turn on SOC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3841"/>
+        <location filename="../mywidget.cpp" line="3855"/>
         <source>When the specified SOC is reached, the diesel generator starts.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3845"/>
+        <location filename="../mywidget.cpp" line="3859"/>
         <source>Generator turn off SOC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3846"/>
+        <location filename="../mywidget.cpp" line="3860"/>
         <source>When the specified SOC is reached, the diesel generator shuts down.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3852"/>
+        <location filename="../mywidget.cpp" line="3866"/>
         <source>Force Charge On</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3853"/>
+        <location filename="../mywidget.cpp" line="3867"/>
         <source>Forced Charging On: When the cell voltage drops below this value, the converter switches to Battery Priority Mode, and the AC side charges the battery with a power of 10kW.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3857"/>
+        <location filename="../mywidget.cpp" line="3871"/>
         <source>ForceCharge Off</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3858"/>
+        <location filename="../mywidget.cpp" line="3872"/>
         <source>Forced Charging Off: When the cell voltage exceeds this value, the converter exits Battery Priority Mode and returns to the mode before Forced Charging was enabled.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1457"/>
+        <location filename="../mywidget.cpp" line="4333"/>
+        <source>Non
+Countercurrent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4334"/>
+        <source>Converter Anti-Reverse Flow: Countercurrent, Non Countercurrent;
+Countercurrent allows converter current to flow into the grid, while Non Countercurrent prevents converter current from flowing into the grid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="1469"/>
         <source>When the battery current feedback type is &apos;Calculated Value&apos;, and the highest cell voltage in the battery reaches the cell protection voltage minus the cell protection voltage threshold,the Inverter will enable linear current limiting to restrict the charging current at that time.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3866"/>
+        <location filename="../mywidget.cpp" line="3880"/>
         <source>3650</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3871"/>
+        <location filename="../mywidget.cpp" line="3885"/>
         <source>DCAC cell delta</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3872"/>
+        <location filename="../mywidget.cpp" line="3886"/>
         <source>DCAC cell protect voltage delta.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3882"/>
+        <location filename="../mywidget.cpp" line="3896"/>
         <source>Capacity, the capacity of the lead-acid battery.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3886"/>
+        <location filename="../mywidget.cpp" line="3900"/>
         <source>Cell_number_2V</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3887"/>
+        <location filename="../mywidget.cpp" line="3901"/>
         <source>The number of battery cells connected in series in the battery stack (based on a 2V unit).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3892"/>
+        <location filename="../mywidget.cpp" line="3906"/>
         <source>This is the floating charge voltage.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3897"/>
+        <location filename="../mywidget.cpp" line="3911"/>
         <source>This is the filling voltage.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3902"/>
+        <location filename="../mywidget.cpp" line="3916"/>
         <source>Charging Current Limit: The maximum allowable current on the battery side to prevent overcurrent during charging. (Upper limit: 0.25C)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3907"/>
+        <location filename="../mywidget.cpp" line="3921"/>
         <source>Discharge Current Limit: The maximum allowable current on the battery side to prevent overcurrent during discharge. (Upper limit: 0.5C)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3914"/>
+        <location filename="../mywidget.cpp" line="3928"/>
         <source>Generator Start Voltage: When the specified voltage is reached, the diesel generator will start up.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3919"/>
+        <location filename="../mywidget.cpp" line="3933"/>
         <source>Generator Shutdown Voltage: When the specified voltage is reached, the diesel generator will shut down.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3923"/>
+        <location filename="../mywidget.cpp" line="3937"/>
         <source>DCAC Reference Voltage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3924"/>
+        <location filename="../mywidget.cpp" line="3938"/>
         <source>.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3928"/>
+        <location filename="../mywidget.cpp" line="3942"/>
         <source>Grid-on EOD</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3929"/>
+        <location filename="../mywidget.cpp" line="3943"/>
         <source>Grid-on discharge cut-off voltage.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3933"/>
+        <location filename="../mywidget.cpp" line="3947"/>
         <source>Grid-off EOD</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3934"/>
+        <location filename="../mywidget.cpp" line="3948"/>
         <source>Grid-off discharge cut-off voltage.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3940"/>
+        <location filename="../mywidget.cpp" line="3954"/>
         <source>Uniform charging to flushing current: Upper limit of 0.025C.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3945"/>
+        <location filename="../mywidget.cpp" line="3959"/>
         <source>Float turn to uniform charging current: Upper limit of 0.15C.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3951"/>
+        <location filename="../mywidget.cpp" line="3965"/>
         <source>Start_Time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3952"/>
+        <location filename="../mywidget.cpp" line="3966"/>
         <source>End_Time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3954"/>
+        <location filename="../mywidget.cpp" line="3968"/>
         <source>Power</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3955"/>
+        <location filename="../mywidget.cpp" line="3969"/>
         <source>08:00</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3956"/>
+        <location filename="../mywidget.cpp" line="3970"/>
         <source>10:00</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3957"/>
+        <location filename="../mywidget.cpp" line="3971"/>
         <source>End time: The system stops automatically running when the system reaches this time.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3958"/>
+        <location filename="../mywidget.cpp" line="3972"/>
         <source>The function that will perform this function during business hours, there are two to choose from, They are Peak shaving,Economic mode.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3959"/>
+        <location filename="../mywidget.cpp" line="3973"/>
         <source>Working Power: Only effective in peak shaving mode. Positive values indicate discharging, while negative values indicate charging.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3960"/>
+        <location filename="../mywidget.cpp" line="3974"/>
         <source>Start time: When the system reaches this time, it starts to run automatically.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3961"/>
+        <location filename="../mywidget.cpp" line="3975"/>
         <source>Select: After this function is enabled, the system automatically runs the selected function mode within the specified period.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3962"/>
+        <location filename="../mywidget.cpp" line="3976"/>
         <source>Peak shaving</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3963"/>
+        <location filename="../mywidget.cpp" line="3977"/>
         <source>Peak</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3964"/>
+        <location filename="../mywidget.cpp" line="3978"/>
         <source>In the economic mode, select &apos;Peak&apos; periods,&apos;Flat&apos; periods and &apos;Valley&apos; periods based on electricity prices.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3967"/>
+        <location filename="../mywidget.cpp" line="3981"/>
         <source>Generator action:Generator trun on,Generator trun off,NONE.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3968"/>
+        <location filename="../mywidget.cpp" line="3982"/>
         <source>Generator trun off</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3969"/>
+        <location filename="../mywidget.cpp" line="3983"/>
         <source>Generator trun on</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3970"/>
-        <location filename="../mywidget.cpp" line="4230"/>
+        <location filename="../mywidget.cpp" line="3984"/>
+        <location filename="../mywidget.cpp" line="4244"/>
         <source>NONE</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3971"/>
+        <location filename="../mywidget.cpp" line="3985"/>
         <source>Economic mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4017"/>
+        <location filename="../mywidget.cpp" line="4031"/>
         <source>Constant Voltage (CV) mode: The converter will operate in constant voltage mode on the DC side.
 Constant Current (CC) mode: The converter will operate in constant current mode on the DC side.
 Constant Power AC (CP_AC) mode: The power level can be set at &quot;constant power.&quot; The value represents the power level, positive for discharge and negative for charge. For example, setting it to -5 means that the AC side will charge the battery with a power of 5 kW. Due to converter losses, the DC side power will be lower than the AC side power in this case. Conversely, setting it to 5 means that the AC side will output power at 5 kW. Due to converter losses, the DC side power will be higher than the AC side power in this case.
@@ -5042,305 +5059,305 @@ Reserved.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4027"/>
+        <location filename="../mywidget.cpp" line="4041"/>
         <source>Non adjustable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4027"/>
+        <location filename="../mywidget.cpp" line="4041"/>
         <source>Output reactive power mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4028"/>
+        <location filename="../mywidget.cpp" line="4042"/>
         <source>Reactive Power Output Mode: Default non-adjustable, options include Power Factor, Reactive Power, non-adjustable.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4032"/>
+        <location filename="../mywidget.cpp" line="4046"/>
         <source>Output reactive power</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4033"/>
+        <location filename="../mywidget.cpp" line="4047"/>
         <source>This parameter can change the reactive power Q, positive value indicates leading reactive power, negative value indicates lagging reactive power.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4038"/>
+        <location filename="../mywidget.cpp" line="4052"/>
         <source>This item can modify the power factor, where the power factor is equal to the ratio of active power to apparent power. A positive value indicates leading reactive power, while a negative value indicates lagging reactive power.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4042"/>
+        <location filename="../mywidget.cpp" line="4056"/>
         <source>600</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4042"/>
+        <location filename="../mywidget.cpp" line="4056"/>
         <source>Constant voltage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4043"/>
+        <location filename="../mywidget.cpp" line="4057"/>
         <source>Enter the advanced settings interface and select the control power mode.Choose constant voltage and modify the voltage value.Converter will operate at the constant voltage value and function as a constant voltage source.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4049"/>
+        <location filename="../mywidget.cpp" line="4063"/>
         <source>Constant current</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4050"/>
+        <location filename="../mywidget.cpp" line="4064"/>
         <source>Enter the advanced settings interface and select the control power mode. Choose constant current and modify the current value.Converter will charge or discharge the battery with this current value.Positive values represent discharging, while negative values represent charging.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4056"/>
+        <location filename="../mywidget.cpp" line="4070"/>
         <source>Output power limit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4057"/>
+        <location filename="../mywidget.cpp" line="4071"/>
         <source>Output Power Limit: Restricts the upper limit of the set value for the power on the AC side of the converter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4061"/>
+        <location filename="../mywidget.cpp" line="4075"/>
         <source>M_01</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4062"/>
+        <location filename="../mywidget.cpp" line="4076"/>
         <source>Device number: You can set ID number, which can be set within the range of M_01 to M_12.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4069"/>
+        <location filename="../mywidget.cpp" line="4083"/>
         <source>Parallel operation: When converter operates at grid-off mode in parallel, this item needs to be enabled.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4076"/>
+        <location filename="../mywidget.cpp" line="4090"/>
         <source>Serial Communication Address: The default value is 1, adjustable range is between 1 and 255, used for matching address during serial communication.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4079"/>
+        <location filename="../mywidget.cpp" line="4093"/>
         <source>serial port 2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4080"/>
+        <location filename="../mywidget.cpp" line="4094"/>
         <source>Serial Port 2 has six selectable baud rates: 1200, 2400, 4800, 9600, 19200, and 38400.                                            The default baud rate for Serial Port 2 is 9600 bps, with eight data bits, no parity, and one stop bit (8-N-1).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4084"/>
+        <location filename="../mywidget.cpp" line="4098"/>
         <source>serial port 3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4085"/>
+        <location filename="../mywidget.cpp" line="4099"/>
         <source>Serial Port 3 has six selectable baud rates: 1200, 2400, 4800, 9600, 19200, and 38400. The default baud rate for Serial Port 3 is 9600 bps, with eight data bits, no parity, and one stop bit (8-N-1).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4089"/>
+        <location filename="../mywidget.cpp" line="4103"/>
         <source>serial port 4</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4090"/>
+        <location filename="../mywidget.cpp" line="4104"/>
         <source>Serial Port 4 has six selectable baud rates: 1200, 2400, 4800, 9600, 19200, and 38400. The default baud rate for Serial Port 4 is 9600 bps, with eight data bits, no parity, and one stop bit (8-N-1).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4094"/>
+        <location filename="../mywidget.cpp" line="4108"/>
         <source>serial port 5</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4095"/>
+        <location filename="../mywidget.cpp" line="4109"/>
         <source>Serial Port 5 has six selectable baud rates: 1200, 2400, 4800, 9600, 19200, and 38400. The default baud rate for Serial Port 5 is 9600 bps, with eight data bits, no parity, and one stop bit (8-N-1).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4099"/>
+        <location filename="../mywidget.cpp" line="4113"/>
         <source>serial port 6</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4100"/>
+        <location filename="../mywidget.cpp" line="4114"/>
         <source>Serial Port 6 has six selectable baud rates: 1200, 2400, 4800, 9600, 19200, and 38400. The default baud rate for Serial Port 6 is 9600 bps, with eight data bits, no parity, and one stop bit (8-N-1).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4104"/>
+        <location filename="../mywidget.cpp" line="4118"/>
         <source>Can port 1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4105"/>
+        <location filename="../mywidget.cpp" line="4119"/>
         <source>CAN1 Port: The baud rate for internal communication is 500 kbps by default and cannot be modified.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4108"/>
+        <location filename="../mywidget.cpp" line="4122"/>
         <source>Can port 2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4109"/>
+        <location filename="../mywidget.cpp" line="4123"/>
         <source>CAN2 Port: Optional baud rates for the CAN2 port include 100, 125, 250, 500, and 800 kbps, with a default baud rate of 500 kbps.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4113"/>
+        <location filename="../mywidget.cpp" line="4127"/>
         <source>Bat&gt;Grid</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4114"/>
+        <location filename="../mywidget.cpp" line="4128"/>
         <source>Energy Priority: You can choose whether to preferentially use electricity from the grid or battery.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4120"/>
+        <location filename="../mywidget.cpp" line="4134"/>
         <source>Battery Capacity Alarm</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4121"/>
+        <location filename="../mywidget.cpp" line="4135"/>
         <source>Battery Capacity Alarm: Enable,Disable.It is effective in Grid Expansion mode and is used to prevent over-discharge of the battery.
     When the battery SOC is lower than the &quot;Charge SOC&quot; or &quot;On-Grid DOD&quot;, the system will enter low protection mode for battery capacity. If, at this time, the load still exceeds the set grid capacity value and battery discharge is required, the system will shut down after the battery has been discharging continuously for 3 minutes.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4126"/>
+        <location filename="../mywidget.cpp" line="4140"/>
         <source>Bms Com. Fault Time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4127"/>
+        <location filename="../mywidget.cpp" line="4141"/>
         <source>BMS communication fault determination time: The BMS communication fault determination time refers to the BMS communication fault when the BMS communication is disconnected and the communication is not recovered after a preset period of time.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4133"/>
+        <location filename="../mywidget.cpp" line="4147"/>
         <source>120</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4133"/>
+        <location filename="../mywidget.cpp" line="4147"/>
         <source>EMS Com. Fault Model</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4134"/>
+        <location filename="../mywidget.cpp" line="4148"/>
         <source>EMS communication fault determination time: The EMS communication fault determination time refers to the time when the communication between the EMS is disconnected and the communication is not recovered after a preset period of time.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4148"/>
+        <location filename="../mywidget.cpp" line="4162"/>
         <source>English</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4149"/>
+        <location filename="../mywidget.cpp" line="4163"/>
         <source>You can set the display language of the screen to Chinese or English. The system needs to restart before switching the language.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4153"/>
+        <location filename="../mywidget.cpp" line="4167"/>
         <source>Allow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4154"/>
+        <location filename="../mywidget.cpp" line="4168"/>
         <source>Set whether the display is enabled sound, which can be allowed(Allow) or prohibited(forbid).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4158"/>
+        <location filename="../mywidget.cpp" line="4172"/>
         <source>Clear</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4159"/>
+        <location filename="../mywidget.cpp" line="4173"/>
         <source>Clear previous recorded data and operation data of the system.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4162"/>
+        <location filename="../mywidget.cpp" line="4176"/>
         <source>upgrade</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4167"/>
+        <location filename="../mywidget.cpp" line="4181"/>
         <source>Backup</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4167"/>
+        <location filename="../mywidget.cpp" line="4181"/>
         <source>Backup Set Parameters</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4168"/>
+        <location filename="../mywidget.cpp" line="4182"/>
         <source>Backup setting parameters: Backup setting parameters refers to backing up the parameters set on the current device so that the backup parameter Settings can be restored when needed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4172"/>
+        <location filename="../mywidget.cpp" line="4186"/>
         <source>Restore
 Backup</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4172"/>
+        <location filename="../mywidget.cpp" line="4186"/>
         <source>Restore Backup Set Parameters</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4173"/>
+        <location filename="../mywidget.cpp" line="4187"/>
         <source>Restore backup setting parameters: Restore backup setting parameters means to restore the device to the last backup setting parameters and restart the device.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4181"/>
+        <location filename="../mywidget.cpp" line="4195"/>
         <source>ProtocolVersion</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4182"/>
+        <location filename="../mywidget.cpp" line="4196"/>
         <source>Protocol version: View the current protocol version. The default protocol version number is V1.0.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4186"/>
+        <location filename="../mywidget.cpp" line="4200"/>
         <source>restore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4187"/>
+        <location filename="../mywidget.cpp" line="4201"/>
         <source>Restore the factory default Settings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4191"/>
+        <location filename="../mywidget.cpp" line="4205"/>
         <source>Calculated value</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="9430"/>
-        <location filename="../mywidget.cpp" line="4191"/>
+        <location filename="../mywidget.cpp" line="4205"/>
         <source>Battery current feedback type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4192"/>
+        <location filename="../mywidget.cpp" line="4206"/>
         <source>The types of battery current feedback include &apos;Calculated Value&apos; and &apos;BMS Value&apos;.
 Calculated Value: When the highest cell voltage in the battery reaches the cell protection voltage mi nus the cell protection voltage delta,the inverter will enable linear current limiting to restrict the charging current at that time.
 BMS Value: The inverter restricts the charging current based on the charging current limit value uploaded by the BMS.
@@ -5349,691 +5366,715 @@ The default is Calculated Value.</source>
     </message>
     <message>
         <location filename="../mywidget.ui" line="9454"/>
-        <location filename="../mywidget.cpp" line="4230"/>
+        <location filename="../mywidget.cpp" line="4244"/>
         <source>Meter Model</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4231"/>
+        <location filename="../mywidget.cpp" line="4245"/>
         <source>Select the meter model based on the type of meter. Currently available models include: DTSD1352, AMC96E4KC, ADL3000EB, and AMC72_96.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4202"/>
-        <location filename="../mywidget.cpp" line="4207"/>
+        <location filename="../mywidget.cpp" line="4216"/>
+        <location filename="../mywidget.cpp" line="4221"/>
         <source>Follow
 battery</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="3685"/>
+        <location filename="../mywidget.cpp" line="3699"/>
         <source>Battery Protocol: Parse the messages sent by BMS based on the selected battery protocol.
 Currently supported battery manufacturer protocols include:MEGA, LISHEN, GREATPOWER, GOLD, BMSER, LANLI, SLANPOWER, PYLON, CATL, SUOYING, XINGWANGDA, KUBO, GOLD_V2, TOGOOD, PGS, WOBOYUAN, KGOOER, LD, PYLON_L, VILION, TUOPU,JDI,BGS,HUASU,ALPHA,SHIDING,Freedom.
 Select AUTO to automatically detect the battery manufacturer protocol.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="1456"/>
+        <location filename="../mywidget.cpp" line="1468"/>
         <source>DCAC cell protect voltage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4202"/>
+        <location filename="../mywidget.cpp" line="4216"/>
         <source>Release Prohibited Charging Flag</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4203"/>
+        <location filename="../mywidget.cpp" line="4217"/>
         <source>When the battery SOC is below the selected value, there are four options: Follow battery, 95%, 90%, 85%.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4207"/>
+        <location filename="../mywidget.cpp" line="4221"/>
         <source>Release Prohibited Discharging Flag</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4208"/>
+        <location filename="../mywidget.cpp" line="4222"/>
         <source>When the battery SOC is higher than the selected value, there are four options: Follow battery, 5%, 10%, 15%.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.ui" line="9438"/>
-        <location filename="../mywidget.cpp" line="4212"/>
+        <location filename="../mywidget.cpp" line="4226"/>
         <source>Electric Meter Anti-Reverse Flow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4213"/>
+        <location filename="../mywidget.cpp" line="4227"/>
         <source>Electric Meter Anti-Reverse Flow：Enable、Disable.
 Enabling prevents system current from flowinginto the grid while Disabling allows systemcurrent to flow into the grid.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4220"/>
+        <location filename="../mywidget.cpp" line="4234"/>
         <source>User password</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4221"/>
+        <location filename="../mywidget.cpp" line="4235"/>
         <source>User password: Available for resetting the user password. The default user password is 123456. (Note: The user password must be six digits.)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4225"/>
+        <location filename="../mywidget.cpp" line="4239"/>
         <source>Maintain password</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4226"/>
+        <location filename="../mywidget.cpp" line="4240"/>
         <source>Maintain password: Available for resetting the maintain password.(Note: The maintain password must be six digits.)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4240"/>
+        <location filename="../mywidget.cpp" line="4254"/>
         <source>Power change rate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4241"/>
+        <location filename="../mywidget.cpp" line="4255"/>
         <source>Power change rate: the rate at which power changes within a second .</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4244"/>
+        <location filename="../mywidget.cpp" line="4258"/>
         <source>Upper limit of power grid frequency variation range</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4245"/>
+        <location filename="../mywidget.cpp" line="4259"/>
         <source>Upper limit of power grid frequency variation range: The maximum range of frequency variation allowed on the AC side, which can be selected as 0.2, 0.5, 1, 5.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4249"/>
+        <location filename="../mywidget.cpp" line="4263"/>
         <source>Lower limit of power grid frequency variation range</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4250"/>
+        <location filename="../mywidget.cpp" line="4264"/>
         <source>Lower limit of power grid frequency variation range: The maximum range of frequency variation allowed on the AC side, which can be selected as-0.5, -1, -2, -5.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4254"/>
+        <location filename="../mywidget.cpp" line="4268"/>
         <source>Vol protection upper limit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4255"/>
+        <location filename="../mywidget.cpp" line="4269"/>
         <source>Upper limit of voltage protection range: The maximum range of voltage variation allowed on the AC side, which can be selected as 10, 15, 20.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4259"/>
+        <location filename="../mywidget.cpp" line="4273"/>
         <source>Vol protection lower limit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4260"/>
+        <location filename="../mywidget.cpp" line="4274"/>
         <source>Lower limit of voltage protection range: The minimum range of voltage variation allowed on the AC side, which can be selected as -10, -15, -20.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4264"/>
-        <location filename="../mywidget.cpp" line="4269"/>
-        <location filename="../mywidget.cpp" line="4273"/>
-        <location filename="../mywidget.cpp" line="4284"/>
-        <location filename="../mywidget.cpp" line="4325"/>
-        <location filename="../mywidget.cpp" line="4330"/>
-        <location filename="../mywidget.cpp" line="4335"/>
-        <location filename="../mywidget.cpp" line="4377"/>
+        <location filename="../mywidget.cpp" line="4278"/>
+        <location filename="../mywidget.cpp" line="4283"/>
+        <location filename="../mywidget.cpp" line="4287"/>
+        <location filename="../mywidget.cpp" line="4298"/>
+        <location filename="../mywidget.cpp" line="4339"/>
+        <location filename="../mywidget.cpp" line="4344"/>
+        <location filename="../mywidget.cpp" line="4349"/>
+        <location filename="../mywidget.cpp" line="4391"/>
         <source>prohibit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4265"/>
+        <location filename="../mywidget.cpp" line="4279"/>
         <source>High voltage ride through(HVRT) enablement: Enable, Disable. (Note: This option is generally used in large grid-on power stations.)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4270"/>
+        <location filename="../mywidget.cpp" line="4284"/>
         <source>Low voltage ride through(LVRT) enablement: Enable, Disable. (Note: This option is generally used in large grid-on power stations.)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4274"/>
+        <location filename="../mywidget.cpp" line="4288"/>
         <source>Prevent islanding effect. When islanding effect is detected (in a photovoltaic grid-on system, when a power outage occurs in the main grid, and the PV grid-connected converter generates power that matches the local load on the low-voltage side of the grid, it can easily sustain power generation independently, resulting in an &apos;island&apos; phenomenon, which endangers the safety of maintenance personnel), the converter automatically shuts down. The options for this feature can be set as &apos;Enable&apos; or &apos;prohibited&apos;.(Note: This option is generally used in large grid-on power stations.)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4285"/>
+        <location filename="../mywidget.cpp" line="4299"/>
         <source>Primary frequency control enable: When the grid frequency deviates from the rated value, the active power is controlled to increase or decrease in order to maintain the grid frequency at the rated value. It can be selected as enabled or disabled. (Note: This option is generally used in large grid-on power stations.)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4295"/>
+        <location filename="../mywidget.cpp" line="4309"/>
         <source>Converter Model: As per factory settings, generally not modifiable.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4300"/>
+        <location filename="../mywidget.cpp" line="4314"/>
         <source>The rated capacity of the converter shall be based on the factory value and cannot be changed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4304"/>
+        <location filename="../mywidget.cpp" line="4318"/>
         <source>Transformer Turns Ratio</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4305"/>
+        <location filename="../mywidget.cpp" line="4319"/>
         <source>Transformer Voltage Ratio: To be determined by the factory nameplate, not modifiable.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4309"/>
+        <location filename="../mywidget.cpp" line="4323"/>
         <source>Output vol level</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4310"/>
+        <location filename="../mywidget.cpp" line="4324"/>
         <source>Output Voltage Level: As per factory settings, generally not modifiable.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4314"/>
+        <location filename="../mywidget.cpp" line="4328"/>
         <source>Output Fre grade</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4315"/>
+        <location filename="../mywidget.cpp" line="4329"/>
         <source>Output Frequency Level: Default 50Hz, typically 50Hz or 60Hz.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4320"/>
-        <source>Converter Anti-Reverse Flow: Enable, Disable;
-Enabling prevents converter current from flowing into the grid, while Disabling allows converter current to flow into the grid.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="4325"/>
+        <location filename="../mywidget.cpp" line="4339"/>
         <source>Pshedding Freq</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4326"/>
+        <location filename="../mywidget.cpp" line="4340"/>
         <source>Over-frequency load shedding: It can be selected as enabled or disabled. (Note: This option is generally used in large grid-on power stations.)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4331"/>
+        <location filename="../mywidget.cpp" line="4345"/>
         <source>Rotational inertia enable: It can be selected as enabled or disabled. (Note: This option is generally used in large grid-on power stations.)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4336"/>
+        <location filename="../mywidget.cpp" line="4350"/>
         <source>QP curve: It can be selected as enabled or disabled. (Note: This option is generally used in large grid-on power stations.)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4341"/>
+        <location filename="../mywidget.cpp" line="4355"/>
         <source>Module Number</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4342"/>
+        <location filename="../mywidget.cpp" line="4356"/>
         <source>Number of modules, default 1(invalid setting).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4347"/>
+        <location filename="../mywidget.cpp" line="4361"/>
         <source>When you select DCDC, the DCAC interface freezes, and the maximum module ID and minimum module ID take effect.You can only modify the database to restore the DCAC interface.(Note:As per factory settings, generally not modifiable.)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4353"/>
+        <location filename="../mywidget.cpp" line="4367"/>
         <source>Module max</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4354"/>
+        <location filename="../mywidget.cpp" line="4368"/>
         <source>Maximum Module Count for Current Chassis. (Note: Only effective when selecting DCDC mode in chassis settings.)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4358"/>
+        <location filename="../mywidget.cpp" line="4372"/>
         <source>Module min</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4359"/>
+        <location filename="../mywidget.cpp" line="4373"/>
         <source>Minimum Module Count for Current Chassis. (Note: Only effective when selecting DCDC mode in chassis settings.)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4363"/>
+        <location filename="../mywidget.cpp" line="4377"/>
         <source>Grid recovery time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4364"/>
+        <location filename="../mywidget.cpp" line="4378"/>
         <source>Grid restoration time: reserved function, setting invalid.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4369"/>
+        <location filename="../mywidget.cpp" line="4383"/>
         <source>DCAC Isolation Monitoring Enable: Enable, Disable. (Note: Default is Disable)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4373"/>
+        <location filename="../mywidget.cpp" line="4387"/>
         <source>DCDC Isolation Monitoring Enable: Enable, Disable. (Note: Default is Disable)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4377"/>
+        <location filename="../mywidget.cpp" line="4391"/>
         <source>CV parallel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4378"/>
+        <location filename="../mywidget.cpp" line="4392"/>
         <source>Constant voltage parallel operation enable: It can be selected as enabled or disabled.  (Note: This option is generally used in large grid-on power stations.)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4383"/>
+        <location filename="../mywidget.cpp" line="4397"/>
         <source>Normally closed circuit (NC) or normally open circuit (NO) according to field Settings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4384"/>
+        <location filename="../mywidget.cpp" line="4398"/>
         <source>When the dry contact is enabled, the device will perform the selected action when there is a change in the signal.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4385"/>
+        <location filename="../mywidget.cpp" line="4399"/>
         <source>Input Dry Contact: nEnabled: Triggers the Action when the dry contact detects a state other than the specified NO/NC.
 Disabled: No action is taken when the dry contact detects a state other than the specified NO/NC.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4392"/>
+        <location filename="../mywidget.cpp" line="4412"/>
         <source>DI_1_Enable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4395"/>
+        <location filename="../mywidget.cpp" line="4415"/>
         <source>DI_2_Enable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4398"/>
+        <location filename="../mywidget.cpp" line="4418"/>
         <source>DI_3_Enable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4401"/>
+        <location filename="../mywidget.cpp" line="4421"/>
         <source>DI_4_Enable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4404"/>
+        <location filename="../mywidget.cpp" line="4424"/>
         <source>DI_5_Enable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4407"/>
+        <location filename="../mywidget.cpp" line="4427"/>
         <source>DI_6_Enable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4412"/>
+        <location filename="../mywidget.cpp" line="4432"/>
         <source>DI_1_NC_O</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4415"/>
+        <location filename="../mywidget.cpp" line="4435"/>
         <source>DI_2_NC_O</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4418"/>
+        <location filename="../mywidget.cpp" line="4438"/>
         <source>DI_3_NC_O</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4421"/>
+        <location filename="../mywidget.cpp" line="4441"/>
         <source>DI_4_NC_O</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4424"/>
+        <location filename="../mywidget.cpp" line="4444"/>
         <source>DI_5_NC_O</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4427"/>
+        <location filename="../mywidget.cpp" line="4447"/>
         <source>DI_6_NC_O</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4433"/>
-        <location filename="../mywidget.cpp" line="4445"/>
-        <location filename="../mywidget.cpp" line="4448"/>
+        <location filename="../mywidget.cpp" line="4453"/>
+        <location filename="../mywidget.cpp" line="4465"/>
+        <location filename="../mywidget.cpp" line="4468"/>
         <source>Shut down</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4433"/>
+        <location filename="../mywidget.cpp" line="4453"/>
         <source>DI_1_Action</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4436"/>
+        <location filename="../mywidget.cpp" line="4456"/>
         <source>DI_2_Action</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4439"/>
+        <location filename="../mywidget.cpp" line="4459"/>
         <source>DI_3_Action</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4442"/>
+        <location filename="../mywidget.cpp" line="4462"/>
         <source>DI_4_Action</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4445"/>
+        <location filename="../mywidget.cpp" line="4465"/>
         <source>DI_5_Action</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4448"/>
+        <location filename="../mywidget.cpp" line="4468"/>
         <source>DI_6_Action</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4470"/>
-        <location filename="../mywidget.cpp" line="4669"/>
-        <source>Debug memery var 1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../mywidget.cpp" line="4474"/>
-        <location filename="../mywidget.cpp" line="4673"/>
-        <source>Debug memery var 2</source>
+        <source>DI_1_Function</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4478"/>
-        <location filename="../mywidget.cpp" line="4677"/>
-        <source>Debug memery var 3</source>
+        <location filename="../mywidget.cpp" line="4477"/>
+        <source>DI_2_Function</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4494"/>
-        <location filename="../mywidget.cpp" line="4656"/>
-        <source>INV On off flag</source>
+        <location filename="../mywidget.cpp" line="4480"/>
+        <source>DI_3_Function</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4499"/>
-        <source>Grid A AB Vol revise</source>
+        <location filename="../mywidget.cpp" line="4483"/>
+        <source>DI_4_Function</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4503"/>
-        <source>Grid B BC Vol revise</source>
+        <location filename="../mywidget.cpp" line="4486"/>
+        <source>DI_5_Function</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4507"/>
-        <source>Grid C CA Vol revise</source>
+        <location filename="../mywidget.cpp" line="4489"/>
+        <source>DI_6_Function</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="4511"/>
-        <source>Output A Cur revise</source>
+        <location filename="../mywidget.cpp" line="4710"/>
+        <source>Debug memery var 1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="4515"/>
-        <source>Output B Cur revise</source>
+        <location filename="../mywidget.cpp" line="4714"/>
+        <source>Debug memery var 2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="4519"/>
-        <source>Output C Cur revise</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="4523"/>
-        <source>Voltage 1.5 revise</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mywidget.cpp" line="4527"/>
-        <source>Bus Vol revise</source>
+        <location filename="../mywidget.cpp" line="4718"/>
+        <source>Debug memery var 3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="4535"/>
-        <source>INV flag</source>
+        <location filename="../mywidget.cpp" line="4697"/>
+        <source>INV On off flag</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="4540"/>
-        <source>Input Vol revise</source>
+        <source>Grid A AB Vol revise</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="4544"/>
-        <source>Input Cur revise</source>
+        <source>Grid B BC Vol revise</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="4548"/>
-        <source>INV A Vol revise</source>
+        <source>Grid C CA Vol revise</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="4552"/>
-        <source>INV B Vol revise</source>
+        <source>Output A Cur revise</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="4556"/>
-        <source>INV C Vol revise</source>
+        <source>Output B Cur revise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4560"/>
+        <source>Output C Cur revise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4564"/>
+        <source>Voltage 1.5 revise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4568"/>
+        <source>Bus Vol revise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4576"/>
+        <source>INV flag</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="4581"/>
-        <source>INV A inductance Cur revise</source>
+        <source>Input Vol revise</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="4585"/>
-        <source>INV B inductance Cur revise</source>
+        <source>Input Cur revise</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="4589"/>
-        <source>INV C inductance Cur revise</source>
+        <source>INV A Vol revise</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="4593"/>
-        <location filename="../mywidget.cpp" line="4689"/>
-        <source>Bat State</source>
+        <source>INV B Vol revise</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mywidget.cpp" line="4597"/>
-        <location filename="../mywidget.cpp" line="4685"/>
+        <source>INV C Vol revise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4622"/>
+        <source>INV A inductance Cur revise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4626"/>
+        <source>INV B inductance Cur revise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4630"/>
+        <source>INV C inductance Cur revise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4634"/>
+        <location filename="../mywidget.cpp" line="4730"/>
+        <source>Bat State</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mywidget.cpp" line="4638"/>
+        <location filename="../mywidget.cpp" line="4726"/>
         <source>Bat Infor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4605"/>
-        <location filename="../mywidget.cpp" line="4664"/>
+        <location filename="../mywidget.cpp" line="4646"/>
+        <location filename="../mywidget.cpp" line="4705"/>
         <source>parallel signal</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4660"/>
+        <location filename="../mywidget.cpp" line="4701"/>
         <source>INV On off flag2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4695"/>
+        <location filename="../mywidget.cpp" line="4736"/>
         <source>Choose the first module to view the real-time data of the first module</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4700"/>
+        <location filename="../mywidget.cpp" line="4741"/>
         <source>Choose the second module to view the real-time data of the second module</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4706"/>
+        <location filename="../mywidget.cpp" line="4747"/>
         <source>To view the data for the previous year.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4712"/>
+        <location filename="../mywidget.cpp" line="4753"/>
         <source>To view the data for the next year.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4718"/>
+        <location filename="../mywidget.cpp" line="4759"/>
         <source>To view the data of the previous month.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4724"/>
+        <location filename="../mywidget.cpp" line="4765"/>
         <source>To view the data for the next month.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4730"/>
+        <location filename="../mywidget.cpp" line="4771"/>
         <source>To view the data of the previous day.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4736"/>
+        <location filename="../mywidget.cpp" line="4777"/>
         <source>To view the data of the next day.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4742"/>
+        <location filename="../mywidget.cpp" line="4783"/>
         <source>Export History Records, click here to export the history records to a U disk. The exported file will be named Record.csv, and it needs to be opened with Excel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4747"/>
+        <location filename="../mywidget.cpp" line="4788"/>
         <source>OperationLog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4748"/>
+        <location filename="../mywidget.cpp" line="4789"/>
         <source>Export operation log. Click here to export operation log to U disk.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4754"/>
+        <location filename="../mywidget.cpp" line="4795"/>
         <source>Export the battery statistics. Click here to export the battery statistics to the U disk.
 The accuracy is 0.1, which means that the obtained data multiplied by 0.1 gives the actual value.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4760"/>
+        <location filename="../mywidget.cpp" line="4801"/>
         <source>Eject U disk.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4765"/>
+        <location filename="../mywidget.cpp" line="4806"/>
         <source>Choose the first module to view the real-time status of the first module</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4770"/>
+        <location filename="../mywidget.cpp" line="4811"/>
         <source>Choose the second module to view the real-time status of the second module</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4776"/>
-        <location filename="../mywidget.cpp" line="4786"/>
+        <location filename="../mywidget.cpp" line="4817"/>
+        <location filename="../mywidget.cpp" line="4827"/>
         <source>Turn on</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4776"/>
+        <location filename="../mywidget.cpp" line="4817"/>
         <source>The switch to turn on the DCDC converter, click to activate the DCDC converter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4781"/>
+        <location filename="../mywidget.cpp" line="4822"/>
         <source>The switch to turn off the DCDC converter, click to deactivate the DCDC converter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4786"/>
+        <location filename="../mywidget.cpp" line="4827"/>
         <source>The switch to turn on the DCAC converter, click to activate the DCAC converter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4791"/>
+        <location filename="../mywidget.cpp" line="4832"/>
         <source>The switch to turn off the DCAC converter, click to deactivate the DCAC converter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4797"/>
+        <location filename="../mywidget.cpp" line="4838"/>
         <source>Display the current status of the DCAC converter.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4802"/>
+        <location filename="../mywidget.cpp" line="4843"/>
         <source>DCDC Module State</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4802"/>
+        <location filename="../mywidget.cpp" line="4843"/>
         <source>Rotate to display the status of each online DCDC module.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4907"/>
+        <location filename="../mywidget.cpp" line="4948"/>
         <source>2/2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4982"/>
+        <location filename="../mywidget.cpp" line="5023"/>
         <source>Time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4982"/>
+        <location filename="../mywidget.cpp" line="5023"/>
         <source>Click here to modify the time displayed on the HMI.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="4994"/>
-        <location filename="../mywidget.cpp" line="5005"/>
-        <location filename="../mywidget.cpp" line="5015"/>
+        <location filename="../mywidget.cpp" line="5035"/>
+        <location filename="../mywidget.cpp" line="5046"/>
+        <location filename="../mywidget.cpp" line="5056"/>
         <source>System</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="5049"/>
-        <location filename="../mywidget.cpp" line="5065"/>
+        <location filename="../mywidget.cpp" line="5090"/>
+        <location filename="../mywidget.cpp" line="5106"/>
         <source>MPS Information</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="5075"/>
+        <location filename="../mywidget.cpp" line="5116"/>
         <source>    When not logged in, it is not possible to access the system page or view and modify basic settings and advanced settings parameters.
     When logged in as a &quot;User&quot; account, it is possible to switch work modes and modify basic settings parameters related to the work mode. Advanced settings parameters can be viewed but cannot be modified.
     When logged in as a &quot;Maintain&quot; or &quot;Admin&quot; account, it is possible to set both basic settings parameters and advanced settings parameters.
@@ -6041,54 +6082,54 @@ The accuracy is 0.1, which means that the obtained data multiplied by 0.1 gives 
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="5099"/>
+        <location filename="../mywidget.cpp" line="5140"/>
         <source>Click to enter the selected working mode, go to the working mode parameter settings page, and click the &quot;Save&quot; button in the top-right corner to set the current working mode as the selected and saved working mode.
 For example, if the current working mode is &quot;Battery Priority&quot;, select &quot;Optimal Mode&quot;, enter the parameter settings page for the optimal mode, and click the &quot;Save&quot; button in the top-right corner to set the current working mode as &quot;Optimal Mode&quot;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="5108"/>
+        <location filename="../mywidget.cpp" line="5149"/>
         <source>Select the port to be monitored. The optional port types are: None, RS485/2, RS485/3, RS485/4, RS485/5, RS485/6, CAN 1, CAN 2, Eth</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="5114"/>
+        <location filename="../mywidget.cpp" line="5155"/>
         <source>Begin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="5114"/>
+        <location filename="../mywidget.cpp" line="5155"/>
         <source>Start/Stop capturing messages.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="5141"/>
+        <location filename="../mywidget.cpp" line="5182"/>
         <source>The message data will be recorded in the root directory of the USB drive in the &apos;PortDate.txt&apos; file.
 Please connect a UBS flash drive!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="5153"/>
+        <location filename="../mywidget.cpp" line="5194"/>
         <source>If this parameter is selected, static IP addresses are used</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="5163"/>
+        <location filename="../mywidget.cpp" line="5204"/>
         <source>Battery power-on</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="5164"/>
+        <location filename="../mywidget.cpp" line="5205"/>
         <source>Battery power-on: This function allows the BMS to send a command to close the contactor (Note: this feature is only supported by some BMS manufacturers).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="5169"/>
+        <location filename="../mywidget.cpp" line="5210"/>
         <source>Battery power-off</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mywidget.cpp" line="5170"/>
+        <location filename="../mywidget.cpp" line="5211"/>
         <source>Battery power-off: This function allows the BMS to send a command to open the contactor (Note: this feature is only supported by some BMS manufacturers).</source>
         <translation type="unfinished"></translation>
     </message>
