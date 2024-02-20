@@ -3642,43 +3642,56 @@ void MyWidget::SetDCACToTable(QTableWidget *myTable)
     //开始充电SOC
     ButtonToTable->add_SpecificationData(Charge_SOC_explain, myTable, line++, column, \
                                          "20", tr("Start charging SOC"), \
-                                         tr("Start charging SOC:"
-                                            "\n (1) At the self-use mode, when the battery SOC is lower than the\"Start charging SOC\", the converter maintains the battery SOC at this value."
-                                            "\n (2) At the battery priority mode, the ECP or FCP state is determined based on the current SOC."
-                                            "\n (3) At the optimal mode, when the battery SOC is lower than the \"Start charging SOC\", the converter enters the FCP state and starts charging the battery. "
-                                            "When the current SOC is greater than or equal to the \"Stop charging SOC\", the converter exits the FCP state and enters the ECP state."));
+                                         tr("Function Mode: Battery Priority, Optimum Mode\n"
+                                            "Function Description: In Battery Priority Mode, when the SOC of the battery reaches the \"Start Charging SOC\", MPS will charge the battery with low current to maintain the SOC of the battery not lower than the \"Start Charging SOC\".\n"
+                                            "In the Optimization Mode, the \"Start Charging SOC\" and \"Stop Charging SOC\" work together to divide the battery into three zones: Saturation Zone, Equalization Zone and Empty Zone.\n"
+                                            "When the battery SOC is lower than the \"Start Charging SOC\", the battery is in the empty zone;\n"
+                                            "When the battery SOC is higher than the \"Stop Charging SOC\", the battery is in the saturation zone;\n"
+                                            "When the battery SOC is higher than the \"Start Charging SOC\" and lower than the \"Stop Charging SOC\", the battery is in the equalization zone;\n"
+                                            "When the battery is in the equalization zone, if the battery SOC is rising from the empty zone to the equalization zone, the system executes the operation logic of the empty zone; if the battery SOC is falling from the saturation zone to the equalization zone, the system executes the operation logic of the saturation zone."));
 
     //停止充电SOC
     ButtonToTable->add_SpecificationData(Disharge_SOC_explain, myTable, line++, column, \
                                          "50", tr("Stop charging SOC"), \
-                                         tr("Stop charging SOC: When the SOC is greater than the \"Stop charging SOC\", the FCP state is released."));
+                                         tr("Function Mode: Optimization Mode\n"
+                                            "Function Description: The \"Start Charging SOC\" and \"Stop Charging SOC\" work together to divide the battery into three zones: Saturation Zone, Equalization Zone and Empty Zone.\n"
+                                            "When the battery SOC is lower than the \"Start Charging SOC\", the battery is in the empty zone;\n"
+                                            "When the battery SOC is higher than the \"Stop Charging SOC\", the battery is in the saturation zone;\n"
+                                            "When the battery SOC is higher than the \"Start Charging SOC\" and lower than the \"Stop Charging SOC\", the battery is in the equalization zone;\n"
+                                            "When the battery is in the equalization zone, if the battery SOC is rising from the empty zone to the equalization zone, the system executes the operation logic of the empty zone; if the battery SOC is falling from the saturation zone to the equalization zone, the system executes the operation logic of the saturation zone."));
 
 
     line = 0;
     column = 3;
     ButtonToTable->add_SpecificationData(DG_ECP_explain, myTable,line++, column, \
                                          tr("20"), tr("DG ECP"), \
-                                         tr("In chai-hair mode, the AC power reference value of the saturation zone and the equalization zone."));
+                                         tr("Function mode: Optimization mode\n"
+                                            "Function description: Reference value of the charging power of the battery on the grid side when the generator is connected. (Area of action: saturation zone and equalization zone)"));
 
     ButtonToTable->add_SpecificationData(DG_FCP_explain, myTable, line++, column, \
                                          tr("20"), tr("DG FCP"), \
-                                         tr("Power reference value of AC side of the discharge area in Chai hair mode."));
+                                         tr("Function mode: Optimization mode\n"
+                                            "Function description: Reference value of the charging power of the battery on the grid side when the generator is connected. (Area of action: empty zone and equalization zone)"));
 
     ButtonToTable->add_SpecificationData(Grid_ECP_explain, myTable, line++, column, \
                                          tr("0"), tr("Grid ECP"), \
-                                         tr("In the power grid mode, the AC power reference value in the saturation zone and the equilibrium zone."));
+                                         tr("Mode of action: Optimization mode\n"
+                                            "Function description: Reference value of the charging power of the battery on the grid side when the grid is connected. (Area of action: saturation zone and equalization zone)"));
 
     ButtonToTable->add_SpecificationData(Grid_FCP_explain, myTable, line++, column, \
                                          tr("0"), tr("Grid FCP"), \
-                                         tr("In power grid mode, this parameter specifies the power reference value on the AC side of the vent area."));
+                                         tr("Mode of action: Optimization mode\n"
+                                            "Function description: Reference value of the charging power of the battery on the grid side when the grid is connected. (Area of action: empty zone and equalization zone)"));
 
     ButtonToTable->add_SpecificationData(Grid_EDP_explain, myTable, line++, column, \
                                          tr("100"), tr("Grid EDP"), \
-                                         tr("The equalization zone limits the discharge power of the system to the grid side."));
+                                         tr("Function Mode: Optimization Mode\n"
+                                            "Function description: The maximum discharge power reference value of the battery to the grid side when the grid is connected. (Area of action: saturation zone and equalization zone)"));
 
     ButtonToTable->add_SpecificationData(Grid_FDP_explain, myTable, line++, column, \
                                          tr("100"), tr("Grid FDP"), \
-                                         tr("The discharge zone limits the discharge power of the system to the power grid side."));
+                                         tr("Function Mode: Optimization Mode\n"
+                                            "Function description: The maximum discharge power reference value of the battery to the grid side when the grid is connected. (Area of action: empty zone and equalization zone)"));
 
     line = 0;
     column = 5;
